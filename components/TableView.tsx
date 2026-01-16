@@ -31,7 +31,7 @@ const TableView: React.FC<TableViewProps> = ({ table, onBack, onDelete, onStudy,
 <body>
   <div class="max-w-6xl mx-auto">
     <div class="no-print mb-12 flex justify-between items-center border-b pb-6">
-      <a href="#" class="flex items-center space-x-3 group decoration-none no-underline">
+      <a href="https://lexicon-ai-beta.vercel.app/" class="flex items-center space-x-3 group decoration-none no-underline">
         <div class="w-8 h-8 bg-black flex items-center justify-center text-white text-lg font-bold rounded">L</div>
         <div class="flex flex-col">
           <span class="text-sm font-bold text-black serif leading-none">Lexicon AI</span>
