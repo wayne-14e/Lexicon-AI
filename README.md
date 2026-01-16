@@ -1,69 +1,67 @@
 # Lexicon AI — Academic Vocabulary Journal
 
-Lexicon AI is a minimalist, intelligence-augmented repository designed for serious learners and students. It combines a high-contrast, SAT-inspired aesthetic with the power of the Gemini 3 API to automate the creation of scholarly journals, study aids, and portable academic reports.
+Lexicon AI is an intelligence-augmented repository designed for scholars, students, and lifelong learners. Built with a high-contrast, SAT-inspired aesthetic, it transforms the exhausting process of vocabulary acquisition into a structured, AI-powered workflow.
 
-## 🏛️ Project Philosophy
-Unlike traditional flashcard apps, Lexicon AI treats vocabulary as a formal record. Every word entry is treated like an academic artifact, complete with parts of speech, simplified definitions, and "quirky but memorable" context sentences generated via AI to ensure long-term retention.
+## 🏛️ The Genesis: A Personal Struggle
+Lexicon AI was born from the frustrating reality of **SAT preparation**. 
 
-## ✨ Key Features
-
-### 🤖 AI-Augmented Assembly
-Input a raw list of words, and the system uses `gemini-3-flash-preview` to automatically populate:
-- **Simplified Definitions**: Clear, jargon-free meanings.
-- **Common Synonyms**: Everyday equivalents for practical usage.
-- **Memorable Sentences**: Unique, slightly quirky context clues that stick in the mind.
-
-### 🃏 Intellectual Assessment (Flashcards)
-A built-in study mode with a "Perspective 3D" interface allows students to test their knowledge. The system tracks "Known" vs "Learning" states within a session to provide a summary of lexical progress.
-
-### 📝 Academic Scratchpad
-A live-saving notes area for capturing raw terms, phonetic notes, or drafts before they are formalized into a journal. Features a one-tap "Copy to Clipboard" function for quick migration of text.
-
-### 📄 Portable Academic Reports
-- **PDF-Ready Export**: Generate a beautifully formatted, print-optimized HTML report of any collection.
-- **Public Sharing**: Share collections via encrypted URL parameters. The entire dataset is serialized into a Base64 string, allowing others to view your journal without a centralized database.
-
-### 🔒 Privacy & Persistence
-- **Zero Backend**: All journals and notes are stored locally in the browser via `LocalStorage`.
-- **User Segregation**: Supports multiple student profiles on the same device.
-
-## 🛠️ Technology Stack
-- **Framework**: React 19 (ES6 Modules)
-- **Styling**: Tailwind CSS (Monochrome/Academic Palette)
-- **AI Engine**: Google GenAI (@google/genai)
-- **Model**: `gemini-3-flash-preview`
-- **Typography**: Crimson Pro (Serif) & Inter (Sans)
-- **Bundler**: Vite + TypeScript
-
-## 🚀 Getting Started
-
-### Prerequisites
-- Node.js (Latest LTS)
-- A Gemini API Key from [Google AI Studio](https://aistudio.google.com/)
-
-### Installation
-1. Clone the repository.
-2. Install dependencies:
-   ```bash
-   npm install
-   ```
-3. Create a `.env` file or set your environment variable:
-   ```bash
-   process.env.API_KEY = "YOUR_GEMINI_API_KEY"
-   ```
-4. Start the development server:
-   ```bash
-   npm run dev
-   ```
-
-## 📂 Project Structure
-- `components/`: Modular UI units (Flashcards, Dashboard, Notes, etc.)
-- `services/`: Core logic for Gemini API integration and LocalStorage management.
-- `types.ts`: Strictly typed interfaces for Journals, Entries, and Users.
-- `index.html`: Entry point featuring the "Lexicon" typography and SAT-inspired global styles.
-
-## 📜 License
-This project is designed for academic and personal use. Feel free to fork and adapt for your own lexical studies.
+Standard flashcards and static word lists often fail because they lack **situational context**. I found myself memorizing definitions for words like *recondite* or *garrulous*, only to forget them minutes later because I couldn't "see" them in a real sentence. This project is my solution: an automated system that doesn't just store words, but builds a living, semantic world around them.
 
 ---
-*Built for the pursuit of linguistic excellence.*
+
+## ✨ Core Features & Workflow
+
+### 🖋️ 1. Academic Scratchpad (The Pre-Journal Phase)
+The **Scratchpad** is your cognitive loading zone.
+- **Auto-Syncing**: Every keystroke is saved to your local browser storage instantly.
+- **Drafting Tool**: Use it to jot down words you encounter in readings or phonetic notes before they are "formalized" into a journal.
+- **One-Tap Export**: Clean your notes or copy the entire draft to your clipboard with a single click.
+
+### 🤖 2. Intelligent AI Assembly
+Stop manual data entry. Input a raw list of words (comma or line-separated), and the **Assembly Engine** (`gemini-3-flash-preview`) does the rest:
+- **Simplified Definitions**: Definitions that explain the *concept*, not just the word.
+- **Semantic Equivalents**: Grouping everyday synonyms for better recall.
+- **Memorable Context**: Generates quirky, unique sentences designed to trigger "episodic memory."
+
+### 🔍 3. Global Lexical Search
+Never lose a word again. The **Unified Repository Search** indexes every word across every journal you have ever created.
+- **Instant Lookup**: Start typing in the header to find a "lexeme" and see exactly which collection it belongs to.
+- **Cross-Collection Navigation**: Jump directly from a search result to the corresponding journal entry.
+
+### 📖 4. Situational Synthesis (Context Learning)
+The crown jewel of the platform. Using **Gemini 3 Pro**, Lexicon AI can synthesize an entire collection into a single, coherent narrative.
+- **Narrative Mastery**: It weaves all your vocabulary words into a story or scholarly article.
+- **Visual Highlighting**: In "Context Mode," words are automatically highlighted with tooltips, allowing you to see how different lexemes interact in a professional writing style.
+
+### 📈 5. Mastery & Progress Tracking
+Every entry is more than a row; it's a data point.
+- **Dynamic Progress**: Your mastery (0% to 100%) is tracked for every single word.
+- **Smart Assessment**: Using the **Flashcard Mode**, correct answers boost mastery, while incorrect ones decrease it, helping you identify which words need more attention.
+
+### 📄 6. Authenticated Export & Sharing
+- **Offline Portability**: Export any collection as a standalone, beautifully styled HTML file. These files include a return link to the live platform.
+- **Zero-Backend Sharing**: Share your entire journal via "Share Links" that encode your data directly into the URL (Base64). No database required.
+
+---
+
+## 🛠️ Technology Stack
+- **AI Models**: 
+  - `gemini-3-flash-preview`: For rapid vocabulary assembly and data generation.
+  - `gemini-3-pro-preview`: For complex narrative synthesis and context learning.
+- **Frontend**: React 19 (Modern ES6 Module architecture).
+- **Styling**: Tailwind CSS with a custom "Academic Palette."
+- **Typography**: 
+  - *Crimson Pro*: For the scholarly, authoritative feel of a physical journal.
+  - *Inter*: For crisp, functional UI elements.
+
+## 🚀 Deployment & Environment
+To deploy this project (e.g., to Vercel), ensure you set the `API_KEY` environment variable in your dashboard.
+
+```bash
+# Installation
+npm install
+npm run dev
+```
+
+---
+*Built for the pursuit of linguistic excellence and the conquest of the SAT.*
