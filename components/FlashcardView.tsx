@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { VocabTable, VocabEntry } from '../types';
+import { geminiService } from '../services/geminiService';
 
 interface FlashcardViewProps {
   table: VocabTable;
@@ -23,6 +24,7 @@ const FlashcardView: React.FC<FlashcardViewProps> = ({ table, onBack, onUpdatePr
   const [knownCount, setKnownCount] = useState(0);
   const [learningCount, setLearningCount] = useState(0);
   const [isFinished, setIsFinished] = useState(false);
+  const [isSpeaking, setIsSpeaking] = useState(false);
 
   const currentEntry = shuffledEntries[currentIndex];
 
@@ -37,6 +39,14 @@ const FlashcardView: React.FC<FlashcardViewProps> = ({ table, onBack, onUpdatePr
     } else {
       setIsFinished(true);
     }
+  };
+
+  const handleSpeak = async (e: React.MouseEvent) => {
+    e.stopPropagation();
+    if (isSpeaking) return;
+    setIsSpeaking(true);
+    await geminiService.textToSpeech(currentEntry.word);
+    setIsSpeaking(false);
   };
 
   if (isFinished) {
@@ -118,11 +128,23 @@ const FlashcardView: React.FC<FlashcardViewProps> = ({ table, onBack, onUpdatePr
             {/* Front */}
             <div className="absolute inset-0 backface-hidden bg-white rounded-2xl border border-gray-100 shadow-lg flex flex-col items-center justify-center p-8 text-center group overflow-hidden">
               <div className="absolute top-0 left-0 right-0 h-1 bg-gray-50"></div>
-              <span className="text-[8px] font-bold uppercase tracking-[0.8em] text-gray-300 mb-8">Lexeme Artifact</span>
-              <h3 className="text-5xl lg:text-7xl font-bold serif text-black leading-tight">
+              <span className="text-[8px] font-bold uppercase tracking-[0.8em] text-gray-300 mb-6">Lexeme Artifact</span>
+              <h3 className="text-5xl lg:text-7xl font-bold serif text-black leading-tight mb-4">
                 {currentEntry.word}
               </h3>
-              <div className="mt-12 flex flex-col items-center space-y-2 opacity-20 group-hover:opacity-100 transition-opacity duration-500">
+              
+              {/* Pronunciation Button on Front (Icon Only) */}
+              <button 
+                onClick={handleSpeak}
+                className={`p-3 rounded-full border transition-all ${isSpeaking ? 'bg-blue-600 text-white border-blue-600 animate-pulse' : 'bg-gray-50 text-gray-300 border-gray-100 hover:text-blue-600 hover:bg-blue-50 hover:border-blue-100'}`}
+                title="Play Pronunciation"
+              >
+                <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z" />
+                </svg>
+              </button>
+
+              <div className="mt-8 flex flex-col items-center space-y-2 opacity-20 group-hover:opacity-100 transition-opacity duration-500">
                 <span className="text-xs font-bold uppercase tracking-[0.3em] text-gray-400">Click to reveal</span>
                 <div className="w-3 h-0.5 bg-blue-600 animate-pulse"></div>
               </div>
@@ -133,7 +155,11 @@ const FlashcardView: React.FC<FlashcardViewProps> = ({ table, onBack, onUpdatePr
               <div className="absolute top-0 left-0 right-0 h-1 bg-blue-600"></div>
               <div className="flex justify-between items-center mb-5">
                 <span className="text-[8px] font-bold uppercase tracking-[0.6em] text-blue-600">Semantic Record</span>
-                <span className="text-[9px] font-bold italic text-gray-300 uppercase tracking-[0.3em]">{currentEntry.partOfSpeech}</span>
+                
+                {/* Part of Speech on Back */}
+                <div className="px-3 py-1 bg-gray-50 border border-gray-100 rounded-full">
+                  <span className="text-[10px] font-bold italic text-gray-400 uppercase tracking-widest">{currentEntry.partOfSpeech}</span>
+                </div>
               </div>
               
               <div className="flex-1 flex flex-col justify-start space-y-2 overflow-y-auto no-scrollbar">
