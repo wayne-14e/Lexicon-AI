@@ -1,6 +1,6 @@
-
 import React, { useState } from 'react';
 import { VocabTable } from '../types';
+import { geminiService } from '../services/geminiService';
 
 interface TableViewProps {
   table: VocabTable;
@@ -12,6 +12,14 @@ interface TableViewProps {
 
 const TableView: React.FC<TableViewProps> = ({ table, onBack, onDelete, onStudy, onLearnContext }) => {
   const [isDeleting, setIsDeleting] = useState(false);
+  const [speakingId, setSpeakingId] = useState<string | null>(null);
+
+  const handleSpeak = async (id: string, word: string) => {
+    if (speakingId) return;
+    setSpeakingId(id);
+    await geminiService.textToSpeech(word);
+    setSpeakingId(null);
+  };
 
   const handleDownloadPortableHtml = () => {
     const htmlContent = `
@@ -31,7 +39,7 @@ const TableView: React.FC<TableViewProps> = ({ table, onBack, onDelete, onStudy,
 <body>
   <div class="max-w-6xl mx-auto">
     <div class="no-print mb-12 flex justify-between items-center border-b pb-6">
-      <a href="https://lexicon-ai-beta.vercel.app/" class="flex items-center space-x-3 group decoration-none no-underline">
+      <a href="${window.location.origin}" class="flex items-center space-x-3 group decoration-none no-underline">
         <div class="w-8 h-8 bg-black flex items-center justify-center text-white text-lg font-bold rounded">L</div>
         <div class="flex flex-col">
           <span class="text-sm font-bold text-black serif leading-none">Lexicon AI</span>
@@ -144,8 +152,9 @@ const TableView: React.FC<TableViewProps> = ({ table, onBack, onDelete, onStudy,
           <table className="w-full text-left border-collapse min-w-[1100px]">
             <thead>
               <tr className="bg-gray-50/50 border-b border-gray-100 print:bg-white print:border-black">
-                <th className="px-5 py-5 text-[9px] font-bold uppercase tracking-widest text-gray-400 print:text-black w-12">No.</th>
+                <th className="px-5 py-5 text-[9px] font-bold uppercase tracking-widest text-gray-400 print:text-black w-12 text-center">No.</th>
                 <th className="px-5 py-5 text-[9px] font-bold uppercase tracking-widest text-gray-400 print:text-black w-24 text-center">Mastery</th>
+                <th className="px-5 py-5 text-[9px] font-bold uppercase tracking-widest text-gray-400 print:text-black w-24 text-center">Audio</th>
                 <th className="px-6 py-5 text-[9px] font-bold uppercase tracking-widest text-gray-400 print:text-black w-32">Lexeme</th>
                 <th className="px-2 py-5 text-[9px] font-bold uppercase tracking-widest text-gray-400 print:text-black w-20 text-center">Class</th>
                 <th className="px-6 py-5 text-[9px] font-bold uppercase tracking-widest text-gray-400 print:text-black min-w-[250px]">Definition</th>
@@ -156,11 +165,22 @@ const TableView: React.FC<TableViewProps> = ({ table, onBack, onDelete, onStudy,
             <tbody className="divide-y divide-gray-50 print:divide-black">
               {table.entries.map((entry, index) => (
                 <tr key={entry.id} className="hover:bg-blue-50/20 transition-colors align-top">
-                  <td className="px-5 py-6 text-xs text-gray-300 font-mono print:text-black">{index + 1}</td>
+                  <td className="px-5 py-6 text-xs text-gray-300 font-mono print:text-black text-center">{index + 1}</td>
                   <td className="px-5 py-6 text-center">
                     <div className={`text-[10px] font-bold ${ (entry.progress || 0) >= 70 ? 'text-blue-600' : 'text-gray-400' }`}>
                       {entry.progress || 0}%
                     </div>
+                  </td>
+                  <td className="px-5 py-6 text-center print:hidden">
+                    <button 
+                      onClick={() => handleSpeak(entry.id, entry.word)}
+                      className={`p-2 rounded-full transition-all ${speakingId === entry.id ? 'bg-blue-600 text-white animate-pulse' : 'text-gray-300 hover:text-blue-600 hover:bg-blue-50'}`}
+                      title="Play Pronunciation"
+                    >
+                      <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z" />
+                      </svg>
+                    </button>
                   </td>
                   <td className="px-6 py-6 text-2xl font-bold serif text-black leading-tight print:text-black">{entry.word}</td>
                   <td className="px-2 py-6 text-center">
