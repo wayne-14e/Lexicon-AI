@@ -15,7 +15,6 @@ Standard flashcards and static word lists often fail because they lack **situati
 The **Scratchpad** is your cognitive loading zone.
 - **Auto-Syncing**: Every keystroke is saved to your local browser storage instantly.
 - **Drafting Tool**: Use it to jot down words you encounter in readings or phonetic notes before they are "formalized" into a journal.
-- **One-Tap Export**: Clean your notes or copy the entire draft to your clipboard with a single click.
 
 ### 🤖 2. Intelligent AI Assembly
 Stop manual data entry. Input a raw list of words (comma or line-separated), and the **Assembly Engine** (`gemini-3-flash-preview`) does the rest:
@@ -23,36 +22,34 @@ Stop manual data entry. Input a raw list of words (comma or line-separated), and
 - **Semantic Equivalents**: Grouping everyday synonyms for better recall.
 - **Memorable Context**: Generates quirky, unique sentences designed to trigger "episodic memory."
 
-### 🔍 3. Global Lexical Search
+### 🔊 3. AI-Synthesized Pronunciation (NEW)
+Leveraging `gemini-2.5-flash-preview-tts`, the system provides high-fidelity audio for every word. 
+- **Row-Level Playback**: Listen to pronunciations directly from your collection tables.
+- **Phonetic Assessment**: Audio support integrated into Flashcard Mode to bridge the gap between reading and speaking.
+
+### 🔍 4. Global Lexical Search
 Never lose a word again. The **Unified Repository Search** indexes every word across every journal you have ever created.
 - **Instant Lookup**: Start typing in the header to find a "lexeme" and see exactly which collection it belongs to.
-- **Cross-Collection Navigation**: Jump directly from a search result to the corresponding journal entry.
 
-### 📖 4. Situational Synthesis (Context Learning)
+### 📖 5. Situational Synthesis (Context Learning)
 The crown jewel of the platform. Using **Gemini 3 Pro**, Lexicon AI can synthesize an entire collection into a single, coherent narrative.
 - **Narrative Mastery**: It weaves all your vocabulary words into a story or scholarly article.
-- **Visual Highlighting**: In "Context Mode," words are automatically highlighted with tooltips, allowing you to see how different lexemes interact in a professional writing style.
+- **Visual Highlighting**: In "Context Mode," words are automatically highlighted with tooltips to see how lexemes interact.
 
-### 📈 5. Mastery & Progress Tracking
+### 📈 6. Mastery & Progress Tracking
 Every entry is more than a row; it's a data point.
 - **Dynamic Progress**: Your mastery (0% to 100%) is tracked for every single word.
-- **Smart Assessment**: Using the **Flashcard Mode**, correct answers boost mastery, while incorrect ones decrease it, helping you identify which words need more attention.
-
-### 📄 6. Authenticated Export & Sharing
-- **Offline Portability**: Export any collection as a standalone, beautifully styled HTML file. These files include a return link to the live platform.
-- **Zero-Backend Sharing**: Share your entire journal via "Share Links" that encode your data directly into the URL (Base64). No database required.
+- **Smart Assessment**: Using the **Flashcard Mode**, correct answers boost mastery, while incorrect ones decrease it.
 
 ---
 
 ## 🛠️ Technology Stack
 - **AI Models**: 
-  - `gemini-3-flash-preview`: For rapid vocabulary assembly and data generation.
-  - `gemini-3-pro-preview`: For complex narrative synthesis and context learning.
-- **Frontend**: React 19 (Modern ES6 Module architecture).
+  - `gemini-3-flash-preview`: For rapid vocabulary assembly.
+  - `gemini-3-pro-preview`: For complex narrative synthesis.
+  - `gemini-2.5-flash-preview-tts`: For scholarly audio generation.
+- **Frontend**: React 19.
 - **Styling**: Tailwind CSS with a custom "Academic Palette."
-- **Typography**: 
-  - *Crimson Pro*: For the scholarly, authoritative feel of a physical journal.
-  - *Inter*: For crisp, functional UI elements.
 
 ## 🚀 Deployment & Environment
 To deploy this project (e.g., to Vercel), ensure you set the `API_KEY` environment variable in your dashboard.
