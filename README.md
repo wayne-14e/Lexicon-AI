@@ -45,8 +45,7 @@ Every entry is more than a row; it's a data point.
 
 ## 🛠️ Technology Stack
 - **AI Models**: 
-  - `gemini-3-flash-preview`: For rapid vocabulary assembly.
-  - `gemini-3-pro-preview`: For complex narrative synthesis.
+  - `gemini-3-flash-preview`: For rapid vocabulary assembly and complex narrative synthesis.
   - `gemini-2.5-flash-preview-tts`: For scholarly audio generation.
 - **Frontend**: React 19.
 - **Styling**: Tailwind CSS with a custom "Academic Palette."
