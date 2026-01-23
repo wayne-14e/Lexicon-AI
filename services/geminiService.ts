@@ -71,7 +71,7 @@ export const geminiService = {
 
   generateContextPassage: async (words: string[], collectionTitle: string): Promise<{ title: string, text: string }> => {
     const response = await ai.models.generateContent({
-      model: "gemini-3-pro-preview",
+      model: "gemini-3-flash-preview",
       contents: `Create an engaging passage that naturally incorporates ALL of these vocabulary words: ${words.join(', ')}.
       
       Requirements:
