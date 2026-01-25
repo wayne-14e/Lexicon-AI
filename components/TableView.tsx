@@ -70,6 +70,95 @@ const TableView: React.FC<TableViewProps> = ({ table, onBack, onDelete, onStudy,
     setSpeakingId(null);
   };
 
+  const handleExport = () => {
+    const reportDate = new Date().toLocaleDateString(undefined, { 
+      year: 'numeric', 
+      month: 'long', 
+      day: 'numeric' 
+    });
+
+    const tableRows = table.entries.map((entry, index) => `
+      <tr>
+        <td style="padding: 15px; border-bottom: 1px solid #eee; font-family: monospace; color: #999; text-align: center;">${index + 1}</td>
+        <td style="padding: 15px; border-bottom: 1px solid #eee; font-family: 'Crimson Pro', serif; font-weight: bold; font-size: 1.2rem;">${entry.word}</td>
+        <td style="padding: 15px; border-bottom: 1px solid #eee; text-align: center;"><span style="font-size: 0.7rem; font-weight: bold; text-transform: uppercase; border: 1px solid #eee; padding: 2px 6px; border-radius: 3px; color: #888; font-style: italic;">${entry.partOfSpeech}</span></td>
+        <td style="padding: 15px; border-bottom: 1px solid #eee; font-family: 'Inter', sans-serif; font-size: 0.95rem; line-height: 1.6; color: #333;">${entry.meaning}</td>
+        <td style="padding: 15px; border-bottom: 1px solid #eee; font-style: italic; color: #666; font-size: 0.9rem;">${entry.synonyms}</td>
+        <td style="padding: 15px; border-bottom: 1px solid #eee; font-family: 'Crimson Pro', serif; font-style: italic; color: #777; font-size: 1rem; line-height: 1.5;">"${entry.sentence}"</td>
+      </tr>
+    `).join('');
+
+    const htmlContent = `
+      <!DOCTYPE html>
+      <html>
+      <head>
+        <meta charset="UTF-8">
+        <title>${table.title} - Lexicon AI Export</title>
+        <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@400;700&display=swap" rel="stylesheet">
+        <style>
+          body { font-family: 'Inter', sans-serif; margin: 0; padding: 40px; background: #fff; color: #1a1a1a; }
+          .header { border-bottom: 2px solid #000; padding-bottom: 30px; margin-bottom: 40px; }
+          .header-top { display: flex; justify-content: space-between; align-items: flex-start; }
+          .label { font-size: 0.6rem; font-weight: bold; text-transform: uppercase; letter-spacing: 0.3em; color: #999; margin-bottom: 8px; display: block; }
+          h1 { font-family: 'Crimson Pro', serif; font-size: 3rem; margin: 0; font-weight: 700; line-height: 1.1; }
+          .report-date-container { text-align: right; }
+          .report-date { font-family: 'Crimson Pro', serif; font-size: 1.1rem; font-weight: 600; color: #1a1a1a; }
+          .description { font-family: 'Crimson Pro', serif; font-style: italic; font-size: 1.2rem; color: #555; margin-top: 20px; max-width: 800px; line-height: 1.6; }
+          table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+          th { text-align: left; padding: 12px 15px; border-bottom: 2px solid #eee; font-size: 0.65rem; font-weight: bold; text-transform: uppercase; letter-spacing: 0.15em; color: #aaa; }
+          .footer { margin-top: 60px; padding-top: 30px; border-top: 1px solid #eee; text-align: center; }
+          .app-link { color: #2563eb; text-decoration: none; font-weight: bold; font-size: 0.75rem; letter-spacing: 0.05em; }
+          @media print { body { padding: 0; } .footer { position: fixed; bottom: 0; width: 100%; } }
+        </style>
+      </head>
+      <body>
+        <div class="header">
+          <div class="header-top">
+            <div>
+              <span class="label">Academic Lexical Record</span>
+              <h1>${table.title}</h1>
+            </div>
+            <div class="report-date-container">
+              <span class="label">Report Generation Date</span>
+              <div class="report-date">${reportDate}</div>
+            </div>
+          </div>
+          <div class="description">${table.description || 'Collection of scholarly vocabulary.'}</div>
+        </div>
+        <table>
+          <thead>
+            <tr>
+              <th style="width: 40px; text-align: center;">No.</th>
+              <th style="width: 150px;">Lexeme</th>
+              <th style="width: 80px; text-align: center;">Class</th>
+              <th>Definition</th>
+              <th style="width: 150px;">Equivalents</th>
+              <th>Usage</th>
+            </tr>
+          </thead>
+          <tbody>
+            ${tableRows}
+          </tbody>
+        </table>
+        <div class="footer">
+          <span class="label">Generated via</span>
+          <a href="https://lexicon-ai-beta.vercel.app/" class="app-link">LEXICON AI JOURNAL — https://lexicon-ai-beta.vercel.app/</a>
+        </div>
+      </body>
+      </html>
+    `;
+
+    const blob = new Blob([htmlContent], { type: 'text/html' });
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement('a');
+    link.href = url;
+    link.download = `${table.title.replace(/\s+/g, '_')}_Linguistic_Record.html`;
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+    URL.revokeObjectURL(url);
+  };
+
   const toggleSelectAll = () => {
     if (selectedIds.size === table.entries.length) {
       setSelectedIds(new Set());
@@ -223,7 +312,7 @@ const TableView: React.FC<TableViewProps> = ({ table, onBack, onDelete, onStudy,
                       type="checkbox" 
                       checked={selectedIds.size === table.entries.length && table.entries.length > 0} 
                       onChange={toggleSelectAll}
-                      className="w-5 h-5 rounded border-gray-300 text-blue-700 accent-blue-700 focus:ring-blue-700 cursor-pointer"
+                      className="w-4 h-4 rounded border-gray-300 text-blue-700 accent-blue-700 focus:ring-blue-700 cursor-pointer"
                     />
                   </th>
                 )}
@@ -249,7 +338,7 @@ const TableView: React.FC<TableViewProps> = ({ table, onBack, onDelete, onStudy,
                         type="checkbox" 
                         checked={selectedIds.has(entry.id)} 
                         onChange={() => toggleSelect(entry.id)}
-                        className="w-5 h-5 rounded border-gray-300 text-blue-700 accent-blue-700 focus:ring-blue-700 cursor-pointer"
+                        className="w-4 h-4 rounded border-gray-300 text-blue-700 accent-blue-700 focus:ring-blue-700 cursor-pointer"
                       />
                     </td>
                   )}
@@ -329,20 +418,20 @@ const TableView: React.FC<TableViewProps> = ({ table, onBack, onDelete, onStudy,
         </div>
       </div>
 
-      {/* Improved Floating Action Bar */}
+      {/* Optimized Floating Action Bar */}
       {selectedIds.size > 0 && (
-        <div className="fixed bottom-10 left-1/2 -translate-x-1/2 bg-black text-white px-12 py-5 rounded-full shadow-2xl z-50 flex items-center space-x-12 animate-in slide-in-from-bottom-8 duration-500 border border-white/10 backdrop-blur-xl">
+        <div className="fixed bottom-10 left-1/2 -translate-x-1/2 bg-black text-white px-8 py-3 rounded-full shadow-2xl z-50 flex items-center space-x-8 animate-in slide-in-from-bottom-8 duration-500 border border-white/10 backdrop-blur-xl">
           <div className="flex items-center">
-            <span className="text-3xl font-bold serif italic tracking-wide">
+            <span className="text-xl font-bold serif italic tracking-wide">
               {selectedIds.size} Lexeme{selectedIds.size !== 1 ? 's' : ''} Selected
             </span>
           </div>
-          <div className="h-10 w-px bg-white/20"></div>
+          <div className="h-6 w-px bg-white/20"></div>
           <button 
             onClick={handleDeleteSelected}
-            className="text-xs font-bold uppercase tracking-widest text-red-500 hover:text-red-400 transition-colors flex items-center group/purge"
+            className="text-[10px] font-bold uppercase tracking-widest text-red-500 hover:text-red-400 transition-colors flex items-center group/purge"
           >
-            <svg className="w-6 h-6 mr-3 group-hover/purge:scale-110 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <svg className="w-4 h-4 mr-2 group-hover/purge:scale-110 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
             </svg>
             Purge Selection
@@ -352,7 +441,7 @@ const TableView: React.FC<TableViewProps> = ({ table, onBack, onDelete, onStudy,
 
       <div className="flex flex-wrap items-center justify-between gap-6 pt-6 print:hidden">
         <button 
-          onClick={() => window.print()}
+          onClick={handleExport}
           className="px-10 py-4 bg-black text-white font-bold rounded hover:bg-blue-700 transition-all flex items-center shadow-lg uppercase tracking-widest text-[10px] hover:-translate-y-0.5"
         >
           <svg className="w-4 h-4 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
