@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { VocabTable, User } from '../types';
 import NotesArea from './NotesArea';
@@ -11,6 +10,12 @@ interface DashboardProps {
 }
 
 const Dashboard: React.FC<DashboardProps> = ({ user, tables, onSelectTable, onCreateNew }) => {
+  const calculateMastery = (table: VocabTable) => {
+    if (table.entries.length === 0) return 0;
+    const total = table.entries.reduce((acc, e) => acc + (e.progress || 0), 0);
+    return Math.round(total / table.entries.length);
+  };
+
   return (
     <div className="space-y-12 pb-20 animate-in fade-in duration-1000">
       <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 text-center md:text-left">
@@ -56,28 +61,46 @@ const Dashboard: React.FC<DashboardProps> = ({ user, tables, onSelectTable, onCr
           </div>
         ) : (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {tables.sort((a,b) => b.createdAt - a.createdAt).map(table => (
-              <div
-                key={table.id}
-                onClick={() => onSelectTable(table)}
-                className="group bg-white p-8 border border-gray-100 rounded-xl hover:border-blue-600 transition-all cursor-pointer sat-shadow hover:sat-shadow-lg flex flex-col h-full transform hover:-translate-y-1"
-              >
-                <div className="flex justify-between items-center mb-6">
-                  <span className="text-[12px] font-bold uppercase tracking-widest text-blue-600 bg-blue-50/50 px-2 py-1 rounded">Vol. {table.entries.length}</span>
-                  <span className="text-xs text-gray-300 font-mono">{new Date(table.createdAt).toLocaleDateString()}</span>
+            {tables.sort((a,b) => b.createdAt - a.createdAt).map(table => {
+              const mastery = calculateMastery(table);
+              return (
+                <div
+                  key={table.id}
+                  onClick={() => onSelectTable(table)}
+                  className="group bg-white p-8 border border-gray-100 rounded-xl hover:border-blue-600 transition-all cursor-pointer sat-shadow hover:sat-shadow-lg flex flex-col h-full transform hover:-translate-y-1"
+                >
+                  <div className="flex justify-between items-center mb-6">
+                    <span className="text-[12px] font-bold uppercase tracking-widest text-blue-600 bg-blue-50/50 px-2 py-1 rounded">Vol. {table.entries.length}</span>
+                    <span className="text-xs text-gray-300 font-mono">{new Date(table.createdAt).toLocaleDateString()}</span>
+                  </div>
+                  <h3 className="text-2xl font-bold mb-3 serif group-hover:text-blue-700 leading-tight transition-colors">{table.title}</h3>
+                  <p className="text-gray-500 text-base line-clamp-2 mb-6 italic serif leading-relaxed">
+                    {table.description || 'Formal documentation for this lexical set.'}
+                  </p>
+                  
+                  {/* Progress Bar */}
+                  <div className="mb-8 space-y-2">
+                    <div className="flex justify-between items-center text-[10px] font-bold uppercase tracking-widest text-gray-400">
+                      <span>Lexical Mastery</span>
+                      <span className={mastery >= 70 ? 'text-blue-600' : 'text-gray-500'}>{mastery}%</span>
+                    </div>
+                    <div className="h-1.5 w-full bg-gray-50 rounded-full overflow-hidden border border-gray-100">
+                      <div 
+                        className="h-full bg-blue-600 transition-all duration-1000 ease-out" 
+                        style={{ width: `${mastery}%` }}
+                      ></div>
+                    </div>
+                  </div>
+
+                  <div className="pt-6 border-t border-gray-50 mt-auto flex items-center justify-between">
+                    <span className="text-xs font-bold uppercase tracking-widest text-gray-300">Authored Entry</span>
+                    <span className="text-sm text-black font-bold uppercase tracking-widest group-hover:text-blue-600 transition-colors flex items-center">
+                      Review <span className="ml-2 group-hover:translate-x-1 transition-transform">→</span>
+                    </span>
+                  </div>
                 </div>
-                <h3 className="text-2xl font-bold mb-3 serif group-hover:text-blue-700 leading-tight transition-colors">{table.title}</h3>
-                <p className="text-gray-500 text-base line-clamp-3 mb-8 italic flex-grow serif leading-relaxed">
-                  {table.description || 'Formal documentation for this lexical set.'}
-                </p>
-                <div className="pt-6 border-t border-gray-50 flex items-center justify-between">
-                  <span className="text-xs font-bold uppercase tracking-widest text-gray-300">Authored Entry</span>
-                  <span className="text-sm text-black font-bold uppercase tracking-widest group-hover:text-blue-600 transition-colors flex items-center">
-                    Review <span className="ml-2 group-hover:translate-x-1 transition-transform">→</span>
-                  </span>
-                </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
         )}
       </div>
