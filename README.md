@@ -42,7 +42,7 @@ Never lose a word again. The **Unified Repository Search** indexes every word ac
 - **Instant Lookup**: Start typing in the header to find a "lexeme" and see exactly which collection it belongs to.
 
 ### 📖 7. Situational Synthesis (Context Learning)
-The crown jewel of the platform. Using **Gemini 3 Pro**, Lexicon AI can synthesize an entire collection into a single, coherent narrative.
+The crown jewel of the platform. Using **Gemini 3 Flash**, Lexicon AI can synthesize an entire collection into a single, coherent narrative.
 - **Narrative Mastery**: It weaves all your vocabulary words into a story or scholarly article.
 - **Visual Highlighting**: In "Context Mode," words are automatically highlighted with tooltips to see how lexemes interact.
 
