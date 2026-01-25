@@ -22,24 +22,29 @@ Stop manual data entry. Input a raw list of words (comma or line-separated), and
 - **Semantic Equivalents**: Grouping everyday synonyms for better recall.
 - **Memorable Context**: Generates quirky, unique sentences designed to trigger "episodic memory."
 
-### 🔊 3. AI-Synthesized Pronunciation (NEW)
+### 📝 3. Linguistic Synthesis (Editing & Refilling)
+Lexicon now supports high-fidelity word editing.
+- **Single-Word Refactor**: Click the "Pen" icon on any lexeme to change the word.
+- **AI-Powered Refill**: Once a word is edited, the AI automatically regenerates the Part of Speech, Definition, Synonyms, and Usage Sentence to match the new entry.
+
+### 📈 4. Visual Mastery Architecture
+Track your progress with academic precision.
+- **Collection Progress**: Every journal card on the dashboard features a mastery bar showing the average knowledge level of the set.
+- **Circular Mastery Indicators**: Inside each journal, a sophisticated circular progress indicator visualizes your current proficiency level (Introductory, Developing, or Proficient).
+
+### 🔊 5. AI-Synthesized Pronunciation
 Leveraging `gemini-2.5-flash-preview-tts`, the system provides high-fidelity audio for every word. 
 - **Row-Level Playback**: Listen to pronunciations directly from your collection tables.
 - **Phonetic Assessment**: Audio support integrated into Flashcard Mode to bridge the gap between reading and speaking.
 
-### 🔍 4. Global Lexical Search
+### 🔍 6. Global Lexical Search
 Never lose a word again. The **Unified Repository Search** indexes every word across every journal you have ever created.
 - **Instant Lookup**: Start typing in the header to find a "lexeme" and see exactly which collection it belongs to.
 
-### 📖 5. Situational Synthesis (Context Learning)
+### 📖 7. Situational Synthesis (Context Learning)
 The crown jewel of the platform. Using **Gemini 3 Pro**, Lexicon AI can synthesize an entire collection into a single, coherent narrative.
 - **Narrative Mastery**: It weaves all your vocabulary words into a story or scholarly article.
 - **Visual Highlighting**: In "Context Mode," words are automatically highlighted with tooltips to see how lexemes interact.
-
-### 📈 6. Mastery & Progress Tracking
-Every entry is more than a row; it's a data point.
-- **Dynamic Progress**: Your mastery (0% to 100%) is tracked for every single word.
-- **Smart Assessment**: Using the **Flashcard Mode**, correct answers boost mastery, while incorrect ones decrease it.
 
 ---
 
