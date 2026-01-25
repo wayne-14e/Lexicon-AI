@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { User, VocabTable } from './types';
 import { storageService } from './services/storageService';
@@ -125,6 +124,12 @@ const App: React.FC = () => {
     }
   };
 
+  const handleUpdateTable = async (updatedTable: VocabTable) => {
+    setActiveTable(updatedTable);
+    setTables(prev => prev.map(t => t.id === updatedTable.id ? updatedTable : t));
+    await storageService.saveTable(updatedTable);
+  };
+
   const handleUpdateEntryProgress = async (entryId: string, isKnown: boolean) => {
     if (!activeTable) return;
 
@@ -139,9 +144,7 @@ const App: React.FC = () => {
     });
 
     const updatedTable = { ...activeTable, entries: updatedEntries };
-    setActiveTable(updatedTable);
-    setTables(prev => prev.map(t => t.id === updatedTable.id ? updatedTable : t));
-    await storageService.saveTable(updatedTable);
+    handleUpdateTable(updatedTable);
   };
 
   const handleEnterContextLearning = async () => {
@@ -238,6 +241,7 @@ const App: React.FC = () => {
               onDelete={handleDeleteTable}
               onStudy={() => setView('study')}
               onLearnContext={handleEnterContextLearning}
+              onUpdateTable={handleUpdateTable}
             />
           )}
 
