@@ -37,7 +37,7 @@ Leveraging `gemini-2.5-flash-preview-tts`, the system provides high-fidelity aud
 - **Row-Level Playback**: Listen to pronunciations directly from your collection tables.
 - **Phonetic Assessment**: Audio support integrated into Flashcard Mode to bridge the gap between reading and speaking.
 
-### 🔍 6. Global Lexical Search
+### 🔍 6. Lexical Search
 Never lose a word again. The **Unified Repository Search** indexes every word across every journal you have ever created.
 - **Instant Lookup**: Start typing in the header to find a "lexeme" and see exactly which collection it belongs to.
 
@@ -54,15 +54,6 @@ The crown jewel of the platform. Using **Gemini 3 Flash**, Lexicon AI can synthe
   - `gemini-2.5-flash-preview-tts`: For scholarly audio generation.
 - **Frontend**: React 19.
 - **Styling**: Tailwind CSS with a custom "Academic Palette."
-
-## 🚀 Deployment & Environment
-To deploy this project (e.g., to Vercel), ensure you set the `API_KEY` environment variable in your dashboard.
-
-```bash
-# Installation
-npm install
-npm run dev
-```
 
 ---
 *Built for the pursuit of linguistic excellence and the conquest of the SAT.*
