@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Analytics } from '@vercel/analytics/react';
 import { User, VocabTable } from './types';
 import { storageService } from './services/storageService';
 import Layout from './components/Layout';
@@ -207,67 +208,70 @@ const App: React.FC = () => {
   }
 
   return (
-    <Layout 
-      user={user} 
-      tables={tables}
-      onLogout={handleLogout} 
-      onNavigateToTable={handleNavigateToTable}
-    >
-      {!user ? (
-        <Auth onLogin={handleLogin} />
-      ) : (
-        <>
-          {view === 'dashboard' && (
-            <Dashboard 
-              user={user}
-              tables={tables} 
-              onSelectTable={handleNavigateToTable}
-              onCreateNew={() => setView('create')}
-            />
-          )}
+    <>
+      <Layout 
+        user={user} 
+        tables={tables}
+        onLogout={handleLogout} 
+        onNavigateToTable={handleNavigateToTable}
+      >
+        {!user ? (
+          <Auth onLogin={handleLogin} />
+        ) : (
+          <>
+            {view === 'dashboard' && (
+              <Dashboard 
+                user={user}
+                tables={tables} 
+                onSelectTable={handleNavigateToTable}
+                onCreateNew={() => setView('create')}
+              />
+            )}
 
-          {view === 'create' && (
-            <TableCreator 
-              user={user} 
-              onSave={handleSaveTable}
-              onCancel={() => setView('dashboard')}
-            />
-          )}
+            {view === 'create' && (
+              <TableCreator 
+                user={user} 
+                onSave={handleSaveTable}
+                onCancel={() => setView('dashboard')}
+              />
+            )}
 
-          {view === 'view' && activeTable && (
-            <TableView 
-              table={activeTable}
-              onBack={() => setView('dashboard')}
-              onDelete={handleDeleteTable}
-              onStudy={() => setView('study')}
-              onLearnContext={handleEnterContextLearning}
-              onUpdateTable={handleUpdateTable}
-            />
-          )}
+            {view === 'view' && activeTable && (
+              <TableView 
+                table={activeTable}
+                onBack={() => setView('dashboard')}
+                onDelete={handleDeleteTable}
+                onStudy={() => setView('study')}
+                onLearnContext={handleEnterContextLearning}
+                onUpdateTable={handleUpdateTable}
+              />
+            )}
 
-          {view === 'study' && activeTable && (
-            <FlashcardView 
-              table={activeTable}
-              onBack={() => setView('view')}
-              onUpdateProgress={handleUpdateEntryProgress}
-            />
-          )}
+            {view === 'study' && activeTable && (
+              <FlashcardView 
+                table={activeTable}
+                onBack={() => setView('view')}
+                onUpdateProgress={handleUpdateEntryProgress}
+              />
+            )}
 
-          {view === 'context-learning' && activeTable && activeTable.contextPassage && (
-            <ContextLearningView
-              table={activeTable}
-              onBack={() => setView('view')}
-            />
-          )}
-          
-          {isFetching && (
-             <div className="fixed bottom-8 right-8 bg-black text-white px-4 py-2 rounded-full text-[10px] font-bold tracking-widest animate-pulse z-50 shadow-2xl">
-               AI GENERATING...
-             </div>
-          )}
-        </>
-      )}
-    </Layout>
+            {view === 'context-learning' && activeTable && activeTable.contextPassage && (
+              <ContextLearningView
+                table={activeTable}
+                onBack={() => setView('view')}
+              />
+            )}
+            
+            {isFetching && (
+               <div className="fixed bottom-8 right-8 bg-black text-white px-4 py-2 rounded-full text-[10px] font-bold tracking-widest animate-pulse z-50 shadow-2xl">
+                 AI GENERATING...
+               </div>
+            )}
+          </>
+        )}
+      </Layout>
+      <Analytics />
+    </>
   );
 };
 
