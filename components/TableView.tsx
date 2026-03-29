@@ -82,7 +82,7 @@ const TableView: React.FC<TableViewProps> = ({ table, onBack, onDelete, onStudy,
   const handleSaveMetadata = () => {
     onUpdateTable({
       ...table,
-      title: metaTitle,
+      title: metaTitle.trim() || 'Untitled Collection',
       description: metaDescription,
       links: metaLinks.split('\n').filter(l => l.trim().length > 0)
     });
