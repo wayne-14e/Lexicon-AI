@@ -16,6 +16,7 @@ import CollectionsPage from './components/CollectionsPage';
 import ScratchpadPage from './components/ScratchpadPage';
 import DailyStreakPopup from './components/DailyStreakPopup';
 import { geminiService } from './services/geminiService';
+import { Analytics } from '@vercel/analytics/react';
 
 type ViewState = 'home' | 'collections' | 'scratchpad' | 'create' | 'view' | 'public_shared' | 'study' | 'context-learning' | 'matching' | 'profile';
 
@@ -495,6 +496,7 @@ const App: React.FC = () => {
           )}
         </>
       )}
+    <Analytics />
     </Layout>
   );
 };
