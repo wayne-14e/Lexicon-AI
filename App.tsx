@@ -410,6 +410,7 @@ const App: React.FC = () => {
               user={user}
               tables={tables}
               onBack={() => setView('home')}
+              onUserUpdate={setUser}
             />
           )}
 
