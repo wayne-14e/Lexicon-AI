@@ -2,26 +2,23 @@ import { GoogleGenAI, Type, Modality } from "@google/genai";
 import { VocabEntry } from "../types";
 
 // --- API Key Rotation Pool ---
-// Collect all defined keys from the environment (GEMINI_API_KEY, GEMINI_API_KEY_2, GEMINI_API_KEY_3, …)
+// Collect all defined keys from the environment (VITE_GEMINI_API_KEY, VITE_GEMINI_API_KEY_2, VITE_GEMINI_API_KEY_3, …)
 const API_KEYS: string[] = [
-  process.env.GEMINI_API_KEY,
-  process.env.GEMINI_API_KEY_2,
-  process.env.GEMINI_API_KEY_3,
+  import.meta.env.VITE_GEMINI_API_KEY,
+  import.meta.env.VITE_GEMINI_API_KEY_2,
+  import.meta.env.VITE_GEMINI_API_KEY_3,
 ].filter((k): k is string => Boolean(k));
 
 console.log('Loaded API keys:', {
   total: API_KEYS.length,
-  hasKey1: !!process.env.GEMINI_API_KEY,
-  hasKey2: !!process.env.GEMINI_API_KEY_2,
-  hasKey3: !!process.env.GEMINI_API_KEY_3,
-  key1Prefix: process.env.GEMINI_API_KEY?.substring(0, 8) + '...',
-  key2Prefix: process.env.GEMINI_API_KEY_2?.substring(0, 8) + '...',
-  key3Prefix: process.env.GEMINI_API_KEY_3?.substring(0, 8) + '...'
+  hasKey1: !!import.meta.env.VITE_GEMINI_API_KEY,
+  hasKey2: !!import.meta.env.VITE_GEMINI_API_KEY_2,
+  hasKey3: !!import.meta.env.VITE_GEMINI_API_KEY_3
 });
 
 if (API_KEYS.length === 0) {
   console.error(
-    "No Gemini API keys found. Add GEMINI_API_KEY (and optionally GEMINI_API_KEY_2, GEMINI_API_KEY_3) to .env.local and restart the dev server."
+    "No Gemini API keys found. Add VITE_GEMINI_API_KEY (and optionally VITE_GEMINI_API_KEY_2, VITE_GEMINI_API_KEY_3) to .env.local and restart the dev server."
   );
 }
 
@@ -42,23 +39,25 @@ function getAI(): GoogleGenAI {
 function isQuotaError(error: unknown): boolean {
   if (!error) return false;
   
-  // Handle different error structures from the API
   const errorObj = error as any;
-  const msg = String(errorObj?.message ?? errorObj?.error?.message ?? error).toLowerCase();
-  const status = errorObj?.status ?? errorObj?.statusCode ?? errorObj?.error?.status ?? 0;
+  const message = errorObj?.message || errorObj?.error?.message || String(error);
+  const status = errorObj?.status || errorObj?.error?.status || errorObj?.statusCode || 0;
+  const code = errorObj?.code || errorObj?.error?.code;
   
-  console.log('Quota error check:', { msg, status, errorObj });
+  const msg = message.toLowerCase();
   
   return (
     status === 429 ||
     status === "RESOURCE_EXHAUSTED" ||
+    code === 429 ||
     msg.includes("quota") ||
     msg.includes("rate limit") ||
     msg.includes("rate_limit") ||
     msg.includes("resource_exhausted") ||
     msg.includes("too many requests") ||
     msg.includes("usage limit") ||
-    msg.includes("exceeded your current quota")
+    msg.includes("exceeded your current quota") ||
+    msg.includes("429")
   );
 }
 
@@ -90,15 +89,10 @@ async function withKeyRotation<T>(fn: (ai: GoogleGenAI, modelName: string) => Pr
   let attempts = 0;
   let currentModel = defaultModel;
 
-  console.log('Starting withKeyRotation:', { totalKeys, currentKeyIndex, currentModel });
-
   while (attempts < totalKeys) {
     try {
-      console.log(`Attempting with key #${currentKeyIndex + 1}, model: ${currentModel}`);
       return await fn(getAI(), currentModel);
     } catch (error) {
-      console.log('Caught error:', error);
-      
       if (isUnavailableError(error) && currentModel === "gemini-3-flash-preview") {
         console.warn(`Gemini 3 Flash is unavailable (503). Falling back to gemini-2.5-flash...`);
         currentModel = "gemini-2.5-flash";
@@ -114,7 +108,6 @@ async function withKeyRotation<T>(fn: (ai: GoogleGenAI, modelName: string) => Pr
         );
         attempts++;
       } else {
-        console.log('Non-quota error, throwing:', error);
         throw error; // non-quota errors bubble up immediately
       }
     }

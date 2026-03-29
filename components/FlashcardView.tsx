@@ -241,7 +241,7 @@ const FlashcardView: React.FC<FlashcardViewProps> = ({ table, excludeMastered, o
         <div className="w-full max-w-xl relative perspective mb-6 lg:mb-10">
           <div 
             onClick={() => setIsFlipped(!isFlipped)}
-            className={`relative w-full h-[340px] sm:h-[380px] lg:h-[400px] cursor-pointer transition-all duration-700 preserve-3d ${isFlipped ? 'rotate-y-180' : ''}`}
+            className={`relative w-full h-[340px] sm:h-[360px] lg:h-[380px] cursor-pointer transition-all duration-700 preserve-3d ${isFlipped ? 'rotate-y-180' : ''}`}
           >
             {/* Front */}
             <div className="absolute inset-0 backface-hidden bg-surface rounded-2xl border border-white/5 shadow-lg shadow-black/20 flex flex-col items-center justify-center p-6 sm:p-8 text-center group overflow-hidden">
