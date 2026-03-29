@@ -217,10 +217,10 @@ const Layout: React.FC<LayoutProps> = ({
         {user && (
           <header className="h-auto py-4 md:py-4 flex items-center px-3 sm:px-6 sticky top-0 z-30 print:hidden bg-background/80 backdrop-blur-md border-b border-white/5 w-full transition-all duration-300">
             <div className="flex items-center justify-center w-full relative">
-              {/* Mobile Logo */}
+              {/* Mobile Logo
               <div className="md:hidden absolute left-0 w-8 h-8 flex items-center justify-center shrink-0 cursor-pointer" onClick={() => onNavigateToHome()}>
                 <img src="/logo.svg" className="object-contain" alt="Logo" />
-              </div>
+              </div> */}
 
               <div className="w-full max-w-md relative flex items-center gap-2" ref={searchRef}>
                 <div className="relative group flex-1">
