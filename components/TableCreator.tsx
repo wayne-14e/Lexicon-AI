@@ -18,16 +18,26 @@ const TableCreator: React.FC<TableCreatorProps> = ({ user, existingTable, onSave
   const [isGenerating, setIsGenerating] = useState(false);
   const [status, setStatus] = useState('');
 
+  const validateEnglishWords = (words: string[]): boolean => {
+    const englishWordRegex = /^[a-zA-Z]+(?:[-'][a-zA-Z]+)*$/;
+    return words.every(word => englishWordRegex.test(word));
+  };
+
   const handleGenerate = async () => {
     if (!wordsInput.trim()) {
       setStatus('Error: Please enter at least one word.');
       return;
     }
 
+    const wordList = wordsInput.split(/[\n,]+/).map(w => w.trim()).filter(w => w.length > 0);
+    
+    if (!validateEnglishWords(wordList)) {
+      setStatus('Error: All words must be in English. Please remove non-English characters.');
+      return;
+    }
+
     setIsGenerating(true);
     setStatus('AI is analyzing linguistic roots and contexts...');
-
-    const wordList = wordsInput.split(/[\n,]+/).map(w => w.trim()).filter(w => w.length > 0);
     
     try {
       const generatedEntries = await geminiService.generateVocabEntries(wordList);
