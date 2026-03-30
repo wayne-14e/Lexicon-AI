@@ -178,9 +178,59 @@ const App: React.FC = () => {
     }
   };
 
+  // Restore view from URL parameters on app load
+  const restoreViewFromURL = () => {
+    const params = new URLSearchParams(window.location.search);
+    const viewParam = params.get('view');
+    const tableIdParam = params.get('table');
+    
+    if (viewParam && ['home', 'collections', 'scratchpad', 'profile'].includes(viewParam)) {
+      setView(viewParam as ViewState);
+    }
+    
+    if (tableIdParam && tables.length > 0) {
+      const table = tables.find(t => t.id === tableIdParam);
+      if (table) {
+        setActiveTable(table);
+        if (viewParam === 'view' || viewParam === 'study' || viewParam === 'context-learning' || viewParam === 'matching') {
+          setView(viewParam as ViewState);
+        }
+      }
+    }
+  };
+
+  // Update URL when view changes
+  const updateURL = (newView: ViewState, table?: VocabTable | null) => {
+    const url = new URL(window.location.href);
+    
+    if (newView === 'home') {
+      url.searchParams.delete('view');
+      url.searchParams.delete('table');
+    } else {
+      url.searchParams.set('view', newView);
+      if (table && ['view', 'study', 'context-learning', 'matching'].includes(newView)) {
+        url.searchParams.set('table', table.id);
+      } else {
+        url.searchParams.delete('table');
+      }
+    }
+    
+    window.history.replaceState({}, '', url.toString());
+  };
+
   useEffect(() => {
     initApp();
+  }, []);
 
+  // Separate effect to handle URL restoration after user and tables are loaded
+  useEffect(() => {
+    if (!isInitializing && (user || tables.length > 0)) {
+      restoreViewFromURL();
+    }
+  }, [isInitializing, user?.id, tables.length]);
+
+  // Handle shared collections separately
+  useEffect(() => {
     const params = new URLSearchParams(window.location.search);
     const sharedData = params.get('share');
     if (sharedData) {
@@ -212,8 +262,17 @@ const App: React.FC = () => {
         console.error('Failed to decode shared collection:', e);
       }
     }
+  }, []);
 
-    // Listen for visibility changes to check for daily awards (e.g., coming back the next day)
+  // Update URL when view changes
+  useEffect(() => {
+    if (!isInitializing && view !== 'public_shared') {
+      updateURL(view, activeTable);
+    }
+  }, [view, activeTable, isInitializing]);
+
+  // Listen for visibility changes to check for daily awards (e.g., coming back the next day)
+  useEffect(() => {
     const handleVisibilityChange = () => {
       if (document.visibilityState === 'visible' && user) {
         checkDailyAward(user);
@@ -237,14 +296,12 @@ const App: React.FC = () => {
     setUser(newUser);
     await fetchUserTables(newUser.id);
     await checkDailyAward(newUser);
-    setView('home');
-  };
-
-  const handleLogout = async () => {
-    await storageService.logout();
-    setUser(null);
-    setTables([]);
-    setView('home');
+    // Don't reset to home, let the URL restoration handle it
+    const params = new URLSearchParams(window.location.search);
+    const viewParam = params.get('view');
+    if (!viewParam) {
+      setView('home');
+    }
   };
 
   const handleSaveTable = async (table: VocabTable) => {
@@ -267,7 +324,7 @@ const App: React.FC = () => {
       await storageService.deleteTable(id);
       await fetchUserTables(user!.id);
       setActiveTable(null);
-      setView('collections');
+      handleNavigateToDashboard();
     } catch (err) {
       console.error("Delete failed:", err);
     } finally {
@@ -339,9 +396,34 @@ const App: React.FC = () => {
     }
   };
 
+  const handleLogout = async () => {
+    await storageService.logout();
+    setUser(null);
+    setTables([]);
+    setView('home');
+    // Clear URL parameters on logout
+    window.history.replaceState({}, '', window.location.pathname);
+  };
+
   const handleNavigateToTable = (table: VocabTable) => {
     setActiveTable(table);
     setView('view');
+  };
+
+  const handleNavigateToProfile = () => {
+    setView('profile');
+  };
+
+  const handleNavigateToDashboard = () => {
+    setView('collections');
+  };
+
+  const handleNavigateToCreate = () => {
+    setView('scratchpad');
+  };
+
+  const handleNavigateToHome = () => {
+    setView('home');
   };
 
   if (isInitializing) {
@@ -377,10 +459,10 @@ const App: React.FC = () => {
       tables={tables}
       onLogout={handleLogout} 
       onNavigateToTable={handleNavigateToTable}
-      onNavigateToProfile={() => setView('profile')}
-      onNavigateToDashboard={() => setView('collections')}
-      onNavigateToCreate={() => setView('scratchpad')}
-      onNavigateToHome={() => setView('home')}
+      onNavigateToProfile={handleNavigateToProfile}
+      onNavigateToDashboard={handleNavigateToDashboard}
+      onNavigateToCreate={handleNavigateToCreate}
+      onNavigateToHome={handleNavigateToHome}
       onSpendTokens={spendTokens}
     >
       {!user ? (
@@ -392,7 +474,7 @@ const App: React.FC = () => {
               user={user}
               tables={tables}
               onNavigateToTable={handleNavigateToTable}
-              onNavigateToCreate={() => setView('collections')}
+              onNavigateToCreate={handleNavigateToDashboard}
             />
           )}
 
@@ -409,7 +491,7 @@ const App: React.FC = () => {
             <ProfileView 
               user={user}
               tables={tables}
-              onBack={() => setView('home')}
+              onBack={handleNavigateToHome}
               onUserUpdate={setUser}
             />
           )}
@@ -422,14 +504,15 @@ const App: React.FC = () => {
             <TableCreator 
               user={user} 
               onSave={handleSaveTable}
-              onCancel={() => setView('collections')}
+              onCancel={handleNavigateToDashboard}
+              isSaving={isFetching}
             />
           )}
 
           {view === 'view' && activeTable && (
             <TableView 
               table={activeTable}
-              onBack={() => setView('collections')}
+              onBack={handleNavigateToDashboard}
               onDelete={handleDeleteTable}
               onStudy={(excludeMastered) => {
                 setStudyExcludeMastered(excludeMastered);
@@ -441,6 +524,7 @@ const App: React.FC = () => {
                 setView('matching');
               }}
               onUpdateTable={handleUpdateTable}
+              isFetching={isFetching}
             />
           )}
 

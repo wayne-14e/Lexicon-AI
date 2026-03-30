@@ -11,6 +11,7 @@ interface TableViewProps {
   onLearnContext: () => void;
   onMatchingGame: (mode: GameMode) => void;
   onUpdateTable: (updatedTable: VocabTable) => void;
+  isFetching: boolean;
 }
 
 const MasteryCircle: React.FC<{ percentage: number }> = ({ percentage }) => {
@@ -53,7 +54,7 @@ const MasteryCircle: React.FC<{ percentage: number }> = ({ percentage }) => {
 type SortKey = 'word' | 'progress' | 'partOfSpeech' | null;
 type SortDirection = 'asc' | 'desc';
 
-const TableView: React.FC<TableViewProps> = ({ table, onBack, onDelete, onStudy, onLearnContext, onMatchingGame, onUpdateTable }) => {
+const TableView: React.FC<TableViewProps> = ({ table, onBack, onDelete, onStudy, onLearnContext, onMatchingGame, onUpdateTable, isFetching }) => {
   const [isDeletingTable, setIsDeletingTable] = useState(false);
   const [isEditingMetadata, setIsEditingMetadata] = useState(false);
   const [metaTitle, setMetaTitle] = useState(table.title);
@@ -451,8 +452,10 @@ const TableView: React.FC<TableViewProps> = ({ table, onBack, onDelete, onStudy,
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 md:gap-6 w-full">
           {/* Context Narrative Card */}
           <div 
-            onClick={onLearnContext}
-            className="group bg-surface p-5 md:p-6 lg:p-8 rounded-2xl border border-white/5 hover:border-primary/50 hover:shadow-lg hover:shadow-primary/10 transition-all cursor-pointer flex flex-col items-start text-left relative overflow-hidden"
+            onClick={isFetching ? undefined : onLearnContext}
+            className={`group bg-surface p-5 md:p-6 lg:p-8 rounded-2xl border border-white/5 hover:border-primary/50 hover:shadow-lg hover:shadow-primary/10 transition-all flex flex-col items-start text-left relative overflow-hidden ${
+              isFetching ? 'cursor-not-allowed opacity-60' : 'cursor-pointer'
+            }`}
           >
             {/* ... content ... */}
             <div className="absolute top-0 right-0 p-4 md:p-6 opacity-10 group-hover:opacity-20 transition-opacity">
@@ -467,16 +470,30 @@ const TableView: React.FC<TableViewProps> = ({ table, onBack, onDelete, onStudy,
               </svg>
             </div>
             
-            <h3 className="text-lg md:text-xl font-bold font-display text-text mb-1 md:mb-2 group-hover:text-primary transition-colors z-10">Context Narrative</h3>
+            <h3 className="text-lg md:text-xl font-bold font-display text-text mb-1 md:mb-2 group-hover:text-primary transition-colors z-10">
+              {isFetching ? 'Generating Narrative...' : 'Context Narrative'}
+            </h3>
             <p className="text-muted text-xs md:text-sm leading-relaxed max-w-sm z-10">
-              Immerse yourself in a generated story weaving your vocabulary into a cohesive narrative for deeper contextual retention.
+              {isFetching ? 
+                'Creating your personalized context passage. This may take a moment...' :
+                'Immerse yourself in a generated story weaving your vocabulary into a cohesive narrative for deeper contextual retention.'
+              }
             </p>
             
             <div className="mt-4 md:mt-6 flex items-center text-[9px] md:text-[10px] font-bold uppercase tracking-widest text-primary z-10">
-              <span>Begin Reading</span>
-              <svg className="w-3 h-3 ml-2 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-              </svg>
+              {isFetching ? (
+                <>
+                  <div className="w-3 h-3 border-2 border-primary border-t-transparent rounded-full animate-spin mr-2"></div>
+                  <span>Generating</span>
+                </>
+              ) : (
+                <>
+                  <span>Begin Reading</span>
+                  <svg className="w-3 h-3 ml-2 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                  </svg>
+                </>
+              )}
             </div>
           </div>
 

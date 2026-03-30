@@ -8,9 +8,10 @@ interface TableCreatorProps {
   existingTable?: VocabTable;
   onSave: (table: VocabTable) => void;
   onCancel: () => void;
+  isSaving?: boolean;
 }
 
-const TableCreator: React.FC<TableCreatorProps> = ({ user, existingTable, onSave, onCancel }) => {
+const TableCreator: React.FC<TableCreatorProps> = ({ user, existingTable, onSave, onCancel, isSaving = false }) => {
   const [title, setTitle] = useState(existingTable?.title || '');
   const [description, setDescription] = useState(existingTable?.description || '');
   const [wordsInput, setWordsInput] = useState('');
@@ -24,6 +25,11 @@ const TableCreator: React.FC<TableCreatorProps> = ({ user, existingTable, onSave
   };
 
   const handleGenerate = async () => {
+    if (!title.trim()) {
+      setStatus('Error: Collection title is required.');
+      return;
+    }
+    
     if (!wordsInput.trim()) {
       setStatus('Error: Please enter at least one word.');
       return;
@@ -88,6 +94,7 @@ const TableCreator: React.FC<TableCreatorProps> = ({ user, existingTable, onSave
                 onChange={(e) => setTitle(e.target.value)}
                 className="w-full p-4 bg-surfaceHighlight border border-white/10 rounded-xl focus:border-primary focus:bg-surfaceHighlight outline-none transition-all text-base font-display text-text placeholder-muted/50"
                 placeholder="e.g., SAT Reading Unit 4"
+                required
               />
             </div>
             <div className="flex-1 flex flex-col">
@@ -114,6 +121,7 @@ const TableCreator: React.FC<TableCreatorProps> = ({ user, existingTable, onSave
                 onChange={(e) => setWordsInput(e.target.value)}
                 className="w-full flex-1 p-4 bg-surfaceHighlight border border-white/10 rounded-xl min-h-[312px] focus:border-primary focus:bg-surfaceHighlight outline-none transition-all resize-none font-mono text-sm leading-relaxed text-text placeholder-muted/50"
                 placeholder="ubiquitous&#10;ephemeral&#10;sanguine"
+                required
               />
             </div>
           </div>
@@ -130,16 +138,18 @@ const TableCreator: React.FC<TableCreatorProps> = ({ user, existingTable, onSave
         </div>
 
         <div className="pt-8 flex flex-col items-center space-y-4 border-t border-white/5">
-          {isGenerating ? (
+          {isGenerating || isSaving ? (
             <div className="flex flex-col items-center space-y-3">
               <div className="w-8 h-8 border-2 border-primary border-t-transparent rounded-full animate-spin"></div>
-              <p className="text-sm font-medium italic text-muted animate-pulse">{status}</p>
+              <p className="text-sm font-medium italic text-muted animate-pulse">
+                {isGenerating ? status : 'Saving collection...'}
+              </p>
             </div>
           ) : (
             <>
               <button
                 onClick={handleGenerate}
-                disabled={!wordsInput.trim()}
+                disabled={!title.trim() || !wordsInput.trim() || isGenerating || isSaving}
                 className="w-full md:w-auto px-20 py-5 bg-primary text-white font-bold rounded-full shadow-lg shadow-primary/20 hover:bg-secondary transition-all disabled:opacity-20 disabled:cursor-not-allowed uppercase tracking-[0.2em] text-[11px] hover:-translate-y-0.5"
               >
                 Assemble with Lexicon AI
