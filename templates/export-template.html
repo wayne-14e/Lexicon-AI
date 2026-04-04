@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>{{TABLE_TITLE}} - Lexicon AI Export</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            display: ['Outfit', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body { background-color: #f4f4f5; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .sat-shadow { box-shadow: 4px 4px 0px rgba(0,0,0,0.05); }
+    .sat-border { border: 1px solid rgba(0,0,0,0.08); }
+    @media print { 
+      body { background-color: white; padding: 0; }
+      .no-print { display: none; }
+      .print-shadow-none { box-shadow: none !important; }
+      .print-border-none { border: none !important; }
+      .print-p-0 { padding: 0 !important; }
+      .print-bg-white { background-color: white !important; }
+    }
+  </style>
+</head>
+<body class="font-sans text-gray-900 antialiased p-4 md:p-8">
+  <div class="max-w-[95vw] mx-auto">
+    
+    <!-- Header / Logo -->
+    <a href="#" class="flex flex-col items-center justify-center mb-12 text-center no-print group hover:opacity-80 transition-opacity">
+      <div class="flex items-center space-x-3 mb-3">
+        <div class="w-14 h-14 flex items-center justify-center shrink-0 drop-shadow-[0_0_8px_rgba(0,0,0,0.1)]">
+          {{LOGO_SVG}}
+        </div>
+        <div class="text-left">
+          <h1 class="text-2xl font-bold font-display tracking-tight leading-none text-gray-900">Lexicon</h1>
+          <p class="text-[11px] uppercase tracking-[0.2em] font-bold text-blue-600 mt-1">AI Journal</p>
+        </div>
+      </div>
+    </a>
+
+    <!-- Main Content Card -->
+    <div class="bg-white p-6 md:p-10 border border-blue-100 rounded-xl shadow-xl shadow-blue-900/5 print:shadow-none print:border-none print:p-0 print:bg-white">
+      
+      <div class="flex justify-between items-start border-b-2 border-blue-600 pb-6 mb-8">
+        <div>
+          <span class="text-[10px] font-bold uppercase tracking-[0.3em] text-blue-500 mb-2 block">Academic Lexical Record</span>
+          <h1 class="text-4xl md:text-5xl font-bold font-display text-black tracking-tight">{{TABLE_TITLE}}</h1>
+        </div>
+        <div class="text-right">
+          <div class="text-[10px] font-bold uppercase tracking-widest text-gray-400 mb-1">Date Generated</div>
+          <div class="font-display font-semibold text-lg text-gray-900">{{REPORT_DATE}}</div>
+        </div>
+      </div>
+
+      {{TABLE_DESCRIPTION}}
+
+      <div class="overflow-x-auto">
+        <table class="w-full text-left border-collapse">
+          <thead>
+            <tr class="bg-blue-50/50 border-y border-blue-100 print:bg-white">
+              <th class="px-4 py-4 text-[10px] font-bold uppercase tracking-widest text-blue-600 text-center w-12">No.</th>
+              <th class="px-4 py-4 text-[10px] font-bold uppercase tracking-widest text-blue-600 w-48">Lexeme</th>
+              <th class="px-4 py-4 text-[10px] font-bold uppercase tracking-widest text-blue-600 text-center w-24">Class</th>
+              <th class="px-4 py-4 text-[10px] font-bold uppercase tracking-widest text-blue-600">Definition</th>
+              <th class="px-4 py-4 text-[10px] font-bold uppercase tracking-widest text-blue-600 w-48">Equivalents</th>
+              <th class="px-4 py-4 text-[10px] font-bold uppercase tracking-widest text-blue-600 w-64">Usage</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-gray-100">
+            {{TABLE_ROWS}}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
