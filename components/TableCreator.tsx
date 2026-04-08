@@ -20,7 +20,7 @@ const TableCreator: React.FC<TableCreatorProps> = ({ user, existingTable, onSave
   const [status, setStatus] = useState('');
 
   const validateEnglishWords = (words: string[]): boolean => {
-    const englishWordRegex = /^[a-zA-Z]+(?:[-'][a-zA-Z]+)*$/;
+    const englishWordRegex = /^[a-zA-Z\s\[\]\-']+$/;
     return words.every(word => englishWordRegex.test(word));
   };
 
