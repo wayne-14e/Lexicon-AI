@@ -15,6 +15,9 @@ const ScratchpadPage: React.FC<ScratchpadPageProps> = ({ user }) => {
         <p className="text-muted mt-3 max-w-lg leading-relaxed font-sans italic text-sm">
           "The first draft of anything is shit." — Ernest Hemingway. Start here.
         </p>
+        <p className="text-xs sm:text-sm text-muted mt-5 max-w-2xl leading-relaxed p-3.5 border border-border/50 rounded-lg bg-surface/30 text-left">
+          <strong className="text-text font-medium">💡 Tip:</strong> You can input both single words and phrases. You can also include specifications for the AI in square braces <code className="font-mono text-primary/80 bg-background/50 px-1 py-0.5 rounded text-[11px] sm:text-xs">[]</code> — things like which meaning, which class, etc.
+        </p>
       </div>
 
       <div className="w-full">

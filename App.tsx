@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Eye, EyeOff } from 'lucide-react';
 import { User, VocabTable, GameMode } from './types';
 import { storageService } from './services/storageService';
 import Layout from './components/Layout';
@@ -31,6 +32,35 @@ const App: React.FC = () => {
   const [matchingGameMode, setMatchingGameMode] = useState<GameMode>('synonyms');
   const [toast, setToast] = useState<{ message: string; type: 'success' | 'info' } | null>(null);
   const [streakPopup, setStreakPopup] = useState<{ streak: number; tokens: number } | null>(null);
+  const [showPasswordUpdate, setShowPasswordUpdate] = useState(false);
+  const [newPassword, setNewPassword] = useState('');
+  const [isUpdatingPassword, setIsUpdatingPassword] = useState(false);
+  const [showNewPassword, setShowNewPassword] = useState(false);
+
+  useEffect(() => {
+    const unsubscribe = storageService.onPasswordRecovery(() => {
+      setShowPasswordUpdate(true);
+    });
+    return () => unsubscribe();
+  }, []);
+
+  const handleUpdatePassword = async () => {
+    if (newPassword.length < 4) {
+       showToast("Password must be at least 4 characters.", 'info');
+       return;
+    }
+    setIsUpdatingPassword(true);
+    const { error } = await storageService.updateAuthPassword(newPassword);
+    setIsUpdatingPassword(false);
+    
+    if (error) {
+       showToast("Failed to update password: " + error.message, 'info');
+    } else {
+       showToast("Password set successfully!");
+       setShowPasswordUpdate(false);
+       setNewPassword('');
+    }
+  };
 
   const showToast = (message: string, type: 'success' | 'info' = 'success') => {
     setToast({ message, type });
@@ -578,6 +608,41 @@ const App: React.FC = () => {
              <div className="fixed bottom-8 right-8 bg-black text-white px-4 py-2 rounded-full text-[10px] font-bold tracking-widest animate-pulse z-50 shadow-2xl">
                SYNCING...
              </div>
+          )}
+
+          {showPasswordUpdate && (
+            <div className="fixed inset-0 bg-black/80 backdrop-blur-sm z-[300] flex items-center justify-center p-6 animate-in fade-in duration-300">
+              <div className="bg-surface border border-white/10 rounded-3xl p-8 w-full max-w-sm shadow-2xl relative text-center">
+                <h3 className="text-2xl font-bold text-text font-display mb-2">New Access Code</h3>
+                <p className="text-xs text-muted mb-6">Please enter your new secure password below to finalize the recovery process.</p>
+                
+                <div className="relative mb-6">
+                  <input 
+                    type={showNewPassword ? "text" : "password"}
+                    value={newPassword}
+                    onChange={(e) => setNewPassword(e.target.value)}
+                    placeholder="New Access Code"
+                    className="w-full p-4 bg-surfaceHighlight border border-white/5 rounded-xl focus:bg-surfaceHighlight focus:border-primary text-text placeholder-muted transition-all text-base font-sans pr-14"
+                  />
+                  <button
+                    type="button"
+                    onClick={() => setShowNewPassword(!showNewPassword)}
+                    className="absolute right-4 top-1/2 -translate-y-1/2 text-muted hover:text-text transition-colors p-2"
+                    tabIndex={-1}
+                  >
+                    {showNewPassword ? <EyeOff className="w-5 h-5" /> : <Eye className="w-5 h-5" />}
+                  </button>
+                </div>
+                
+                <button
+                  onClick={handleUpdatePassword}
+                  disabled={isUpdatingPassword || newPassword.length < 4}
+                  className="w-full bg-primary text-white py-4 rounded-full font-bold uppercase tracking-[0.2em] text-xs hover:bg-secondary transition-all disabled:opacity-50"
+                >
+                  {isUpdatingPassword ? 'Saving...' : 'Set Password'}
+                </button>
+              </div>
+            </div>
           )}
         </>
       )}

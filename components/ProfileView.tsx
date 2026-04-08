@@ -113,7 +113,22 @@ const ProfileView: React.FC<ProfileViewProps> = ({ user, tables, onBack, onUserU
       return;
     }
 
+    if (trimmedUsername.length < 2 || !/[a-zA-Z]/.test(trimmedUsername)) {
+      alert("Name must be at least 2 characters and contain letters.");
+      setEditUsername(user.username);
+      setIsEditingUsername(false);
+      return;
+    }
+
     try {
+      const existingUser = await storageService.findUserByName(trimmedUsername);
+      if (existingUser && existingUser.id !== user.id) {
+        alert("This name is already taken. Please choose another.");
+        setEditUsername(user.username);
+        setIsEditingUsername(false);
+        return;
+      }
+
       const updatedUser = { ...user, username: trimmedUsername };
       await storageService.updateUser(updatedUser);
       onUserUpdate?.(updatedUser);

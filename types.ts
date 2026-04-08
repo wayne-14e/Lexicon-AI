@@ -2,6 +2,7 @@
 export interface User {
   id: string;
   username: string;
+  email?: string;
   password?: string;
   picture?: string;
   tokens?: number;
@@ -51,4 +52,4 @@ export interface VocabTable {
   };
 }
 
-export type AuthMode = 'login' | 'register';
+export type AuthMode = 'login' | 'register' | 'reset';

@@ -149,7 +149,7 @@ const TableCreator: React.FC<TableCreatorProps> = ({ user, existingTable, onSave
             <>
               <button
                 onClick={handleGenerate}
-                disabled={!title.trim() || !wordsInput.trim() || isGenerating || isSaving}
+                disabled={isGenerating || isSaving}
                 className="w-full md:w-auto px-20 py-5 bg-primary text-white font-bold rounded-full shadow-lg shadow-primary/20 hover:bg-secondary transition-all disabled:opacity-20 disabled:cursor-not-allowed uppercase tracking-[0.2em] text-[11px] hover:-translate-y-0.5"
               >
                 Assemble with Lexicon AI

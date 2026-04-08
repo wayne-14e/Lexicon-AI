@@ -23,6 +23,24 @@ export const storageService = {
   },
 
   getCurrentUser: async (): Promise<User | null> => {
+    // Check Supabase Auth
+    const { data: { user: authUser } } = await supabase.auth.getUser();
+    
+    if (authUser) {
+      // Sync local DB user
+      const { data } = await supabase
+        .from('users')
+        .select('*')
+        .eq('id', authUser.id)
+        .single();
+        
+      if (data) {
+        const finalUser = { ...data, email: authUser.email };
+        localStorage.setItem(KEYS.USER, JSON.stringify(finalUser));
+        return finalUser;
+      }
+    }
+
     const userStr = localStorage.getItem(KEYS.USER);
     if (!userStr) return null;
     
@@ -51,6 +69,50 @@ export const storageService = {
     return syncedUser;
   },
 
+  signInWithEmail: async (email: string, password: string) => {
+    return await supabase.auth.signInWithPassword({ email, password });
+  },
+
+  signUpWithEmail: async (email: string, password: string, username: string) => {
+    const { data, error } = await supabase.auth.signUp({ 
+      email, 
+      password 
+    });
+    
+    if (data.user && !error) {
+      // Insert custom user record without plain text password
+      const newUser: User = {
+        id: data.user.id,
+        username,
+        email,
+        streak: 1,
+        tokens: 0,
+      };
+      await supabase.from('users').upsert([newUser]);
+      localStorage.setItem(KEYS.USER, JSON.stringify(newUser));
+    }
+    return { data, error };
+  },
+
+  sendPasswordReset: async (email: string) => {
+    return await supabase.auth.resetPasswordForEmail(email, {
+      redirectTo: window.location.origin
+    });
+  },
+
+  onPasswordRecovery: (callback: () => void) => {
+    const { data } = supabase.auth.onAuthStateChange((event, session) => {
+      if (event === 'PASSWORD_RECOVERY') {
+        callback();
+      }
+    });
+    return data.subscription.unsubscribe;
+  },
+
+  updateAuthPassword: async (password: string) => {
+    return await supabase.auth.updateUser({ password });
+  },
+
   setCurrentUser: async (user: User) => {
     localStorage.setItem(KEYS.USER, JSON.stringify(user));
     
@@ -77,16 +139,6 @@ export const storageService = {
       .from('users')
       .select('*')
       .ilike('username', username)
-      .single();
-    
-    return data || null;
-  },
-
-  findUserByPassword: async (password: string): Promise<User | null> => {
-    const { data } = await supabase
-      .from('users')
-      .select('*')
-      .eq('password', password)
       .single();
     
     return data || null;
@@ -210,6 +262,7 @@ export const storageService = {
   },
 
   logout: async () => {
+    await supabase.auth.signOut();
     localStorage.removeItem(KEYS.USER);
   }
 };
