@@ -33,6 +33,7 @@ const LexyAssistant: React.FC<LexyAssistantProps> = ({ user, onSpendTokens }) =>
   ]);
   const [input, setInput] = useState('');
   const [isLoading, setIsLoading] = useState(false);
+  const [showTokenWarning, setShowTokenWarning] = useState(false);
   const messagesEndRef = useRef<HTMLDivElement>(null);
 
   const scrollToBottom = () => {
@@ -198,10 +199,35 @@ const LexyAssistant: React.FC<LexyAssistantProps> = ({ user, onSpendTokens }) =>
         )}
 
         {/* Input Area */}
-        <div className="p-4 border-t border-white/5 bg-surface rounded-b-2xl">
+        <div className="p-4 border-t border-white/5 bg-surface rounded-b-2xl relative">
+          {/* Token Warning Popup */}
+          {showTokenWarning && (
+            <div className="absolute bottom-full left-4 right-4 mb-2 p-3 bg-orange-500/10 border border-orange-500/30 text-orange-500 shadow-[0_0_15px_rgba(249,115,22,0.1)] text-xs rounded-xl backdrop-blur-md transition-all">
+              <div className="flex items-start gap-2">
+                <span className="mt-0.5 text-base leading-none">⚠️</span>
+                <p className="flex-1 mt-0.5 text-orange-500">
+                  You need <strong>40 Scholar Tokens</strong> to consult Lexy. 
+                  Earn tokens by practicing flashcards, playing the matching game, or keeping up your daily streak!
+                </p>
+                <button 
+                  type="button"
+                  onClick={() => setShowTokenWarning(false)} 
+                  className="p-1 -mr-1 -mt-1 text-orange-500/70 hover:text-orange-500 hover:bg-orange-500/10 rounded-full transition-colors shrink-0"
+                >
+                  <X className="w-3 h-3" />
+                </button>
+              </div>
+            </div>
+          )}
+
           <form 
             onSubmit={(e) => {
               e.preventDefault();
+              if ((user.tokens || 0) < 40) {
+                setShowTokenWarning(true);
+                setTimeout(() => setShowTokenWarning(false), 8000);
+                return;
+              }
               handleSend(input);
             }}
             className="relative"
@@ -215,7 +241,7 @@ const LexyAssistant: React.FC<LexyAssistantProps> = ({ user, onSpendTokens }) =>
             />
             <button
               type="submit"
-              disabled={!input.trim() || isLoading || (user.tokens || 0) < 40}
+              disabled={!input.trim() || isLoading}
               className="absolute right-2 top-1/2 -translate-y-1/2 p-2 text-purple-500 hover:text-purple-500/80 disabled:opacity-50 disabled:hover:text-purple-500 transition-colors"
             >
               <Send className="w-4 h-4" />
