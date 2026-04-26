@@ -1,0 +1,3008 @@
+{
+  "entries": [
+    {
+      "id": "aa815388-4eb1-4972-ab7b-8f076289cc2f",
+      "progress": 0,
+      "word": "justice",
+      "partOfSpeech": "noun",
+      "meaning": "Fair treatment and the quality of being morally right.",
+      "synonyms": "fairness, equity, righteousness",
+      "antonyms": "injustice, unfairness, bias",
+      "sentence": "The lawyer dedicated her career to fighting for justice for those who could not defend themselves."
+    },
+    {
+      "id": "a54dae26-0166-44e4-ab82-f977e4d6adcd",
+      "progress": 0,
+      "word": "environment",
+      "partOfSpeech": "noun",
+      "meaning": "The natural world, or the conditions that surround and affect living things.",
+      "synonyms": "surroundings, ecosystem, habitat",
+      "antonyms": "artificial world, urban environment",
+      "sentence": "Protecting the environment requires cooperation between governments, industries, and citizens."
+    },
+    {
+      "id": "53b70d58-f54b-4874-bce0-889053bad981",
+      "progress": 0,
+      "word": "pollution",
+      "partOfSpeech": "noun",
+      "meaning": "The presence of harmful substances in the environment.",
+      "synonyms": "contamination, toxicity, degradation",
+      "antonyms": "purity, cleanliness, conservation",
+      "sentence": "Air pollution in the city has increased significantly due to heavy traffic and industrial activity."
+    },
+    {
+      "id": "f5215808-4fa2-485e-9805-83d2896c0e4d",
+      "progress": 0,
+      "word": "education",
+      "partOfSpeech": "noun",
+      "meaning": "The process of receiving or giving systematic instruction.",
+      "synonyms": "schooling, learning, instruction",
+      "antonyms": "ignorance, illiteracy",
+      "sentence": "Access to quality education is considered a fundamental right in modern societies."
+    },
+    {
+      "id": "92a7062b-5c4d-49f9-ba44-0e5caeff2b03",
+      "progress": 0,
+      "word": "situation",
+      "partOfSpeech": "noun",
+      "meaning": "A set of circumstances in which someone finds themselves.",
+      "synonyms": "circumstances, condition, context",
+      "antonyms": "N/A",
+      "sentence": "The economic situation in the country has worsened since the change in policy."
+    },
+    {
+      "id": "5eba83ec-b9c1-46d5-be66-95943604fbca",
+      "progress": 0,
+      "word": "opportunity",
+      "partOfSpeech": "noun",
+      "meaning": "A set of circumstances that make something possible.",
+      "synonyms": "chance, opening, prospect",
+      "antonyms": "obstacle, barrier, setback",
+      "sentence": "Living abroad presented her with the opportunity to develop both professionally and personally."
+    },
+    {
+      "id": "8514946e-7ba0-4e9f-89fc-0f8f95b548a5",
+      "progress": 0,
+      "word": "challenge",
+      "partOfSpeech": "noun",
+      "meaning": "A difficult task or situation requiring skill and determination.",
+      "synonyms": "obstacle, difficulty, test",
+      "antonyms": "ease, simplicity, comfort",
+      "sentence": "Climate change poses one of the greatest challenges to the current generation."
+    },
+    {
+      "id": "23a8b70f-094a-41c3-a528-b2204172d198",
+      "progress": 0,
+      "word": "suggest",
+      "partOfSpeech": "verb",
+      "meaning": "To put forward an idea or possibility for consideration.",
+      "synonyms": "propose, recommend, imply",
+      "antonyms": "demand, command, oppose",
+      "sentence": "The evidence would suggest that the policy has had limited effect so far."
+    },
+    {
+      "id": "990a7df4-ed26-40ae-8b68-062228bb9b13",
+      "progress": 0,
+      "word": "evidence",
+      "partOfSpeech": "noun",
+      "meaning": "Available facts or information indicating whether something is true.",
+      "synonyms": "proof, data, indication",
+      "antonyms": "disproof, speculation, rumour",
+      "sentence": "The investigation was halted because there was insufficient evidence to proceed."
+    },
+    {
+      "id": "1ce4f6e2-6fb4-403a-869e-53807d7b60c4",
+      "progress": 0,
+      "word": "attitude",
+      "partOfSpeech": "noun",
+      "meaning": "A way of thinking or feeling about something, typically reflected in behaviour.",
+      "synonyms": "mindset, outlook, stance",
+      "antonyms": "N/A",
+      "sentence": "His attitude towards failure changed once he understood it as part of the learning process."
+    },
+    {
+      "id": "b75305ce-e3a0-44a4-a42c-2ea510cb95d6",
+      "progress": 0,
+      "word": "tendency",
+      "partOfSpeech": "noun",
+      "meaning": "An inclination to behave in a particular way.",
+      "synonyms": "inclination, trend, pattern",
+      "antonyms": "resistance, opposition, reluctance",
+      "sentence": "There is a tendency for people to resist change even when it would benefit them."
+    },
+    {
+      "id": "379cb879-31e3-4c63-a0e5-0e066ce363ae",
+      "progress": 0,
+      "word": "variety",
+      "partOfSpeech": "noun",
+      "meaning": "A number of things that are different from each other.",
+      "synonyms": "diversity, range, assortment",
+      "antonyms": "uniformity, sameness, monotony",
+      "sentence": "The course covers a wide variety of topics, from grammar to cultural context."
+    },
+    {
+      "id": "9c373466-c05d-4dfd-9e23-b9179cfc17c7",
+      "progress": 0,
+      "word": "similar",
+      "partOfSpeech": "adjective",
+      "meaning": "Resembling but not the same as something else.",
+      "synonyms": "alike, comparable, related",
+      "antonyms": "different, distinct, opposite",
+      "sentence": "The results of the two studies were remarkably similar, which strengthened the conclusion."
+    },
+    {
+      "id": "6b31d875-8b7f-4c1b-b51c-f335bdf7b44e",
+      "progress": 0,
+      "word": "different",
+      "partOfSpeech": "adjective",
+      "meaning": "Not the same as another.",
+      "synonyms": "distinct, unlike, contrasting",
+      "antonyms": "identical, same, similar",
+      "sentence": "Her approach to the problem was completely different from what the team had expected."
+    },
+    {
+      "id": "d86f1fa2-5edd-4e83-8576-58860117fbef",
+      "progress": 0,
+      "word": "compare",
+      "partOfSpeech": "verb",
+      "meaning": "To examine the similarities and differences between things.",
+      "synonyms": "contrast, assess, evaluate",
+      "antonyms": "ignore, overlook, separate",
+      "sentence": "It is important to compare multiple sources before drawing a conclusion."
+    },
+    {
+      "id": "caa5a831-0f5e-48da-a4f3-06bacdbbcb49",
+      "progress": 0,
+      "word": "contrast",
+      "partOfSpeech": "noun",
+      "meaning": "A marked difference between things when examined together.",
+      "synonyms": "difference, distinction, opposition",
+      "antonyms": "similarity, likeness, agreement",
+      "sentence": "In contrast to the previous decade, economic growth has slowed considerably."
+    },
+    {
+      "id": "8bf77a97-028b-45c7-8fcb-c809a42bcf34",
+      "progress": 0,
+      "word": "appropriate",
+      "partOfSpeech": "adjective",
+      "meaning": "Suitable or proper in the circumstances.",
+      "synonyms": "fitting, suitable, relevant",
+      "antonyms": "inappropriate, unsuitable, irrelevant",
+      "sentence": "It is important to choose an appropriate tone when communicating in a professional context."
+    },
+    {
+      "id": "1abed8ce-a679-4591-a673-1f256e91ce1d",
+      "progress": 0,
+      "word": "effective",
+      "partOfSpeech": "adjective",
+      "meaning": "Producing the intended result successfully.",
+      "synonyms": "successful, efficient, powerful",
+      "antonyms": "ineffective, weak, useless",
+      "sentence": "The new policy proved far more effective than the previous one."
+    },
+    {
+      "id": "092926cd-210c-43e4-9202-d2e821548848",
+      "progress": 0,
+      "word": "significant",
+      "partOfSpeech": "adjective",
+      "meaning": "Important or large enough to be noticed or to have an effect.",
+      "synonyms": "important, notable, considerable",
+      "antonyms": "insignificant, minor, trivial",
+      "sentence": "The research produced a significant finding that changed the direction of the study."
+    },
+    {
+      "id": "a671070d-a1e4-48ed-8023-55598c381e3e",
+      "progress": 0,
+      "word": "reliable",
+      "partOfSpeech": "adjective",
+      "meaning": "Consistently performing well and able to be trusted.",
+      "synonyms": "dependable, trustworthy, consistent",
+      "antonyms": "unreliable, inconsistent, untrustworthy",
+      "sentence": "A reliable source is essential when writing an academic article."
+    },
+    {
+      "id": "c2926b22-a946-4e56-93d3-4db6e213235a",
+      "progress": 0,
+      "word": "source",
+      "partOfSpeech": "noun",
+      "meaning": "A place or person from which information or something originates.",
+      "synonyms": "origin, reference, root",
+      "antonyms": "result, product, outcome",
+      "sentence": "Always evaluate the credibility of your source before including it in an argument."
+    },
+    {
+      "id": "aeb6b8bc-703a-4c3c-843f-cbd01aedb1d2",
+      "progress": 0,
+      "word": "issue",
+      "partOfSpeech": "noun",
+      "meaning": "An important topic or problem for debate or discussion.",
+      "synonyms": "matter, concern, problem",
+      "antonyms": "solution, resolution, answer",
+      "sentence": "The committee discussed the issue of rising costs at the annual conference."
+    },
+    {
+      "id": "b2da2fd9-edb1-4dae-8754-c797d1fcf60b",
+      "progress": 0,
+      "word": "policy",
+      "partOfSpeech": "noun",
+      "meaning": "A course of action adopted by an organisation or government.",
+      "synonyms": "regulation, guideline, strategy",
+      "antonyms": "N/A",
+      "sentence": "The government introduced a new policy aimed at reducing carbon emissions."
+    },
+    {
+      "id": "b8dfcb47-53e5-42f4-b4d8-591b1e6ac9dc",
+      "progress": 0,
+      "word": "government",
+      "partOfSpeech": "noun",
+      "meaning": "The group of people with authority to govern a country.",
+      "synonyms": "administration, authority, state",
+      "antonyms": "public, citizens, opposition",
+      "sentence": "The government announced plans to invest in renewable energy infrastructure."
+    },
+    {
+      "id": "a54744e7-7957-4863-9641-50a0e848013c",
+      "progress": 0,
+      "word": "society",
+      "partOfSpeech": "noun",
+      "meaning": "The aggregate of people living together in an organised community.",
+      "synonyms": "community, civilization, public",
+      "antonyms": "individual, isolation",
+      "sentence": "Digital technology has transformed the way society communicates and consumes information."
+    },
+    {
+      "id": "d53f174d-2b04-4c57-a9ca-f0fdeafe891b",
+      "progress": 0,
+      "word": "increase",
+      "partOfSpeech": "verb",
+      "meaning": "To become or make greater in size, amount, or degree.",
+      "synonyms": "grow, rise, expand",
+      "antonyms": "decrease, reduce, fall",
+      "sentence": "The data shows a steady increase in average temperatures over the past century."
+    },
+    {
+      "id": "3aa2e05d-5598-4d87-80db-226c87be8c79",
+      "progress": 0,
+      "word": "decrease",
+      "partOfSpeech": "verb",
+      "meaning": "To become smaller or fewer in size, amount, or degree.",
+      "synonyms": "reduce, decline, drop",
+      "antonyms": "increase, grow, rise",
+      "sentence": "Efforts to decrease pollution have had mixed results across different regions."
+    },
+    {
+      "id": "97017626-b63c-4163-b402-00dad93737e1",
+      "progress": 0,
+      "word": "acquire",
+      "partOfSpeech": "verb",
+      "meaning": "To come to have something, especially through effort.",
+      "synonyms": "obtain, gain, achieve",
+      "antonyms": "lose, give up, surrender",
+      "sentence": "She managed to acquire the necessary skills through a combination of study and practice."
+    },
+    {
+      "id": "148e50ab-5756-46df-a4d8-673e8c600999",
+      "progress": 0,
+      "word": "adequate",
+      "partOfSpeech": "adjective",
+      "meaning": "Satisfactory or acceptable in quality or quantity.",
+      "synonyms": "sufficient, acceptable, satisfactory",
+      "antonyms": "inadequate, insufficient, lacking",
+      "sentence": "The current budget is not adequate to fund the scale of construction required."
+    },
+    {
+      "id": "afb24bc7-5b56-4e43-8051-669f484a3cd1",
+      "progress": 0,
+      "word": "analyse",
+      "partOfSpeech": "verb",
+      "meaning": "To examine something in detail to understand it better.",
+      "synonyms": "examine, evaluate, investigate",
+      "antonyms": "overlook, ignore, guess",
+      "sentence": "Students are expected to analyse the text carefully before forming an argument."
+    },
+    {
+      "id": "0f69307b-418d-4d55-af2a-8d68cda3f762",
+      "progress": 0,
+      "word": "apparent",
+      "partOfSpeech": "adjective",
+      "meaning": "Clearly visible or understood; seeming real but not necessarily so.",
+      "synonyms": "obvious, evident, seeming",
+      "antonyms": "hidden, unclear, uncertain",
+      "sentence": "It became apparent that the original estimate had been far too low."
+    },
+    {
+      "id": "17dac5ef-16b2-4ff2-94cd-a4e1019b613e",
+      "progress": 0,
+      "word": "application",
+      "partOfSpeech": "noun",
+      "meaning": "A formal request, or the practical use of something.",
+      "synonyms": "request, use, implementation",
+      "antonyms": "rejection, theory, denial",
+      "sentence": "The application of this theory to real-world situations requires careful judgement."
+    },
+    {
+      "id": "aa5cc774-c0b2-44eb-ac3e-3daab8e862e8",
+      "progress": 0,
+      "word": "appoint",
+      "partOfSpeech": "verb",
+      "meaning": "To assign a job or role to someone officially.",
+      "synonyms": "designate, assign, nominate",
+      "antonyms": "dismiss, fire, remove",
+      "sentence": "The board decided to appoint a new director to lead the environmental campaign."
+    },
+    {
+      "id": "d2ea1304-3461-4b4e-b2c0-73cbfbb5683c",
+      "progress": 0,
+      "word": "approval",
+      "partOfSpeech": "noun",
+      "meaning": "The belief that something or someone is good or acceptable.",
+      "synonyms": "endorsement, agreement, consent",
+      "antonyms": "disapproval, rejection, objection",
+      "sentence": "The project cannot begin without the formal approval of the authority."
+    },
+    {
+      "id": "a1da53eb-44fc-4ae2-98af-014a6dc817d1",
+      "progress": 0,
+      "word": "argument",
+      "partOfSpeech": "noun",
+      "meaning": "A reasoned exchange of views, or a set of reasons for a position.",
+      "synonyms": "debate, reasoning, dispute",
+      "antonyms": "agreement, consensus, concession",
+      "sentence": "The author presents a clear and well-structured argument throughout the article."
+    },
+    {
+      "id": "577e8f2f-f74f-4d6e-935a-d05ae3016946",
+      "progress": 0,
+      "word": "aspect",
+      "partOfSpeech": "noun",
+      "meaning": "A particular feature or part of a situation or subject.",
+      "synonyms": "feature, element, dimension",
+      "antonyms": "whole, entirety",
+      "sentence": "Every aspect of the design was considered before the final version was approved."
+    },
+    {
+      "id": "0caeaae1-d87f-4b84-9c7f-9e5a9d3980c6",
+      "progress": 0,
+      "word": "atmosphere",
+      "partOfSpeech": "noun",
+      "meaning": "The prevailing tone or mood of a place, or the layer of air around Earth.",
+      "synonyms": "mood, ambience, climate",
+      "antonyms": "vacuum, lifelessness",
+      "sentence": "The atmosphere in the conference hall changed as soon as the results were announced."
+    },
+    {
+      "id": "420b6357-e639-474e-b3d4-3f7b8f2b291c",
+      "progress": 0,
+      "word": "attach",
+      "partOfSpeech": "verb",
+      "meaning": "To fasten or join something to something else; to attribute importance to.",
+      "synonyms": "connect, fasten, link",
+      "antonyms": "detach, separate, remove",
+      "sentence": "Please attach your supporting documents to the application form."
+    },
+    {
+      "id": "dfa3bb38-870d-47fc-a2c5-1813f3851c81",
+      "progress": 0,
+      "word": "audience",
+      "partOfSpeech": "noun",
+      "meaning": "The assembled spectators or listeners at a public event.",
+      "synonyms": "viewers, spectators, readership",
+      "antonyms": "performers, speakers",
+      "sentence": "The author's ability to connect with her audience made the event truly memorable."
+    },
+    {
+      "id": "9c6277c5-0e01-415f-9df1-6a4292372566",
+      "progress": 0,
+      "word": "author",
+      "partOfSpeech": "noun",
+      "meaning": "A writer of a book or other text.",
+      "synonyms": "writer, creator, novelist",
+      "antonyms": "reader, editor",
+      "sentence": "The author spent three years researching the historical context of the novel."
+    },
+    {
+      "id": "0c06d28a-19b3-4a65-9490-a4fb775b9212",
+      "progress": 0,
+      "word": "authority",
+      "partOfSpeech": "noun",
+      "meaning": "The power or right to give orders, make decisions, or enforce rules.",
+      "synonyms": "power, jurisdiction, control",
+      "antonyms": "weakness, submission, powerlessness",
+      "sentence": "The local authority has the power to approve or reject the construction plans."
+    },
+    {
+      "id": "5ac83e8a-fb66-4ecf-9364-782b4906e145",
+      "progress": 0,
+      "word": "aware",
+      "partOfSpeech": "adjective",
+      "meaning": "Having knowledge or perception of a situation.",
+      "synonyms": "conscious, informed, alert",
+      "antonyms": "unaware, ignorant, oblivious",
+      "sentence": "Citizens should be fully aware of the consequences of the policy before voting."
+    },
+    {
+      "id": "9b95f4c6-253f-402a-a6ed-7dea9fb77e00",
+      "progress": 0,
+      "word": "brilliant",
+      "partOfSpeech": "adjective",
+      "meaning": "Exceptionally clever or talented.",
+      "synonyms": "outstanding, gifted, exceptional",
+      "antonyms": "mediocre, dull, ordinary",
+      "sentence": "She gave a brilliant presentation that impressed the entire conference audience."
+    },
+    {
+      "id": "a34c92d9-1ff8-41cb-8c00-64568a3090ed",
+      "progress": 0,
+      "word": "caution",
+      "partOfSpeech": "noun",
+      "meaning": "Care taken to avoid danger or mistakes.",
+      "synonyms": "care, wariness, prudence",
+      "antonyms": "recklessness, carelessness",
+      "sentence": "He approached the situation with great caution, aware of the potential risks."
+    },
+    {
+      "id": "d9a69c85-97e7-42d6-b871-9d06cf2842a6",
+      "progress": 0,
+      "word": "ceremony",
+      "partOfSpeech": "noun",
+      "meaning": "A formal event performed on a special occasion.",
+      "synonyms": "ritual, occasion, formality",
+      "antonyms": "informality, casual event",
+      "sentence": "The award ceremony was attended by politicians, academics, and industry leaders."
+    },
+    {
+      "id": "26d6b36c-ff7d-49d2-86f1-bb2bf8a545b6",
+      "progress": 0,
+      "word": "character",
+      "partOfSpeech": "noun",
+      "meaning": "The combination of mental and moral qualities that make a person; a figure in a story.",
+      "synonyms": "personality, nature, figure",
+      "antonyms": "N/A",
+      "sentence": "The novel's central character undergoes a gradual transformation over the course of the story."
+    },
+    {
+      "id": "95fa0842-43dc-478b-ae83-0d6622719ae5",
+      "progress": 0,
+      "word": "chart",
+      "partOfSpeech": "noun",
+      "meaning": "A visual representation of data using diagrams or graphs.",
+      "synonyms": "graph, diagram, table",
+      "antonyms": "text, prose, paragraph",
+      "sentence": "The chart clearly displays the increase in global temperatures over the last century."
+    },
+    {
+      "id": "a926eab2-be22-4668-8dec-de577ecd1fe0",
+      "progress": 0,
+      "word": "chemical",
+      "partOfSpeech": "noun",
+      "meaning": "A substance produced by or involved in a chemical process.",
+      "synonyms": "substance, compound, element",
+      "antonyms": "N/A",
+      "sentence": "The factory was found to be releasing a harmful chemical compound into the river."
+    },
+    {
+      "id": "b25435a8-de0c-4952-8aaa-cbabe89e2d3d",
+      "progress": 0,
+      "word": "circumstance",
+      "partOfSpeech": "noun",
+      "meaning": "A fact or condition connected with or relevant to an event or situation.",
+      "synonyms": "condition, context, factor",
+      "antonyms": "N/A",
+      "sentence": "In these circumstances, it would be inappropriate to make any definite commitment."
+    },
+    {
+      "id": "debffd52-b646-4cea-a349-f9e1d14f79ce",
+      "progress": 0,
+      "word": "classic",
+      "partOfSpeech": "adjective",
+      "meaning": "Judged over time to be of the highest quality; a typical example.",
+      "synonyms": "timeless, definitive, exemplary",
+      "antonyms": "modern, temporary, trendy",
+      "sentence": "This film is now considered a classic of its genre and has influenced many directors."
+    },
+    {
+      "id": "f82a2b78-2107-4550-874a-09b62e7772fd",
+      "progress": 0,
+      "word": "clause",
+      "partOfSpeech": "noun",
+      "meaning": "A unit of grammatical organisation, or a condition in a legal document.",
+      "synonyms": "provision, section, condition",
+      "antonyms": "N/A",
+      "sentence": "The final clause of the contract was renegotiated before both parties agreed to sign."
+    },
+    {
+      "id": "86bd0adb-4a16-4ac3-91e5-c91041876567",
+      "progress": 0,
+      "word": "climate",
+      "partOfSpeech": "noun",
+      "meaning": "The long-term pattern of weather in a region; the prevailing trend in a situation.",
+      "synonyms": "weather pattern, atmosphere, environment",
+      "antonyms": "N/A",
+      "sentence": "The climate of political debate has become increasingly aggressive in recent years."
+    },
+    {
+      "id": "74c9e5c4-349c-416f-b227-d3ca55d969f4",
+      "progress": 0,
+      "word": "collapse",
+      "partOfSpeech": "verb",
+      "meaning": "To fall down suddenly; to fail completely and abruptly.",
+      "synonyms": "crumble, fall, break down",
+      "antonyms": "stand, succeed, thrive",
+      "sentence": "The building collapsed following a significant structural failure in the foundation."
+    },
+    {
+      "id": "29633b94-3568-477c-b40b-19fb46e0bfa9",
+      "progress": 0,
+      "word": "column",
+      "partOfSpeech": "noun",
+      "meaning": "A vertical arrangement in a table or chart; a tall support structure.",
+      "synonyms": "pillar, section, post",
+      "antonyms": "row, horizontal",
+      "sentence": "The data in the third column of the chart shows a gradual decline over time."
+    },
+    {
+      "id": "e6706ad8-3fdb-4bdf-b13a-4494e8dce5aa",
+      "progress": 0,
+      "word": "combination",
+      "partOfSpeech": "noun",
+      "meaning": "A joining of different elements to form a whole.",
+      "synonyms": "mixture, blend, union",
+      "antonyms": "separation, division",
+      "sentence": "The combination of economic pressure and political instability led to a rapid change."
+    },
+    {
+      "id": "e0821a8c-e725-4736-8e67-994eb4ee87ee",
+      "progress": 0,
+      "word": "command",
+      "partOfSpeech": "noun",
+      "meaning": "An authoritative order; control over a situation.",
+      "synonyms": "order, directive, control",
+      "antonyms": "request, suggestion, surrender",
+      "sentence": "She had complete command of the subject and answered every question with confidence."
+    },
+    {
+      "id": "0eff21f3-04c8-4b66-a512-43274d6c5c02",
+      "progress": 0,
+      "word": "commercial",
+      "partOfSpeech": "adjective",
+      "meaning": "Relating to commerce or profit-making.",
+      "synonyms": "trade-related, business, profit-driven",
+      "antonyms": "non-profit, charitable, personal",
+      "sentence": "The film was a commercial success despite receiving mixed reviews from critics."
+    },
+    {
+      "id": "d6e802a6-5ff9-4ce2-ba1e-3747f8fcbd4b",
+      "progress": 0,
+      "word": "commit",
+      "partOfSpeech": "verb",
+      "meaning": "To carry out an action, especially something negative; to pledge to a course of action.",
+      "synonyms": "pledge, carry out, perpetrate",
+      "antonyms": "avoid, abandon, withdraw",
+      "sentence": "The government has committed to reducing carbon emissions by thirty per cent."
+    },
+    {
+      "id": "433efd40-7661-4490-a12d-c0a8b9b5a414",
+      "progress": 0,
+      "word": "comparison",
+      "partOfSpeech": "noun",
+      "meaning": "The consideration of similarities and differences between things.",
+      "synonyms": "contrast, assessment, juxtaposition",
+      "antonyms": "N/A",
+      "sentence": "A direct comparison of the two economies reveals a significant difference in growth rate."
+    },
+    {
+      "id": "2f80f6d0-65d6-47e2-b0e8-f49fde35fd39",
+      "progress": 0,
+      "word": "compensate",
+      "partOfSpeech": "verb",
+      "meaning": "To make up for something unwelcome by providing something good.",
+      "synonyms": "reimburse, make up for, offset",
+      "antonyms": "take away, harm, withhold",
+      "sentence": "The company agreed to compensate those affected by the error in the delivery process."
+    },
+    {
+      "id": "6d9869b7-4b99-4d13-a7b2-be9ce9183677",
+      "progress": 0,
+      "word": "compete",
+      "partOfSpeech": "verb",
+      "meaning": "To strive against others for the same objective or prize.",
+      "synonyms": "rival, contest, challenge",
+      "antonyms": "cooperate, collaborate, concede",
+      "sentence": "Several candidates will compete for the same position at the national level."
+    },
+    {
+      "id": "21d89db1-3c87-4556-a981-8c990b939772",
+      "progress": 0,
+      "word": "competitive",
+      "partOfSpeech": "adjective",
+      "meaning": "Determined to be more successful than others; involving competition.",
+      "synonyms": "rivalrous, driven, ambitious",
+      "antonyms": "cooperative, passive, easy-going",
+      "sentence": "The market has become highly competitive, forcing companies to innovate constantly."
+    },
+    {
+      "id": "b7f91126-353b-45e6-864d-3f4c8ce4a72c",
+      "progress": 0,
+      "word": "competition",
+      "partOfSpeech": "noun",
+      "meaning": "An event or state in which people try to achieve the same goal.",
+      "synonyms": "contest, rivalry, tournament",
+      "antonyms": "cooperation, teamwork, collaboration",
+      "sentence": "The intense competition between the two firms led to significant advances in technology."
+    },
+    {
+      "id": "21cfa591-8242-49aa-ab3d-8327e89b5b9c",
+      "progress": 0,
+      "word": "complex",
+      "partOfSpeech": "adjective",
+      "meaning": "Consisting of many different and interconnected parts; not simple.",
+      "synonyms": "complicated, intricate, involved",
+      "antonyms": "simple, straightforward, basic",
+      "sentence": "The relationship between economic growth and environmental damage is deeply complex."
+    },
+    {
+      "id": "2346aa9e-ecfd-4b85-85a9-961f3a934ba3",
+      "progress": 0,
+      "word": "component",
+      "partOfSpeech": "noun",
+      "meaning": "A part or element of a larger whole.",
+      "synonyms": "part, element, constituent",
+      "antonyms": "whole, entirety, system",
+      "sentence": "Trust is an essential component of any effective working relationship."
+    },
+    {
+      "id": "0259a2e7-1859-4e9f-9fad-ce650c335441",
+      "progress": 0,
+      "word": "compose",
+      "partOfSpeech": "verb",
+      "meaning": "To write a piece of music or text; to make up or form something.",
+      "synonyms": "write, create, form",
+      "antonyms": "destroy, dismantle, separate",
+      "sentence": "She was asked to compose a piece for the annual concert."
+    },
+    {
+      "id": "91346316-60da-4da9-a778-46335dbe99de",
+      "progress": 0,
+      "word": "composition",
+      "partOfSpeech": "noun",
+      "meaning": "A piece of music or writing; the way in which parts are combined.",
+      "synonyms": "work, piece, structure",
+      "antonyms": "N/A",
+      "sentence": "The essay's composition was clear, with a strong introduction and a logical conclusion."
+    },
+    {
+      "id": "74da60ef-bd4d-4d6b-8893-96ace96d1a9f",
+      "progress": 0,
+      "word": "compound",
+      "partOfSpeech": "noun",
+      "meaning": "A substance formed from two or more elements; a word formed from two words.",
+      "synonyms": "mixture, complex, combination",
+      "antonyms": "element, simple substance",
+      "sentence": "The chemical compound was carefully analysed before being approved for use."
+    },
+    {
+      "id": "1186a4d1-278e-48cf-83bc-8b85c416718d",
+      "progress": 0,
+      "word": "concentrate",
+      "partOfSpeech": "verb",
+      "meaning": "To focus all attention or effort on something.",
+      "synonyms": "focus, direct, attend to",
+      "antonyms": "distract, scatter, ignore",
+      "sentence": "It is difficult to concentrate in a noisy environment when the task requires precision."
+    },
+    {
+      "id": "dea2c9be-ed11-467b-b89a-3f52757ef6b5",
+      "progress": 0,
+      "word": "conclusion",
+      "partOfSpeech": "noun",
+      "meaning": "The end or finish of something; a judgement based on reasoning.",
+      "synonyms": "decision, outcome, result",
+      "antonyms": "introduction, beginning, premise",
+      "sentence": "The report reached the conclusion that further investment was not justified."
+    },
+    {
+      "id": "ecc7933e-fcaa-41d6-8c8e-38f6ac5ff6eb",
+      "progress": 0,
+      "word": "conference",
+      "partOfSpeech": "noun",
+      "meaning": "A formal meeting for discussion, often involving many people.",
+      "synonyms": "summit, meeting, symposium",
+      "antonyms": "casual chat, individual work",
+      "sentence": "She was invited to speak at an international academic conference in Vienna."
+    },
+    {
+      "id": "32c23053-8d96-4989-a18a-182a3715ed4b",
+      "progress": 0,
+      "word": "confidence",
+      "partOfSpeech": "noun",
+      "meaning": "The feeling of trust in one's own abilities or in others.",
+      "synonyms": "self-assurance, certainty, belief",
+      "antonyms": "doubt, insecurity, hesitation",
+      "sentence": "Building confidence in your second language takes consistent effort and practice."
+    },
+    {
+      "id": "a4580359-1daa-4b39-ba61-610c54e4c47c",
+      "progress": 0,
+      "word": "consequence",
+      "partOfSpeech": "noun",
+      "meaning": "A result or effect of an action or condition.",
+      "synonyms": "outcome, result, repercussion",
+      "antonyms": "cause, reason, origin",
+      "sentence": "The consequences of ignoring the early warning signs were severe and long-lasting."
+    },
+    {
+      "id": "e6a6744a-8853-4f66-929b-1a7cd2183c3e",
+      "progress": 0,
+      "word": "consist",
+      "partOfSpeech": "verb",
+      "meaning": "To be composed or made up of.",
+      "synonyms": "comprise, be made of, contain",
+      "antonyms": "exclude, lack, omit",
+      "sentence": "The course consists of twelve weekly sessions followed by a written examination."
+    },
+    {
+      "id": "06f2cd6c-a8fb-4891-bb54-a7b424d0de40",
+      "progress": 0,
+      "word": "constant",
+      "partOfSpeech": "adjective",
+      "meaning": "Occurring continuously over a period of time without change.",
+      "synonyms": "continuous, persistent, steady",
+      "antonyms": "variable, irregular, intermittent",
+      "sentence": "The constant noise from the construction site made it difficult to work."
+    },
+    {
+      "id": "edf2f676-4fac-4a07-ba34-43a453cf4efe",
+      "progress": 0,
+      "word": "construct",
+      "partOfSpeech": "verb",
+      "meaning": "To build or create something by putting parts together.",
+      "synonyms": "build, create, assemble",
+      "antonyms": "demolish, destroy, dismantle",
+      "sentence": "They were given the contract to construct a new research facility in the capital."
+    },
+    {
+      "id": "8d5cf25f-aaad-4bef-9c23-6aab8870c7fe",
+      "progress": 0,
+      "word": "construction",
+      "partOfSpeech": "noun",
+      "meaning": "The process of building or creating something.",
+      "synonyms": "building, assembly, development",
+      "antonyms": "demolition, destruction",
+      "sentence": "The construction of the bridge took over four years and involved three contractors."
+    },
+    {
+      "id": "a43d5d47-5b95-43d2-9742-95ef09b8eead",
+      "progress": 0,
+      "word": "consume",
+      "partOfSpeech": "verb",
+      "meaning": "To use up a resource or to eat and drink.",
+      "synonyms": "use up, devour, exhaust",
+      "antonyms": "produce, create, conserve",
+      "sentence": "Modern cities consume vast amounts of energy, much of it still produced from fossil fuels."
+    },
+    {
+      "id": "2350937b-2d56-43cc-ac20-03169d4f00ac",
+      "progress": 0,
+      "word": "contact",
+      "partOfSpeech": "noun",
+      "meaning": "Communication or the action of touching; a person known to another.",
+      "synonyms": "communication, connection, link",
+      "antonyms": "isolation, avoidance",
+      "sentence": "She made contact with the author after reading the article online."
+    },
+    {
+      "id": "f63055d7-f261-4054-9c34-7938350b2b3a",
+      "progress": 0,
+      "word": "contain",
+      "partOfSpeech": "verb",
+      "meaning": "To have within; to keep under control.",
+      "synonyms": "hold, include, restrict",
+      "antonyms": "release, lack, exclude",
+      "sentence": "The document contains several clauses that were not included in the original draft."
+    },
+    {
+      "id": "4e6320e9-ae1f-42db-aa8a-461d55ca33b4",
+      "progress": 0,
+      "word": "content",
+      "partOfSpeech": "noun",
+      "meaning": "The information or material included in something; a feeling of satisfaction.",
+      "synonyms": "material, substance, subject matter",
+      "antonyms": "container, form, structure",
+      "sentence": "The content of the report was accurate, but the format made it difficult to follow."
+    },
+    {
+      "id": "176b703b-dfb0-494d-a930-002edf862d9c",
+      "progress": 0,
+      "word": "context",
+      "partOfSpeech": "noun",
+      "meaning": "The circumstances that form the setting for an event or idea.",
+      "synonyms": "background, setting, framework",
+      "antonyms": "isolation, vacuum",
+      "sentence": "Understanding the historical context of a text is essential for interpreting it correctly."
+    },
+    {
+      "id": "740c25a6-c234-4f92-80d4-ece4fb7db85c",
+      "progress": 0,
+      "word": "contract",
+      "partOfSpeech": "noun",
+      "meaning": "A written or spoken agreement enforceable by law.",
+      "synonyms": "agreement, deal, commitment",
+      "antonyms": "breach, cancellation, verbal promise",
+      "sentence": "Both parties signed the contract after a long and detailed negotiation."
+    },
+    {
+      "id": "99d1551b-fb4b-4555-8ffb-2bf0d0d8aa75",
+      "progress": 0,
+      "word": "contribute",
+      "partOfSpeech": "verb",
+      "meaning": "To give something, such as money or ideas, to achieve a common goal.",
+      "synonyms": "donate, add, give",
+      "antonyms": "take away, withhold, subtract",
+      "sentence": "Each member of the team was expected to contribute both time and ideas to the project."
+    },
+    {
+      "id": "39243b11-d753-4456-80dd-8ad23a483d9a",
+      "progress": 0,
+      "word": "control",
+      "partOfSpeech": "verb",
+      "meaning": "To determine the behaviour of something; to maintain influence over.",
+      "synonyms": "manage, direct, regulate",
+      "antonyms": "lose, surrender, relinquish",
+      "sentence": "The authority introduced new measures to control the rate of pollution."
+    },
+    {
+      "id": "1a98440b-c56f-4fb4-b8ef-173c204a7654",
+      "progress": 0,
+      "word": "cooperation",
+      "partOfSpeech": "noun",
+      "meaning": "The process of working together towards a shared goal.",
+      "synonyms": "collaboration, teamwork, partnership",
+      "antonyms": "competition, conflict, opposition",
+      "sentence": "International cooperation is essential to address the challenge of climate change."
+    },
+    {
+      "id": "670f3a40-d4a2-4a46-aae9-fd223042484c",
+      "progress": 0,
+      "word": "data",
+      "partOfSpeech": "noun",
+      "meaning": "Facts and statistics collected for analysis.",
+      "synonyms": "information, statistics, facts",
+      "antonyms": "opinion, speculation, anecdote",
+      "sentence": "The data collected over twenty years suggests a clear and consistent trend."
+    },
+    {
+      "id": "3c263263-98a1-4fb2-919d-f9dd24827664",
+      "progress": 0,
+      "word": "debate",
+      "partOfSpeech": "noun",
+      "meaning": "A formal discussion in which opposing arguments are put forward.",
+      "synonyms": "discussion, argument, deliberation",
+      "antonyms": "agreement, consensus, silence",
+      "sentence": "The public debate about immigration policy has become increasingly polarised."
+    },
+    {
+      "id": "485748ff-26d0-47dd-a4a9-d62057bab9c7",
+      "progress": 0,
+      "word": "debt",
+      "partOfSpeech": "noun",
+      "meaning": "A sum of money owed to someone.",
+      "synonyms": "obligation, liability, arrears",
+      "antonyms": "credit, asset, savings",
+      "sentence": "The country's growing debt has become a source of serious concern for economists."
+    },
+    {
+      "id": "2111821a-c6dd-422b-a292-6dd7deb3a4ca",
+      "progress": 0,
+      "word": "decide",
+      "partOfSpeech": "verb",
+      "meaning": "To make a choice after considering options.",
+      "synonyms": "choose, determine, resolve",
+      "antonyms": "hesitate, delay, avoid",
+      "sentence": "After reviewing all available evidence, the committee decided to proceed."
+    },
+    {
+      "id": "8735996f-f66c-4605-b122-8f11ff0c62a8",
+      "progress": 0,
+      "word": "decline",
+      "partOfSpeech": "verb",
+      "meaning": "To become smaller or weaker; to politely refuse.",
+      "synonyms": "decrease, diminish, refuse",
+      "antonyms": "increase, grow, accept",
+      "sentence": "The report shows a steady decline in biodiversity across the region."
+    },
+    {
+      "id": "a5ca453d-e167-4322-bffb-f8f086a19ac5",
+      "progress": 0,
+      "word": "defend",
+      "partOfSpeech": "verb",
+      "meaning": "To protect from attack; to justify a position or decision.",
+      "synonyms": "protect, justify, support",
+      "antonyms": "attack, oppose, abandon",
+      "sentence": "The scientist was asked to defend her methodology before a panel of experts."
+    },
+    {
+      "id": "d892678a-fe4e-402a-bd40-4dd860a938ce",
+      "progress": 0,
+      "word": "define",
+      "partOfSpeech": "verb",
+      "meaning": "To state the meaning of a word or phrase; to mark the boundary of something.",
+      "synonyms": "explain, describe, specify",
+      "antonyms": "obscure, confuse, misrepresent",
+      "sentence": "It is important to define your terms clearly at the beginning of an argument."
+    },
+    {
+      "id": "9eb22af5-2dfe-4d4d-9472-2bf7d7ae18ab",
+      "progress": 0,
+      "word": "definite",
+      "partOfSpeech": "adjective",
+      "meaning": "Clearly stated or decided; certain.",
+      "synonyms": "clear, certain, fixed",
+      "antonyms": "vague, uncertain, ambiguous",
+      "sentence": "There is no definite answer to the question, which makes further research necessary."
+    },
+    {
+      "id": "94bab5e4-298d-40c9-b6b6-d8420e35f376",
+      "progress": 0,
+      "word": "definition",
+      "partOfSpeech": "noun",
+      "meaning": "A statement of the meaning of a word or concept.",
+      "synonyms": "explanation, description, meaning",
+      "antonyms": "vagueness, ambiguity",
+      "sentence": "The definition of success varies greatly depending on one's values and circumstances."
+    },
+    {
+      "id": "cfa29ada-28fe-45e3-a2be-741b7f3a2786",
+      "progress": 0,
+      "word": "demonstrate",
+      "partOfSpeech": "verb",
+      "meaning": "To show clearly how something works; to take part in a public protest.",
+      "synonyms": "show, prove, illustrate",
+      "antonyms": "hide, disprove, conceal",
+      "sentence": "The experiment was designed to demonstrate the relationship between the two variables."
+    },
+    {
+      "id": "b4175e64-d5b4-4798-baba-411cd170a1e2",
+      "progress": 0,
+      "word": "deny",
+      "partOfSpeech": "verb",
+      "meaning": "To refuse to admit or accept something; to refuse to give.",
+      "synonyms": "reject, refute, contradict",
+      "antonyms": "admit, accept, confirm",
+      "sentence": "The director denied any knowledge of the irregularities found in the financial report."
+    },
+    {
+      "id": "9581dcfa-435c-4032-a96a-e18eec61bfa9",
+      "progress": 0,
+      "word": "design",
+      "partOfSpeech": "noun",
+      "meaning": "A plan or drawing for constructing or making something; the art of planning form and function.",
+      "synonyms": "plan, blueprint, layout",
+      "antonyms": "accident, randomness, chaos",
+      "sentence": "The architect was commissioned to design a building that would blend with the environment."
+    },
+    {
+      "id": "ed9893ec-9782-4e47-a561-d5fee2f76dca",
+      "progress": 0,
+      "word": "desire",
+      "partOfSpeech": "noun",
+      "meaning": "A strong feeling of wanting something.",
+      "synonyms": "wish, want, longing",
+      "antonyms": "indifference, aversion, dislike",
+      "sentence": "There is a strong desire among young people for a more equal and just society."
+    },
+    {
+      "id": "3cdb696b-2bf8-4a29-85d4-59e714772229",
+      "progress": 0,
+      "word": "destination",
+      "partOfSpeech": "noun",
+      "meaning": "The place to which someone is going or being sent.",
+      "synonyms": "goal, endpoint, target",
+      "antonyms": "origin, starting point, departure",
+      "sentence": "The destination of the data collected by the application was not made clear to users."
+    },
+    {
+      "id": "53449118-3ee3-4839-bd30-6e665c1933d5",
+      "progress": 0,
+      "word": "develop",
+      "partOfSpeech": "verb",
+      "meaning": "To grow or cause to grow more advanced.",
+      "synonyms": "grow, advance, improve",
+      "antonyms": "decline, regress, deteriorate",
+      "sentence": "The organisation was founded to help developing communities gain access to education."
+    },
+    {
+      "id": "580a0dde-78ae-4d97-8ced-63d46eb9f0f4",
+      "progress": 0,
+      "word": "device",
+      "partOfSpeech": "noun",
+      "meaning": "A thing made for a particular purpose; a plan or scheme.",
+      "synonyms": "tool, instrument, mechanism",
+      "antonyms": "N/A",
+      "sentence": "The device is designed to monitor air quality in real time."
+    },
+    {
+      "id": "9d0473a7-3c0b-42f4-adeb-374cd6962210",
+      "progress": 0,
+      "word": "devote",
+      "partOfSpeech": "verb",
+      "meaning": "To give time or effort entirely to a particular activity.",
+      "synonyms": "dedicate, commit, assign",
+      "antonyms": "neglect, abandon, ignore",
+      "sentence": "She decided to devote her final year of research to the topic of digital privacy."
+    },
+    {
+      "id": "1182f26b-f3fd-4441-8a1b-7d93e6275b8d",
+      "progress": 0,
+      "word": "diagram",
+      "partOfSpeech": "noun",
+      "meaning": "A simplified drawing showing the structure or workings of something.",
+      "synonyms": "chart, illustration, figure",
+      "antonyms": "paragraph, description",
+      "sentence": "The diagram on page four clearly illustrates the cycle of carbon in the atmosphere."
+    },
+    {
+      "id": "002f40f7-4284-4c08-93d4-a78bc3932439",
+      "progress": 0,
+      "word": "diamond",
+      "partOfSpeech": "noun",
+      "meaning": "A precious stone of great hardness; something valued for its brilliance.",
+      "synonyms": "gem, precious stone, jewel",
+      "antonyms": "N/A",
+      "sentence": "The diamond in the argument — the central point — was often buried in unnecessary detail."
+    },
+    {
+      "id": "8efab727-962e-4c2f-98b8-1884df07e428",
+      "progress": 0,
+      "word": "diary",
+      "partOfSpeech": "noun",
+      "meaning": "A book in which one records daily events and thoughts.",
+      "synonyms": "journal, log, record",
+      "antonyms": "N/A",
+      "sentence": "She kept a detailed diary throughout the expedition, which later became a published account."
+    },
+    {
+      "id": "6dd87f42-493d-40ad-a136-82d592d05f3b",
+      "progress": 0,
+      "word": "dictate",
+      "partOfSpeech": "verb",
+      "meaning": "To say or read aloud for someone to write down; to control or impose conditions.",
+      "synonyms": "command, impose, determine",
+      "antonyms": "follow, obey, submit",
+      "sentence": "Market forces often dictate the direction of commercial decisions, regardless of policy."
+    },
+    {
+      "id": "9ae79730-e47b-41fb-8589-9486583bb4f2",
+      "progress": 0,
+      "word": "differ",
+      "partOfSpeech": "verb",
+      "meaning": "To be unlike or distinct in nature or quality.",
+      "synonyms": "vary, contrast, diverge",
+      "antonyms": "match, agree, align",
+      "sentence": "Experts differ significantly in their interpretation of the available data."
+    },
+    {
+      "id": "562ac6b1-8085-4330-9a3b-432440e73ec0",
+      "progress": 0,
+      "word": "difference",
+      "partOfSpeech": "noun",
+      "meaning": "A way in which people or things are not alike.",
+      "synonyms": "distinction, variation, contrast",
+      "antonyms": "similarity, likeness, sameness",
+      "sentence": "Understanding the difference between correlation and causation is fundamental in research."
+    },
+    {
+      "id": "600d2bbe-bd62-42c8-8e7d-2dc6abf8af45",
+      "progress": 0,
+      "word": "digital",
+      "partOfSpeech": "adjective",
+      "meaning": "Relating to computer technology and electronic systems.",
+      "synonyms": "electronic, computerised, virtual",
+      "antonyms": "analogue, physical, manual",
+      "sentence": "The shift to digital communication has changed the way people form and maintain relationships."
+    },
+    {
+      "id": "a3b9e1b7-831c-4c8f-a751-94ae0947308d",
+      "progress": 0,
+      "word": "direction",
+      "partOfSpeech": "noun",
+      "meaning": "A course along which something moves; guidance or instructions.",
+      "synonyms": "course, route, guidance",
+      "antonyms": "N/A",
+      "sentence": "The new director gave a clear direction for the organisation's strategy over the next decade."
+    },
+    {
+      "id": "b08019a8-cb0f-4e79-9548-b3436fd09e94",
+      "progress": 0,
+      "word": "disappointment",
+      "partOfSpeech": "noun",
+      "meaning": "A feeling of sadness caused by the failure of expectations.",
+      "synonyms": "dismay, letdown, dissatisfaction",
+      "antonyms": "satisfaction, fulfilment, delight",
+      "sentence": "The outcome of the election was a significant disappointment for many who had hoped for change."
+    },
+    {
+      "id": "2b0478ba-1178-4cf5-8399-036455a63db4",
+      "progress": 0,
+      "word": "discovery",
+      "partOfSpeech": "noun",
+      "meaning": "The act of finding or learning something for the first time.",
+      "synonyms": "finding, revelation, breakthrough",
+      "antonyms": "concealment, hiding, secrecy",
+      "sentence": "The discovery of the ancient manuscript changed historians' understanding of the period."
+    },
+    {
+      "id": "a49714cf-f6f8-48bb-9b5c-e6be09a7622f",
+      "progress": 0,
+      "word": "disease",
+      "partOfSpeech": "noun",
+      "meaning": "A disorder of structure or function in a living organism.",
+      "synonyms": "illness, condition, ailment",
+      "antonyms": "health, wellbeing, recovery",
+      "sentence": "The rapid spread of the disease revealed serious weaknesses in the healthcare system."
+    },
+    {
+      "id": "aa7fc271-df38-4e6b-bf62-e2e4c12d0555",
+      "progress": 0,
+      "word": "dismiss",
+      "partOfSpeech": "verb",
+      "meaning": "To treat something as unworthy of consideration; to send someone away.",
+      "synonyms": "disregard, reject, remove",
+      "antonyms": "accept, consider, retain",
+      "sentence": "The committee chose to dismiss the findings without providing a clear explanation."
+    },
+    {
+      "id": "9e01f4f6-3706-466e-866d-2562b14af8bf",
+      "progress": 0,
+      "word": "display",
+      "partOfSpeech": "verb",
+      "meaning": "To show or present something for others to see.",
+      "synonyms": "show, present, exhibit",
+      "antonyms": "hide, conceal, suppress",
+      "sentence": "The exhibition will display works from artists across twenty different countries."
+    },
+    {
+      "id": "53dcf4e7-fa25-4c5d-b3f9-d51d7fe6ec6f",
+      "progress": 0,
+      "word": "distance",
+      "partOfSpeech": "noun",
+      "meaning": "The length of space between two points; emotional or social remoteness.",
+      "synonyms": "space, gap, remoteness",
+      "antonyms": "closeness, proximity, intimacy",
+      "sentence": "The growing distance between the two political parties made compromise increasingly difficult."
+    },
+    {
+      "id": "45fe7b29-071e-4bf6-8f35-74241bea8987",
+      "progress": 0,
+      "word": "distract",
+      "partOfSpeech": "verb",
+      "meaning": "To prevent someone from concentrating on something.",
+      "synonyms": "divert, interrupt, sidetrack",
+      "antonyms": "focus, concentrate, engage",
+      "sentence": "Social media can seriously distract students from their academic responsibilities."
+    },
+    {
+      "id": "c244d74f-c4a4-4cec-8cf3-5e25ae8fc889",
+      "progress": 0,
+      "word": "distribute",
+      "partOfSpeech": "verb",
+      "meaning": "To give or deliver to a number of people.",
+      "synonyms": "spread, allocate, divide",
+      "antonyms": "collect, gather, withhold",
+      "sentence": "The organisation aims to distribute resources equally across all regions."
+    },
+    {
+      "id": "c0c76a5b-97f2-435d-bd19-5084bc8f5f5c",
+      "progress": 0,
+      "word": "division",
+      "partOfSpeech": "noun",
+      "meaning": "The action of separating something into parts; a section of a large organisation.",
+      "synonyms": "separation, split, section",
+      "antonyms": "unity, combination, whole",
+      "sentence": "The sharp division between the two factions made reaching an agreement almost impossible."
+    },
+    {
+      "id": "26f7e690-99f0-4c99-ad7c-0140462ffffa",
+      "progress": 0,
+      "word": "document",
+      "partOfSpeech": "noun",
+      "meaning": "A written or printed record; to record facts in written form.",
+      "synonyms": "record, report, file",
+      "antonyms": "memory, rumour",
+      "sentence": "Every stage of the process was carefully documented to ensure full transparency."
+    },
+    {
+      "id": "8448fad9-6d37-49f7-ab79-b90d3f5832ca",
+      "progress": 0,
+      "word": "domestic",
+      "partOfSpeech": "adjective",
+      "meaning": "Relating to the home or family; relating to one's own country.",
+      "synonyms": "household, national, internal",
+      "antonyms": "foreign, international, external",
+      "sentence": "The policy addresses both international trade and domestic production."
+    },
+    {
+      "id": "515bf510-14c1-42dd-8404-c73169ce3e51",
+      "progress": 0,
+      "word": "dominant",
+      "partOfSpeech": "adjective",
+      "meaning": "Most important, powerful, or influential.",
+      "synonyms": "main, leading, prevailing",
+      "antonyms": "minor, secondary, subordinate",
+      "sentence": "English has become the dominant language of international business and science."
+    },
+    {
+      "id": "99e40b84-470b-4ffa-b777-efaa66d77304",
+      "progress": 0,
+      "word": "doubt",
+      "partOfSpeech": "noun",
+      "meaning": "A feeling of uncertainty about the truth or reliability of something.",
+      "synonyms": "uncertainty, scepticism, hesitation",
+      "antonyms": "certainty, confidence, trust",
+      "sentence": "There is considerable doubt about whether the proposed solution will be effective in practice."
+    },
+    {
+      "id": "0f3f93d3-f475-49df-bc0b-93cb1ec45575",
+      "progress": 0,
+      "word": "draft",
+      "partOfSpeech": "noun",
+      "meaning": "A preliminary version of a piece of writing; a current of cool air.",
+      "synonyms": "outline, version, sketch",
+      "antonyms": "final version, finished work",
+      "sentence": "The first draft of the report was reviewed by three members of the committee."
+    },
+    {
+      "id": "f8172d9b-87e7-4733-9c68-ff81297fc58c",
+      "progress": 0,
+      "word": "drama",
+      "partOfSpeech": "noun",
+      "meaning": "A play for theatre; an exciting or intense event.",
+      "synonyms": "play, tension, excitement",
+      "antonyms": "calm, routine, peace",
+      "sentence": "The political drama surrounding the election attracted attention from across the globe."
+    },
+    {
+      "id": "65b65e1f-9445-4e2b-b16f-7820aab89903",
+      "progress": 0,
+      "word": "dynamic",
+      "partOfSpeech": "adjective",
+      "meaning": "Characterised by constant change, activity, and progress.",
+      "synonyms": "energetic, active, vibrant",
+      "antonyms": "static, passive, stagnant",
+      "sentence": "The dynamic nature of the global economy requires businesses to adapt constantly."
+    },
+    {
+      "id": "6f5635bb-5c5e-4ed1-86c0-60a0f66dc32a",
+      "progress": 0,
+      "word": "economic",
+      "partOfSpeech": "adjective",
+      "meaning": "Relating to the economy or financial matters.",
+      "synonyms": "financial, monetary, commercial",
+      "antonyms": "social, cultural, personal",
+      "sentence": "The economic consequences of the policy change were felt across the entire region."
+    },
+    {
+      "id": "07e0dfaa-7eb8-4fe1-a610-e4a48df14a55",
+      "progress": 0,
+      "word": "economy",
+      "partOfSpeech": "noun",
+      "meaning": "The system of production, distribution, and consumption of goods in a country.",
+      "synonyms": "financial system, market, trade",
+      "antonyms": "N/A",
+      "sentence": "A strong economy depends on investment in education, infrastructure, and innovation."
+    },
+    {
+      "id": "2af743ba-303f-401c-b8d3-8af65baf189e",
+      "progress": 0,
+      "word": "efficient",
+      "partOfSpeech": "adjective",
+      "meaning": "Achieving maximum productivity with minimum wasted effort.",
+      "synonyms": "productive, effective, streamlined",
+      "antonyms": "inefficient, wasteful, slow",
+      "sentence": "The new system is far more efficient than the previous one, reducing processing time by half."
+    },
+    {
+      "id": "8e38ed6a-3a3d-4d8b-bb02-c67da8a2a2d4",
+      "progress": 0,
+      "word": "effort",
+      "partOfSpeech": "noun",
+      "meaning": "A vigorous or determined attempt.",
+      "synonyms": "attempt, endeavour, exertion",
+      "antonyms": "laziness, inaction, ease",
+      "sentence": "Despite considerable effort, the team was unable to reach a satisfactory conclusion."
+    },
+    {
+      "id": "db999653-0e47-4540-8563-11655c5fb5c4",
+      "progress": 0,
+      "word": "elaborate",
+      "partOfSpeech": "adjective",
+      "meaning": "Involving many carefully arranged parts; detailed and complicated.",
+      "synonyms": "detailed, intricate, complex",
+      "antonyms": "simple, basic, plain",
+      "sentence": "The scheme was so elaborate that even those involved struggled to explain it clearly."
+    },
+    {
+      "id": "ba33c026-a45d-4e8b-aa0f-133f9d5eb818",
+      "progress": 0,
+      "word": "electric",
+      "partOfSpeech": "adjective",
+      "meaning": "Relating to or operated by electricity; causing great excitement.",
+      "synonyms": "powered, charged, thrilling",
+      "antonyms": "manual, dull, lifeless",
+      "sentence": "The debate over electric vehicles has become central to discussions on pollution."
+    },
+    {
+      "id": "c0a4010e-c359-4040-a5cb-d4e1d561c6f3",
+      "progress": 0,
+      "word": "electronic",
+      "partOfSpeech": "adjective",
+      "meaning": "Using or relating to electronic circuits and devices.",
+      "synonyms": "digital, computerised, automated",
+      "antonyms": "manual, mechanical, analogue",
+      "sentence": "The contract was signed electronically, with all parties receiving a copy immediately."
+    },
+    {
+      "id": "6228aa3d-8433-48e8-884c-44516f3f93e7",
+      "progress": 0,
+      "word": "element",
+      "partOfSpeech": "noun",
+      "meaning": "A part or aspect of something; a fundamental substance in chemistry.",
+      "synonyms": "component, factor, substance",
+      "antonyms": "whole, entirety, compound",
+      "sentence": "Trust is an essential element in any productive working relationship."
+    },
+    {
+      "id": "27f64c61-9b19-4985-a735-e6d8265461ea",
+      "progress": 0,
+      "word": "eliminate",
+      "partOfSpeech": "verb",
+      "meaning": "To remove or get rid of something completely.",
+      "synonyms": "remove, eradicate, exclude",
+      "antonyms": "include, keep, preserve",
+      "sentence": "The aim of the programme is to eliminate inequality in access to education."
+    },
+    {
+      "id": "f78d99c2-fa09-46bc-9005-84e739e8f956",
+      "progress": 0,
+      "word": "elite",
+      "partOfSpeech": "noun",
+      "meaning": "A group regarded as the best or most powerful in a society.",
+      "synonyms": "top group, privileged class, best",
+      "antonyms": "masses, majority, general public",
+      "sentence": "Critics argued that the policy only benefited a small economic elite."
+    },
+    {
+      "id": "c6bc3a66-cbff-41d8-a3cc-f2337f582ba8",
+      "progress": 0,
+      "word": "embarrass",
+      "partOfSpeech": "verb",
+      "meaning": "To make someone feel awkward or ashamed.",
+      "synonyms": "humiliate, shame, discomfort",
+      "antonyms": "comfort, reassure, encourage",
+      "sentence": "The data error in the report deeply embarrassed the research team."
+    },
+    {
+      "id": "d85771b1-3d1a-419d-95d9-b9e4f3da2c93",
+      "progress": 0,
+      "word": "embrace",
+      "partOfSpeech": "verb",
+      "meaning": "To hold someone closely; to willingly accept or adopt something.",
+      "synonyms": "accept, adopt, welcome",
+      "antonyms": "reject, resist, oppose",
+      "sentence": "The organisation has embraced a more open approach to leadership."
+    },
+    {
+      "id": "12db1a86-86c6-4277-a09e-d39bb374a16d",
+      "progress": 0,
+      "word": "emerge",
+      "partOfSpeech": "verb",
+      "meaning": "To come out of or become visible; to develop gradually.",
+      "synonyms": "appear, arise, develop",
+      "antonyms": "disappear, vanish, recede",
+      "sentence": "Several key themes emerge from a detailed analysis of the data."
+    },
+    {
+      "id": "e4e29f1d-9f95-4781-84b1-fa3ee791b587",
+      "progress": 0,
+      "word": "enable",
+      "partOfSpeech": "verb",
+      "meaning": "To give someone the means or authority to do something.",
+      "synonyms": "allow, permit, empower",
+      "antonyms": "prevent, disable, restrict",
+      "sentence": "Digital technology has enabled people to access education from anywhere in the world."
+    },
+    {
+      "id": "349c6dc3-8ede-4028-930b-d9510ccdf798",
+      "progress": 0,
+      "word": "encourage",
+      "partOfSpeech": "verb",
+      "meaning": "To give someone support, confidence, or hope.",
+      "synonyms": "support, inspire, motivate",
+      "antonyms": "discourage, deter, undermine",
+      "sentence": "The government introduced grants to encourage investment in renewable energy."
+    },
+    {
+      "id": "584c16a3-d939-47f5-b180-ba0e4caf8ca7",
+      "progress": 0,
+      "word": "enhance",
+      "partOfSpeech": "verb",
+      "meaning": "To intensify or improve the quality or value of something.",
+      "synonyms": "improve, boost, strengthen",
+      "antonyms": "diminish, weaken, reduce",
+      "sentence": "The renovation was designed to enhance the building's energy efficiency."
+    },
+    {
+      "id": "31ab5486-b36a-4395-93a7-9dc9a23445f0",
+      "progress": 0,
+      "word": "entertainment",
+      "partOfSpeech": "noun",
+      "meaning": "The action of providing or being provided with amusement.",
+      "synonyms": "amusement, enjoyment, leisure",
+      "antonyms": "boredom, work, obligation",
+      "sentence": "The entertainment industry has been significantly disrupted by the rise of digital platforms."
+    },
+    {
+      "id": "f223aa82-e621-4c7a-ae31-e2413f1ea966",
+      "progress": 0,
+      "word": "equipment",
+      "partOfSpeech": "noun",
+      "meaning": "The necessary items for a particular purpose.",
+      "synonyms": "tools, apparatus, gear",
+      "antonyms": "N/A",
+      "sentence": "The laboratory was equipped with the most advanced equipment available."
+    },
+    {
+      "id": "8b94300c-e9e2-4669-af44-4169327d9fa6",
+      "progress": 0,
+      "word": "equivalent",
+      "partOfSpeech": "adjective",
+      "meaning": "Equal in value, meaning, or effect.",
+      "synonyms": "equal, comparable, matching",
+      "antonyms": "different, unequal, dissimilar",
+      "sentence": "A degree from this institution is considered equivalent to one from a top university."
+    },
+    {
+      "id": "004db649-d891-4cc4-82eb-66b8fd34ceb4",
+      "progress": 0,
+      "word": "essential",
+      "partOfSpeech": "adjective",
+      "meaning": "Absolutely necessary or extremely important.",
+      "synonyms": "vital, crucial, necessary",
+      "antonyms": "unnecessary, optional, trivial",
+      "sentence": "Critical thinking is an essential skill for success in academic study."
+    },
+    {
+      "id": "6a8fa9b8-20e1-4ecc-ba37-a0a648bcaa6b",
+      "progress": 0,
+      "word": "estimate",
+      "partOfSpeech": "verb",
+      "meaning": "To calculate approximately without exact measurement.",
+      "synonyms": "approximate, calculate, assess",
+      "antonyms": "know exactly, measure precisely",
+      "sentence": "The initial estimate proved to be far lower than the actual cost of construction."
+    },
+    {
+      "id": "4c809e7e-9e1c-4570-9019-97aa5b775470",
+      "progress": 0,
+      "word": "establish",
+      "partOfSpeech": "verb",
+      "meaning": "To set up on a firm basis; to show something to be true.",
+      "synonyms": "found, create, prove",
+      "antonyms": "dismantle, disprove, close",
+      "sentence": "The organisation was established to promote cooperation between research institutions."
+    },
+    {
+      "id": "603c068c-b659-4726-a234-6bcd94f7426f",
+      "progress": 0,
+      "word": "estate",
+      "partOfSpeech": "noun",
+      "meaning": "A property consisting of land and large house; a person's assets.",
+      "synonyms": "property, assets, land",
+      "antonyms": "debt, liability",
+      "sentence": "The estate was valued at several million dollars and included land, buildings, and financial assets."
+    },
+    {
+      "id": "42da1cd5-e7dc-44ce-8662-72eee91940ac",
+      "progress": 0,
+      "word": "evaluate",
+      "partOfSpeech": "verb",
+      "meaning": "To form a judgement about the quality or worth of something.",
+      "synonyms": "assess, judge, appraise",
+      "antonyms": "ignore, overlook, assume",
+      "sentence": "Teachers are required to evaluate each student's progress at the end of every term."
+    },
+    {
+      "id": "8a4bd579-c35c-46ef-82ce-9a63542b4c4d",
+      "progress": 0,
+      "word": "exchange",
+      "partOfSpeech": "noun",
+      "meaning": "An act of giving and receiving in return; a place where trading occurs.",
+      "synonyms": "trade, swap, transaction",
+      "antonyms": "keep, withhold, monopolise",
+      "sentence": "The cultural exchange programme gave students the opportunity to study abroad."
+    },
+    {
+      "id": "61040ca6-c24e-4e6c-a4b6-12553951020d",
+      "progress": 0,
+      "word": "exclude",
+      "partOfSpeech": "verb",
+      "meaning": "To prevent someone or something from participating or being included.",
+      "synonyms": "omit, bar, leave out",
+      "antonyms": "include, invite, welcome",
+      "sentence": "The policy was criticised for appearing to exclude those from lower-income backgrounds."
+    },
+    {
+      "id": "4c332b62-9782-49a0-98c0-64e04b18e9eb",
+      "progress": 0,
+      "word": "exclusive",
+      "partOfSpeech": "adjective",
+      "meaning": "Limited to a particular person or group; high quality and expensive.",
+      "synonyms": "restricted, select, premium",
+      "antonyms": "inclusive, common, shared",
+      "sentence": "Access to the database is exclusive to registered academic institutions."
+    },
+    {
+      "id": "159708c0-b23a-4537-80f5-a6d25a773e0f",
+      "progress": 0,
+      "word": "execute",
+      "partOfSpeech": "verb",
+      "meaning": "To carry out or put into effect a plan or action; to legally kill.",
+      "synonyms": "implement, carry out, perform",
+      "antonyms": "plan, avoid, abandon",
+      "sentence": "The team was given two weeks to execute the plan before the deadline."
+    },
+    {
+      "id": "7fcde0ae-5fc9-4fdd-8625-cbf1100e4d5c",
+      "progress": 0,
+      "word": "existence",
+      "partOfSpeech": "noun",
+      "meaning": "The fact or state of living or existing.",
+      "synonyms": "being, life, reality",
+      "antonyms": "non-existence, absence, void",
+      "sentence": "The existence of inequality within the system is no longer a matter of debate."
+    },
+    {
+      "id": "3e33b1d6-2e48-4521-a5ce-60db1b5489c7",
+      "progress": 0,
+      "word": "expressive",
+      "partOfSpeech": "adjective",
+      "meaning": "Effectively conveying thought or feeling.",
+      "synonyms": "communicative, vivid, eloquent",
+      "antonyms": "unexpressive, blank, muted",
+      "sentence": "Her writing style is highly expressive, making complex arguments feel vivid and immediate."
+    },
+    {
+      "id": "c56e5437-a321-45f6-9039-cd92337b5a31",
+      "progress": 0,
+      "word": "extreme",
+      "partOfSpeech": "adjective",
+      "meaning": "Reaching a high or the highest degree; far from moderate.",
+      "synonyms": "intense, severe, radical",
+      "antonyms": "moderate, mild, reasonable",
+      "sentence": "In extreme cases, prolonged exposure to the chemical can cause serious health damage."
+    },
+    {
+      "id": "b9cebec0-fbc0-4a78-986d-490f90a71a44",
+      "progress": 0,
+      "word": "facility",
+      "partOfSpeech": "noun",
+      "meaning": "A place or piece of equipment provided for a purpose; ease of doing something.",
+      "synonyms": "amenity, resource, provision",
+      "antonyms": "N/A",
+      "sentence": "The new research facility is equipped with state-of-the-art technology."
+    },
+    {
+      "id": "8fbff5ba-cc98-446a-9107-2ceb93c702cf",
+      "progress": 0,
+      "word": "factor",
+      "partOfSpeech": "noun",
+      "meaning": "A circumstance, fact, or influence that contributes to a result.",
+      "synonyms": "element, influence, cause",
+      "antonyms": "result, outcome, effect",
+      "sentence": "One key factor in the decline of biodiversity is the loss of natural habitat."
+    },
+    {
+      "id": "a7b6e78f-f185-4a17-8946-c7e131643eb4",
+      "progress": 0,
+      "word": "fade",
+      "partOfSpeech": "verb",
+      "meaning": "To gradually grow faint or lose brightness or strength.",
+      "synonyms": "diminish, weaken, disappear",
+      "antonyms": "strengthen, intensify, grow",
+      "sentence": "Support for the proposal began to fade as the economic consequences became clearer."
+    },
+    {
+      "id": "4c19605b-33c7-4717-971c-26bff7fbe0ff",
+      "progress": 0,
+      "word": "faithful",
+      "partOfSpeech": "adjective",
+      "meaning": "Remaining loyal and committed; accurate or true to an original.",
+      "synonyms": "loyal, devoted, accurate",
+      "antonyms": "disloyal, unfaithful, inaccurate",
+      "sentence": "The translation is faithful to the original text while remaining readable."
+    },
+    {
+      "id": "a2cd4ddc-a0c1-4b10-8670-f720b4c42713",
+      "progress": 0,
+      "word": "familiar",
+      "partOfSpeech": "adjective",
+      "meaning": "Well known from long association; having a good knowledge of.",
+      "synonyms": "known, recognised, acquainted",
+      "antonyms": "unfamiliar, strange, unknown",
+      "sentence": "Students should be familiar with the key arguments before attending the seminar."
+    },
+    {
+      "id": "c8613f9a-3c87-4699-a6de-8b0a60cb68d6",
+      "progress": 0,
+      "word": "fantasy",
+      "partOfSpeech": "noun",
+      "meaning": "The power of imagination; something imagined and not based in reality.",
+      "synonyms": "imagination, illusion, daydream",
+      "antonyms": "reality, fact, truth",
+      "sentence": "The belief that economic growth can continue indefinitely is largely a fantasy."
+    },
+    {
+      "id": "bcf6a99d-26c7-4e83-8e7b-50f5032d8273",
+      "progress": 0,
+      "word": "fashion",
+      "partOfSpeech": "noun",
+      "meaning": "A popular trend, especially in clothes; the manner of doing something.",
+      "synonyms": "trend, style, vogue",
+      "antonyms": "unfashionable, classic, timeless",
+      "sentence": "The fashion industry is under increasing pressure to adopt more sustainable practices."
+    },
+    {
+      "id": "a0a1da22-9e8b-4658-a2ce-6e70cc16a728",
+      "progress": 0,
+      "word": "fasten",
+      "partOfSpeech": "verb",
+      "meaning": "To close or attach firmly.",
+      "synonyms": "secure, fix, attach",
+      "antonyms": "unfasten, loosen, release",
+      "sentence": "Please fasten your seatbelt before the vehicle begins to move."
+    },
+    {
+      "id": "acedd584-f688-4a85-8994-0db09d9e3a63",
+      "progress": 0,
+      "word": "fiction",
+      "partOfSpeech": "noun",
+      "meaning": "Literature in the form of prose that describes imaginary events.",
+      "synonyms": "narrative, story, invention",
+      "antonyms": "fact, non-fiction, reality",
+      "sentence": "The novel sits on the boundary between literary fiction and political commentary."
+    },
+    {
+      "id": "e6ec1184-c920-4d63-9341-cdee423d11a2",
+      "progress": 0,
+      "word": "final",
+      "partOfSpeech": "adjective",
+      "meaning": "Coming at the end; not to be altered or reconsidered.",
+      "synonyms": "last, ultimate, conclusive",
+      "antonyms": "first, initial, provisional",
+      "sentence": "The final version of the report must be submitted no later than Friday afternoon."
+    },
+    {
+      "id": "47b2b24c-e200-44c6-8e87-119ac3cf5f77",
+      "progress": 0,
+      "word": "finance",
+      "partOfSpeech": "noun",
+      "meaning": "The management of large amounts of money; the money available.",
+      "synonyms": "funding, economics, capital",
+      "antonyms": "debt, poverty, insolvency",
+      "sentence": "The minister of finance announced new measures to control the growing national debt."
+    },
+    {
+      "id": "994e9be7-808e-46b9-b5a4-7c6b46c2aa7f",
+      "progress": 0,
+      "word": "flow",
+      "partOfSpeech": "verb",
+      "meaning": "To move steadily and continuously in one direction.",
+      "synonyms": "stream, circulate, proceed",
+      "antonyms": "block, halt, stop",
+      "sentence": "The natural flow of a river can be seriously disrupted by the construction of a dam."
+    },
+    {
+      "id": "7494573c-224a-4551-97cc-f23a4fa09f35",
+      "progress": 0,
+      "word": "fluency",
+      "partOfSpeech": "noun",
+      "meaning": "The ability to speak or write a language easily and accurately.",
+      "synonyms": "proficiency, command, eloquence",
+      "antonyms": "hesitancy, difficulty, broken speech",
+      "sentence": "Fluency in a second language opens up a wider range of academic and professional opportunities."
+    },
+    {
+      "id": "2ac459da-d6f7-4c2d-8cce-9c1e62096254",
+      "progress": 0,
+      "word": "focus",
+      "partOfSpeech": "verb",
+      "meaning": "To concentrate attention or effort on something.",
+      "synonyms": "concentrate, direct, centre",
+      "antonyms": "distract, scatter, divert",
+      "sentence": "The research focuses on the connection between income inequality and educational outcomes."
+    },
+    {
+      "id": "b4d18142-b02f-4c93-95e8-1e3c9162573d",
+      "progress": 0,
+      "word": "folk",
+      "partOfSpeech": "noun",
+      "meaning": "People in general; traditional culture and customs of a community.",
+      "synonyms": "people, community, culture",
+      "antonyms": "N/A",
+      "sentence": "Folk traditions play an important role in maintaining cultural identity across generations."
+    },
+    {
+      "id": "a781df15-a9f1-4554-b6fe-7c90b24ed0bb",
+      "progress": 0,
+      "word": "formal",
+      "partOfSpeech": "adjective",
+      "meaning": "Following established rules or conventions; official.",
+      "synonyms": "official, conventional, structured",
+      "antonyms": "informal, casual, relaxed",
+      "sentence": "A formal letter of complaint was submitted to the authority following the incident."
+    },
+    {
+      "id": "c400f1af-a40e-42a2-8924-538dabb52f41",
+      "progress": 0,
+      "word": "format",
+      "partOfSpeech": "noun",
+      "meaning": "The way in which something is arranged or produced.",
+      "synonyms": "structure, layout, arrangement",
+      "antonyms": "N/A",
+      "sentence": "The format of the exam was changed to include both written and oral components."
+    },
+    {
+      "id": "4773201b-7534-4c05-8a34-a0a5da605199",
+      "progress": 0,
+      "word": "former",
+      "partOfSpeech": "adjective",
+      "meaning": "Having previously held a particular position; the first of two mentioned.",
+      "synonyms": "previous, past, earlier",
+      "antonyms": "current, latter, present",
+      "sentence": "The former director spoke at the conference about the evolution of the organisation."
+    },
+    {
+      "id": "467e2032-ff5a-4361-a72b-6598be9a9871",
+      "progress": 0,
+      "word": "foundation",
+      "partOfSpeech": "noun",
+      "meaning": "The basis on which something is grounded; an organisation providing funding.",
+      "synonyms": "basis, base, institution",
+      "antonyms": "surface, top, finish",
+      "sentence": "The foundation of any healthy democracy is an informed and engaged citizenry."
+    },
+    {
+      "id": "65a0bb09-203b-47b6-ae86-7735163e47af",
+      "progress": 0,
+      "word": "frame",
+      "partOfSpeech": "noun",
+      "meaning": "A rigid structure surrounding something; the general structure of a system.",
+      "synonyms": "structure, outline, border",
+      "antonyms": "content, interior, filling",
+      "sentence": "The article frames the immigration debate in terms of economic contribution rather than culture."
+    },
+    {
+      "id": "fbf6f0d7-7fa5-4503-9d51-cb4715c00aa3",
+      "progress": 0,
+      "word": "freedom",
+      "partOfSpeech": "noun",
+      "meaning": "The power or right to act, speak, or think without restraint.",
+      "synonyms": "liberty, independence, autonomy",
+      "antonyms": "restriction, captivity, oppression",
+      "sentence": "Freedom of expression is considered a fundamental right in most modern constitutions."
+    },
+    {
+      "id": "f4eb1d9a-193f-402b-aa35-ae5c05f68a07",
+      "progress": 0,
+      "word": "frequent",
+      "partOfSpeech": "adjective",
+      "meaning": "Occurring or done many times at short intervals.",
+      "synonyms": "regular, common, repeated",
+      "antonyms": "rare, infrequent, occasional",
+      "sentence": "Frequent exposure to a language is one of the most effective ways to develop fluency."
+    },
+    {
+      "id": "928a4e21-0ddf-472c-a413-a5af0eeddca6",
+      "progress": 0,
+      "word": "function",
+      "partOfSpeech": "noun",
+      "meaning": "The purpose something is designed to fulfil; the way in which something operates.",
+      "synonyms": "purpose, role, operation",
+      "antonyms": "dysfunction, malfunction",
+      "sentence": "The primary function of the device is to monitor and display air quality data in real time."
+    },
+    {
+      "id": "f7f3971b-af0a-4d9c-9eeb-d95fa8f605cb",
+      "progress": 0,
+      "word": "furniture",
+      "partOfSpeech": "noun",
+      "meaning": "Large movable items used to make a building suitable for living.",
+      "synonyms": "furnishings, fittings, fixtures",
+      "antonyms": "N/A",
+      "sentence": "The furniture in the meeting room was rearranged to encourage open discussion."
+    },
+    {
+      "id": "1d070f63-23b7-40bb-a59d-b328dc07fc3f",
+      "progress": 0,
+      "word": "gain",
+      "partOfSpeech": "verb",
+      "meaning": "To obtain or secure something; to increase in wealth or rate.",
+      "synonyms": "obtain, acquire, earn",
+      "antonyms": "lose, forfeit, reduce",
+      "sentence": "The country gained significant economic advantage from its early investment in digital infrastructure."
+    },
+    {
+      "id": "0ce77568-db7e-4d4a-9526-394724bafb32",
+      "progress": 0,
+      "word": "gap",
+      "partOfSpeech": "noun",
+      "meaning": "A space or hole in something; a difference between two things.",
+      "synonyms": "space, difference, interval",
+      "antonyms": "fullness, connection, completion",
+      "sentence": "The gap between the richest and poorest members of society has widened over the past decade."
+    },
+    {
+      "id": "9d5ee2b1-79d5-405e-93b3-72fa789d9b93",
+      "progress": 0,
+      "word": "generation",
+      "partOfSpeech": "noun",
+      "meaning": "All the people born and living at about the same time; the production of something.",
+      "synonyms": "age group, cohort, era",
+      "antonyms": "individual, moment",
+      "sentence": "Each generation faces a unique set of challenges shaped by its historical context."
+    },
+    {
+      "id": "7d53e8ed-8a51-4e34-9664-60d3c091288e",
+      "progress": 0,
+      "word": "generous",
+      "partOfSpeech": "adjective",
+      "meaning": "Showing a readiness to give more than is necessary.",
+      "synonyms": "giving, open-handed, unselfish",
+      "antonyms": "stingy, selfish, mean",
+      "sentence": "The foundation made a generous contribution to the community education programme."
+    },
+    {
+      "id": "6a4e2703-0fdb-489f-8f7d-2d02f04ef038",
+      "progress": 0,
+      "word": "gentle",
+      "partOfSpeech": "adjective",
+      "meaning": "Having or showing a mild, kind, or tender nature.",
+      "synonyms": "mild, kind, soft",
+      "antonyms": "rough, harsh, aggressive",
+      "sentence": "A gentle but firm approach to the negotiation proved more effective than confrontation."
+    },
+    {
+      "id": "091bbf74-4364-447e-9635-9ccd71516c94",
+      "progress": 0,
+      "word": "genuine",
+      "partOfSpeech": "adjective",
+      "meaning": "Truly what it is claimed to be; sincere and honest.",
+      "synonyms": "authentic, real, sincere",
+      "antonyms": "fake, false, imitation",
+      "sentence": "There was a genuine desire among participants to reach a fair and lasting agreement."
+    },
+    {
+      "id": "3a62ea73-be9e-417f-a2f4-191ca4d6c790",
+      "progress": 0,
+      "word": "geography",
+      "partOfSpeech": "noun",
+      "meaning": "The study of the physical features of the earth and human activity.",
+      "synonyms": "landscape, terrain, study of Earth",
+      "antonyms": "N/A",
+      "sentence": "The geography of the region plays a significant role in determining its economic development."
+    },
+    {
+      "id": "b2cee8b1-0b06-47ed-822f-0352f71dbc29",
+      "progress": 0,
+      "word": "gesture",
+      "partOfSpeech": "noun",
+      "meaning": "A movement expressing an idea or feeling; an action to show intention.",
+      "synonyms": "signal, movement, expression",
+      "antonyms": "N/A",
+      "sentence": "The gesture of offering free access to the facility was widely welcomed by the community."
+    },
+    {
+      "id": "a63d951a-f396-4078-9b55-217404a9c661",
+      "progress": 0,
+      "word": "global",
+      "partOfSpeech": "adjective",
+      "meaning": "Relating to the whole world; total and comprehensive.",
+      "synonyms": "worldwide, international, universal",
+      "antonyms": "local, national, regional",
+      "sentence": "The global response to the crisis was slower than many experts had hoped."
+    },
+    {
+      "id": "18844f1f-b1ee-4ebf-b32c-985a85d33c07",
+      "progress": 0,
+      "word": "globe",
+      "partOfSpeech": "noun",
+      "meaning": "The earth; a spherical representation of it.",
+      "synonyms": "world, Earth, sphere",
+      "antonyms": "N/A",
+      "sentence": "International students from every corner of the globe attended the annual conference."
+    },
+    {
+      "id": "638d3fd6-2f7d-49ce-b552-c969cddb6f43",
+      "progress": 0,
+      "word": "glory",
+      "partOfSpeech": "noun",
+      "meaning": "High renown or honour; great beauty and splendour.",
+      "synonyms": "honour, fame, splendour",
+      "antonyms": "shame, disgrace, obscurity",
+      "sentence": "The glory of the ancient civilisation lay in its remarkable achievements in science and architecture."
+    },
+    {
+      "id": "120ca778-af0a-41ca-9e89-716e0dd27109",
+      "progress": 0,
+      "word": "grade",
+      "partOfSpeech": "noun",
+      "meaning": "A mark indicating quality of work; a level or rank.",
+      "synonyms": "mark, score, level",
+      "antonyms": "N/A",
+      "sentence": "The grade awarded for the assignment reflected both content and the quality of argument."
+    },
+    {
+      "id": "085b34f8-733b-4260-bbb7-4dbcab3a9b17",
+      "progress": 0,
+      "word": "gradual",
+      "partOfSpeech": "adjective",
+      "meaning": "Taking place or progressing slowly over time.",
+      "synonyms": "slow, steady, progressive",
+      "antonyms": "sudden, abrupt, rapid",
+      "sentence": "The gradual decline in air quality went unnoticed until the data was formally analysed."
+    },
+    {
+      "id": "1b7bcc66-2b4c-4093-befd-de9c0cc78d06",
+      "progress": 0,
+      "word": "grammar",
+      "partOfSpeech": "noun",
+      "meaning": "The rules of a language relating to structure and form.",
+      "synonyms": "syntax, structure, language rules",
+      "antonyms": "N/A",
+      "sentence": "A strong understanding of grammar is essential for producing clear academic writing."
+    },
+    {
+      "id": "e2ef41f9-0da3-4652-9a21-a1c1a431ad64",
+      "progress": 0,
+      "word": "grand",
+      "partOfSpeech": "adjective",
+      "meaning": "Impressive in size or appearance; of greatest importance.",
+      "synonyms": "magnificent, impressive, majestic",
+      "antonyms": "modest, small, ordinary",
+      "sentence": "The grand ambition of the project was to eliminate digital inequality within a decade."
+    },
+    {
+      "id": "6520e836-c467-4621-b40e-2079914f466d",
+      "progress": 0,
+      "word": "growth",
+      "partOfSpeech": "noun",
+      "meaning": "The process of increasing in size, number, or quality.",
+      "synonyms": "expansion, development, increase",
+      "antonyms": "decline, shrinkage, reduction",
+      "sentence": "Sustainable economic growth requires careful management of natural resources."
+    },
+    {
+      "id": "6cfa0aa8-88d2-4fe5-b725-7891908d2378",
+      "progress": 0,
+      "word": "guarantee",
+      "partOfSpeech": "verb",
+      "meaning": "To give a formal promise that something will happen or is true.",
+      "synonyms": "promise, ensure, assure",
+      "antonyms": "doubt, risk, undermine",
+      "sentence": "The contract included a clause to guarantee that all parties would meet the agreed deadline."
+    },
+    {
+      "id": "6c03305a-ce3b-4ce4-8dd5-58b5b51b6574",
+      "progress": 0,
+      "word": "guard",
+      "partOfSpeech": "verb",
+      "meaning": "To watch over and protect; to be cautious about.",
+      "synonyms": "protect, defend, watch",
+      "antonyms": "neglect, expose, ignore",
+      "sentence": "Citizens must guard against the slow erosion of their democratic rights."
+    },
+    {
+      "id": "5942a330-43d0-47e3-943c-1c9418c6b83c",
+      "progress": 0,
+      "word": "hint",
+      "partOfSpeech": "noun",
+      "meaning": "A slight indication or suggestion.",
+      "synonyms": "clue, suggestion, indication",
+      "antonyms": "statement, explanation, certainty",
+      "sentence": "The early data provided a hint that the policy might not produce the intended result."
+    },
+    {
+      "id": "13ec660c-046d-4eb2-92ef-5f48b82bef4f",
+      "progress": 0,
+      "word": "identity",
+      "partOfSpeech": "noun",
+      "meaning": "The characteristics that determine who a person or thing is.",
+      "synonyms": "character, individuality, self",
+      "antonyms": "anonymity, conformity, sameness",
+      "sentence": "Cultural identity is shaped by a complex combination of language, history, and shared values."
+    },
+    {
+      "id": "3bbf9cc2-0972-4330-9226-ebe1caa0c1b6",
+      "progress": 0,
+      "word": "illegal",
+      "partOfSpeech": "adjective",
+      "meaning": "Not permitted by law.",
+      "synonyms": "unlawful, criminal, prohibited",
+      "antonyms": "legal, lawful, permitted",
+      "sentence": "The use of the chemical was declared illegal following the discovery of its long-term effects."
+    },
+    {
+      "id": "f98d3009-488e-41e7-9452-bebd28d83aa5",
+      "progress": 0,
+      "word": "image",
+      "partOfSpeech": "noun",
+      "meaning": "A representation of someone or something; the impression of a person or product.",
+      "synonyms": "picture, representation, perception",
+      "antonyms": "reality, truth",
+      "sentence": "The image projected by a political leader can be as influential as the policies they promote."
+    },
+    {
+      "id": "87af74a1-e675-423c-be99-54612aac7ad4",
+      "progress": 0,
+      "word": "imagine",
+      "partOfSpeech": "verb",
+      "meaning": "To form a mental picture of something not present or real.",
+      "synonyms": "picture, envision, conceive",
+      "antonyms": "know, confirm, verify",
+      "sentence": "It is difficult to imagine a world without the digital infrastructure we now rely on."
+    },
+    {
+      "id": "68131dc1-fc9c-4441-b7f3-b7d6802ce5c1",
+      "progress": 0,
+      "word": "immediately",
+      "partOfSpeech": "adverb",
+      "meaning": "Without delay; instantly.",
+      "synonyms": "instantly, at once, promptly",
+      "antonyms": "eventually, later, gradually",
+      "sentence": "The results of the experiment were immediately published in an academic journal."
+    },
+    {
+      "id": "872da726-e84a-40fa-b80a-75edfe47534a",
+      "progress": 0,
+      "word": "immigrant",
+      "partOfSpeech": "noun",
+      "meaning": "A person who comes to live permanently in a foreign country.",
+      "synonyms": "migrant, newcomer, settler",
+      "antonyms": "native, citizen, resident",
+      "sentence": "The report examined the economic contribution of immigrant communities over two decades."
+    },
+    {
+      "id": "11985fa7-ed8a-4376-93ab-10a085393bc7",
+      "progress": 0,
+      "word": "impact",
+      "partOfSpeech": "noun",
+      "meaning": "The strong effect or influence of something.",
+      "synonyms": "effect, influence, consequence",
+      "antonyms": "insignificance, irrelevance",
+      "sentence": "The impact of social media on political discourse has been the subject of much debate."
+    },
+    {
+      "id": "1819ba4e-8783-4b22-8c4e-279746fd33f4",
+      "progress": 0,
+      "word": "import",
+      "partOfSpeech": "verb",
+      "meaning": "To bring goods or services into a country from abroad.",
+      "synonyms": "bring in, introduce, ship in",
+      "antonyms": "export, send out, produce locally",
+      "sentence": "The country was forced to import energy following the closure of its coal-fired plants."
+    },
+    {
+      "id": "b9f21497-d5e5-4d89-84d1-61cfc86c6c05",
+      "progress": 0,
+      "word": "impressive",
+      "partOfSpeech": "adjective",
+      "meaning": "Evoking admiration through size, quality, or skill.",
+      "synonyms": "remarkable, striking, admirable",
+      "antonyms": "unimpressive, mediocre, ordinary",
+      "sentence": "The scale and speed of the construction project was truly impressive."
+    },
+    {
+      "id": "51b00751-9d32-4132-b811-1ffd6c82a5de",
+      "progress": 0,
+      "word": "impulse",
+      "partOfSpeech": "noun",
+      "meaning": "A sudden strong desire to act; an electrical signal.",
+      "synonyms": "urge, instinct, drive",
+      "antonyms": "plan, restraint, caution",
+      "sentence": "The decision to restructure the organisation was driven more by impulse than by evidence."
+    },
+    {
+      "id": "2216c8e1-cf78-40e6-84b4-76ecda6d4844",
+      "progress": 0,
+      "word": "income",
+      "partOfSpeech": "noun",
+      "meaning": "Money received regularly in exchange for work or through investment.",
+      "synonyms": "earnings, salary, revenue",
+      "antonyms": "expenditure, expense, loss",
+      "sentence": "A significant proportion of the population earns an income below the official poverty threshold."
+    },
+    {
+      "id": "dc29fd33-ec3d-489c-be3d-b93b44eff336",
+      "progress": 0,
+      "word": "indeed",
+      "partOfSpeech": "adverb",
+      "meaning": "Used to emphasise a statement or to express confirmation.",
+      "synonyms": "certainly, in fact, truly",
+      "antonyms": "doubtfully, questionably",
+      "sentence": "The findings were surprising and, indeed, contradicted several previous studies."
+    },
+    {
+      "id": "56001798-d541-4e3e-b8cc-aafdf7eb2e9a",
+      "progress": 0,
+      "word": "indicate",
+      "partOfSpeech": "verb",
+      "meaning": "To show or point out; to be a sign of something.",
+      "synonyms": "suggest, show, signal",
+      "antonyms": "hide, deny, conceal",
+      "sentence": "The survey results indicate a growing level of dissatisfaction with current government policy."
+    },
+    {
+      "id": "57de344e-6580-4a77-9e7a-310fd7f88ae5",
+      "progress": 0,
+      "word": "individual",
+      "partOfSpeech": "noun",
+      "meaning": "A single human being distinct from a group.",
+      "synonyms": "person, being, entity",
+      "antonyms": "group, collective, society",
+      "sentence": "Every individual within the organisation has a responsibility to uphold ethical standards."
+    },
+    {
+      "id": "8cb1e4d9-18fd-4c65-8c5b-92262fb99b1b",
+      "progress": 0,
+      "word": "indoor",
+      "partOfSpeech": "adjective",
+      "meaning": "Situated, conducted, or used inside a building.",
+      "synonyms": "internal, inside, sheltered",
+      "antonyms": "outdoor, external, outside",
+      "sentence": "The lack of indoor facilities limited the programme's ability to reach participants year-round."
+    },
+    {
+      "id": "e0402d8c-a411-4a8a-a9d0-fd7aca69723c",
+      "progress": 0,
+      "word": "influence",
+      "partOfSpeech": "verb",
+      "meaning": "To have an effect on the character, development, or behaviour of someone.",
+      "synonyms": "affect, shape, impact",
+      "antonyms": "leave unchanged, have no effect",
+      "sentence": "Early childhood experience has a lasting influence on a person's attitude and behaviour."
+    },
+    {
+      "id": "17c937ac-ba04-4ff7-9288-63ede37bdff7",
+      "progress": 0,
+      "word": "insight",
+      "partOfSpeech": "noun",
+      "meaning": "An accurate and deep understanding of a complex situation.",
+      "synonyms": "understanding, perception, awareness",
+      "antonyms": "ignorance, confusion, misunderstanding",
+      "sentence": "The research provided genuine insight into the factors driving educational inequality."
+    },
+    {
+      "id": "145b5e2e-3a91-4397-887d-3f38219366f6",
+      "progress": 0,
+      "word": "insist",
+      "partOfSpeech": "verb",
+      "meaning": "To demand something forcefully and without accepting refusal.",
+      "synonyms": "demand, assert, maintain",
+      "antonyms": "yield, concede, give up",
+      "sentence": "The committee insisted that all proposed changes be fully costed before approval."
+    },
+    {
+      "id": "191d4aec-4b97-454c-9a53-894e6210b291",
+      "progress": 0,
+      "word": "inspect",
+      "partOfSpeech": "verb",
+      "meaning": "To look at something carefully to assess its condition.",
+      "synonyms": "examine, scrutinise, assess",
+      "antonyms": "ignore, overlook, neglect",
+      "sentence": "An independent body was appointed to inspect the facility and report on its condition."
+    },
+    {
+      "id": "3d0ba339-cfc2-40ca-90c1-0240b93e4629",
+      "progress": 0,
+      "word": "inspire",
+      "partOfSpeech": "verb",
+      "meaning": "To fill someone with the desire or ability to do something creative.",
+      "synonyms": "motivate, stimulate, influence",
+      "antonyms": "discourage, deter, dampen",
+      "sentence": "The leader's speech inspired the team to approach the challenge with renewed determination."
+    },
+    {
+      "id": "fc5ef64a-d089-4df4-9e62-06dedfa1166a",
+      "progress": 0,
+      "word": "install",
+      "partOfSpeech": "verb",
+      "meaning": "To place or fix equipment in position for use.",
+      "synonyms": "set up, fit, establish",
+      "antonyms": "remove, uninstall, dismantle",
+      "sentence": "The government planned to install solar panels on all public buildings within five years."
+    },
+    {
+      "id": "9b739d16-9757-45eb-8412-1a96656e78f5",
+      "progress": 0,
+      "word": "instance",
+      "partOfSpeech": "noun",
+      "meaning": "An example or single occurrence of something.",
+      "synonyms": "example, case, occasion",
+      "antonyms": "N/A",
+      "sentence": "In this particular instance, the authority chose to make an exception to the general rule."
+    },
+    {
+      "id": "44f7e1d4-4833-4f44-9587-a212b7f15ecf",
+      "progress": 0,
+      "word": "interact",
+      "partOfSpeech": "verb",
+      "meaning": "To act in such a way that has an effect on another.",
+      "synonyms": "communicate, engage, relate",
+      "antonyms": "ignore, avoid, isolate",
+      "sentence": "The programme was designed to allow participants to interact directly with industry professionals."
+    },
+    {
+      "id": "05c48cf4-1e93-4fd2-84a3-28c4f50aed67",
+      "progress": 0,
+      "word": "interior",
+      "partOfSpeech": "noun",
+      "meaning": "The inner part of something; the inside of a building.",
+      "synonyms": "inside, inner part, core",
+      "antonyms": "exterior, outside, surface",
+      "sentence": "The interior of the building was redesigned to reflect the organisation's new values."
+    },
+    {
+      "id": "1b73f987-a851-4f7a-9b64-84d9b6544d24",
+      "progress": 0,
+      "word": "adapt",
+      "partOfSpeech": "verb",
+      "meaning": "To adjust to new conditions or modify something for a new purpose.",
+      "synonyms": "adjust, modify, alter",
+      "antonyms": "resist, remain, stay fixed",
+      "sentence": "The ability to adapt quickly to changing circumstances is a core skill in any professional context."
+    },
+    {
+      "id": "9d2f5472-fc23-4629-9d90-ade0ac63c170",
+      "progress": 0,
+      "word": "advance",
+      "partOfSpeech": "noun",
+      "meaning": "A forward movement; progress in development.",
+      "synonyms": "progress, development, breakthrough",
+      "antonyms": "retreat, regression, setback",
+      "sentence": "The advance in medical technology has dramatically changed how certain diseases are treated."
+    },
+    {
+      "id": "9226899d-2f12-466f-a388-3bd30009cc4b",
+      "progress": 0,
+      "word": "aggressive",
+      "partOfSpeech": "adjective",
+      "meaning": "Pursuing goals forcefully, sometimes at the expense of others.",
+      "synonyms": "assertive, forceful, combative",
+      "antonyms": "passive, submissive, peaceful",
+      "sentence": "The company adopted an aggressive expansion strategy that raised concerns among regulators."
+    },
+    {
+      "id": "1d2cf4de-1f07-4147-a04c-26d959eccedc",
+      "progress": 0,
+      "word": "alternative",
+      "partOfSpeech": "noun",
+      "meaning": "A choice between two or more possibilities.",
+      "synonyms": "option, substitute, choice",
+      "antonyms": "obligation, necessity, compulsion",
+      "sentence": "The committee was asked to consider at least two alternatives before making a final decision."
+    },
+    {
+      "id": "64fa6cfd-ef49-4b03-b565-1148c1e50bd8",
+      "progress": 0,
+      "word": "announce",
+      "partOfSpeech": "verb",
+      "meaning": "To make a public or formal declaration about something.",
+      "synonyms": "declare, proclaim, state",
+      "antonyms": "conceal, hide, withhold",
+      "sentence": "The director was expected to announce the results of the review at the end of the week."
+    },
+    {
+      "id": "c8fbd34a-7fe0-48ef-8d50-4e1fa3485b77",
+      "progress": 0,
+      "word": "annual",
+      "partOfSpeech": "adjective",
+      "meaning": "Occurring or calculated over a year.",
+      "synonyms": "yearly, once-a-year, periodic",
+      "antonyms": "daily, monthly, constant",
+      "sentence": "The annual report showed a modest improvement in the organisation's financial position."
+    },
+    {
+      "id": "a2539e0f-9a6d-4774-852c-26fc10c0505c",
+      "progress": 0,
+      "word": "argue",
+      "partOfSpeech": "verb",
+      "meaning": "To present reasons for or against something; to have a disagreement.",
+      "synonyms": "debate, reason, dispute",
+      "antonyms": "agree, concede, accept",
+      "sentence": "It is possible to argue that the benefits of the policy outweigh the social cost."
+    },
+    {
+      "id": "04e6d98d-bc07-47c6-ba44-7e7e7e96eb0c",
+      "progress": 0,
+      "word": "arise",
+      "partOfSpeech": "verb",
+      "meaning": "To emerge or come into being, especially unexpectedly.",
+      "synonyms": "emerge, occur, develop",
+      "antonyms": "disappear, end, resolve",
+      "sentence": "New ethical questions arise whenever advances in technology outpace regulation."
+    },
+    {
+      "id": "26116589-60d7-446c-97c9-a3c489235519",
+      "progress": 0,
+      "word": "assume",
+      "partOfSpeech": "verb",
+      "meaning": "To suppose something to be true without proof; to take on a role.",
+      "synonyms": "presume, suppose, take on",
+      "antonyms": "confirm, verify, prove",
+      "sentence": "It would be wrong to assume that a single solution can address such a complex problem."
+    },
+    {
+      "id": "d811c438-829c-41c2-af0a-fcd098236653",
+      "progress": 0,
+      "word": "attend",
+      "partOfSpeech": "verb",
+      "meaning": "To be present at an event; to deal with a matter.",
+      "synonyms": "be present, participate, address",
+      "antonyms": "miss, avoid, skip",
+      "sentence": "All researchers were expected to attend the conference and present their findings."
+    },
+    {
+      "id": "adbc1489-b3ca-4055-9486-d7be0a09c247",
+      "progress": 0,
+      "word": "attract",
+      "partOfSpeech": "verb",
+      "meaning": "To cause interest or desire; to draw something towards something else.",
+      "synonyms": "draw, appeal, captivate",
+      "antonyms": "repel, deter, discourage",
+      "sentence": "The project attracted considerable interest from both public and private investors."
+    },
+    {
+      "id": "64e09724-3a68-453e-a086-32f01b0881ee",
+      "progress": 0,
+      "word": "available",
+      "partOfSpeech": "adjective",
+      "meaning": "Able to be used or obtained; not otherwise occupied.",
+      "synonyms": "accessible, obtainable, free",
+      "antonyms": "unavailable, occupied, taken",
+      "sentence": "The full report will be made available to the public following the formal announcement."
+    },
+    {
+      "id": "75d6fde5-b260-4c9c-b96f-d0049af2f1c9",
+      "progress": 0,
+      "word": "avoid",
+      "partOfSpeech": "verb",
+      "meaning": "To keep away from or stop oneself from doing something.",
+      "synonyms": "evade, prevent, refrain",
+      "antonyms": "seek, face, confront",
+      "sentence": "A well-designed system should avoid placing an unnecessary burden on individual users."
+    },
+    {
+      "id": "16de443c-c511-4bbb-9220-439bf546110b",
+      "progress": 0,
+      "word": "background",
+      "partOfSpeech": "noun",
+      "meaning": "A person's social, cultural, or educational experience; the setting behind something.",
+      "synonyms": "history, context, setting",
+      "antonyms": "foreground, future, front",
+      "sentence": "Her background in economics gave her a valuable perspective on the policy debate."
+    },
+    {
+      "id": "fe08b766-720c-4996-8869-a77290fc3931",
+      "progress": 0,
+      "word": "balance",
+      "partOfSpeech": "noun",
+      "meaning": "A situation where different elements are equal or in the correct proportion.",
+      "synonyms": "equilibrium, proportion, stability",
+      "antonyms": "imbalance, excess, instability",
+      "sentence": "Maintaining a balance between economic development and environmental protection is a constant challenge."
+    },
+    {
+      "id": "6ae28409-d41a-432e-8a6c-58398baccf09",
+      "progress": 0,
+      "word": "behaviour",
+      "partOfSpeech": "noun",
+      "meaning": "The way in which a person or animal acts in response to a situation.",
+      "synonyms": "conduct, manner, actions",
+      "antonyms": "N/A",
+      "sentence": "The study examined how financial incentives can influence individual behaviour."
+    },
+    {
+      "id": "24a0c695-fe39-414e-876a-65c17d335c51",
+      "progress": 0,
+      "word": "belief",
+      "partOfSpeech": "noun",
+      "meaning": "An acceptance that something is true, especially without proof.",
+      "synonyms": "conviction, faith, view",
+      "antonyms": "doubt, disbelief, scepticism",
+      "sentence": "The belief that education can transform society underpins much of the organisation's work."
+    },
+    {
+      "id": "d0108d2d-eeb1-46d9-a7cc-cd3907957ef4",
+      "progress": 0,
+      "word": "benefit",
+      "partOfSpeech": "noun",
+      "meaning": "An advantage or profit gained from something.",
+      "synonyms": "advantage, gain, reward",
+      "antonyms": "disadvantage, harm, loss",
+      "sentence": "One clear benefit of the scheme is that it gives individuals greater control over their income."
+    },
+    {
+      "id": "cee2632e-06f1-4df1-a74e-d859f8174cbd",
+      "progress": 0,
+      "word": "bias",
+      "partOfSpeech": "noun",
+      "meaning": "An inclination or prejudice for or against a person or group.",
+      "synonyms": "prejudice, partiality, tendency",
+      "antonyms": "fairness, neutrality, objectivity",
+      "sentence": "The report was criticised for showing a clear bias towards the interests of large corporations."
+    },
+    {
+      "id": "a4c5dc81-7930-4a0a-a7e3-daf744a7921e",
+      "progress": 0,
+      "word": "blame",
+      "partOfSpeech": "verb",
+      "meaning": "To hold someone responsible for something bad that has happened.",
+      "synonyms": "accuse, criticise, attribute",
+      "antonyms": "praise, forgive, excuse",
+      "sentence": "It is too simple to blame one factor when the causes of the crisis are so deeply interconnected."
+    },
+    {
+      "id": "8a77a9c0-18af-4e3f-bac4-99c3517ce062",
+      "progress": 0,
+      "word": "bold",
+      "partOfSpeech": "adjective",
+      "meaning": "Showing willingness to take risks; confident and courageous.",
+      "synonyms": "daring, courageous, confident",
+      "antonyms": "timid, cautious, cowardly",
+      "sentence": "The minister made a bold decision to reform the entire education system within a single term."
+    },
+    {
+      "id": "69c7cc01-60e5-4180-aff8-bf8a0701b1dd",
+      "progress": 0,
+      "word": "bond",
+      "partOfSpeech": "noun",
+      "meaning": "A strong connection or force that links people; a certificate of debt.",
+      "synonyms": "tie, link, connection",
+      "antonyms": "separation, disconnect, isolation",
+      "sentence": "The shared experience of working through the crisis created a strong bond between the two organisations."
+    },
+    {
+      "id": "a368bff6-e6d3-4566-9093-874a9302ef34",
+      "progress": 0,
+      "word": "boundary",
+      "partOfSpeech": "noun",
+      "meaning": "A real or imagined line marking the limits of an area or concept.",
+      "synonyms": "limit, border, perimeter",
+      "antonyms": "centre, interior, unlimited",
+      "sentence": "The research pushes at the boundary between digital ethics and public policy."
+    },
+    {
+      "id": "0fd63a5e-9fed-46a5-b772-b7f9458a3ff6",
+      "progress": 0,
+      "word": "broaden",
+      "partOfSpeech": "verb",
+      "meaning": "To make or become wider in scope or extent.",
+      "synonyms": "widen, expand, extend",
+      "antonyms": "narrow, limit, restrict",
+      "sentence": "International collaboration helps to broaden the scope of academic research."
+    },
+    {
+      "id": "33d92353-1267-402f-a098-f1716a204181",
+      "progress": 0,
+      "word": "burden",
+      "partOfSpeech": "noun",
+      "meaning": "A heavy load; a duty or responsibility that is difficult to bear.",
+      "synonyms": "load, obligation, weight",
+      "antonyms": "relief, freedom, ease",
+      "sentence": "The burden of proof lies with those who argue that the existing system requires no change."
+    },
+    {
+      "id": "409f10d5-6400-4b2b-8c04-5a4d3d50caeb",
+      "progress": 0,
+      "word": "campaign",
+      "partOfSpeech": "noun",
+      "meaning": "An organised course of action to achieve a goal.",
+      "synonyms": "drive, initiative, movement",
+      "antonyms": "inaction, passivity",
+      "sentence": "The campaign succeeded in raising public awareness about the consequences of air pollution."
+    },
+    {
+      "id": "bd74983b-c1f0-4abc-8efc-c805f1bc2ddc",
+      "progress": 0,
+      "word": "affair",
+      "partOfSpeech": "noun",
+      "meaning": "An event or series of events of a particular kind; a matter of concern.",
+      "synonyms": "matter, event, concern",
+      "antonyms": "N/A",
+      "sentence": "The affair highlighted deep divisions within the government over economic strategy."
+    },
+    {
+      "id": "625ea50c-61a1-4377-8a8d-14fe20e92851",
+      "progress": 0,
+      "word": "demand",
+      "partOfSpeech": "noun",
+      "meaning": "A strong request or an economic need for a product or service.",
+      "synonyms": "request, requirement, need",
+      "antonyms": "supply, provision, offer",
+      "sentence": "The growing demand for skilled graduates has outpaced the capacity of many universities."
+    },
+    {
+      "id": "12c1ebe8-5e8d-43a6-bee7-c160b773214f",
+      "progress": 0,
+      "word": "detail",
+      "partOfSpeech": "noun",
+      "meaning": "An individual feature, fact, or item; close attention to particulars.",
+      "synonyms": "feature, particular, element",
+      "antonyms": "overview, summary, whole",
+      "sentence": "The detail in the analysis reveals patterns that are not visible in the summary data."
+    },
+    {
+      "id": "1cc39395-5f91-4662-8ea2-aff039134bf5",
+      "progress": 0,
+      "word": "describe",
+      "partOfSpeech": "verb",
+      "meaning": "To give a detailed account of something in words.",
+      "synonyms": "depict, explain, portray",
+      "antonyms": "misrepresent, conceal, distort",
+      "sentence": "It is difficult to describe the full impact of the policy in a single report."
+    },
+    {
+      "id": "5ad55b69-1e18-417a-8193-b59efc843cce",
+      "progress": 0,
+      "word": "delay",
+      "partOfSpeech": "noun",
+      "meaning": "A period of time by which something is late or postponed.",
+      "synonyms": "postponement, setback, hold-up",
+      "antonyms": "prompt action, speed, advance",
+      "sentence": "The delay in publishing the findings led to widespread speculation about their content."
+    },
+    {
+      "id": "1386c6ab-a047-485a-8d8e-3b7d48319070",
+      "progress": 0,
+      "word": "concern",
+      "partOfSpeech": "noun",
+      "meaning": "A matter of interest or importance; a feeling of worry.",
+      "synonyms": "worry, issue, responsibility",
+      "antonyms": "indifference, unconcern, irrelevance",
+      "sentence": "There is growing concern among researchers about the long-term effects of digital dependency."
+    },
+    {
+      "id": "8b0a5e1d-bc41-42a8-bdf7-d8292e882087",
+      "progress": 0,
+      "word": "culture",
+      "partOfSpeech": "noun",
+      "meaning": "The ideas, customs, and social behaviour of a particular group or society.",
+      "synonyms": "tradition, heritage, civilisation",
+      "antonyms": "N/A",
+      "sentence": "The culture of an organisation shapes the way its members communicate and make decisions."
+    },
+    {
+      "id": "557fb551-2645-48e1-9a02-45a02e6f8095",
+      "progress": 0,
+      "word": "effect",
+      "partOfSpeech": "noun",
+      "meaning": "A change that is produced by a cause; a result or outcome.",
+      "synonyms": "result, impact, consequence",
+      "antonyms": "cause, source, origin",
+      "sentence": "The full effect of the change in legislation will not be seen for several years."
+    },
+    {
+      "id": "b5072b80-1999-4646-b0e7-64220e336a89",
+      "progress": 0,
+      "word": "emotion",
+      "partOfSpeech": "noun",
+      "meaning": "A strong feeling deriving from mood, circumstances, or relationships.",
+      "synonyms": "feeling, sentiment, reaction",
+      "antonyms": "reason, logic, thought",
+      "sentence": "Strong emotion can both drive and distort our judgement in complex situations."
+    },
+    {
+      "id": "68bd5dbe-f0e0-49cd-b492-f84b774d42b2",
+      "progress": 0,
+      "word": "event",
+      "partOfSpeech": "noun",
+      "meaning": "A thing that happens or takes place, especially one of importance.",
+      "synonyms": "occasion, occurrence, incident",
+      "antonyms": "routine, non-event",
+      "sentence": "The event brought together experts from across the field to discuss the latest research."
+    },
+    {
+      "id": "eb30c816-6d76-4456-86f6-162b4728bdaf",
+      "progress": 0,
+      "word": "experience",
+      "partOfSpeech": "noun",
+      "meaning": "Practical contact with and observation of facts or events.",
+      "synonyms": "knowledge, practice, encounter",
+      "antonyms": "inexperience, ignorance, theory",
+      "sentence": "Her experience in the field gave her a practical understanding that theory alone cannot provide."
+    },
+    {
+      "id": "71c43949-f3f9-43d7-9ba4-1227658f42c7",
+      "progress": 0,
+      "word": "include",
+      "partOfSpeech": "verb",
+      "meaning": "To have or take in as part of a whole.",
+      "synonyms": "incorporate, contain, involve",
+      "antonyms": "exclude, omit, leave out",
+      "sentence": "The final version of the document should include a clear summary of all the key findings."
+    },
+    {
+      "id": "d7147f97-85de-4c80-9395-2cb69a6031fa",
+      "progress": 0,
+      "word": "industry",
+      "partOfSpeech": "noun",
+      "meaning": "Economic activity concerned with manufacturing or producing goods.",
+      "synonyms": "manufacturing, trade, sector",
+      "antonyms": "leisure, hobby, nature",
+      "sentence": "The digital industry has grown at a remarkable rate over the past two decades."
+    },
+    {
+      "id": "588f9941-8234-45b2-895d-09f7b30f3318",
+      "progress": 0,
+      "word": "interest",
+      "partOfSpeech": "noun",
+      "meaning": "The state of wanting to know more about something; money paid for borrowing.",
+      "synonyms": "curiosity, attention, stake",
+      "antonyms": "boredom, indifference, disinterest",
+      "sentence": "There is growing academic interest in the relationship between language and identity."
+    },
+    {
+      "id": "b3ab5ad4-602d-44b6-9d96-d07d3f646ba9",
+      "progress": 0,
+      "word": "deliver",
+      "partOfSpeech": "verb",
+      "meaning": "To bring or take goods to the intended destination; to provide something promised.",
+      "synonyms": "supply, provide, hand over",
+      "antonyms": "withhold, collect, retain",
+      "sentence": "The organisation has consistently failed to deliver the services it promised to communities."
+    },
+    {
+      "id": "ba0b6391-5a68-4526-b2ae-27e244855470",
+      "progress": 0,
+      "word": "direct",
+      "partOfSpeech": "adjective",
+      "meaning": "Going straight to the point; without diversion.",
+      "synonyms": "straightforward, clear, frank",
+      "antonyms": "indirect, vague, roundabout",
+      "sentence": "A direct approach is often more effective than a cautious one in situations requiring quick decisions."
+    },
+    {
+      "id": "5678573c-cabd-4e6a-bfbe-5912dd21d18e",
+      "progress": 0,
+      "word": "improve",
+      "partOfSpeech": "verb",
+      "meaning": "To make or become better in quality or condition.",
+      "synonyms": "enhance, develop, progress",
+      "antonyms": "worsen, deteriorate, decline",
+      "sentence": "The data suggests that the programme has managed to improve outcomes for participants."
+    },
+    {
+      "id": "54f2d84f-0d3f-4898-aa4e-96e25c316210",
+      "progress": 0,
+      "word": "condition",
+      "partOfSpeech": "noun",
+      "meaning": "The state in which something or someone is; a requirement.",
+      "synonyms": "state, situation, requirement",
+      "antonyms": "N/A",
+      "sentence": "The condition of the agreement was that both parties would review the arrangement annually."
+    },
+    {
+      "id": "603a5c1f-e36c-424e-af0b-e49a69da8040",
+      "progress": 0,
+      "word": "confirm",
+      "partOfSpeech": "verb",
+      "meaning": "To establish the truth or certainty of something.",
+      "synonyms": "verify, validate, prove",
+      "antonyms": "deny, cancel, refute",
+      "sentence": "The laboratory was asked to confirm the results before the findings were published."
+    },
+    {
+      "id": "a6675cc9-896f-4620-80b2-ed9a23c73d5b",
+      "progress": 0,
+      "word": "connect",
+      "partOfSpeech": "verb",
+      "meaning": "To join or link two things together so they relate or work together.",
+      "synonyms": "link, join, associate",
+      "antonyms": "disconnect, separate, detach",
+      "sentence": "The research aims to connect local case studies to broader global trends."
+    },
+    {
+      "id": "cda0e454-1560-4440-8c38-18a8b5850936",
+      "progress": 0,
+      "word": "consider",
+      "partOfSpeech": "verb",
+      "meaning": "To think carefully about something before making a decision.",
+      "synonyms": "reflect on, ponder, contemplate",
+      "antonyms": "dismiss, ignore, disregard",
+      "sentence": "Before making any commitment, it is important to consider all available evidence."
+    },
+    {
+      "id": "c88dfb17-096a-4d20-9ed5-7247d44f5a6e",
+      "progress": 0,
+      "word": "conclude",
+      "partOfSpeech": "verb",
+      "meaning": "To bring to an end; to reach a judgement based on evidence.",
+      "synonyms": "end, determine, infer",
+      "antonyms": "begin, start, open",
+      "sentence": "The panel was asked to conclude its review within thirty days."
+    },
+    {
+      "id": "1ac07fab-276e-4cf3-8e87-13a56b01ac42",
+      "progress": 0,
+      "word": "complete",
+      "partOfSpeech": "adjective",
+      "meaning": "Having all necessary parts; brought to an end.",
+      "synonyms": "finished, whole, thorough",
+      "antonyms": "incomplete, partial, unfinished",
+      "sentence": "A complete understanding of the issue requires looking beyond the headline figures."
+    },
+    {
+      "id": "ac834a75-acac-4d89-a8a2-7d13ec5eef20",
+      "progress": 0,
+      "word": "interview",
+      "partOfSpeech": "noun",
+      "meaning": "A conversation in which someone is asked questions for a job or news story.",
+      "synonyms": "discussion, session, meeting",
+      "antonyms": "monologue, silence",
+      "sentence": "Each candidate was invited to attend a formal interview before a final decision was made."
+    },
+    {
+      "id": "3f3db7e4-7af2-4e57-a715-b0b8e55c458b",
+      "progress": 0,
+      "word": "introduce",
+      "partOfSpeech": "verb",
+      "meaning": "To bring something into use or operation for the first time; to present someone.",
+      "synonyms": "present, launch, bring in",
+      "antonyms": "remove, withdraw, end",
+      "sentence": "The new regulation was introduced to address a gap in the existing legal framework."
+    },
+    {
+      "id": "5d29721f-7628-49cb-bd48-2c340ac11086",
+      "progress": 0,
+      "word": "aim",
+      "partOfSpeech": "noun",
+      "meaning": "A purpose or intention; what someone hopes to achieve.",
+      "synonyms": "goal, objective, intention",
+      "antonyms": "aimlessness, randomness",
+      "sentence": "The aim of the study was to determine whether the intervention had produced measurable results."
+    },
+    {
+      "id": "ee933a3d-452c-48eb-91fc-0dcb7f084a03",
+      "progress": 0,
+      "word": "assure",
+      "partOfSpeech": "verb",
+      "meaning": "To tell someone confidently that something is true in order to remove doubt.",
+      "synonyms": "promise, reassure, guarantee",
+      "antonyms": "mislead, doubt, alarm",
+      "sentence": "The minister sought to assure the public that the situation was under control."
+    },
+    {
+      "id": "2e5587bd-98d3-4658-ab5d-dbc0a4bf34e5",
+      "progress": 0,
+      "word": "average",
+      "partOfSpeech": "noun",
+      "meaning": "A number expressing a typical value by dividing a total by how many there are.",
+      "synonyms": "mean, norm, typical value",
+      "antonyms": "extreme, outlier, exception",
+      "sentence": "The average income in the region has remained stagnant for the past five years."
+    },
+    {
+      "id": "1d52e5c7-30c3-48d3-aed8-fddc086041f8",
+      "progress": 0,
+      "word": "birth",
+      "partOfSpeech": "noun",
+      "meaning": "The emergence of a new person or living thing; the beginning of something.",
+      "synonyms": "origin, beginning, arrival",
+      "antonyms": "death, end, disappearance",
+      "sentence": "The birth of the digital age brought both extraordinary opportunities and unforeseen challenges."
+    },
+    {
+      "id": "1b9c5261-d992-438d-a1f2-2a8f6f4ea84c",
+      "progress": 0,
+      "word": "bright",
+      "partOfSpeech": "adjective",
+      "meaning": "Giving out or reflecting much light; showing intelligence and cleverness.",
+      "synonyms": "vivid, clever, intelligent",
+      "antonyms": "dim, dull, dark",
+      "sentence": "One bright spot in an otherwise difficult year was the organisation's work on youth employment."
+    },
+    {
+      "id": "a1f884bb-6183-428d-837d-976d63c82f8f",
+      "progress": 0,
+      "word": "automatic",
+      "partOfSpeech": "adjective",
+      "meaning": "Working by itself without human intervention; done without thought.",
+      "synonyms": "self-operating, instinctive, mechanical",
+      "antonyms": "manual, deliberate, controlled",
+      "sentence": "The system is designed to trigger an automatic response whenever a threshold is exceeded."
+    },
+    {
+      "id": "7bb82467-97c8-46cb-af4b-98e4ea140808",
+      "progress": 0,
+      "word": "block",
+      "partOfSpeech": "verb",
+      "meaning": "To prevent movement, progress, or access.",
+      "synonyms": "obstruct, hinder, prevent",
+      "antonyms": "allow, enable, clear",
+      "sentence": "A lack of resources continues to block progress on the most urgent aspects of the programme."
+    },
+    {
+      "id": "1ef051e1-7fd5-493f-8d2f-40f498eb5c73",
+      "progress": 0,
+      "word": "adjust",
+      "partOfSpeech": "verb",
+      "meaning": "To alter something slightly to achieve a better fit or result.",
+      "synonyms": "modify, adapt, alter",
+      "antonyms": "keep unchanged, maintain, fix",
+      "sentence": "Organisations must be willing to adjust their strategies as circumstances change."
+    },
+    {
+      "id": "196792ea-2df2-4def-9887-f1d4410dfff7",
+      "progress": 0,
+      "word": "attack",
+      "partOfSpeech": "noun",
+      "meaning": "An aggressive action against someone or something; a critical statement.",
+      "synonyms": "assault, criticism, offensive",
+      "antonyms": "defence, support, protection",
+      "sentence": "The report was seen as a direct attack on the credibility of the research institute."
+    },
+    {
+      "id": "9b8edd3d-8bbf-4833-bf30-91a982794720",
+      "progress": 0,
+      "word": "create",
+      "partOfSpeech": "verb",
+      "meaning": "To bring something into existence.",
+      "synonyms": "make, produce, generate",
+      "antonyms": "destroy, demolish, eliminate",
+      "sentence": "The programme was designed to create new opportunities for people from disadvantaged backgrounds."
+    },
+    {
+      "id": "be081a7e-e352-4950-8614-9621ffb3dec8",
+      "progress": 0,
+      "word": "cancel",
+      "partOfSpeech": "verb",
+      "meaning": "To decide or announce that something planned will not take place.",
+      "synonyms": "call off, abort, discontinue",
+      "antonyms": "confirm, proceed, maintain",
+      "sentence": "The event had to be cancelled at short notice due to unforeseen circumstances."
+    },
+    {
+      "id": "47e36183-0c1d-49a6-9ccd-b95559054f5b",
+      "progress": 0,
+      "word": "accurate",
+      "partOfSpeech": "adjective",
+      "meaning": "Correct in all details and free from errors.",
+      "synonyms": "precise, exact, correct",
+      "antonyms": "inaccurate, wrong, imprecise",
+      "sentence": "The data must be accurate before any conclusions can be drawn."
+    },
+    {
+      "id": "dbddd4d4-b0d1-4a44-8a9e-df38d047aff1",
+      "progress": 0,
+      "word": "achieve",
+      "partOfSpeech": "verb",
+      "meaning": "To successfully bring about a desired result through effort.",
+      "synonyms": "accomplish, attain, reach",
+      "antonyms": "fail, miss, fall short",
+      "sentence": "The organisation set ambitious targets and managed to achieve most of them within two years."
+    },
+    {
+      "id": "0726d90d-18d6-42d1-8b20-fe7951d5242f",
+      "progress": 0,
+      "word": "broad",
+      "partOfSpeech": "adjective",
+      "meaning": "Covering a large number or wide scope of subjects.",
+      "synonyms": "wide, extensive, comprehensive",
+      "antonyms": "narrow, limited, specific",
+      "sentence": "The course offers a broad overview of economic theory before focusing on specific areas."
+    },
+    {
+      "id": "5729b27f-39de-4b3d-8ecf-18fdea3c7c74",
+      "progress": 0,
+      "word": "capable",
+      "partOfSpeech": "adjective",
+      "meaning": "Having the ability or skill to do something well.",
+      "synonyms": "able, competent, skilled",
+      "antonyms": "incapable, unable, incompetent",
+      "sentence": "She proved herself capable of leading complex research projects under pressure."
+    },
+    {
+      "id": "41cf7d98-599d-4b75-af5c-7eff489c7f3a",
+      "progress": 0,
+      "word": "clarify",
+      "partOfSpeech": "verb",
+      "meaning": "To make a statement or situation less confused and more clearly comprehensible.",
+      "synonyms": "explain, clear up, illuminate",
+      "antonyms": "confuse, obscure, complicate",
+      "sentence": "The committee asked the researcher to clarify the distinction between the two variables."
+    },
+    {
+      "id": "4d6b4911-e87e-4b58-8476-2126dc9a7e34",
+      "progress": 0,
+      "word": "critical",
+      "partOfSpeech": "adjective",
+      "meaning": "Involving careful judgement; of great importance; expressing disapproval.",
+      "synonyms": "analytical, crucial, evaluative",
+      "antonyms": "uncritical, trivial, supportive",
+      "sentence": "Critical thinking is one of the most valuable skills a student can develop."
+    },
+    {
+      "id": "74331937-c6be-4b92-939a-37b0ab619f83",
+      "progress": 0,
+      "word": "cultural",
+      "partOfSpeech": "adjective",
+      "meaning": "Relating to the ideas, customs, and behaviour of a society.",
+      "synonyms": "social, artistic, traditional",
+      "antonyms": "natural, individual, universal",
+      "sentence": "Cultural differences can significantly affect the way people communicate in a professional context."
+    },
+    {
+      "id": "fe6fc374-d1b0-46ea-afcf-e2a616f945c6",
+      "progress": 0,
+      "word": "diversity",
+      "partOfSpeech": "noun",
+      "meaning": "A range of many people or things that are very different from each other.",
+      "synonyms": "variety, range, difference",
+      "antonyms": "uniformity, sameness, homogeneity",
+      "sentence": "The programme aims to promote diversity and inclusion across all levels of the organisation."
+    },
+    {
+      "id": "3dec72a9-c6da-468d-9349-d6e3eb35fb2a",
+      "progress": 0,
+      "word": "outcome",
+      "partOfSpeech": "noun",
+      "meaning": "The way a thing turns out; a result or conclusion.",
+      "synonyms": "result, consequence, conclusion",
+      "antonyms": "cause, input, beginning",
+      "sentence": "The outcome of the negotiation surprised many who had expected an agreement to be impossible."
+    },
+    {
+      "id": "76e415b6-0506-4223-9abf-321795855153",
+      "progress": 0,
+      "word": "potential",
+      "partOfSpeech": "noun",
+      "meaning": "Latent qualities or abilities that may be developed in future.",
+      "synonyms": "capability, capacity, promise",
+      "antonyms": "limitation, inability, weakness",
+      "sentence": "The research has the potential to significantly change how the disease is treated."
+    },
+    {
+      "id": "02cb23e9-405f-4391-8b47-7d433904eb2e",
+      "progress": 0,
+      "word": "reform",
+      "partOfSpeech": "noun",
+      "meaning": "A change made in order to improve a system or institution.",
+      "synonyms": "improvement, change, overhaul",
+      "antonyms": "preservation, resistance, stagnation",
+      "sentence": "The government announced a major reform of the education system."
+    },
+    {
+      "id": "e7ce90bd-949f-41cd-8e28-f998c4abdf9a",
+      "progress": 0,
+      "word": "reveal",
+      "partOfSpeech": "verb",
+      "meaning": "To make something previously unknown or secret publicly known.",
+      "synonyms": "disclose, expose, uncover",
+      "antonyms": "conceal, hide, suppress",
+      "sentence": "The investigation revealed serious flaws in the way the data had been collected."
+    },
+    {
+      "id": "f8e9685b-c78f-4935-88dc-762290c282f4",
+      "progress": 0,
+      "word": "trend",
+      "partOfSpeech": "noun",
+      "meaning": "A general direction in which something is developing or changing over time.",
+      "synonyms": "pattern, tendency, direction",
+      "antonyms": "stability, reversal, anomaly",
+      "sentence": "The data reveals a worrying trend in the relationship between income inequality and outcomes."
+    }
+  ],
+  "contextPassage": {
+    "title": "The Capacity to Improve",
+    "text": "In an era defined by rapid and often unpredictable change, the ability to adapt is no longer a secondary skill — it is the foundation upon which all progress depends.\n\nThis was the central argument put forward by Dr. Yara Osei at the annual Global Education and Society Conference, held in a grand convention centre in the capital. The event attracted delegates from every corner of the globe, representing a remarkable variety of industries, academic institutions, and government bodies. The atmosphere in the hall was, from the very beginning, electric.\n\nDr. Osei's presentation examined what she described as the three dominant challenges of the current generation: the gap between policy and practice, the growing burden of economic inequality, and the fading confidence of institutions to act with genuine authority.\n\n\"Every generation inherits a complex situation,\" she began, her voice calm but direct. \"But the combination of environmental decline, digital disruption, and increasing social division has created conditions that require us to fundamentally reconsider what education is for.\"\n\nA chart on the screen behind her displayed data showing a consistent decrease in public trust in government across twenty countries over the past three decades. The trend, she argued, was not simply a consequence of political failure. It reflected something deeper — a shift in the way individuals relate to authority, community, and belief.\n\n\"We cannot ignore the evidence,\" she said. \"The data indicates that when people feel excluded from decision-making, when they perceive bias in the systems designed to serve them, they withdraw. They become passive. The consequence is a society in which the burden of change falls disproportionately on those least able to carry it.\"\n\nHer argument was confident and elaborate, drawing on case studies from four continents and a wide variety of disciplines. She was careful to acknowledge the considerable effort made by governments and organisations to address these issues — but equally firm in her conclusion that current approaches were not adequate.\n\nDuring the break, delegates gathered in small groups, each keen to debate the themes Dr. Osei had raised. A formal structure had been arranged for the afternoon: participants would select one of three discussion frames — economic, cultural, or institutional — and attempt to reach a collective view on the most effective direction for reform.\n\nOne group, composed of educators, researchers, and a former government official, chose to focus on the issue of access. They discussed how digital inequality continued to block progress in communities that lacked the equipment, the connectivity, or the appropriate training to benefit from the advance of technology. One member, a brilliant young researcher from West Africa, described how her organisation had managed to install basic digital devices in thirty rural schools — with dramatic effect on both student engagement and teacher confidence.\n\n\"The improvement was not automatic,\" she explained. \"It required effort, patience, and a willingness to adjust constantly. But the results were genuine.\"\n\nAnother delegate, whose background was in commercial finance, raised a more cautious perspective. Investment in education, he argued, required long-term commitment — a commitment that markets, by their very nature, are ill-designed to guarantee. The discussion became lively. Several participants began to argue about the appropriate role of private capital in public institutions, the extent to which economic factors should determine educational priorities, and whether a formal contract between government, industry, and civil society was even achievable.\n\nBy the end of the session, no single conclusion had emerged — but something more valuable had: a shared recognition that the issues were interconnected, that no single component could be addressed in isolation, and that the most effective responses would be those that combined insight, courage, and a willingness to consider the broadest possible context.\n\nAs the conference concluded, Dr. Osei was asked by a journalist whether she remained optimistic.\n\n\"I do not think optimism is the right frame,\" she replied. \"Optimism suggests passivity — a belief that things will improve on their own. What I have is something different. I believe that the capacity to improve our situation exists. It always has. The question is whether we have the confidence and the cooperation to use it.\n\n\"Every advance in human history has begun not with certainty, but with the bold decision to act before all the evidence is in. That is not recklessness. That is how change happens.\"\n\nThe audience applauded. Outside, the city went about its daily business, full of noise and motion and the vast, ordinary miracle of people trying, in a thousand different ways, to build something better."
+  }
+}

@@ -1,0 +1,318 @@
+{
+  "entries": [
+    {
+      "id": "c1d2e3f4-0001-4001-8001-223344556601",
+      "progress": 0,
+      "word": "adept",
+      "partOfSpeech": "adjective",
+      "meaning": "very skilled or proficient at something; highly competent through practice or training.",
+      "synonyms": "skilled, expert, proficient",
+      "antonyms": "unskilled, incompetent, novice",
+      "sentence": "she was adept at translating the findings of complex research into language that non-specialists could readily understand."
+    },
+    {
+      "id": "c1d2e3f4-0002-4002-8002-223344556602",
+      "progress": 0,
+      "word": "adversary",
+      "partOfSpeech": "noun",
+      "meaning": "one's opponent in a conflict, contest, or dispute; an enemy or rival.",
+      "synonyms": "opponent, rival, foe",
+      "antonyms": "ally, partner, collaborator",
+      "sentence": "in the history of scientific debate, yesterday's adversary is often tomorrow's collaborator once the evidence has settled."
+    },
+    {
+      "id": "c1d2e3f4-0003-4003-8003-223344556603",
+      "progress": 0,
+      "word": "align (oneself with)",
+      "partOfSpeech": "verb phrase",
+      "meaning": "to associate or side with a particular group, ideology, or position; to bring into agreement or cooperation.",
+      "synonyms": "side with, associate with, affiliate",
+      "antonyms": "oppose, dissociate, distance oneself",
+      "sentence": "the junior researcher was reluctant to align herself with either school of thought until the data pointed more clearly in one direction."
+    },
+    {
+      "id": "c1d2e3f4-0004-4004-8004-223344556604",
+      "progress": 0,
+      "word": "authentic",
+      "partOfSpeech": "adjective",
+      "meaning": "of undisputed origin; genuine; faithfully representing the actual character or essence of something.",
+      "synonyms": "genuine, real, legitimate",
+      "antonyms": "fake, counterfeit, artificial",
+      "sentence": "what distinguished the ethnographer's account was its authentic representation of the community's own understanding of its history."
+    },
+    {
+      "id": "c1d2e3f4-0005-4005-8005-223344556605",
+      "progress": 0,
+      "word": "centrality",
+      "partOfSpeech": "noun",
+      "meaning": "the fact or condition of being at the centre or of primary importance; the quality of being essential to understand something.",
+      "synonyms": "importance, primacy, prominence",
+      "antonyms": "marginality, peripherality, insignificance",
+      "sentence": "the centrality of replication to scientific practice cannot be overstated; without it, individual findings remain anecdotal."
+    },
+    {
+      "id": "c1d2e3f4-0006-4006-8006-223344556606",
+      "progress": 0,
+      "word": "complement",
+      "partOfSpeech": "verb",
+      "meaning": "to contribute extra features to something else so as to improve or emphasise its qualities; to complete or enhance.",
+      "synonyms": "enhance, complete, supplement",
+      "antonyms": "contradict, oppose, undermine",
+      "sentence": "the qualitative interviews were designed to complement the survey data rather than to duplicate it."
+    },
+    {
+      "id": "c1d2e3f4-0007-4007-8007-223344556607",
+      "progress": 0,
+      "word": "comprehensive",
+      "partOfSpeech": "adjective",
+      "meaning": "complete and including everything that is necessary; of large scope; thorough.",
+      "synonyms": "thorough, exhaustive, complete",
+      "antonyms": "partial, incomplete, selective",
+      "sentence": "a comprehensive literature review is essential before embarking on original research, however time-consuming it may be."
+    },
+    {
+      "id": "c1d2e3f4-0008-4008-8008-223344556608",
+      "progress": 0,
+      "word": "contingent",
+      "partOfSpeech": "adjective",
+      "meaning": "dependent on or conditioned by something else; not certain to occur; subject to chance or circumstance.",
+      "synonyms": "dependent, conditional, subject to",
+      "antonyms": "absolute, certain, unconditional",
+      "sentence": "the success of the intervention was contingent on conditions that proved far more variable in the field than in the laboratory."
+    },
+    {
+      "id": "c1d2e3f4-0009-4009-8009-223344556609",
+      "progress": 0,
+      "word": "confer",
+      "partOfSpeech": "verb",
+      "meaning": "to grant or bestow a right, honour, or advantage; to consult or discuss something with someone.",
+      "synonyms": "grant, bestow, deliberate",
+      "antonyms": "withhold, deny, take away",
+      "sentence": "belonging to a diverse ecosystem appeared to confer a measurable survival advantage on species that would otherwise be highly vulnerable."
+    },
+    {
+      "id": "c1d2e3f4-0010-4010-8010-223344556610",
+      "progress": 0,
+      "word": "corollary",
+      "partOfSpeech": "noun",
+      "meaning": "a natural consequence or result; a proposition that follows from and is often appended to a proven one.",
+      "synonyms": "consequence, result, implication",
+      "antonyms": "cause, premise, origin",
+      "sentence": "a necessary corollary of accepting the theory was that several well-established interpretations would have to be abandoned."
+    },
+    {
+      "id": "c1d2e3f4-0011-4011-8011-223344556611",
+      "progress": 0,
+      "word": "contemporary",
+      "partOfSpeech": "adjective",
+      "meaning": "living or occurring at the same time; belonging to or occurring in the present; modern.",
+      "synonyms": "current, modern, coexisting",
+      "antonyms": "historical, ancient, past",
+      "sentence": "the contemporary debate about data privacy has historical parallels that are rarely acknowledged in mainstream discussion."
+    },
+    {
+      "id": "c1d2e3f4-0012-4012-8012-223344556612",
+      "progress": 0,
+      "word": "cultivate",
+      "partOfSpeech": "verb",
+      "meaning": "to develop or improve by careful attention; to foster the growth of something over time.",
+      "synonyms": "develop, foster, nurture",
+      "antonyms": "neglect, suppress, ignore",
+      "sentence": "the institution had deliberately cultivated a culture of open inquiry, which made the sudden shift toward secrecy all the more alarming."
+    },
+    {
+      "id": "c1d2e3f4-0013-4013-8013-223344556613",
+      "progress": 0,
+      "word": "displace",
+      "partOfSpeech": "verb",
+      "meaning": "to take the place of something or someone; to force a person or idea from its position.",
+      "synonyms": "replace, supplant, relocate",
+      "antonyms": "restore, reinstate, maintain",
+      "sentence": "the new methodology did not displace the older approach but complemented it, each proving more appropriate in different contexts."
+    },
+    {
+      "id": "c1d2e3f4-0014-4014-8014-223344556614",
+      "progress": 0,
+      "word": "disposition",
+      "partOfSpeech": "noun",
+      "meaning": "a person's inherent qualities of character or innate tendency to behave in a particular way.",
+      "synonyms": "tendency, inclination, temperament",
+      "antonyms": "aversion, resistance, counterinclination",
+      "sentence": "a scientific disposition is not merely a set of techniques but a cultivated habit of mind — a willingness to be wrong."
+    },
+    {
+      "id": "c1d2e3f4-0015-4015-8015-223344556615",
+      "progress": 0,
+      "word": "ideology",
+      "partOfSpeech": "noun",
+      "meaning": "a system of ideas and ideals, especially one that forms the basis of economic or political theory and policy.",
+      "synonyms": "belief system, doctrine, worldview",
+      "antonyms": "pragmatism, empiricism, neutrality",
+      "sentence": "uncovering the ideology implicit in a research design is often as important as evaluating the findings the design produces."
+    },
+    {
+      "id": "c1d2e3f4-0016-4016-8016-223344556616",
+      "progress": 0,
+      "word": "impede",
+      "partOfSpeech": "verb",
+      "meaning": "to delay or prevent progress by obstructing or hindering; to stand in the way of.",
+      "synonyms": "hinder, obstruct, hamper",
+      "antonyms": "facilitate, enable, assist",
+      "sentence": "bureaucratic inertia was the single factor most likely to impede the timely implementation of the proposed reforms."
+    },
+    {
+      "id": "c1d2e3f4-0017-4017-8017-223344556617",
+      "progress": 0,
+      "word": "inhibit",
+      "partOfSpeech": "verb",
+      "meaning": "to hinder, restrain, or prevent an action or process from occurring.",
+      "synonyms": "restrain, suppress, prevent",
+      "antonyms": "encourage, promote, enable",
+      "sentence": "the hostile atmosphere within the department was enough to inhibit even the most confident researchers from raising dissenting views."
+    },
+    {
+      "id": "c1d2e3f4-0018-4018-8018-223344556618",
+      "progress": 0,
+      "word": "indigenous",
+      "partOfSpeech": "adjective",
+      "meaning": "originating or occurring naturally in a particular place; native to a region or environment.",
+      "synonyms": "native, endemic, aboriginal",
+      "antonyms": "foreign, introduced, exotic",
+      "sentence": "indigenous knowledge systems have preserved information about local ecology for generations that formal science is only beginning to document."
+    },
+    {
+      "id": "c1d2e3f4-0019-4019-8019-223344556619",
+      "progress": 0,
+      "word": "inherent",
+      "partOfSpeech": "adjective",
+      "meaning": "existing as a natural and permanent part of something; built into the essential character of a thing.",
+      "synonyms": "intrinsic, innate, built-in",
+      "antonyms": "external, acquired, incidental",
+      "sentence": "there is an inherent tension in any study that relies on self-report: subjects may not accurately describe their own behaviour."
+    },
+    {
+      "id": "c1d2e3f4-0020-4020-8020-223344556620",
+      "progress": 0,
+      "word": "innate",
+      "partOfSpeech": "adjective",
+      "meaning": "inborn and natural rather than learned; present from birth as part of a being's constitution.",
+      "synonyms": "inborn, natural, instinctive",
+      "antonyms": "acquired, learned, conditioned",
+      "sentence": "whether the capacity for moral reasoning is innate or entirely the product of socialisation remains one of the central disputes in cognitive science."
+    },
+    {
+      "id": "c1d2e3f4-0021-4021-8021-223344556621",
+      "progress": 0,
+      "word": "intrinsic",
+      "partOfSpeech": "adjective",
+      "meaning": "belonging to a thing by its very nature; essential, fundamental, and not dependent on external factors.",
+      "synonyms": "essential, inherent, fundamental",
+      "antonyms": "extrinsic, external, incidental",
+      "sentence": "the intrinsic complexity of the system made a clean experimental design almost impossible to achieve."
+    },
+    {
+      "id": "c1d2e3f4-0022-4022-8022-223344556622",
+      "progress": 0,
+      "word": "judicial",
+      "partOfSpeech": "adjective",
+      "meaning": "of, relating to, or appropriate to a court of law or to a judge; characterised by sound judgement.",
+      "synonyms": "legal, juridical, judicious",
+      "antonyms": "arbitrary, extrajudicial, lawless",
+      "sentence": "the committee was asked to adopt a judicial approach to the evidence — weighing each claim on its merits without prior commitment."
+    },
+    {
+      "id": "c1d2e3f4-0023-4023-8023-223344556623",
+      "progress": 0,
+      "word": "marginal",
+      "partOfSpeech": "adjective",
+      "meaning": "of minor importance or relevance; relating to the edge or periphery; barely sufficient.",
+      "synonyms": "minor, peripheral, negligible",
+      "antonyms": "central, significant, substantial",
+      "sentence": "what had initially appeared to be a marginal discrepancy in the results eventually proved to be the key to understanding the entire phenomenon."
+    },
+    {
+      "id": "c1d2e3f4-0024-4024-8024-223344556624",
+      "progress": 0,
+      "word": "mitigate",
+      "partOfSpeech": "verb",
+      "meaning": "to make less severe, serious, or painful; to lessen the impact or gravity of something.",
+      "synonyms": "alleviate, reduce, lessen",
+      "antonyms": "worsen, aggravate, intensify",
+      "sentence": "the researchers proposed several design modifications that would mitigate the most significant sources of measurement error."
+    },
+    {
+      "id": "c1d2e3f4-0025-4025-8025-223344556625",
+      "progress": 0,
+      "word": "preliminary",
+      "partOfSpeech": "adjective",
+      "meaning": "preceding or preparing for the main matter; introductory or initial rather than final.",
+      "synonyms": "initial, preparatory, tentative",
+      "antonyms": "final, conclusive, definitive",
+      "sentence": "the preliminary findings were promising, but the team was careful not to draw conclusions before the full analysis was complete."
+    },
+    {
+      "id": "c1d2e3f4-0026-4026-8026-223344556626",
+      "progress": 0,
+      "word": "prevail",
+      "partOfSpeech": "verb",
+      "meaning": "to prove more powerful than opposing forces; to be widespread or current; to succeed.",
+      "synonyms": "triumph, dominate, persist",
+      "antonyms": "fail, yield, lose",
+      "sentence": "despite sustained opposition, the reformers ultimately prevailed, and the new standards were adopted across the field."
+    },
+    {
+      "id": "c1d2e3f4-0027-4027-8027-223344556627",
+      "progress": 0,
+      "word": "prevalent",
+      "partOfSpeech": "adjective",
+      "meaning": "widespread in a particular area or at a particular time; common or dominant.",
+      "synonyms": "widespread, common, dominant",
+      "antonyms": "rare, uncommon, infrequent",
+      "sentence": "the assumption that correlation implies causation remains surprisingly prevalent even among researchers who should know better."
+    },
+    {
+      "id": "c1d2e3f4-0028-4028-8028-223344556628",
+      "progress": 0,
+      "word": "prevailing",
+      "partOfSpeech": "adjective",
+      "meaning": "most common or widespread at a particular time; having the most influence in a given context.",
+      "synonyms": "dominant, current, widespread",
+      "antonyms": "minority, marginal, outdated",
+      "sentence": "challenging the prevailing consensus is never comfortable, but it is precisely what the evidence sometimes demands."
+    },
+    {
+      "id": "c1d2e3f4-0029-4029-8029-223344556629",
+      "progress": 0,
+      "word": "reciprocate",
+      "partOfSpeech": "verb",
+      "meaning": "to respond to an action or gesture with a corresponding one; to give and receive mutually.",
+      "synonyms": "return, exchange, repay",
+      "antonyms": "withhold, deny, take without giving",
+      "sentence": "in many ecosystems, the benefits of a symbiotic relationship are reciprocated across generations in ways that are difficult to quantify."
+    },
+    {
+      "id": "c1d2e3f4-0030-4030-8030-223344556630",
+      "progress": 0,
+      "word": "rudimentary",
+      "partOfSpeech": "adjective",
+      "meaning": "involving or limited to basic principles; imperfectly or incompletely developed; elementary.",
+      "synonyms": "basic, elementary, undeveloped",
+      "antonyms": "advanced, sophisticated, complex",
+      "sentence": "the rudimentary tools available to early researchers were sufficient to identify the phenomenon, though not to explain it."
+    },
+    {
+      "id": "c1d2e3f4-0031-4031-8031-223344556631",
+      "progress": 0,
+      "word": "successor",
+      "partOfSpeech": "noun",
+      "meaning": "a person or thing that comes after and takes the place of another; one who follows in a position or role.",
+      "synonyms": "replacement, heir, next in line",
+      "antonyms": "predecessor, forerunner, antecedent",
+      "sentence": "the successor theory did not simply displace its predecessor but incorporated its most valid insights into a broader framework."
+    }
+  ],
+  "contextPassage": {
+    "title": "The Shape of a Discipline",
+    "text": "Every academic discipline has a prevailing character — not merely a set of methods, but a cultivated disposition toward the world it studies. In the natural sciences, that disposition tends to be judicial: evidence is weighed carefully, preliminary conclusions are held loosely, and the authentic purpose of inquiry is understood to be the revision of existing knowledge rather than its defence. In the social sciences and humanities, the picture is more contested. Here, ideology often intersects with method in ways that are difficult to disentangle, and the centrality of interpretation means that two adept scholars examining the same data may align themselves with radically different conclusions.\n\nThis is not, in itself, a weakness. The inherent complexity of human behaviour means that any comprehensive account must draw on disparate frameworks, each of which illuminates what the others cannot. The relationship between, say, sociology and economics is not that of adversaries but of disciplines that complement and sometimes impede each other in productive ways. Where they converge, their shared conclusions are correspondingly stronger. Where they diverge, the divergence itself is often the most interesting finding — a corollary of the fact that their underlying assumptions about human motivation are genuinely incompatible.\n\nWhat mitigates the risks of this interdisciplinary complexity is the practice of reciprocating rigour: holding one's own methods to the same judicial standard one applies to the methods of others. This is more difficult than it sounds. Scholars are naturally inclined to align themselves with frameworks that confirm their existing dispositions, to treat marginal evidence favourably when it supports a preferred conclusion, and to inhibit the kind of self-scrutiny that genuine critique requires. The contemporary research environment, with its emphasis on productivity and grant capture, does little to mitigate these tendencies.\n\nConsider the concept of ideology. Every discipline carries ideological commitments that are largely invisible to its practitioners — contingent assumptions treated as universal truths, prevailing values mistaken for neutral premises. The task of making these commitments explicit is always uncomfortable and often resisted. Yet it is a task that the most adept scholars in any field eventually undertake, because the alternative is the gradual displacement of inquiry by advocacy — a process in which rudimentary arguments dressed in sophisticated language come to prevail not because they are better but because they are more congruent with the institutional culture that sustains them.\n\nThe successor frameworks that emerge from this kind of critique rarely displace their predecessors entirely. More often, they confer on the field a more nuanced understanding of what the original framework could and could not explain. In this sense, intellectual progress is less a matter of revolutionary replacement than of incremental cultivation — a slow, contingent process of refining questions, reciprocating findings across subdisciplines, and learning to distinguish the intrinsic features of a phenomenon from those that are merely artefacts of the methods used to study it.\n\nIndigenous knowledge systems offer a useful illustration. For much of the modern era, they were treated as rudimentary precursors to scientific understanding — authentic in their way, but eventually to be displaced by the prevailing methodologies of Western science. More recently, researchers have recognised that this framing was itself ideologically laden. indigenous knowledge is not a marginal curiosity but a comprehensive body of observation, refined over generations and often more contingent on local conditions than the universal claims of formal science. integrating it does not impede rigorous inquiry — it enriches it, conferring on researchers access to patterns and relationships that their own methods would take decades to rediscover.\n\nThe innate human drive to understand — to make sense of the world and one's place in it — is neither inherently scientific nor inherently humanistic. it is a disposition that predates any discipline, and it is the contemporary task of every field to cultivate it honestly: to hold preliminary conclusions with appropriate humility, to reciprocate the scrutiny one wishes to receive, and to resist the temptation to treat the prevailing consensus as the final word. the successor to any framework worthy of the name will not arrive by displacing what came before, but by understanding it well enough to know where it ends."
+  }
+}

@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import { VocabTable, User } from '../types';
 import { geminiService } from '../services/geminiService';
+import { storageService } from '../services/storageService';
 
 interface TableCreatorProps {
   user: User;
@@ -17,7 +18,73 @@ const TableCreator: React.FC<TableCreatorProps> = ({ user, existingTable, onSave
   const [wordsInput, setWordsInput] = useState('');
   const [links, setLinks] = useState<string>(existingTable?.links.join('\n') || '');
   const [isGenerating, setIsGenerating] = useState(false);
+  const [isExtracting, setIsExtracting] = useState(false);
   const [status, setStatus] = useState('');
+
+  const handleFileUpload = async (event: React.ChangeEvent<HTMLInputElement>) => {
+    const files = event.target.files;
+    if (!files || files.length === 0) return;
+
+    const updatedUser = await storageService.incrementLimitUsage(user, 'document_uploads_used');
+    if (!updatedUser) {
+      setStatus('Daily limit reached! You can only upload 3 documents per day.');
+      return;
+    }
+
+    setIsExtracting(true);
+    setStatus('AI is extracting words from document(s)...');
+
+    const newWords: string[] = [];
+
+    try {
+      for (let i = 0; i < files.length; i++) {
+        const file = files[i];
+        
+        if (file.size > 5 * 1024 * 1024) {
+          setStatus(`Error: File ${file.name} is too large. Maximum size is 5MB.`);
+          setIsExtracting(false);
+          return;
+        }
+
+        const base64Data = await new Promise<string>((resolve, reject) => {
+          const reader = new FileReader();
+          reader.onload = () => {
+             const result = reader.result as string;
+             const base64 = result.split(',')[1];
+             resolve(base64 || '');
+          };
+          reader.onerror = reject;
+          reader.readAsDataURL(file);
+        });
+
+        if (base64Data) {
+          const words = await geminiService.extractWordsFromFile(base64Data, file.type);
+          if (words && words.length > 0) {
+            newWords.push(...words);
+          }
+        }
+      }
+
+      if (newWords.length > 0) {
+        setWordsInput(prev => {
+          const current = prev.trim();
+          const additions = newWords.join('\n');
+          return current ? `${current}\n${additions}` : additions;
+        });
+        setStatus(`Successfully extracted ${newWords.length} words.`);
+        setTimeout(() => setStatus(''), 4000);
+      } else {
+         setStatus(`Error: No words could be extracted. Try a text-heavy document.`);
+      }
+
+    } catch (err) {
+       console.error("Extraction error:", err);
+       setStatus('Error: Failed to process document extraction.');
+    } finally {
+       setIsExtracting(false);
+       event.target.value = '';
+    }
+  };
 
   const validateEnglishWords = (words: string[]): boolean => {
     const englishWordRegex = /^[a-zA-Z\s\[\]\-']+$/;
@@ -35,10 +102,16 @@ const TableCreator: React.FC<TableCreatorProps> = ({ user, existingTable, onSave
       return;
     }
 
-    const wordList = wordsInput.split(/[\n,]+/).map(w => w.trim()).filter(w => w.length > 0);
+    const wordList = wordsInput.split(/[\n,]+/).map(w => w.trim().toLowerCase()).filter(w => w.length > 0);
     
     if (!validateEnglishWords(wordList)) {
       setStatus('Error: All words must be in English. Please remove non-English characters.');
+      return;
+    }
+
+    const updatedUser = await storageService.incrementLimitUsage(user, 'words_generated', wordList.length);
+    if (!updatedUser) {
+      setStatus(`Daily limit reached! You can only generate up to 40 words per day. You tried to add ${wordList.length} words.`);
       return;
     }
 
@@ -110,8 +183,34 @@ const TableCreator: React.FC<TableCreatorProps> = ({ user, existingTable, onSave
 
           <div className="space-y-6 flex flex-col">
             <div className="flex-1 flex flex-col">
-              <div className="flex items-center justify-between mb-2">
-                <label className="block text-[10px] font-bold uppercase tracking-[0.2em] text-muted">LEXICAL INPUT (ONE PER LINE)</label>
+              <label className="block text-[10px] font-bold uppercase tracking-[0.2em] text-muted mb-3">LEXICAL INPUT</label>
+              
+              <div className="flex items-center justify-between mb-3">
+                <div className="flex items-center gap-3">
+                  <div className="relative">
+                    <input 
+                      type="file" 
+                      accept=".pdf,.txt,.doc,.docx" 
+                      multiple 
+                      onChange={handleFileUpload} 
+                      className="absolute inset-0 w-full h-full opacity-0 cursor-pointer disabled:cursor-not-allowed"
+                      disabled={isExtracting || isGenerating}
+                      title="Upload PDF, TXT or DOC to extract words via AI"
+                    />
+                    <button 
+                      type="button" 
+                      disabled={isExtracting || isGenerating}
+                      className="px-2 py-1 bg-surfaceHighlight border border-white/10 hover:border-primary/50 text-[10px] text-primary font-bold uppercase tracking-widest rounded transition-all disabled:opacity-50"
+                    >
+                      {isExtracting ? 'Extracting...' : '+ Upload Doc'}
+                    </button>
+                  </div>
+                  <span className="text-[9px] text-muted/60 hidden sm:inline-block">Max 5MB / file</span>
+                  <span className="text-[10px] text-blue-500 font-bold uppercase tracking-widest px-1.5 py-0.5 rounded bg-blue-500/10">
+                    {user.document_uploads_used || 0}/3 Uploads
+                  </span>
+                </div>
+
                 <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-primary bg-primary/10 px-2 py-0.5 rounded border border-primary/20">
                   {wordsInput.split(/[\n,]+/).map(w => w.trim()).filter(w => w.length > 0).length} Words
                 </span>
@@ -138,18 +237,18 @@ const TableCreator: React.FC<TableCreatorProps> = ({ user, existingTable, onSave
         </div>
 
         <div className="pt-8 flex flex-col items-center space-y-4 border-t border-white/5">
-          {isGenerating || isSaving ? (
+          {isGenerating || isSaving || isExtracting ? (
             <div className="flex flex-col items-center space-y-3">
               <div className="w-8 h-8 border-2 border-primary border-t-transparent rounded-full animate-spin"></div>
               <p className="text-sm font-medium italic text-muted animate-pulse">
-                {isGenerating ? status : 'Saving collection...'}
+                {isGenerating ? status : isExtracting ? status : 'Saving collection...'}
               </p>
             </div>
           ) : (
             <>
               <button
                 onClick={handleGenerate}
-                disabled={isGenerating || isSaving}
+                disabled={isGenerating || isSaving || isExtracting}
                 className="w-full md:w-auto px-20 py-5 bg-primary text-white font-bold rounded-full shadow-lg shadow-primary/20 hover:bg-secondary transition-all disabled:opacity-20 disabled:cursor-not-allowed uppercase tracking-[0.2em] text-[11px] hover:-translate-y-0.5"
               >
                 Assemble with Lexicon AI

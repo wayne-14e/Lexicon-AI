@@ -16,10 +16,10 @@ import HomePage from './components/HomePage';
 import CollectionsPage from './components/CollectionsPage';
 import ScratchpadPage from './components/ScratchpadPage';
 import DailyStreakPopup from './components/DailyStreakPopup';
+import SystemArchives from './components/SystemArchives';
 import { geminiService } from './services/geminiService';
 import { Analytics } from '@vercel/analytics/react';
-
-type ViewState = 'home' | 'collections' | 'scratchpad' | 'create' | 'view' | 'public_shared' | 'study' | 'context-learning' | 'matching' | 'profile';
+type ViewState = 'home' | 'collections' | 'scratchpad' | 'create' | 'view' | 'public_shared' | 'study' | 'context-learning' | 'matching' | 'profile' | 'system-archives';
 
 const App: React.FC = () => {
   const [user, setUser] = useState<User | null>(null);
@@ -71,19 +71,38 @@ const App: React.FC = () => {
     const uid = targetUserId || user?.id;
     if (!uid) return null;
 
-    await storageService.addTokenTransaction({
-      id: crypto.randomUUID(),
-      userId: uid,
-      amount,
-      reason,
-      createdAt: Date.now()
-    });
+    try {
+      // 1. Get latest snapshot to ensure we don't use stale tokens
+      const latestUser = await storageService.getUserById(uid);
+      const currentTokens = latestUser?.tokens ?? 0;
+      const newTokens = currentTokens + amount;
+      
+      console.log(`Recording token change: ${amount} for ${uid}. Previous: ${currentTokens}, New: ${newTokens}. Reason: ${reason}`);
 
-    const syncedTokens = await storageService.syncUserTokenBalanceFromTransactions(uid);
-    if (syncedTokens === null) return null;
+      // 2. Add the transaction log (audit trail)
+      await storageService.addTokenTransaction({
+        id: crypto.randomUUID(),
+        userId: uid,
+        amount,
+        reason,
+        createdAt: Date.now()
+      });
 
-    setUser(prev => (prev ? { ...prev, tokens: syncedTokens } : prev));
-    return syncedTokens;
+      // 3. Update the users table DIRECTLY with the new absolute value
+      const success = await storageService.updateUserTokens(uid, newTokens);
+      if (!success) {
+        console.error("Failed to update tokens in users table.");
+        return null;
+      }
+
+      console.log(`Token update successful in Supabase. New balance: ${newTokens}`);
+      setUser(prev => (prev ? { ...prev, tokens: newTokens } : prev));
+      return newTokens;
+    } catch (err) {
+      console.error("CRITICAL: Failed to record token change:", err);
+      showToast("Token transaction failed. Please check your connection.", "info");
+      return null;
+    }
   };
 
   const addTokens = async (amount: number, reason?: string) => {
@@ -98,6 +117,7 @@ const App: React.FC = () => {
   const spendTokens = async (amount: number, reason?: string): Promise<boolean> => {
     if (!user) return false;
 
+    // We still fetch latest user here to be sure the check is accurate
     const latestUser = await storageService.getUserById(user.id);
     const availableTokens = latestUser?.tokens ?? user.tokens ?? 0;
     setUser(prev => (prev ? { ...prev, tokens: availableTokens } : prev));
@@ -107,13 +127,22 @@ const App: React.FC = () => {
       return false;
     }
 
-    await recordTokenChange(-amount, reason || 'Spent tokens');
-
-    if (reason) {
+    const result = await recordTokenChange(-amount, reason || 'Spent tokens');
+    if (result !== null && reason) {
       showToast(`-${amount} Tokens: ${reason}`, 'info');
     }
-    return true;
+    return result !== null;
   };
+
+  /**
+   * Safely merges a partial user update into the current state using a functional
+   * update, so it NEVER overwrites fields (like `tokens`) that may have been
+   * updated by concurrent async operations.
+   */
+  const mergeUser = (partial: Partial<User>) => {
+    setUser(prev => (prev ? { ...prev, ...partial } : prev));
+  };
+
 
   const checkDailyAward = async (currentUser: User) => {
     // Always use the latest user snapshot from Supabase for cross-device/tab consistency.
@@ -198,6 +227,14 @@ const App: React.FC = () => {
       if (currentUser) {
         setUser(currentUser);
         await fetchUserTables(currentUser.id);
+        
+        // Sync tokens on init to ensure consistency from previous sessions/tabs
+        console.log("Syncing tokens on initialization...");
+        const syncedTokens = await storageService.syncUserTokenBalanceFromTransactions(currentUser.id);
+        if (syncedTokens !== null) {
+          setUser(prev => (prev ? { ...prev, tokens: syncedTokens } : prev));
+        }
+
         // Check for daily award/streak immediately after loading user
         await checkDailyAward(currentUser);
       }
@@ -214,7 +251,7 @@ const App: React.FC = () => {
     const viewParam = params.get('view');
     const tableIdParam = params.get('table');
     
-    if (viewParam && ['home', 'collections', 'scratchpad', 'profile'].includes(viewParam)) {
+    if (viewParam && ['home', 'collections', 'scratchpad', 'profile', 'system-archives'].includes(viewParam)) {
       setView(viewParam as ViewState);
     }
     
@@ -364,7 +401,13 @@ const App: React.FC = () => {
 
   const handleUpdateTable = async (updatedTable: VocabTable) => {
     setActiveTable(updatedTable);
-    setTables(prev => prev.map(t => t.id === updatedTable.id ? updatedTable : t));
+    setTables(prev => {
+      const exists = prev.some(t => t.id === updatedTable.id);
+      if (exists) {
+        return prev.map(t => t.id === updatedTable.id ? updatedTable : t);
+      }
+      return [...prev, updatedTable];
+    });
     await storageService.saveTable(updatedTable);
   };
 
@@ -408,6 +451,17 @@ const App: React.FC = () => {
     if (activeTable.contextPassage) {
       setView('context-learning');
       return;
+    }
+
+    if (user) {
+      const newUsage = await storageService.incrementLimitUsage(user, 'narratives_used');
+      if (newUsage === null) {
+        showToast("Daily limit reached! You can only generate 2 narratives per day.", 'info');
+        return;
+      }
+      
+      // Update state selectively using a functional update to avoid overwriting tokens
+      setUser(prev => prev ? { ...prev, narratives_used: newUsage } : prev);
     }
 
     setIsFetching(true);
@@ -456,6 +510,10 @@ const App: React.FC = () => {
     setView('home');
   };
 
+  const handleNavigateToArchives = () => {
+    setView('system-archives');
+  };
+
   if (isInitializing) {
     return (
       <div className="min-h-screen flex items-center justify-center bg-background p-6">
@@ -493,7 +551,9 @@ const App: React.FC = () => {
       onNavigateToDashboard={handleNavigateToDashboard}
       onNavigateToCreate={handleNavigateToCreate}
       onNavigateToHome={handleNavigateToHome}
+      onNavigateToArchives={handleNavigateToArchives}
       onSpendTokens={spendTokens}
+      onUserUpdate={mergeUser}
     >
       {!user ? (
         <Auth onLogin={handleLogin} />
@@ -505,6 +565,7 @@ const App: React.FC = () => {
               tables={tables}
               onNavigateToTable={handleNavigateToTable}
               onNavigateToCreate={handleNavigateToDashboard}
+              onNavigateToArchives={handleNavigateToArchives}
             />
           )}
 
@@ -522,7 +583,7 @@ const App: React.FC = () => {
               user={user}
               tables={tables}
               onBack={handleNavigateToHome}
-              onUserUpdate={setUser}
+              onUserUpdate={mergeUser}
             />
           )}
 
@@ -541,8 +602,9 @@ const App: React.FC = () => {
 
           {view === 'view' && activeTable && (
             <TableView 
+              user={user}
               table={activeTable}
-              onBack={handleNavigateToDashboard}
+              onBack={activeTable.userId === 'system' ? handleNavigateToArchives : handleNavigateToDashboard}
               onDelete={handleDeleteTable}
               onStudy={(excludeMastered) => {
                 setStudyExcludeMastered(excludeMastered);
@@ -554,12 +616,14 @@ const App: React.FC = () => {
                 setView('matching');
               }}
               onUpdateTable={handleUpdateTable}
+              onUserUpdate={mergeUser}
               isFetching={isFetching}
             />
           )}
 
           {view === 'study' && activeTable && (
             <FlashcardView 
+              user={user}
               table={activeTable}
               excludeMastered={studyExcludeMastered}
               onBack={() => setView('view')}
@@ -585,6 +649,16 @@ const App: React.FC = () => {
             />
           )}
           
+          {view === 'system-archives' && (
+            <SystemArchives 
+              user={user} 
+              tables={tables}
+              onNavigateToSystemTable={handleNavigateToTable} 
+              onSpendTokens={spendTokens}
+              onUserUpdate={mergeUser}
+            />
+          )}
+
           {streakPopup && (
             <DailyStreakPopup
               streak={streakPopup.streak}

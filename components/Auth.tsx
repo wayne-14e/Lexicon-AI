@@ -68,9 +68,18 @@ const Auth: React.FC<AuthProps> = ({ onLogin }) => {
         }
       } else {
         // Register Mode
-        const existingName = await storageService.findUserByName(name.trim());
+        const [existingName, existingEmail] = await Promise.all([
+          storageService.findUserByName(name.trim()),
+          storageService.findUserByEmail(email.trim())
+        ]);
+
         if (existingName) {
           setError("Identity already exists. Please sign in.");
+          return;
+        }
+
+        if (existingEmail) {
+          setError("Email already registered. Please sign in.");
           return;
         }
 
@@ -78,6 +87,13 @@ const Auth: React.FC<AuthProps> = ({ onLogin }) => {
         
         if (signUpError) {
           setError(signUpError.message || "Failed to create account.");
+          return;
+        }
+
+        // UX FIX: If Supabase returns success but NO identities, it means the email is already in use
+        // but Supabase is configured for silent failures for security.
+        if (data.user && (!data.user.identities || data.user.identities.length === 0)) {
+          setError("Email already registered. Please sign in.");
           return;
         }
 

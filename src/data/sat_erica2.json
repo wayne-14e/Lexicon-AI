@@ -1,0 +1,398 @@
+{
+  "entries": [
+    {
+      "id": "b1c2d3e4-0001-4001-8001-112233445501",
+      "progress": 0,
+      "word": "advance",
+      "partOfSpeech": "verb",
+      "meaning": "to put forward a theory, argument, or idea for consideration.",
+      "synonyms": "propose, put forward, present",
+      "antonyms": "withdraw, retract, suppress",
+      "sentence": "the researcher advanced a theory that challenged long-standing assumptions about the origins of language."
+    },
+    {
+      "id": "b1c2d3e4-0002-4002-8002-112233445502",
+      "progress": 0,
+      "word": "posit",
+      "partOfSpeech": "verb",
+      "meaning": "to assume or put forward something as a fact or basis for argument.",
+      "synonyms": "propose, assert, postulate",
+      "antonyms": "deny, refute, withdraw",
+      "sentence": "she posited that the decline in bee populations was directly linked to changes in agricultural land use."
+    },
+    {
+      "id": "b1c2d3e4-0003-4003-8003-112233445503",
+      "progress": 0,
+      "word": "proffer",
+      "partOfSpeech": "verb",
+      "meaning": "to hold out or put forward something for acceptance; to offer or suggest.",
+      "synonyms": "offer, tender, present",
+      "antonyms": "withhold, withdraw, suppress",
+      "sentence": "the panel proffered several explanations, though none was supported by sufficient empirical evidence."
+    },
+    {
+      "id": "b1c2d3e4-0004-4004-8004-112233445504",
+      "progress": 0,
+      "word": "speculate",
+      "partOfSpeech": "verb",
+      "meaning": "to form a theory or conjecture without firm evidence; to reason about uncertain matters.",
+      "synonyms": "theorise, conjecture, hypothesise",
+      "antonyms": "confirm, establish, prove",
+      "sentence": "it would be premature to speculate about a causal mechanism before the replication studies have been completed."
+    },
+    {
+      "id": "b1c2d3e4-0005-4005-8005-112233445505",
+      "progress": 0,
+      "word": "hypothesize",
+      "partOfSpeech": "verb",
+      "meaning": "to put forward a hypothesis; to propose a tentative explanation to be tested by investigation.",
+      "synonyms": "theorise, suppose, conjecture",
+      "antonyms": "confirm, verify, prove",
+      "sentence": "the team hypothesized that the enzyme's unusual structure might account for its exceptional stability at high temperatures."
+    },
+    {
+      "id": "b1c2d3e4-0006-4006-8006-112233445506",
+      "progress": 0,
+      "word": "bolster",
+      "partOfSpeech": "verb",
+      "meaning": "to support or strengthen something; to reinforce an argument or position with additional evidence.",
+      "synonyms": "strengthen, support, reinforce",
+      "antonyms": "undermine, weaken, undercut",
+      "sentence": "the new dataset bolstered the original hypothesis, which had previously rested on a rather narrow evidential base."
+    },
+    {
+      "id": "b1c2d3e4-0007-4007-8007-112233445507",
+      "progress": 0,
+      "word": "buttress",
+      "partOfSpeech": "verb",
+      "meaning": "to increase the strength of or justification for something; to prop up an argument or structure.",
+      "synonyms": "support, reinforce, shore up",
+      "antonyms": "undermine, weaken, erode",
+      "sentence": "a second independent study buttressed the controversial findings, compelling the scientific community to take them seriously."
+    },
+    {
+      "id": "b1c2d3e4-0008-4008-8008-112233445508",
+      "progress": 0,
+      "word": "substantiate",
+      "partOfSpeech": "verb",
+      "meaning": "to provide evidence to prove or support the truth of something.",
+      "synonyms": "verify, corroborate, confirm",
+      "antonyms": "refute, disprove, contradict",
+      "sentence": "the authors were unable to substantiate their central claim with anything beyond anecdotal observation."
+    },
+    {
+      "id": "b1c2d3e4-0009-4009-8009-112233445509",
+      "progress": 0,
+      "word": "ambivalence",
+      "partOfSpeech": "noun",
+      "meaning": "the state of having mixed or contradictory feelings about something; uncertainty or indecision.",
+      "synonyms": "uncertainty, conflictedness, indecision",
+      "antonyms": "certainty, conviction, decisiveness",
+      "sentence": "her ambivalence about publishing the preliminary results was understandable given how easily they could be misinterpreted."
+    },
+    {
+      "id": "b1c2d3e4-0010-4010-8010-112233445510",
+      "progress": 0,
+      "word": "skepticism",
+      "partOfSpeech": "noun",
+      "meaning": "a doubting or questioning attitude; the practice of questioning claims before accepting them as true.",
+      "synonyms": "doubt, scepticism, questioning",
+      "antonyms": "credulity, acceptance, conviction",
+      "sentence": "healthy skepticism is the engine of science; without it, errors accumulate and go unchallenged for generations."
+    },
+    {
+      "id": "b1c2d3e4-0011-4011-8011-112233445511",
+      "progress": 0,
+      "word": "rebut",
+      "partOfSpeech": "verb",
+      "meaning": "to claim or prove that evidence or an accusation is false; to counter an argument directly.",
+      "synonyms": "counter, contradict, disprove",
+      "antonyms": "confirm, accept, concede",
+      "sentence": "the response letter rebutted each of the reviewer's objections in turn, with data the original manuscript had not included."
+    },
+    {
+      "id": "b1c2d3e4-0012-4012-8012-112233445512",
+      "progress": 0,
+      "word": "refute",
+      "partOfSpeech": "verb",
+      "meaning": "to prove a statement or theory to be wrong or false; to deny the correctness of something.",
+      "synonyms": "disprove, debunk, contradict",
+      "antonyms": "confirm, support, verify",
+      "sentence": "a single well-designed experiment can refute a theory that thousands of observations appeared to support."
+    },
+    {
+      "id": "b1c2d3e4-0013-4013-8013-112233445513",
+      "progress": 0,
+      "word": "grapple with",
+      "partOfSpeech": "verb phrase",
+      "meaning": "to struggle with or work hard to deal with or understand a difficult problem or issue.",
+      "synonyms": "wrestle with, struggle with, contend with",
+      "antonyms": "ignore, dismiss, avoid",
+      "sentence": "philosophers have grappled with the question of free will for centuries without reaching a consensus that satisfies both intuition and logic."
+    },
+    {
+      "id": "b1c2d3e4-0014-4014-8014-112233445514",
+      "progress": 0,
+      "word": "mull over",
+      "partOfSpeech": "verb phrase",
+      "meaning": "to think about something carefully and at length before making a decision.",
+      "synonyms": "ponder, deliberate, consider",
+      "antonyms": "dismiss, ignore, rush",
+      "sentence": "she spent several days mulling over the implications of the data before deciding how to proceed with the analysis."
+    },
+    {
+      "id": "b1c2d3e4-0015-4015-8015-112233445515",
+      "progress": 0,
+      "word": "ruminate about",
+      "partOfSpeech": "verb phrase",
+      "meaning": "to think deeply and at length about something; to meditate or reflect persistently.",
+      "synonyms": "reflect on, meditate on, deliberate about",
+      "antonyms": "disregard, overlook, dismiss",
+      "sentence": "the scientist spent the evening ruminating about what the anomalous result might reveal about the model's underlying assumptions."
+    },
+    {
+      "id": "b1c2d3e4-0016-4016-8016-112233445516",
+      "progress": 0,
+      "word": "converge",
+      "partOfSpeech": "verb",
+      "meaning": "to come together from different directions and meet at a point; to reach a similar conclusion from different starting points.",
+      "synonyms": "meet, unite, coincide",
+      "antonyms": "diverge, separate, differ",
+      "sentence": "the evidence from genetics, ecology, and paleontology converged on the same explanation for the sudden disappearance of the species."
+    },
+    {
+      "id": "b1c2d3e4-0017-4017-8017-112233445517",
+      "progress": 0,
+      "word": "integrate",
+      "partOfSpeech": "verb",
+      "meaning": "to combine two or more things so that they become a single coherent whole.",
+      "synonyms": "combine, unify, incorporate",
+      "antonyms": "separate, isolate, fragment",
+      "sentence": "the study sought to integrate findings from neuroscience and cognitive psychology into a unified account of decision-making under uncertainty."
+    },
+    {
+      "id": "b1c2d3e4-0018-4018-8018-112233445518",
+      "progress": 0,
+      "word": "intersect",
+      "partOfSpeech": "verb",
+      "meaning": "to meet or cross at a point; to have qualities or concerns in common.",
+      "synonyms": "cross, overlap, meet",
+      "antonyms": "diverge, separate, bypass",
+      "sentence": "the fields of sociology and economics intersect most productively in the study of how institutions shape individual behaviour."
+    },
+    {
+      "id": "b1c2d3e4-0019-4019-8019-112233445519",
+      "progress": 0,
+      "word": "diverge",
+      "partOfSpeech": "verb",
+      "meaning": "to develop in a different direction; to depart from a common point or shared path.",
+      "synonyms": "differ, deviate, separate",
+      "antonyms": "converge, agree, align",
+      "sentence": "the two research traditions began to diverge sharply in the 1970s as their methodological commitments became increasingly incompatible."
+    },
+    {
+      "id": "b1c2d3e4-0020-4020-8020-112233445520",
+      "progress": 0,
+      "word": "infer",
+      "partOfSpeech": "verb",
+      "meaning": "to deduce or conclude from evidence and reasoning rather than from explicit statements.",
+      "synonyms": "deduce, conclude, derive",
+      "antonyms": "state directly, observe, assume",
+      "sentence": "from the distribution of fossilised pollen, the researchers were able to infer the vegetation patterns of an entire lost landscape."
+    },
+    {
+      "id": "b1c2d3e4-0021-4021-8021-112233445521",
+      "progress": 0,
+      "word": "surmise",
+      "partOfSpeech": "verb",
+      "meaning": "to suppose without fully knowing; to form a supposition about something on the basis of incomplete evidence.",
+      "synonyms": "suppose, conjecture, guess",
+      "antonyms": "know, confirm, establish",
+      "sentence": "the archaeologist surmised that the structure had served a ritual purpose, though no direct evidence supported this interpretation."
+    },
+    {
+      "id": "b1c2d3e4-0022-4022-8022-112233445522",
+      "progress": 0,
+      "word": "attribute",
+      "partOfSpeech": "verb",
+      "meaning": "to regard something as being caused by or produced by a particular person, thing, or circumstance.",
+      "synonyms": "ascribe, assign, credit",
+      "antonyms": "dissociate, disconnect, deny",
+      "sentence": "the dramatic increase in crop yields was attributed not to a single innovation but to a convergence of several incremental improvements."
+    },
+    {
+      "id": "b1c2d3e4-0023-4023-8023-112233445523",
+      "progress": 0,
+      "word": "cite",
+      "partOfSpeech": "verb",
+      "meaning": "to refer to a source of information or evidence; to quote as an example or proof.",
+      "synonyms": "reference, quote, invoke",
+      "antonyms": "omit, ignore, suppress",
+      "sentence": "the review cited over two hundred studies, yet its central conclusion rested on only a handful of genuinely rigorous experiments."
+    },
+    {
+      "id": "b1c2d3e4-0024-4024-8024-112233445524",
+      "progress": 0,
+      "word": "multitude",
+      "partOfSpeech": "noun",
+      "meaning": "a large number of people or things.",
+      "synonyms": "host, mass, abundance",
+      "antonyms": "few, handful, scarcity",
+      "sentence": "a multitude of variables must be controlled if the experiment's results are to be regarded as reliable."
+    },
+    {
+      "id": "b1c2d3e4-0025-4025-8025-112233445525",
+      "progress": 0,
+      "word": "plethora",
+      "partOfSpeech": "noun",
+      "meaning": "an excess or abundance of something; a very large amount.",
+      "synonyms": "abundance, surplus, overabundance",
+      "antonyms": "dearth, scarcity, lack",
+      "sentence": "the plethora of competing frameworks made it difficult for newcomers to identify the most productive direction for further research."
+    },
+    {
+      "id": "b1c2d3e4-0026-4026-8026-112233445526",
+      "progress": 0,
+      "word": "profusion",
+      "partOfSpeech": "noun",
+      "meaning": "an abundant quantity of something; an extravagant supply or wealth of something.",
+      "synonyms": "abundance, wealth, bounty",
+      "antonyms": "scarcity, paucity, deficit",
+      "sentence": "the tropical forest's profusion of species has made it one of the most intensively studied ecosystems on the planet."
+    },
+    {
+      "id": "b1c2d3e4-0027-4027-8027-112233445527",
+      "progress": 0,
+      "word": "dearth",
+      "partOfSpeech": "noun",
+      "meaning": "a scarcity or lack of something.",
+      "synonyms": "scarcity, shortage, deficiency",
+      "antonyms": "abundance, surplus, plethora",
+      "sentence": "the dearth of longitudinal data on the subject made it impossible to draw conclusions about long-term effects."
+    },
+    {
+      "id": "b1c2d3e4-0028-4028-8028-112233445528",
+      "progress": 0,
+      "word": "paucity",
+      "partOfSpeech": "noun",
+      "meaning": "the presence of something in only small or insufficient quantities; scarceness.",
+      "synonyms": "shortage, lack, scarcity",
+      "antonyms": "abundance, profusion, plenty",
+      "sentence": "the paucity of peer-reviewed studies on the treatment meant that clinical guidelines were inevitably based on weak foundations."
+    },
+    {
+      "id": "b1c2d3e4-0029-4029-8029-112233445529",
+      "progress": 0,
+      "word": "disparate",
+      "partOfSpeech": "adjective",
+      "meaning": "essentially different in kind; so unlike as to be incompatible or difficult to compare.",
+      "synonyms": "different, unlike, contrasting",
+      "antonyms": "similar, uniform, comparable",
+      "sentence": "the challenge was to integrate findings from such disparate methodologies without distorting what each had actually shown."
+    },
+    {
+      "id": "b1c2d3e4-0030-4030-8030-112233445530",
+      "progress": 0,
+      "word": "heterogeneous",
+      "partOfSpeech": "adjective",
+      "meaning": "diverse in character or content; composed of parts or elements that are widely different from one another.",
+      "synonyms": "diverse, mixed, varied",
+      "antonyms": "homogeneous, uniform, consistent",
+      "sentence": "the highly heterogeneous sample made it difficult to apply the findings to any specific population with confidence."
+    },
+    {
+      "id": "b1c2d3e4-0031-4031-8031-112233445531",
+      "progress": 0,
+      "word": "eclectic",
+      "partOfSpeech": "adjective",
+      "meaning": "deriving ideas or style from a broad and varied range of sources; not following a single system.",
+      "synonyms": "diverse, varied, wide-ranging",
+      "antonyms": "narrow, uniform, orthodox",
+      "sentence": "her research drew on an eclectic range of disciplines, from folklore and ethnography to neuroscience and economics."
+    },
+    {
+      "id": "b1c2d3e4-0032-4032-8032-112233445532",
+      "progress": 0,
+      "word": "conspicuous",
+      "partOfSpeech": "adjective",
+      "meaning": "clearly visible; attracting notice or attention; obvious.",
+      "synonyms": "obvious, noticeable, prominent",
+      "antonyms": "inconspicuous, hidden, subtle",
+      "sentence": "the most conspicuous weakness in the argument was the one the author had taken the least care to address."
+    },
+    {
+      "id": "b1c2d3e4-0033-4033-8033-112233445533",
+      "progress": 0,
+      "word": "distinctive",
+      "partOfSpeech": "adjective",
+      "meaning": "characteristic of one person or thing only; serving to identify or differentiate; markedly different.",
+      "synonyms": "characteristic, unique, distinguishing",
+      "antonyms": "ordinary, common, generic",
+      "sentence": "the species had a distinctive call that ornithologists could identify even in dense forest where the bird itself remained invisible."
+    },
+    {
+      "id": "b1c2d3e4-0034-4034-8034-112233445534",
+      "progress": 0,
+      "word": "salient",
+      "partOfSpeech": "adjective",
+      "meaning": "most noticeable or important; prominent; standing out from the rest.",
+      "synonyms": "notable, prominent, key",
+      "antonyms": "minor, marginal, trivial",
+      "sentence": "the most salient finding of the study was one that the authors had buried in a footnote rather than highlighted in the abstract."
+    },
+    {
+      "id": "b1c2d3e4-0035-4035-8035-112233445535",
+      "progress": 0,
+      "word": "benign",
+      "partOfSpeech": "adjective",
+      "meaning": "gentle and not harmful in effect; not dangerous or threatening to health or wellbeing.",
+      "synonyms": "harmless, gentle, non-threatening",
+      "antonyms": "harmful, malignant, dangerous",
+      "sentence": "what appeared to be a benign variation in the organism's behaviour turned out to be an early indicator of significant environmental stress."
+    },
+    {
+      "id": "b1c2d3e4-0036-4036-8036-112233445536",
+      "progress": 0,
+      "word": "innocuous",
+      "partOfSpeech": "adjective",
+      "meaning": "not harmful or offensive; producing no ill effects; unlikely to provoke controversy.",
+      "synonyms": "harmless, inoffensive, safe",
+      "antonyms": "harmful, dangerous, toxic",
+      "sentence": "the compound had been considered innocuous for decades before long-term studies revealed its accumulation in aquatic food chains."
+    },
+    {
+      "id": "b1c2d3e4-0037-4037-8037-112233445537",
+      "progress": 0,
+      "word": "inherent",
+      "partOfSpeech": "adjective",
+      "meaning": "existing as a natural and permanent part of something; built-in rather than acquired.",
+      "synonyms": "intrinsic, innate, built-in",
+      "antonyms": "external, acquired, incidental",
+      "sentence": "there is an inherent tension between the desire for certainty and the honest acknowledgement of scientific uncertainty."
+    },
+    {
+      "id": "b1c2d3e4-0038-4038-8038-112233445538",
+      "progress": 0,
+      "word": "innate",
+      "partOfSpeech": "adjective",
+      "meaning": "inborn; natural; present from birth rather than learned or acquired through experience.",
+      "synonyms": "inborn, natural, instinctive",
+      "antonyms": "acquired, learned, conditioned",
+      "sentence": "cognitive scientists debate the extent to which the capacity for language is innate rather than shaped entirely by experience."
+    },
+    {
+      "id": "b1c2d3e4-0039-4039-8039-112233445539",
+      "progress": 0,
+      "word": "intrinsic",
+      "partOfSpeech": "adjective",
+      "meaning": "belonging to a thing by its very nature; essential and fundamental rather than external.",
+      "synonyms": "essential, inherent, fundamental",
+      "antonyms": "extrinsic, external, incidental",
+      "sentence": "the intrinsic value of biodiversity is difficult to quantify precisely because its most important contributions are structural rather than transactional."
+    }
+  ],
+  "contextPassage": {
+    "title": "The Discipline of Doubt",
+    "text": "Every field of serious inquiry is haunted by the same salient question: how do we know what we think we know? It is tempting to regard scientific knowledge as a reliable accumulation — one generation's findings bolstering the next, each study integrating the disparate threads of what came before into an ever more coherent whole. But this picture, though not entirely wrong, conceals a more complicated and instructive reality. Progress in understanding is rarely as benign or as linear as retrospective accounts suggest.\n\nConsider how a claim gains traction. A researcher may advance a hypothesis tentatively at first — positing a relationship, proffering a mechanism, or speculating about a cause — with the explicit understanding that the idea must be tested before it can be trusted. Others hypothesize variations, converge on shared predictions, or diverge into competing frameworks. In mature fields, this process is governed by clear norms: extraordinary claims require extraordinary evidence, and the burden of proof lies with those who assert rather than those who question. In practice, however, the intrinsic difficulty of gathering decisive evidence means that many claims occupy a liminal zone — plausible but not proven, cited frequently but never quite substantiated.\n\nThe appropriate response to this condition is skepticism — not the performative kind that refuses to believe anything, but the disciplined kind that mulls over evidence carefully, ruminates about alternative explanations, and declines to attribute causes prematurely. Those who grapple with this standard honestly will often find themselves in a state of productive ambivalence, unwilling either to fully endorse or to rebut and refute without stronger grounds. This is not a failure of intellect. It is, in many respects, the most sophisticated intellectual posture available.\n\nThe problem is that institutions — journals, funding bodies, policy agencies — typically reward certainty over nuance, and salient findings over qualified ones. The result is a profusion of confident claims and a dearth of careful ones. A multitude of studies may be cited in support of a given conclusion, yet a close reading reveals that the evidence is heterogeneous in quality, the methodologies disparate, and the sample populations too varied to support the generalisations being drawn from them. The conspicuous enthusiasm with which preliminary findings are publicised often stands in stark contrast to the quiet, retrospective acknowledgement that the results could not be replicated.\n\nWhy does this pattern persist? The answer is, in part, intrinsic to the structure of academic incentives, but it also reflects something about the innate human preference for narrative clarity over probabilistic ambiguity. We are, by nature, story-seeking creatures, and the story of the decisive experiment — the study that settles the question, vindicates the hypothesis, and overturns entrenched error — is a compelling one. What is harder to tell, and considerably harder to fund, is the story of the eclectic, patient accumulation of modest findings that collectively buttress an understanding without ever producing a single dramatic moment of proof.\n\nThe distinction between inherent and acquired characteristics provides a useful analogy. Some features of an organism — its innate immunological responses, the intrinsic properties of its chemical architecture — are fixed by its biology and relatively easy to characterise. Others are the product of interaction with a heterogeneous environment and can only be understood through sustained, longitudinal observation. Science, too, has properties of both kinds. Some of its norms — the commitment to replication, the willingness to refute even cherished hypotheses — are intrinsic and non-negotiable. Others must be cultivated, and can be lost.\n\nWhat sustains those cultivated norms is a culture of honest uncertainty. This means resisting the temptation to surmise beyond what the evidence permits, to infer patterns in data that are too sparse to support them, and to converge prematurely on consensus when the questions are genuinely open. It means treating the paucity of evidence on a given question not as an excuse to speculate freely but as a prompt to design better studies. And it means remaining open to the possibility that the most innocuous-seeming finding — the one that intersects so neatly with existing theory that it passes without scrutiny — may be the one most deserving of a second look.\n\nThe salient virtue of a genuinely scientific culture is not confidence. It is the willingness to say, with full awareness of the discomfort this involves: we do not yet know, and the distinctive mark of our seriousness is that we are not pretending otherwise."
+  }
+}

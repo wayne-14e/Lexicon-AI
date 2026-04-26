@@ -2,11 +2,13 @@ import React, { useState, useRef, useEffect } from 'react';
 import { Bot, X, Send, Sparkles, Loader2 } from 'lucide-react';
 import ReactMarkdown from 'react-markdown';
 import { geminiService } from '../services/geminiService';
+import { storageService } from '../services/storageService';
 import { User } from '../types';
 
 interface LexyAssistantProps {
   user: User;
   onSpendTokens: (amount: number, reason?: string) => Promise<boolean>;
+  onUserUpdate: (partial: Partial<User>) => void;
 }
 
 interface Message {
@@ -16,13 +18,15 @@ interface Message {
 }
 
 const PREBUILT_PROMPTS = [
-  "Explain the meaning of...",
-  "In what context can I use...",
-  "What are some other meanings of...",
-  "Give me synonyms and antonyms for..."
+  "Explain the meaning of ",
+  "In what context can I use ",
+  "What are some other meanings of ",
+  "Give me synonyms and antonyms for "
 ];
 
-const LexyAssistant: React.FC<LexyAssistantProps> = ({ user, onSpendTokens }) => {
+const LexyAssistant: React.FC<LexyAssistantProps> = ({ user, onSpendTokens, onUserUpdate }) => {
+  // No ref needed - we only pass partial updates to onUserUpdate so tokens are never overwritten
+
   const [isOpen, setIsOpen] = useState(false);
   const [messages, setMessages] = useState<Message[]>([
     {
@@ -59,6 +63,19 @@ const LexyAssistant: React.FC<LexyAssistantProps> = ({ user, onSpendTokens }) =>
       return;
     }
 
+    const newUsage = await storageService.incrementLimitUsage(user, 'lexy_prompts_used');
+    if (newUsage === null) {
+      const errorMessage: Message = {
+        id: Date.now().toString(),
+        role: 'assistant',
+        content: "I'm exhausted for the day! You have reached your daily limit of 15 consultations."
+      };
+      setMessages(prev => [...prev, errorMessage]);
+      return;
+    }
+
+    // Only pass the changed field so mergeUser in App.tsx preserves the token balance
+    onUserUpdate({ lexy_prompts_used: newUsage });
     const userMessage: Message = {
       id: Date.now().toString(),
       role: 'user',
@@ -123,7 +140,7 @@ const LexyAssistant: React.FC<LexyAssistantProps> = ({ user, onSpendTokens }) =>
         className={`fixed bottom-6 md:bottom-8 right-6 md:right-8 w-14 h-14 bg-purple-500 text-white rounded-full shadow-2xl shadow-purple-500/40 flex items-center justify-center hover:scale-110 transition-transform z-40 group ${isOpen ? 'scale-0 opacity-0' : 'scale-100 opacity-100'}`}
         aria-label="Open Lexy Assistant"
       >
-        <Bot className="w-6 h-6 group-hover:animate-pulse" />
+        <Bot className="w-6 h-6 group-hover:scale-110 transition-transform" />
         <div className="absolute -top-1 -right-1 w-3 h-3 bg-orange-500 rounded-full border-2 border-background animate-pulse"></div>
       </button>
 
@@ -141,7 +158,10 @@ const LexyAssistant: React.FC<LexyAssistantProps> = ({ user, onSpendTokens }) =>
               <h3 className="text-sm font-bold font-display text-text flex items-center gap-2">
                 Lexy <Sparkles className="w-3 h-3 text-purple-500" />
               </h3>
-              <p className="text-[10px] text-muted uppercase tracking-widest">Erudite Assistant</p>
+              <p className="text-[10px] text-muted uppercase tracking-widest flex items-center justify-between w-full gap-2">
+                <span>Erudite Assistant</span>
+                <span className="text-blue-500 font-bold bg-blue-500/10 px-1.5 py-0.5 rounded">{user.lexy_prompts_used || 0}/10 Requests</span>
+              </p>
             </div>
           </div>
           <button 
@@ -223,7 +243,7 @@ const LexyAssistant: React.FC<LexyAssistantProps> = ({ user, onSpendTokens }) =>
           <form 
             onSubmit={(e) => {
               e.preventDefault();
-              if ((user.tokens || 0) < 40) {
+              if ((user?.tokens || 0) < 40) {
                 setShowTokenWarning(true);
                 setTimeout(() => setShowTokenWarning(false), 8000);
                 return;

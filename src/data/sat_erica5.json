@@ -1,0 +1,158 @@
+{
+  "entries": [
+    {
+      "id": "f3g4h5i6-0001-4001-8001-223344556801",
+      "progress": 0,
+      "word": "critic",
+      "partOfSpeech": "noun",
+      "meaning": "a person who offers reasoned judgment or commentary on a subject (can be positive or negative).",
+      "synonyms": "commentator, reviewer, evaluator",
+      "antonyms": "uncritical admirer",
+      "sentence": "A good critic helps refine ideas rather than merely attacking them."
+    },
+    {
+      "id": "f3g4h5i6-0002-4002-8002-223344556802",
+      "progress": 0,
+      "word": "criticism",
+      "partOfSpeech": "noun",
+      "meaning": "the act of analyzing and evaluating something, which may include praise as well as censure.",
+      "synonyms": "analysis, evaluation, review",
+      "antonyms": "uncritical acceptance",
+      "sentence": "Constructive criticism is essential for the advancement of any scientific field."
+    },
+    {
+      "id": "f3g4h5i6-0003-4003-8003-223344556803",
+      "progress": 0,
+      "word": "discern",
+      "partOfSpeech": "verb",
+      "meaning": "to perceive, recognize, or distinguish clearly.",
+      "synonyms": "perceive, detect, distinguish",
+      "antonyms": "overlook, confuse",
+      "sentence": "Only the most experienced researchers could discern the subtle patterns hidden in the noisy data."
+    },
+    {
+      "id": "f3g4h5i6-0004-4004-8004-223344556804",
+      "progress": 0,
+      "word": "discerning",
+      "partOfSpeech": "adjective",
+      "meaning": "having or showing good judgment and the ability to make fine distinctions.",
+      "synonyms": "perceptive, astute, judicious",
+      "antonyms": "undiscriminating",
+      "sentence": "A discerning reader can separate rigorous scholarship from mere speculation."
+    },
+    {
+      "id": "f3g4h5i6-0005-4005-8005-223344556805",
+      "progress": 0,
+      "word": "ineffable",
+      "partOfSpeech": "adjective",
+      "meaning": "too great or extreme to be expressed in words; indescribable.",
+      "synonyms": "indescribable, inexpressible, sublime",
+      "antonyms": "ordinary, mundane",
+      "sentence": "The ineffable beauty of the mathematical proof left even seasoned mathematicians in awe."
+    },
+    {
+      "id": "f3g4h5i6-0006-4006-8006-223344556806",
+      "progress": 0,
+      "word": "infallible",
+      "partOfSpeech": "adjective",
+      "meaning": "incapable of making mistakes or being wrong.",
+      "synonyms": "unerring, flawless, perfect",
+      "antonyms": "fallible, imperfect",
+      "sentence": "No scientific method is infallible, which is why replication remains crucial."
+    },
+    {
+      "id": "f3g4h5i6-0007-4007-8007-223344556807",
+      "progress": 0,
+      "word": "ingenious",
+      "partOfSpeech": "adjective",
+      "meaning": "clever, original, and inventive.",
+      "synonyms": "clever, inventive, brilliant",
+      "antonyms": "unimaginative, dull",
+      "sentence": "The ingenious experimental design allowed the team to test a long-standing hypothesis in a completely new way."
+    },
+    {
+      "id": "f3g4h5i6-0008-4008-8008-223344556808",
+      "progress": 0,
+      "word": "ingenuous",
+      "partOfSpeech": "adjective",
+      "meaning": "innocent and unsuspecting; candid.",
+      "synonyms": "naïve, candid, guileless",
+      "antonyms": "cunning, sophisticated",
+      "sentence": "Her ingenuous question revealed a fresh perspective that more experienced researchers had overlooked."
+    },
+    {
+      "id": "f3g4h5i6-0009-4009-8009-223344556809",
+      "progress": 0,
+      "word": "inimitable",
+      "partOfSpeech": "adjective",
+      "meaning": "impossible to imitate; unique.",
+      "synonyms": "unique, matchless, peerless",
+      "antonyms": "common, imitable",
+      "sentence": "The inimitable style of her writing made complex ideas both accessible and memorable."
+    },
+    {
+      "id": "f3g4h5i6-0010-4010-8010-223344556810",
+      "progress": 0,
+      "word": "innate",
+      "partOfSpeech": "adjective",
+      "meaning": "inborn; natural rather than learned.",
+      "synonyms": "inborn, natural, instinctive",
+      "antonyms": "acquired, learned",
+      "sentence": "Whether certain cognitive abilities are innate or developed through experience remains hotly debated."
+    },
+    {
+      "id": "f3g4h5i6-0011-4011-8011-223344556811",
+      "progress": 0,
+      "word": "innocuous",
+      "partOfSpeech": "adjective",
+      "meaning": "not harmful or offensive; harmless.",
+      "synonyms": "harmless, benign, safe",
+      "antonyms": "harmful, dangerous",
+      "sentence": "What appeared to be an innocuous anomaly in the data turned out to be the key to a major discovery."
+    },
+    {
+      "id": "f3g4h5i6-0012-4012-8012-223344556812",
+      "progress": 0,
+      "word": "intrinsic",
+      "partOfSpeech": "adjective",
+      "meaning": "belonging naturally; essential to the nature of something.",
+      "synonyms": "inherent, essential, fundamental",
+      "antonyms": "extrinsic, external",
+      "sentence": "The intrinsic value of basic research often becomes clear only years after the initial findings."
+    },
+    {
+      "id": "f3g4h5i6-0013-4013-8013-223344556813",
+      "progress": 0,
+      "word": "invaluable",
+      "partOfSpeech": "adjective",
+      "meaning": "extremely useful or valuable; priceless.",
+      "synonyms": "priceless, indispensable, precious",
+      "antonyms": "worthless, useless",
+      "sentence": "Her experience proved invaluable when the team encountered unexpected methodological challenges."
+    },
+    {
+      "id": "f3g4h5i6-0014-4014-8014-223344556814",
+      "progress": 0,
+      "word": "unassuming",
+      "partOfSpeech": "adjective",
+      "meaning": "modest and unpretentious.",
+      "synonyms": "modest, humble, unpretentious",
+      "antonyms": "arrogant, pretentious",
+      "sentence": "Despite her groundbreaking contributions, she remained remarkably unassuming in public."
+    },
+    {
+      "id": "f3g4h5i6-0015-4015-8015-223344556815",
+      "progress": 0,
+      "word": "unqualified",
+      "partOfSpeech": "adjective",
+      "meaning": "complete and absolute; without any reservations or limitations.",
+      "synonyms": "absolute, total, unequivocal",
+      "antonyms": "partial, qualified",
+      "sentence": "The results provided unqualified confirmation of the theory."
+    }
+  ],
+  "contextPassage": {
+    "title": "Appearances Can Be Deceptive",
+    "text": "Many words in academic discourse look distinctly negative at first glance but are not. A critic offers valuable criticism that is often discerning rather than destructive. What seems ineffable may simply be too profound for ordinary language, while an infallible method is the ideal (though rarely achieved) goal of rigorous science. An ingenious solution can arise from an ingenuous question posed by a newcomer. The inimitable style of a great thinker is frequently paired with an innate curiosity and an innocuous manner that puts others at ease. Far from being marginal, such intrinsic qualities prove invaluable to the progress of knowledge. Even the most unassuming scholar may deliver unqualified insights that reshape an entire field. Recognizing these words for what they truly mean — rather than their superficial negative appearance — is itself a mark of a discerning and sophisticated reader."
+  }
+}

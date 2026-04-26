@@ -6,11 +6,19 @@ interface HomePageProps {
   tables: VocabTable[];
   onNavigateToTable: (table: VocabTable) => void;
   onNavigateToCreate: () => void;
+  onNavigateToArchives: () => void;
 }
 
-const HomePage: React.FC<HomePageProps> = ({ user, tables, onNavigateToTable, onNavigateToCreate }) => {
+const HomePage: React.FC<HomePageProps> = ({ 
+  user, 
+  tables, 
+  onNavigateToTable, 
+  onNavigateToCreate,
+  onNavigateToArchives 
+}) => {
   const wordOfTheDay = useMemo(() => {
-    const allEntries = tables.flatMap(t => t.entries.map(e => ({ ...e, tableId: t.id, tableName: t.title })));
+    const personalTables = tables.filter(t => !t.id.startsWith('system-'));
+    const allEntries = personalTables.flatMap(t => t.entries.map(e => ({ ...e, tableId: t.id, tableName: t.title })));
     if (allEntries.length === 0) return null;
     // Simple random selection for now. In a real app, could be seeded by date.
     const randomIndex = Math.floor(Math.random() * allEntries.length);
@@ -31,7 +39,7 @@ const HomePage: React.FC<HomePageProps> = ({ user, tables, onNavigateToTable, on
       <div className="text-center space-y-3 sm:space-y-4">
         <h1 className="text-2xl sm:text-5xl font-bold font-display text-text leading-tight">Hello, {user.username}!</h1>
         <p className="text-muted max-w-2xl mx-auto leading-relaxed font-sans text-base sm:text-lg">
-          {tables.length > 0 
+          {tables.filter(t => !t.id.startsWith('system-')).length > 0 
             ? "Your daily dose of linguistic enrichment." 
             : "Welcome to your academic lexicon. Let's begin your journey."}
         </p>
@@ -100,8 +108,11 @@ const HomePage: React.FC<HomePageProps> = ({ user, tables, onNavigateToTable, on
               <h3 className="font-bold text-text mb-1">Start First Journal</h3>
               <p className="text-xs text-muted">Begin your personal vocabulary record.</p>
             </button>
-            <button className="p-6 bg-surfaceHighlight border border-white/5 rounded-2xl hover:border-primary/50 transition-all text-left group opacity-50 cursor-not-allowed">
-              <span className="text-[10px] font-bold uppercase tracking-widest text-secondary block mb-2">Coming Soon</span>
+            <button 
+              onClick={onNavigateToArchives}
+              className="p-6 bg-surfaceHighlight border border-white/5 rounded-2xl hover:border-secondary/50 transition-all text-left group"
+            >
+              <span className="text-[10px] font-bold uppercase tracking-widest text-secondary block mb-2">System Archives</span>
               <h3 className="font-bold text-text mb-1">IELTS & SAT Vocab</h3>
               <p className="text-xs text-muted">Master essential academic terminology.</p>
             </button>

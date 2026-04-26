@@ -21,7 +21,8 @@ const CollectionsPage: React.FC<CollectionsPageProps> = ({ user, tables, onSelec
   };
 
   const getSortedTables = () => {
-    return [...tables].sort((a, b) => {
+    const personalTables = tables.filter(t => !t.id.startsWith('system-'));
+    return [...personalTables].sort((a, b) => {
       if (filterType === 'date-desc') {
         return b.createdAt - a.createdAt;
       } else if (filterType === 'date-asc') {

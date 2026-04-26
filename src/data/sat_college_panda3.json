@@ -1,0 +1,1008 @@
+{
+  "entries": [
+    {
+      "id": "d864f146-11d5-46c6-a2c2-96cd0f1ad6e6",
+      "progress": 0,
+      "word": "altercation",
+      "partOfSpeech": "noun",
+      "meaning": "A noisy argument or disagreement, especially in public.",
+      "synonyms": "argument, dispute, quarrel",
+      "antonyms": "agreement, harmony, accord",
+      "sentence": "The altercation between the two researchers spilled into the public forum and damaged both of their reputations."
+    },
+    {
+      "id": "9b3377d6-b049-4e6b-b895-55ad3d94ed92",
+      "progress": 0,
+      "word": "robust",
+      "partOfSpeech": "adjective",
+      "meaning": "Strong and vigorous; able to withstand adverse conditions; not easily weakened.",
+      "synonyms": "strong, sturdy, resilient",
+      "antonyms": "weak, fragile, feeble",
+      "sentence": "The study's conclusions rest on a robust body of evidence gathered over more than a decade."
+    },
+    {
+      "id": "49033272-69ee-4624-aea0-26ba01ccb0a6",
+      "progress": 0,
+      "word": "subvert",
+      "partOfSpeech": "verb",
+      "meaning": "To undermine the power and authority of an established system or institution.",
+      "synonyms": "undermine, destabilise, sabotage",
+      "antonyms": "support, reinforce, uphold",
+      "sentence": "The novel's protagonist does not openly rebel but quietly subverts every institution she is forced to enter."
+    },
+    {
+      "id": "3f81fc01-19b4-464b-95f0-35c7985e92ed",
+      "progress": 0,
+      "word": "melodramatic",
+      "partOfSpeech": "adjective",
+      "meaning": "Exaggerated and over-emotional; sensational in a way that seems theatrical.",
+      "synonyms": "exaggerated, theatrical, overwrought",
+      "antonyms": "restrained, understated, measured",
+      "sentence": "Her critics accused her of being melodramatic, but those closest to the situation knew her alarm was justified."
+    },
+    {
+      "id": "7bc6a52a-0ba6-4590-9de0-2cd20ad57e27",
+      "progress": 0,
+      "word": "glut",
+      "partOfSpeech": "noun",
+      "meaning": "An excessively large supply of something; a surplus that exceeds demand.",
+      "synonyms": "surplus, excess, overabundance",
+      "antonyms": "shortage, scarcity, lack",
+      "sentence": "The sudden glut of competing publications made it far harder for any single study to attract attention."
+    },
+    {
+      "id": "3eb8f4bc-509e-4659-a937-687e49dfba15",
+      "progress": 0,
+      "word": "antipathy",
+      "partOfSpeech": "noun",
+      "meaning": "A deep-seated feeling of aversion or hostility towards someone or something.",
+      "synonyms": "hostility, aversion, dislike",
+      "antonyms": "affinity, sympathy, fondness",
+      "sentence": "Her antipathy towards reductive explanations was evident in every paper she published."
+    },
+    {
+      "id": "36fbe776-c21f-4154-8d97-082852ccd130",
+      "progress": 0,
+      "word": "perilous",
+      "partOfSpeech": "adjective",
+      "meaning": "Full of danger or risk; hazardous.",
+      "synonyms": "dangerous, hazardous, treacherous",
+      "antonyms": "safe, secure, protected",
+      "sentence": "The perilous path between advocacy and objectivity is one that science journalists must navigate constantly."
+    },
+    {
+      "id": "f8824393-2bde-48de-8e35-594b85cccc15",
+      "progress": 0,
+      "word": "conception",
+      "partOfSpeech": "noun",
+      "meaning": "The forming or devising of an idea or plan; the way something is understood.",
+      "synonyms": "idea, notion, understanding",
+      "antonyms": "misconception, ignorance, misunderstanding",
+      "sentence": "The original conception of the project was far more modest than what it eventually became."
+    },
+    {
+      "id": "46baaf58-fbbc-4992-b1f9-fd6888691b29",
+      "progress": 0,
+      "word": "repose",
+      "partOfSpeech": "noun",
+      "meaning": "A state of rest, sleep, or tranquillity; freedom from worry or anxiety.",
+      "synonyms": "rest, calm, tranquillity",
+      "antonyms": "agitation, turmoil, unrest",
+      "sentence": "The poem offers images of repose that stand in deliberate contrast to the chaos described in its opening lines."
+    },
+    {
+      "id": "c328a602-2298-4c31-9853-8acdcf825b2b",
+      "progress": 0,
+      "word": "impede",
+      "partOfSpeech": "verb",
+      "meaning": "To delay or prevent something by obstructing or hindering it.",
+      "synonyms": "obstruct, hinder, hamper",
+      "antonyms": "facilitate, assist, advance",
+      "sentence": "Bureaucratic inertia continued to impede the reforms that had been agreed upon months earlier."
+    },
+    {
+      "id": "ff15acb5-92ad-445e-8a66-b6bea2a2de44",
+      "progress": 0,
+      "word": "contradiction",
+      "partOfSpeech": "noun",
+      "meaning": "A combination of statements or facts that are opposed to one another.",
+      "synonyms": "inconsistency, conflict, paradox",
+      "antonyms": "agreement, consistency, harmony",
+      "sentence": "The contradiction between the stated values of the institution and its actual practices could no longer be ignored."
+    },
+    {
+      "id": "2aad1b82-d6a2-4d7c-9372-8573f81a4b6c",
+      "progress": 0,
+      "word": "judgmental",
+      "partOfSpeech": "adjective",
+      "meaning": "Having or displaying an excessively critical point of view; quick to form negative opinions.",
+      "synonyms": "critical, censorious, condemnatory",
+      "antonyms": "open-minded, tolerant, accepting",
+      "sentence": "A judgmental tone in the opening paragraphs immediately alienated readers who might otherwise have been sympathetic."
+    },
+    {
+      "id": "4d0946fd-7e2c-4b42-a241-b95d75fd7cd4",
+      "progress": 0,
+      "word": "dismal",
+      "partOfSpeech": "adjective",
+      "meaning": "Causing a feeling of hopelessness or gloom; very poor in quality.",
+      "synonyms": "gloomy, bleak, depressing",
+      "antonyms": "cheerful, bright, promising",
+      "sentence": "The dismal failure of the initiative was attributed to a combination of poor planning and inadequate funding."
+    },
+    {
+      "id": "8c534dd9-488f-41cc-b294-bf67b552d425",
+      "progress": 0,
+      "word": "ambiguous",
+      "partOfSpeech": "adjective",
+      "meaning": "Open to more than one interpretation; not having one obvious meaning.",
+      "synonyms": "unclear, vague, equivocal",
+      "antonyms": "clear, unambiguous, explicit",
+      "sentence": "The final clause of the agreement was deliberately ambiguous, a compromise that satisfied neither side fully."
+    },
+    {
+      "id": "3c892c6a-2939-4ef0-99d5-10dcec23cf69",
+      "progress": 0,
+      "word": "wayward",
+      "partOfSpeech": "adjective",
+      "meaning": "Difficult to control or predict because of wilful or perverse behaviour.",
+      "synonyms": "erratic, unpredictable, unruly",
+      "antonyms": "obedient, predictable, compliant",
+      "sentence": "The wayward genius of the artist made her both thrilling to read and infuriating to work with."
+    },
+    {
+      "id": "f335ae8c-1634-498c-9469-51295b396a71",
+      "progress": 0,
+      "word": "implication",
+      "partOfSpeech": "noun",
+      "meaning": "A conclusion that can be drawn from something, though it is not explicitly stated.",
+      "synonyms": "suggestion, inference, consequence",
+      "antonyms": "explicit statement, direct claim",
+      "sentence": "The full implication of the discovery was not immediately grasped, even by those who made it."
+    },
+    {
+      "id": "f5a00bee-c35c-4325-9c3f-9348b835d0f9",
+      "progress": 0,
+      "word": "deploy",
+      "partOfSpeech": "verb",
+      "meaning": "To bring into effective action; to use something in a strategic way.",
+      "synonyms": "use, employ, apply",
+      "antonyms": "withdraw, withhold, retire",
+      "sentence": "The author deploys irony so consistently that readers eventually begin to question every straightforward-seeming claim."
+    },
+    {
+      "id": "85073d46-686e-4f6c-bcd8-4f3b8ac9e457",
+      "progress": 0,
+      "word": "credibility",
+      "partOfSpeech": "noun",
+      "meaning": "The quality of being trusted and believed in; the quality of being convincing.",
+      "synonyms": "trustworthiness, reliability, authority",
+      "antonyms": "dishonesty, doubt, unreliability",
+      "sentence": "The series of retracted papers severely damaged the laboratory's credibility within the broader scientific community."
+    },
+    {
+      "id": "61bed8ba-289b-4708-94a9-21bdd3642e8d",
+      "progress": 0,
+      "word": "complacent",
+      "partOfSpeech": "adjective",
+      "meaning": "Showing smug or uncritical satisfaction with oneself or one's achievements; unaware of danger.",
+      "synonyms": "self-satisfied, smug, overconfident",
+      "antonyms": "vigilant, concerned, humble",
+      "sentence": "A complacent reading of the data led the team to miss the anomaly that would have changed everything."
+    },
+    {
+      "id": "384df3fb-6681-49d4-81ec-50938c116f68",
+      "progress": 0,
+      "word": "convoke",
+      "partOfSpeech": "verb",
+      "meaning": "To call together or summon people for a formal meeting or assembly.",
+      "synonyms": "convene, summon, assemble",
+      "antonyms": "dismiss, adjourn, disperse",
+      "sentence": "The director convoked an emergency meeting of the full board following the publication of the critical report."
+    },
+    {
+      "id": "3829af44-1c0e-465d-973a-9544b352103a",
+      "progress": 0,
+      "word": "mocking",
+      "partOfSpeech": "adjective",
+      "meaning": "Making fun of someone or something in a cruel or contemptuous way.",
+      "synonyms": "derisive, scornful, contemptuous",
+      "antonyms": "respectful, admiring, sincere",
+      "sentence": "The mocking tone of the review said more about the reviewer's insecurities than about the quality of the work."
+    },
+    {
+      "id": "a85bf454-6615-4c6b-941d-cc4a42967ff2",
+      "progress": 0,
+      "word": "prospect",
+      "partOfSpeech": "noun",
+      "meaning": "The possibility or likelihood of some future event occurring; a mental picture of the future.",
+      "synonyms": "possibility, outlook, expectation",
+      "antonyms": "certainty, retrospect, past",
+      "sentence": "The prospect of a genuine breakthrough was enough to keep the team working through a third consecutive year of setbacks."
+    },
+    {
+      "id": "17303eb9-8912-4e9a-8e00-95cdfea392d9",
+      "progress": 0,
+      "word": "amicable",
+      "partOfSpeech": "adjective",
+      "meaning": "Having a spirit of friendliness; done in a friendly manner without ill feeling.",
+      "synonyms": "friendly, cordial, harmonious",
+      "antonyms": "hostile, antagonistic, unfriendly",
+      "sentence": "Despite the intensity of the intellectual disagreement, the two scholars maintained an amicable personal relationship."
+    },
+    {
+      "id": "584e4759-e3db-43c4-8be8-c8cd6b843455",
+      "progress": 0,
+      "word": "predecessor",
+      "partOfSpeech": "noun",
+      "meaning": "A person who held a job or office before the current holder; something that comes before another.",
+      "synonyms": "forerunner, antecedent, precursor",
+      "antonyms": "successor, descendant, heir",
+      "sentence": "The new director inherited a set of problems that her predecessor had consistently declined to address."
+    },
+    {
+      "id": "1c056f0e-e12d-4129-8fdc-49218b870375",
+      "progress": 0,
+      "word": "deter",
+      "partOfSpeech": "verb",
+      "meaning": "To discourage someone from doing something through doubt or fear.",
+      "synonyms": "discourage, dissuade, prevent",
+      "antonyms": "encourage, motivate, inspire",
+      "sentence": "The complexity of the application process appeared designed to deter all but the most determined candidates."
+    },
+    {
+      "id": "4ce8bec1-7f85-4d8b-b21a-b96f30eb7cfc",
+      "progress": 0,
+      "word": "indignation",
+      "partOfSpeech": "noun",
+      "meaning": "Anger or annoyance provoked by what is perceived as unfair or unjust treatment.",
+      "synonyms": "outrage, anger, resentment",
+      "antonyms": "contentment, approval, calm",
+      "sentence": "The public responded to the ruling with widespread indignation that the government had wholly failed to anticipate."
+    },
+    {
+      "id": "a9f6fbef-62f1-4141-99ac-2c074fa3a187",
+      "progress": 0,
+      "word": "fetter",
+      "partOfSpeech": "noun",
+      "meaning": "A chain or shackle placed around the ankles; something that restrains freedom.",
+      "synonyms": "restraint, shackle, constraint",
+      "antonyms": "freedom, liberation, release",
+      "sentence": "The novel's central metaphor is the fetter — literal in the first half, entirely social in the second."
+    },
+    {
+      "id": "8be3afba-b603-4516-917e-66c6c67400b8",
+      "progress": 0,
+      "word": "rigid",
+      "partOfSpeech": "adjective",
+      "meaning": "Unable to bend or be forced out of shape; not able to be changed or adapted.",
+      "synonyms": "inflexible, fixed, unyielding",
+      "antonyms": "flexible, adaptable, pliable",
+      "sentence": "The rigid hierarchy within the institution made innovation all but impossible."
+    },
+    {
+      "id": "ddb11432-8be1-483d-a4ee-182aff602b94",
+      "progress": 0,
+      "word": "cultivate",
+      "partOfSpeech": "verb",
+      "meaning": "To prepare and use land for crops; to develop a skill or relationship by giving attention to it.",
+      "synonyms": "develop, nurture, foster",
+      "antonyms": "neglect, suppress, abandon",
+      "sentence": "She cultivated a prose style of such precision that each sentence felt inevitable once read."
+    },
+    {
+      "id": "2219da44-d484-42e1-895b-d6b6480e9b24",
+      "progress": 0,
+      "word": "juvenile",
+      "partOfSpeech": "adjective",
+      "meaning": "Of, for, or relating to young people; childish and immature.",
+      "synonyms": "immature, childish, adolescent",
+      "antonyms": "mature, adult, sophisticated",
+      "sentence": "The reviewer dismissed the argument as juvenile, which seemed unfair given its evident seriousness of purpose."
+    },
+    {
+      "id": "640597c4-92b2-433f-b3f0-79eaad139daa",
+      "progress": 0,
+      "word": "convulsion",
+      "partOfSpeech": "noun",
+      "meaning": "A sudden, violent irregular movement; a sudden major social or political upheaval.",
+      "synonyms": "spasm, upheaval, turmoil",
+      "antonyms": "calm, stability, order",
+      "sentence": "Every period of political convulsion produces a literature that tries to make sense of the chaos."
+    },
+    {
+      "id": "b2caaa78-436b-4f82-8aaa-8e954069b6c7",
+      "progress": 0,
+      "word": "devise",
+      "partOfSpeech": "verb",
+      "meaning": "To plan or invent a complex procedure, system, or mechanism by careful thought.",
+      "synonyms": "design, formulate, construct",
+      "antonyms": "abandon, copy, destroy",
+      "sentence": "The team devised an experimental protocol that controlled for variables no previous study had considered."
+    },
+    {
+      "id": "2e5af8e5-7ffa-44a2-b5e7-84daa6a1c33f",
+      "progress": 0,
+      "word": "immure",
+      "partOfSpeech": "verb",
+      "meaning": "To enclose or confine someone against their will; to imprison.",
+      "synonyms": "confine, imprison, isolate",
+      "antonyms": "free, release, liberate",
+      "sentence": "Confined not by walls but by expectation, the protagonist is effectively immured within the domestic sphere."
+    },
+    {
+      "id": "f4c9c0b0-8ac4-4232-9eed-8d917d77ff96",
+      "progress": 0,
+      "word": "perturb",
+      "partOfSpeech": "verb",
+      "meaning": "To disturb or trouble someone greatly; to cause deviation from a regular or normal path.",
+      "synonyms": "disturb, unsettle, agitate",
+      "antonyms": "calm, reassure, settle",
+      "sentence": "Nothing perturbed the scientist more than a neat result that arrived exactly as predicted."
+    },
+    {
+      "id": "7cd833bb-bcc6-4407-b2c0-bef219f63a13",
+      "progress": 0,
+      "word": "solicitude",
+      "partOfSpeech": "noun",
+      "meaning": "Care and concern for the wellbeing of others; attentive regard.",
+      "synonyms": "concern, attentiveness, care",
+      "antonyms": "indifference, neglect, coldness",
+      "sentence": "His solicitude for his students extended beyond the classroom, and several credited him with changing their lives."
+    },
+    {
+      "id": "9cc833b8-16e4-4212-9567-f47ac20ea8f4",
+      "progress": 0,
+      "word": "pervasive",
+      "partOfSpeech": "adjective",
+      "meaning": "Spreading widely throughout an area or group of people; omnipresent.",
+      "synonyms": "widespread, ubiquitous, prevalent",
+      "antonyms": "localised, limited, rare",
+      "sentence": "The pervasive influence of the dominant framework made it difficult for alternative approaches to gain a hearing."
+    },
+    {
+      "id": "87624f51-b494-47a0-97e2-623c40452713",
+      "progress": 0,
+      "word": "tyranny",
+      "partOfSpeech": "noun",
+      "meaning": "Cruel, unreasonable, or arbitrary use of power or control.",
+      "synonyms": "oppression, despotism, authoritarianism",
+      "antonyms": "democracy, freedom, liberation",
+      "sentence": "The tyranny of the majority is just as capable of destroying individual rights as any single dictator."
+    },
+    {
+      "id": "9fffbc04-032c-4eae-b015-cfa8178e3f2a",
+      "progress": 0,
+      "word": "apprehensive",
+      "partOfSpeech": "adjective",
+      "meaning": "Anxious or fearful that something bad or unpleasant will happen.",
+      "synonyms": "anxious, worried, fearful",
+      "antonyms": "confident, calm, assured",
+      "sentence": "She was apprehensive about the reception the work would receive, having once been publicly dismissed by the same journal."
+    },
+    {
+      "id": "ea369c97-1a46-49ef-acea-f4a6196a7bf4",
+      "progress": 0,
+      "word": "provision",
+      "partOfSpeech": "noun",
+      "meaning": "The action of providing something; a condition or requirement in a legal document.",
+      "synonyms": "supply, condition, stipulation",
+      "antonyms": "omission, removal, prohibition",
+      "sentence": "The provision that required annual disclosure was quietly removed from the final version of the bill."
+    },
+    {
+      "id": "9c3524da-48b9-43d9-91dc-3e6000d6df62",
+      "progress": 0,
+      "word": "insolent",
+      "partOfSpeech": "adjective",
+      "meaning": "Showing a rude and arrogant lack of respect; overbearingly contemptuous.",
+      "synonyms": "arrogant, rude, disrespectful",
+      "antonyms": "respectful, deferential, polite",
+      "sentence": "The insolent tone of the response revealed more about the author's frustration than about the merits of the critique."
+    },
+    {
+      "id": "8a637b1d-2016-4c3a-8e2b-b8a1f2bd5b3a",
+      "progress": 0,
+      "word": "consensus",
+      "partOfSpeech": "noun",
+      "meaning": "General agreement among a group of people; the majority view.",
+      "synonyms": "agreement, accord, unanimity",
+      "antonyms": "disagreement, division, dissent",
+      "sentence": "There is now a broad scientific consensus that the observed changes cannot be attributed to natural variability alone."
+    },
+    {
+      "id": "8d18644d-dac1-4bf4-b996-a7c93a063020",
+      "progress": 0,
+      "word": "discord",
+      "partOfSpeech": "noun",
+      "meaning": "Disagreement between people; lack of harmony between things.",
+      "synonyms": "conflict, disagreement, strife",
+      "antonyms": "harmony, agreement, peace",
+      "sentence": "The discord within the committee made it impossible to issue a unified response within the required timeframe."
+    },
+    {
+      "id": "6629d82d-124e-414f-bd2d-f4ead58f2f25",
+      "progress": 0,
+      "word": "complement",
+      "partOfSpeech": "verb",
+      "meaning": "To add to or enhance the qualities of something else; to complete.",
+      "synonyms": "enhance, supplement, complete",
+      "antonyms": "contradict, conflict, diminish",
+      "sentence": "The qualitative data complement the quantitative findings by providing the contextual depth that numbers alone cannot supply."
+    },
+    {
+      "id": "a7e1bfe7-94b1-4dd0-a049-d20b92d9ab0d",
+      "progress": 0,
+      "word": "mortify",
+      "partOfSpeech": "verb",
+      "meaning": "To cause someone to feel very embarrassed or ashamed; to subdue by abstinence.",
+      "synonyms": "embarrass, humiliate, shame",
+      "antonyms": "honour, flatter, comfort",
+      "sentence": "She was mortified to discover that the figure she had cited in the published paper was incorrect."
+    },
+    {
+      "id": "36ff6f96-5e3c-4cd7-ae62-665d85af1370",
+      "progress": 0,
+      "word": "dissipate",
+      "partOfSpeech": "verb",
+      "meaning": "To disperse or scatter; to waste or fritter away a resource; to disappear gradually.",
+      "synonyms": "scatter, disperse, squander",
+      "antonyms": "gather, conserve, accumulate",
+      "sentence": "The initial excitement surrounding the discovery began to dissipate once the replication attempts consistently failed."
+    },
+    {
+      "id": "e3c22ded-d185-4bb4-9863-cd1861892894",
+      "progress": 0,
+      "word": "doctrine",
+      "partOfSpeech": "noun",
+      "meaning": "A belief or set of beliefs held and taught by a group, especially a political or religious one.",
+      "synonyms": "belief, principle, dogma",
+      "antonyms": "scepticism, doubt, flexibility",
+      "sentence": "The doctrine that growth and sustainability are incompatible has been challenged repeatedly by the evidence."
+    },
+    {
+      "id": "be124526-fac8-430d-86b9-30c89b315e3e",
+      "progress": 0,
+      "word": "incomprehensible",
+      "partOfSpeech": "adjective",
+      "meaning": "Not able to be understood; not intelligible.",
+      "synonyms": "unintelligible, baffling, impenetrable",
+      "antonyms": "clear, intelligible, understandable",
+      "sentence": "The decision was incomprehensible to those who had followed the evidence and expected a different outcome."
+    },
+    {
+      "id": "4bdb3065-63a9-435f-a822-6c1909f14c38",
+      "progress": 0,
+      "word": "recount",
+      "partOfSpeech": "verb",
+      "meaning": "To give a detailed account of something; to narrate.",
+      "synonyms": "narrate, describe, relate",
+      "antonyms": "omit, conceal, forget",
+      "sentence": "The memoir recounts, with remarkable precision, a childhood spent at the intersection of two languages and two cultures."
+    },
+    {
+      "id": "1e97b940-119f-48ba-bfa6-4028be9683aa",
+      "progress": 0,
+      "word": "inefficacious",
+      "partOfSpeech": "adjective",
+      "meaning": "Not producing the desired effect; ineffective.",
+      "synonyms": "ineffective, futile, useless",
+      "antonyms": "effective, successful, potent",
+      "sentence": "Multiple rounds of negotiation proved inefficacious, and the parties eventually agreed to submit to binding arbitration."
+    },
+    {
+      "id": "9785a71f-89c7-4524-bc79-717b56ad0d4a",
+      "progress": 0,
+      "word": "adversary",
+      "partOfSpeech": "noun",
+      "meaning": "A person's opponent in a contest, conflict, or dispute.",
+      "synonyms": "opponent, rival, enemy",
+      "antonyms": "ally, supporter, friend",
+      "sentence": "She had always treated her most persistent adversary with the same respect she extended to her closest collaborators."
+    },
+    {
+      "id": "cc67d4e5-49ed-4841-a31f-796554225d36",
+      "progress": 0,
+      "word": "endow",
+      "partOfSpeech": "verb",
+      "meaning": "To provide with a quality, ability, or asset; to give money to an institution.",
+      "synonyms": "provide, equip, grant",
+      "antonyms": "deprive, take away, strip",
+      "sentence": "The foundation endowed the university with sufficient funds to establish a permanent research centre."
+    },
+    {
+      "id": "3caec659-c192-4e7a-b558-2c16023d1910",
+      "progress": 0,
+      "word": "confound",
+      "partOfSpeech": "verb",
+      "meaning": "To cause surprise or confusion; to prove wrong; to mix up or fail to distinguish.",
+      "synonyms": "perplex, bewilder, contradict",
+      "antonyms": "clarify, confirm, explain",
+      "sentence": "The results confounded the predictions of virtually every model that had been proposed."
+    },
+    {
+      "id": "35f256be-18ab-45e4-922f-5be90892039b",
+      "progress": 0,
+      "word": "assert",
+      "partOfSpeech": "verb",
+      "meaning": "To state a fact or belief confidently and forcefully; to make a claim.",
+      "synonyms": "declare, maintain, claim",
+      "antonyms": "deny, retract, concede",
+      "sentence": "The paper asserts, without adequate evidence, that the mechanism is fully understood."
+    },
+    {
+      "id": "3ded88fc-c541-4a20-ae58-1b4f7620f9c8",
+      "progress": 0,
+      "word": "undermine",
+      "partOfSpeech": "verb",
+      "meaning": "To erode the base or foundation of something; to weaken gradually and insidiously.",
+      "synonyms": "weaken, erode, subvert",
+      "antonyms": "strengthen, support, reinforce",
+      "sentence": "A series of poorly sourced claims in the introduction served to undermine the paper's otherwise solid conclusions."
+    },
+    {
+      "id": "b0c96b38-5bdb-473b-bfeb-82ac39cb13df",
+      "progress": 0,
+      "word": "paradox",
+      "partOfSpeech": "noun",
+      "meaning": "A statement that contradicts itself or a situation that seems impossible but may be true.",
+      "synonyms": "contradiction, irony, anomaly",
+      "antonyms": "certainty, consistency, logic",
+      "sentence": "The paradox at the centre of the argument is that greater access to information has not produced greater understanding."
+    },
+    {
+      "id": "8aeb793b-3c0c-422d-98b4-62267170bbf9",
+      "progress": 0,
+      "word": "apt",
+      "partOfSpeech": "adjective",
+      "meaning": "Appropriate or suitable in the circumstances; having a tendency to do something.",
+      "synonyms": "appropriate, fitting, suitable",
+      "antonyms": "inappropriate, unsuitable, irrelevant",
+      "sentence": "The analogy she chose was particularly apt, capturing the essence of the relationship in a single image."
+    },
+    {
+      "id": "40ecf263-f08a-4e53-9306-0c32e36d9f3a",
+      "progress": 0,
+      "word": "competent",
+      "partOfSpeech": "adjective",
+      "meaning": "Having the necessary ability or knowledge to do something successfully.",
+      "synonyms": "capable, skilled, qualified",
+      "antonyms": "incompetent, incapable, unqualified",
+      "sentence": "A competent editor would have caught the error before the paper reached the review stage."
+    },
+    {
+      "id": "60a0f1d9-77b7-4ed3-ba2e-41f1b651042d",
+      "progress": 0,
+      "word": "severity",
+      "partOfSpeech": "noun",
+      "meaning": "The fact or condition of being serious or extreme; harshness or sternness.",
+      "synonyms": "harshness, seriousness, intensity",
+      "antonyms": "mildness, leniency, gentleness",
+      "sentence": "The severity of the drought was without precedent in the region's recorded meteorological history."
+    },
+    {
+      "id": "a512f015-b7a7-4c45-9957-5437c4f895fb",
+      "progress": 0,
+      "word": "dismay",
+      "partOfSpeech": "noun",
+      "meaning": "Concern and distress caused by something unexpected; a sudden loss of courage.",
+      "synonyms": "alarm, distress, consternation",
+      "antonyms": "reassurance, comfort, calm",
+      "sentence": "The announcement was met with dismay by researchers who had spent years working within the existing framework."
+    },
+    {
+      "id": "e879a6c7-0272-454a-8623-11371b1a553e",
+      "progress": 0,
+      "word": "usurp",
+      "partOfSpeech": "verb",
+      "meaning": "To take a position of power or importance illegally or by force.",
+      "synonyms": "seize, take over, appropriate",
+      "antonyms": "relinquish, surrender, yield",
+      "sentence": "The argument attempts to usurp the role of evidence by substituting rhetorical force for logical demonstration."
+    },
+    {
+      "id": "c6f221e7-6b10-4d6f-b001-7bf1c2f9f8f4",
+      "progress": 0,
+      "word": "nostalgic",
+      "partOfSpeech": "adjective",
+      "meaning": "Experiencing or evoking a sentimental longing for the past.",
+      "synonyms": "sentimental, wistful, yearning",
+      "antonyms": "forward-looking, progressive, unsentimental",
+      "sentence": "The essay is deeply nostalgic for a model of scholarship that may never have existed quite as described."
+    },
+    {
+      "id": "2ef564cd-b9c3-4f8d-8234-2ae91339f391",
+      "progress": 0,
+      "word": "ornate",
+      "partOfSpeech": "adjective",
+      "meaning": "Elaborately decorated or adorned; highly complex and intricate.",
+      "synonyms": "elaborate, decorative, flamboyant",
+      "antonyms": "plain, simple, austere",
+      "sentence": "The ornate prose style that characterised her early work gave way, in later years, to something far more direct."
+    },
+    {
+      "id": "8fd287a6-662d-4d4f-bc3d-7cecdafef7fc",
+      "progress": 0,
+      "word": "hierarchy",
+      "partOfSpeech": "noun",
+      "meaning": "A system in which people or groups are ranked according to authority or status.",
+      "synonyms": "ranking, structure, order",
+      "antonyms": "equality, anarchy, flatness",
+      "sentence": "Within the institutional hierarchy, those at the bottom had the most information and the least power to act on it."
+    },
+    {
+      "id": "e0581aaa-5344-4237-8f9b-8f2cb740b269",
+      "progress": 0,
+      "word": "irrational",
+      "partOfSpeech": "adjective",
+      "meaning": "Not logical or reasonable; not guided by reason.",
+      "synonyms": "illogical, unreasonable, senseless",
+      "antonyms": "rational, logical, sensible",
+      "sentence": "The fear, though irrational by any objective measure, was nonetheless real and had to be taken seriously."
+    },
+    {
+      "id": "f98e2073-5b48-4b47-a82d-55b9c3b5cb51",
+      "progress": 0,
+      "word": "bluster",
+      "partOfSpeech": "verb",
+      "meaning": "To talk aggressively or threateningly without real substance; to blow gustily.",
+      "synonyms": "rant, bluff, brag",
+      "antonyms": "reason, argue, demonstrate",
+      "sentence": "He blustered through the press conference without once addressing the substance of the allegations."
+    },
+    {
+      "id": "33a2d139-d6f2-4182-85df-bbd3932141ac",
+      "progress": 0,
+      "word": "subordinate",
+      "partOfSpeech": "adjective",
+      "meaning": "Lower in rank or position; less important than something else.",
+      "synonyms": "inferior, junior, secondary",
+      "antonyms": "superior, primary, dominant",
+      "sentence": "The subordinate clauses in the statute had never been tested in court and remained effectively inoperative."
+    },
+    {
+      "id": "a71374c1-0536-4705-9525-bd84f2bbf998",
+      "progress": 0,
+      "word": "malicious",
+      "partOfSpeech": "adjective",
+      "meaning": "Characterised by malice; intending or intended to do harm.",
+      "synonyms": "spiteful, vindictive, cruel",
+      "antonyms": "benevolent, kind, well-intentioned",
+      "sentence": "There was no evidence that the leak had been malicious, but the damage to the project was real regardless."
+    },
+    {
+      "id": "5cee239e-9227-4343-a000-8748f32972e5",
+      "progress": 0,
+      "word": "amend",
+      "partOfSpeech": "verb",
+      "meaning": "To make minor changes to improve or correct something; to alter formally.",
+      "synonyms": "revise, modify, correct",
+      "antonyms": "preserve, maintain, worsen",
+      "sentence": "The committee agreed to amend the clause before the document was submitted for final approval."
+    },
+    {
+      "id": "695c4b6b-cb15-4260-b21d-670283e1630f",
+      "progress": 0,
+      "word": "conform",
+      "partOfSpeech": "verb",
+      "meaning": "To comply with rules, standards, or laws; to behave according to social expectations.",
+      "synonyms": "comply, adhere, follow",
+      "antonyms": "rebel, deviate, resist",
+      "sentence": "Pressure to conform to established methods had suppressed several promising lines of inquiry for years."
+    },
+    {
+      "id": "54d6f663-9618-46d7-ad62-422f8ed88e8a",
+      "progress": 0,
+      "word": "tout",
+      "partOfSpeech": "verb",
+      "meaning": "To attempt to sell something or persuade people of its merits persistently; to advertise.",
+      "synonyms": "promote, advertise, publicise",
+      "antonyms": "criticise, downplay, suppress",
+      "sentence": "The reform was touted as a revolution; in practice, it changed very little of substance."
+    },
+    {
+      "id": "70728160-9dda-405c-9e05-e3ee1c155ecf",
+      "progress": 0,
+      "word": "permeate",
+      "partOfSpeech": "verb",
+      "meaning": "To spread throughout something; to pass through the whole of something.",
+      "synonyms": "penetrate, pervade, saturate",
+      "antonyms": "leave, withdraw, fail to reach",
+      "sentence": "The anxiety generated by the funding crisis permeated every level of the institution."
+    },
+    {
+      "id": "0561c859-af98-4faa-a85a-07b1f8da6938",
+      "progress": 0,
+      "word": "incantation",
+      "partOfSpeech": "noun",
+      "meaning": "A series of words said as a magic spell; a formulaic or repetitive use of language.",
+      "synonyms": "chant, spell, formula",
+      "antonyms": "silence, rational argument",
+      "sentence": "The repeated use of the same phrases had the quality of incantation rather than argument."
+    },
+    {
+      "id": "154a4757-567f-479f-9d9e-da6dc1e97c8f",
+      "progress": 0,
+      "word": "impervious",
+      "partOfSpeech": "adjective",
+      "meaning": "Not allowing fluid to pass through; unable to be affected by something.",
+      "synonyms": "resistant, immune, unaffected",
+      "antonyms": "vulnerable, susceptible, permeable",
+      "sentence": "He appeared impervious to criticism, which some read as confidence and others as an inability to self-reflect."
+    },
+    {
+      "id": "83e50096-3698-4c6e-ac8b-74b28112f23b",
+      "progress": 0,
+      "word": "actuate",
+      "partOfSpeech": "verb",
+      "meaning": "To cause a machine to operate; to motivate someone to act.",
+      "synonyms": "activate, drive, motivate",
+      "antonyms": "stop, inhibit, deter",
+      "sentence": "The desire to be understood, more than any external pressure, actuated her most important work."
+    },
+    {
+      "id": "17641d07-47e9-49ed-9a5c-55e5474bcc4f",
+      "progress": 0,
+      "word": "versatility",
+      "partOfSpeech": "noun",
+      "meaning": "The ability to adapt or be adapted to many different functions or activities.",
+      "synonyms": "adaptability, flexibility, range",
+      "antonyms": "rigidity, inflexibility, limitation",
+      "sentence": "The versatility of the framework was its greatest asset — it could be applied across a remarkable range of contexts."
+    },
+    {
+      "id": "69612762-64de-4de5-8e79-f56f4df9a703",
+      "progress": 0,
+      "word": "proclaim",
+      "partOfSpeech": "verb",
+      "meaning": "To announce something officially or publicly; to declare something clearly.",
+      "synonyms": "announce, declare, assert",
+      "antonyms": "suppress, conceal, deny",
+      "sentence": "The committee proclaimed the results a vindication of its approach before the full data had been released."
+    },
+    {
+      "id": "c39daa9b-3e8b-4ca7-98f7-6491bd638cfa",
+      "progress": 0,
+      "word": "obeisance",
+      "partOfSpeech": "noun",
+      "meaning": "Deferential respect; a gesture expressing deep respect, such as a bow.",
+      "synonyms": "deference, respect, homage",
+      "antonyms": "disrespect, defiance, contempt",
+      "sentence": "The ritual obeisance demanded by the institution struck newer members as both unnecessary and counterproductive."
+    },
+    {
+      "id": "2b53b084-f8d9-4c76-a2ad-3630391c52c5",
+      "progress": 0,
+      "word": "modest",
+      "partOfSpeech": "adjective",
+      "meaning": "Unassuming in the estimation of one's abilities; relatively moderate or small.",
+      "synonyms": "humble, unassuming, restrained",
+      "antonyms": "arrogant, excessive, immodest",
+      "sentence": "The study made only modest claims, which paradoxically gave it far more credibility than its bolder competitors."
+    },
+    {
+      "id": "dd0013c0-9edb-4f37-95ec-1cf40ef7ed10",
+      "progress": 0,
+      "word": "adorn",
+      "partOfSpeech": "verb",
+      "meaning": "To make more beautiful or attractive; to decorate.",
+      "synonyms": "decorate, embellish, ornament",
+      "antonyms": "strip, simplify, bare",
+      "sentence": "The margins of the manuscript were adorned with annotations that proved more illuminating than the text itself."
+    },
+    {
+      "id": "e80c0412-cb23-4e6e-9dfc-1cb05aca0add",
+      "progress": 0,
+      "word": "solitude",
+      "partOfSpeech": "noun",
+      "meaning": "The state of being alone; a lonely or uninhabited place.",
+      "synonyms": "isolation, seclusion, aloneness",
+      "antonyms": "company, community, togetherness",
+      "sentence": "The writer valued solitude not as an escape from the world but as the condition in which she could engage with it most fully."
+    },
+    {
+      "id": "b77a6a35-36ad-4fbe-a3d3-e6641c108390",
+      "progress": 0,
+      "word": "deplete",
+      "partOfSpeech": "verb",
+      "meaning": "To reduce severely in quantity, quality, or force; to use up.",
+      "synonyms": "exhaust, drain, diminish",
+      "antonyms": "replenish, restore, increase",
+      "sentence": "Years of intensive farming had depleted the soil of the nutrients necessary to sustain the original crop yields."
+    },
+    {
+      "id": "0b04ee38-d03a-412a-a250-b9eb312c945b",
+      "progress": 0,
+      "word": "solemn",
+      "partOfSpeech": "adjective",
+      "meaning": "Formal and dignified; deeply sincere; not cheerful.",
+      "synonyms": "serious, grave, ceremonious",
+      "antonyms": "frivolous, lighthearted, casual",
+      "sentence": "The solemn tone of the opening paragraph signals that the author considers the stakes to be higher than they might first appear."
+    },
+    {
+      "id": "48c07367-3ac1-4e62-b155-165b5dc858a5",
+      "progress": 0,
+      "word": "proponent",
+      "partOfSpeech": "noun",
+      "meaning": "A person who advocates a theory, proposal, or line of action; a supporter.",
+      "synonyms": "advocate, supporter, champion",
+      "antonyms": "opponent, critic, detractor",
+      "sentence": "Even the most committed proponents of the theory acknowledged that significant empirical challenges remained."
+    },
+    {
+      "id": "ad84dce6-196d-43b1-ae49-161e8271e756",
+      "progress": 0,
+      "word": "keen",
+      "partOfSpeech": "adjective",
+      "meaning": "Having a strong interest or enthusiasm; intellectually sharp; intense.",
+      "synonyms": "eager, sharp, enthusiastic",
+      "antonyms": "indifferent, dull, unenthusiastic",
+      "sentence": "She had a keen eye for the kind of small detail that other researchers routinely overlooked."
+    },
+    {
+      "id": "11eea2b4-55f0-4615-8b5a-11591867b0e9",
+      "progress": 0,
+      "word": "engulf",
+      "partOfSpeech": "verb",
+      "meaning": "To sweep over something so as to surround or cover it completely.",
+      "synonyms": "overwhelm, swallow, consume",
+      "antonyms": "release, expose, free",
+      "sentence": "The institution was rapidly engulfed by a scandal it had neither anticipated nor prepared to manage."
+    },
+    {
+      "id": "8c54af8d-15f8-455e-8a0f-7435eaa0599f",
+      "progress": 0,
+      "word": "diverge",
+      "partOfSpeech": "verb",
+      "meaning": "To move or extend in different directions from a common point; to differ.",
+      "synonyms": "separate, differ, deviate",
+      "antonyms": "converge, agree, align",
+      "sentence": "The two research traditions had diverged so sharply that their practitioners no longer shared even a basic vocabulary."
+    },
+    {
+      "id": "eefdf81d-5008-435c-a0d6-90dbd032346b",
+      "progress": 0,
+      "word": "squalid",
+      "partOfSpeech": "adjective",
+      "meaning": "Extremely dirty and unpleasant; showing a contemptible lack of moral standards.",
+      "synonyms": "dirty, wretched, degraded",
+      "antonyms": "clean, respectable, dignified",
+      "sentence": "The squalid conditions in which many of the study's participants lived had not been considered in the original design."
+    },
+    {
+      "id": "0c069861-45b8-4813-bdc6-d707ba5bb7ed",
+      "progress": 0,
+      "word": "hypothetical",
+      "partOfSpeech": "adjective",
+      "meaning": "Supposed or assumed for the purposes of argument; not real.",
+      "synonyms": "speculative, theoretical, assumed",
+      "antonyms": "actual, real, confirmed",
+      "sentence": "The scenario presented was entirely hypothetical but served to expose a genuine weakness in the existing policy."
+    },
+    {
+      "id": "dbb941dd-6b80-47d7-bcc5-aad059e580ec",
+      "progress": 0,
+      "word": "pressing",
+      "partOfSpeech": "adjective",
+      "meaning": "Requiring quick or immediate action or attention; urgent.",
+      "synonyms": "urgent, critical, immediate",
+      "antonyms": "unimportant, trivial, optional",
+      "sentence": "The most pressing issue was not the one the committee chose to discuss first."
+    },
+    {
+      "id": "186fddc4-e90c-4183-a552-a865d07f159e",
+      "progress": 0,
+      "word": "solicitation",
+      "partOfSpeech": "noun",
+      "meaning": "The act of requesting or strongly urging someone to do something.",
+      "synonyms": "request, appeal, petition",
+      "antonyms": "refusal, withdrawal, silence",
+      "sentence": "The solicitation of public comment was a formal requirement, but responses were rarely incorporated into the final decision."
+    },
+    {
+      "id": "a848486e-b2e2-4998-a6db-96ae13084c38",
+      "progress": 0,
+      "word": "meddle",
+      "partOfSpeech": "verb",
+      "meaning": "To interfere in something that is not one's concern.",
+      "synonyms": "interfere, intrude, tamper",
+      "antonyms": "respect, leave alone, refrain",
+      "sentence": "The legislation was accused of meddling in areas that had traditionally been governed by professional discretion."
+    },
+    {
+      "id": "3bd496cf-52f1-46f7-9899-dee24b790d9f",
+      "progress": 0,
+      "word": "coarse",
+      "partOfSpeech": "adjective",
+      "meaning": "Rough in texture; lacking refinement or delicacy; crude or vulgar.",
+      "synonyms": "crude, rough, unrefined",
+      "antonyms": "refined, smooth, polished",
+      "sentence": "The coarse language of the original document was softened considerably in the version prepared for wider circulation."
+    },
+    {
+      "id": "6c25210b-4ae7-4344-8403-3f6237d372de",
+      "progress": 0,
+      "word": "reproach",
+      "partOfSpeech": "verb",
+      "meaning": "To express disapproval or disappointment to someone; to rebuke.",
+      "synonyms": "rebuke, criticise, censure",
+      "antonyms": "praise, commend, approve",
+      "sentence": "She reproached herself for not having caught the error before the paper went to press."
+    },
+    {
+      "id": "c98b141f-1397-449a-b574-949b08b77abf",
+      "progress": 0,
+      "word": "immerse",
+      "partOfSpeech": "verb",
+      "meaning": "To involve oneself deeply in a particular activity; to submerge in liquid.",
+      "synonyms": "absorb, engross, plunge",
+      "antonyms": "surface, withdraw, disengage",
+      "sentence": "He immersed himself so completely in the archive that colleagues rarely saw him for months at a time."
+    },
+    {
+      "id": "f732a170-9baf-43d0-81fe-c8b6365a9537",
+      "progress": 0,
+      "word": "clout",
+      "partOfSpeech": "noun",
+      "meaning": "Influence or power, especially in politics or business; a heavy blow.",
+      "synonyms": "influence, power, authority",
+      "antonyms": "powerlessness, weakness, irrelevance",
+      "sentence": "The organisation had lost much of its clout after the funding scandal and struggled to have its recommendations taken seriously."
+    },
+    {
+      "id": "669b8af8-f701-44a3-8d3e-9a9f6281d150",
+      "progress": 0,
+      "word": "exacerbate",
+      "partOfSpeech": "verb",
+      "meaning": "To make a problem, bad situation, or negative feeling worse.",
+      "synonyms": "worsen, intensify, aggravate",
+      "antonyms": "alleviate, reduce, improve",
+      "sentence": "The policy change exacerbated existing tensions rather than resolving the underlying dispute."
+    },
+    {
+      "id": "f61d61e3-0bd3-42db-91a9-052d3bc215c7",
+      "progress": 0,
+      "word": "dubious",
+      "partOfSpeech": "adjective",
+      "meaning": "Hesitating or doubting; not to be relied upon; probably questionable.",
+      "synonyms": "uncertain, suspect, questionable",
+      "antonyms": "certain, reliable, trustworthy",
+      "sentence": "The claim rests on a dubious chain of inference that does not survive close examination."
+    },
+    {
+      "id": "71bafdcd-b0e2-474f-9d9b-d1e0950bafa3",
+      "progress": 0,
+      "word": "plausible",
+      "partOfSpeech": "adjective",
+      "meaning": "Seeming reasonable or probable; apparently valid or likely.",
+      "synonyms": "credible, believable, reasonable",
+      "antonyms": "implausible, unlikely, unconvincing",
+      "sentence": "The most plausible explanation for the anomaly was a procedural error in the early stages of data collection."
+    },
+    {
+      "id": "b1e7d88b-0059-4c04-8ced-56b70ab7bdde",
+      "progress": 0,
+      "word": "notion",
+      "partOfSpeech": "noun",
+      "meaning": "A conception of or belief about something; an impulse or desire.",
+      "synonyms": "idea, belief, concept",
+      "antonyms": "fact, certainty, reality",
+      "sentence": "The notion that objectivity can be achieved simply by excluding personal opinion has been widely challenged."
+    },
+    {
+      "id": "3b1d7c5d-c20d-431b-b699-4ec854c056fb",
+      "progress": 0,
+      "word": "impartial",
+      "partOfSpeech": "adjective",
+      "meaning": "Treating all rivals or disputants equally; not biased or favouring one side.",
+      "synonyms": "neutral, objective, unbiased",
+      "antonyms": "biased, partial, prejudiced",
+      "sentence": "An impartial assessment of the evidence leads to a conclusion that both sides of the debate have been reluctant to accept."
+    }
+  ],
+  "contextPassage": {
+    "title": "The Canon and Its Contradictions",
+    "text": "The question of how literature acquires cultural clout — how certain works come to be treated as solemn monuments while others dissipate into obscurity — is one that literary historians have long found both pressing and resistant to easy resolution. It is tempting to assert that the answer lies simply in quality; that the works which endure do so because they are, in some objective and impartial sense, the best. But this notion does not survive contact with the actual history of the canon, which is riddled with contradictions that no theory of pure aesthetic merit can plausibly explain.\n\nThe processes by which reputations are made and unmade are pervasive and largely invisible. They operate through solicitation and neglect, through the ornate machinery of prizes and syllabuses, through the decisions of editors who conform to the tastes of their moment and critics who tout the fashions of their schools. An author who might have seemed a plausible candidate for lasting prominence in one decade can find herself subordinate to rivals who were, by any dispassionate measure, her inferiors. The indignation such reversals provoke is rarely sufficient to reverse them.\n\nConsider what happens when a discipline is engulfed by a particular doctrine. The consensus that forms around a dominant approach can be immensely productive, but it also tends to impede the kind of wayward thinking from which genuine breakthroughs emerge. The more rigid the hierarchy of approved methods, the more effectively it fetters the imagination of those who work within it. Junior researchers, apprehensive about the prospects for their careers, learn quickly to conform. The result, over time, is a kind of intellectual monotony that no amount of internal debate can fully dispel.\n\nThis is not a hypothetical concern. The history of literary criticism is dense with examples of moments when the field became so permeated by a single set of assumptions that alternative conceptions were effectively immured — not banned, but rendered incomprehensible to those who had been trained entirely within the dominant tradition. A subordinate approach might be tolerated, even occasionally celebrated, but only insofar as it did not seriously challenge the doctrine from which the field derived its credibility.\n\nThe paradox is that the discipline most devoted to interpreting ambiguity is often the least adept at tolerating it in its own institutional arrangements. Critics who deploy the subtlest tools of close reading in the analysis of a text will bluster past the contradictions in their own methodological premises with a confidence that borders on the irrational. The implication is not that criticism is uniquely dishonest — all disciplines exhibit analogous tendencies — but that the gap between its stated values and its actual practices is particularly apt to go unremarked.\n\nWhat would a genuinely robust literary culture look like? It would, presumably, cultivate a keen attention to the evidence of the text rather than the reputation of its author. It would treat the notion of a fixed hierarchy of value with the solicitude one extends to a useful but perilous fiction. It would remain perpetually sceptical of the forces — commercial, ideological, sentimental — that attempt to usurp the role of judgement. It would acknowledge, with appropriate severity and without melodrama, that even its most venerated conclusions are provisional.\n\nSuch a culture would not be free of discord. Genuine intellectual communities rarely are. The altercation between competing visions of what literature is and does is not a sign of failure but of vitality. What is dismal is not disagreement but the complacent assumption that the current settlement is either impartial or immutable — the nostalgic conviction that the works we now exalt are the ones that simply and obviously deserve it.\n\nThe most modest and the most solemn claim that literary criticism can make is also, in the end, its most important: that the task of reading well is never complete, that every confident recount of what a text means is also an invitation to diverge, and that the solitude required to read carefully is not a retreat from the world but the condition under which the world becomes, however briefly and incompletely, comprehensible."
+  }
+}

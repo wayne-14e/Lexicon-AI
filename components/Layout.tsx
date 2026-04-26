@@ -29,7 +29,9 @@ interface LayoutProps {
   onNavigateToDashboard: () => void;
   onNavigateToCreate: () => void;
   onNavigateToHome: () => void;
+  onNavigateToArchives: () => void;
   onSpendTokens: (amount: number, reason?: string) => Promise<boolean>;
+  onUserUpdate: (partial: Partial<User>) => void;
   children: React.ReactNode;
 }
 
@@ -42,7 +44,9 @@ const Layout: React.FC<LayoutProps> = ({
   onNavigateToDashboard,
   onNavigateToCreate,
   onNavigateToHome,
+  onNavigateToArchives,
   onSpendTokens,
+  onUserUpdate,
   children 
 }) => {
   const [searchQuery, setSearchQuery] = useState('');
@@ -80,11 +84,11 @@ const Layout: React.FC<LayoutProps> = ({
     setShowResults(false);
   };
 
-  const navItems = [
-    { id: 'nav-home', name: 'Home', icon: <Home className="w-5 h-5 text-white" />, action: onNavigateToHome },
-    { id: 'nav-scratchpad', name: 'Scratchpad', icon: <PenTool className="w-5 h-5 text-white" />, action: onNavigateToCreate },
-    { id: 'nav-collections', name: 'Collections', icon: <Library className="w-5 h-5 text-white" />, action: onNavigateToDashboard },
-    { id: 'nav-sat', name: 'System Archives', icon: <GraduationCap className="w-5 h-5 text-white" />, action: () => {}, disabled: true },
+  const navItems: { id: string; name: string; icon: React.ReactNode; action: () => void; disabled?: boolean }[] = [
+    { id: 'nav-home', name: 'Home', icon: <Home className="w-5 h-5 text-white" />, action: onNavigateToHome, disabled: false },
+    { id: 'nav-scratchpad', name: 'Scratchpad', icon: <PenTool className="w-5 h-5 text-white" />, action: onNavigateToCreate, disabled: false },
+    { id: 'nav-collections', name: 'Collections', icon: <Library className="w-5 h-5 text-white" />, action: onNavigateToDashboard, disabled: false },
+    { id: 'nav-sat', name: 'System Archives', icon: <GraduationCap className="w-5 h-5 text-white" />, action: onNavigateToArchives, disabled: false },
   ];
 
   return (
@@ -177,9 +181,10 @@ const Layout: React.FC<LayoutProps> = ({
               <div className={`absolute bottom-full left-4 mb-2 w-56 bg-surfaceHighlight rounded-xl shadow-2xl shadow-black/50 border border-white/10 py-1.5 z-50 animate-in fade-in slide-in-from-bottom-2 duration-200 ${!isSidebarExpanded && 'left-16'}`}>
                 <div className="px-4 py-3 border-b border-white/5 mb-1">
                   <p className="text-sm font-bold text-text">{user.username}</p>
-                  <div className="flex items-center justify-between mt-1">
-                    <p className="text-[10px] text-orange-500 font-bold uppercase tracking-wider">{user.streak || 1} Day Streak</p>
-                    <span className="text-[10px] font-bold text-purple-500">{user.tokens || 0} Tokens</span>
+                  <div className="flex items-center justify-between mt-1.5">
+                    <span className="text-[10px] text-orange-500 font-bold uppercase tracking-wider">{user.streak || 1} Day Streak</span>
+                    <span className="text-[10px] text-blue-500 font-bold uppercase tracking-wider">{user.words_generated || 0}/40 Words</span>
+                    <span className="text-[10px] font-bold text-purple-500 uppercase tracking-wider">{user.tokens || 0} Tokens</span>
                   </div>
                 </div>
                 <button 
@@ -212,7 +217,7 @@ const Layout: React.FC<LayoutProps> = ({
       )}
 
       {/* Main Content */}
-      <div className="flex-1 flex flex-col min-w-0 h-full overflow-y-auto no-scrollbar">
+      <div id="main-scroll-container" className="flex-1 flex flex-col min-w-0 h-full overflow-y-auto no-scrollbar">
         {/* Top Search Bar (Floating or Top) */}
         {user && (
           <header className="h-auto py-4 md:py-4 flex items-center px-3 sm:px-6 sticky top-0 z-30 print:hidden bg-background/80 backdrop-blur-md border-b border-white/5 w-full transition-all duration-300">
@@ -293,7 +298,7 @@ const Layout: React.FC<LayoutProps> = ({
       </div>
       
       {/* Lexy Assistant Panel */}
-      {user && <LexyAssistant user={user} onSpendTokens={onSpendTokens} />}
+      {user && <LexyAssistant user={user} onSpendTokens={onSpendTokens} onUserUpdate={onUserUpdate} />}
 
       {/* Mobile Right Drawer */}
       {user && (

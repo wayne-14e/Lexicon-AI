@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
-import { VocabTable, VocabEntry } from '../types';
+import { VocabTable, VocabEntry, User } from '../types';
 import { geminiService } from '../services/geminiService';
 import { MOTIVATIONAL_QUOTES } from '../constants';
+import { storageService } from '../services/storageService';
 
 interface FlashcardViewProps {
+  user?: User;
   table: VocabTable;
   excludeMastered: boolean;
   onBack: () => void;
@@ -11,7 +13,7 @@ interface FlashcardViewProps {
   onAwardTokens: (amount: number, reason?: string) => void;
 }
 
-const FlashcardView: React.FC<FlashcardViewProps> = ({ table, excludeMastered, onBack, onUpdateProgress, onAwardTokens }) => {
+const FlashcardView: React.FC<FlashcardViewProps> = ({ user, table, excludeMastered = false, onBack, onUpdateProgress, onAwardTokens }) => {
   const shuffle = (array: VocabEntry[]) => {
     const arr = [...array];
     for (let i = arr.length - 1; i > 0; i--) {
@@ -83,6 +85,16 @@ const FlashcardView: React.FC<FlashcardViewProps> = ({ table, excludeMastered, o
   const handleSpeak = async (e: React.MouseEvent) => {
     e.stopPropagation();
     if (isSpeaking) return;
+    
+    const currentUser = await storageService.getCurrentUser();
+    if (currentUser) {
+      const updatedUser = await storageService.incrementLimitUsage(currentUser, 'tts_used');
+      if (!updatedUser) {
+        alert("Daily Text-to-Speech limit reached! You can only use TTS 30 times a day.");
+        return;
+      }
+    }
+    
     setIsSpeaking(true);
     await geminiService.textToSpeech(currentEntry.word);
     setIsSpeaking(false);
@@ -252,15 +264,19 @@ const FlashcardView: React.FC<FlashcardViewProps> = ({ table, excludeMastered, o
               </h3>
               
               {/* Pronunciation Button on Front (Icon Only) */}
-              <button 
-                onClick={handleSpeak}
-                className={`p-2.5 sm:p-3 rounded-full border transition-all ${isSpeaking ? 'bg-primary text-white border-primary animate-pulse' : 'bg-surfaceHighlight text-muted border-white/10 hover:text-primary hover:bg-primary/10 hover:border-primary/20'}`}
-                title="Play Pronunciation"
-              >
-                <svg className="w-4 h-4 sm:w-5 sm:h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z" />
-                </svg>
-              </button>
+              <div className="relative group/tts">
+                <button 
+                  onClick={handleSpeak}
+                  className={`p-2.5 sm:p-3 rounded-full border transition-all ${isSpeaking ? 'bg-primary text-white border-primary animate-pulse' : 'bg-surfaceHighlight text-muted border-white/10 hover:text-primary hover:bg-primary/10 hover:border-primary/20'}`}
+                >
+                  <svg className="w-4 h-4 sm:w-5 sm:h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z" />
+                  </svg>
+                </button>
+                <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 z-50 bg-blue-500/10 border border-blue-500/20 px-2 pt-1 pb-0.5 rounded shadow-xl whitespace-nowrap opacity-0 group-hover/tts:opacity-100 transition-opacity pointer-events-none">
+                  <span className="text-[9px] text-blue-500 font-bold uppercase tracking-widest leading-none block">{user?.tts_used || 0}/30 TTS</span>
+                </div>
+              </div>
 
               <div className="mt-6 sm:mt-8 flex flex-col items-center space-y-2 opacity-20 group-hover:opacity-100 transition-opacity duration-500">
                 <span className="text-[10px] sm:text-xs font-bold uppercase tracking-[0.3em] text-muted">Click to reveal</span>

@@ -1,0 +1,508 @@
+{
+  "entries": [
+    {
+      "id": "e2f3g4h5-0001-4001-8001-223344556701",
+      "progress": 0,
+      "word": "afford",
+      "partOfSpeech": "verb",
+      "meaning": "to grant or provide (especially an opportunity or advantage).",
+      "synonyms": "grant, provide, bestow",
+      "antonyms": "withhold, deny",
+      "sentence": "The new methodology may afford researchers the opportunity to test hypotheses that were previously impossible to examine."
+    },
+    {
+      "id": "e2f3g4h5-0002-4002-8002-223344556702",
+      "progress": 0,
+      "word": "appreciate",
+      "partOfSpeech": "verb",
+      "meaning": "to take into account; to recognize the merits or significance of something.",
+      "synonyms": "recognize, acknowledge, value",
+      "antonyms": "overlook, ignore, dismiss",
+      "sentence": "One must appreciate the limitations of any single study before drawing broad conclusions from its findings."
+    },
+    {
+      "id": "e2f3g4h5-0003-4003-8003-223344556703",
+      "progress": 0,
+      "word": "arrest",
+      "partOfSpeech": "verb",
+      "meaning": "to stop or check the progress of something.",
+      "synonyms": "stop, halt, check",
+      "antonyms": "accelerate, promote, advance",
+      "sentence": "The new regulations were designed to arrest the rapid decline in biodiversity observed in the region."
+    },
+    {
+      "id": "e2f3g4h5-0004-4004-8004-223344556704",
+      "progress": 0,
+      "word": "assume",
+      "partOfSpeech": "verb",
+      "meaning": "to take on or acquire (a role, responsibility, or characteristic).",
+      "synonyms": "take on, adopt, acquire",
+      "antonyms": "relinquish, abandon",
+      "sentence": "When a scholar assumes a position of leadership in a scientific society, they inherit both its prestige and its prevailing biases."
+    },
+    {
+      "id": "e2f3g4h5-0005-4005-8005-223344556705",
+      "progress": 0,
+      "word": "austerity",
+      "partOfSpeech": "noun",
+      "meaning": "strict economy or restraint, especially in spending or lifestyle.",
+      "synonyms": "frugality, restraint, simplicity",
+      "antonyms": "extravagance, excess, luxury",
+      "sentence": "Periods of austerity in research funding often force laboratories to focus more sharply on essential questions."
+    },
+    {
+      "id": "e2f3g4h5-0006-4006-8006-223344556706",
+      "progress": 0,
+      "word": "badger",
+      "partOfSpeech": "verb",
+      "meaning": "to pester or harass persistently.",
+      "synonyms": "pester, harass, hound",
+      "antonyms": "ignore, leave alone",
+      "sentence": "Journalists continued to badger the researcher for comments long after the initial findings had been published."
+    },
+    {
+      "id": "e2f3g4h5-0007-4007-8007-223344556707",
+      "progress": 0,
+      "word": "bent",
+      "partOfSpeech": "noun",
+      "meaning": "a natural liking or inclination for something.",
+      "synonyms": "inclination, tendency, penchant",
+      "antonyms": "aversion, disinclination",
+      "sentence": "She had a bent for theoretical physics that made her particularly adept at formulating elegant models."
+    },
+    {
+      "id": "e2f3g4h5-0008-4008-8008-223344556708",
+      "progress": 0,
+      "word": "capacity",
+      "partOfSpeech": "noun",
+      "meaning": "the ability or power to do, experience, or understand something.",
+      "synonyms": "ability, capability, faculty",
+      "antonyms": "inability, incapacity",
+      "sentence": "The human mind has a remarkable capacity for pattern recognition even when data appears chaotic."
+    },
+    {
+      "id": "e2f3g4h5-0009-4009-8009-223344556709",
+      "progress": 0,
+      "word": "chance",
+      "partOfSpeech": "verb",
+      "meaning": "to attempt or risk doing something.",
+      "synonyms": "attempt, venture, try",
+      "antonyms": "avoid, refrain",
+      "sentence": "Few researchers were willing to chance publishing controversial results without extensive replication."
+    },
+    {
+      "id": "e2f3g4h5-0010-4010-8010-223344556710",
+      "progress": 0,
+      "word": "channel",
+      "partOfSpeech": "verb",
+      "meaning": "to direct something toward a particular purpose or destination.",
+      "synonyms": "direct, guide, focus",
+      "antonyms": "scatter, disperse",
+      "sentence": "The team decided to channel their limited resources into a single high-impact experiment."
+    },
+    {
+      "id": "e2f3g4h5-0011-4011-8011-223344556711",
+      "progress": 0,
+      "word": "check",
+      "partOfSpeech": "verb",
+      "meaning": "to restrain, control, or reduce something.",
+      "synonyms": "restrain, curb, halt",
+      "antonyms": "encourage, accelerate",
+      "sentence": "Peer review serves as an important check on the spread of poorly supported claims."
+    },
+    {
+      "id": "e2f3g4h5-0012-4012-8012-223344556712",
+      "progress": 0,
+      "word": "coin",
+      "partOfSpeech": "verb",
+      "meaning": "to invent or create (a new word, phrase, or term).",
+      "synonyms": "invent, devise, create",
+      "antonyms": "borrow, reuse",
+      "sentence": "The author coined the term 'cognitive dissonance' to describe the mental discomfort arising from conflicting beliefs."
+    },
+    {
+      "id": "e2f3g4h5-0013-4013-8013-223344556713",
+      "progress": 0,
+      "word": "compromise",
+      "partOfSpeech": "verb",
+      "meaning": "to endanger or make vulnerable; to weaken.",
+      "synonyms": "endanger, undermine, jeopardize",
+      "antonyms": "strengthen, protect",
+      "sentence": "Publishing preliminary data without proper controls can compromise the credibility of the entire study."
+    },
+    {
+      "id": "e2f3g4h5-0014-4014-8014-223344556714",
+      "progress": 0,
+      "word": "constitution",
+      "partOfSpeech": "noun",
+      "meaning": "the physical or mental makeup of a person or thing; build or composition.",
+      "synonyms": "makeup, composition, structure",
+      "antonyms": "",
+      "sentence": "The robust constitution of the research team allowed them to withstand the intense scrutiny that followed their controversial findings."
+    },
+    {
+      "id": "e2f3g4h5-0015-4015-8015-223344556715",
+      "progress": 0,
+      "word": "conviction",
+      "partOfSpeech": "noun",
+      "meaning": "a strong belief or opinion; certainty.",
+      "synonyms": "certainty, belief, assurance",
+      "antonyms": "doubt, uncertainty",
+      "sentence": "Her intellectual conviction was matched only by her willingness to revise it in light of new evidence."
+    },
+    {
+      "id": "e2f3g4h5-0016-4016-8016-223344556716",
+      "progress": 0,
+      "word": "couch",
+      "partOfSpeech": "verb",
+      "meaning": "to express something in a particular way, often to hide or soften its meaning.",
+      "synonyms": "phrase, frame, express",
+      "antonyms": "state directly",
+      "sentence": "The reviewer couched her criticism in polite academic language that still made the flaws unmistakable."
+    },
+    {
+      "id": "e2f3g4h5-0017-4017-8017-223344556717",
+      "progress": 0,
+      "word": "discriminating",
+      "partOfSpeech": "adjective",
+      "meaning": "able to make fine distinctions; showing good judgment.",
+      "synonyms": "discerning, perceptive, judicious",
+      "antonyms": "undiscriminating, indiscriminate",
+      "sentence": "A discriminating reader can distinguish between rigorous scholarship and superficial analysis."
+    },
+    {
+      "id": "e2f3g4h5-0018-4018-8018-223344556718",
+      "progress": 0,
+      "word": "doctor",
+      "partOfSpeech": "verb",
+      "meaning": "to tamper with or alter something in order to deceive.",
+      "synonyms": "tamper, falsify, manipulate",
+      "antonyms": "preserve, leave unchanged",
+      "sentence": "No reputable scientist would ever doctor data to support a preferred hypothesis."
+    },
+    {
+      "id": "e2f3g4h5-0019-4019-8019-223344556719",
+      "progress": 0,
+      "word": "economy",
+      "partOfSpeech": "noun",
+      "meaning": "thrift or careful use of resources; avoidance of waste.",
+      "synonyms": "thrift, frugality, efficiency",
+      "antonyms": "extravagance, wastefulness",
+      "sentence": "The author's economy of language made the complex argument remarkably clear and powerful."
+    },
+    {
+      "id": "e2f3g4h5-0020-4020-8020-223344556720",
+      "progress": 0,
+      "word": "embroider",
+      "partOfSpeech": "verb",
+      "meaning": "to embellish or exaggerate a story with invented details.",
+      "synonyms": "embellish, exaggerate, fabricate",
+      "antonyms": "stick to facts",
+      "sentence": "Some popular science writers tend to embroider their accounts, which can mislead the public."
+    },
+    {
+      "id": "e2f3g4h5-0021-4021-8021-223344556721",
+      "progress": 0,
+      "word": "execute",
+      "partOfSpeech": "verb",
+      "meaning": "to carry out or perform an action or plan.",
+      "synonyms": "carry out, perform, implement",
+      "antonyms": "abandon, neglect",
+      "sentence": "The team executed the experiment with exceptional precision and care."
+    },
+    {
+      "id": "e2f3g4h5-0022-4022-8022-223344556722",
+      "progress": 0,
+      "word": "exploit",
+      "partOfSpeech": "verb",
+      "meaning": "to make full use of a resource or opportunity.",
+      "synonyms": "utilize, harness, capitalize on",
+      "antonyms": "waste, neglect",
+      "sentence": "Scientists must learn to exploit new technologies without compromising ethical standards."
+    },
+    {
+      "id": "e2f3g4h5-0023-4023-8023-223344556723",
+      "progress": 0,
+      "word": "facility",
+      "partOfSpeech": "noun",
+      "meaning": "a natural ability to do something easily and well.",
+      "synonyms": "aptitude, talent, skill",
+      "antonyms": "inability, difficulty",
+      "sentence": "Her facility with statistical analysis allowed her to spot patterns that others missed."
+    },
+    {
+      "id": "e2f3g4h5-0024-4024-8024-223344556724",
+      "progress": 0,
+      "word": "foil",
+      "partOfSpeech": "verb",
+      "meaning": "to prevent the success of; to thwart.",
+      "synonyms": "thwart, prevent, frustrate",
+      "antonyms": "aid, assist, enable",
+      "sentence": "Careful experimental design can foil attempts to misinterpret results."
+    },
+    {
+      "id": "e2f3g4h5-0025-4025-8025-223344556725",
+      "progress": 0,
+      "word": "grave",
+      "partOfSpeech": "adjective",
+      "meaning": "serious or solemn in manner or appearance.",
+      "synonyms": "serious, solemn, weighty",
+      "antonyms": "trivial, lighthearted",
+      "sentence": "The committee viewed the ethical breach with grave concern."
+    },
+    {
+      "id": "e2f3g4h5-0026-4026-8026-223344556726",
+      "progress": 0,
+      "word": "gravity",
+      "partOfSpeech": "noun",
+      "meaning": "seriousness or importance.",
+      "synonyms": "seriousness, weight, importance",
+      "antonyms": "triviality",
+      "sentence": "The gravity of the climate crisis demands immediate and sustained scientific attention."
+    },
+    {
+      "id": "e2f3g4h5-0027-4027-8027-223344556727",
+      "progress": 0,
+      "word": "grill",
+      "partOfSpeech": "verb",
+      "meaning": "to question someone intensely and persistently.",
+      "synonyms": "interrogate, question intensely",
+      "antonyms": "accept without question",
+      "sentence": "The defense attorney grilled the witness for hours during cross-examination."
+    },
+    {
+      "id": "e2f3g4h5-0028-4028-8028-223344556728",
+      "progress": 0,
+      "word": "hamper",
+      "partOfSpeech": "verb",
+      "meaning": "to hinder or impede the progress of.",
+      "synonyms": "hinder, obstruct, impede",
+      "antonyms": "facilitate, help",
+      "sentence": "Limited funding continues to hamper progress in several critical areas of research."
+    },
+    {
+      "id": "e2f3g4h5-0029-4029-8029-223344556729",
+      "progress": 0,
+      "word": "harbor",
+      "partOfSpeech": "verb",
+      "meaning": "to hold or possess (a feeling, belief, or thought).",
+      "synonyms": "hold, entertain, cherish",
+      "antonyms": "reject, dismiss",
+      "sentence": "Many scientists still harbor doubts about the long-term implications of the new theory."
+    },
+    {
+      "id": "e2f3g4h5-0030-4030-8030-223344556730",
+      "progress": 0,
+      "word": "hobble",
+      "partOfSpeech": "verb",
+      "meaning": "to restrict or impede the progress of.",
+      "synonyms": "hinder, restrict, impede",
+      "antonyms": "free, enable",
+      "sentence": "Outdated regulations continue to hobble innovation in the field."
+    },
+    {
+      "id": "e2f3g4h5-0031-4031-8031-223344556731",
+      "progress": 0,
+      "word": "plastic",
+      "partOfSpeech": "adjective",
+      "meaning": "able to be shaped or molded; adaptable.",
+      "synonyms": "malleable, flexible, adaptable",
+      "antonyms": "rigid, inflexible",
+      "sentence": "The brain's remarkable plastic nature allows it to reorganize itself in response to new experiences."
+    },
+    {
+      "id": "e2f3g4h5-0032-4032-8032-223344556732",
+      "progress": 0,
+      "word": "provoke",
+      "partOfSpeech": "verb",
+      "meaning": "to elicit or stimulate a reaction or response.",
+      "synonyms": "elicit, stimulate, cause",
+      "antonyms": "suppress, prevent",
+      "sentence": "The unexpected results were sure to provoke intense debate within the scientific community."
+    },
+    {
+      "id": "e2f3g4h5-0033-4033-8033-223344556733",
+      "progress": 0,
+      "word": "realize",
+      "partOfSpeech": "verb",
+      "meaning": "to achieve or bring about (a goal or potential).",
+      "synonyms": "achieve, accomplish, fulfill",
+      "antonyms": "fail to achieve",
+      "sentence": "The project finally realized its goal of mapping the entire genome of the organism."
+    },
+    {
+      "id": "e2f3g4h5-0034-4034-8034-223344556734",
+      "progress": 0,
+      "word": "reconcile",
+      "partOfSpeech": "verb",
+      "meaning": "to bring together or make compatible two seemingly opposing ideas or facts.",
+      "synonyms": "harmonize, resolve, reconcile",
+      "antonyms": "exacerbate, widen",
+      "sentence": "It took decades for scientists to reconcile the conflicting data from different experimental approaches."
+    },
+    {
+      "id": "e2f3g4h5-0035-4035-8035-223344556735",
+      "progress": 0,
+      "word": "relay",
+      "partOfSpeech": "verb",
+      "meaning": "to pass on or communicate information to others.",
+      "synonyms": "pass on, communicate, transmit",
+      "antonyms": "withhold",
+      "sentence": "The principal investigator asked her to relay the preliminary findings to the rest of the team."
+    },
+    {
+      "id": "e2f3g4h5-0036-4036-8036-223344556736",
+      "progress": 0,
+      "word": "relate",
+      "partOfSpeech": "verb",
+      "meaning": "to tell or give an account of something.",
+      "synonyms": "narrate, recount, describe",
+      "antonyms": "conceal",
+      "sentence": "In her memoir, she related the challenges she faced while conducting fieldwork in remote regions."
+    },
+    {
+      "id": "e2f3g4h5-0037-4037-8037-223344556737",
+      "progress": 0,
+      "word": "reservations",
+      "partOfSpeech": "noun",
+      "meaning": "doubts or misgivings about something.",
+      "synonyms": "doubts, misgivings, qualms",
+      "antonyms": "confidence, certainty",
+      "sentence": "Despite her general support, she still had several reservations about the proposed methodology."
+    },
+    {
+      "id": "e2f3g4h5-0038-4038-8038-223344556738",
+      "progress": 0,
+      "word": "reserve",
+      "partOfSpeech": "verb",
+      "meaning": "to hold off on or postpone (especially judgment).",
+      "synonyms": "postpone, withhold, defer",
+      "antonyms": "rush to judgment",
+      "sentence": "Wise scholars reserve judgment until all the evidence has been thoroughly examined."
+    },
+    {
+      "id": "e2f3g4h5-0039-4039-8039-223344556739",
+      "progress": 0,
+      "word": "ruffled",
+      "partOfSpeech": "adjective",
+      "meaning": "flustered or upset; disturbed.",
+      "synonyms": "flustered, agitated, disconcerted",
+      "antonyms": "calm, composed",
+      "sentence": "The unexpected criticism left even the most experienced researcher visibly ruffled."
+    },
+    {
+      "id": "e2f3g4h5-0040-4040-8040-223344556740",
+      "progress": 0,
+      "word": "sap",
+      "partOfSpeech": "verb",
+      "meaning": "to gradually weaken or drain (energy, strength, or resources).",
+      "synonyms": "drain, weaken, exhaust",
+      "antonyms": "strengthen, invigorate",
+      "sentence": "Constant bureaucratic demands began to sap the team's creative energy."
+    },
+    {
+      "id": "e2f3g4h5-0041-4041-8041-223344556741",
+      "progress": 0,
+      "word": "scrap",
+      "partOfSpeech": "verb",
+      "meaning": "to abandon or get rid of (a plan or idea).",
+      "synonyms": "abandon, discard, eliminate",
+      "antonyms": "retain, keep",
+      "sentence": "After reviewing the pilot data, the team decided to scrap the original design and start over."
+    },
+    {
+      "id": "e2f3g4h5-0042-4042-8042-223344556742",
+      "progress": 0,
+      "word": "shelve",
+      "partOfSpeech": "verb",
+      "meaning": "to postpone or set aside (a project or idea) indefinitely.",
+      "synonyms": "postpone, table, defer",
+      "antonyms": "pursue, advance",
+      "sentence": "Due to funding cuts, the ambitious longitudinal study was shelved for the foreseeable future."
+    },
+    {
+      "id": "e2f3g4h5-0043-4043-8043-223344556743",
+      "progress": 0,
+      "word": "solvent",
+      "partOfSpeech": "adjective",
+      "meaning": "able to pay all debts; financially sound.",
+      "synonyms": "financially sound, stable",
+      "antonyms": "bankrupt, insolvent",
+      "sentence": "The research institute remained solvent thanks to careful financial management."
+    },
+    {
+      "id": "e2f3g4h5-0044-4044-8044-223344556744",
+      "progress": 0,
+      "word": "sound",
+      "partOfSpeech": "adjective",
+      "meaning": "solid, reliable, and based on good judgment.",
+      "synonyms": "solid, valid, reliable",
+      "antonyms": "flawed, unsound",
+      "sentence": "The argument rested on sound empirical evidence rather than speculation."
+    },
+    {
+      "id": "e2f3g4h5-0045-4045-8045-223344556745",
+      "progress": 0,
+      "word": "spare",
+      "partOfSpeech": "adjective",
+      "meaning": "plain and unadorned; without extra ornamentation.",
+      "synonyms": "plain, austere, simple",
+      "antonyms": "ornate, elaborate",
+      "sentence": "The author's spare prose style made the scientific concepts unusually accessible."
+    },
+    {
+      "id": "e2f3g4h5-0046-4046-8046-223344556746",
+      "progress": 0,
+      "word": "static",
+      "partOfSpeech": "adjective",
+      "meaning": "unchanging; fixed or stationary.",
+      "synonyms": "unchanging, fixed, stationary",
+      "antonyms": "dynamic, changing",
+      "sentence": "Scientific understanding is never static; it evolves with each new discovery."
+    },
+    {
+      "id": "e2f3g4h5-0047-4047-8047-223344556747",
+      "progress": 0,
+      "word": "sustain",
+      "partOfSpeech": "verb",
+      "meaning": "to withstand or endure without giving way.",
+      "synonyms": "withstand, endure, maintain",
+      "antonyms": "collapse, fail",
+      "sentence": "Only the most robust theories can sustain repeated attempts at falsification."
+    },
+    {
+      "id": "e2f3g4h5-0048-4048-8048-223344556748",
+      "progress": 0,
+      "word": "uniform",
+      "partOfSpeech": "adjective",
+      "meaning": "constant and unchanging across time or space.",
+      "synonyms": "constant, consistent, unvarying",
+      "antonyms": "variable, inconsistent",
+      "sentence": "The results showed a remarkably uniform pattern across all tested populations."
+    },
+    {
+      "id": "e2f3g4h5-0049-4049-8049-223344556749",
+      "progress": 0,
+      "word": "unqualified",
+      "partOfSpeech": "adjective",
+      "meaning": "complete or absolute; without reservation.",
+      "synonyms": "absolute, complete, total",
+      "antonyms": "partial, qualified",
+      "sentence": "The findings provided unqualified support for the original hypothesis."
+    },
+    {
+      "id": "e2f3g4h5-0050-4050-8050-223344556750",
+      "progress": 0,
+      "word": "upset",
+      "partOfSpeech": "verb",
+      "meaning": "to interfere with or disturb an expected outcome or process.",
+      "synonyms": "disrupt, disturb, interfere with",
+      "antonyms": "preserve, maintain",
+      "sentence": "The anomalous result threatened to upset the prevailing theoretical framework."
+    }
+  ],
+  "contextPassage": {
+    "title": "The Second Life of Words",
+    "text": "Academic language often has a second, less obvious meaning that can arrest the unwary reader. A scholar may assume a new role and suddenly afford colleagues the chance to appreciate previously overlooked insights. While some attempt to chance publishing bold claims, others prefer to channel their energy more carefully and check any tendency toward exaggeration. No one should coin terms lightly or compromise the integrity of their work by attempting to doctor data. A researcher with true facility in their field will execute experiments with economy and never embroider results, even when under pressure to foil critics. The gravity of scientific claims demands a judicial temperament: one must not badger opponents, harbor grudges, or allow personal bent to hamper objective judgment. Instead, scholars should reconcile conflicting findings, relay accurate information, and relate their discoveries with spare precision. When preliminary evidence seems to sap confidence or ruffle established views, the proper response is to reserve judgment, shelve hasty conclusions, and sustain rigorous scrutiny. Only then can a field remain solvent and sound, avoiding the static repetition of old ideas and allowing genuine progress to prevail without qualification."
+  }
+}

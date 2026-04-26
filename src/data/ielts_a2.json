@@ -1,0 +1,2509 @@
+{
+  "entries": [
+
+    {
+      "id": "e87e077d-32d5-462a-acf2-1bb618b7496d",
+      "progress": 0,
+      "word": "area",
+      "partOfSpeech": "noun",
+      "meaning": "A particular part of a place, city, or country.",
+      "synonyms": "region, zone, district",
+      "antonyms": "N/A",
+      "sentence": "This area of the city is famous for its restaurants and culture."
+    },
+    {
+      "id": "90774062-2ed8-4b5f-a9ed-7133b89503c7",
+      "progress": 0,
+      "word": "arrange",
+      "partOfSpeech": "verb",
+      "meaning": "To plan or organize something in advance.",
+      "synonyms": "organize, plan, prepare",
+      "antonyms": "disorganize, cancel, scatter",
+      "sentence": "Can you arrange the chairs before the audience arrives?"
+    },
+    {
+      "id": "1533e963-45d5-44e2-94c6-f0859e6012fa",
+      "progress": 0,
+      "word": "artist",
+      "partOfSpeech": "noun",
+      "meaning": "A person who creates paintings, drawings, or other forms of art.",
+      "synonyms": "painter, creator, designer",
+      "antonyms": "N/A",
+      "sentence": "The young artist displayed her paintings at the centre."
+    },
+    {
+      "id": "f1098038-9564-460d-b363-51b547badd52",
+      "progress": 0,
+      "word": "athlete",
+      "partOfSpeech": "noun",
+      "meaning": "A person who is skilled in sports or physical exercise.",
+      "synonyms": "sportsperson, player, competitor",
+      "antonyms": "spectator, fan",
+      "sentence": "The athlete trained hard every day to prepare for the competition."
+    },
+    {
+      "id": "4b2f5386-b924-422b-8d78-dd388434751f",
+      "progress": 0,
+      "word": "attract",
+      "partOfSpeech": "verb",
+      "meaning": "To make someone interested in something or want to come to a place.",
+      "synonyms": "draw, pull, appeal to",
+      "antonyms": "repel, push away, deter",
+      "sentence": "The colourful fireworks always attract a large crowd."
+    },
+    {
+      "id": "d8c31222-157f-4c85-a79e-8f79eb9c6d2d",
+      "progress": 0,
+      "word": "audience",
+      "partOfSpeech": "noun",
+      "meaning": "The group of people watching or listening to a performance or show.",
+      "synonyms": "crowd, viewers, spectators",
+      "antonyms": "performer, speaker",
+      "sentence": "The audience cheered loudly at the end of the film."
+    },
+    {
+      "id": "a1cf27bc-c2c5-40c0-925a-6e68e31d37a9",
+      "progress": 0,
+      "word": "balance",
+      "partOfSpeech": "noun",
+      "meaning": "A steady position with weight spread equally.",
+      "synonyms": "stability, equilibrium, steadiness",
+      "antonyms": "imbalance, instability",
+      "sentence": "She learned to balance work and family life."
+    },
+    {
+      "id": "d018d8dd-1d8a-419c-baa3-1d1d944b47f9",
+      "progress": 0,
+      "word": "bank",
+      "partOfSpeech": "noun",
+      "meaning": "A place where people keep their money and can borrow money.",
+      "synonyms": "financial institution, treasury",
+      "antonyms": "N/A",
+      "sentence": "He went to the bank to borrow money for the business."
+    },
+    {
+      "id": "5b03f74c-6cd0-46b5-beb9-d02e51528785",
+      "progress": 0,
+      "word": "bar",
+      "partOfSpeech": "noun",
+      "meaning": "A place where people can buy and drink alcoholic drinks.",
+      "synonyms": "pub, café, tavern",
+      "antonyms": "N/A",
+      "sentence": "They met at a small bar near the beach."
+    },
+    {
+      "id": "3a57bd09-b799-4e17-a61d-3fe3f2d93ba8",
+      "progress": 0,
+      "word": "basket",
+      "partOfSpeech": "noun",
+      "meaning": "A container made of woven material used for carrying things.",
+      "synonyms": "container, hamper, bin",
+      "antonyms": "N/A",
+      "sentence": "She filled the basket with fresh fruit from the farm."
+    },
+    {
+      "id": "6971cb87-873e-41bf-abcb-d90b5f54990b",
+      "progress": 0,
+      "word": "beach",
+      "partOfSpeech": "noun",
+      "meaning": "An area of sand or small stones next to the sea.",
+      "synonyms": "shore, coast, seaside",
+      "antonyms": "inland, interior",
+      "sentence": "The family spent their holiday at the beach."
+    },
+    {
+      "id": "89b7d0fc-9968-4097-bcc8-5a462387118a",
+      "progress": 0,
+      "word": "bedroom",
+      "partOfSpeech": "noun",
+      "meaning": "A room in a house where you sleep.",
+      "synonyms": "sleeping room, chamber",
+      "antonyms": "living room, kitchen",
+      "sentence": "He studied in his bedroom until midnight."
+    },
+    {
+      "id": "6920b9e4-0f67-434a-92fa-5083cac6af3f",
+      "progress": 0,
+      "word": "behave",
+      "partOfSpeech": "verb",
+      "meaning": "To act in a particular way, especially in a good or proper way.",
+      "synonyms": "act, conduct oneself, perform",
+      "antonyms": "misbehave, act up",
+      "sentence": "The students behaved well during the tour of the factory."
+    },
+    {
+      "id": "9ee83dad-54e2-4414-8bb3-8d5fe3eb9935",
+      "progress": 0,
+      "word": "bill",
+      "partOfSpeech": "noun",
+      "meaning": "A piece of paper that shows how much money you owe for something.",
+      "synonyms": "invoice, receipt, charge",
+      "antonyms": "payment, credit",
+      "sentence": "The waiter brought the bill at the end of the feast."
+    },
+    {
+      "id": "a89102f4-efcf-4ce7-887a-c17ac6979efb",
+      "progress": 0,
+      "word": "birth",
+      "partOfSpeech": "noun",
+      "meaning": "The time when a baby comes out of its mother's body.",
+      "synonyms": "delivery, arrival, beginning",
+      "antonyms": "death, end",
+      "sentence": "The birth of his daughter filled him with joy."
+    },
+    {
+      "id": "a049ca1c-448d-4969-a22b-f9de903612b8",
+      "progress": 0,
+      "word": "bit",
+      "partOfSpeech": "noun",
+      "meaning": "A small amount or piece of something.",
+      "synonyms": "piece, part, fragment",
+      "antonyms": "whole, entirety, lot",
+      "sentence": "Can you explain this bit of code again, please?"
+    },
+    {
+      "id": "b4baedcd-c39c-4089-86b4-9af0119644df",
+      "progress": 0,
+      "word": "block",
+      "partOfSpeech": "noun",
+      "meaning": "A solid piece of hard material with flat sides.",
+      "synonyms": "chunk, piece, cube",
+      "antonyms": "gap, space, opening",
+      "sentence": "They built a wall using a wooden block and cement."
+    },
+    {
+      "id": "32c57ddd-65bd-4c70-b23f-9e55abbf4225",
+      "progress": 0,
+      "word": "boil",
+      "partOfSpeech": "verb",
+      "meaning": "To heat a liquid until it reaches the temperature at which it bubbles.",
+      "synonyms": "simmer, heat, cook",
+      "antonyms": "freeze, cool, chill",
+      "sentence": "Boil the egg for five minutes and then let it cool."
+    },
+    {
+      "id": "6d1df0cb-6639-4eb5-b82b-347cbf19f0f5",
+      "progress": 0,
+      "word": "bookshop",
+      "partOfSpeech": "noun",
+      "meaning": "A shop that sells books.",
+      "synonyms": "bookstore, library shop",
+      "antonyms": "N/A",
+      "sentence": "She found an interesting comic at the old bookshop."
+    },
+    {
+      "id": "983cd42c-cce5-4d67-a8ac-b38459580a1b",
+      "progress": 0,
+      "word": "borrow",
+      "partOfSpeech": "verb",
+      "meaning": "To take something from someone with the intention of returning it.",
+      "synonyms": "loan, use temporarily, take",
+      "antonyms": "lend, give, return",
+      "sentence": "Can I borrow your iron? Mine is broken."
+    },
+    {
+      "id": "4149fbc4-d872-4473-b252-7afeb16e9e8a",
+      "progress": 0,
+      "word": "bowl",
+      "partOfSpeech": "noun",
+      "meaning": "A round deep dish used for soup, cereal, or other food.",
+      "synonyms": "dish, container, basin",
+      "antonyms": "N/A",
+      "sentence": "He poured the soup into a clean bowl."
+    },
+    {
+      "id": "6f7100f7-6f05-4e03-9ce7-004147c67708",
+      "progress": 0,
+      "word": "brain",
+      "partOfSpeech": "noun",
+      "meaning": "The organ inside your head that controls your body and thinking.",
+      "synonyms": "mind, intellect, head",
+      "antonyms": "N/A",
+      "sentence": "Regular exercise is good for the brain and the heart."
+    },
+    {
+      "id": "6e87e963-237d-44c9-b24c-47a305ae0bb5",
+      "progress": 0,
+      "word": "break",
+      "partOfSpeech": "verb",
+      "meaning": "To separate into pieces by force, or to stop working.",
+      "synonyms": "smash, crack, snap",
+      "antonyms": "fix, repair, mend",
+      "sentence": "Be careful not to break the glass flower on the shelf."
+    },
+    {
+      "id": "e2b2d730-4c22-4bcc-b90c-9c9130225a51",
+      "progress": 0,
+      "word": "breakfast",
+      "partOfSpeech": "noun",
+      "meaning": "The first meal of the day, eaten in the morning.",
+      "synonyms": "morning meal, first meal",
+      "antonyms": "dinner, supper",
+      "sentence": "She always eats a healthy breakfast before school."
+    },
+    {
+      "id": "80535eb5-835c-4a68-847f-9b586545fd5f",
+      "progress": 0,
+      "word": "bridge",
+      "partOfSpeech": "noun",
+      "meaning": "A structure built over a river or road so people or vehicles can cross it.",
+      "synonyms": "overpass, crossing, span",
+      "antonyms": "N/A",
+      "sentence": "They crossed the bridge to reach the other side of the river."
+    },
+    {
+      "id": "f451f385-f9ed-4c96-9ade-7c9941a7789b",
+      "progress": 0,
+      "word": "building",
+      "partOfSpeech": "noun",
+      "meaning": "A structure with walls and a roof, such as a house or school.",
+      "synonyms": "structure, construction, edifice",
+      "antonyms": "ruin, open space",
+      "sentence": "The new government building is at the centre of the city."
+    },
+    {
+      "id": "da0bbe88-821f-4433-b53e-475d4e10ed83",
+      "progress": 0,
+      "word": "business",
+      "partOfSpeech": "noun",
+      "meaning": "The activity of buying and selling goods or services.",
+      "synonyms": "company, trade, commerce",
+      "antonyms": "hobby, leisure, play",
+      "sentence": "He started his own business selling fresh juice."
+    },
+    {
+      "id": "d5d45809-929d-4930-a6fc-d9ce719acc64",
+      "progress": 0,
+      "word": "busy",
+      "partOfSpeech": "adjective",
+      "meaning": "Having a lot of things to do.",
+      "synonyms": "occupied, active, engaged",
+      "antonyms": "free, idle, available",
+      "sentence": "The city is very busy during the election season."
+    },
+    {
+      "id": "9654d733-fc5d-4b03-8bde-3db2d762bf87",
+      "progress": 0,
+      "word": "cake",
+      "partOfSpeech": "noun",
+      "meaning": "A sweet food made by baking flour, eggs, sugar, and butter.",
+      "synonyms": "pastry, dessert, baked good",
+      "antonyms": "N/A",
+      "sentence": "She baked a cake to celebrate her friend's birthday."
+    },
+    {
+      "id": "f589ff66-6642-4f58-8218-a6599abf51f9",
+      "progress": 0,
+      "word": "camp",
+      "partOfSpeech": "noun",
+      "meaning": "A place where people live in tents or temporary shelters for a short time.",
+      "synonyms": "campsite, outdoor stay, base",
+      "antonyms": "N/A",
+      "sentence": "The athlete spent two weeks at a training camp in the forest."
+    },
+    {
+      "id": "d5842eee-dd69-41a2-8bdf-5a3fae3bd945",
+      "progress": 0,
+      "word": "capital",
+      "partOfSpeech": "noun",
+      "meaning": "The city where a country's government is based.",
+      "synonyms": "capital city, seat of government",
+      "antonyms": "N/A",
+      "sentence": "Paris is the capital of France."
+    },
+    {
+      "id": "720dcd62-4d15-4483-82a6-33b4203cb029",
+      "progress": 0,
+      "word": "card",
+      "partOfSpeech": "noun",
+      "meaning": "A small piece of stiff paper used for writing messages or for payment.",
+      "synonyms": "note card, postcard, greeting",
+      "antonyms": "N/A",
+      "sentence": "He sent a birthday card to his family."
+    },
+    {
+      "id": "5078caf0-0a60-4f8a-bd9c-24a6ead0d451",
+      "progress": 0,
+      "word": "care",
+      "partOfSpeech": "verb",
+      "meaning": "To feel concern or interest about someone or something.",
+      "synonyms": "look after, tend to, mind",
+      "antonyms": "neglect, ignore, abandon",
+      "sentence": "The nurse cared for the patient with great kindness."
+    },
+    {
+      "id": "759ee225-f366-48a5-b7d0-fa34ba1caf0b",
+      "progress": 0,
+      "word": "career",
+      "partOfSpeech": "noun",
+      "meaning": "The series of jobs that a person has in their life.",
+      "synonyms": "profession, vocation, occupation",
+      "antonyms": "hobby, pastime",
+      "sentence": "She chose a career in digital design and animation."
+    },
+    {
+      "id": "ba10a9b6-8f51-4312-8015-92be2e8b0fd3",
+      "progress": 0,
+      "word": "cause",
+      "partOfSpeech": "noun",
+      "meaning": "The reason why something happens.",
+      "synonyms": "reason, source, origin",
+      "antonyms": "effect, result, outcome",
+      "sentence": "Pollution is the main cause of climate change."
+    },
+    {
+      "id": "75a343ce-14cb-4e68-b803-fc34de88c9da",
+      "progress": 0,
+      "word": "celebrate",
+      "partOfSpeech": "verb",
+      "meaning": "To do something special and enjoyable on an important occasion.",
+      "synonyms": "mark, commemorate, honor",
+      "antonyms": "mourn, ignore, forget",
+      "sentence": "They gathered to celebrate the end of the century."
+    },
+    {
+      "id": "996ca184-f224-42f3-a132-0fcf42e8edd1",
+      "progress": 0,
+      "word": "centre",
+      "partOfSpeech": "noun",
+      "meaning": "The middle point or part of something.",
+      "synonyms": "middle, core, heart",
+      "antonyms": "edge, border, outskirts",
+      "sentence": "The sports club is located at the centre of the district."
+    },
+    {
+      "id": "d5bb62d1-d706-46a7-bf90-ec9822ed62eb",
+      "progress": 0,
+      "word": "century",
+      "partOfSpeech": "noun",
+      "meaning": "A period of one hundred years.",
+      "synonyms": "100 years, era, age",
+      "antonyms": "moment, second, instant",
+      "sentence": "A lot has changed in the last century."
+    },
+    {
+      "id": "065380a0-85b6-47e2-8b8a-bb011e1046f6",
+      "progress": 0,
+      "word": "challenge",
+      "partOfSpeech": "noun",
+      "meaning": "Something difficult that requires effort to achieve.",
+      "synonyms": "test, obstacle, difficulty",
+      "antonyms": "ease, simplicity, comfort",
+      "sentence": "Learning to code was a real challenge at first."
+    },
+    {
+      "id": "cfe3833c-9351-4268-9e5d-d2c70b6c0820",
+      "progress": 0,
+      "word": "change",
+      "partOfSpeech": "verb",
+      "meaning": "To make or become different.",
+      "synonyms": "alter, transform, modify",
+      "antonyms": "keep, maintain, preserve",
+      "sentence": "The new director wants to change how the factory operates."
+    },
+    {
+      "id": "ef6b0fb6-e330-4eca-a2ae-389c30c995c1",
+      "progress": 0,
+      "word": "channel",
+      "partOfSpeech": "noun",
+      "meaning": "A television or radio station, or a stretch of water between two areas of land.",
+      "synonyms": "station, network, waterway",
+      "antonyms": "N/A",
+      "sentence": "Switch to the sports channel to watch the football game."
+    },
+    {
+      "id": "a2f49611-f604-426c-a34d-2135879f6f73",
+      "progress": 0,
+      "word": "charge",
+      "partOfSpeech": "noun",
+      "meaning": "The amount of money you pay for something.",
+      "synonyms": "fee, cost, price",
+      "antonyms": "discount, refund, free",
+      "sentence": "There is an extra charge for the delivery service."
+    },
+    {
+      "id": "2450fe6a-3c3e-4dd2-af1f-ede5f5803f0f",
+      "progress": 0,
+      "word": "cheap",
+      "partOfSpeech": "adjective",
+      "meaning": "Costing little money.",
+      "synonyms": "affordable, inexpensive, low-cost",
+      "antonyms": "expensive, costly, pricey",
+      "sentence": "The food at the market is cheap and fresh."
+    },
+    {
+      "id": "db878900-5bad-4c2e-bf85-79faad528a3b",
+      "progress": 0,
+      "word": "check",
+      "partOfSpeech": "verb",
+      "meaning": "To look at something carefully to make sure it is correct or good.",
+      "synonyms": "examine, inspect, verify",
+      "antonyms": "ignore, overlook, skip",
+      "sentence": "Always check your work before you submit the exam."
+    },
+    {
+      "id": "718b3c63-58d2-448a-bd8f-a93f9f022e1b",
+      "progress": 0,
+      "word": "cheer",
+      "partOfSpeech": "verb",
+      "meaning": "To shout loudly to show support or happiness.",
+      "synonyms": "applaud, encourage, support",
+      "antonyms": "boo, discourage, jeer",
+      "sentence": "The crowd began to cheer when the athlete crossed the finish line."
+    },
+    {
+      "id": "f16c5d43-0242-45f2-b75d-d645e47e2e20",
+      "progress": 0,
+      "word": "cheerleader",
+      "partOfSpeech": "noun",
+      "meaning": "A person who leads a crowd in cheering, especially at sports events.",
+      "synonyms": "supporter, motivator",
+      "antonyms": "opponent, critic",
+      "sentence": "The cheerleader jumped and waved the flag at the game."
+    },
+    {
+      "id": "bc0d3887-b988-4fde-b7c6-c92008f989cc",
+      "progress": 0,
+      "word": "choice",
+      "partOfSpeech": "noun",
+      "meaning": "The act of picking one thing from several options.",
+      "synonyms": "option, selection, decision",
+      "antonyms": "necessity, compulsion, force",
+      "sentence": "You have the choice between two courses."
+    },
+    {
+      "id": "9b5ea669-13ec-46ae-90a0-05b274cc6c69",
+      "progress": 0,
+      "word": "cinema",
+      "partOfSpeech": "noun",
+      "meaning": "A building where you go to watch films.",
+      "synonyms": "movie theater, film house",
+      "antonyms": "N/A",
+      "sentence": "We went to the cinema to watch the new film on Friday."
+    },
+    {
+      "id": "a23e32a8-b7f4-4ddf-9e97-fb8eca5c5df5",
+      "progress": 0,
+      "word": "citizen",
+      "partOfSpeech": "noun",
+      "meaning": "A person who legally belongs to a country.",
+      "synonyms": "resident, national, inhabitant",
+      "antonyms": "foreigner, visitor, tourist",
+      "sentence": "Every citizen has the duty to vote in the election."
+    },
+    {
+      "id": "8507cb39-c178-4fae-8312-dac779e7c1dd",
+      "progress": 0,
+      "word": "city",
+      "partOfSpeech": "noun",
+      "meaning": "A large and important town where many people live.",
+      "synonyms": "metropolis, urban area, town",
+      "antonyms": "village, countryside, rural area",
+      "sentence": "New York is a city famous for its culture and energy."
+    },
+    {
+      "id": "dadcf118-decd-4d9d-9f98-7afd9cb8c123",
+      "progress": 0,
+      "word": "class",
+      "partOfSpeech": "noun",
+      "meaning": "A group of students who learn together, or a period of teaching.",
+      "synonyms": "lesson, group, session",
+      "antonyms": "N/A",
+      "sentence": "The English class started with a grammar exercise."
+    },
+    {
+      "id": "aa4721b6-93c3-4d11-b8bd-64ce9fbc6b8a",
+      "progress": 0,
+      "word": "clean",
+      "partOfSpeech": "adjective",
+      "meaning": "Free from dirt or pollution.",
+      "synonyms": "spotless, tidy, pure",
+      "antonyms": "dirty, messy, polluted",
+      "sentence": "Please keep the kitchen clean after you cook."
+    },
+    {
+      "id": "e7e9d61b-6756-4542-b48c-39f6f2c9616a",
+      "progress": 0,
+      "word": "clear",
+      "partOfSpeech": "adjective",
+      "meaning": "Easy to understand, see, or hear.",
+      "synonyms": "obvious, plain, transparent",
+      "antonyms": "unclear, confusing, cloudy",
+      "sentence": "The direction on the form was very clear and easy to follow."
+    },
+    {
+      "id": "71033620-4339-4e74-aaf1-9ba10a58bd41",
+      "progress": 0,
+      "word": "clever",
+      "partOfSpeech": "adjective",
+      "meaning": "Quick to understand and learn things.",
+      "synonyms": "smart, intelligent, bright",
+      "antonyms": "stupid, dull, slow",
+      "sentence": "The clever student found a hidden pattern in the data."
+    },
+    {
+      "id": "5acd1fcc-abf4-412c-baaa-81b242208313",
+      "progress": 0,
+      "word": "climate",
+      "partOfSpeech": "noun",
+      "meaning": "The typical weather conditions in an area over a long time.",
+      "synonyms": "weather pattern, atmosphere",
+      "antonyms": "N/A",
+      "sentence": "The country's warm climate attracts thousands of tourists each year."
+    },
+    {
+      "id": "6ad1b843-7ee4-4f37-a029-906a7bb11681",
+      "progress": 0,
+      "word": "club",
+      "partOfSpeech": "noun",
+      "meaning": "A group of people who meet regularly because of a shared interest.",
+      "synonyms": "group, association, society",
+      "antonyms": "individual, lone, solo",
+      "sentence": "She joined a science club at school to develop her interest."
+    },
+    {
+      "id": "5af2bd50-1547-4cee-b85c-349ecd107838",
+      "progress": 0,
+      "word": "coach",
+      "partOfSpeech": "noun",
+      "meaning": "A person who trains people to improve at a sport or skill.",
+      "synonyms": "trainer, instructor, mentor",
+      "antonyms": "student, trainee, player",
+      "sentence": "The coach gave advice to the team before the football game."
+    },
+    {
+      "id": "e239fa3c-1173-48c0-8fb5-de6e3c75a26f",
+      "progress": 0,
+      "word": "comfort",
+      "partOfSpeech": "noun",
+      "meaning": "A pleasant feeling of being relaxed and free from pain.",
+      "synonyms": "ease, relief, coziness",
+      "antonyms": "discomfort, pain, suffering",
+      "sentence": "After a long journey, the comfort of home feels amazing."
+    },
+    {
+      "id": "29fc1b98-5cdf-472e-b29b-c7bbb8d4c7a2",
+      "progress": 0,
+      "word": "comic",
+      "partOfSpeech": "noun",
+      "meaning": "A magazine or book that tells stories using pictures.",
+      "synonyms": "cartoon, graphic novel, strip",
+      "antonyms": "N/A",
+      "sentence": "He relaxed by reading a comic in his bedroom."
+    },
+    {
+      "id": "61e4b238-4a6d-4ef6-9546-09734e032504",
+      "progress": 0,
+      "word": "compare",
+      "partOfSpeech": "verb",
+      "meaning": "To examine similarities and differences between two or more things.",
+      "synonyms": "contrast, evaluate, assess",
+      "antonyms": "ignore, separate, overlook",
+      "sentence": "Compare the cost of the two hotels before you decide."
+    },
+    {
+      "id": "f86dcf40-b2f7-42e9-b6a5-64163820443a",
+      "progress": 0,
+      "word": "condition",
+      "partOfSpeech": "noun",
+      "meaning": "The state that something or someone is in.",
+      "synonyms": "state, situation, shape",
+      "antonyms": "N/A",
+      "sentence": "The condition of the road made it hard to drive."
+    },
+    {
+      "id": "6b182cd9-a762-4216-afa3-bd0faef5d78e",
+      "progress": 0,
+      "word": "connection",
+      "partOfSpeech": "noun",
+      "meaning": "A link or relationship between people or things.",
+      "synonyms": "link, bond, tie",
+      "antonyms": "disconnection, separation, gap",
+      "sentence": "There is a strong connection between diet and health."
+    },
+    {
+      "id": "dab115a3-6dde-4a6e-b669-e4222d991e17",
+      "progress": 0,
+      "word": "consider",
+      "partOfSpeech": "verb",
+      "meaning": "To think carefully about something before deciding.",
+      "synonyms": "think about, reflect on, ponder",
+      "antonyms": "ignore, dismiss, overlook",
+      "sentence": "Please consider the environment before you cut down trees."
+    },
+    {
+      "id": "2147ba4f-caba-4ef6-b87c-ad423cad6810",
+      "progress": 0,
+      "word": "continent",
+      "partOfSpeech": "noun",
+      "meaning": "One of the seven main large areas of land on Earth.",
+      "synonyms": "landmass, mainland",
+      "antonyms": "ocean, island, sea",
+      "sentence": "Africa is the second largest continent on earth."
+    },
+    {
+      "id": "70e3a357-3af9-439a-958e-e9ece5017f7f",
+      "progress": 0,
+      "word": "cook",
+      "partOfSpeech": "verb",
+      "meaning": "To prepare food by heating it.",
+      "synonyms": "prepare, make, bake",
+      "antonyms": "eat, serve, eat raw",
+      "sentence": "She loves to cook new dishes from different cultures."
+    },
+    {
+      "id": "d3d5d9a4-a1b3-40a2-bff4-326b2de46a09",
+      "progress": 0,
+      "word": "copy",
+      "partOfSpeech": "verb",
+      "meaning": "To make something that is the same as something else.",
+      "synonyms": "duplicate, reproduce, imitate",
+      "antonyms": "create, originate, invent",
+      "sentence": "Do not copy your friend's work during the exam."
+    },
+    {
+      "id": "62bf55fb-4f51-4f86-8717-24da5b5d2f41",
+      "progress": 0,
+      "word": "correct",
+      "partOfSpeech": "adjective",
+      "meaning": "Right or without any mistakes.",
+      "synonyms": "accurate, right, exact",
+      "antonyms": "wrong, incorrect, mistaken",
+      "sentence": "The teacher corrected the grade on the form."
+    },
+    {
+      "id": "15fa63d7-b2ba-4eee-8e38-560f504142d1",
+      "progress": 0,
+      "word": "cost",
+      "partOfSpeech": "noun",
+      "meaning": "The amount of money needed to buy or do something.",
+      "synonyms": "price, charge, fee",
+      "antonyms": "gain, profit, income",
+      "sentence": "The cost of living in the city is higher than in a cottage."
+    },
+    {
+      "id": "a7fa720a-7cf7-42ca-a20d-1b8950747634",
+      "progress": 0,
+      "word": "cottage",
+      "partOfSpeech": "noun",
+      "meaning": "A small, simple house, especially in the countryside.",
+      "synonyms": "small house, cabin, lodge",
+      "antonyms": "mansion, palace, skyscraper",
+      "sentence": "They rented a small cottage near the forest for their holiday."
+    },
+    {
+      "id": "3bcc4f6e-022b-47e8-838f-536193b666d2",
+      "progress": 0,
+      "word": "country",
+      "partOfSpeech": "noun",
+      "meaning": "An area of land with its own government, people, and culture.",
+      "synonyms": "nation, state, land",
+      "antonyms": "city, town, region",
+      "sentence": "She travelled to every country on the continent."
+    },
+    {
+      "id": "7e981285-0080-490e-a0b4-6b5edc575800",
+      "progress": 0,
+      "word": "course",
+      "partOfSpeech": "noun",
+      "meaning": "A series of lessons on a subject, or a part of a meal.",
+      "synonyms": "class, program, lesson",
+      "antonyms": "N/A",
+      "sentence": "He signed up for an online course to improve his coding skills."
+    },
+    {
+      "id": "b7a44b4f-f7e4-4d4c-b3fa-0c7ee72a2870",
+      "progress": 0,
+      "word": "cover",
+      "partOfSpeech": "verb",
+      "meaning": "To put something over another thing to protect or hide it.",
+      "synonyms": "hide, protect, wrap",
+      "antonyms": "reveal, uncover, expose",
+      "sentence": "Cover the bowl with a lid before you put it in the fridge."
+    },
+    {
+      "id": "95e4462c-d961-46ba-8ecb-4cb27a0139d7",
+      "progress": 0,
+      "word": "create",
+      "partOfSpeech": "verb",
+      "meaning": "To make something new that did not exist before.",
+      "synonyms": "make, produce, build",
+      "antonyms": "destroy, demolish, erase",
+      "sentence": "The young artist used ink to create a beautiful image."
+    },
+    {
+      "id": "05e523a7-3a79-4903-9196-6bc7b67aa941",
+      "progress": 0,
+      "word": "crime",
+      "partOfSpeech": "noun",
+      "meaning": "An action that is against the law.",
+      "synonyms": "offence, wrongdoing, illegal act",
+      "antonyms": "law, justice, virtue",
+      "sentence": "The government launched a campaign to reduce crime in the district."
+    },
+    {
+      "id": "41779173-0c97-452c-935f-7378f89a2c93",
+      "progress": 0,
+      "word": "crowd",
+      "partOfSpeech": "noun",
+      "meaning": "A large group of people in the same place.",
+      "synonyms": "mass, group, gathering",
+      "antonyms": "individual, few, emptiness",
+      "sentence": "A large crowd gathered at the gate to watch the fireworks."
+    },
+    {
+      "id": "2d4264ad-5129-41b0-99ee-6d4de8e717cc",
+      "progress": 0,
+      "word": "culture",
+      "partOfSpeech": "noun",
+      "meaning": "The customs, arts, and way of life of a particular group of people.",
+      "synonyms": "tradition, heritage, society",
+      "antonyms": "N/A",
+      "sentence": "Music and food are important parts of every culture."
+    },
+    {
+      "id": "be327d37-aeb0-4f7d-8900-abba6dd5d6b9",
+      "progress": 0,
+      "word": "currency",
+      "partOfSpeech": "noun",
+      "meaning": "The money used in a particular country.",
+      "synonyms": "money, cash, coin",
+      "antonyms": "barter, trade, exchange",
+      "sentence": "The dollar is the currency used in the United States."
+    },
+    {
+      "id": "b6f6d34a-89e8-4c49-87e1-0d4f54c3c381",
+      "progress": 0,
+      "word": "cut",
+      "partOfSpeech": "verb",
+      "meaning": "To divide or reduce something using a sharp tool.",
+      "synonyms": "slice, trim, chop",
+      "antonyms": "join, connect, grow",
+      "sentence": "Cut the fruit into small pieces and place them in the bowl."
+    },
+    {
+      "id": "23e06c2d-7495-42c2-aff4-2e7a1fddc322",
+      "progress": 0,
+      "word": "dance",
+      "partOfSpeech": "verb",
+      "meaning": "To move your body to music.",
+      "synonyms": "move, groove, perform",
+      "antonyms": "stand still, freeze, stop",
+      "sentence": "They danced at the festival to celebrate the harvest."
+    },
+    {
+      "id": "0111e510-457e-4589-81a4-2efcb476d5a4",
+      "progress": 0,
+      "word": "danger",
+      "partOfSpeech": "noun",
+      "meaning": "The possibility of being harmed or killed.",
+      "synonyms": "risk, threat, hazard",
+      "antonyms": "safety, security, protection",
+      "sentence": "The sign warned travellers about the danger on the highway."
+    },
+    {
+      "id": "fbc823de-79b1-4f25-813d-fca4d99f43a6",
+      "progress": 0,
+      "word": "dark",
+      "partOfSpeech": "adjective",
+      "meaning": "Having little or no light.",
+      "synonyms": "dim, shadowy, gloomy",
+      "antonyms": "bright, light, sunny",
+      "sentence": "It was too dark inside the cave to see anything."
+    },
+    {
+      "id": "20536782-0c72-46c0-b3ac-6ca149b23ac9",
+      "progress": 0,
+      "word": "date",
+      "partOfSpeech": "noun",
+      "meaning": "A specific day in a month or year.",
+      "synonyms": "day, time, appointment",
+      "antonyms": "N/A",
+      "sentence": "The date of the exam was moved forward by one week."
+    },
+    {
+      "id": "ad95e773-3683-4a1e-8c42-3c8ae95ecd06",
+      "progress": 0,
+      "word": "decide",
+      "partOfSpeech": "verb",
+      "meaning": "To choose something after thinking about it.",
+      "synonyms": "choose, determine, resolve",
+      "antonyms": "hesitate, delay, avoid",
+      "sentence": "She took time to decide which career path to follow."
+    },
+    {
+      "id": "10246b83-770d-463d-894e-4f0dd103b948",
+      "progress": 0,
+      "word": "delay",
+      "partOfSpeech": "noun",
+      "meaning": "A period of time by which something is late or postponed.",
+      "synonyms": "postponement, setback, wait",
+      "antonyms": "hurry, speed, advance",
+      "sentence": "The delay at the airport made everyone angry."
+    },
+    {
+      "id": "346a11cc-10ad-46a8-aec3-bd7470e95c93",
+      "progress": 0,
+      "word": "delivery",
+      "partOfSpeech": "noun",
+      "meaning": "The act of taking goods or letters to someone.",
+      "synonyms": "shipment, drop-off, handover",
+      "antonyms": "collection, pickup",
+      "sentence": "The delivery of fresh food from the farm arrives every morning."
+    },
+    {
+      "id": "58ca2a43-0c23-4541-a4be-b99f1701aaa6",
+      "progress": 0,
+      "word": "demand",
+      "partOfSpeech": "noun",
+      "meaning": "A strong request or need for something.",
+      "synonyms": "request, need, requirement",
+      "antonyms": "supply, offer, give",
+      "sentence": "There is a high demand for digital skills in today's industry."
+    },
+    {
+      "id": "73957f84-71db-499b-9052-05bebc995034",
+      "progress": 0,
+      "word": "describe",
+      "partOfSpeech": "verb",
+      "meaning": "To say what something or someone is like.",
+      "synonyms": "explain, depict, portray",
+      "antonyms": "confuse, hide, misrepresent",
+      "sentence": "Can you describe the condition of the road when the accident happened?"
+    },
+    {
+      "id": "fc89b48c-44e5-4dcc-b368-7a5c5b6ef2db",
+      "progress": 0,
+      "word": "dessert",
+      "partOfSpeech": "noun",
+      "meaning": "A sweet food eaten at the end of a meal.",
+      "synonyms": "sweet, pudding, treat",
+      "antonyms": "starter, appetizer, main course",
+      "sentence": "They had a chocolate cake for dessert after the feast."
+    },
+    {
+      "id": "d5edff2a-5794-4a71-b0d4-f42967ecca76",
+      "progress": 0,
+      "word": "develop",
+      "partOfSpeech": "verb",
+      "meaning": "To grow or make something grow bigger or more advanced.",
+      "synonyms": "grow, expand, improve",
+      "antonyms": "shrink, decline, destroy",
+      "sentence": "She worked hard to develop her skills as an athlete."
+    },
+    {
+      "id": "c21bb380-6452-4682-b70a-799fd6929725",
+      "progress": 0,
+      "word": "die",
+      "partOfSpeech": "verb",
+      "meaning": "To stop living.",
+      "synonyms": "pass away, perish, expire",
+      "antonyms": "live, survive, exist",
+      "sentence": "Without water, the flowers in the garden will die."
+    },
+    {
+      "id": "cfa7fef2-69cb-4e3f-b304-d6a1822da041",
+      "progress": 0,
+      "word": "diet",
+      "partOfSpeech": "noun",
+      "meaning": "The food and drink that a person or animal usually eats.",
+      "synonyms": "eating habits, nutrition, food plan",
+      "antonyms": "N/A",
+      "sentence": "A healthy diet includes fruit, vegetables, and enough water."
+    },
+    {
+      "id": "757a8745-5a3b-40cb-b217-85a56c1e0f93",
+      "progress": 0,
+      "word": "digital",
+      "partOfSpeech": "adjective",
+      "meaning": "Related to computers and electronic technology.",
+      "synonyms": "electronic, virtual, online",
+      "antonyms": "physical, analog, manual",
+      "sentence": "Digital tools make it easier to create and display information."
+    },
+    {
+      "id": "c3e33762-7c90-4570-a97e-e09a54e4d2d4",
+      "progress": 0,
+      "word": "direction",
+      "partOfSpeech": "noun",
+      "meaning": "The path or course along which someone or something moves.",
+      "synonyms": "way, route, course",
+      "antonyms": "N/A",
+      "sentence": "Follow the direction on the map to reach the hotel."
+    },
+    {
+      "id": "dbea08d6-d084-4459-b8bd-674f5c1b3325",
+      "progress": 0,
+      "word": "director",
+      "partOfSpeech": "noun",
+      "meaning": "A person who is in charge of a film, organization, or department.",
+      "synonyms": "manager, head, leader",
+      "antonyms": "follower, worker, employee",
+      "sentence": "The director of the film thanked the audience at the end."
+    },
+    {
+      "id": "99eebc37-5566-4a77-9a90-10a0a0a2fc76",
+      "progress": 0,
+      "word": "discount",
+      "partOfSpeech": "noun",
+      "meaning": "A reduction in the usual price of something.",
+      "synonyms": "reduction, deal, saving",
+      "antonyms": "surcharge, increase, markup",
+      "sentence": "They offered a big discount during the holiday season."
+    },
+    {
+      "id": "2e06b7b0-a894-4e6e-bebe-76062500e055",
+      "progress": 0,
+      "word": "dish",
+      "partOfSpeech": "noun",
+      "meaning": "Food prepared and cooked in a particular way, or a container for food.",
+      "synonyms": "meal, plate, food item",
+      "antonyms": "N/A",
+      "sentence": "Her favourite dish is a simple salad with fresh vegetables."
+    },
+    {
+      "id": "9faced5d-7f99-4e5f-b491-eb7caa5ebc50",
+      "progress": 0,
+      "word": "display",
+      "partOfSpeech": "verb",
+      "meaning": "To show something so others can see it.",
+      "synonyms": "show, exhibit, present",
+      "antonyms": "hide, conceal, cover",
+      "sentence": "The museum will display ancient gold items from the island."
+    },
+    {
+      "id": "17eee946-6852-4f43-b51b-7495865c0771",
+      "progress": 0,
+      "word": "disturb",
+      "partOfSpeech": "verb",
+      "meaning": "To interrupt someone or cause worry.",
+      "synonyms": "interrupt, bother, upset",
+      "antonyms": "calm, soothe, comfort",
+      "sentence": "Please do not disturb the audience during the film."
+    },
+    {
+      "id": "2fea07c0-a9c4-42c9-859f-a8e849f0514d",
+      "progress": 0,
+      "word": "distance",
+      "partOfSpeech": "noun",
+      "meaning": "The amount of space between two places.",
+      "synonyms": "gap, space, length",
+      "antonyms": "closeness, nearness, proximity",
+      "sentence": "The distance between the two cities is about 200 kilometres."
+    },
+    {
+      "id": "2968ab59-4642-4e35-9895-693df6738840",
+      "progress": 0,
+      "word": "district",
+      "partOfSpeech": "noun",
+      "meaning": "An area of a city or country used for a specific purpose.",
+      "synonyms": "zone, area, region",
+      "antonyms": "whole, total, nation",
+      "sentence": "The shopping district is always busy at the weekend."
+    },
+    {
+      "id": "29400951-eb72-4f35-b815-9512d11e49d2",
+      "progress": 0,
+      "word": "dollar",
+      "partOfSpeech": "noun",
+      "meaning": "The unit of currency in the USA and some other countries.",
+      "synonyms": "currency, bill, money unit",
+      "antonyms": "N/A",
+      "sentence": "The ticket cost ten dollars at the cinema."
+    },
+    {
+      "id": "d08b6914-8fbc-4dc0-a6d4-e7402aebdc80",
+      "progress": 0,
+      "word": "dream",
+      "partOfSpeech": "noun",
+      "meaning": "Images or stories in your mind when you sleep, or a wish for the future.",
+      "synonyms": "vision, hope, aspiration",
+      "antonyms": "reality, nightmare, truth",
+      "sentence": "It is her dream to become a famous artist one day."
+    },
+    {
+      "id": "4271bb72-7523-4177-898f-f77bc8327449",
+      "progress": 0,
+      "word": "dress",
+      "partOfSpeech": "noun",
+      "meaning": "A piece of clothing worn by women or girls.",
+      "synonyms": "gown, outfit, garment",
+      "antonyms": "N/A",
+      "sentence": "She wore a green dress to the birthday celebration."
+    },
+    {
+      "id": "a7fc2217-8007-4254-afd5-c81e6c2b5289",
+      "progress": 0,
+      "word": "drive",
+      "partOfSpeech": "verb",
+      "meaning": "To operate and steer a vehicle.",
+      "synonyms": "steer, operate, control",
+      "antonyms": "walk, ride, fly",
+      "sentence": "It takes an hour to drive from the cottage to the airport."
+    },
+    {
+      "id": "41e81085-09a4-43ed-a4ec-0dbdef0f9782",
+      "progress": 0,
+      "word": "drop",
+      "partOfSpeech": "verb",
+      "meaning": "To let something fall from your hands.",
+      "synonyms": "fall, release, lower",
+      "antonyms": "raise, lift, catch",
+      "sentence": "Be careful not to drop the bowl of soup."
+    },
+    {
+      "id": "e67a48d3-9fcc-4a77-9a28-3a5b21501c26",
+      "progress": 0,
+      "word": "duty",
+      "partOfSpeech": "noun",
+      "meaning": "Something you must do because it is your responsibility.",
+      "synonyms": "responsibility, obligation, task",
+      "antonyms": "freedom, choice, right",
+      "sentence": "It is the duty of each citizen to care for the environment."
+    },
+    {
+      "id": "afc9e9ae-6556-4a09-8b09-25270bbf89d0",
+      "progress": 0,
+      "word": "each",
+      "partOfSpeech": "determiner",
+      "meaning": "Every one of two or more people or things.",
+      "synonyms": "every, all, apiece",
+      "antonyms": "none, neither",
+      "sentence": "Each student received a card with their grade."
+    },
+    {
+      "id": "c35c7916-de6f-4df1-beb6-47821aa63997",
+      "progress": 0,
+      "word": "eager",
+      "partOfSpeech": "adjective",
+      "meaning": "Wanting to do or have something very much.",
+      "synonyms": "enthusiastic, keen, excited",
+      "antonyms": "reluctant, unwilling, indifferent",
+      "sentence": "The young athlete was eager to join the training camp."
+    },
+    {
+      "id": "f18491f7-cf4f-4a4b-b9c8-6fa815051445",
+      "progress": 0,
+      "word": "early",
+      "partOfSpeech": "adjective",
+      "meaning": "Happening before the usual or expected time.",
+      "synonyms": "ahead, prompt, initial",
+      "antonyms": "late, delayed, overdue",
+      "sentence": "She arrived early at the airport to avoid the crowd."
+    },
+    {
+      "id": "04e92d44-936c-450f-8fb0-6a93a724d68a",
+      "progress": 0,
+      "word": "earth",
+      "partOfSpeech": "noun",
+      "meaning": "The planet we live on, or the soil on the ground.",
+      "synonyms": "world, planet, soil, ground",
+      "antonyms": "sky, space, heaven",
+      "sentence": "We must protect the earth for future generations."
+    },
+    {
+      "id": "3c399754-97ba-40d9-b9a6-16ddbf279b9c",
+      "progress": 0,
+      "word": "edge",
+      "partOfSpeech": "noun",
+      "meaning": "The outside limit or border of something.",
+      "synonyms": "border, rim, margin",
+      "antonyms": "centre, middle, interior",
+      "sentence": "He stood at the edge of the hill, looking down at the city."
+    },
+    {
+      "id": "b1438564-22d8-4127-bcca-329ee9bae2e1",
+      "progress": 0,
+      "word": "effective",
+      "partOfSpeech": "adjective",
+      "meaning": "Producing the result that was intended.",
+      "synonyms": "successful, efficient, powerful",
+      "antonyms": "ineffective, useless, weak",
+      "sentence": "Regular exercise is one of the most effective ways to stay healthy."
+    },
+    {
+      "id": "a651e53f-f04d-4f7d-a4b0-9517e8244ea6",
+      "progress": 0,
+      "word": "egg",
+      "partOfSpeech": "noun",
+      "meaning": "An oval object with a shell, laid by a bird, used as food.",
+      "synonyms": "N/A",
+      "antonyms": "N/A",
+      "sentence": "She cracked the egg and added it to the flour to make the cake."
+    },
+    {
+      "id": "15039e65-0c0c-4d91-8a74-925f994e7a3c",
+      "progress": 0,
+      "word": "election",
+      "partOfSpeech": "noun",
+      "meaning": "An event in which people vote to choose a leader or government.",
+      "synonyms": "vote, poll, ballot",
+      "antonyms": "appointment, selection",
+      "sentence": "The election results were announced on the digital channel."
+    },
+    {
+      "id": "46311d1b-1d81-47ca-a589-5690c64415d4",
+      "progress": 0,
+      "word": "emotion",
+      "partOfSpeech": "noun",
+      "meaning": "A strong feeling such as love, fear, or anger.",
+      "synonyms": "feeling, sentiment, reaction",
+      "antonyms": "thought, reason, logic",
+      "sentence": "The film was full of strong emotion and beautiful music."
+    },
+    {
+      "id": "55b276d9-d1bd-4c74-9417-9c354f5100f9",
+      "progress": 0,
+      "word": "empty",
+      "partOfSpeech": "adjective",
+      "meaning": "Having nothing inside.",
+      "synonyms": "vacant, hollow, blank",
+      "antonyms": "full, occupied, packed",
+      "sentence": "The classroom was empty when she arrived early."
+    },
+    {
+      "id": "17625d8e-2df9-4b04-a948-93b0ab5fa6b5",
+      "progress": 0,
+      "word": "end",
+      "partOfSpeech": "noun",
+      "meaning": "The final part of something.",
+      "synonyms": "finish, conclusion, close",
+      "antonyms": "beginning, start, opening",
+      "sentence": "At the end of the journey, they felt tired but happy."
+    },
+    {
+      "id": "873a95a0-1f98-43f0-9f94-81375a3ecbcd",
+      "progress": 0,
+      "word": "energy",
+      "partOfSpeech": "noun",
+      "meaning": "The ability to do work or the power to be active.",
+      "synonyms": "power, strength, vitality",
+      "antonyms": "weakness, fatigue, laziness",
+      "sentence": "Solar energy is a clean and effective source of power."
+    },
+    {
+      "id": "dc689a0b-e18e-4bd3-9bc1-d5f32d09c608",
+      "progress": 0,
+      "word": "enjoy",
+      "partOfSpeech": "verb",
+      "meaning": "To get pleasure from something.",
+      "synonyms": "love, appreciate, like",
+      "antonyms": "dislike, hate, suffer",
+      "sentence": "They enjoy going to the cinema every Friday night."
+    },
+    {
+      "id": "5eb08af4-3885-41b9-b241-a83153e65c6a",
+      "progress": 0,
+      "word": "enter",
+      "partOfSpeech": "verb",
+      "meaning": "To go into a place.",
+      "synonyms": "go in, come in, walk in",
+      "antonyms": "exit, leave, go out",
+      "sentence": "You must show your card to enter the club."
+    },
+    {
+      "id": "5fb09b02-079f-47be-a459-b2f91f3e8fcf",
+      "progress": 0,
+      "word": "environment",
+      "partOfSpeech": "noun",
+      "meaning": "The natural world around us, including air, land, and water.",
+      "synonyms": "nature, surroundings, ecosystem",
+      "antonyms": "city, man-made, artificial",
+      "sentence": "The factory must follow rules to protect the environment."
+    },
+    {
+      "id": "fbec18a8-c234-4c23-bc5d-de37b2457122",
+      "progress": 0,
+      "word": "equal",
+      "partOfSpeech": "adjective",
+      "meaning": "The same in size, amount, value, or importance.",
+      "synonyms": "same, identical, balanced",
+      "antonyms": "unequal, different, unfair",
+      "sentence": "Every citizen deserves equal access to education."
+    },
+    {
+      "id": "2bbf37d4-b794-4e0c-b316-821622406d3a",
+      "progress": 0,
+      "word": "especially",
+      "partOfSpeech": "adverb",
+      "meaning": "More than usual or more than other things.",
+      "synonyms": "particularly, mainly, notably",
+      "antonyms": "generally, equally, uniformly",
+      "sentence": "The beach is especially beautiful in the early morning."
+    },
+    {
+      "id": "a4a6fb03-b202-4316-bff7-1aee89f80e68",
+      "progress": 0,
+      "word": "event",
+      "partOfSpeech": "noun",
+      "meaning": "Something important that happens.",
+      "synonyms": "occasion, happening, incident",
+      "antonyms": "routine, daily life",
+      "sentence": "The sports event attracted a large audience from across the country."
+    },
+    {
+      "id": "0ff4e4e4-2159-4cac-bacb-a1196bff6581",
+      "progress": 0,
+      "word": "example",
+      "partOfSpeech": "noun",
+      "meaning": "Something that shows what others of the same type are like.",
+      "synonyms": "sample, illustration, instance",
+      "antonyms": "exception, opposite",
+      "sentence": "She gave a clear example of how to follow the correct direction."
+    },
+    {
+      "id": "e7a5e86b-a5f6-4fa6-ba2d-2d7a70965409",
+      "progress": 0,
+      "word": "exam",
+      "partOfSpeech": "noun",
+      "meaning": "A formal test to check your knowledge.",
+      "synonyms": "test, assessment, quiz",
+      "antonyms": "N/A",
+      "sentence": "He studied all night to prepare for the history exam."
+    },
+    {
+      "id": "c2e21f94-d579-4a78-a8f1-3bdaad2bc956",
+      "progress": 0,
+      "word": "exist",
+      "partOfSpeech": "verb",
+      "meaning": "To be real or to live.",
+      "synonyms": "live, be, survive",
+      "antonyms": "disappear, die, vanish",
+      "sentence": "Some animals that existed a century ago no longer exist today."
+    },
+    {
+      "id": "e904ba18-f0fd-499d-bd04-1272f0d0e754",
+      "progress": 0,
+      "word": "experience",
+      "partOfSpeech": "noun",
+      "meaning": "Knowledge or skill gained from doing something.",
+      "synonyms": "knowledge, practice, background",
+      "antonyms": "inexperience, ignorance",
+      "sentence": "She gained a lot of experience working at the hotel."
+    },
+    {
+      "id": "b30cbf25-e5b4-4d8d-8a82-b48bfb0dc95e",
+      "progress": 0,
+      "word": "explain",
+      "partOfSpeech": "verb",
+      "meaning": "To make something clear by describing it.",
+      "synonyms": "describe, clarify, illustrate",
+      "antonyms": "confuse, hide, complicate",
+      "sentence": "The coach tried to explain the rules of the game to the new player."
+    },
+    {
+      "id": "617ee70a-c878-4444-9035-33a2d2729520",
+      "progress": 0,
+      "word": "express",
+      "partOfSpeech": "verb",
+      "meaning": "To show or say what you feel or think.",
+      "synonyms": "show, communicate, convey",
+      "antonyms": "hide, conceal, suppress",
+      "sentence": "Art allows you to express your emotions in a creative way."
+    },
+    {
+      "id": "031e2cd2-efc7-4bb8-9cc8-69ff3b41ff5a",
+      "progress": 0,
+      "word": "extra",
+      "partOfSpeech": "adjective",
+      "meaning": "More than is usual or necessary.",
+      "synonyms": "additional, more, added",
+      "antonyms": "less, fewer, reduced",
+      "sentence": "They added an extra charge for the service."
+    },
+    {
+      "id": "91b15083-b27a-4e5c-b4c7-885c3df880ae",
+      "progress": 0,
+      "word": "face",
+      "partOfSpeech": "noun",
+      "meaning": "The front part of your head with your eyes, nose, and mouth.",
+      "synonyms": "expression, look, features",
+      "antonyms": "back, rear",
+      "sentence": "A smile on your face can make people feel comfortable."
+    },
+    {
+      "id": "0ea1b0c8-67de-458a-b870-189327763eb0",
+      "progress": 0,
+      "word": "factory",
+      "partOfSpeech": "noun",
+      "meaning": "A building where goods are manufactured using machines.",
+      "synonyms": "plant, workshop, production site",
+      "antonyms": "shop, store, home",
+      "sentence": "The car factory employs thousands of people in the city."
+    },
+    {
+      "id": "623dc834-3db9-4926-a662-08a455a95934",
+      "progress": 0,
+      "word": "fail",
+      "partOfSpeech": "verb",
+      "meaning": "To not succeed in doing something.",
+      "synonyms": "lose, miss, fall short",
+      "antonyms": "succeed, pass, achieve",
+      "sentence": "Do not be afraid to fail; each mistake helps you grow."
+    },
+    {
+      "id": "315ad457-f81b-4d25-8dbb-1b29d22f9370",
+      "progress": 0,
+      "word": "fair",
+      "partOfSpeech": "adjective",
+      "meaning": "Treating people equally and in a just way.",
+      "synonyms": "just, equal, honest",
+      "antonyms": "unfair, biased, unjust",
+      "sentence": "It is not fair to charge extra without a clear reason."
+    },
+    {
+      "id": "a4029701-fe4a-4b30-ba25-d5b278f63067",
+      "progress": 0,
+      "word": "fall",
+      "partOfSpeech": "verb",
+      "meaning": "To drop down from a higher position.",
+      "synonyms": "drop, descend, tumble",
+      "antonyms": "rise, climb, ascend",
+      "sentence": "The leaves fall from the trees in autumn."
+    },
+    {
+      "id": "925744da-5e44-445f-a3a5-f531ffc150f3",
+      "progress": 0,
+      "word": "family",
+      "partOfSpeech": "noun",
+      "meaning": "A group of people related to each other, especially parents and children.",
+      "synonyms": "relatives, household, kin",
+      "antonyms": "strangers, acquaintances",
+      "sentence": "The whole family gathered to celebrate the birth of the new baby."
+    },
+    {
+      "id": "dd601b48-31d1-40fa-bf20-1b4ec12f4a1c",
+      "progress": 0,
+      "word": "fan",
+      "partOfSpeech": "noun",
+      "meaning": "A person who admires and supports a famous person, team, or activity.",
+      "synonyms": "supporter, follower, admirer",
+      "antonyms": "critic, opponent, hater",
+      "sentence": "He is a huge fan of football and never misses a game."
+    },
+    {
+      "id": "184a4258-0272-4a43-8449-e8e09e32f498",
+      "progress": 0,
+      "word": "farm",
+      "partOfSpeech": "noun",
+      "meaning": "A piece of land where crops or animals are raised.",
+      "synonyms": "ranch, plantation, smallholding",
+      "antonyms": "city, factory, office",
+      "sentence": "They visited a hen farm during their school trip."
+    },
+    {
+      "id": "e7b5ad5a-fd0c-46a6-93a1-0d6020f5a405",
+      "progress": 0,
+      "word": "fashion",
+      "partOfSpeech": "noun",
+      "meaning": "A popular style of clothes or behaviour at a certain time.",
+      "synonyms": "style, trend, vogue",
+      "antonyms": "classic, timeless, old-fashioned",
+      "sentence": "She works in the fashion industry as a digital designer."
+    },
+    {
+      "id": "84cda386-3480-41b4-8c67-bbab46e6a152",
+      "progress": 0,
+      "word": "feast",
+      "partOfSpeech": "noun",
+      "meaning": "A large and special meal for many people.",
+      "synonyms": "banquet, celebration meal, spread",
+      "antonyms": "fast, snack, diet",
+      "sentence": "They prepared a feast for the whole neighbourhood."
+    },
+    {
+      "id": "9753e0a4-c600-40eb-9afb-cd814cbe12af",
+      "progress": 0,
+      "word": "fee",
+      "partOfSpeech": "noun",
+      "meaning": "An amount of money paid for a service.",
+      "synonyms": "charge, cost, payment",
+      "antonyms": "refund, free, discount",
+      "sentence": "The school fee for the course must be paid before the start date."
+    },
+    {
+      "id": "f566d116-97f0-4ec2-b416-a932f952d020",
+      "progress": 0,
+      "word": "feel",
+      "partOfSpeech": "verb",
+      "meaning": "To be aware of a physical or emotional sensation.",
+      "synonyms": "sense, experience, notice",
+      "antonyms": "ignore, miss, overlook",
+      "sentence": "She could feel the heat from the fire across the room."
+    },
+    {
+      "id": "10fc89e8-1358-4a3d-8737-f71b301a1daf",
+      "progress": 0,
+      "word": "feeling",
+      "partOfSpeech": "noun",
+      "meaning": "An emotional state or reaction.",
+      "synonyms": "emotion, sensation, mood",
+      "antonyms": "numbness, indifference",
+      "sentence": "He had a strange feeling that something was hidden in the forest."
+    },
+    {
+      "id": "86c27cc1-6b54-4ee1-8838-f2a9446446e1",
+      "progress": 0,
+      "word": "fence",
+      "partOfSpeech": "noun",
+      "meaning": "A structure made of wood or metal that goes around an area.",
+      "synonyms": "barrier, wall, boundary",
+      "antonyms": "opening, gate, entrance",
+      "sentence": "A wooden fence surrounded the garden of the cottage."
+    },
+    {
+      "id": "45ffeb0e-26e2-4604-bcd4-99fad69c7681",
+      "progress": 0,
+      "word": "field",
+      "partOfSpeech": "noun",
+      "meaning": "A large area of land used for growing crops or playing sports.",
+      "synonyms": "meadow, ground, area",
+      "antonyms": "building, room, indoor space",
+      "sentence": "The football field was covered with green grass."
+    },
+    {
+      "id": "5d63cf70-1a19-4056-946e-628dd8d4295a",
+      "progress": 0,
+      "word": "fight",
+      "partOfSpeech": "verb",
+      "meaning": "To use physical force or strong effort against someone or something.",
+      "synonyms": "battle, struggle, compete",
+      "antonyms": "surrender, give up, make peace",
+      "sentence": "The two countries agreed to fight climate change together."
+    },
+    {
+      "id": "5e402ca6-a773-4b95-b624-a30eba65f59f",
+      "progress": 0,
+      "word": "file",
+      "partOfSpeech": "noun",
+      "meaning": "A collection of information stored together, or a tool used for smoothing.",
+      "synonyms": "document, folder, record",
+      "antonyms": "N/A",
+      "sentence": "Save the file on your computer before you close the program."
+    },
+    {
+      "id": "624f59cb-33e3-42c2-ae12-6e625e5058e0",
+      "progress": 0,
+      "word": "fill",
+      "partOfSpeech": "verb",
+      "meaning": "To put something into a container until it is full.",
+      "synonyms": "load, stuff, pack",
+      "antonyms": "empty, drain, remove",
+      "sentence": "Fill the basket with fresh fruit before the guests arrive."
+    },
+    {
+      "id": "036bd697-83b6-48f0-bcfd-34e61604a4b9",
+      "progress": 0,
+      "word": "film",
+      "partOfSpeech": "noun",
+      "meaning": "A story shown on a screen, made by recording moving images.",
+      "synonyms": "movie, motion picture, show",
+      "antonyms": "N/A",
+      "sentence": "The new film about history attracted a large audience."
+    },
+    {
+      "id": "647f757c-8752-4fd4-9d5f-ba722803d3c3",
+      "progress": 0,
+      "word": "finance",
+      "partOfSpeech": "noun",
+      "meaning": "The management of large amounts of money.",
+      "synonyms": "money, economics, funding",
+      "antonyms": "debt, poverty, loss",
+      "sentence": "She studied finance to better understand how banks work."
+    },
+    {
+      "id": "1543d6db-4b2c-4612-b36d-db6ea2ead655",
+      "progress": 0,
+      "word": "finish",
+      "partOfSpeech": "verb",
+      "meaning": "To complete or come to the end of something.",
+      "synonyms": "complete, end, conclude",
+      "antonyms": "start, begin, open",
+      "sentence": "Finish your breakfast before you leave for school."
+    },
+    {
+      "id": "e9a963e9-fc98-48c8-9737-b827106d1588",
+      "progress": 0,
+      "word": "fire",
+      "partOfSpeech": "noun",
+      "meaning": "The flames and heat produced when something burns.",
+      "synonyms": "flame, blaze, inferno",
+      "antonyms": "water, ice, cold",
+      "sentence": "The campers sat around the fire to stay warm in the dark."
+    },
+    {
+      "id": "e2b04aa8-bfc8-4ed2-a467-52c6d40d00fb",
+      "progress": 0,
+      "word": "firework",
+      "partOfSpeech": "noun",
+      "meaning": "A small device that makes a loud noise and bright colours when lit.",
+      "synonyms": "rocket, sparkler, pyrotechnic",
+      "antonyms": "N/A",
+      "sentence": "A firework exploded in the sky above the crowd."
+    },
+    {
+      "id": "d82690e6-4106-4bc1-a0d4-fd539038eef5",
+      "progress": 0,
+      "word": "fix",
+      "partOfSpeech": "verb",
+      "meaning": "To repair something that is broken or not working.",
+      "synonyms": "repair, mend, correct",
+      "antonyms": "break, damage, ruin",
+      "sentence": "Can you fix the fence before it falls down?"
+    },
+    {
+      "id": "c9434e3b-6a9a-4ae7-a29c-d4cbc53113f5",
+      "progress": 0,
+      "word": "flag",
+      "partOfSpeech": "noun",
+      "meaning": "A piece of cloth with a pattern or colour representing a country or group.",
+      "synonyms": "banner, emblem, symbol",
+      "antonyms": "N/A",
+      "sentence": "Each country has its own unique flag."
+    },
+    {
+      "id": "05205c97-edfe-4e15-a612-b0b1e52baee5",
+      "progress": 0,
+      "word": "floor",
+      "partOfSpeech": "noun",
+      "meaning": "The flat surface you walk on inside a building.",
+      "synonyms": "ground, base, surface",
+      "antonyms": "ceiling, roof, top",
+      "sentence": "The floor of the old cottage was made of dark wood."
+    },
+    {
+      "id": "32842017-f137-4711-bbf5-0b036732810d",
+      "progress": 0,
+      "word": "flour",
+      "partOfSpeech": "noun",
+      "meaning": "A white powder made from grain, used to make bread and cakes.",
+      "synonyms": "powder, grain product",
+      "antonyms": "N/A",
+      "sentence": "Mix the flour and egg to make a simple cake batter."
+    },
+    {
+      "id": "cf2f1cd3-17f7-4002-a4a1-7b62366f6e0b",
+      "progress": 0,
+      "word": "flower",
+      "partOfSpeech": "noun",
+      "meaning": "The colourful part of a plant that produces seeds.",
+      "synonyms": "bloom, blossom, petal",
+      "antonyms": "N/A",
+      "sentence": "She planted a flower in the garden for each family member."
+    },
+    {
+      "id": "2048c7e2-5a81-4420-8f19-b09f157992a7",
+      "progress": 0,
+      "word": "follow",
+      "partOfSpeech": "verb",
+      "meaning": "To go after someone or something, or to obey a rule.",
+      "synonyms": "go after, pursue, obey",
+      "antonyms": "lead, ignore, disobey",
+      "sentence": "Follow the guide to find the hidden path through the forest."
+    },
+    {
+      "id": "1e9c06dd-7d90-43c6-a5ca-6e576ae8c270",
+      "progress": 0,
+      "word": "food",
+      "partOfSpeech": "noun",
+      "meaning": "Things that people or animals eat to stay alive and healthy.",
+      "synonyms": "nutrition, meal, nourishment",
+      "antonyms": "poison, starvation",
+      "sentence": "Fresh food from the farm is healthier than packaged items."
+    },
+    {
+      "id": "1ad8d6e9-d2d4-44a5-9ef1-b42850f5bac6",
+      "progress": 0,
+      "word": "foot",
+      "partOfSpeech": "noun",
+      "meaning": "The part of your body at the bottom of your leg.",
+      "synonyms": "base, bottom, lower part",
+      "antonyms": "head, top",
+      "sentence": "He hurt his foot during the football game."
+    },
+    {
+      "id": "81835071-2131-470b-a496-023241f17b6c",
+      "progress": 0,
+      "word": "football",
+      "partOfSpeech": "noun",
+      "meaning": "A sport played between two teams who kick a ball into a goal.",
+      "synonyms": "soccer, the beautiful game",
+      "antonyms": "N/A",
+      "sentence": "Football is the most popular sport in many countries."
+    },
+    {
+      "id": "bd71f65c-5af7-4891-97fa-e7874fbf5437",
+      "progress": 0,
+      "word": "force",
+      "partOfSpeech": "noun",
+      "meaning": "Physical strength or power used to do something.",
+      "synonyms": "power, strength, pressure",
+      "antonyms": "weakness, gentleness, calm",
+      "sentence": "The force of the wind made it hard to drive on the highway."
+    },
+    {
+      "id": "0faee81b-e57d-4883-9b32-7ccc544629e0",
+      "progress": 0,
+      "word": "forest",
+      "partOfSpeech": "noun",
+      "meaning": "A large area of land covered with trees.",
+      "synonyms": "woods, jungle, woodland",
+      "antonyms": "desert, city, plain",
+      "sentence": "The cottage was hidden deep in the forest."
+    },
+    {
+      "id": "464ce9ca-f70e-4666-9d45-b7770d8405bb",
+      "progress": 0,
+      "word": "form",
+      "partOfSpeech": "noun",
+      "meaning": "A printed document with blank spaces to write information.",
+      "synonyms": "document, sheet, questionnaire",
+      "antonyms": "N/A",
+      "sentence": "Fill in the form at the front desk before the interview."
+    },
+    {
+      "id": "a5cac64a-81c5-49bd-814a-a012d3d7f37d",
+      "progress": 0,
+      "word": "forward",
+      "partOfSpeech": "adverb",
+      "meaning": "In the direction you are facing, toward the front.",
+      "synonyms": "ahead, onward, in front",
+      "antonyms": "backward, back, behind",
+      "sentence": "The team moved forward with the plan to build the new bridge."
+    },
+    {
+      "id": "e56cb4e0-85d9-40e3-85c0-4079b4a1c8ce",
+      "progress": 0,
+      "word": "free",
+      "partOfSpeech": "adjective",
+      "meaning": "Not costing any money, or not being controlled by others.",
+      "synonyms": "no cost, independent, available",
+      "antonyms": "expensive, costly, restricted",
+      "sentence": "Children under the age of five can enter the cinema for free."
+    },
+    {
+      "id": "583bbfaf-46d2-40aa-8b93-2020c2e19abe",
+      "progress": 0,
+      "word": "fresh",
+      "partOfSpeech": "adjective",
+      "meaning": "Newly made, or clean and cool.",
+      "synonyms": "new, natural, crisp",
+      "antonyms": "stale, old, rotten",
+      "sentence": "Fresh juice in the morning gives you energy for the day."
+    },
+    {
+      "id": "98892d55-4ddc-4a32-82d8-4049f6fc4a61",
+      "progress": 0,
+      "word": "friend",
+      "partOfSpeech": "noun",
+      "meaning": "A person you like and enjoy being with.",
+      "synonyms": "companion, buddy, pal",
+      "antonyms": "enemy, foe, stranger",
+      "sentence": "She invited her best friend to the birthday celebration."
+    },
+    {
+      "id": "9a66f452-c1f3-415b-8b6c-d96f6eb72083",
+      "progress": 0,
+      "word": "fridge",
+      "partOfSpeech": "noun",
+      "meaning": "A machine that keeps food cold.",
+      "synonyms": "refrigerator, cooler",
+      "antonyms": "oven, heater",
+      "sentence": "Put the fresh fruit in the fridge to keep it cool."
+    },
+    {
+      "id": "344b9ec1-cba8-4756-8c4f-997ea97129c2",
+      "progress": 0,
+      "word": "front",
+      "partOfSpeech": "noun",
+      "meaning": "The part of something that faces forward.",
+      "synonyms": "face, leading side, forepart",
+      "antonyms": "back, rear, behind",
+      "sentence": "She sat at the front of the class so she could see the board clearly."
+    },
+    {
+      "id": "ec318864-3502-42a4-9cd8-b5e6ecb087e0",
+      "progress": 0,
+      "word": "fruit",
+      "partOfSpeech": "noun",
+      "meaning": "A sweet food that grows on trees or plants.",
+      "synonyms": "produce, berry, tropical food",
+      "antonyms": "vegetable, meat, grain",
+      "sentence": "Fruit is an important part of a healthy diet."
+    },
+    {
+      "id": "2d0da2fa-8dab-4e55-9a2a-769c62fec2a7",
+      "progress": 0,
+      "word": "full",
+      "partOfSpeech": "adjective",
+      "meaning": "Containing as much or as many as possible.",
+      "synonyms": "packed, complete, filled",
+      "antonyms": "empty, blank, hollow",
+      "sentence": "The hotel was full during the holiday season."
+    },
+    {
+      "id": "0f92e806-4a70-4af1-902a-200920e9fdee",
+      "progress": 0,
+      "word": "future",
+      "partOfSpeech": "noun",
+      "meaning": "The time that will come after the present.",
+      "synonyms": "tomorrow, upcoming, ahead",
+      "antonyms": "past, history, yesterday",
+      "sentence": "He dreams of a future where everyone has access to clean energy."
+    },
+    {
+      "id": "0cf42d44-fa35-4fff-a771-81a9b35097d0",
+      "progress": 0,
+      "word": "game",
+      "partOfSpeech": "noun",
+      "meaning": "An activity done for fun, with rules and often competition.",
+      "synonyms": "sport, match, contest",
+      "antonyms": "work, chore, task",
+      "sentence": "They played a card game at the camp to pass the time."
+    },
+    {
+      "id": "6cf631a3-5aac-4718-81a5-5ad0c7d50ca0",
+      "progress": 0,
+      "word": "garage",
+      "partOfSpeech": "noun",
+      "meaning": "A building where you keep a car, or a place where cars are repaired.",
+      "synonyms": "car park, workshop, depot",
+      "antonyms": "N/A",
+      "sentence": "He fixed the car in the garage before the long journey."
+    },
+    {
+      "id": "73be03d4-9182-4ba2-b6c6-7d2daf6f7921",
+      "progress": 0,
+      "word": "garden",
+      "partOfSpeech": "noun",
+      "meaning": "A piece of land next to a house where plants and flowers are grown.",
+      "synonyms": "yard, park, plot",
+      "antonyms": "building, room, pavement",
+      "sentence": "Every morning she waters the flowers in the garden."
+    },
+    {
+      "id": "b52eb773-ab2a-4461-aba5-3d17ab856de6",
+      "progress": 0,
+      "word": "gate",
+      "partOfSpeech": "noun",
+      "meaning": "A door in a wall or fence that you can open and close.",
+      "synonyms": "entrance, door, opening",
+      "antonyms": "wall, fence, barrier",
+      "sentence": "The crowd gathered at the gate of the football stadium."
+    },
+    {
+      "id": "69d4e9fb-cd10-4be7-8348-1ad9d9eb5143",
+      "progress": 0,
+      "word": "gather",
+      "partOfSpeech": "verb",
+      "meaning": "To come together in a group, or to collect things.",
+      "synonyms": "collect, assemble, meet",
+      "antonyms": "scatter, separate, spread",
+      "sentence": "Families gather to celebrate important events together."
+    },
+    {
+      "id": "66f1e655-be77-4649-afca-32b2df5987aa",
+      "progress": 0,
+      "word": "general",
+      "partOfSpeech": "adjective",
+      "meaning": "Relating to most situations or people rather than specific ones.",
+      "synonyms": "common, broad, overall",
+      "antonyms": "specific, particular, detailed",
+      "sentence": "In general, fresh food is cheaper at the local market."
+    },
+    {
+      "id": "3d60199b-49a8-4788-9637-a61531b7b669",
+      "progress": 0,
+      "word": "goal",
+      "partOfSpeech": "noun",
+      "meaning": "Something you aim to achieve, or a point scored in a sport.",
+      "synonyms": "aim, target, objective",
+      "antonyms": "failure, miss, loss",
+      "sentence": "Her goal is to finish the coding course before the end of the year."
+    },
+    {
+      "id": "24cefbed-785c-46b1-b8e2-0d126eb6ba84",
+      "progress": 0,
+      "word": "go",
+      "partOfSpeech": "verb",
+      "meaning": "To move from one place to another.",
+      "synonyms": "move, travel, proceed",
+      "antonyms": "stay, stop, remain",
+      "sentence": "Let us go to the beach before the weather changes."
+    },
+    {
+      "id": "54610a9a-0162-435a-972c-bed379891e8a",
+      "progress": 0,
+      "word": "gold",
+      "partOfSpeech": "noun",
+      "meaning": "A valuable, shiny yellow metal used for jewellery and money.",
+      "synonyms": "precious metal, treasure",
+      "antonyms": "N/A",
+      "sentence": "The gold medal is the highest award at the competition."
+    },
+    {
+      "id": "90d36d3e-e73c-4e19-b9af-b1bcaa3b24fb",
+      "progress": 0,
+      "word": "good",
+      "partOfSpeech": "adjective",
+      "meaning": "Of a high quality or a useful standard.",
+      "synonyms": "great, excellent, fine",
+      "antonyms": "bad, poor, terrible",
+      "sentence": "It is good to develop a habit of reading every day."
+    },
+    {
+      "id": "e0ab97b8-5e1e-4e94-80f5-f0e04a75d981",
+      "progress": 0,
+      "word": "government",
+      "partOfSpeech": "noun",
+      "meaning": "The group of people who officially run a country.",
+      "synonyms": "administration, authority, state",
+      "antonyms": "public, people, citizens",
+      "sentence": "The government decided to increase the budget for education."
+    },
+    {
+      "id": "c1d3dbda-783b-4a7a-b56e-3e2f192f363b",
+      "progress": 0,
+      "word": "grade",
+      "partOfSpeech": "noun",
+      "meaning": "A mark or score given for school work, or a level or class.",
+      "synonyms": "mark, score, level",
+      "antonyms": "N/A",
+      "sentence": "She received the top grade in her history exam."
+    },
+    {
+      "id": "bb2fc329-8806-461f-96dc-9d21b404c9d9",
+      "progress": 0,
+      "word": "grass",
+      "partOfSpeech": "noun",
+      "meaning": "The short green plant that covers lawns and fields.",
+      "synonyms": "lawn, turf, green",
+      "antonyms": "concrete, pavement, soil",
+      "sentence": "The children played in the grass outside the cottage."
+    },
+    {
+      "id": "14708f7b-6c71-40a1-b123-f779585af534",
+      "progress": 0,
+      "word": "great",
+      "partOfSpeech": "adjective",
+      "meaning": "Unusually good or impressive.",
+      "synonyms": "amazing, wonderful, excellent",
+      "antonyms": "terrible, awful, bad",
+      "sentence": "It takes great energy and focus to become a professional athlete."
+    },
+    {
+      "id": "365e159e-5269-44c4-b8cf-287385d2b0e8",
+      "progress": 0,
+      "word": "green",
+      "partOfSpeech": "adjective",
+      "meaning": "Having the colour of grass or leaves.",
+      "synonyms": "emerald, olive, lime",
+      "antonyms": "red, brown, dry",
+      "sentence": "The forest was full of green trees and hidden paths."
+    },
+    {
+      "id": "2860995e-96b2-4c32-86d0-12a340d1b2ce",
+      "progress": 0,
+      "word": "group",
+      "partOfSpeech": "noun",
+      "meaning": "A number of people or things that are together.",
+      "synonyms": "team, cluster, set",
+      "antonyms": "individual, solo, one",
+      "sentence": "A group of students visited the bookshop together."
+    },
+    {
+      "id": "81bfd82f-abbe-4695-bf63-079025d4e6fb",
+      "progress": 0,
+      "word": "grow",
+      "partOfSpeech": "verb",
+      "meaning": "To increase in size or amount over time.",
+      "synonyms": "expand, develop, increase",
+      "antonyms": "shrink, decrease, die",
+      "sentence": "The flowers grow faster when you water them every day."
+    },
+    {
+      "id": "bc642a9b-3c56-466e-a68b-f62f9bd98610",
+      "progress": 0,
+      "word": "guess",
+      "partOfSpeech": "verb",
+      "meaning": "To give an answer when you are not sure if it is correct.",
+      "synonyms": "estimate, predict, suppose",
+      "antonyms": "know, confirm, verify",
+      "sentence": "I can only guess the correct answer without more information."
+    },
+    {
+      "id": "ffa7f2a6-427c-4d55-bf26-242acff2fb5d",
+      "progress": 0,
+      "word": "guide",
+      "partOfSpeech": "noun",
+      "meaning": "A person who shows others the way, or a book with information.",
+      "synonyms": "leader, helper, advisor",
+      "antonyms": "follower, student, traveller",
+      "sentence": "The guide led the group through the forest safely."
+    },
+    {
+      "id": "456e249e-a44e-41ae-a7b0-1ed102554222",
+      "progress": 0,
+      "word": "habit",
+      "partOfSpeech": "noun",
+      "meaning": "Something you do regularly, often without thinking about it.",
+      "synonyms": "routine, custom, practice",
+      "antonyms": "choice, effort, exception",
+      "sentence": "Reading before bed is a great habit to develop."
+    },
+    {
+      "id": "2ac6820d-edc6-4716-8357-ad86a7a931aa",
+      "progress": 0,
+      "word": "hair",
+      "partOfSpeech": "noun",
+      "meaning": "The thin threads growing from the skin of a person or animal.",
+      "synonyms": "locks, strands, fur",
+      "antonyms": "bald, skin, scalp",
+      "sentence": "The wind blew her hair across her face as she stood at the edge."
+    },
+    {
+      "id": "705510b6-0dac-4b83-aed7-98610be9a230",
+      "progress": 0,
+      "word": "hand",
+      "partOfSpeech": "noun",
+      "meaning": "The part at the end of your arm with fingers.",
+      "synonyms": "palm, fist, grip",
+      "antonyms": "foot, toe",
+      "sentence": "She raised her hand to ask a question during the class."
+    },
+    {
+      "id": "aa269707-d76f-4dd7-82b7-3e9ed534a0c0",
+      "progress": 0,
+      "word": "handbag",
+      "partOfSpeech": "noun",
+      "meaning": "A small bag carried by a woman to hold personal items.",
+      "synonyms": "purse, bag, clutch",
+      "antonyms": "backpack, briefcase",
+      "sentence": "She put her card, phone, and keys into her handbag."
+    },
+    {
+      "id": "fd4e1ac5-7624-458e-bec1-2daa0da9907d",
+      "progress": 0,
+      "word": "happiness",
+      "partOfSpeech": "noun",
+      "meaning": "The feeling of being happy and content.",
+      "synonyms": "joy, delight, pleasure",
+      "antonyms": "sadness, sorrow, misery",
+      "sentence": "Spending time with family brings true happiness."
+    },
+    {
+      "id": "9550b599-f54c-45fa-a32f-df53c0fa0327",
+      "progress": 0,
+      "word": "hard",
+      "partOfSpeech": "adjective",
+      "meaning": "Solid and not easily broken or bent, or difficult to do.",
+      "synonyms": "firm, tough, difficult",
+      "antonyms": "soft, easy, simple",
+      "sentence": "It is hard to balance school, housework, and hobbies."
+    },
+    {
+      "id": "e969d4a9-d243-4b74-a3b7-f41294d2c12d",
+      "progress": 0,
+      "word": "harmony",
+      "partOfSpeech": "noun",
+      "meaning": "A pleasing combination of things, or agreement between people.",
+      "synonyms": "balance, peace, agreement",
+      "antonyms": "conflict, discord, chaos",
+      "sentence": "The team worked in harmony to finish the project on time."
+    },
+    {
+      "id": "ac0d6f50-1ba7-4a11-9aa2-e0cb8f8c38f7",
+      "progress": 0,
+      "word": "hat",
+      "partOfSpeech": "noun",
+      "meaning": "A covering worn on your head.",
+      "synonyms": "cap, headwear, bonnet",
+      "antonyms": "N/A",
+      "sentence": "He wore a hat to protect his head from the heat of the sun."
+    },
+    {
+      "id": "12434e09-1738-4528-a4f1-d183ab6601eb",
+      "progress": 0,
+      "word": "head",
+      "partOfSpeech": "noun",
+      "meaning": "The top part of your body with your brain, face, and hair.",
+      "synonyms": "top, leader, mind",
+      "antonyms": "foot, base, bottom",
+      "sentence": "She is the head of the finance department at the company."
+    },
+    {
+      "id": "c91a69b4-5969-404f-9224-bb39d014e2c4",
+      "progress": 0,
+      "word": "healthy",
+      "partOfSpeech": "adjective",
+      "meaning": "In good physical and mental condition.",
+      "synonyms": "fit, well, strong",
+      "antonyms": "sick, unhealthy, ill",
+      "sentence": "A healthy body starts with a healthy diet and regular exercise."
+    },
+    {
+      "id": "57f8da73-1e54-4f0a-96c9-05db02d2bc05",
+      "progress": 0,
+      "word": "heart",
+      "partOfSpeech": "noun",
+      "meaning": "The organ in your chest that pumps blood, or the centre of emotions.",
+      "synonyms": "core, centre, soul",
+      "antonyms": "brain, mind, edge",
+      "sentence": "The heart pumps blood to every part of the body."
+    },
+    {
+      "id": "79b6f2bc-7dbd-46f0-acea-7fa5caa465d8",
+      "progress": 0,
+      "word": "heat",
+      "partOfSpeech": "noun",
+      "meaning": "The quality of being hot, or the energy that makes things hot.",
+      "synonyms": "warmth, temperature, fire",
+      "antonyms": "cold, chill, freeze",
+      "sentence": "The heat of the fire kept them warm through the dark night."
+    },
+    {
+      "id": "6fa878a6-7d89-4732-97c9-8b4188c77782",
+      "progress": 0,
+      "word": "heavy",
+      "partOfSpeech": "adjective",
+      "meaning": "Weighing a lot, or hard to lift.",
+      "synonyms": "weighty, massive, bulky",
+      "antonyms": "light, thin, feathery",
+      "sentence": "The basket of food was too heavy for one person to carry."
+    },
+    {
+      "id": "be2c345a-69c7-4b30-a949-f06ede5d18ea",
+      "progress": 0,
+      "word": "height",
+      "partOfSpeech": "noun",
+      "meaning": "How tall or high something or someone is.",
+      "synonyms": "altitude, tallness, elevation",
+      "antonyms": "depth, width, length",
+      "sentence": "He had reached a height of six feet by the age of sixteen."
+    },
+    {
+      "id": "648f49cd-9560-4a92-ba4e-a81078943a11",
+      "progress": 0,
+      "word": "help",
+      "partOfSpeech": "verb",
+      "meaning": "To make it easier for someone to do something.",
+      "synonyms": "assist, support, aid",
+      "antonyms": "hinder, harm, hurt",
+      "sentence": "She offered to help her neighbour carry the heavy bags."
+    },
+    {
+      "id": "a4a14f65-898b-4750-9b46-5875a300ef09",
+      "progress": 0,
+      "word": "hen",
+      "partOfSpeech": "noun",
+      "meaning": "A female chicken kept on a farm.",
+      "synonyms": "female chicken, poultry bird",
+      "antonyms": "rooster, cockerel",
+      "sentence": "The hen laid an egg near the fence of the farm."
+    },
+    {
+      "id": "9caa9557-e9f5-4736-bea4-079a342a7268",
+      "progress": 0,
+      "word": "hidden",
+      "partOfSpeech": "adjective",
+      "meaning": "Not seen or known about.",
+      "synonyms": "concealed, secret, invisible",
+      "antonyms": "visible, obvious, open",
+      "sentence": "The path to the cottage was hidden behind a wall of green trees."
+    },
+    {
+      "id": "a57653b9-9303-44f0-bbe3-3dd4f71f3fbd",
+      "progress": 0,
+      "word": "highway",
+      "partOfSpeech": "noun",
+      "meaning": "A main road, especially one connecting towns or cities.",
+      "synonyms": "motorway, freeway, main road",
+      "antonyms": "alley, path, trail",
+      "sentence": "They drove along the highway to reach the capital in two hours."
+    },
+    {
+      "id": "aa8cd014-ade5-4dea-9c80-4b89baf8507c",
+      "progress": 0,
+      "word": "hill",
+      "partOfSpeech": "noun",
+      "meaning": "A raised area of land, not as high as a mountain.",
+      "synonyms": "slope, rise, mound",
+      "antonyms": "valley, flat, plain",
+      "sentence": "The cottage sat on the top of a quiet hill."
+    },
+    {
+      "id": "2e85db29-d6e4-4eca-997b-ea77a27e3b1e",
+      "progress": 0,
+      "word": "history",
+      "partOfSpeech": "noun",
+      "meaning": "The study of past events and how they shaped the world.",
+      "synonyms": "past, record, chronicle",
+      "antonyms": "future, present, fiction",
+      "sentence": "History teaches us about the events that shaped today's world."
+    },
+    {
+      "id": "72de4b4b-bcf5-406a-a93d-242559dc0396",
+      "progress": 0,
+      "word": "hole",
+      "partOfSpeech": "noun",
+      "meaning": "An opening or empty space in something.",
+      "synonyms": "gap, opening, cavity",
+      "antonyms": "solid, surface, patch",
+      "sentence": "There was a hole in the fence that the insect had made."
+    },
+    {
+      "id": "c29f3d4f-b798-4c73-a461-1c915be90e49",
+      "progress": 0,
+      "word": "holiday",
+      "partOfSpeech": "noun",
+      "meaning": "A period of time when you are not working or studying, used for rest.",
+      "synonyms": "vacation, break, trip",
+      "antonyms": "workday, school day",
+      "sentence": "They planned a holiday to a small island for the summer."
+    },
+    {
+      "id": "dcf88493-7cc9-45da-a27b-c33350dc3811",
+      "progress": 0,
+      "word": "home",
+      "partOfSpeech": "noun",
+      "meaning": "The place where you live and feel you belong.",
+      "synonyms": "house, residence, dwelling",
+      "antonyms": "workplace, school, away",
+      "sentence": "After a long journey, she finally arrived home."
+    },
+    {
+      "id": "07256027-427a-41e5-98f6-fb78e23cafb4",
+      "progress": 0,
+      "word": "hotel",
+      "partOfSpeech": "noun",
+      "meaning": "A building where people pay to sleep and eat when travelling.",
+      "synonyms": "inn, guesthouse, resort",
+      "antonyms": "home, apartment",
+      "sentence": "They booked a hotel room near the beach for three nights."
+    },
+    {
+      "id": "a54ef4bb-d3f2-4da5-83fb-a9cd2d7ccb89",
+      "progress": 0,
+      "word": "hour",
+      "partOfSpeech": "noun",
+      "meaning": "A unit of time equal to sixty minutes.",
+      "synonyms": "60 minutes, time period",
+      "antonyms": "second, moment, instant",
+      "sentence": "The journey from the city to the island took about an hour."
+    },
+    {
+      "id": "88aee03d-4cb1-4e18-8936-14e40d798352",
+      "progress": 0,
+      "word": "house",
+      "partOfSpeech": "noun",
+      "meaning": "A building where people, especially a family, live.",
+      "synonyms": "home, residence, dwelling",
+      "antonyms": "office, factory, school",
+      "sentence": "The old house had a big garden and a wooden fence."
+    },
+    {
+      "id": "0c99b002-039d-49db-8f5a-1ae2b4da0801",
+      "progress": 0,
+      "word": "housework",
+      "partOfSpeech": "noun",
+      "meaning": "Cleaning and other tasks done to keep a home clean and tidy.",
+      "synonyms": "chores, cleaning, domestic work",
+      "antonyms": "leisure, hobby, rest",
+      "sentence": "They shared the housework to make sure the home stayed clean."
+    },
+    {
+      "id": "e3492657-f7c7-4fc9-886f-fea620a77038",
+      "progress": 0,
+      "word": "how",
+      "partOfSpeech": "adverb",
+      "meaning": "In what way, or to what extent.",
+      "synonyms": "in what way, by what means",
+      "antonyms": "N/A",
+      "sentence": "She explained how to fix the broken file on the computer."
+    },
+    {
+      "id": "95b62c5a-3299-4b70-93cf-ac9150fa5b35",
+      "progress": 0,
+      "word": "hunger",
+      "partOfSpeech": "noun",
+      "meaning": "The uncomfortable feeling caused by needing food.",
+      "synonyms": "starvation, appetite, need for food",
+      "antonyms": "fullness, satisfaction, plenty",
+      "sentence": "After the long trip, hunger made her stop at the first restaurant."
+    },
+    {
+      "id": "e52490ac-4192-434d-959b-22a643f513f2",
+      "progress": 0,
+      "word": "hurry",
+      "partOfSpeech": "verb",
+      "meaning": "To move or do things faster than usual.",
+      "synonyms": "rush, speed up, dash",
+      "antonyms": "slow down, delay, wait",
+      "sentence": "She had to hurry to reach the airport before the flight."
+    },
+    {
+      "id": "363106ed-e1e9-4cb4-9344-91d64751b873",
+      "progress": 0,
+      "word": "hurt",
+      "partOfSpeech": "verb",
+      "meaning": "To cause pain or injury to someone.",
+      "synonyms": "harm, injure, wound",
+      "antonyms": "heal, help, soothe",
+      "sentence": "He hurt his hand when he tried to fix the broken fence."
+    },
+    {
+      "id": "cb9c934e-8d53-43c5-8231-7365487fa099",
+      "progress": 0,
+      "word": "husband",
+      "partOfSpeech": "noun",
+      "meaning": "A man who is married.",
+      "synonyms": "spouse, partner, man",
+      "antonyms": "wife, single, bachelor",
+      "sentence": "Her husband cooked a delicious breakfast every Sunday morning."
+    },
+    {
+      "id": "6a966688-4ac2-4580-9681-6f79522556da",
+      "progress": 0,
+      "word": "idea",
+      "partOfSpeech": "noun",
+      "meaning": "A thought or plan in your mind.",
+      "synonyms": "thought, concept, plan",
+      "antonyms": "confusion, ignorance, blank",
+      "sentence": "He came up with the idea of using solar energy for the factory."
+    },
+    {
+      "id": "b16bff13-a2e2-42c3-bfb5-b358cf54d1b5",
+      "progress": 0,
+      "word": "include",
+      "partOfSpeech": "verb",
+      "meaning": "To make someone or something part of a group.",
+      "synonyms": "add, contain, involve",
+      "antonyms": "exclude, leave out, remove",
+      "sentence": "The price of the course should include all the materials."
+    },
+    {
+      "id": "7a02f44c-572c-470e-94f4-8d476f1471e8",
+      "progress": 0,
+      "word": "increase",
+      "partOfSpeech": "verb",
+      "meaning": "To become or make something greater in number, size, or amount.",
+      "synonyms": "grow, rise, expand",
+      "antonyms": "decrease, reduce, fall",
+      "sentence": "The cost of food has increased a lot this century."
+    },
+    {
+      "id": "8a53e6e0-3b91-489a-a644-d278bf601081",
+      "progress": 0,
+      "word": "index",
+      "partOfSpeech": "noun",
+      "meaning": "An alphabetical list of items at the end of a book, or a measure.",
+      "synonyms": "list, contents, indicator",
+      "antonyms": "N/A",
+      "sentence": "Check the index at the back of the book to find the correct page."
+    },
+    {
+      "id": "94dd57ca-23db-4558-929e-bfd1c083403f",
+      "progress": 0,
+      "word": "industry",
+      "partOfSpeech": "noun",
+      "meaning": "The production of goods in factories, or a particular type of business.",
+      "synonyms": "manufacturing, trade, sector",
+      "antonyms": "leisure, hobby, nature",
+      "sentence": "The technology industry is growing faster than any other sector."
+    },
+    {
+      "id": "2390558a-a9ea-4cda-9794-9b1dc925d97b",
+      "progress": 0,
+      "word": "information",
+      "partOfSpeech": "noun",
+      "meaning": "Facts or details about a subject.",
+      "synonyms": "data, facts, knowledge",
+      "antonyms": "ignorance, misinformation",
+      "sentence": "The internet is the easiest way to find information today."
+    },
+    {
+      "id": "0f9af3d5-6c3a-42d0-8788-1a9831e850b2",
+      "progress": 0,
+      "word": "ink",
+      "partOfSpeech": "noun",
+      "meaning": "A coloured liquid used for writing or printing.",
+      "synonyms": "dye, pigment, fluid",
+      "antonyms": "N/A",
+      "sentence": "The artist used coloured ink to draw detailed patterns on paper."
+    },
+    {
+      "id": "ccf49cf0-337b-408b-a709-4f9f336946f6",
+      "progress": 0,
+      "word": "inside",
+      "partOfSpeech": "preposition",
+      "meaning": "In the inner part of something.",
+      "synonyms": "within, interior, inner",
+      "antonyms": "outside, exterior, beyond",
+      "sentence": "It was raining, so they decided to stay inside."
+    },
+    {
+      "id": "3e79fdf4-ae89-4182-a560-487abb665d69",
+      "progress": 0,
+      "word": "insect",
+      "partOfSpeech": "noun",
+      "meaning": "A small creature with six legs and usually wings.",
+      "synonyms": "bug, creature, arthropod",
+      "antonyms": "mammal, bird, fish",
+      "sentence": "A small insect landed on the flower in the garden."
+    },
+    {
+      "id": "6d3e77ba-288a-4d01-a0ee-b51462b1d530",
+      "progress": 0,
+      "word": "interest",
+      "partOfSpeech": "noun",
+      "meaning": "A feeling of wanting to know or learn about something.",
+      "synonyms": "curiosity, attention, enthusiasm",
+      "antonyms": "boredom, indifference, dislike",
+      "sentence": "She developed an interest in coding at a young age."
+    },
+    {
+      "id": "d23ae0ad-1722-44d2-aa5c-6486e254ea11",
+      "progress": 0,
+      "word": "internet",
+      "partOfSpeech": "noun",
+      "meaning": "A global system that connects computers and allows sharing of information.",
+      "synonyms": "web, online network, cyberspace",
+      "antonyms": "offline, paper, physical world",
+      "sentence": "The internet makes it possible to take a course from any country."
+    },
+    {
+      "id": "fdc44025-2e45-4888-ad2b-78400de57896",
+      "progress": 0,
+      "word": "interview",
+      "partOfSpeech": "noun",
+      "meaning": "A meeting where someone is asked questions for a job or news story.",
+      "synonyms": "meeting, discussion, question session",
+      "antonyms": "monologue, solo, silence",
+      "sentence": "He prepared carefully for the job interview at the technology company."
+    },
+    {
+      "id": "061354a3-fb48-40ca-858c-c92e6e5e9bb6",
+      "progress": 0,
+      "word": "introduce",
+      "partOfSpeech": "verb",
+      "meaning": "To present someone to another person for the first time.",
+      "synonyms": "present, bring in, show",
+      "antonyms": "end, remove, withdraw",
+      "sentence": "The coach introduced the new athlete to the rest of the team."
+    },
+    {
+      "id": "e8136697-3090-4e4e-bed2-a86ae3d0066b",
+      "progress": 0,
+      "word": "invent",
+      "partOfSpeech": "verb",
+      "meaning": "To create or design something that did not exist before.",
+      "synonyms": "create, design, discover",
+      "antonyms": "copy, destroy, take",
+      "sentence": "She hopes to invent a digital tool that helps students learn faster."
+    },
+    {
+      "id": "a35b0aa8-90de-40f3-905f-4183ab1b9a7e",
+      "progress": 0,
+      "word": "invite",
+      "partOfSpeech": "verb",
+      "meaning": "To ask someone to come to a place or event.",
+      "synonyms": "ask, welcome, request",
+      "antonyms": "exclude, dismiss, ban",
+      "sentence": "They decided to invite the whole class to the celebration."
+    },
+    {
+      "id": "88c04dcc-b856-469e-b8f1-e71e95721785",
+      "progress": 0,
+      "word": "iron",
+      "partOfSpeech": "noun",
+      "meaning": "A heavy metal used to make tools, or a device used to smooth clothes.",
+      "synonyms": "metal, pressing tool",
+      "antonyms": "N/A",
+      "sentence": "He used the iron to press his shirt before the interview."
+    },
+    {
+      "id": "424ace2b-9727-47e7-bf39-6a985ec6e071",
+      "progress": 0,
+      "word": "island",
+      "partOfSpeech": "noun",
+      "meaning": "A piece of land completely surrounded by water.",
+      "synonyms": "isle, atoll, landmass",
+      "antonyms": "continent, mainland",
+      "sentence": "The small island had clear water and beautiful beaches."
+    },
+    {
+      "id": "18493a3f-ac6c-4a5e-9fd8-2c74834de4d6",
+      "progress": 0,
+      "word": "item",
+      "partOfSpeech": "noun",
+      "meaning": "A single thing or unit in a list or group.",
+      "synonyms": "thing, object, piece",
+      "antonyms": "whole, set, collection",
+      "sentence": "Each item on the shopping list was crossed off one by one."
+    },
+    {
+      "id": "e3530318-5221-426b-b001-5dca3eb64f37",
+      "progress": 0,
+      "word": "job",
+      "partOfSpeech": "noun",
+      "meaning": "The work that someone does to earn money.",
+      "synonyms": "work, occupation, career",
+      "antonyms": "hobby, leisure, unemployment",
+      "sentence": "After the interview, she was offered the job the very next day."
+    },
+    {
+      "id": "b4e36b6c-7a5c-4424-ad30-ed41d9943662",
+      "progress": 0,
+      "word": "join",
+      "partOfSpeech": "verb",
+      "meaning": "To connect things or become part of a group.",
+      "synonyms": "connect, link, attach",
+      "antonyms": "separate, leave, disconnect",
+      "sentence": "He decided to join the coding club at the beginning of the year."
+    },
+    {
+      "id": "5dce44da-ced8-42b8-a972-b8dd60367b46",
+      "progress": 0,
+      "word": "journey",
+      "partOfSpeech": "noun",
+      "meaning": "Travelling from one place to another.",
+      "synonyms": "trip, travel, voyage",
+      "antonyms": "stay, stop, rest",
+      "sentence": "Every great journey begins with one small step forward."
+    },
+    {
+      "id": "5dc0f008-90cf-4f81-93ef-f9c5a0b15fcc",
+      "progress": 0,
+      "word": "joy",
+      "partOfSpeech": "noun",
+      "meaning": "A feeling of great happiness or pleasure.",
+      "synonyms": "happiness, delight, pleasure",
+      "antonyms": "sadness, sorrow, grief",
+      "sentence": "She felt pure joy when she saw the fireworks light up the dark sky."
+    },
+    {
+      "id": "546fd961-27ec-434d-8447-4dce48acf29b",
+      "progress": 0,
+      "word": "juice",
+      "partOfSpeech": "noun",
+      "meaning": "A drink made from fruits or vegetables.",
+      "synonyms": "drink, liquid, beverage",
+      "antonyms": "solid, dry, powder",
+      "sentence": "He drank a glass of fresh orange juice after his morning exercise."
+    },
+    {
+      "id": "755a33c4-e64c-4684-bc68-642a4afea390",
+      "progress": 0,
+      "word": "jump",
+      "partOfSpeech": "verb",
+      "meaning": "To push yourself up into the air with your legs.",
+      "synonyms": "leap, spring, bound",
+      "antonyms": "fall, drop, land",
+      "sentence": "She jumped with joy when she heard she had passed the exam."
+    }
+  ],
+  "contextPassage": {
+    "title": "The Girl With a Basket Full of Ideas",
+    "text": "On the morning of an early spring day, a sixteen-year-old student named Ayla hurried out of her house with a handbag full of ideas. She had accepted a challenge: to follow her dream of becoming a digital artist and create something great before the end of the year.\n\nShe crossed the old bridge at the edge of her district and walked forward along the highway that led to the city centre. A cool, fresh breeze blew her hair across her face. She could feel the energy of the world waking up around her — insects humming near flowers in the grass, a hen scratching near a wooden fence at a farm, and the distant sound of a crowd gathering at the football field.\n\nAt the bookshop, Ayla borrowed a comic about a famous artist who had invented a new style of ink drawing. She sat on a bench near the garden gate and began to read. Each page attracted her attention and increased her interest. \"I want to invent something, too,\" she thought. \"Not just copy — but create.\"\n\nBy midday, the sun had grown heavy with heat. She entered a small bar and ordered a bowl of soup and a glass of fresh juice, checking the bill before she paid with the correct amount. The menu included a cheap dessert — a slice of cake — and she decided to accept it as a reward.\n\nAfter breakfast the next day, her husband — wait, no. Ayla was only sixteen. But her adult neighbour, a director at a small digital company, had invited her to an interview. She ironed her green dress, fixed her hat, and arranged her files in order. She filled a basket with fruit for the journey and booked a hotel near the airport just in case.\n\nAt the interview, she was asked to describe her career goals, explain how she would develop a digital tool, and display her work on a screen. The audience in the room — three judges — listened with clear interest. She expressed her idea with balance and harmony: to build an app that would guide students through history, culture, and language from any country on every continent.\n\n\"What would be the cost?\" one judge asked.\n\"The fee would be fair and affordable,\" she said. \"No extra charge.\"\n\"And what is your goal?\"\n\"My goal is to make education equal for every citizen,\" she answered, \"especially in areas where the environment and distance make it hard to gather in a class.\"\n\nThey cheered. A cheerleader could not have done better.\n\nShe did not fail. She was offered the job. The condition was clear: the position would begin the following month and include full finance for the project. She felt a rush of joy so strong it filled her heart from edge to edge.\n\nOn the way home, she passed the cinema, the football stadium where a fan was waving a flag, and the busy market full of food, gold jewellery, and items from every culture. She bought a flower for her mother and a comic for herself, and she stopped to watch a firework burst over the hill as the sky turned dark.\n\nThat night, inside the warm cottage she shared with her family, she wrote in her file: \"Today is a date I will remember for a century. Today, my journey truly begins.\"\n\nShe checked the index of her new course book, covered it with her hand, and smiled. The future, she decided, would be full of energy, great effort, and endless possibility. Every great city starts with one idea. Every great career starts with one brave choice."
+  }
+}

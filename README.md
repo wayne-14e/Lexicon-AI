@@ -9,97 +9,63 @@ Standard flashcards and static word lists often fail because they lack **situati
 
 ---
 
-## ✨ Core Features & Workflow
+## ✨ Core Features & Evolution 2.0
 
-### 🖋️ 1. Academic Scratchpad (The Pre-Journal Phase)
-The **Scratchpad** is your cognitive loading zone.
-- **Auto-Syncing**: Every keystroke is saved to your local browser storage instantly.
-- **Drafting Tool**: Use it to jot down words you encounter in readings or phonetic notes before they are "formalized" into a journal.
+### 🏛️ 1. Scholarly Archives (Pre-built Collections)
+Access curated, high-stakes vocabulary sets designed for immediate mastery.
+- **IELTS Levels**: Progressive collections from A1 to C2.
+- **SAT Mastery**: Targeted datasets like the College Panda 400 and Erica Vocabulary lists.
+- **Token-Based Unlocking**: Spend your hard-earned tokens to permanently unlock advanced academic archives.
 
-### 🤖 2. Intelligent AI Assembly
-Stop manual data entry. Input a raw list of words (comma or line-separated), and the **Assembly Engine** (`gemini-3-flash-preview`) does the rest:
-- **Simplified Definitions**: Definitions that explain the *concept*, not just the word.
-- **Semantic Equivalents**: Grouping everyday synonyms for better recall.
-- **Memorable Context**: Generates quirky, unique sentences designed to trigger "episodic memory."
+### 📄 2. AI Document Extractor (Harvesting Engine)
+Transform your reading materials into structured journals instantly.
+- **Multi-Format Support**: Upload PDF, DocX, or TXT files.
+- **Gemini-Powered Extraction**: Lexicon uses Gemini Pro to harvest the most academically significant words from your documents.
+- **Seamless Integration**: Review and edit harvested words before they are formalized into your permanent repository.
 
-### 📝 3. Linguistic Synthesis (Editing & Refilling)
-Lexicon now supports high-fidelity word editing.
-- **Single-Word Refactor**: Click the "Pen" icon on any lexeme to change the word.
-- **AI-Powered Refill**: Once a word is edited, the AI automatically regenerates the Part of Speech, Definition, Synonyms, and Usage Sentence to match the new entry.
+### 🤖 3. Intelligent AI Assembly
+Input a raw list of words, and the **Assembly Engine** (`gemini-3-flash`) handles the rest:
+- **Simplified Definitions**: Explaining the *concept*, not just the word.
+- **Semantic Equivalents**: Grouping synonyms for better recall.
+- **Memorable Context**: Generates unique, episodic memory triggers.
 
-### 📈 4. Visual Mastery Architecture
-Track your progress with academic precision.
-- **Collection Progress**: Every journal card on the dashboard features a mastery bar showing the average knowledge level of the set.
-- **Circular Mastery Indicators**: Inside each journal, a sophisticated circular progress indicator visualizes your current proficiency level (Introductory, Developing, or Proficient).
+### 📖 4. Situational Synthesis (Context Learning)
+Using AI, Lexicon can synthesize an entire collection into a single, coherent narrative.
+- **Narrative Mastery**: Weaves your vocabulary into a story or scholarly article.
+- **Visual Highlighting**: In "Context Mode," words feature tooltips showing how lexemes interact.
 
 ### 🔊 5. AI-Synthesized Pronunciation
-Leveraging `gemini-2.5-flash-preview-tts`, the system provides high-fidelity audio for every word. 
-- **Row-Level Playback**: Listen to pronunciations directly from your collection tables.
-- **Phonetic Assessment**: Audio support integrated into Flashcard Mode to bridge the gap between reading and speaking.
+Leveraging high-fidelity TTS, the system provides audio for every word to bridge the gap between reading and speaking.
 
 ### 🔍 6. Global Lexical Search
-Never lose a word again. The **Unified Repository Search** indexes every word across every journal you have ever created.
-- **Instant Lookup**: Start typing in the header to find a "lexeme" and see exactly which collection it belongs to.
-
-### 📖 7. Situational Synthesis (Context Learning)
-The crown jewel of the platform. Using **Gemini 3 Flash**, Lexicon AI can synthesize an entire collection into a single, coherent narrative.
-- **Narrative Mastery**: It weaves all your vocabulary words into a story or scholarly article.
-- **Visual Highlighting**: In "Context Mode," words are automatically highlighted with tooltips to see how lexemes interact.
+The **Unified Repository Search** indexes every word across every journal you have ever created.
 
 ---
 
-## 🎉 Major Update 2.0: The Lexicon Evolution
+## 🛠️ System Reliability & UX Refinements
 
-### 🔄 Cross-Device Synchronization
-- **Database Integration**: Your vocabulary journal now syncs seamlessly across all devices through a robust database backend.
-- **Multi-Device Responsiveness**: Learn anywhere, on any device - desktop, tablet, or mobile with a fully responsive design.
+### 🪙 Robust Token Ecosystem
+- **Atomic Persistence**: Tokens are managed via atomic database transactions, ensuring your balance is never lost or overwritten.
+- **Earn Through Learning**: Gain tokens through games, streaks, and sessions.
+- **Motivating Streaks**: Earn +10 tokens daily for consistent learning.
 
-### 🎨 New Design & Branding
-- **Modern UI/UX**: Complete redesign with enhanced visual hierarchy and user experience.
-- **New Logo**: Fresh branding that reflects the academic excellence and technological sophistication of Lexicon AI.
+### 🔐 Refined Authentication
+- **Identity Integrity**: Pre-flight checks prevent duplicate usernames and provide immediate feedback for existing email accounts.
+- **Silent Failure Prevention**: Enhanced UI feedback ensures you never wait for a confirmation email that wasn't sent.
 
-### 🎮 Matching Game
-- **Synonym & Antonym Challenges**: Test your vocabulary knowledge with an engaging matching game.
-- **Gamified Learning**: Make vocabulary acquisition fun and interactive through competitive gameplay.
-
-### 🤖 Lexy - Your Erudite AI Assistant
-- **Intelligent Guidance**: Meet Lexy, your personal AI tutor that provides contextual learning support.
-- **Adaptive Learning**: Lexy adapts to your learning style and provides personalized recommendations.
-
-### 🪙 Token System
-- **Earn Through Learning**: Gain tokens by completing flashcard sessions and matching games.
-- **Daily Streak Rewards**: Maintain your learning streak and earn +10 tokens daily as motivation.
-
-### 🔥 Daily Streak System
-- **Motivation Engine**: Keep users engaged with a streak counter that rewards consistent learning.
-- **Visual Progress**: Track your consecutive learning days and build lasting habits.
-
-### 📊 Enhanced Progress Tracking
-- **Session Feedback**: Receive detailed feedback after each learning session.
-- **Performance Analytics**: Comprehensive tracking of your vocabulary mastery and learning patterns.
-
-### ✅ Improved Validation
-- **Error Reduction**: Better input validation and error handling throughout the application.
-- **Smoother Experience**: Fewer interruptions and more reliable performance.
-
-### 📅 Daily Word Feature
-- **Random Word Discovery**: Start your day with a new academic word on the home page.
-- **Continuous Learning**: Expand your vocabulary organically with daily curated words.
-
-### 🛠️ Enhanced AI Reliability
-- **Model Rotation**: Intelligent model switching to avoid service interruptions.
-- **Fallback Mechanisms**: Automatic failover to prevent 503 UNAVAILABLE and usage limit errors.
-- **Same Powerful Models**: Still powered by Gemini 3 Flash and Gemini 2.6 Flash TTS, now more reliable than ever.
+### 📈 Mastery Architecture
+- **Persistent Progress**: Progress is saved even for system collections, allowing you to track your mastery across the entire academic archive.
+- **Visual Indicators**: Sophisticated progress bars and circular mastery charts visualize your proficiency.
 
 ---
 
 ## 🏛️ Technology Stack
 - **AI Models**: 
-  - `gemini-3-flash-preview`: For rapid vocabulary assembly, linguistic synthesis, and complex narrative creation.
-  - `gemini-2.5-flash-preview-tts`: For scholarly audio generation.
-- **Backend**: Supabase for cross-device synchronization and data persistence.
-- **Frontend**: React 19.
-- **Styling**: Tailwind CSS with a custom "Academic Palette."
+  - `gemini-3-flash`: For assembly, extraction, and narrative creation.
+  - `gemini-3-flash-tts`: For scholarly audio generation.
+- **Backend**: Supabase (PostgreSQL) for cross-device synchronization.
+- **Frontend**: React 19 + Vite.
+- **Styling**: Vanilla CSS for a premium, custom academic feel.
 
 ## 🚀 Deployment & Environment
 To deploy this project (e.g., to Vercel), ensure you set the following environment variables in your dashboard:

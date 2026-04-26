@@ -1,0 +1,408 @@
+{
+  "entries": [
+    {
+      "id": "a1b2c3d4-0001-4001-8001-aabbccddeef1",
+      "progress": 0,
+      "word": "astronomy",
+      "partOfSpeech": "noun",
+      "meaning": "The scientific study of celestial objects, space, and the universe as a whole.",
+      "synonyms": "astrophysics, cosmology, stargazing",
+      "antonyms": "N/A",
+      "sentence": "Astronomy has revealed that the universe is far older and more expansive than any ancient civilisation could have imagined."
+    },
+    {
+      "id": "a1b2c3d4-0002-4002-8002-aabbccddeef2",
+      "progress": 0,
+      "word": "botany",
+      "partOfSpeech": "noun",
+      "meaning": "The branch of biology that studies plant life, including their structure, growth, and classification.",
+      "synonyms": "plant science, phytology, plant biology",
+      "antonyms": "zoology",
+      "sentence": "Her work in botany focused on the adaptive mechanisms that allow certain plants to thrive in nutrient-poor soils."
+    },
+    {
+      "id": "a1b2c3d4-0003-4003-8003-aabbccddeef3",
+      "progress": 0,
+      "word": "cognitive science",
+      "partOfSpeech": "noun",
+      "meaning": "The interdisciplinary study of the mind and intelligence, drawing on psychology, neuroscience, linguistics, and philosophy.",
+      "synonyms": "mind science, mental science, psycholinguistics",
+      "antonyms": "N/A",
+      "sentence": "Cognitive science has challenged the long-held assumption that human memory functions like a reliable recording device."
+    },
+    {
+      "id": "a1b2c3d4-0004-4004-8004-aabbccddeef4",
+      "progress": 0,
+      "word": "neuroscience",
+      "partOfSpeech": "noun",
+      "meaning": "The scientific study of the nervous system, including the brain, its structure, function, and disorders.",
+      "synonyms": "brain science, neurophysiology, neural science",
+      "antonyms": "N/A",
+      "sentence": "Advances in neuroscience have demonstrated that the adult brain retains a remarkable capacity for structural change throughout life."
+    },
+    {
+      "id": "a1b2c3d4-0005-4005-8005-aabbccddeef5",
+      "progress": 0,
+      "word": "ecology",
+      "partOfSpeech": "noun",
+      "meaning": "The branch of biology that studies the relationships between living organisms and their environment.",
+      "synonyms": "environmental science, bionomics, ecosystems study",
+      "antonyms": "N/A",
+      "sentence": "Ecology has shown that the removal of a single predator species can fundamentally destabilise an entire food web."
+    },
+    {
+      "id": "a1b2c3d4-0006-4006-8006-aabbccddeef6",
+      "progress": 0,
+      "word": "entomology",
+      "partOfSpeech": "noun",
+      "meaning": "The branch of zoology concerned with the scientific study of insects.",
+      "synonyms": "insect science, bug study, arthropodology",
+      "antonyms": "N/A",
+      "sentence": "Entomology has become increasingly urgent as researchers document the accelerating decline of pollinator populations worldwide."
+    },
+    {
+      "id": "a1b2c3d4-0007-4007-8007-aabbccddeef7",
+      "progress": 0,
+      "word": "genetics",
+      "partOfSpeech": "noun",
+      "meaning": "The branch of biology concerned with heredity and the variation of inherited characteristics.",
+      "synonyms": "heredity science, genomics, molecular biology",
+      "antonyms": "N/A",
+      "sentence": "Modern genetics has revealed that traits once considered purely environmental are often substantially influenced by inherited factors."
+    },
+    {
+      "id": "a1b2c3d4-0008-4008-8008-aabbccddeef8",
+      "progress": 0,
+      "word": "geology",
+      "partOfSpeech": "noun",
+      "meaning": "The science that deals with the earth's physical structure, substance, history, and the processes that act on it.",
+      "synonyms": "earth science, geoscience, mineralogy",
+      "antonyms": "N/A",
+      "sentence": "Geology provided the first compelling evidence that the earth was far older than religious authorities of the time had claimed."
+    },
+    {
+      "id": "a1b2c3d4-0009-4009-8009-aabbccddeef9",
+      "progress": 0,
+      "word": "ornithology",
+      "partOfSpeech": "noun",
+      "meaning": "The branch of zoology that deals with the scientific study of birds.",
+      "synonyms": "bird science, avian biology, avifaunal study",
+      "antonyms": "N/A",
+      "sentence": "Ornithology has benefited enormously from citizen science programmes in which amateur birdwatchers contribute millions of sighting records annually."
+    },
+    {
+      "id": "a1b2c3d4-0010-4010-8010-aabbccddeef0",
+      "progress": 0,
+      "word": "paleontology",
+      "partOfSpeech": "noun",
+      "meaning": "The branch of science concerned with fossil animals and plants; the study of prehistoric life.",
+      "synonyms": "fossil science, prehistoric biology, palaeobiology",
+      "antonyms": "N/A",
+      "sentence": "Paleontology has repeatedly revised our understanding of which lineages flourished and which became extinct during each mass extinction event."
+    },
+    {
+      "id": "a1b2c3d4-0011-4011-8011-aabbccddeefa",
+      "progress": 0,
+      "word": "zoology",
+      "partOfSpeech": "noun",
+      "meaning": "The scientific study of the behaviour, structure, physiology, classification, and distribution of animals.",
+      "synonyms": "animal science, fauna study, animal biology",
+      "antonyms": "botany",
+      "sentence": "Zoology has expanded beyond the laboratory to encompass the field-based study of animal behaviour in complex natural habitats."
+    },
+    {
+      "id": "a1b2c3d4-0012-4012-8012-aabbccddee fb",
+      "progress": 0,
+      "word": "anthropology",
+      "partOfSpeech": "noun",
+      "meaning": "The study of human societies, cultures, and their development across time.",
+      "synonyms": "human science, cultural studies, ethnology",
+      "antonyms": "N/A",
+      "sentence": "Anthropology teaches us that practices which seem unusual from the outside are often deeply rational within their own cultural logic."
+    },
+    {
+      "id": "a1b2c3d4-0013-4013-8013-aabbccddeef c",
+      "progress": 0,
+      "word": "archaeology",
+      "partOfSpeech": "noun",
+      "meaning": "The study of human history and prehistory through the excavation of sites and the analysis of artefacts and other physical remains.",
+      "synonyms": "excavation science, material culture study, prehistoric studies",
+      "antonyms": "N/A",
+      "sentence": "Archaeology has demonstrated that complex urban societies arose independently in multiple regions of the world, not from a single source."
+    },
+    {
+      "id": "a1b2c3d4-0014-4014-8014-aabbccddeef d",
+      "progress": 0,
+      "word": "economics",
+      "partOfSpeech": "noun",
+      "meaning": "The branch of knowledge concerned with the production, consumption, and transfer of wealth.",
+      "synonyms": "political economy, finance theory, market science",
+      "antonyms": "N/A",
+      "sentence": "Economics has increasingly incorporated insights from psychology to better account for the irrational dimensions of human decision-making."
+    },
+    {
+      "id": "a1b2c3d4-0015-4015-8015-aabbccddeef e",
+      "progress": 0,
+      "word": "ethnography",
+      "partOfSpeech": "noun",
+      "meaning": "The systematic study and description of peoples and cultures, based on direct observation and fieldwork.",
+      "synonyms": "cultural documentation, fieldwork research, descriptive anthropology",
+      "antonyms": "N/A",
+      "sentence": "Her ethnography of the fishing community took three years to complete and upended many assumptions about how labour was organised."
+    },
+    {
+      "id": "a1b2c3d4-0016-4016-8016-aabbccddeef f",
+      "progress": 0,
+      "word": "folklore",
+      "partOfSpeech": "noun",
+      "meaning": "The traditional beliefs, customs, stories, and practices of a community, passed through the generations orally or by example.",
+      "synonyms": "oral tradition, folk culture, cultural heritage",
+      "antonyms": "N/A",
+      "sentence": "Folklore often encodes practical ecological knowledge that formal science has only recently begun to recognise and document."
+    },
+    {
+      "id": "a1b2c3d4-0017-4017-8017-aabbccddeef10",
+      "progress": 0,
+      "word": "sociology",
+      "partOfSpeech": "noun",
+      "meaning": "The study of the development, structure, and functioning of human society.",
+      "synonyms": "social science, social theory, societal study",
+      "antonyms": "N/A",
+      "sentence": "Sociology reveals the extent to which individual behaviour is shaped by forces that most people never consciously examine."
+    },
+    {
+      "id": "a1b2c3d4-0018-4018-8018-aabbccddeef11",
+      "progress": 0,
+      "word": "advantageous",
+      "partOfSpeech": "adjective",
+      "meaning": "Involving or creating favourable circumstances that increase the chances of success or effectiveness.",
+      "synonyms": "beneficial, favourable, useful",
+      "antonyms": "detrimental, harmful, unfavourable",
+      "sentence": "It proved advantageous for the colony of insects to nest near the plant whose roots provided both shelter and moisture."
+    },
+    {
+      "id": "a1b2c3d4-0019-4019-8019-aabbccddeef12",
+      "progress": 0,
+      "word": "charge",
+      "partOfSpeech": "verb",
+      "meaning": "To assign a responsibility or task; in science, to supply with energy or an electrical force.",
+      "synonyms": "assign, task, commission",
+      "antonyms": "discharge, relieve, exempt",
+      "sentence": "The research committee was charged with reviewing every study that bore on the question of microbial resistance."
+    },
+    {
+      "id": "a1b2c3d4-0020-4020-8020-aabbccddeef13",
+      "progress": 0,
+      "word": "control group",
+      "partOfSpeech": "noun",
+      "meaning": "A group in an experiment that does not receive the experimental treatment, used as a baseline for comparison.",
+      "synonyms": "baseline group, comparison group, reference group",
+      "antonyms": "experimental group, test group, treatment group",
+      "sentence": "Without a properly matched control group, the researchers could not rule out the possibility that the results were due to chance."
+    },
+    {
+      "id": "a1b2c3d4-0021-4021-8021-aabbccddeef14",
+      "progress": 0,
+      "word": "empirical",
+      "partOfSpeech": "adjective",
+      "meaning": "Based on observation or experience rather than theory or pure logic.",
+      "synonyms": "observed, evidence-based, experimental",
+      "antonyms": "theoretical, speculative, hypothetical",
+      "sentence": "The empirical evidence gathered over decades of fieldwork confirmed what the theoretical model had long predicted."
+    },
+    {
+      "id": "a1b2c3d4-0022-4022-8022-aabbccddeef15",
+      "progress": 0,
+      "word": "hierarchy",
+      "partOfSpeech": "noun",
+      "meaning": "A system in which members of an organisation or society are ranked according to relative status or authority.",
+      "synonyms": "ranking, order, pecking order",
+      "antonyms": "equality, flatness, egalitarianism",
+      "sentence": "The dominance hierarchy observed in the wolf pack determined which individuals had priority access to food after a hunt."
+    },
+    {
+      "id": "a1b2c3d4-0023-4023-8023-aabbccddeef16",
+      "progress": 0,
+      "word": "isotope",
+      "partOfSpeech": "noun",
+      "meaning": "One of two or more forms of the same chemical element that contain the same number of protons but different numbers of neutrons.",
+      "synonyms": "atomic variant, nuclear variant, radioisotope",
+      "antonyms": "N/A",
+      "sentence": "By measuring the ratio of a specific isotope in the fossil, scientists were able to estimate the age of the specimen with remarkable accuracy."
+    },
+    {
+      "id": "a1b2c3d4-0024-4024-8024-aabbccddeef17",
+      "progress": 0,
+      "word": "indigenous",
+      "partOfSpeech": "adjective",
+      "meaning": "Originating or occurring naturally in a particular place; native to a region or ecosystem.",
+      "synonyms": "native, endemic, aboriginal",
+      "antonyms": "introduced, foreign, exotic",
+      "sentence": "The indigenous plant species had co-evolved with local pollinators over thousands of years, forming relationships that introduced crops could not replicate."
+    },
+    {
+      "id": "a1b2c3d4-0025-4025-8025-aabbccddeef18",
+      "progress": 0,
+      "word": "inhibit",
+      "partOfSpeech": "verb",
+      "meaning": "To hinder, restrain, or prevent a process or action from occurring.",
+      "synonyms": "restrain, hinder, suppress",
+      "antonyms": "promote, encourage, enable",
+      "sentence": "The newly discovered compound appeared to inhibit the enzyme responsible for initiating the inflammatory response."
+    },
+    {
+      "id": "a1b2c3d4-0026-4026-8026-aabbccddeef19",
+      "progress": 0,
+      "word": "innovative",
+      "partOfSpeech": "adjective",
+      "meaning": "Featuring new methods or ideas; introducing creative or original approaches.",
+      "synonyms": "inventive, pioneering, creative",
+      "antonyms": "conventional, traditional, unoriginal",
+      "sentence": "The most innovative aspect of the study was its use of satellite data to track changes in soil composition across entire watersheds."
+    },
+    {
+      "id": "a1b2c3d4-0027-4027-8027-aabbccddeef20",
+      "progress": 0,
+      "word": "metabolism",
+      "partOfSpeech": "noun",
+      "meaning": "The chemical processes that occur within a living organism to maintain life, including energy production and cellular repair.",
+      "synonyms": "biochemical processes, energy conversion, cellular chemistry",
+      "antonyms": "N/A",
+      "sentence": "The study found that organisms living in cold deep-sea environments had evolved a metabolism far slower than their surface-dwelling relatives."
+    },
+    {
+      "id": "a1b2c3d4-0028-4028-8028-aabbccddeef21",
+      "progress": 0,
+      "word": "microbial",
+      "partOfSpeech": "adjective",
+      "meaning": "Relating to or characteristic of microorganisms, including bacteria and fungi.",
+      "synonyms": "bacterial, microscopic, microbial",
+      "antonyms": "macroscopic, visible, large-scale biological",
+      "sentence": "The microbial communities living in the soil proved to be more diverse and ecologically significant than the researchers had initially expected."
+    },
+    {
+      "id": "a1b2c3d4-0029-4029-8029-aabbccddeef22",
+      "progress": 0,
+      "word": "pigment",
+      "partOfSpeech": "noun",
+      "meaning": "A natural colouring matter in living tissue; any substance used as a colouring agent.",
+      "synonyms": "colour, dye, colourant",
+      "antonyms": "N/A",
+      "sentence": "The distinctive red pigment found in the bird's feathers was traced to a diet rich in carotenoid-containing invertebrates."
+    },
+    {
+      "id": "a1b2c3d4-0030-4030-8030-aabbccddeef23",
+      "progress": 0,
+      "word": "predisposed",
+      "partOfSpeech": "adjective",
+      "meaning": "Having a tendency or inclination towards something, especially a condition or behaviour, before it actually occurs.",
+      "synonyms": "inclined, susceptible, prone",
+      "antonyms": "immune, resistant, disinclined",
+      "sentence": "Individuals genetically predisposed to the condition did not inevitably develop it — environmental factors played an equally decisive role."
+    },
+    {
+      "id": "a1b2c3d4-0031-4031-8031-aabbccddeef24",
+      "progress": 0,
+      "word": "regenerate",
+      "partOfSpeech": "verb",
+      "meaning": "To regrow or restore tissue, a body part, or an ecosystem after it has been damaged or lost.",
+      "synonyms": "regrow, restore, renew",
+      "antonyms": "decay, degenerate, deteriorate",
+      "sentence": "Unlike most vertebrates, the axolotl retains the extraordinary ability to regenerate entire limbs, heart tissue, and portions of its brain."
+    },
+    {
+      "id": "a1b2c3d4-0032-4032-8032-aabbccddeef25",
+      "progress": 0,
+      "word": "replicate",
+      "partOfSpeech": "verb",
+      "meaning": "To make an exact copy of something; in science, to repeat an experiment independently to verify results.",
+      "synonyms": "reproduce, duplicate, repeat",
+      "antonyms": "originate, falsify, distort",
+      "sentence": "A finding gains credibility only when independent laboratories are able to replicate it under comparable experimental conditions."
+    },
+    {
+      "id": "a1b2c3d4-0033-4033-8033-aabbccddeef26",
+      "progress": 0,
+      "word": "saturate",
+      "partOfSpeech": "verb",
+      "meaning": "To cause a substance to absorb as much of another substance as it can hold; to fill something completely.",
+      "synonyms": "soak, impregnate, permeate",
+      "antonyms": "drain, dry, deplete",
+      "sentence": "Long periods of rainfall had saturated the soil, making it unable to absorb any additional moisture and increasing the risk of flooding."
+    },
+    {
+      "id": "a1b2c3d4-0034-4034-8034-aabbccddeef27",
+      "progress": 0,
+      "word": "stimulus",
+      "partOfSpeech": "noun",
+      "meaning": "Something that causes a specific physiological or psychological response in a system or organism.",
+      "synonyms": "trigger, prompt, incentive",
+      "antonyms": "suppressor, inhibitor, sedative",
+      "sentence": "The researchers varied the intensity of the stimulus to determine the precise threshold at which the neurons began to fire."
+    },
+    {
+      "id": "a1b2c3d4-0035-4035-8035-aabbccddeef28",
+      "progress": 0,
+      "word": "symbiosis",
+      "partOfSpeech": "noun",
+      "meaning": "A mutually beneficial interaction between two different organisms that live in close association.",
+      "synonyms": "mutualism, interdependence, cooperation",
+      "antonyms": "parasitism, competition, antagonism",
+      "sentence": "The symbiosis between the clownfish and the sea anemone has become one of ecology's most studied examples of mutual benefit."
+    },
+    {
+      "id": "a1b2c3d4-0036-4036-8036-aabbccddeef29",
+      "progress": 0,
+      "word": "taxonomy",
+      "partOfSpeech": "noun",
+      "meaning": "The branch of science concerned with the classification of organisms into named groups based on shared characteristics.",
+      "synonyms": "classification, categorisation, systematics",
+      "antonyms": "N/A",
+      "sentence": "Advances in genetic sequencing have forced a dramatic revision of the taxonomy that Carl Linnaeus first established in the eighteenth century."
+    },
+    {
+      "id": "a1b2c3d4-0037-4037-8037-aabbccddeef30",
+      "progress": 0,
+      "word": "trait",
+      "partOfSpeech": "noun",
+      "meaning": "A distinguishing quality or characteristic of a person, animal, or organism, often genetically determined.",
+      "synonyms": "characteristic, attribute, feature",
+      "antonyms": "N/A",
+      "sentence": "The trait for drought resistance appeared to be inherited independently of the traits governing leaf size and root depth."
+    },
+    {
+      "id": "a1b2c3d4-0038-4038-8038-aabbccddeef31",
+      "progress": 0,
+      "word": "velocity",
+      "partOfSpeech": "noun",
+      "meaning": "The speed of something in a given direction; the rate at which something changes or moves.",
+      "synonyms": "speed, pace, rate",
+      "antonyms": "stillness, stagnation, immobility",
+      "sentence": "The velocity at which invasive species spread through a new environment often depends on the availability of unoccupied ecological niches."
+    },
+    {
+      "id": "a1b2c3d4-0039-4039-8039-aabbccddeef32",
+      "progress": 0,
+      "word": "hierarchical",
+      "partOfSpeech": "adjective",
+      "meaning": "Arranged according to rank or level of importance; relating to a system with layers of authority or classification.",
+      "synonyms": "ranked, tiered, graded",
+      "antonyms": "flat, egalitarian, unranked",
+      "sentence": "The hierarchical structure of the ant colony enables it to coordinate tasks of extraordinary complexity with no centralised control."
+    },
+    {
+      "id": "a1b2c3d4-0040-4040-8040-aabbccddeef33",
+      "progress": 0,
+      "word": "symbiotic",
+      "partOfSpeech": "adjective",
+      "meaning": "Relating to or characterised by a close and mutually beneficial relationship between different organisms.",
+      "synonyms": "mutually beneficial, interdependent, cooperative",
+      "antonyms": "parasitic, antagonistic, competitive",
+      "sentence": "The symbiotic relationship between the fungus and the tree roots allowed both organisms to thrive in conditions that neither could tolerate alone."
+    }
+  ],
+  "contextPassage": {
+    "title": "Threads Across the Sciences",
+    "text": "The natural world does not organise itself into academic departments. A single square metre of forest floor is simultaneously the subject of botany, ecology, entomology, microbiology, and geology — each discipline casting a different light on the same tangle of roots, fungi, insects, and decaying matter. Yet for much of the modern era, these fields have advanced in relative isolation, each developing its own taxonomy of concepts, its own hierarchy of questions, and its own sense of what counts as a rigorous, empirical answer. The cost of this fragmentation has, in recent decades, become increasingly difficult to ignore.\n\nConsider the study of symbiosis — a phenomenon first documented in the nineteenth century when observers noted that certain organisms appeared to benefit systematically from their proximity to others. Early zoology and botany treated symbiotic relationships as curiosities. It was not until ecology matured as a discipline that researchers began to appreciate how fundamental such interdependence was to the functioning of entire ecosystems. The symbiotic partnership between mycorrhizal fungi and the roots of nearly every terrestrial plant, for instance, is now understood to be one of the most consequential relationships in the history of life on earth. Through this association, trees can saturate their root networks with phosphorus and nitrogen drawn from far beyond the reach of any individual plant. The fungi, in return, receive sugars that their own metabolism cannot produce. Each organism is, in isolation, less than it is within the relationship.\n\nGenetics has added a further dimension to this picture. Many of the traits that make a symbiotic partnership advantageous — the chemical signals a plant uses to attract helpful microbes, or the pigment patterns an insect deploys to communicate with flowering plants — are not learned behaviours but inherited characteristics, refined by natural selection over millions of years. Some organisms appear to be genetically predisposed toward certain associations, producing enzymes that inhibit the colonisation of harmful bacteria while actively welcoming the microbial communities that support their growth. The mechanisms involved are astonishing in their precision and have prompted a rethinking, across neuroscience and cognitive science alike, of what it means for a living system to \"know\" something about its environment.\n\nPaleontology contributes a temporal dimension that living organisms cannot provide. By examining the isotope ratios preserved in ancient fossils, researchers have been able to reconstruct the ecological conditions under which long-extinct species lived, and to identify the stimulus events — mass extinction, climate shift, tectonic change — that triggered the rapid emergence of new body plans. Geology, too, is indispensable here: the stratified rock record provides the chronological framework within which all paleontological data must be situated. Without it, the story of life would have no sequence and no scale.\n\nAt the human end of the spectrum, sociology, anthropology, ethnography, and archaeology perform an analogous function. They force us to question what we take as natural, hierarchical, or inevitable in the organisation of societies. Folklore, often dismissed as merely decorative, frequently encodes generations of accumulated ecological knowledge — warning signs about flood-prone land, or the velocity at which certain plant diseases spread through a crop — knowledge that formal economics and agricultural science have sometimes rediscovered at considerable cost. Indigenous communities, whose relationship with particular landscapes spans centuries, have developed ways of classifying and managing biodiversity that formal taxonomy is only beginning to take seriously.\n\nWhat all of these disciplines share, when practised at their best, is a commitment to what might be called principled uncertainty: the willingness to replicate findings before treating them as established, to maintain a proper control group even when the design of the experiment is inconvenient, and to allow the evidence to determine the answer rather than the other way around. Innovative methods — satellite imaging in ecology, gene sequencing in ornithology, isotope tracing in geology — have repeatedly revealed that nature is more intricate, more hierarchical, and more interdependent than previous generations of scientists had imagined.\n\nThe most important lesson that the convergence of these disciplines offers is not a specific finding but a disposition: that life, in all its forms, regenerates through relationship. No organism is self-sufficient, no field is complete, and no understanding — however carefully constructed — is final. The proper response to this condition is not paralysis but the kind of rigorous, insatiable curiosity that has always driven the best scientific work: the willingness to ask, once more, what we have missed."
+  }
+}

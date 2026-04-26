@@ -1,0 +1,3008 @@
+{
+  "entries": [
+    {
+      "id": "903bc3d9-009b-4926-9d46-cb4e244b771e",
+      "progress": 0,
+      "word": "abroad",
+      "partOfSpeech": "adverb",
+      "meaning": "In or to a foreign country.",
+      "synonyms": "overseas, internationally, away",
+      "antonyms": "home, locally, domestically",
+      "sentence": "She has always dreamed of studying abroad to experience a new culture."
+    },
+    {
+      "id": "76aca60b-af08-4693-ab72-f4c7c00fb6c2",
+      "progress": 0,
+      "word": "academic",
+      "partOfSpeech": "adjective",
+      "meaning": "Relating to education, schools, or universities.",
+      "synonyms": "educational, scholarly, intellectual",
+      "antonyms": "practical, vocational, informal",
+      "sentence": "His academic performance improved after he joined the study club."
+    },
+    {
+      "id": "e8f3a8f4-50ca-4db9-a213-d07224082eb4",
+      "progress": 0,
+      "word": "accident",
+      "partOfSpeech": "noun",
+      "meaning": "An unexpected event, especially one that causes damage or injury.",
+      "synonyms": "mishap, incident, collision",
+      "antonyms": "plan, intention, design",
+      "sentence": "The accident on the motorway caused a long delay on the highway."
+    },
+    {
+      "id": "f38f742d-89ac-4325-a2ec-39559736d4f6",
+      "progress": 0,
+      "word": "accommodation",
+      "partOfSpeech": "noun",
+      "meaning": "A place where someone lives or stays temporarily.",
+      "synonyms": "lodging, housing, shelter",
+      "antonyms": "homelessness, exposure",
+      "sentence": "Finding affordable accommodation in the capital city can be very difficult."
+    },
+    {
+      "id": "f4093cb7-4e57-42e1-a7dd-0fdcc56047df",
+      "progress": 0,
+      "word": "achieve",
+      "partOfSpeech": "verb",
+      "meaning": "To succeed in reaching a goal through effort.",
+      "synonyms": "accomplish, attain, reach",
+      "antonyms": "fail, miss, lose",
+      "sentence": "With hard work and focus, she managed to achieve her career goal."
+    },
+    {
+      "id": "89a42675-69d1-4551-bccd-d3e1d4676ce7",
+      "progress": 0,
+      "word": "acquisition",
+      "partOfSpeech": "noun",
+      "meaning": "The act of gaining or obtaining something.",
+      "synonyms": "gain, purchase, obtaining",
+      "antonyms": "loss, sale, disposal",
+      "sentence": "The company's acquisition of the software firm was announced last week."
+    },
+    {
+      "id": "69f26622-102e-49f0-a66a-8c89d2ae0cc7",
+      "progress": 0,
+      "word": "adapt",
+      "partOfSpeech": "verb",
+      "meaning": "To change to suit new conditions or situations.",
+      "synonyms": "adjust, modify, change",
+      "antonyms": "resist, stay fixed, refuse",
+      "sentence": "It can take time to adapt to a new country's culture and way of life."
+    },
+    {
+      "id": "db7d9c53-1ca7-424b-b1b1-a4892fadb0cc",
+      "progress": 0,
+      "word": "advance",
+      "partOfSpeech": "verb",
+      "meaning": "To move forward or make progress.",
+      "synonyms": "progress, proceed, move forward",
+      "antonyms": "retreat, go back, regress",
+      "sentence": "Technology continues to advance at a rapid pace every decade."
+    },
+    {
+      "id": "98f1aa58-037a-491b-9d4a-78b4343a2ba3",
+      "progress": 0,
+      "word": "advantage",
+      "partOfSpeech": "noun",
+      "meaning": "A condition that helps you succeed or be better than others.",
+      "synonyms": "benefit, gain, edge",
+      "antonyms": "disadvantage, weakness, drawback",
+      "sentence": "Speaking two languages gives you a great advantage in your career."
+    },
+    {
+      "id": "3d2c3a34-e57c-4f3b-a959-080868512e09",
+      "progress": 0,
+      "word": "advertise",
+      "partOfSpeech": "verb",
+      "meaning": "To promote a product or service to attract customers.",
+      "synonyms": "promote, market, publicise",
+      "antonyms": "hide, conceal, withdraw",
+      "sentence": "They decided to advertise the new product on social media channels."
+    },
+    {
+      "id": "d1201644-edae-4a8c-bee0-79dbabbe2ab6",
+      "progress": 0,
+      "word": "advice",
+      "partOfSpeech": "noun",
+      "meaning": "A recommendation or suggestion about what someone should do.",
+      "synonyms": "guidance, suggestion, tip",
+      "antonyms": "warning, misguidance, confusion",
+      "sentence": "His coach gave him useful advice about managing pressure during competitions."
+    },
+    {
+      "id": "74ef804a-da54-48bf-9d3e-a7a9486d075f",
+      "progress": 0,
+      "word": "affair",
+      "partOfSpeech": "noun",
+      "meaning": "A matter or situation that someone deals with.",
+      "synonyms": "matter, issue, concern",
+      "antonyms": "N/A",
+      "sentence": "The corruption affair shocked the whole community."
+    },
+    {
+      "id": "b83ddfe5-6901-4ceb-b30a-c893a6109e6f",
+      "progress": 0,
+      "word": "affect",
+      "partOfSpeech": "verb",
+      "meaning": "To have an influence on someone or something.",
+      "synonyms": "influence, impact, change",
+      "antonyms": "ignore, leave unchanged",
+      "sentence": "The change in climate can seriously affect crop production across the continent."
+    },
+    {
+      "id": "7bc606ad-6e0b-4cd4-a2b5-923c3bfc3815",
+      "progress": 0,
+      "word": "afford",
+      "partOfSpeech": "verb",
+      "meaning": "To have enough money or time to pay for or do something.",
+      "synonyms": "manage, pay for, have the means",
+      "antonyms": "struggle, lack, be unable",
+      "sentence": "She worked extra hours so she could afford the accommodation abroad."
+    },
+    {
+      "id": "0724e9a0-f353-45b6-b723-d4fd7903d930",
+      "progress": 0,
+      "word": "aggressive",
+      "partOfSpeech": "adjective",
+      "meaning": "Ready or likely to attack or confront others.",
+      "synonyms": "hostile, forceful, violent",
+      "antonyms": "passive, calm, gentle",
+      "sentence": "The aggressive tone of the argument made the situation worse."
+    },
+    {
+      "id": "c6e735c0-ab90-4ec6-b077-751aed85b056",
+      "progress": 0,
+      "word": "agree",
+      "partOfSpeech": "verb",
+      "meaning": "To have the same opinion as someone or accept a plan.",
+      "synonyms": "consent, approve, accept",
+      "antonyms": "disagree, refuse, oppose",
+      "sentence": "After a long discussion, both sides finally agree to sign the contract."
+    },
+    {
+      "id": "71ef6e8c-1007-48f6-9c05-3aeae25d318f",
+      "progress": 0,
+      "word": "aid",
+      "partOfSpeech": "noun",
+      "meaning": "Help or support given to someone in need.",
+      "synonyms": "assistance, support, relief",
+      "antonyms": "hindrance, obstacle, harm",
+      "sentence": "International aid was sent to help communities affected by the disaster."
+    },
+    {
+      "id": "58535332-a6b6-4590-bdaf-6c6f7e0b626d",
+      "progress": 0,
+      "word": "aim",
+      "partOfSpeech": "noun",
+      "meaning": "A goal or purpose that you are working towards.",
+      "synonyms": "goal, objective, target",
+      "antonyms": "aimlessness, lack of purpose",
+      "sentence": "Her aim is to become a published author before the age of twenty-five."
+    },
+    {
+      "id": "9ba45038-44e0-47fe-ac88-a3584a180c68",
+      "progress": 0,
+      "word": "alive",
+      "partOfSpeech": "adjective",
+      "meaning": "Living and not dead.",
+      "synonyms": "living, active, existing",
+      "antonyms": "dead, lifeless, extinct",
+      "sentence": "He felt truly alive when he stood at the edge of the cliff and breathed in the fresh air."
+    },
+    {
+      "id": "f41af444-fdce-44f6-a946-68119f49b4cc",
+      "progress": 0,
+      "word": "alarm",
+      "partOfSpeech": "noun",
+      "meaning": "A warning signal or a feeling of fear caused by danger.",
+      "synonyms": "warning, alert, signal",
+      "antonyms": "calm, reassurance, silence",
+      "sentence": "The alarm went off at six in the morning, reminding her of the interview."
+    },
+    {
+      "id": "c89e325b-be95-4e48-b7ae-befacf6b5091",
+      "progress": 0,
+      "word": "album",
+      "partOfSpeech": "noun",
+      "meaning": "A collection of music tracks released together, or a book of photographs.",
+      "synonyms": "record, collection, compilation",
+      "antonyms": "single, individual track",
+      "sentence": "The artist released her first music album after years of working in the industry."
+    },
+    {
+      "id": "769ca26e-e690-4964-a302-9c5038324740",
+      "progress": 0,
+      "word": "alcohol",
+      "partOfSpeech": "noun",
+      "meaning": "A drink such as beer or wine that contains a substance that can make people drunk.",
+      "synonyms": "liquor, spirits, drink",
+      "antonyms": "soft drink, water, juice",
+      "sentence": "The doctor advised him to avoid alcohol during the treatment."
+    },
+    {
+      "id": "7bc28d93-6628-4050-ab73-ea8a3622b5e8",
+      "progress": 0,
+      "word": "alien",
+      "partOfSpeech": "noun",
+      "meaning": "A person from another country, or an imagined being from outer space.",
+      "synonyms": "foreigner, outsider, extraterrestrial",
+      "antonyms": "citizen, native, local",
+      "sentence": "The science fiction film was about an alien civilization that made contact with Earth."
+    },
+    {
+      "id": "2f647c0b-b70d-44a0-892d-2ec793d440a8",
+      "progress": 0,
+      "word": "allow",
+      "partOfSpeech": "verb",
+      "meaning": "To let someone do something or to make something possible.",
+      "synonyms": "permit, let, approve",
+      "antonyms": "forbid, deny, prevent",
+      "sentence": "The new rule does not allow students to use mobile phones during class."
+    },
+    {
+      "id": "bb81c159-e472-48e9-8eb6-a1df4d3d63a7",
+      "progress": 0,
+      "word": "almost",
+      "partOfSpeech": "adverb",
+      "meaning": "Very close to but not completely.",
+      "synonyms": "nearly, practically, just about",
+      "antonyms": "completely, entirely, fully",
+      "sentence": "She had almost finished the project when the computer suddenly crashed."
+    },
+    {
+      "id": "76d55b8e-a200-40f7-a8be-834debbcfc4a",
+      "progress": 0,
+      "word": "alone",
+      "partOfSpeech": "adjective",
+      "meaning": "Without other people.",
+      "synonyms": "solitary, by oneself, isolated",
+      "antonyms": "together, accompanied, surrounded",
+      "sentence": "He spent the evening alone in the cabin, thinking about his future."
+    },
+    {
+      "id": "67e68f20-6750-4542-9745-ec9c352d1691",
+      "progress": 0,
+      "word": "along",
+      "partOfSpeech": "preposition",
+      "meaning": "Moving in a line from one end to another, or at the side of something.",
+      "synonyms": "beside, through, forward",
+      "antonyms": "across, away from",
+      "sentence": "They walked along the coast, enjoying the view of the sea."
+    },
+    {
+      "id": "d80f87ad-9b52-4054-bc2b-018f574d51e8",
+      "progress": 0,
+      "word": "alphabet",
+      "partOfSpeech": "noun",
+      "meaning": "A set of letters used to write a language.",
+      "synonyms": "letters, script, writing system",
+      "antonyms": "N/A",
+      "sentence": "She taught the children the alphabet using colourful cards."
+    },
+    {
+      "id": "9fe2a8c5-b11d-4d88-a6d8-853c0aaa04db",
+      "progress": 0,
+      "word": "already",
+      "partOfSpeech": "adverb",
+      "meaning": "Before the expected time or before something else happens.",
+      "synonyms": "by now, previously, beforehand",
+      "antonyms": "yet, still, not yet",
+      "sentence": "By the time he arrived, the audience had already taken their seats."
+    },
+    {
+      "id": "94eb62b8-14ba-4da8-968b-5798d4122f74",
+      "progress": 0,
+      "word": "also",
+      "partOfSpeech": "adverb",
+      "meaning": "In addition to something else; too.",
+      "synonyms": "additionally, as well, furthermore",
+      "antonyms": "instead, alternatively",
+      "sentence": "She is a talented artist and also an experienced coach."
+    },
+    {
+      "id": "7c3d1edd-5025-4759-9f4f-e0def48846c4",
+      "progress": 0,
+      "word": "alter",
+      "partOfSpeech": "verb",
+      "meaning": "To change something slightly but not completely.",
+      "synonyms": "modify, adjust, change",
+      "antonyms": "keep, maintain, preserve",
+      "sentence": "The director decided to alter the ending of the film after hearing audience feedback."
+    },
+    {
+      "id": "df18a698-f2d0-4d2c-85b1-52d24ad04b09",
+      "progress": 0,
+      "word": "always",
+      "partOfSpeech": "adverb",
+      "meaning": "At all times, on every occasion.",
+      "synonyms": "constantly, continually, forever",
+      "antonyms": "never, rarely, occasionally",
+      "sentence": "She always checks her work carefully before submitting it."
+    },
+    {
+      "id": "b1c060de-7729-4251-be5b-8aac29bb4530",
+      "progress": 0,
+      "word": "among",
+      "partOfSpeech": "preposition",
+      "meaning": "In the middle of or surrounded by a group.",
+      "synonyms": "amidst, between, surrounded by",
+      "antonyms": "outside, apart from, beyond",
+      "sentence": "Among the candidates, she was the most qualified for the position."
+    },
+    {
+      "id": "d1fe14e1-f4f4-4ae0-b61d-415708d75e03",
+      "progress": 0,
+      "word": "amount",
+      "partOfSpeech": "noun",
+      "meaning": "A quantity of something.",
+      "synonyms": "quantity, sum, total",
+      "antonyms": "N/A",
+      "sentence": "A large amount of evidence was collected to support the argument."
+    },
+    {
+      "id": "249f7511-efb7-45d1-9398-ba9229f656cb",
+      "progress": 0,
+      "word": "amused",
+      "partOfSpeech": "adjective",
+      "meaning": "Finding something funny or entertaining.",
+      "synonyms": "entertained, pleased, delighted",
+      "antonyms": "bored, annoyed, upset",
+      "sentence": "He was clearly amused by the comedian's clever jokes."
+    },
+    {
+      "id": "b213042b-bdbd-48da-8e84-603e3525b236",
+      "progress": 0,
+      "word": "analyse",
+      "partOfSpeech": "verb",
+      "meaning": "To examine something carefully to understand it better.",
+      "synonyms": "examine, study, evaluate",
+      "antonyms": "ignore, overlook, guess",
+      "sentence": "Scientists need to analyse the data carefully before drawing any conclusions."
+    },
+    {
+      "id": "130cf125-835b-4145-b9f0-42602b56a4c7",
+      "progress": 0,
+      "word": "ancient",
+      "partOfSpeech": "adjective",
+      "meaning": "Very old; belonging to a period long ago.",
+      "synonyms": "old, historic, antique",
+      "antonyms": "modern, new, contemporary",
+      "sentence": "The ancient ruins attracted thousands of curious tourists every year."
+    },
+    {
+      "id": "b97e9bf5-d3ae-48ad-9875-e081bbe560fb",
+      "progress": 0,
+      "word": "anger",
+      "partOfSpeech": "noun",
+      "meaning": "A strong feeling of displeasure caused by something unfair or hurtful.",
+      "synonyms": "rage, fury, irritation",
+      "antonyms": "calm, peace, contentment",
+      "sentence": "She tried to control her anger when she heard the unfair decision."
+    },
+    {
+      "id": "7000f9c8-a73e-4800-bcd9-673b25f8ea83",
+      "progress": 0,
+      "word": "angry",
+      "partOfSpeech": "adjective",
+      "meaning": "Feeling or showing strong displeasure.",
+      "synonyms": "furious, irritated, hostile",
+      "antonyms": "calm, pleased, content",
+      "sentence": "He became angry when he found out the contract had been altered without his knowledge."
+    },
+    {
+      "id": "322579d1-8654-4bbe-9686-c42eb04f7b8a",
+      "progress": 0,
+      "word": "announce",
+      "partOfSpeech": "verb",
+      "meaning": "To make something known publicly.",
+      "synonyms": "declare, state, publicise",
+      "antonyms": "hide, conceal, withhold",
+      "sentence": "The government decided to announce the election results at midnight."
+    },
+    {
+      "id": "696a671b-3134-45ba-9f9d-f03a6f10e3f2",
+      "progress": 0,
+      "word": "annual",
+      "partOfSpeech": "adjective",
+      "meaning": "Happening once a year.",
+      "synonyms": "yearly, once-a-year, regular",
+      "antonyms": "daily, monthly, rare",
+      "sentence": "The annual conference brings together experts from around the world."
+    },
+    {
+      "id": "4bd66a77-65b3-48b4-95e3-76303be3a341",
+      "progress": 0,
+      "word": "answer",
+      "partOfSpeech": "noun",
+      "meaning": "A response to a question or problem.",
+      "synonyms": "reply, response, solution",
+      "antonyms": "question, query, problem",
+      "sentence": "She gave a clear and confident answer during the job interview."
+    },
+    {
+      "id": "f5358719-b897-48f6-a260-946fcfa8b02c",
+      "progress": 0,
+      "word": "anticipation",
+      "partOfSpeech": "noun",
+      "meaning": "A feeling of excitement or anxiety about something that is going to happen.",
+      "synonyms": "expectation, excitement, eagerness",
+      "antonyms": "dread, indifference, surprise",
+      "sentence": "There was a feeling of great anticipation among the crowd before the concert."
+    },
+    {
+      "id": "852dbc83-4424-4365-a77e-80774033673e",
+      "progress": 0,
+      "word": "apologize",
+      "partOfSpeech": "verb",
+      "meaning": "To say that you are sorry for something you have done.",
+      "synonyms": "say sorry, express regret, ask forgiveness",
+      "antonyms": "blame, accuse, defend",
+      "sentence": "He called his colleague to apologize for the misunderstanding."
+    },
+    {
+      "id": "d9cfab6e-9c3a-4419-a140-8192a06c0a6a",
+      "progress": 0,
+      "word": "approach",
+      "partOfSpeech": "verb",
+      "meaning": "To come near to something, or to deal with a situation in a particular way.",
+      "synonyms": "come near, handle, tackle",
+      "antonyms": "leave, retreat, avoid",
+      "sentence": "The team needed a new approach to solve the complex problem."
+    },
+    {
+      "id": "8a9c2cfd-6620-4f4b-b6ca-0d2109657345",
+      "progress": 0,
+      "word": "approve",
+      "partOfSpeech": "verb",
+      "meaning": "To agree that something is good or acceptable.",
+      "synonyms": "accept, support, endorse",
+      "antonyms": "disapprove, reject, oppose",
+      "sentence": "The board agreed to approve the construction plan."
+    },
+    {
+      "id": "0df40fac-c967-4475-91a3-80e3b7c1134b",
+      "progress": 0,
+      "word": "argue",
+      "partOfSpeech": "verb",
+      "meaning": "To give reasons for or against something, or to have a disagreement.",
+      "synonyms": "debate, dispute, quarrel",
+      "antonyms": "agree, accept, concede",
+      "sentence": "It is natural to argue sometimes, but it is important to listen as well."
+    },
+    {
+      "id": "f42ada19-c044-4e46-92aa-7f4f8a17e56a",
+      "progress": 0,
+      "word": "argument",
+      "partOfSpeech": "noun",
+      "meaning": "A disagreement between people, or a set of reasons for a position.",
+      "synonyms": "dispute, debate, quarrel",
+      "antonyms": "agreement, harmony, peace",
+      "sentence": "The argument between the two candidates attracted a large audience."
+    },
+    {
+      "id": "2f256221-d2b5-4652-91f4-97eb4a05acad",
+      "progress": 0,
+      "word": "arise",
+      "partOfSpeech": "verb",
+      "meaning": "To appear or come into existence.",
+      "synonyms": "appear, occur, emerge",
+      "antonyms": "disappear, end, dissolve",
+      "sentence": "A new concern has arisen regarding the environmental impact of the factory."
+    },
+    {
+      "id": "6e44dfc4-44d1-4818-9a8e-278f81a0cd41",
+      "progress": 0,
+      "word": "arm",
+      "partOfSpeech": "noun",
+      "meaning": "The part of your body between your shoulder and your hand.",
+      "synonyms": "limb, upper limb",
+      "antonyms": "leg, foot",
+      "sentence": "She rested her arm on the table while reading the ancient article."
+    },
+    {
+      "id": "15fc7151-b1a4-4f13-b171-ead0d8735611",
+      "progress": 0,
+      "word": "army",
+      "partOfSpeech": "noun",
+      "meaning": "A large organized group of soldiers trained to fight on land.",
+      "synonyms": "military, troops, forces",
+      "antonyms": "civilians, pacifists",
+      "sentence": "The army was called in to maintain order during the election."
+    },
+    {
+      "id": "823f1629-7f53-4cb7-8f1c-707db038e8b6",
+      "progress": 0,
+      "word": "arrange",
+      "partOfSpeech": "verb",
+      "meaning": "To plan or organize something in advance.",
+      "synonyms": "organize, plan, coordinate",
+      "antonyms": "cancel, disorganize, scatter",
+      "sentence": "Can you arrange a meeting with the director for Friday afternoon?"
+    },
+    {
+      "id": "ea241249-6af2-4203-ad4b-c0f4d74728d5",
+      "progress": 0,
+      "word": "arrangement",
+      "partOfSpeech": "noun",
+      "meaning": "A plan or agreement made in advance.",
+      "synonyms": "plan, agreement, preparation",
+      "antonyms": "disorder, cancellation, chaos",
+      "sentence": "The seating arrangement at the banquet was carefully planned."
+    },
+    {
+      "id": "114997f4-b05c-4c40-acf5-2282c70fdc0e",
+      "progress": 0,
+      "word": "arrest",
+      "partOfSpeech": "verb",
+      "meaning": "To use legal authority to take someone to the police station.",
+      "synonyms": "detain, apprehend, capture",
+      "antonyms": "release, free, let go",
+      "sentence": "The police decided to arrest the criminal after gathering enough evidence."
+    },
+    {
+      "id": "fafed21f-5bc5-49db-83cb-446d090afccf",
+      "progress": 0,
+      "word": "arrive",
+      "partOfSpeech": "verb",
+      "meaning": "To reach the place you were travelling to.",
+      "synonyms": "reach, get to, appear",
+      "antonyms": "leave, depart, go",
+      "sentence": "They were relieved to finally arrive at the accommodation after the long journey."
+    },
+    {
+      "id": "92252e1d-241f-4d88-8284-91946648a852",
+      "progress": 0,
+      "word": "art",
+      "partOfSpeech": "noun",
+      "meaning": "The expression of ideas through painting, music, literature, or other creative work.",
+      "synonyms": "creativity, expression, craft",
+      "antonyms": "science, mechanics, industry",
+      "sentence": "She studied art at a prestigious academic institution abroad."
+    },
+    {
+      "id": "c1edd33c-c76a-4d13-a39e-8c005c2e9ce1",
+      "progress": 0,
+      "word": "article",
+      "partOfSpeech": "noun",
+      "meaning": "A piece of writing published in a newspaper or magazine, or a grammatical word.",
+      "synonyms": "piece, essay, report",
+      "antonyms": "N/A",
+      "sentence": "He wrote an article about the consequences of climate change."
+    },
+    {
+      "id": "cbc3e237-4247-4406-b1cd-3f0462d24de3",
+      "progress": 0,
+      "word": "aside",
+      "partOfSpeech": "adverb",
+      "meaning": "To one side, or away from the main topic.",
+      "synonyms": "to the side, apart, away",
+      "antonyms": "forward, ahead, central",
+      "sentence": "She put her worries aside and concentrated on the task."
+    },
+    {
+      "id": "e3e150cc-3d0e-49aa-ac28-71b6701de107",
+      "progress": 0,
+      "word": "ask",
+      "partOfSpeech": "verb",
+      "meaning": "To request information or help from someone.",
+      "synonyms": "question, inquire, request",
+      "antonyms": "answer, reply, respond",
+      "sentence": "Do not be afraid to ask for help when a problem is too complex."
+    },
+    {
+      "id": "fe2177e7-5d23-4793-b640-89daf88c6020",
+      "progress": 0,
+      "word": "aspect",
+      "partOfSpeech": "noun",
+      "meaning": "A particular part or feature of a situation or topic.",
+      "synonyms": "feature, element, part",
+      "antonyms": "whole, entirety",
+      "sentence": "The most important aspect of communication is listening carefully."
+    },
+    {
+      "id": "de361ea5-2f4c-4166-bbac-3dea20a36e77",
+      "progress": 0,
+      "word": "assess",
+      "partOfSpeech": "verb",
+      "meaning": "To evaluate the quality, importance, or nature of something.",
+      "synonyms": "evaluate, judge, measure",
+      "antonyms": "ignore, overlook, assume",
+      "sentence": "The team was asked to assess the condition of the old castle."
+    },
+    {
+      "id": "129b6f3d-e690-4ed6-8616-a2627b02e175",
+      "progress": 0,
+      "word": "assume",
+      "partOfSpeech": "verb",
+      "meaning": "To think something is true without checking.",
+      "synonyms": "presume, suppose, believe",
+      "antonyms": "confirm, verify, prove",
+      "sentence": "It is wrong to assume something is true without checking the facts."
+    },
+    {
+      "id": "b116be96-b6ef-483d-b155-3140f0519aa4",
+      "progress": 0,
+      "word": "assure",
+      "partOfSpeech": "verb",
+      "meaning": "To tell someone confidently that something is true to remove their doubts.",
+      "synonyms": "promise, guarantee, confirm",
+      "antonyms": "doubt, deny, mislead",
+      "sentence": "The manager tried to assure the staff that their jobs were safe."
+    },
+    {
+      "id": "a64cc237-9eca-4950-a52a-b9801ef5c299",
+      "progress": 0,
+      "word": "atmosphere",
+      "partOfSpeech": "noun",
+      "meaning": "The mood or feeling of a place, or the layer of air around the earth.",
+      "synonyms": "mood, feeling, ambience",
+      "antonyms": "N/A",
+      "sentence": "The atmosphere at the concert was electric and full of energy."
+    },
+    {
+      "id": "890b1112-7574-448d-9722-623971a71b00",
+      "progress": 0,
+      "word": "attack",
+      "partOfSpeech": "verb",
+      "meaning": "To use violence against someone, or to strongly criticize something.",
+      "synonyms": "assault, strike, criticize",
+      "antonyms": "defend, protect, support",
+      "sentence": "The new policy was a direct attack on the rights of citizens."
+    },
+    {
+      "id": "8ffe4f4d-ddfc-4a96-8227-12b22df69005",
+      "progress": 0,
+      "word": "attend",
+      "partOfSpeech": "verb",
+      "meaning": "To be present at an event or place.",
+      "synonyms": "go to, be present, participate",
+      "antonyms": "miss, skip, avoid",
+      "sentence": "All students are expected to attend the annual conference."
+    },
+    {
+      "id": "49ed4169-c68a-4731-b5be-ace0f314f84b",
+      "progress": 0,
+      "word": "attitude",
+      "partOfSpeech": "noun",
+      "meaning": "A way of thinking or feeling about something.",
+      "synonyms": "view, opinion, approach",
+      "antonyms": "N/A",
+      "sentence": "Her positive attitude helped the whole team stay focused during the challenge."
+    },
+    {
+      "id": "f59ffcaa-e6a9-4444-a18e-42a8748df66b",
+      "progress": 0,
+      "word": "attract",
+      "partOfSpeech": "verb",
+      "meaning": "To cause someone to be interested in or come towards something.",
+      "synonyms": "draw, appeal, pull",
+      "antonyms": "repel, push away, deter",
+      "sentence": "The colourful market stalls attract a large crowd of curious visitors."
+    },
+    {
+      "id": "7a74a33a-8ff6-4f34-9a47-826e09e53ace",
+      "progress": 0,
+      "word": "audience",
+      "partOfSpeech": "noun",
+      "meaning": "A group of people watching or listening to a performance or speech.",
+      "synonyms": "viewers, spectators, crowd",
+      "antonyms": "performers, speakers, cast",
+      "sentence": "The audience gave the author a standing ovation at the end of the talk."
+    },
+    {
+      "id": "84b86799-ab85-416a-81db-024c5b57c012",
+      "progress": 0,
+      "word": "author",
+      "partOfSpeech": "noun",
+      "meaning": "A person who writes books or other texts.",
+      "synonyms": "writer, creator, novelist",
+      "antonyms": "reader, editor, critic",
+      "sentence": "The author explained the context of her novel during the conference."
+    },
+    {
+      "id": "509ff494-041c-4fdd-9bbe-480374f9fdd2",
+      "progress": 0,
+      "word": "authority",
+      "partOfSpeech": "noun",
+      "meaning": "The power to give orders or make decisions, or an organization with this power.",
+      "synonyms": "power, control, jurisdiction",
+      "antonyms": "weakness, submission, powerlessness",
+      "sentence": "The local authority announced new rules about construction in the area."
+    },
+    {
+      "id": "5f9fecc9-4580-480b-b3b5-13b07f6e06b9",
+      "progress": 0,
+      "word": "automatic",
+      "partOfSpeech": "adjective",
+      "meaning": "Working by itself without human control.",
+      "synonyms": "self-operating, mechanical, electronic",
+      "antonyms": "manual, hand-operated, human-controlled",
+      "sentence": "The factory uses automatic machines to speed up production."
+    },
+    {
+      "id": "68f1c611-1eea-43e6-bbd0-25918367da03",
+      "progress": 0,
+      "word": "available",
+      "partOfSpeech": "adjective",
+      "meaning": "Ready to be used or accessed.",
+      "synonyms": "accessible, free, obtainable",
+      "antonyms": "unavailable, busy, taken",
+      "sentence": "The accommodation is available from the first of the month."
+    },
+    {
+      "id": "e402c706-d060-4d14-8953-b093f5534662",
+      "progress": 0,
+      "word": "average",
+      "partOfSpeech": "adjective",
+      "meaning": "Typical or normal; not special or extreme.",
+      "synonyms": "typical, ordinary, standard",
+      "antonyms": "exceptional, extreme, unusual",
+      "sentence": "The average cost of renting a flat in the city has increased this century."
+    },
+    {
+      "id": "12993127-2d09-408d-b8e5-a490fef0b151",
+      "progress": 0,
+      "word": "avoid",
+      "partOfSpeech": "verb",
+      "meaning": "To stay away from someone or something.",
+      "synonyms": "escape, evade, prevent",
+      "antonyms": "seek, approach, face",
+      "sentence": "She managed to avoid the crowd by arriving at the concert early."
+    },
+    {
+      "id": "a817d14c-cbb9-4f4b-ba58-1bb4aec1932d",
+      "progress": 0,
+      "word": "aware",
+      "partOfSpeech": "adjective",
+      "meaning": "Knowing about or noticing something.",
+      "synonyms": "conscious, informed, knowledgeable",
+      "antonyms": "unaware, ignorant, oblivious",
+      "sentence": "Citizens should be aware of their legal rights and duties."
+    },
+    {
+      "id": "3bc86bb8-3cb2-4812-a766-a73d59cb94a5",
+      "progress": 0,
+      "word": "balance",
+      "partOfSpeech": "noun",
+      "meaning": "A steady, equal distribution of weight or importance.",
+      "synonyms": "equilibrium, stability, proportion",
+      "antonyms": "imbalance, instability, excess",
+      "sentence": "It is important to find a balance between work and personal life."
+    },
+    {
+      "id": "93edee36-e2fa-4479-ba97-435a69e87751",
+      "progress": 0,
+      "word": "banquet",
+      "partOfSpeech": "noun",
+      "meaning": "A formal large meal for many people on a special occasion.",
+      "synonyms": "feast, celebration meal, formal dinner",
+      "antonyms": "snack, fast, light meal",
+      "sentence": "The president hosted a grand banquet to celebrate the signing of the contract."
+    },
+    {
+      "id": "c85c837e-2c19-4fd2-9eb1-c5983dc59526",
+      "progress": 0,
+      "word": "barter",
+      "partOfSpeech": "verb",
+      "meaning": "To exchange goods or services without using money.",
+      "synonyms": "trade, exchange, swap",
+      "antonyms": "buy, sell, purchase",
+      "sentence": "In ancient times, people would barter goods instead of using currency."
+    },
+    {
+      "id": "37b2bf79-50f5-43f8-ae26-d76e99e8e063",
+      "progress": 0,
+      "word": "base",
+      "partOfSpeech": "noun",
+      "meaning": "The lowest part of something, or the main place from which something operates.",
+      "synonyms": "foundation, bottom, headquarters",
+      "antonyms": "top, peak, summit",
+      "sentence": "The research was based on data collected from twenty different communities."
+    },
+    {
+      "id": "6e869a4a-8f17-4cd5-81c4-46f733dbe5d5",
+      "progress": 0,
+      "word": "basic",
+      "partOfSpeech": "adjective",
+      "meaning": "Forming the most important or essential part of something.",
+      "synonyms": "fundamental, essential, core",
+      "antonyms": "complex, advanced, secondary",
+      "sentence": "He completed the basic course before moving to the advanced level."
+    },
+    {
+      "id": "b21ce251-93f0-44fd-84fb-250b8525a46c",
+      "progress": 0,
+      "word": "basis",
+      "partOfSpeech": "noun",
+      "meaning": "The reason or principle that something is based on.",
+      "synonyms": "foundation, grounds, principle",
+      "antonyms": "conclusion, result, outcome",
+      "sentence": "The new law was created on the basis of scientific evidence."
+    },
+    {
+      "id": "020f2abd-f627-4e70-9f95-623f405e4fa7",
+      "progress": 0,
+      "word": "basketball",
+      "partOfSpeech": "noun",
+      "meaning": "A sport played between two teams who try to throw a ball through a hoop.",
+      "synonyms": "N/A",
+      "antonyms": "N/A",
+      "sentence": "She joined the university basketball team in her first academic year."
+    },
+    {
+      "id": "7a11ad51-09bf-4a88-92d6-aaac527fa332",
+      "progress": 0,
+      "word": "bathe",
+      "partOfSpeech": "verb",
+      "meaning": "To wash your body in a bath or to swim in the sea or a lake.",
+      "synonyms": "wash, swim, soak",
+      "antonyms": "dry, stay dirty",
+      "sentence": "After the long hike, they stopped to bathe in the cool river."
+    },
+    {
+      "id": "3d12de72-eba6-4208-b125-b0147cf3b9ee",
+      "progress": 0,
+      "word": "battle",
+      "partOfSpeech": "noun",
+      "meaning": "A fight between groups, or a struggle to achieve something difficult.",
+      "synonyms": "fight, conflict, struggle",
+      "antonyms": "peace, agreement, truce",
+      "sentence": "The team faced a tough battle to finish the project on time."
+    },
+    {
+      "id": "e9ee3594-13b9-4ecd-8d97-2cee960e5312",
+      "progress": 0,
+      "word": "beat",
+      "partOfSpeech": "verb",
+      "meaning": "To win against someone, or to hit something repeatedly.",
+      "synonyms": "defeat, overcome, hit",
+      "antonyms": "lose, surrender, give up",
+      "sentence": "She managed to beat the record at the annual athletics competition."
+    },
+    {
+      "id": "574d30ab-7cde-4b17-a819-f5465f775e97",
+      "progress": 0,
+      "word": "beautiful",
+      "partOfSpeech": "adjective",
+      "meaning": "Pleasing to the senses in a way that is attractive.",
+      "synonyms": "gorgeous, stunning, attractive",
+      "antonyms": "ugly, plain, unattractive",
+      "sentence": "The view from the coast was absolutely beautiful in the early morning."
+    },
+    {
+      "id": "02138ffa-6550-47a6-9ad2-1800f05b11b1",
+      "progress": 0,
+      "word": "bed",
+      "partOfSpeech": "noun",
+      "meaning": "A piece of furniture you sleep on.",
+      "synonyms": "sleeping surface, cot",
+      "antonyms": "N/A",
+      "sentence": "He was so exhausted after the journey that he went straight to bed."
+    },
+    {
+      "id": "eb5a9dd5-4b5a-4cbc-81fe-d80ccf90f30b",
+      "progress": 0,
+      "word": "behaviour",
+      "partOfSpeech": "noun",
+      "meaning": "The way a person or animal acts in a situation.",
+      "synonyms": "conduct, manner, action",
+      "antonyms": "N/A",
+      "sentence": "The teacher praised the class for their excellent behaviour during the trip."
+    },
+    {
+      "id": "89da6aa9-760a-4d74-9f8e-da8567be925d",
+      "progress": 0,
+      "word": "belief",
+      "partOfSpeech": "noun",
+      "meaning": "A feeling that something is true or real.",
+      "synonyms": "conviction, faith, opinion",
+      "antonyms": "doubt, disbelief, scepticism",
+      "sentence": "Her strong belief in education motivated her to achieve her goals."
+    },
+    {
+      "id": "d0550c68-a633-4a28-b3c0-02dbbcaa4724",
+      "progress": 0,
+      "word": "belt",
+      "partOfSpeech": "noun",
+      "meaning": "A strip of leather or cloth worn around the waist.",
+      "synonyms": "strap, band, girdle",
+      "antonyms": "N/A",
+      "sentence": "He wore a leather belt with a silver buckle to the formal banquet."
+    },
+    {
+      "id": "2909cba9-06ee-466a-9329-5e6d99f87283",
+      "progress": 0,
+      "word": "belong",
+      "partOfSpeech": "verb",
+      "meaning": "To be the property of someone, or to be part of a group.",
+      "synonyms": "be owned by, be part of, fit in",
+      "antonyms": "exclude, not belong, separate",
+      "sentence": "Every citizen has the right to belong to a community that respects them."
+    },
+    {
+      "id": "c4e33e96-41fd-4bb5-8f53-debf4a65c77f",
+      "progress": 0,
+      "word": "benefit",
+      "partOfSpeech": "noun",
+      "meaning": "An advantage or good result that something provides.",
+      "synonyms": "advantage, gain, reward",
+      "antonyms": "disadvantage, harm, loss",
+      "sentence": "One major benefit of studying abroad is improving your language skills."
+    },
+    {
+      "id": "d81139fc-09d9-41e9-8be9-eecf2f3b33b1",
+      "progress": 0,
+      "word": "better",
+      "partOfSpeech": "adjective",
+      "meaning": "Of a higher quality or more suitable than another.",
+      "synonyms": "superior, improved, higher quality",
+      "antonyms": "worse, inferior, lesser",
+      "sentence": "The new treatment produced better results than the previous one."
+    },
+    {
+      "id": "268873b6-a863-4f5c-a6ef-ee5353bd211a",
+      "progress": 0,
+      "word": "bias",
+      "partOfSpeech": "noun",
+      "meaning": "An unfair preference or judgment that influences decisions.",
+      "synonyms": "prejudice, preference, partiality",
+      "antonyms": "fairness, neutrality, objectivity",
+      "sentence": "A good journalist should aim to report without bias."
+    },
+    {
+      "id": "75aaa24e-47d6-4577-9e9e-1febee73e551",
+      "progress": 0,
+      "word": "birth",
+      "partOfSpeech": "noun",
+      "meaning": "The moment when a baby or young animal comes out of its mother.",
+      "synonyms": "delivery, arrival, beginning of life",
+      "antonyms": "death, end",
+      "sentence": "The birth of the new century brought many technological advances."
+    },
+    {
+      "id": "cd0056ed-92a6-4ff8-ad75-396b082ef83e",
+      "progress": 0,
+      "word": "bitter",
+      "partOfSpeech": "adjective",
+      "meaning": "Having a sharp unpleasant taste, or feeling angry about something unfair.",
+      "synonyms": "sharp, resentful, sour",
+      "antonyms": "sweet, pleasant, content",
+      "sentence": "She felt bitter about the unfair decision made by the authority."
+    },
+    {
+      "id": "0e146667-b96d-49a2-8818-a9022d2c64dd",
+      "progress": 0,
+      "word": "blame",
+      "partOfSpeech": "verb",
+      "meaning": "To say that someone is responsible for something bad.",
+      "synonyms": "accuse, hold responsible, criticize",
+      "antonyms": "praise, forgive, excuse",
+      "sentence": "It is not fair to blame one person for a problem that involves the whole team."
+    },
+    {
+      "id": "360de9ba-4424-4384-aad6-6ba284d98a27",
+      "progress": 0,
+      "word": "block",
+      "partOfSpeech": "noun",
+      "meaning": "A solid piece of material, or an area between streets in a city.",
+      "synonyms": "chunk, section, obstacle",
+      "antonyms": "gap, opening, clear path",
+      "sentence": "A mental block prevented him from finishing the composition on time."
+    },
+    {
+      "id": "01bd8477-9022-438a-ac66-54596e850a15",
+      "progress": 0,
+      "word": "blood",
+      "partOfSpeech": "noun",
+      "meaning": "The red liquid that flows through the body.",
+      "synonyms": "N/A",
+      "antonyms": "N/A",
+      "sentence": "The nurse took a blood sample to analyse for signs of illness."
+    },
+    {
+      "id": "cf405c14-fd06-47a8-96e5-97619d7f5684",
+      "progress": 0,
+      "word": "blow",
+      "partOfSpeech": "verb",
+      "meaning": "To produce a current of air, or to move something with air.",
+      "synonyms": "puff, breathe out, gust",
+      "antonyms": "suck in, inhale, absorb",
+      "sentence": "A strong wind began to blow across the coast, warning of the coming storm."
+    },
+    {
+      "id": "6fafd0ec-5af9-4f67-852e-e27317d4a403",
+      "progress": 0,
+      "word": "blush",
+      "partOfSpeech": "verb",
+      "meaning": "To turn red in the face because of embarrassment or shame.",
+      "synonyms": "flush, redden, go red",
+      "antonyms": "pale, stay calm",
+      "sentence": "She began to blush when the audience applauded her performance."
+    },
+    {
+      "id": "b749d0b4-43b5-4ba1-9703-329af422150c",
+      "progress": 0,
+      "word": "board",
+      "partOfSpeech": "noun",
+      "meaning": "A flat piece of wood, or a group of people who manage an organization.",
+      "synonyms": "plank, panel, committee",
+      "antonyms": "N/A",
+      "sentence": "The board of directors approved the new construction contract."
+    },
+    {
+      "id": "e4162a48-954a-42c4-8e72-7ac5211eaa90",
+      "progress": 0,
+      "word": "boat",
+      "partOfSpeech": "noun",
+      "meaning": "A small vehicle used for travelling on water.",
+      "synonyms": "vessel, ship, craft",
+      "antonyms": "N/A",
+      "sentence": "They crossed the canal by boat to reach the ancient castle."
+    },
+    {
+      "id": "8d56a3b7-1a22-485c-be88-8bddd1278c0b",
+      "progress": 0,
+      "word": "body",
+      "partOfSpeech": "noun",
+      "meaning": "The physical structure of a person or animal.",
+      "synonyms": "form, figure, physique",
+      "antonyms": "mind, soul, spirit",
+      "sentence": "A healthy body requires a balanced diet and regular physical activity."
+    },
+    {
+      "id": "38049093-8722-4ce3-b55c-bbe22cc18bd2",
+      "progress": 0,
+      "word": "bond",
+      "partOfSpeech": "noun",
+      "meaning": "A strong connection between people, or an agreement.",
+      "synonyms": "connection, link, tie",
+      "antonyms": "separation, divide, break",
+      "sentence": "Living together abroad created a strong bond between the two students."
+    },
+    {
+      "id": "4b3aaf7a-a202-4828-b31c-3ee9f537c097",
+      "progress": 0,
+      "word": "boring",
+      "partOfSpeech": "adjective",
+      "meaning": "Not interesting or exciting.",
+      "synonyms": "dull, tedious, uninteresting",
+      "antonyms": "exciting, interesting, engaging",
+      "sentence": "The presentation was so boring that several members of the audience fell asleep."
+    },
+    {
+      "id": "d034d278-d620-4f54-85eb-b65b0cb2b371",
+      "progress": 0,
+      "word": "borrow",
+      "partOfSpeech": "verb",
+      "meaning": "To take something from someone with the intention of returning it.",
+      "synonyms": "loan, use temporarily",
+      "antonyms": "lend, give, return",
+      "sentence": "He had to borrow money from the bank to cover the cost of accommodation."
+    },
+    {
+      "id": "927217b6-bd83-4db9-bebc-3a35bf0de8af",
+      "progress": 0,
+      "word": "boss",
+      "partOfSpeech": "noun",
+      "meaning": "A person in charge of others at work.",
+      "synonyms": "manager, supervisor, employer",
+      "antonyms": "employee, worker, subordinate",
+      "sentence": "Her boss approved her request to attend the international conference."
+    },
+    {
+      "id": "e14f5b97-8b64-497e-835e-b3cb7d7b0ea1",
+      "progress": 0,
+      "word": "bottle",
+      "partOfSpeech": "noun",
+      "meaning": "A glass or plastic container with a narrow neck used for liquids.",
+      "synonyms": "container, flask, jug",
+      "antonyms": "N/A",
+      "sentence": "She always carries a bottle of water during long journeys."
+    },
+    {
+      "id": "adef254a-ebd6-432b-85f5-31ba8a2a19c8",
+      "progress": 0,
+      "word": "bottom",
+      "partOfSpeech": "noun",
+      "meaning": "The lowest part of something.",
+      "synonyms": "base, floor, underneath",
+      "antonyms": "top, peak, summit",
+      "sentence": "The conclusion of the report appeared at the bottom of the last page."
+    },
+    {
+      "id": "bdd4a3b7-5cd6-43ed-b949-ae4e60db66e0",
+      "progress": 0,
+      "word": "boundary",
+      "partOfSpeech": "noun",
+      "meaning": "A real or imagined line that marks the edge of something.",
+      "synonyms": "border, limit, edge",
+      "antonyms": "centre, interior, middle",
+      "sentence": "The new law established a clear boundary between personal and commercial activity."
+    },
+    {
+      "id": "9f8222d0-e7d1-435e-8c2a-853dcbb8631f",
+      "progress": 0,
+      "word": "brain",
+      "partOfSpeech": "noun",
+      "meaning": "The organ inside your skull that controls thinking and the body.",
+      "synonyms": "mind, intellect, thinking organ",
+      "antonyms": "N/A",
+      "sentence": "Regular reading is one of the best ways to keep the brain active."
+    },
+    {
+      "id": "6f7acf8d-bcf1-495c-aaaa-a7cda7fa2c8d",
+      "progress": 0,
+      "word": "break",
+      "partOfSpeech": "verb",
+      "meaning": "To cause something to separate into pieces, or to stop for a rest.",
+      "synonyms": "smash, snap, pause",
+      "antonyms": "fix, repair, continue",
+      "sentence": "Let us take a short break before we continue the discussion."
+    },
+    {
+      "id": "eebc8a03-a55e-4bc8-90a7-db560e6dfe75",
+      "progress": 0,
+      "word": "breakfast",
+      "partOfSpeech": "noun",
+      "meaning": "The first meal of the day.",
+      "synonyms": "morning meal, first meal",
+      "antonyms": "dinner, supper, last meal",
+      "sentence": "A nutritious breakfast helps you concentrate during academic tasks."
+    },
+    {
+      "id": "7d2b3cf2-f56a-40f6-abdf-550761ebfd27",
+      "progress": 0,
+      "word": "breath",
+      "partOfSpeech": "noun",
+      "meaning": "Air taken into or sent out of the lungs.",
+      "synonyms": "inhale, exhale, respiration",
+      "antonyms": "N/A",
+      "sentence": "She took a deep breath before walking into the interview room."
+    },
+    {
+      "id": "8d9118c6-6fc0-44ba-b3f8-46308124febb",
+      "progress": 0,
+      "word": "breathe",
+      "partOfSpeech": "verb",
+      "meaning": "To take air into your lungs and then let it out.",
+      "synonyms": "inhale, exhale, respire",
+      "antonyms": "suffocate, hold breath",
+      "sentence": "It is easier to breathe deeply when you are calm and relaxed."
+    },
+    {
+      "id": "973f72b1-013e-4d40-93df-cbf40f119235",
+      "progress": 0,
+      "word": "breed",
+      "partOfSpeech": "verb",
+      "meaning": "To produce young animals, or to raise animals for a specific purpose.",
+      "synonyms": "reproduce, raise, rear",
+      "antonyms": "prevent breeding, separate",
+      "sentence": "Scientists are trying to breed a variety of rice that can survive in dry conditions."
+    },
+    {
+      "id": "3ad40fbb-d2b9-4826-8397-43749cb593d6",
+      "progress": 0,
+      "word": "brief",
+      "partOfSpeech": "adjective",
+      "meaning": "Lasting only a short time, or using few words.",
+      "synonyms": "short, quick, concise",
+      "antonyms": "long, extended, detailed",
+      "sentence": "The manager gave a brief explanation of the new arrangement."
+    },
+    {
+      "id": "3a276cd9-ed2d-4a44-839c-60f363439583",
+      "progress": 0,
+      "word": "bright",
+      "partOfSpeech": "adjective",
+      "meaning": "Giving out a lot of light, or intelligent and quick to learn.",
+      "synonyms": "brilliant, vivid, intelligent",
+      "antonyms": "dim, dull, dark",
+      "sentence": "The brilliant student came up with a bright idea to solve the problem."
+    },
+    {
+      "id": "8045e921-eed9-447f-be9e-22a5f782d814",
+      "progress": 0,
+      "word": "brilliant",
+      "partOfSpeech": "adjective",
+      "meaning": "Extremely clever or impressive.",
+      "synonyms": "outstanding, excellent, clever",
+      "antonyms": "terrible, dull, mediocre",
+      "sentence": "Her brilliant performance at the concert impressed the entire audience."
+    },
+    {
+      "id": "bb96976c-dbdc-4c68-b902-29d10ee43f0c",
+      "progress": 0,
+      "word": "broaden",
+      "partOfSpeech": "verb",
+      "meaning": "To make something wider or more varied.",
+      "synonyms": "widen, expand, extend",
+      "antonyms": "narrow, limit, restrict",
+      "sentence": "Travelling abroad can broaden your understanding of different cultures."
+    },
+    {
+      "id": "f718b262-f2de-4cd3-89b7-c09ea2d7a177",
+      "progress": 0,
+      "word": "brother",
+      "partOfSpeech": "noun",
+      "meaning": "A boy or man who has the same parents as you.",
+      "synonyms": "sibling, male sibling",
+      "antonyms": "sister, female sibling",
+      "sentence": "His older brother encouraged him to pursue a career in science."
+    },
+    {
+      "id": "01df17e3-7ed0-41c9-99f2-4d4efa7d3f9a",
+      "progress": 0,
+      "word": "brown",
+      "partOfSpeech": "adjective",
+      "meaning": "Having the colour of earth or wood.",
+      "synonyms": "dark tan, chocolate, earthy",
+      "antonyms": "white, bright, colourless",
+      "sentence": "The old castle was built from brown stone and stood on top of a hill."
+    },
+    {
+      "id": "53972713-d0e2-46aa-83ca-72c6cff58f4d",
+      "progress": 0,
+      "word": "brush",
+      "partOfSpeech": "noun",
+      "meaning": "A tool with bristles used for cleaning, painting, or styling hair.",
+      "synonyms": "comb, tool, implement",
+      "antonyms": "N/A",
+      "sentence": "She picked up a brush and began to paint the scene of the canal."
+    },
+    {
+      "id": "8b79a9d4-0e77-4c91-aebd-1a727c20fbf5",
+      "progress": 0,
+      "word": "build",
+      "partOfSpeech": "verb",
+      "meaning": "To make something by putting parts together.",
+      "synonyms": "construct, create, assemble",
+      "antonyms": "destroy, demolish, break down",
+      "sentence": "The community worked together to build a new school in the district."
+    },
+    {
+      "id": "e1dcf287-09c2-4800-ab85-974783d0143e",
+      "progress": 0,
+      "word": "bulk",
+      "partOfSpeech": "noun",
+      "meaning": "The large size or mass of something, or the largest part.",
+      "synonyms": "mass, volume, majority",
+      "antonyms": "detail, small part, minority",
+      "sentence": "The company ordered the materials in bulk to reduce the cost."
+    },
+    {
+      "id": "6b7ccc75-acf8-45b0-a9c4-2b2b221efbe4",
+      "progress": 0,
+      "word": "bullet",
+      "partOfSpeech": "noun",
+      "meaning": "A small metal object fired from a gun.",
+      "synonyms": "shot, projectile, round",
+      "antonyms": "N/A",
+      "sentence": "The journalist used a bullet point list to summarise the key facts in the article."
+    },
+    {
+      "id": "50a677d1-7c44-4f4a-bb31-d304aa7e1dda",
+      "progress": 0,
+      "word": "bunch",
+      "partOfSpeech": "noun",
+      "meaning": "A group of things growing or held together.",
+      "synonyms": "cluster, group, collection",
+      "antonyms": "individual, single, one",
+      "sentence": "She brought a bunch of flowers to brighten up the office."
+    },
+    {
+      "id": "199f62a2-3966-40cf-832c-6727fefe13ff",
+      "progress": 0,
+      "word": "burden",
+      "partOfSpeech": "noun",
+      "meaning": "Something heavy that is difficult to carry, or a responsibility that causes worry.",
+      "synonyms": "load, weight, obligation",
+      "antonyms": "relief, freedom, ease",
+      "sentence": "The increasing cost of accommodation has become a burden for many families."
+    },
+    {
+      "id": "664d7e49-c231-4528-b036-6540954ea6fd",
+      "progress": 0,
+      "word": "burst",
+      "partOfSpeech": "verb",
+      "meaning": "To break open suddenly because of pressure inside.",
+      "synonyms": "explode, pop, rupture",
+      "antonyms": "hold, contain, seal",
+      "sentence": "The crowd burst into applause when the author finished speaking."
+    },
+    {
+      "id": "ae1d848c-1592-424e-bf50-69b853890fb3",
+      "progress": 0,
+      "word": "business",
+      "partOfSpeech": "noun",
+      "meaning": "The activity of buying and selling goods or services.",
+      "synonyms": "company, trade, commerce",
+      "antonyms": "hobby, charity, leisure",
+      "sentence": "She started her own business after completing a course in finance."
+    },
+    {
+      "id": "9028cd8f-15ac-464d-bcbb-ef25242c862c",
+      "progress": 0,
+      "word": "busy",
+      "partOfSpeech": "adjective",
+      "meaning": "Having a lot of things to do.",
+      "synonyms": "occupied, active, hectic",
+      "antonyms": "idle, free, relaxed",
+      "sentence": "The capital city is always busy during the annual festival season."
+    },
+    {
+      "id": "f58591eb-4ff5-4215-abe2-b361fb47dedd",
+      "progress": 0,
+      "word": "but",
+      "partOfSpeech": "conjunction",
+      "meaning": "Used to introduce a contrast or exception.",
+      "synonyms": "however, yet, although",
+      "antonyms": "and, also, similarly",
+      "sentence": "The film had a brilliant story but the ending was a little disappointing."
+    },
+    {
+      "id": "dd04b592-0611-44fe-a153-bb5fce869cb4",
+      "progress": 0,
+      "word": "cabin",
+      "partOfSpeech": "noun",
+      "meaning": "A small simple house in the countryside, or a room on a ship.",
+      "synonyms": "hut, lodge, shelter",
+      "antonyms": "mansion, palace, hotel",
+      "sentence": "They spent the weekend in a small wooden cabin near the coast."
+    },
+    {
+      "id": "ba4e750c-a539-415e-b61d-27fb7caa47d8",
+      "progress": 0,
+      "word": "cabbage",
+      "partOfSpeech": "noun",
+      "meaning": "A round vegetable with layers of green or purple leaves.",
+      "synonyms": "vegetable, leafy green",
+      "antonyms": "N/A",
+      "sentence": "Cabbage is a basic ingredient in many traditional dishes across different cultures."
+    },
+    {
+      "id": "0b1123e4-edd8-4876-b808-fd6b79303a31",
+      "progress": 0,
+      "word": "cable",
+      "partOfSpeech": "noun",
+      "meaning": "A thick wire or rope used to carry electricity or fasten things.",
+      "synonyms": "wire, cord, line",
+      "antonyms": "wireless, signal",
+      "sentence": "A damaged cable caused the automatic system to fail during the construction."
+    },
+    {
+      "id": "eddd3278-ef71-41ca-8259-39b555d17a1f",
+      "progress": 0,
+      "word": "cafe",
+      "partOfSpeech": "noun",
+      "meaning": "A small restaurant that serves drinks and light meals.",
+      "synonyms": "coffee shop, restaurant, bistro",
+      "antonyms": "N/A",
+      "sentence": "They met at a small café near the conference centre to discuss the contract."
+    },
+    {
+      "id": "88df6dea-3777-4401-aae1-25a229506846",
+      "progress": 0,
+      "word": "cake",
+      "partOfSpeech": "noun",
+      "meaning": "A sweet baked food made from flour, eggs, sugar, and fat.",
+      "synonyms": "dessert, pastry, baked treat",
+      "antonyms": "N/A",
+      "sentence": "She baked a chocolate cake to celebrate the completion of the project."
+    },
+    {
+      "id": "ff8369b9-5b91-4881-9909-586f7a296cdd",
+      "progress": 0,
+      "word": "calculation",
+      "partOfSpeech": "noun",
+      "meaning": "A mathematical process used to find an answer.",
+      "synonyms": "computation, sum, estimation",
+      "antonyms": "guess, estimation without method",
+      "sentence": "A careful calculation showed that the cost of the project had exceeded the budget."
+    },
+    {
+      "id": "f4832dca-9b4b-46bf-97bb-ee87f6abd390",
+      "progress": 0,
+      "word": "calendar",
+      "partOfSpeech": "noun",
+      "meaning": "A chart or system that shows the days, weeks, and months of the year.",
+      "synonyms": "planner, schedule, diary",
+      "antonyms": "N/A",
+      "sentence": "She marked the date of the conference on her calendar so she would not forget."
+    },
+    {
+      "id": "d18b659e-dabe-41e2-aace-92c26884f998",
+      "progress": 0,
+      "word": "call",
+      "partOfSpeech": "verb",
+      "meaning": "To shout or phone someone, or to give something a name.",
+      "synonyms": "phone, shout, name",
+      "antonyms": "ignore, silence, disconnect",
+      "sentence": "He decided to call his boss to explain why he could not attend the meeting."
+    },
+    {
+      "id": "386add19-0ee3-4569-a37d-193048c66e74",
+      "progress": 0,
+      "word": "calm",
+      "partOfSpeech": "adjective",
+      "meaning": "Not excited, worried, or nervous; peaceful.",
+      "synonyms": "peaceful, relaxed, quiet",
+      "antonyms": "anxious, upset, agitated",
+      "sentence": "It is important to stay calm when you face a difficult challenge."
+    },
+    {
+      "id": "705f21a9-27e0-4932-b50c-c54b8e43363e",
+      "progress": 0,
+      "word": "canal",
+      "partOfSpeech": "noun",
+      "meaning": "A man-made waterway used for boats to travel.",
+      "synonyms": "waterway, channel",
+      "antonyms": "road, highway",
+      "sentence": "The ancient canal was built over three centuries ago and is still in use today."
+    },
+    {
+      "id": "424e9b0f-2f28-4cf7-ba01-e03c22ad8fb4",
+      "progress": 0,
+      "word": "candidate",
+      "partOfSpeech": "noun",
+      "meaning": "A person who applies for a job or takes an exam.",
+      "synonyms": "applicant, nominee, contender",
+      "antonyms": "employer, selector, judge",
+      "sentence": "Each candidate was asked to prepare a brief presentation for the interview."
+    },
+    {
+      "id": "b0c957d2-08fb-40d0-88d2-311b5ebd126f",
+      "progress": 0,
+      "word": "capital",
+      "partOfSpeech": "noun",
+      "meaning": "The city where a country's government is based, or wealth used in business.",
+      "synonyms": "capital city, funds, wealth",
+      "antonyms": "N/A",
+      "sentence": "Berlin is the capital of Germany and a major centre of culture and art."
+    },
+    {
+      "id": "fae02dbd-ab58-4613-b99a-d3718e5513c7",
+      "progress": 0,
+      "word": "card",
+      "partOfSpeech": "noun",
+      "meaning": "A small piece of stiff paper used for messages or payment.",
+      "synonyms": "postcard, note, ID",
+      "antonyms": "N/A",
+      "sentence": "She sent a card to thank the team for their support during the project."
+    },
+    {
+      "id": "ed3e2abf-28ec-4c62-9eb2-2531f8abbd95",
+      "progress": 0,
+      "word": "care",
+      "partOfSpeech": "verb",
+      "meaning": "To feel concern for someone or something.",
+      "synonyms": "look after, tend to, be concerned",
+      "antonyms": "neglect, ignore, abandon",
+      "sentence": "A good doctor must care deeply about the wellbeing of their patients."
+    },
+    {
+      "id": "3a6e5614-db89-40d9-a25d-7b1421a838b5",
+      "progress": 0,
+      "word": "career",
+      "partOfSpeech": "noun",
+      "meaning": "The series of jobs someone has during their working life.",
+      "synonyms": "profession, occupation, vocation",
+      "antonyms": "hobby, leisure, unemployment",
+      "sentence": "She made the decision to change her career after attending a conference abroad."
+    },
+    {
+      "id": "cdeb3b39-7301-4927-bf0a-6f958ca6fbbb",
+      "progress": 0,
+      "word": "careful",
+      "partOfSpeech": "adjective",
+      "meaning": "Giving attention to avoid mistakes or danger.",
+      "synonyms": "cautious, attentive, thorough",
+      "antonyms": "careless, reckless, hasty",
+      "sentence": "Be careful when you sign a contract — always read every clause."
+    },
+    {
+      "id": "bc44041c-153c-44d2-aa55-6c74e4fd22dd",
+      "progress": 0,
+      "word": "careless",
+      "partOfSpeech": "adjective",
+      "meaning": "Not paying attention, which can cause mistakes or accidents.",
+      "synonyms": "reckless, inattentive, negligent",
+      "antonyms": "careful, attentive, cautious",
+      "sentence": "A careless mistake in the calculation caused the whole project to be delayed."
+    },
+    {
+      "id": "b3213fe5-b053-4235-aa50-9db78e99f975",
+      "progress": 0,
+      "word": "carry",
+      "partOfSpeech": "verb",
+      "meaning": "To hold and transport something from one place to another.",
+      "synonyms": "transport, take, move",
+      "antonyms": "put down, drop, leave",
+      "sentence": "He had to carry a heavy burden of responsibility as the head of the department."
+    },
+    {
+      "id": "23443282-c772-497a-91e7-069b30f8e083",
+      "progress": 0,
+      "word": "case",
+      "partOfSpeech": "noun",
+      "meaning": "A particular situation or example, or a container for things.",
+      "synonyms": "situation, instance, example",
+      "antonyms": "general rule, theory",
+      "sentence": "In this case, the authority decided to arrest the criminal immediately."
+    },
+    {
+      "id": "cc4d906f-d364-4eba-ac48-cdcb5f56fd40",
+      "progress": 0,
+      "word": "cash",
+      "partOfSpeech": "noun",
+      "meaning": "Money in the form of coins or notes.",
+      "synonyms": "money, currency, notes",
+      "antonyms": "credit, debt, card payment",
+      "sentence": "Many small businesses still prefer to accept cash rather than card payments."
+    },
+    {
+      "id": "cecd0522-018e-449a-9e59-c4a12fd3c6a4",
+      "progress": 0,
+      "word": "casual",
+      "partOfSpeech": "adjective",
+      "meaning": "Relaxed and not formal, or happening without being planned.",
+      "synonyms": "informal, relaxed, laid-back",
+      "antonyms": "formal, serious, planned",
+      "sentence": "She preferred a casual approach to conversation rather than formal meetings."
+    },
+    {
+      "id": "42cdafae-1c7e-4b9c-b9b5-b624cd8d31be",
+      "progress": 0,
+      "word": "cast",
+      "partOfSpeech": "verb",
+      "meaning": "To throw something, or to choose actors for a film or play.",
+      "synonyms": "throw, hurl, assign roles",
+      "antonyms": "catch, receive, keep",
+      "sentence": "The director decided to cast an unknown actor in the lead role."
+    },
+    {
+      "id": "88c80482-71e3-4e0c-b495-39a3b0090bb8",
+      "progress": 0,
+      "word": "castle",
+      "partOfSpeech": "noun",
+      "meaning": "A large strong building built in the past to protect people from enemies.",
+      "synonyms": "fortress, stronghold, palace",
+      "antonyms": "cottage, hut, shack",
+      "sentence": "The ancient castle has become one of the most popular tourist attractions in the country."
+    },
+    {
+      "id": "56b34d37-dd5e-46f4-bff2-6b62816adc4e",
+      "progress": 0,
+      "word": "catch",
+      "partOfSpeech": "verb",
+      "meaning": "To grab something that is moving, or to get an illness.",
+      "synonyms": "grab, capture, seize",
+      "antonyms": "miss, drop, release",
+      "sentence": "She managed to catch the train just before it departed."
+    },
+    {
+      "id": "751d587b-61e0-401a-808c-3559811d371d",
+      "progress": 0,
+      "word": "cause",
+      "partOfSpeech": "noun",
+      "meaning": "The reason why something happens.",
+      "synonyms": "reason, source, origin",
+      "antonyms": "effect, result, outcome",
+      "sentence": "Scientists are studying the cause of the rapid change in the local climate."
+    },
+    {
+      "id": "61514144-9d55-4989-b067-185a3e45a1da",
+      "progress": 0,
+      "word": "ceiling",
+      "partOfSpeech": "noun",
+      "meaning": "The top inner surface of a room.",
+      "synonyms": "top, upper surface, overhead",
+      "antonyms": "floor, ground, base",
+      "sentence": "The ceiling of the old cathedral was decorated with ancient paintings."
+    },
+    {
+      "id": "9ef0de0c-8cf1-4c63-bfab-f4833800bbbf",
+      "progress": 0,
+      "word": "cell",
+      "partOfSpeech": "noun",
+      "meaning": "The smallest unit of a living thing, or a small room in a prison.",
+      "synonyms": "unit, room, compartment",
+      "antonyms": "whole organism, organism",
+      "sentence": "Each cell in the body has a specific function that contributes to the whole system."
+    },
+    {
+      "id": "e1e714a1-55b2-4ba5-a477-f3ceb3235639",
+      "progress": 0,
+      "word": "celebrate",
+      "partOfSpeech": "verb",
+      "meaning": "To do something special to mark an important event.",
+      "synonyms": "mark, commemorate, honour",
+      "antonyms": "mourn, ignore, overlook",
+      "sentence": "They gathered to celebrate the successful completion of the construction project."
+    },
+    {
+      "id": "bbcba3d0-1a79-496e-9a7f-0f32eed337ca",
+      "progress": 0,
+      "word": "centre",
+      "partOfSpeech": "noun",
+      "meaning": "The middle point or area of something.",
+      "synonyms": "middle, core, heart",
+      "antonyms": "edge, border, outskirts",
+      "sentence": "The community centre held an annual event to bring citizens together."
+    },
+    {
+      "id": "67ca6035-731b-4a3e-beb5-024ce9d17554",
+      "progress": 0,
+      "word": "century",
+      "partOfSpeech": "noun",
+      "meaning": "A period of one hundred years.",
+      "synonyms": "100 years, era, age",
+      "antonyms": "moment, second, day",
+      "sentence": "The castle was built in the twelfth century and has survived several battles."
+    },
+    {
+      "id": "bbe9687c-b045-473e-a74f-b9f43b8ddc05",
+      "progress": 0,
+      "word": "challenge",
+      "partOfSpeech": "noun",
+      "meaning": "A difficult task or situation that requires effort to deal with.",
+      "synonyms": "test, difficulty, obstacle",
+      "antonyms": "ease, comfort, simplicity",
+      "sentence": "Learning a new language is a challenge, but it brings many benefits."
+    },
+    {
+      "id": "15df02ff-acf7-490a-a7e4-ea999e729634",
+      "progress": 0,
+      "word": "change",
+      "partOfSpeech": "verb",
+      "meaning": "To make or become different.",
+      "synonyms": "alter, transform, modify",
+      "antonyms": "keep, maintain, preserve",
+      "sentence": "The new director announced plans to change the structure of the organisation."
+    },
+    {
+      "id": "b1779f9b-c528-4cf1-a063-662e01b8591b",
+      "progress": 0,
+      "word": "channel",
+      "partOfSpeech": "noun",
+      "meaning": "A television or radio station, or a passage for water.",
+      "synonyms": "station, network, waterway",
+      "antonyms": "N/A",
+      "sentence": "She watched a documentary on a science channel about ancient civilisations."
+    },
+    {
+      "id": "c8b1eef1-9548-45e3-912b-7ede01d480b7",
+      "progress": 0,
+      "word": "character",
+      "partOfSpeech": "noun",
+      "meaning": "The qualities that make a person who they are, or a person in a story.",
+      "synonyms": "personality, nature, figure",
+      "antonyms": "N/A",
+      "sentence": "The novel's main character had to overcome a series of difficult circumstances."
+    },
+    {
+      "id": "1184c06a-22a3-4ec9-89a7-c39f94dd4f88",
+      "progress": 0,
+      "word": "charge",
+      "partOfSpeech": "noun",
+      "meaning": "The price asked for a service, or a formal accusation.",
+      "synonyms": "fee, cost, accusation",
+      "antonyms": "discount, refund, free",
+      "sentence": "There is an extra charge for accommodation during the annual festival."
+    },
+    {
+      "id": "7438fe8f-cc2f-4ca1-bc46-8b479559b4e7",
+      "progress": 0,
+      "word": "chart",
+      "partOfSpeech": "noun",
+      "meaning": "A visual representation of information using lines or shapes.",
+      "synonyms": "graph, diagram, table",
+      "antonyms": "paragraph, text, prose",
+      "sentence": "The report included a chart showing the increase in average temperatures over the century."
+    },
+    {
+      "id": "ea99fa3f-ebd9-47b8-b843-0e57449cc2d0",
+      "progress": 0,
+      "word": "chase",
+      "partOfSpeech": "verb",
+      "meaning": "To run after someone or something quickly.",
+      "synonyms": "pursue, follow, hunt",
+      "antonyms": "escape, flee, avoid",
+      "sentence": "The journalist decided to chase the story even though it involved some danger."
+    },
+    {
+      "id": "4b133a0c-1af5-4cfd-a3e6-4b410bbb964d",
+      "progress": 0,
+      "word": "cheap",
+      "partOfSpeech": "adjective",
+      "meaning": "Costing very little money.",
+      "synonyms": "affordable, inexpensive, low-cost",
+      "antonyms": "expensive, costly, pricey",
+      "sentence": "They found cheap but comfortable accommodation near the city centre."
+    },
+    {
+      "id": "ce8161d0-78ae-4713-91b0-d178e3a1c532",
+      "progress": 0,
+      "word": "check",
+      "partOfSpeech": "verb",
+      "meaning": "To examine something carefully to verify it is correct.",
+      "synonyms": "examine, inspect, verify",
+      "antonyms": "ignore, overlook, skip",
+      "sentence": "Always check the context before you assume the meaning of a new word."
+    },
+    {
+      "id": "c628a3ac-d7da-4692-8a14-6e0e9eb2024e",
+      "progress": 0,
+      "word": "cheer",
+      "partOfSpeech": "verb",
+      "meaning": "To shout with joy or to encourage someone loudly.",
+      "synonyms": "encourage, applaud, support",
+      "antonyms": "boo, discourage, jeer",
+      "sentence": "The crowd began to cheer when the home team scored the winning goal."
+    },
+    {
+      "id": "be5e0261-65aa-4466-81ea-5dd03b455095",
+      "progress": 0,
+      "word": "cheese",
+      "partOfSpeech": "noun",
+      "meaning": "A solid food made from milk.",
+      "synonyms": "dairy product",
+      "antonyms": "N/A",
+      "sentence": "She paired the wine with a selection of local cheese at the banquet."
+    },
+    {
+      "id": "031f177d-a865-4202-97bf-327dc19c6ac2",
+      "progress": 0,
+      "word": "chemical",
+      "partOfSpeech": "noun",
+      "meaning": "A substance produced by or used in a chemical process.",
+      "synonyms": "substance, compound, element",
+      "antonyms": "N/A",
+      "sentence": "The factory was accused of releasing harmful chemical waste into the canal."
+    },
+    {
+      "id": "0a7f4ccc-7918-4008-81f4-4cb80e4890ce",
+      "progress": 0,
+      "word": "chest",
+      "partOfSpeech": "noun",
+      "meaning": "The front part of the upper body, or a large strong box.",
+      "synonyms": "torso, upper body, box",
+      "antonyms": "back, abdomen",
+      "sentence": "He felt a sharp pain in his chest after the intense basketball game."
+    },
+    {
+      "id": "f71d3c47-5b74-403c-bd68-3a384689a2be",
+      "progress": 0,
+      "word": "chief",
+      "partOfSpeech": "adjective",
+      "meaning": "Most important or main.",
+      "synonyms": "main, primary, principal",
+      "antonyms": "minor, secondary, unimportant",
+      "sentence": "The chief concern of the authority was the increase in crime in the district."
+    },
+    {
+      "id": "fd5a446e-6304-4d4e-a3d5-a547ac8e8c20",
+      "progress": 0,
+      "word": "child",
+      "partOfSpeech": "noun",
+      "meaning": "A young person who is not yet an adult.",
+      "synonyms": "kid, youth, youngster",
+      "antonyms": "adult, grown-up, elder",
+      "sentence": "Every child deserves access to quality academic education."
+    },
+    {
+      "id": "2e997f35-f178-4185-ad2f-77e129aee3b4",
+      "progress": 0,
+      "word": "childish",
+      "partOfSpeech": "adjective",
+      "meaning": "Behaving in a way that is suitable for a child but not for an adult.",
+      "synonyms": "immature, silly, naive",
+      "antonyms": "mature, responsible, grown-up",
+      "sentence": "His childish behaviour during the meeting made it difficult to take him seriously."
+    },
+    {
+      "id": "198f0969-b603-44d6-b665-d1b474a1d4c0",
+      "progress": 0,
+      "word": "chimney",
+      "partOfSpeech": "noun",
+      "meaning": "A vertical pipe or structure that carries smoke from a fire out of a building.",
+      "synonyms": "flue, smokestack, pipe",
+      "antonyms": "N/A",
+      "sentence": "Smoke rose from the chimney of the cabin on a cold winter morning."
+    },
+    {
+      "id": "9e695ac0-e986-4039-aee9-5cd79e42afff",
+      "progress": 0,
+      "word": "chop",
+      "partOfSpeech": "verb",
+      "meaning": "To cut something into pieces with a knife or axe.",
+      "synonyms": "cut, slice, hack",
+      "antonyms": "join, combine, assemble",
+      "sentence": "She began to chop the cabbage into small pieces for the soup."
+    },
+    {
+      "id": "568e42f0-15c3-475c-9a33-be6e1e7d9c0f",
+      "progress": 0,
+      "word": "choose",
+      "partOfSpeech": "verb",
+      "meaning": "To pick one thing from several options.",
+      "synonyms": "select, pick, decide on",
+      "antonyms": "reject, refuse, ignore",
+      "sentence": "It can be difficult to choose the right career path at a young age."
+    },
+    {
+      "id": "9f56275a-33b5-4fa7-9331-7a1b5c6d3d05",
+      "progress": 0,
+      "word": "Christmas",
+      "partOfSpeech": "noun",
+      "meaning": "A Christian holiday on 25 December that celebrates the birth of Jesus.",
+      "synonyms": "festive season, Xmas",
+      "antonyms": "N/A",
+      "sentence": "The whole family gathered at the old cottage to celebrate Christmas."
+    },
+    {
+      "id": "7f5d5b40-d834-4243-938d-ec53a5c9fb80",
+      "progress": 0,
+      "word": "cigarette",
+      "partOfSpeech": "noun",
+      "meaning": "A thin tube of tobacco that people smoke.",
+      "synonyms": "smoke, tobacco stick",
+      "antonyms": "N/A",
+      "sentence": "He finally made the decision to quit cigarettes for the sake of his health."
+    },
+    {
+      "id": "1bc082fb-b467-413e-a52d-a642339f46f3",
+      "progress": 0,
+      "word": "circle",
+      "partOfSpeech": "noun",
+      "meaning": "A round shape where every point is the same distance from the centre.",
+      "synonyms": "ring, loop, round shape",
+      "antonyms": "square, straight line",
+      "sentence": "The students sat in a circle to encourage open conversation."
+    },
+    {
+      "id": "b641d1c5-0a18-483a-9570-8d80f261acc6",
+      "progress": 0,
+      "word": "circumstance",
+      "partOfSpeech": "noun",
+      "meaning": "The conditions that affect a situation or event.",
+      "synonyms": "condition, situation, context",
+      "antonyms": "N/A",
+      "sentence": "Under the difficult circumstance, the team managed to complete the project."
+    },
+    {
+      "id": "bf967683-0e8e-4e84-af36-c6c4efa8194d",
+      "progress": 0,
+      "word": "citizen",
+      "partOfSpeech": "noun",
+      "meaning": "A person who legally belongs to a country.",
+      "synonyms": "national, resident, inhabitant",
+      "antonyms": "foreigner, visitor, alien",
+      "sentence": "Every citizen has both rights and duties within their community."
+    },
+    {
+      "id": "823e8a62-1a54-4a8e-a8bb-2acc54be4989",
+      "progress": 0,
+      "word": "city",
+      "partOfSpeech": "noun",
+      "meaning": "A large important urban area where many people live.",
+      "synonyms": "metropolis, urban area, town",
+      "antonyms": "village, countryside, rural area",
+      "sentence": "She moved to the capital city to advance her academic career."
+    },
+    {
+      "id": "8f7375fb-3dcc-4918-a5df-fe2c060a3d9d",
+      "progress": 0,
+      "word": "class",
+      "partOfSpeech": "noun",
+      "meaning": "A group of students learning together, or a social category.",
+      "synonyms": "group, lesson, social rank",
+      "antonyms": "N/A",
+      "sentence": "The upper class and the working class often have very different life experiences."
+    },
+    {
+      "id": "c14ce1bf-a906-4ca1-9f67-e00b9e8502a6",
+      "progress": 0,
+      "word": "classic",
+      "partOfSpeech": "adjective",
+      "meaning": "Considered the best or most typical of its kind.",
+      "synonyms": "timeless, definitive, traditional",
+      "antonyms": "modern, trendy, temporary",
+      "sentence": "The film is now considered a classic of modern cinema."
+    },
+    {
+      "id": "bfbef723-80f7-4d69-8a45-3a15df035cb3",
+      "progress": 0,
+      "word": "clause",
+      "partOfSpeech": "noun",
+      "meaning": "A group of words in a sentence that contains a subject and verb.",
+      "synonyms": "phrase, sentence part, provision",
+      "antonyms": "N/A",
+      "sentence": "Every clause in the contract must be checked carefully before signing."
+    },
+    {
+      "id": "f46f1ed9-9323-4e77-94a9-e9b07a9665e9",
+      "progress": 0,
+      "word": "clean",
+      "partOfSpeech": "adjective",
+      "meaning": "Free from dirt, pollution, or marks.",
+      "synonyms": "spotless, tidy, pure",
+      "antonyms": "dirty, polluted, messy",
+      "sentence": "The community decided to organise a campaign to keep the coast clean."
+    },
+    {
+      "id": "fb72bad1-f7d3-4a0e-a3fb-2e37b4ba3c33",
+      "progress": 0,
+      "word": "clear",
+      "partOfSpeech": "adjective",
+      "meaning": "Easy to understand, see, or hear.",
+      "synonyms": "obvious, plain, transparent",
+      "antonyms": "unclear, confusing, cloudy",
+      "sentence": "The author's argument was clear, well-structured, and supported by strong evidence."
+    },
+    {
+      "id": "7d7b6d54-3a2a-4ff6-9e6b-4e490eed3763",
+      "progress": 0,
+      "word": "clever",
+      "partOfSpeech": "adjective",
+      "meaning": "Quick to understand and learn things.",
+      "synonyms": "intelligent, smart, sharp",
+      "antonyms": "dull, slow, unintelligent",
+      "sentence": "A clever combination of old and new materials was used in the construction."
+    },
+    {
+      "id": "d91a6a05-6d1b-450f-b884-0e6dd1173dec",
+      "progress": 0,
+      "word": "climate",
+      "partOfSpeech": "noun",
+      "meaning": "The typical long-term weather conditions in a region.",
+      "synonyms": "weather pattern, environment",
+      "antonyms": "N/A",
+      "sentence": "The rapid change in global climate is one of the most serious challenges of this century."
+    },
+    {
+      "id": "2d0f3825-4cae-4d00-a87f-0ccefb5bb504",
+      "progress": 0,
+      "word": "clock",
+      "partOfSpeech": "noun",
+      "meaning": "A device that shows the time.",
+      "synonyms": "timepiece, watch, timer",
+      "antonyms": "N/A",
+      "sentence": "She glanced at the clock and realised she was already late for the conference."
+    },
+    {
+      "id": "aaff0f2c-dfc2-4bdf-b5f5-2c9f6080860f",
+      "progress": 0,
+      "word": "close",
+      "partOfSpeech": "adjective",
+      "meaning": "Near in distance, or having a strong relationship.",
+      "synonyms": "near, nearby, intimate",
+      "antonyms": "far, distant, remote",
+      "sentence": "The two schools are close to each other, which makes cooperation easier."
+    },
+    {
+      "id": "5755b7ea-93ea-4743-b06b-64cceffdaa28",
+      "progress": 0,
+      "word": "cloth",
+      "partOfSpeech": "noun",
+      "meaning": "A piece of fabric used for a specific purpose.",
+      "synonyms": "fabric, material, textile",
+      "antonyms": "paper, metal, plastic",
+      "sentence": "She used a damp cloth to clean the surface before the inspection."
+    },
+    {
+      "id": "441b41fc-6e98-4818-8006-4f2f9fe62b43",
+      "progress": 0,
+      "word": "clothing",
+      "partOfSpeech": "noun",
+      "meaning": "Clothes in general.",
+      "synonyms": "clothes, garments, attire",
+      "antonyms": "nakedness, skin",
+      "sentence": "The store donated a large collection of clothing to help the community abroad."
+    },
+    {
+      "id": "cc4c558c-9bfe-430f-819e-9c61cb5be9e5",
+      "progress": 0,
+      "word": "cloud",
+      "partOfSpeech": "noun",
+      "meaning": "A mass of water vapour floating high in the sky.",
+      "synonyms": "overcast, mist, vapour",
+      "antonyms": "sun, clear sky, sunshine",
+      "sentence": "A large cloud covered the sun, and the temperature dropped quickly."
+    },
+    {
+      "id": "bab3032e-c3db-4934-a9f2-24de632921ba",
+      "progress": 0,
+      "word": "club",
+      "partOfSpeech": "noun",
+      "meaning": "An organisation for people who share an interest, or a nightclub.",
+      "synonyms": "group, society, association",
+      "antonyms": "individual, solo",
+      "sentence": "She joined a debate club to develop her confidence and communication skills."
+    },
+    {
+      "id": "6ccf3124-5bdd-4837-a194-a03039641a5a",
+      "progress": 0,
+      "word": "coach",
+      "partOfSpeech": "noun",
+      "meaning": "A person who trains others to improve at a sport or skill.",
+      "synonyms": "trainer, instructor, mentor",
+      "antonyms": "student, trainee",
+      "sentence": "The coach encouraged the team to stay calm and focus on their strategy."
+    },
+    {
+      "id": "6506956c-8562-47a0-b8e7-c9120fd3cdcc",
+      "progress": 0,
+      "word": "coal",
+      "partOfSpeech": "noun",
+      "meaning": "A hard black mineral burned as a fuel.",
+      "synonyms": "fossil fuel, mineral, carbon",
+      "antonyms": "renewable energy, solar",
+      "sentence": "Many countries are moving away from coal as they try to reduce carbon emissions."
+    },
+    {
+      "id": "984edeea-b9a3-485d-a9fd-d514a48d3575",
+      "progress": 0,
+      "word": "coast",
+      "partOfSpeech": "noun",
+      "meaning": "The area of land beside the sea.",
+      "synonyms": "shore, seaside, coastline",
+      "antonyms": "inland, interior, mountain",
+      "sentence": "The cabin on the coast had a beautiful view of the sea."
+    },
+    {
+      "id": "3c45eb90-a2aa-421b-9d21-7b3fd17c37ed",
+      "progress": 0,
+      "word": "coat",
+      "partOfSpeech": "noun",
+      "meaning": "A long item of clothing worn over other clothes to keep warm.",
+      "synonyms": "jacket, overcoat, layer",
+      "antonyms": "N/A",
+      "sentence": "He put on a thick coat before heading out into the cold morning air."
+    },
+    {
+      "id": "8c2010c1-1764-4263-8821-34628597a4fb",
+      "progress": 0,
+      "word": "cocoa",
+      "partOfSpeech": "noun",
+      "meaning": "A powder made from cocoa beans, used to make chocolate or hot drinks.",
+      "synonyms": "chocolate powder, cacao",
+      "antonyms": "N/A",
+      "sentence": "She made a warm cup of cocoa after returning from the chilly hike along the coast."
+    },
+    {
+      "id": "d0191509-9d2c-4616-9ad7-e8059992c263",
+      "progress": 0,
+      "word": "code",
+      "partOfSpeech": "noun",
+      "meaning": "A set of instructions for a computer, or a system of symbols for communication.",
+      "synonyms": "program, cipher, system",
+      "antonyms": "plain text, natural language",
+      "sentence": "He spent the evening writing code for the new automatic scheduling system."
+    },
+    {
+      "id": "1e2429cb-6914-4907-84fb-26dfc5bd0a03",
+      "progress": 0,
+      "word": "coffee",
+      "partOfSpeech": "noun",
+      "meaning": "A hot drink made from roasted coffee beans.",
+      "synonyms": "brew, espresso, beverage",
+      "antonyms": "tea, juice, water",
+      "sentence": "They sat in the café and discussed the contract over cups of coffee."
+    },
+    {
+      "id": "f1538069-47be-45eb-84de-6c304fb37bf8",
+      "progress": 0,
+      "word": "coin",
+      "partOfSpeech": "noun",
+      "meaning": "A flat piece of metal used as money.",
+      "synonyms": "currency, token, money",
+      "antonyms": "note, card, paper money",
+      "sentence": "She found an ancient coin near the wall of the old castle."
+    },
+    {
+      "id": "52aeee35-4920-4a21-8553-14cdb6946d11",
+      "progress": 0,
+      "word": "cold",
+      "partOfSpeech": "adjective",
+      "meaning": "Having a low temperature.",
+      "synonyms": "cool, chilly, freezing",
+      "antonyms": "hot, warm, heated",
+      "sentence": "The cold temperature at the coast made the morning hike quite difficult."
+    },
+    {
+      "id": "14ae1887-6326-4e0c-8007-93ca30523ee3",
+      "progress": 0,
+      "word": "collapse",
+      "partOfSpeech": "verb",
+      "meaning": "To fall down suddenly, or to fail completely.",
+      "synonyms": "fall, crumble, break down",
+      "antonyms": "stand, rise, succeed",
+      "sentence": "The company began to collapse after a series of poor financial decisions."
+    },
+    {
+      "id": "e04f305e-827e-4411-bd8b-67ee2de1d0ef",
+      "progress": 0,
+      "word": "collect",
+      "partOfSpeech": "verb",
+      "meaning": "To gather things from different places and put them together.",
+      "synonyms": "gather, accumulate, compile",
+      "antonyms": "scatter, distribute, lose",
+      "sentence": "He started to collect ancient coins as a hobby during his time abroad."
+    },
+    {
+      "id": "7ea61c64-3b85-4b54-87a8-2e80033aab3a",
+      "progress": 0,
+      "word": "collection",
+      "partOfSpeech": "noun",
+      "meaning": "A group of things that have been brought together.",
+      "synonyms": "set, assortment, compilation",
+      "antonyms": "individual, scattered items",
+      "sentence": "The museum displayed a remarkable collection of ancient artefacts."
+    },
+    {
+      "id": "e82f566f-ae0b-4a42-bbc4-ac3078ed3f31",
+      "progress": 0,
+      "word": "colour",
+      "partOfSpeech": "noun",
+      "meaning": "The visual appearance of something produced by the wavelengths of light it reflects.",
+      "synonyms": "shade, tone, hue",
+      "antonyms": "N/A",
+      "sentence": "The artist used a bold combination of colour to express strong emotion."
+    },
+    {
+      "id": "f8e0f79b-e92d-4c95-b04f-bb0d2f1fe85c",
+      "progress": 0,
+      "word": "column",
+      "partOfSpeech": "noun",
+      "meaning": "A tall vertical structure used to support a building, or a vertical section in a chart.",
+      "synonyms": "pillar, post, section",
+      "antonyms": "row, horizontal, line",
+      "sentence": "The newspaper published a weekly column on the topic of climate change."
+    },
+    {
+      "id": "f7a3cf51-9b0a-43de-8b79-4b31422cc596",
+      "progress": 0,
+      "word": "combination",
+      "partOfSpeech": "noun",
+      "meaning": "Two or more things joined or mixed together.",
+      "synonyms": "mixture, blend, union",
+      "antonyms": "separation, division, individual",
+      "sentence": "The combination of hard work and talent helped her achieve great success."
+    },
+    {
+      "id": "139f9849-263b-4376-bd18-4299ef5fedf2",
+      "progress": 0,
+      "word": "comfort",
+      "partOfSpeech": "noun",
+      "meaning": "A pleasant feeling of being relaxed and free from pain.",
+      "synonyms": "ease, relief, coziness",
+      "antonyms": "discomfort, pain, suffering",
+      "sentence": "After the long journey, she found great comfort in the warmth of the cabin."
+    },
+    {
+      "id": "d7d02031-ccfb-48d0-8b91-1678a2b7730a",
+      "progress": 0,
+      "word": "command",
+      "partOfSpeech": "noun",
+      "meaning": "An order given by someone in authority.",
+      "synonyms": "order, instruction, directive",
+      "antonyms": "request, question, suggestion",
+      "sentence": "The general gave the command to advance at dawn."
+    },
+    {
+      "id": "1bfb9a97-57e9-49ce-8102-64c353a7f4ce",
+      "progress": 0,
+      "word": "comment",
+      "partOfSpeech": "noun",
+      "meaning": "A spoken or written remark about something.",
+      "synonyms": "remark, observation, opinion",
+      "antonyms": "silence, agreement, action",
+      "sentence": "She posted a comment on the article to share her perspective."
+    },
+    {
+      "id": "7d350d46-25cd-4d2b-aec1-a71fecae10c9",
+      "progress": 0,
+      "word": "commercial",
+      "partOfSpeech": "adjective",
+      "meaning": "Related to buying and selling goods and services.",
+      "synonyms": "business-related, trade, market-based",
+      "antonyms": "non-profit, personal, private",
+      "sentence": "The company signed a commercial agreement to expand its business abroad."
+    },
+    {
+      "id": "d2298748-a82b-4df5-8ee0-5b42c846e961",
+      "progress": 0,
+      "word": "commit",
+      "partOfSpeech": "verb",
+      "meaning": "To do something, especially a crime, or to promise to do something.",
+      "synonyms": "carry out, pledge, dedicate",
+      "antonyms": "avoid, abandon, back out",
+      "sentence": "He made a promise to commit to the project until it was fully complete."
+    },
+    {
+      "id": "7359f72b-7a28-471d-9a7c-f1a58fc10029",
+      "progress": 0,
+      "word": "common",
+      "partOfSpeech": "adjective",
+      "meaning": "Happening often or shared by many people.",
+      "synonyms": "frequent, widespread, ordinary",
+      "antonyms": "rare, unusual, uncommon",
+      "sentence": "It is common to feel nervous before an important interview."
+    },
+    {
+      "id": "bb1065ed-108c-4308-8c78-3d6f8dc99187",
+      "progress": 0,
+      "word": "communicate",
+      "partOfSpeech": "verb",
+      "meaning": "To share information or feelings with others.",
+      "synonyms": "talk, express, convey",
+      "antonyms": "misunderstand, hide, stay silent",
+      "sentence": "The ability to communicate clearly is a key skill in any career."
+    },
+    {
+      "id": "58743e86-22d1-4f6c-9fac-df06a0025146",
+      "progress": 0,
+      "word": "community",
+      "partOfSpeech": "noun",
+      "meaning": "A group of people who live in the same place or share a common interest.",
+      "synonyms": "society, group, neighbourhood",
+      "antonyms": "individual, outsider",
+      "sentence": "The community came together to help those affected by the flood."
+    },
+    {
+      "id": "121417ce-f5b0-454d-98f2-7bb90c2df397",
+      "progress": 0,
+      "word": "compare",
+      "partOfSpeech": "verb",
+      "meaning": "To examine the differences and similarities between things.",
+      "synonyms": "contrast, assess, evaluate",
+      "antonyms": "ignore, separate, overlook",
+      "sentence": "It is useful to compare the cost of accommodation in different areas of the city."
+    },
+    {
+      "id": "0534ab7e-74a9-4636-a3b6-f24e04e48025",
+      "progress": 0,
+      "word": "comparison",
+      "partOfSpeech": "noun",
+      "meaning": "The act of considering how things are similar or different.",
+      "synonyms": "contrast, assessment, analysis",
+      "antonyms": "N/A",
+      "sentence": "In comparison with last century, living standards have improved significantly."
+    },
+    {
+      "id": "f1a38fe6-90b7-440d-b534-cf542f3c3346",
+      "progress": 0,
+      "word": "compensate",
+      "partOfSpeech": "verb",
+      "meaning": "To give something to make up for a loss or injury.",
+      "synonyms": "repay, make up for, reimburse",
+      "antonyms": "take away, harm, withhold",
+      "sentence": "The company agreed to compensate those who had been affected by the accident."
+    },
+    {
+      "id": "bb32f3d4-beff-4020-8b5c-3fd523a8e0d6",
+      "progress": 0,
+      "word": "compete",
+      "partOfSpeech": "verb",
+      "meaning": "To try to win something against others.",
+      "synonyms": "contest, rival, challenge",
+      "antonyms": "cooperate, help, support",
+      "sentence": "The two candidates will compete for the position at the national conference."
+    },
+    {
+      "id": "5b0896cf-1f22-4a77-927f-50c8382ef0fd",
+      "progress": 0,
+      "word": "competitive",
+      "partOfSpeech": "adjective",
+      "meaning": "Strongly wanting to win or be more successful than others.",
+      "synonyms": "ambitious, rivalrous, driven",
+      "antonyms": "cooperative, easy-going, passive",
+      "sentence": "The job market in the capital city is highly competitive."
+    },
+    {
+      "id": "474eec70-2371-440f-b78a-306069a65a1e",
+      "progress": 0,
+      "word": "competition",
+      "partOfSpeech": "noun",
+      "meaning": "An event where people try to win by being the best.",
+      "synonyms": "contest, tournament, rivalry",
+      "antonyms": "cooperation, collaboration, teamwork",
+      "sentence": "She entered the annual writing competition and won first prize."
+    },
+    {
+      "id": "b9e12eec-31cb-410d-a34a-9d6a567e72fd",
+      "progress": 0,
+      "word": "complain",
+      "partOfSpeech": "verb",
+      "meaning": "To express dissatisfaction or annoyance about something.",
+      "synonyms": "protest, grumble, object",
+      "antonyms": "praise, compliment, approve",
+      "sentence": "Several citizens wrote to the authority to complain about the noise from the construction."
+    },
+    {
+      "id": "832cdc82-a8a3-4830-92aa-0994aeceacb3",
+      "progress": 0,
+      "word": "complete",
+      "partOfSpeech": "adjective",
+      "meaning": "Having all necessary parts; finished.",
+      "synonyms": "finished, whole, total",
+      "antonyms": "incomplete, unfinished, partial",
+      "sentence": "It took three years to complete the construction of the new community centre."
+    },
+    {
+      "id": "57628687-a9b9-4391-ac10-c13cca102df7",
+      "progress": 0,
+      "word": "complex",
+      "partOfSpeech": "adjective",
+      "meaning": "Made up of many different parts that are difficult to understand.",
+      "synonyms": "complicated, difficult, intricate",
+      "antonyms": "simple, easy, basic",
+      "sentence": "The relationship between climate and crop production is highly complex."
+    },
+    {
+      "id": "22250d82-dfd3-41ad-838e-980ee179c49a",
+      "progress": 0,
+      "word": "component",
+      "partOfSpeech": "noun",
+      "meaning": "A part that forms part of a larger whole.",
+      "synonyms": "part, element, piece",
+      "antonyms": "whole, entirety, system",
+      "sentence": "Every component of the machine must be checked before it is used automatically."
+    },
+    {
+      "id": "2e208d50-6213-4adb-83f6-f271e40cd985",
+      "progress": 0,
+      "word": "compose",
+      "partOfSpeech": "verb",
+      "meaning": "To write music or text, or to make up something from different parts.",
+      "synonyms": "write, create, make up",
+      "antonyms": "destroy, decompose, dismantle",
+      "sentence": "He decided to compose a short piece of music to perform at the annual concert."
+    },
+    {
+      "id": "a5bd5c69-f0e1-4fce-8c59-65f337ab6352",
+      "progress": 0,
+      "word": "composition",
+      "partOfSpeech": "noun",
+      "meaning": "A piece of music or writing, or the way something is made up of parts.",
+      "synonyms": "work, piece, structure",
+      "antonyms": "whole, formless mass",
+      "sentence": "Her composition was selected as the best entry in the music competition."
+    },
+    {
+      "id": "470bcc01-fc70-4f28-897c-96ef137b9de6",
+      "progress": 0,
+      "word": "compound",
+      "partOfSpeech": "noun",
+      "meaning": "A substance made of two or more elements, or a word made of two parts.",
+      "synonyms": "mixture, combination, complex",
+      "antonyms": "simple, element, pure substance",
+      "sentence": "The chemical compound was analysed in the laboratory before being used."
+    },
+    {
+      "id": "f97ae0d0-8fe1-431b-b050-234f05611c4e",
+      "progress": 0,
+      "word": "concentrate",
+      "partOfSpeech": "verb",
+      "meaning": "To focus your attention on something.",
+      "synonyms": "focus, pay attention, direct",
+      "antonyms": "distract, scatter, ignore",
+      "sentence": "She found it difficult to concentrate on the article because of the noise outside."
+    },
+    {
+      "id": "0c35f60b-b2a2-4c59-ab67-74c0459a252c",
+      "progress": 0,
+      "word": "concert",
+      "partOfSpeech": "noun",
+      "meaning": "A live performance of music.",
+      "synonyms": "performance, show, recital",
+      "antonyms": "recording, silence",
+      "sentence": "The annual outdoor concert attracted a huge crowd from across the country."
+    },
+    {
+      "id": "0fc85812-0c45-4635-b06a-874e8c67104c",
+      "progress": 0,
+      "word": "concern",
+      "partOfSpeech": "noun",
+      "meaning": "A feeling of worry about something important.",
+      "synonyms": "worry, anxiety, issue",
+      "antonyms": "indifference, unconcern, peace",
+      "sentence": "Her main concern was the impact of the new construction on the environment."
+    },
+    {
+      "id": "5d71a9a4-a790-4ebb-a753-0b5637e7bd78",
+      "progress": 0,
+      "word": "conclude",
+      "partOfSpeech": "verb",
+      "meaning": "To decide something or come to an end.",
+      "synonyms": "decide, end, determine",
+      "antonyms": "begin, start, open",
+      "sentence": "After reviewing all the evidence, the committee decided to conclude that the claim was valid."
+    },
+    {
+      "id": "b97bba49-008a-4d32-a248-e3f1b6db319e",
+      "progress": 0,
+      "word": "conclusion",
+      "partOfSpeech": "noun",
+      "meaning": "The final decision or opinion reached after thinking about something.",
+      "synonyms": "result, decision, outcome",
+      "antonyms": "introduction, beginning, start",
+      "sentence": "The author's conclusion was based on careful analysis of the data."
+    },
+    {
+      "id": "0bc97f27-e51f-4c4d-9a1f-c276d0a19455",
+      "progress": 0,
+      "word": "condition",
+      "partOfSpeech": "noun",
+      "meaning": "The state in which something is, or a requirement.",
+      "synonyms": "state, situation, requirement",
+      "antonyms": "N/A",
+      "sentence": "The condition of the ancient castle has improved after years of restoration work."
+    },
+    {
+      "id": "10265c66-2b90-4cbc-9c99-d35a395db818",
+      "progress": 0,
+      "word": "conference",
+      "partOfSpeech": "noun",
+      "meaning": "A formal meeting of many people to discuss a topic.",
+      "synonyms": "meeting, summit, seminar",
+      "antonyms": "casual chat, solo work",
+      "sentence": "She was invited to present her research at an international academic conference."
+    },
+    {
+      "id": "d3653cdb-f395-4564-ab76-1a189b1320cb",
+      "progress": 0,
+      "word": "confidence",
+      "partOfSpeech": "noun",
+      "meaning": "A feeling of trust in your own abilities or in other people.",
+      "synonyms": "self-belief, assurance, certainty",
+      "antonyms": "doubt, insecurity, fear",
+      "sentence": "Practising public speaking helped him build confidence over time."
+    },
+    {
+      "id": "feabd06d-f642-43f6-a2a9-c8a6125ae2ea",
+      "progress": 0,
+      "word": "confirm",
+      "partOfSpeech": "verb",
+      "meaning": "To establish that something is true or correct.",
+      "synonyms": "verify, prove, validate",
+      "antonyms": "deny, cancel, contradict",
+      "sentence": "Please confirm your attendance at the conference before the end of the week."
+    },
+    {
+      "id": "35a5e8b4-3d6c-4ffe-b68c-123962560806",
+      "progress": 0,
+      "word": "confuse",
+      "partOfSpeech": "verb",
+      "meaning": "To make someone unsure or unable to understand something.",
+      "synonyms": "puzzle, bewilder, mislead",
+      "antonyms": "clarify, explain, simplify",
+      "sentence": "Too many instructions at once can confuse and overwhelm students."
+    },
+    {
+      "id": "86774c3d-ac0b-4acb-9b6d-0c9c8770e855",
+      "progress": 0,
+      "word": "confusion",
+      "partOfSpeech": "noun",
+      "meaning": "The state of being unable to understand something.",
+      "synonyms": "disorder, uncertainty, chaos",
+      "antonyms": "clarity, order, understanding",
+      "sentence": "There was a lot of confusion about the new arrangement in the office."
+    },
+    {
+      "id": "35ce0d4c-870c-4fdf-8323-7a28a309913e",
+      "progress": 0,
+      "word": "connect",
+      "partOfSpeech": "verb",
+      "meaning": "To join two things together so they work together or relate to each other.",
+      "synonyms": "link, join, attach",
+      "antonyms": "disconnect, separate, detach",
+      "sentence": "The new cable was installed to connect the building to the internet."
+    },
+    {
+      "id": "1df52e5c-6e3a-4949-80dc-fe7b8a73131a",
+      "progress": 0,
+      "word": "connection",
+      "partOfSpeech": "noun",
+      "meaning": "A link or relationship between two things.",
+      "synonyms": "link, bond, relationship",
+      "antonyms": "disconnection, gap, separation",
+      "sentence": "There is a clear connection between regular exercise and mental wellbeing."
+    },
+    {
+      "id": "563b10c7-e1d3-40a3-8b4e-4e7a85aa4ada",
+      "progress": 0,
+      "word": "consequence",
+      "partOfSpeech": "noun",
+      "meaning": "A result or effect of an action or event.",
+      "synonyms": "result, outcome, effect",
+      "antonyms": "cause, reason, origin",
+      "sentence": "Ignoring the signs of climate change will have serious consequences for future generations."
+    },
+    {
+      "id": "8308908d-eb17-476c-b4de-7f261d0e5f94",
+      "progress": 0,
+      "word": "consider",
+      "partOfSpeech": "verb",
+      "meaning": "To think carefully about something before making a decision.",
+      "synonyms": "think about, reflect, ponder",
+      "antonyms": "ignore, dismiss, rush",
+      "sentence": "Before you commit to a contract, consider all the clauses carefully."
+    },
+    {
+      "id": "042d6b3e-a74a-47a9-9efe-30fbf122ff8f",
+      "progress": 0,
+      "word": "consist",
+      "partOfSpeech": "verb",
+      "meaning": "To be made up of particular parts or elements.",
+      "synonyms": "be composed of, contain, include",
+      "antonyms": "exclude, omit, lack",
+      "sentence": "The course consists of twelve academic modules over two semesters."
+    },
+    {
+      "id": "30c817b1-4353-49dd-ac20-89c935fa1ce5",
+      "progress": 0,
+      "word": "constant",
+      "partOfSpeech": "adjective",
+      "meaning": "Happening continuously without stopping or changing.",
+      "synonyms": "continuous, steady, unchanging",
+      "antonyms": "variable, occasional, irregular",
+      "sentence": "The noise from the construction was a constant source of concern for the community."
+    },
+    {
+      "id": "e5092a0c-bd4a-402d-a05a-d70cc241722f",
+      "progress": 0,
+      "word": "construct",
+      "partOfSpeech": "verb",
+      "meaning": "To build or put together something.",
+      "synonyms": "build, create, assemble",
+      "antonyms": "demolish, destroy, break",
+      "sentence": "The company was awarded the contract to construct the new bridge."
+    },
+    {
+      "id": "1c44658b-b632-4d12-b0dd-630e90c25a15",
+      "progress": 0,
+      "word": "construction",
+      "partOfSpeech": "noun",
+      "meaning": "The process of building something, or a building being built.",
+      "synonyms": "building, assembly, development",
+      "antonyms": "demolition, destruction",
+      "sentence": "The construction of the new community centre took over two years to complete."
+    },
+    {
+      "id": "ebe7fe63-b3c2-42bf-a61a-9e69710ae3d2",
+      "progress": 0,
+      "word": "consume",
+      "partOfSpeech": "verb",
+      "meaning": "To use up something, such as food or energy.",
+      "synonyms": "use, eat, burn through",
+      "antonyms": "produce, create, save",
+      "sentence": "Modern cities consume enormous amounts of energy every day."
+    },
+    {
+      "id": "53b527a7-76d6-4978-8fac-f2365e88888f",
+      "progress": 0,
+      "word": "contact",
+      "partOfSpeech": "noun",
+      "meaning": "Communication or a connection with someone.",
+      "synonyms": "communication, touch, link",
+      "antonyms": "avoidance, isolation, separation",
+      "sentence": "She made contact with the author after reading the article online."
+    },
+    {
+      "id": "a4fb01a7-2b02-417e-8f4d-9058e270f3d5",
+      "progress": 0,
+      "word": "contain",
+      "partOfSpeech": "verb",
+      "meaning": "To have something inside or as a part.",
+      "synonyms": "hold, include, have",
+      "antonyms": "exclude, omit, lack",
+      "sentence": "The bottle should contain enough water for the entire journey."
+    },
+    {
+      "id": "9cf09e9d-4f02-4125-9945-39d0a8d82b69",
+      "progress": 0,
+      "word": "content",
+      "partOfSpeech": "noun",
+      "meaning": "The things that are inside something, or the subject matter of a text.",
+      "synonyms": "subject matter, material, information",
+      "antonyms": "container, form, appearance",
+      "sentence": "The content of the course was well-organised and easy to follow."
+    },
+    {
+      "id": "c67bcd41-0ed8-4fbd-bf40-bd4148504d4b",
+      "progress": 0,
+      "word": "context",
+      "partOfSpeech": "noun",
+      "meaning": "The surrounding information or situation that helps explain something.",
+      "synonyms": "background, setting, circumstances",
+      "antonyms": "isolation, unclear setting",
+      "sentence": "It is important to understand the historical context of an ancient text."
+    },
+    {
+      "id": "1902e5c7-55c2-41f9-b18a-a420d30fbaf9",
+      "progress": 0,
+      "word": "continue",
+      "partOfSpeech": "verb",
+      "meaning": "To go on doing something without stopping.",
+      "synonyms": "carry on, proceed, persist",
+      "antonyms": "stop, end, quit",
+      "sentence": "Despite the challenge, they decided to continue with the project."
+    },
+    {
+      "id": "afe3a03f-9ebe-4aa6-bd40-b67bd5e587a2",
+      "progress": 0,
+      "word": "contract",
+      "partOfSpeech": "noun",
+      "meaning": "A written agreement between two or more parties.",
+      "synonyms": "agreement, deal, document",
+      "antonyms": "verbal promise, cancellation",
+      "sentence": "Both parties agreed to sign the contract after a brief negotiation."
+    },
+    {
+      "id": "ab3f0fa5-024a-4a6d-a2a1-0a10f4a44218",
+      "progress": 0,
+      "word": "contrast",
+      "partOfSpeech": "noun",
+      "meaning": "A clear difference between two or more things.",
+      "synonyms": "difference, distinction, opposite",
+      "antonyms": "similarity, likeness, match",
+      "sentence": "In contrast to the busy city, the coast was quiet and peaceful."
+    },
+    {
+      "id": "dde782f6-f062-4fe6-8c94-47a93f784019",
+      "progress": 0,
+      "word": "contribute",
+      "partOfSpeech": "verb",
+      "meaning": "To give money, time, or ideas to help with something.",
+      "synonyms": "donate, add, give",
+      "antonyms": "take, withhold, subtract",
+      "sentence": "Everyone in the community was encouraged to contribute to the local campaign."
+    },
+    {
+      "id": "a1c530ef-5321-437b-8e57-3f3a7818aff0",
+      "progress": 0,
+      "word": "control",
+      "partOfSpeech": "verb",
+      "meaning": "To have power over something and direct its behaviour.",
+      "synonyms": "manage, direct, oversee",
+      "antonyms": "lose control, surrender, submit",
+      "sentence": "The new automatic system was designed to control temperature in the building."
+    },
+    {
+      "id": "4bec2c18-42e0-4757-9f98-e6de9eb76518",
+      "progress": 0,
+      "word": "convenient",
+      "partOfSpeech": "adjective",
+      "meaning": "Easy to use or suitable for your needs.",
+      "synonyms": "handy, practical, useful",
+      "antonyms": "inconvenient, awkward, unsuitable",
+      "sentence": "The location of the hotel was very convenient for the conference."
+    },
+    {
+      "id": "18db8105-1bba-4922-bca8-bdc77ade1c49",
+      "progress": 0,
+      "word": "conversation",
+      "partOfSpeech": "noun",
+      "meaning": "A talk between two or more people.",
+      "synonyms": "discussion, chat, dialogue",
+      "antonyms": "silence, monologue, argument",
+      "sentence": "She had a long conversation with her coach about her future career."
+    },
+    {
+      "id": "bf07ea1c-68a6-460d-9a25-cb0981452aa4",
+      "progress": 0,
+      "word": "cook",
+      "partOfSpeech": "verb",
+      "meaning": "To prepare food by heating it.",
+      "synonyms": "prepare, make, heat",
+      "antonyms": "eat raw, serve cold",
+      "sentence": "He decided to cook a traditional dish to share at the annual community feast."
+    },
+    {
+      "id": "98cf8430-271f-427a-9fcf-78be7417478f",
+      "progress": 0,
+      "word": "cool",
+      "partOfSpeech": "adjective",
+      "meaning": "Slightly cold, or fashionable and impressive.",
+      "synonyms": "chilly, calm, trendy",
+      "antonyms": "warm, hot, uncool",
+      "sentence": "After a long walk in the heat, they stopped to rest in a cool, shaded area."
+    },
+    {
+      "id": "d97f88e5-fe25-4d8a-b11b-9845878058cc",
+      "progress": 0,
+      "word": "cooperation",
+      "partOfSpeech": "noun",
+      "meaning": "Working together with someone towards a common goal.",
+      "synonyms": "teamwork, collaboration, partnership",
+      "antonyms": "competition, conflict, opposition",
+      "sentence": "The success of the project depended on strong cooperation between all departments."
+    },
+    {
+      "id": "786bf5df-65cb-4784-a829-eb7a27d93ffd",
+      "progress": 0,
+      "word": "copy",
+      "partOfSpeech": "verb",
+      "meaning": "To reproduce something exactly or to imitate someone.",
+      "synonyms": "duplicate, reproduce, imitate",
+      "antonyms": "create, invent, originate",
+      "sentence": "He made a copy of the contract before sending the original."
+    },
+    {
+      "id": "5781531b-46a0-4d50-964d-79c1e853c3c7",
+      "progress": 0,
+      "word": "corner",
+      "partOfSpeech": "noun",
+      "meaning": "The point where two lines, walls, or roads meet.",
+      "synonyms": "angle, bend, junction",
+      "antonyms": "centre, middle",
+      "sentence": "The old café was tucked into a quiet corner of the ancient city."
+    },
+    {
+      "id": "64fdebe8-6703-4e1e-8dcb-8b6ab35a5040",
+      "progress": 0,
+      "word": "correct",
+      "partOfSpeech": "adjective",
+      "meaning": "Free from mistakes; right.",
+      "synonyms": "accurate, right, exact",
+      "antonyms": "wrong, incorrect, mistaken",
+      "sentence": "She checked that every answer was correct before submitting the exam."
+    },
+    {
+      "id": "8ddb6f5c-cf22-42f3-830b-5b005a82576e",
+      "progress": 0,
+      "word": "cost",
+      "partOfSpeech": "noun",
+      "meaning": "The amount of money required to buy or do something.",
+      "synonyms": "price, charge, expense",
+      "antonyms": "profit, gain, income",
+      "sentence": "The cost of the construction project was higher than the initial calculation."
+    },
+    {
+      "id": "93f99012-6243-4e2b-b0b7-55271f2673a6",
+      "progress": 0,
+      "word": "cotton",
+      "partOfSpeech": "noun",
+      "meaning": "A soft white fibre from the cotton plant, used to make fabric.",
+      "synonyms": "fabric, natural fibre, cloth",
+      "antonyms": "synthetic, polyester, nylon",
+      "sentence": "She wore a light cotton coat to keep cool during the warm season."
+    },
+    {
+      "id": "775ac713-0961-4ed0-a615-5843a9911223",
+      "progress": 0,
+      "word": "couch",
+      "partOfSpeech": "noun",
+      "meaning": "A long comfortable seat for more than one person.",
+      "synonyms": "sofa, settee, seat",
+      "antonyms": "chair, stool, bench",
+      "sentence": "He stretched out on the couch and began reading the article."
+    },
+    {
+      "id": "1fd34afa-e617-4694-9bfe-3ebee4f77104",
+      "progress": 0,
+      "word": "courage",
+      "partOfSpeech": "noun",
+      "meaning": "The ability to do something frightening or difficult.",
+      "synonyms": "bravery, boldness, nerve",
+      "antonyms": "cowardice, fear, timidity",
+      "sentence": "It takes courage to stand up and speak in front of a large audience."
+    },
+    {
+      "id": "6cc3a3ac-a9cb-4367-9102-6c6a3024b47b",
+      "progress": 0,
+      "word": "course",
+      "partOfSpeech": "noun",
+      "meaning": "A series of lessons or a path taken.",
+      "synonyms": "class, program, track",
+      "antonyms": "N/A",
+      "sentence": "She enrolled in an online course to improve her academic skills."
+    },
+    {
+      "id": "ecd38a8a-c5c7-47f1-b3ee-4aaa4bca2521",
+      "progress": 0,
+      "word": "court",
+      "partOfSpeech": "noun",
+      "meaning": "A space used for playing sports, or a room where legal decisions are made.",
+      "synonyms": "sports area, law court, arena",
+      "antonyms": "N/A",
+      "sentence": "The case was brought to court after the criminal was arrested."
+    },
+    {
+      "id": "e5f5d346-a52e-4453-ac5c-f2dedc087d7a",
+      "progress": 0,
+      "word": "cover",
+      "partOfSpeech": "verb",
+      "meaning": "To place something over another to protect or hide it.",
+      "synonyms": "protect, wrap, shield",
+      "antonyms": "uncover, expose, reveal",
+      "sentence": "The magazine's cover featured a photograph of the ancient castle."
+    },
+    {
+      "id": "63c563f7-1e8f-4738-b45d-480470eebb8e",
+      "progress": 0,
+      "word": "create",
+      "partOfSpeech": "verb",
+      "meaning": "To make something new that did not exist before.",
+      "synonyms": "make, produce, invent",
+      "antonyms": "destroy, demolish, erase",
+      "sentence": "She used different colours to create a striking image for the competition."
+    },
+    {
+      "id": "b864b1b3-b18b-4bca-818f-b25ba9a843e2",
+      "progress": 0,
+      "word": "creation",
+      "partOfSpeech": "noun",
+      "meaning": "Something that has been made, or the process of making something.",
+      "synonyms": "invention, work, production",
+      "antonyms": "destruction, demolition",
+      "sentence": "The creation of the new community centre was celebrated by residents."
+    },
+    {
+      "id": "ad94f4b7-6ee8-4793-b273-a54606bc8b22",
+      "progress": 0,
+      "word": "crime",
+      "partOfSpeech": "noun",
+      "meaning": "An action that breaks the law and can be punished.",
+      "synonyms": "offence, wrongdoing, illegal act",
+      "antonyms": "law, justice, virtue",
+      "sentence": "The authority launched a campaign to reduce the rate of crime in the district."
+    },
+    {
+      "id": "40bbb14a-d5df-49d4-8afb-be7651e37b8f",
+      "progress": 0,
+      "word": "criminal",
+      "partOfSpeech": "noun",
+      "meaning": "A person who has committed a crime.",
+      "synonyms": "offender, lawbreaker, convict",
+      "antonyms": "law-abiding citizen, victim",
+      "sentence": "The criminal was arrested and brought to court within two days."
+    },
+    {
+      "id": "52f63d62-1b0d-41b4-b114-c59ff61bfcc8",
+      "progress": 0,
+      "word": "crop",
+      "partOfSpeech": "noun",
+      "meaning": "A plant grown in large quantities for food.",
+      "synonyms": "harvest, produce, yield",
+      "antonyms": "N/A",
+      "sentence": "The unusual climate conditions caused the crop harvest to fail that year."
+    },
+    {
+      "id": "72566ac5-eeaf-4679-923a-44e99dc9d5d4",
+      "progress": 0,
+      "word": "cross",
+      "partOfSpeech": "verb",
+      "meaning": "To go from one side to the other.",
+      "synonyms": "traverse, pass over, go across",
+      "antonyms": "stay, block, remain",
+      "sentence": "They had to cross the canal by boat to reach the ancient castle."
+    },
+    {
+      "id": "01d9967f-7240-4600-9176-93edf7546bb5",
+      "progress": 0,
+      "word": "crowd",
+      "partOfSpeech": "noun",
+      "meaning": "A large group of people gathered in one place.",
+      "synonyms": "mass, group, gathering",
+      "antonyms": "individual, few, emptiness",
+      "sentence": "A huge crowd gathered in the square to listen to the annual speech."
+    },
+    {
+      "id": "ef4e463d-891a-4c90-8b2f-edb5cd03f84b",
+      "progress": 0,
+      "word": "cruel",
+      "partOfSpeech": "adjective",
+      "meaning": "Causing pain or suffering deliberately.",
+      "synonyms": "harsh, brutal, ruthless",
+      "antonyms": "kind, gentle, compassionate",
+      "sentence": "It is cruel to ignore the basic needs of those living in poverty."
+    },
+    {
+      "id": "1831d5df-390d-415a-adbd-2f0043244847",
+      "progress": 0,
+      "word": "culture",
+      "partOfSpeech": "noun",
+      "meaning": "The ideas, customs, and social behaviour of a particular group or country.",
+      "synonyms": "tradition, heritage, society",
+      "antonyms": "N/A",
+      "sentence": "Living abroad helps you understand and appreciate different cultures."
+    },
+    {
+      "id": "34f93039-c684-452f-8bb3-4286c22f536d",
+      "progress": 0,
+      "word": "cup",
+      "partOfSpeech": "noun",
+      "meaning": "A small container with a handle used for hot drinks.",
+      "synonyms": "mug, glass, vessel",
+      "antonyms": "N/A",
+      "sentence": "She wrapped her hands around a warm cup of coffee and breathed deeply."
+    },
+    {
+      "id": "b0c85412-79c3-4d96-9f55-b404a7f23374",
+      "progress": 0,
+      "word": "cure",
+      "partOfSpeech": "verb",
+      "meaning": "To make someone healthy again after an illness.",
+      "synonyms": "heal, treat, remedy",
+      "antonyms": "harm, worsen, infect",
+      "sentence": "Researchers are working to find a cure for the disease."
+    },
+    {
+      "id": "0b8f1f15-57a9-4440-aa1e-c67bea0d3840",
+      "progress": 0,
+      "word": "curious",
+      "partOfSpeech": "adjective",
+      "meaning": "Eager to know or learn about something.",
+      "synonyms": "inquisitive, interested, eager",
+      "antonyms": "indifferent, bored, uninterested",
+      "sentence": "She was always curious about how things worked, which led her to study science."
+    },
+    {
+      "id": "4a5ef9d0-b27b-42e9-ac46-2884c86a85ed",
+      "progress": 0,
+      "word": "currency",
+      "partOfSpeech": "noun",
+      "meaning": "The system of money used in a particular country.",
+      "synonyms": "money, cash, exchange",
+      "antonyms": "barter, goods, trade",
+      "sentence": "When travelling abroad, it is important to understand the local currency."
+    },
+    {
+      "id": "a3427da9-9eb7-4954-a3d3-5eedb7045d55",
+      "progress": 0,
+      "word": "current",
+      "partOfSpeech": "adjective",
+      "meaning": "Happening or existing now.",
+      "synonyms": "present, existing, ongoing",
+      "antonyms": "past, former, future",
+      "sentence": "The current situation requires a careful and well-considered response."
+    },
+    {
+      "id": "579e6f22-f00f-4531-ba1f-395892d1312a",
+      "progress": 0,
+      "word": "cut",
+      "partOfSpeech": "verb",
+      "meaning": "To divide or reduce something using a sharp object.",
+      "synonyms": "slice, trim, reduce",
+      "antonyms": "join, connect, grow",
+      "sentence": "The government decided to cut the budget for public construction projects."
+    },
+    {
+      "id": "d9c330c9-2d0e-4db1-a7e5-4424150987d3",
+      "progress": 0,
+      "word": "damage",
+      "partOfSpeech": "noun",
+      "meaning": "Physical harm that makes something less useful or valuable.",
+      "synonyms": "harm, injury, destruction",
+      "antonyms": "repair, improvement, restoration",
+      "sentence": "The storm caused serious damage to the crops along the coast."
+    },
+    {
+      "id": "b9ee9686-0d2e-47d0-a9ca-4607ab37e5a6",
+      "progress": 0,
+      "word": "debate",
+      "partOfSpeech": "noun",
+      "meaning": "A formal discussion in which people with different opinions argue about a topic.",
+      "synonyms": "discussion, argument, controversy",
+      "antonyms": "agreement, consensus, silence",
+      "sentence": "The candidates took part in a public debate about climate change and energy policy."
+    },
+    {
+      "id": "06b579ad-535f-45cf-a934-bff6a270cc0a",
+      "progress": 0,
+      "word": "cycle",
+      "partOfSpeech": "noun",
+      "meaning": "A series of events that repeat in the same order, or a bicycle.",
+      "synonyms": "pattern, rotation, series",
+      "antonyms": "single event, irregularity",
+      "sentence": "The water cycle is one of the most important natural processes on Earth."
+    }
+  ],
+  "contextPassage": {
+    "title": "A Step Forward",
+    "text": "Nadia had always been curious about the world beyond her city. At the age of seventeen, she made the decision to study abroad — a choice that would alter her attitude towards life, challenge her basic assumptions, and broaden her understanding of culture in ways she had never anticipated.\n\nThe arrangement was brief but clear: she would attend an academic conference in a foreign capital for one week, represent her school, and return with a written composition about what she had experienced.\n\nOn the morning of her departure, her brother helped her carry her bag to the door. Her mother handed her a coat, a bottle of water, and a bunch of flowers to give to the host family. Her boss — the director of the school journal — had asked her to collect material for an article and take photographs along the coast. Her father, a calm man who rarely expressed strong emotion, pulled her into a brief hug at the gate. \"Be aware of your surroundings,\" he said, \"and always ask if you are confused.\"\n\nThe journey to the airport was long. She sat in the back of the car, watched the city give way to green fields and hills, and thought about the crowd of challenges ahead. It was a cold, cloudy morning, and the atmosphere felt heavy with anticipation.\n\nAt the airport, she discovered that the flight had been delayed by an hour. She used the time to connect her laptop to the internet and review the context of the conference. The event was annual, drawing candidates from across the continent to discuss the current challenges of climate change and the consequences of burning coal and other fossil fuels. Each article she read increased her concern — and her curiosity.\n\nWhen she finally arrived at the capital, a kind woman named Dr Orla met her at the gate and helped her check into a small but convenient hotel near the conference centre. The accommodation was basic but comfortable. A warm cup of cocoa on the bedside table made her feel instantly at home.\n\nThe conference itself was a brilliant experience. Authors, scientists, and community leaders stood at the front of the room and presented their ideas with courage and confidence. She watched a chart on a large screen show the dramatic increase in global temperatures over the last century. One speaker described how changes in climate had caused crop production to collapse in several regions, creating a burden for millions of citizens who could no longer afford basic food.\n\nNadia sat in the audience and took careful notes. She tried to analyse each argument, assess each claim, and consider the broader consequences. During a break, she struck up a conversation with another candidate — a young man named Kai who was studying environmental science. They compared their countries' approaches to the cycle of energy production and consumption. He explained that his country had decided to cut its dependence on coal and construct a network of solar panels across the coast.\n\n\"Is it effective?\" she asked.\n\"Not yet,\" he said, with a bitter smile, \"but we continue.\"\n\nIn the evenings, she explored the ancient city on her own. She crossed a canal by boat, brushed her fingers along the stone walls of a castle that had survived several battles, and stood at the edge of a hill looking down at the bright lights of the modern city below. The combination of the old and the new reminded her of the article she needed to compose.\n\nAt the final banquet, held in a grand hall with a high ceiling and long columns, she finally felt confident enough to approach the chief speaker — a famous author — and ask a question. \"How do we get people to care about consequences they cannot yet see?\"\n\nThe author looked at her with a calm expression. \"By telling stories,\" she said. \"Emotion connects what data cannot. That is why art and culture matter as much as science.\"\n\nNadia took a deep breath and wrote those words down. She knew, in that moment, what her article would be about.\n\nOn the flight home, she looked out at a cloud-covered sky and felt a new kind of courage settle into her chest. She had set out to collect information. She had returned with something better: a belief that curious, careful, and determined people — even young ones — can contribute to change.\n\nEvery great journey begins with a single step forward. Every great story begins with the courage to ask one honest question."
+  }
+}

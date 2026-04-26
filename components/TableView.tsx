@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { ChevronDown, ChevronUp, Trash2 } from 'lucide-react';
-import { VocabTable, VocabEntry, GameMode } from '../types';
+import { VocabTable, VocabEntry, GameMode, User } from '../types';
 import { geminiService } from '../services/geminiService';
+import { storageService } from '../services/storageService';
 
 interface TableViewProps {
+  user?: User;
   table: VocabTable;
   onBack: () => void;
   onDelete: (id: string) => void;
@@ -11,6 +13,7 @@ interface TableViewProps {
   onLearnContext: () => void;
   onMatchingGame: (mode: GameMode) => void;
   onUpdateTable: (updatedTable: VocabTable) => void;
+  onUserUpdate: (partial: Partial<User>) => void;
   isFetching: boolean;
 }
 
@@ -54,7 +57,19 @@ const MasteryCircle: React.FC<{ percentage: number }> = ({ percentage }) => {
 type SortKey = 'word' | 'progress' | 'partOfSpeech' | null;
 type SortDirection = 'asc' | 'desc';
 
-const TableView: React.FC<TableViewProps> = ({ table, onBack, onDelete, onStudy, onLearnContext, onMatchingGame, onUpdateTable, isFetching }) => {
+const TableView: React.FC<TableViewProps> = ({ 
+  user, 
+  table, 
+  onBack, 
+  onDelete, 
+  onStudy, 
+  onLearnContext, 
+  onMatchingGame, 
+  onUpdateTable, 
+  onUserUpdate,
+  isFetching 
+}) => {
+  const isSystemTable = table.userId === 'system';
   const [isDeletingTable, setIsDeletingTable] = useState(false);
   const [isEditingMetadata, setIsEditingMetadata] = useState(false);
   const [metaTitle, setMetaTitle] = useState(table.title);
@@ -73,6 +88,15 @@ const TableView: React.FC<TableViewProps> = ({ table, onBack, onDelete, onStudy,
   const [copiedId, setCopiedId] = useState<string | null>(null);
   const [isCurating, setIsCurating] = useState(false);
   const [selectedIds, setSelectedIds] = useState<Set<string>>(new Set());
+  const [showScrollTop, setShowScrollTop] = useState(false);
+
+  useEffect(() => {
+    const container = document.getElementById('main-scroll-container');
+    if (!container) return;
+    const handleScroll = () => setShowScrollTop(container.scrollTop > container.clientHeight);
+    container.addEventListener('scroll', handleScroll, { passive: true });
+    return () => container.removeEventListener('scroll', handleScroll);
+  }, []);
 
   useEffect(() => {
     setMetaTitle(table.title);
@@ -126,6 +150,14 @@ const TableView: React.FC<TableViewProps> = ({ table, onBack, onDelete, onStudy,
 
   const handleSpeak = async (id: string, word: string) => {
     if (speakingId) return;
+    if (user) {
+      const newUsage = await storageService.incrementLimitUsage(user, 'tts_used');
+      if (newUsage === null) {
+        alert("Daily Text-to-Speech limit reached! You can only use TTS 30 times a day.");
+        return;
+      }
+      onUserUpdate({ tts_used: newUsage });
+    }
     setSpeakingId(id);
     await geminiService.textToSpeech(word);
     setSpeakingId(null);
@@ -344,6 +376,18 @@ const TableView: React.FC<TableViewProps> = ({ table, onBack, onDelete, onStudy,
     setUpdatingIds(nextUpdating);
 
     try {
+      if (user) {
+        const newUsage = await storageService.incrementLimitUsage(user, 'ai_refills_used');
+        if (newUsage === null) {
+          alert("Daily AI Refill limit reached! You can only use AI refills 4 times a day.");
+          const finalUpdating = new Set(updatingIds);
+          finalUpdating.delete(id);
+          setUpdatingIds(finalUpdating);
+          return;
+        }
+        onUserUpdate({ ai_refills_used: newUsage });
+      }
+
       // Re-trigger AI for the new word to refill the whole row
       const results = await geminiService.generateVocabEntries([requestedWord]);
       if (results.length > 0) {
@@ -437,8 +481,10 @@ const TableView: React.FC<TableViewProps> = ({ table, onBack, onDelete, onStudy,
               
               {/* Buttons Block - Opposite the description/details */}
               <div className="flex flex-wrap md:flex-col gap-2 self-start shrink-0">
-                <button 
-                  onClick={() => setIsEditingMetadata(true)}
+                {!isSystemTable && (
+                  <>
+                    <button 
+                      onClick={() => setIsEditingMetadata(true)}
                   className="px-4 py-2.5 text-[8px] sm:text-[9px] font-bold uppercase tracking-widest rounded-full transition-all flex items-center border bg-surfaceHighlight text-muted border-white/10 hover:border-primary/50 hover:text-primary group/edit"
                 >
                   <svg className="w-3 h-3 mr-2 group-hover/edit:scale-110 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -464,6 +510,8 @@ const TableView: React.FC<TableViewProps> = ({ table, onBack, onDelete, onStudy,
                   <div className="px-3 py-2 text-[8px] sm:text-[9px] font-bold uppercase tracking-widest text-muted italic">
                     {selectedIds.size} items selected
                   </div>
+                )}
+                  </>
                 )}
               </div>
             </div>
@@ -491,8 +539,13 @@ const TableView: React.FC<TableViewProps> = ({ table, onBack, onDelete, onStudy,
               </svg>
             </div>
             
-            <h3 className="text-lg md:text-xl font-bold font-display text-text mb-1 md:mb-2 group-hover:text-primary transition-colors z-10">
-              {isFetching ? 'Generating Narrative...' : 'Context Narrative'}
+            <h3 className="text-lg md:text-xl font-bold font-display text-text mb-1 md:mb-2 group-hover:text-primary transition-colors z-10 flex items-center justify-between">
+              <span>{isFetching ? 'Generating Narrative...' : 'Context Narrative'}</span>
+              {!table.contextPassage && (
+                 <span className="text-[10px] sm:text-xs font-bold text-blue-500 bg-blue-500/10 px-2 py-0.5 rounded-full whitespace-nowrap ml-2 font-bold uppercase tracking-widest">
+                   {user?.narratives_used || 0}/2 Narratives
+                 </span>
+              )}
             </h3>
             <p className="text-muted text-xs md:text-sm leading-relaxed max-w-sm z-10">
               {isFetching ? 
@@ -705,14 +758,20 @@ const TableView: React.FC<TableViewProps> = ({ table, onBack, onDelete, onStudy,
                     </div>
                   </td>
                   <td className="px-2 sm:px-5 py-3 sm:py-6 text-center print:hidden">
-                    <button 
-                      onClick={() => handleSpeak(entry.id, entry.word)}
-                      className={`p-1 sm:p-2 rounded-full transition-all ${speakingId === entry.id ? 'bg-primary text-white animate-pulse' : 'text-muted hover:text-primary hover:bg-primary/10'}`}
-                    >
-                      <svg className="w-3 h-3 sm:w-4 sm:h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z" />
-                      </svg>
-                    </button>
+                    <div className="relative group/tts inline-block">
+                      <button 
+                        onClick={() => handleSpeak(entry.id, entry.word)}
+                        className={`p-1 sm:p-2 rounded-full transition-all ${speakingId === entry.id ? 'bg-primary text-white animate-pulse' : 'text-muted hover:text-primary hover:bg-primary/10'}`}
+                        title="Play Pronunciation"
+                      >
+                        <svg className="w-3 h-3 sm:w-4 sm:h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z" />
+                        </svg>
+                      </button>
+                      <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-1 z-50 bg-blue-500/10 border border-blue-500/20 px-2 pt-1 pb-0.5 rounded shadow-xl whitespace-nowrap opacity-0 group-hover/tts:opacity-100 transition-opacity pointer-events-none">
+                        <span className="text-[9px] text-blue-500 font-bold uppercase tracking-widest leading-none block">{user?.tts_used || 0}/30 TTS</span>
+                      </div>
+                    </div>
                   </td>
                   <td className="px-3 sm:px-6 py-3 sm:py-6 min-w-[100px] sm:min-w-[180px]">
                     {updatingIds.has(entry.id) ? (
@@ -724,15 +783,20 @@ const TableView: React.FC<TableViewProps> = ({ table, onBack, onDelete, onStudy,
                         <div className="h-2 sm:h-4 bg-white/5 rounded w-full"></div>
                       </div>
                     ) : editingId === entry.id ? (
-                      <input 
-                        type="text"
-                        autoFocus
-                        value={editValue}
-                        onChange={(e) => setEditValue(e.target.value)}
-                        onBlur={() => saveEdit(entry.id)}
-                        onKeyDown={(e) => e.key === 'Enter' && saveEdit(entry.id)}
-                        className="w-full text-xs sm:text-xl font-bold font-display text-text border-b-2 border-primary outline-none bg-transparent py-0.5 sm:py-1"
-                      />
+                      <div className="relative">
+                        <div className="absolute bottom-full left-0 mb-2 z-50 bg-blue-500/10 border border-blue-500/20 px-2 py-1 rounded shadow-xl whitespace-nowrap animate-in fade-in slide-in-from-bottom-1 pointer-events-none">
+                           <span className="text-[9px] text-blue-500 font-bold uppercase tracking-widest leading-none block pt-0.5">{user?.ai_refills_used || 0}/4 Refills</span>
+                        </div>
+                        <input 
+                          type="text"
+                          autoFocus
+                          value={editValue}
+                          onChange={(e) => setEditValue(e.target.value)}
+                          onBlur={() => saveEdit(entry.id)}
+                          onKeyDown={(e) => e.key === 'Enter' && saveEdit(entry.id)}
+                          className="w-full text-xs sm:text-xl font-bold font-display text-text border-b-2 border-primary outline-none bg-transparent py-0.5 sm:py-1"
+                        />
+                      </div>
                     ) : (
                       <div className="flex items-center group/lexeme-cell">
                         <div 
@@ -744,15 +808,21 @@ const TableView: React.FC<TableViewProps> = ({ table, onBack, onDelete, onStudy,
                             <span className="absolute -top-3 sm:-top-4 left-0 text-[5px] sm:text-[8px] font-bold text-primary uppercase tracking-widest animate-in fade-in slide-in-from-bottom-1">Copied!</span>
                           )}
                         </div>
-                        <button 
-                          onClick={(e) => { e.stopPropagation(); startEditing(entry); }}
-                          className="ml-1.5 sm:ml-3 p-1 sm:p-1.5 text-muted hover:text-primary transition-all opacity-0 group-hover:opacity-100 focus:opacity-100 bg-surfaceHighlight rounded-full hover:bg-primary/10"
-                          title="Edit Word & Refill AI Data"
-                        >
-                          <svg className="w-2.5 h-2.5 sm:w-4 sm:h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" />
-                          </svg>
-                        </button>
+                        {!isSystemTable && (
+                          <div className="relative group/refill ml-1.5 sm:ml-3">
+                            <button 
+                              onClick={(e) => { e.stopPropagation(); startEditing(entry); }}
+                              className="p-1 sm:p-1.5 text-muted hover:text-primary transition-all opacity-0 group-hover:opacity-100 focus:opacity-100 bg-surfaceHighlight rounded-full hover:bg-primary/10"
+                            >
+                              <svg className="w-2.5 h-2.5 sm:w-4 sm:h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" />
+                              </svg>
+                            </button>
+                            <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-1 z-50 bg-blue-500/10 border border-blue-500/20 px-2 pt-1 pb-0.5 rounded shadow-xl whitespace-nowrap opacity-0 group-hover/refill:opacity-100 transition-opacity pointer-events-none">
+                              <span className="text-[9px] text-blue-500 font-bold uppercase tracking-widest leading-none block">{user?.ai_refills_used || 0}/4 Refills</span>
+                            </div>
+                          </div>
+                        )}
                       </div>
                     )}
                   </td>
@@ -789,8 +859,9 @@ const TableView: React.FC<TableViewProps> = ({ table, onBack, onDelete, onStudy,
         </button>
 
         <div className="flex items-center gap-4">
-          {isDeletingTable ? (
-            <div className="flex items-center space-x-3 animate-in slide-in-from-right-4">
+          {!isSystemTable && (
+            isDeletingTable ? (
+              <div className="flex items-center space-x-3 animate-in slide-in-from-right-4">
                <button 
                  onClick={() => onDelete(table.id)}
                  className="px-4 py-2 text-[8px] sm:text-[9px] font-bold bg-red-600 text-white rounded-full shadow-lg hover:bg-red-700 transition-all uppercase tracking-widest"
@@ -814,6 +885,7 @@ const TableView: React.FC<TableViewProps> = ({ table, onBack, onDelete, onStudy,
               </svg>
               Archive Disposal
             </button>
+            )
           )}
         </div>
       </div>
@@ -886,6 +958,18 @@ const TableView: React.FC<TableViewProps> = ({ table, onBack, onDelete, onStudy,
         </div>
       )}
       
+      {showScrollTop && (
+        <button
+          onClick={() => document.getElementById('main-scroll-container')?.scrollTo({ top: 0, behavior: 'smooth' })}
+          className="fixed bottom-24 md:bottom-28 right-6 md:right-8 z-50 w-14 h-14 rounded-full bg-primary text-white flex items-center justify-center shadow-xl shadow-primary/30 hover:bg-secondary transition-colors duration-200 print:hidden animate-in fade-in slide-in-from-bottom-4 duration-300"
+          aria-label="Scroll to top"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+            <path strokeLinecap="round" strokeLinejoin="round" d="M5 15l7-7 7 7" />
+          </svg>
+        </button>
+      )}
+
       {isCurating && selectedIds.size > 0 && (
         <div className="fixed bottom-6 left-1/2 -translate-x-1/2 z-50 animate-in fade-in slide-in-from-bottom-4 duration-300">
           <button 

@@ -1,0 +1,2508 @@
+{
+  "entries": [
+    {
+      "id": "7fc5a541-ee9b-4e3e-b810-42afc722cb03",
+      "progress": 0,
+      "word": "ball",
+      "partOfSpeech": "noun",
+      "meaning": "A round object used in games and sports.",
+      "synonyms": "sphere, globe, orb",
+      "antonyms": "N/A",
+      "sentence": "The children played with a ball in the park."
+    },
+    {
+      "id": "708f65bf-af68-48f1-b296-5c1ccb18f421",
+      "progress": 0,
+      "word": "bird",
+      "partOfSpeech": "noun",
+      "meaning": "A warm-blooded animal with feathers, wings, and a beak that lays eggs.",
+      "synonyms": "fowl, songbird",
+      "antonyms": "N/A",
+      "sentence": "Ducks and sparrows are birds."
+    },
+    {
+      "id": "45890ea8-b630-449e-bf1e-c8cb2997a6e0",
+      "progress": 0,
+      "word": "book",
+      "partOfSpeech": "noun",
+      "meaning": "A collection of sheets of paper bound together to hinge at one edge, containing printed or written material, pictures, etc.",
+      "synonyms": "novel, volume, text",
+      "antonyms": "N/A",
+      "sentence": "He was frustrated because he couldn't find anything about dinosaurs in the book."
+    },
+    {
+      "id": "1418b225-b23c-4285-8b1e-0d16e6830c91",
+      "progress": 0,
+      "word": "bus",
+      "partOfSpeech": "noun",
+      "meaning": "A motor vehicle for transporting large numbers of people along roads.",
+      "synonyms": "coach, shuttle, transport",
+      "antonyms": "N/A",
+      "sentence": "I saw a bus today."
+    },
+    {
+      "id": "a9d59b21-5f60-41ba-8995-80d66902ec06",
+      "progress": 0,
+      "word": "cake",
+      "partOfSpeech": "noun",
+      "meaning": "A rich, sweet dessert food, typically made of flour, sugar and eggs and baked in an oven, and often covered in icing.",
+      "synonyms": "pastry, dessert, treat",
+      "antonyms": "N/A",
+      "sentence": "I saw a cake today."
+    },
+    {
+      "id": "a8c12125-83f2-4a41-9340-960bc2a17706",
+      "progress": 0,
+      "word": "car",
+      "partOfSpeech": "noun",
+      "meaning": "A wheeled vehicle that moves independently, with at least three wheels, powered mechanically, steered by a driver and mostly for personal transportation.",
+      "synonyms": "auto, automobile, carriage",
+      "antonyms": "N/A",
+      "sentence": "She drove her car to the mall."
+    },
+    {
+      "id": "9a0dd7cc-66fd-4f33-a714-f61a5503b5a2",
+      "progress": 0,
+      "word": "cat",
+      "partOfSpeech": "noun",
+      "meaning": "A small furry animal often kept as a pet.",
+      "synonyms": "kitten, kitty, feline",
+      "antonyms": "N/A",
+      "sentence": "I saw a cat today."
+    },
+    {
+      "id": "be433df1-339d-4eda-98a2-1db0f371308e",
+      "progress": 0,
+      "word": "chair",
+      "partOfSpeech": "noun",
+      "meaning": "A piece of furniture for one person to sit on, with a back and four legs.",
+      "synonyms": "seat, stool, bench",
+      "antonyms": "N/A",
+      "sentence": "All I need to weather a snowstorm is hot coffee, a warm fire, a good book and a comfortable chair."
+    },
+    {
+      "id": "dc3250a6-b32c-46aa-8b8c-0e19bf5ddb86",
+      "progress": 0,
+      "word": "child",
+      "partOfSpeech": "noun",
+      "meaning": "A person who has not yet reached adulthood, whether natural (puberty), cultural (initiation), or legal (majority)",
+      "synonyms": "kid, youngster, little one",
+      "antonyms": "adult, grown-up",
+      "sentence": "Go easy on him: he is but a child."
+    },
+    {
+      "id": "8f99388a-9dfe-45df-bb2b-348d24229910",
+      "progress": 0,
+      "word": "city",
+      "partOfSpeech": "noun",
+      "meaning": "A large settlement, bigger than a town; sometimes with a specific legal definition, depending on the place.",
+      "synonyms": "town, metropolis, urban area",
+      "antonyms": "village, countryside",
+      "sentence": "São Paulo is the largest city in South America."
+    },
+    {
+      "id": "13fc1feb-605f-4833-a2a5-674c8103bc56",
+      "progress": 0,
+      "word": "cloud",
+      "partOfSpeech": "noun",
+      "meaning": "A white or grey mass of tiny water drops floating in the sky.",
+      "synonyms": "mist, fog, haze",
+      "antonyms": "N/A",
+      "sentence": "There is a big white cloud in the sky."
+    },
+    {
+      "id": "c30d2c41-9bbe-4bee-ad6a-711b346f1f6b",
+      "progress": 0,
+      "word": "coat",
+      "partOfSpeech": "noun",
+      "meaning": "A warm piece of clothing worn over other clothes.",
+      "synonyms": "jacket, overcoat, cloak",
+      "antonyms": "N/A",
+      "sentence": "I saw a coat today."
+    },
+    {
+      "id": "32b91726-69ec-4198-b48d-c2443a355feb",
+      "progress": 0,
+      "word": "coffee",
+      "partOfSpeech": "noun",
+      "meaning": "A beverage made by infusing the beans of the coffee plant in hot water.",
+      "synonyms": "brew, espresso, java",
+      "antonyms": "N/A",
+      "sentence": "I drink a cup of coffee every morning."
+    },
+    {
+      "id": "1f141f70-88e0-4252-9dcf-2781a9c39dfc",
+      "progress": 0,
+      "word": "computer",
+      "partOfSpeech": "noun",
+      "meaning": "An electronic machine that stores and processes information.",
+      "synonyms": "PC, laptop, device",
+      "antonyms": "N/A",
+      "sentence": "She uses her computer for work and school."
+    },
+    {
+      "id": "0b641dd5-712d-4db9-ba89-98a4cf75c3f7",
+      "progress": 0,
+      "word": "cow",
+      "partOfSpeech": "noun",
+      "meaning": "A large farm animal that gives milk.",
+      "synonyms": "cattle, bovine",
+      "antonyms": "bull",
+      "sentence": "The cow gives us milk every day."
+    },
+    {
+      "id": "bed670a8-7cb8-413b-86c7-8a2ed835599e",
+      "progress": 0,
+      "word": "cup",
+      "partOfSpeech": "noun",
+      "meaning": "A concave vessel for drinking from, usually made of opaque material (as opposed to a glass) and with a handle.",
+      "synonyms": "mug, glass, goblet",
+      "antonyms": "N/A",
+      "sentence": "Pour the tea into the cup."
+    },
+    {
+      "id": "72dc94b1-3eeb-4c51-8055-b0bb5c7650fc",
+      "progress": 0,
+      "word": "day",
+      "partOfSpeech": "noun",
+      "meaning": "Any period of 24 hours.",
+      "synonyms": "daylight, upsun, epoch",
+      "antonyms": "night",
+      "sentence": "I've been here for two days and a bit."
+    },
+    {
+      "id": "585d42a1-39c7-479c-add1-995dd5806779",
+      "progress": 0,
+      "word": "dog",
+      "partOfSpeech": "noun",
+      "meaning": "A common pet animal that barks and is known for being loyal.",
+      "synonyms": "puppy, hound, canine",
+      "antonyms": "N/A",
+      "sentence": "The dog barked all night long."
+    },
+    {
+      "id": "868b4a08-750f-4dd8-bc54-43ae86339378",
+      "progress": 0,
+      "word": "door",
+      "partOfSpeech": "noun",
+      "meaning": "A flat piece of wood or glass that you open and close to enter or leave a room or building.",
+      "synonyms": "entrance, gate, doorway",
+      "antonyms": "N/A",
+      "sentence": "I knocked on the vice president's door"
+    },
+    {
+      "id": "c9c82690-a6ea-46cb-80dc-16778084ce53",
+      "progress": 0,
+      "word": "drink",
+      "partOfSpeech": "verb",
+      "meaning": "To consume (a liquid) through the mouth.",
+      "synonyms": "gulp, imbibe, quaff",
+      "antonyms": "eat",
+      "sentence": "He drank the water I gave him."
+    },
+    {
+      "id": "16ab6cf4-e4ae-411f-b781-80cda97dcf77",
+      "progress": 0,
+      "word": "driver",
+      "partOfSpeech": "noun",
+      "meaning": "One who drives something, in any sense of the verb to drive.",
+      "synonyms": "motorist, chauffeur, operator",
+      "antonyms": "N/A",
+      "sentence": "The bus driver was very friendly."
+    },
+    {
+      "id": "019be64f-1753-48d1-9df2-07f0a932ba50",
+      "progress": 0,
+      "word": "duck",
+      "partOfSpeech": "noun",
+      "meaning": "A water bird with a flat beak and webbed feet.",
+      "synonyms": "drake, waterfowl",
+      "antonyms": "N/A",
+      "sentence": "We saw a duck swimming in the pond."
+    },
+    {
+      "id": "0d055802-bb7e-4634-8b64-44f75e240cf0",
+      "progress": 0,
+      "word": "ear",
+      "partOfSpeech": "noun",
+      "meaning": "The part of your body that you use to hear sounds.",
+      "synonyms": "N/A",
+      "antonyms": "N/A",
+      "sentence": "She whispered into my ear."
+    },
+    {
+      "id": "d28d6598-fb25-4720-a9af-58e81883911d",
+      "progress": 0,
+      "word": "egg",
+      "partOfSpeech": "noun",
+      "meaning": "An oval object laid by a bird, often eaten as food.",
+      "synonyms": "ovum",
+      "antonyms": "N/A",
+      "sentence": "I had a boiled egg for breakfast."
+    },
+    {
+      "id": "977cad35-1d6f-4993-bb9a-3d65d2a2d28f",
+      "progress": 0,
+      "word": "eye",
+      "partOfSpeech": "noun",
+      "meaning": "The part of your body that you use to see.",
+      "synonyms": "N/A",
+      "antonyms": "N/A",
+      "sentence": "She has beautiful blue eyes."
+    },
+    {
+      "id": "69e9ae9e-ebd7-44ad-87e3-3f3999c377dd",
+      "progress": 0,
+      "word": "family",
+      "partOfSpeech": "noun",
+      "meaning": "A group of people related to each other, such as parents and children.",
+      "synonyms": "relatives, household, kin",
+      "antonyms": "stranger",
+      "sentence": "My family has four members."
+    },
+    {
+      "id": "a199a1cf-8f7c-4cdf-ab60-37e26811bc4f",
+      "progress": 0,
+      "word": "farm",
+      "partOfSpeech": "noun",
+      "meaning": "A piece of land where crops are grown or animals are raised.",
+      "synonyms": "ranch, homestead, plantation",
+      "antonyms": "N/A",
+      "sentence": "The farmer works on his farm every day."
+    },
+    {
+      "id": "28bd3455-d743-432e-8135-7f051d81f926",
+      "progress": 0,
+      "word": "father",
+      "partOfSpeech": "noun",
+      "meaning": "A male parent.",
+      "synonyms": "dad, daddy, papa",
+      "antonyms": "mother",
+      "sentence": "My father takes me to school every morning."
+    },
+    {
+      "id": "d84b0f53-a51b-44d8-8804-bedf1d029f3f",
+      "progress": 0,
+      "word": "feet",
+      "partOfSpeech": "noun",
+      "meaning": "The plural of foot; the parts of your body you stand on.",
+      "synonyms": "N/A",
+      "antonyms": "N/A",
+      "sentence": "My feet hurt after walking all day."
+    },
+    {
+      "id": "3688f646-d803-4c20-8119-94b71f3e5e75",
+      "progress": 0,
+      "word": "fish",
+      "partOfSpeech": "noun",
+      "meaning": "A cold-blooded animal that lives in water and breathes through gills.",
+      "synonyms": "seafood",
+      "antonyms": "N/A",
+      "sentence": "We caught a big fish in the river."
+    },
+    {
+      "id": "105661fb-433d-4f5e-b756-8847a0158a15",
+      "progress": 0,
+      "word": "flower",
+      "partOfSpeech": "noun",
+      "meaning": "The colorful part of a plant that often has a nice smell.",
+      "synonyms": "bloom, blossom, bud",
+      "antonyms": "N/A",
+      "sentence": "She gave me a beautiful flower."
+    },
+    {
+      "id": "3985f8ae-e38f-4276-82f6-f7100a1d2fb5",
+      "progress": 0,
+      "word": "food",
+      "partOfSpeech": "noun",
+      "meaning": "Things that people and animals eat.",
+      "synonyms": "meal, nourishment, cuisine",
+      "antonyms": "N/A",
+      "sentence": "We need food and water to stay healthy."
+    },
+    {
+      "id": "f626cae9-eded-4b36-91bb-2207149364a8",
+      "progress": 0,
+      "word": "foot",
+      "partOfSpeech": "noun",
+      "meaning": "The lowest part of your leg that you stand on.",
+      "synonyms": "N/A",
+      "antonyms": "N/A",
+      "sentence": "He hurt his foot while playing football."
+    },
+    {
+      "id": "1ec28e01-f8f7-408a-898c-ce5d384164f7",
+      "progress": 0,
+      "word": "friend",
+      "partOfSpeech": "noun",
+      "meaning": "A person you like and enjoy spending time with.",
+      "synonyms": "pal, buddy, companion",
+      "antonyms": "enemy, foe",
+      "sentence": "She is my best friend."
+    },
+    {
+      "id": "665ce459-5ed8-4ad1-a327-99f655dea29e",
+      "progress": 0,
+      "word": "game",
+      "partOfSpeech": "noun",
+      "meaning": "An activity that you do for fun, often with rules.",
+      "synonyms": "match, contest, sport",
+      "antonyms": "N/A",
+      "sentence": "The children are playing a game in the garden."
+    },
+    {
+      "id": "b19f55dc-aeaa-4b42-8c04-e89c62dfd764",
+      "progress": 0,
+      "word": "garden",
+      "partOfSpeech": "noun",
+      "meaning": "A piece of land next to a house where flowers, plants, or vegetables are grown.",
+      "synonyms": "yard, backyard, park",
+      "antonyms": "N/A",
+      "sentence": "She grows roses in her garden."
+    },
+    {
+      "id": "b8db26a4-31c9-43a6-aaec-4774c6b3a20f",
+      "progress": 0,
+      "word": "girl",
+      "partOfSpeech": "noun",
+      "meaning": "A young female person.",
+      "synonyms": "lass, maiden",
+      "antonyms": "boy",
+      "sentence": "The girl is reading a book."
+    },
+    {
+      "id": "a5fd4af2-f780-4add-be55-aac5f77270ab",
+      "progress": 0,
+      "word": "glass",
+      "partOfSpeech": "noun",
+      "meaning": "A container made of transparent material used for drinking, or the material itself.",
+      "synonyms": "cup, tumbler",
+      "antonyms": "N/A",
+      "sentence": "Please give me a glass of water."
+    },
+    {
+      "id": "29f0cc35-1e63-4ef3-ab5a-32ae62004ae1",
+      "progress": 0,
+      "word": "hand",
+      "partOfSpeech": "noun",
+      "meaning": "The part of your body at the end of your arm, with fingers and a thumb.",
+      "synonyms": "palm, fist",
+      "antonyms": "foot",
+      "sentence": "She held the baby's hand."
+    },
+    {
+      "id": "c1093eb1-625b-49c1-8b15-e4609a773711",
+      "progress": 0,
+      "word": "handkerchief",
+      "partOfSpeech": "noun",
+      "meaning": "A small square piece of cloth used for wiping your nose or face.",
+      "synonyms": "tissue, hanky",
+      "antonyms": "N/A",
+      "sentence": "He wiped his face with a handkerchief."
+    },
+    {
+      "id": "7ab7af05-8bab-432b-870d-e3e7e4048523",
+      "progress": 0,
+      "word": "hat",
+      "partOfSpeech": "noun",
+      "meaning": "A covering you wear on your head.",
+      "synonyms": "cap, headwear, bonnet",
+      "antonyms": "N/A",
+      "sentence": "She wore a big hat to protect herself from the sun."
+    },
+    {
+      "id": "d7a65fb0-f438-45a5-9164-40955854a658",
+      "progress": 0,
+      "word": "head",
+      "partOfSpeech": "noun",
+      "meaning": "The top part of your body that contains your brain, eyes, ears, nose, and mouth.",
+      "synonyms": "skull",
+      "antonyms": "N/A",
+      "sentence": "He nodded his head to say yes."
+    },
+    {
+      "id": "d3036004-7537-4fba-85e7-df72f6b78b54",
+      "progress": 0,
+      "word": "home",
+      "partOfSpeech": "noun",
+      "meaning": "The place where you live.",
+      "synonyms": "house, residence, dwelling",
+      "antonyms": "N/A",
+      "sentence": "I want to go home after work."
+    },
+    {
+      "id": "74dd4d84-0e61-4b68-a5b4-e09ac1c69f44",
+      "progress": 0,
+      "word": "horse",
+      "partOfSpeech": "noun",
+      "meaning": "A large four-legged animal that people ride.",
+      "synonyms": "pony, stallion, mare",
+      "antonyms": "N/A",
+      "sentence": "She loves to ride her horse."
+    },
+    {
+      "id": "1101dd44-0cdf-48ee-a971-2c4634085ffd",
+      "progress": 0,
+      "word": "house",
+      "partOfSpeech": "noun",
+      "meaning": "A building where people live.",
+      "synonyms": "home, residence, dwelling",
+      "antonyms": "N/A",
+      "sentence": "They bought a new house near the park."
+    },
+    {
+      "id": "94652ffd-ba87-4b8d-a5a5-81a7607e2245",
+      "progress": 0,
+      "word": "ice",
+      "partOfSpeech": "noun",
+      "meaning": "Water that has frozen and become solid.",
+      "synonyms": "frost, icicle",
+      "antonyms": "steam, water",
+      "sentence": "The lake was covered in ice during winter."
+    },
+    {
+      "id": "4721613f-1942-433e-aff8-e8002af07b20",
+      "progress": 0,
+      "word": "key",
+      "partOfSpeech": "noun",
+      "meaning": "A small metal object used to open or close a lock.",
+      "synonyms": "N/A",
+      "antonyms": "N/A",
+      "sentence": "I lost my house key yesterday."
+    },
+    {
+      "id": "a4fb9cee-7bc8-4640-bac5-dc03cbf46ab3",
+      "progress": 0,
+      "word": "king",
+      "partOfSpeech": "noun",
+      "meaning": "The male ruler of a country.",
+      "synonyms": "monarch, ruler, sovereign",
+      "antonyms": "queen",
+      "sentence": "The king lived in a big castle."
+    },
+    {
+      "id": "f40003fa-44e4-4bb8-8407-539243b2935e",
+      "progress": 0,
+      "word": "kitchen",
+      "partOfSpeech": "noun",
+      "meaning": "The room in a house where food is cooked.",
+      "synonyms": "cookroom",
+      "antonyms": "N/A",
+      "sentence": "My mother is cooking dinner in the kitchen."
+    },
+    {
+      "id": "a5c36fad-7bb6-4c52-8722-e9140dfaf8a1",
+      "progress": 0,
+      "word": "lady",
+      "partOfSpeech": "noun",
+      "meaning": "A polite word for a woman.",
+      "synonyms": "woman, madam",
+      "antonyms": "gentleman",
+      "sentence": "The lady at the shop was very kind."
+    },
+    {
+      "id": "56b95f35-476b-4b3c-840c-d0167332027e",
+      "progress": 0,
+      "word": "lake",
+      "partOfSpeech": "noun",
+      "meaning": "A large area of water surrounded by land.",
+      "synonyms": "pond, reservoir, lagoon",
+      "antonyms": "N/A",
+      "sentence": "We went swimming in the lake."
+    },
+    {
+      "id": "6739fe1d-1b17-4fb2-84ac-b0adec14f5a0",
+      "progress": 0,
+      "word": "lamp",
+      "partOfSpeech": "noun",
+      "meaning": "A device that gives light.",
+      "synonyms": "light, lantern",
+      "antonyms": "N/A",
+      "sentence": "She turned on the lamp to read."
+    },
+    {
+      "id": "acde56aa-fd32-43de-b8a7-8de0fe9b255e",
+      "progress": 0,
+      "word": "man",
+      "partOfSpeech": "noun",
+      "meaning": "An adult male person.",
+      "synonyms": "gentleman, guy, fellow",
+      "antonyms": "woman",
+      "sentence": "The man walked his dog in the park."
+    },
+    {
+      "id": "6e5943b8-b7e7-4d5c-bc38-cde94661517a",
+      "progress": 0,
+      "word": "map",
+      "partOfSpeech": "noun",
+      "meaning": "A drawing that shows where places are, like countries, cities, and roads.",
+      "synonyms": "chart, atlas, plan",
+      "antonyms": "N/A",
+      "sentence": "We used a map to find the hotel."
+    },
+    {
+      "id": "1fd438d6-e92b-4b3c-968e-01446a2a0b47",
+      "progress": 0,
+      "word": "market",
+      "partOfSpeech": "noun",
+      "meaning": "A place where people buy and sell food and other goods.",
+      "synonyms": "bazaar, shop, store",
+      "antonyms": "N/A",
+      "sentence": "We buy vegetables at the market every weekend."
+    },
+    {
+      "id": "d034d4b7-d0c6-42a0-813a-0a4e90a0f0ce",
+      "progress": 0,
+      "word": "milk",
+      "partOfSpeech": "noun",
+      "meaning": "A white liquid produced by cows, drunk by people or used to make cheese and butter.",
+      "synonyms": "dairy",
+      "antonyms": "N/A",
+      "sentence": "Children should drink milk every day."
+    },
+    {
+      "id": "4ecda5a7-ce2c-4416-bd57-92de0391ff34",
+      "progress": 0,
+      "word": "mirror",
+      "partOfSpeech": "noun",
+      "meaning": "A piece of glass that reflects an image, so you can see yourself.",
+      "synonyms": "looking glass, reflector",
+      "antonyms": "N/A",
+      "sentence": "She looked at herself in the mirror."
+    },
+    {
+      "id": "f885732e-221c-4238-8c7e-fdce4b76683c",
+      "progress": 0,
+      "word": "money",
+      "partOfSpeech": "noun",
+      "meaning": "Coins or paper notes used to buy things.",
+      "synonyms": "cash, currency, funds",
+      "antonyms": "debt",
+      "sentence": "He saved enough money to buy a new bike."
+    },
+    {
+      "id": "e954f582-d7d2-4324-a762-8c42deba603d",
+      "progress": 0,
+      "word": "morning",
+      "partOfSpeech": "noun",
+      "meaning": "The early part of the day, from sunrise until noon.",
+      "synonyms": "dawn, sunrise, daybreak",
+      "antonyms": "evening, night",
+      "sentence": "I wake up early every morning."
+    },
+    {
+      "id": "c9faca31-cb3b-44a2-bd4e-b6f5911bd113",
+      "progress": 0,
+      "word": "mother",
+      "partOfSpeech": "noun",
+      "meaning": "A female parent.",
+      "synonyms": "mom, mum, mama",
+      "antonyms": "father",
+      "sentence": "My mother makes the best food."
+    },
+    {
+      "id": "ab17e10d-af33-449c-b21c-369966e967ed",
+      "progress": 0,
+      "word": "mountain",
+      "partOfSpeech": "noun",
+      "meaning": "A very high piece of land, much higher than a hill.",
+      "synonyms": "peak, summit, mount",
+      "antonyms": "valley",
+      "sentence": "We climbed the mountain last summer."
+    },
+    {
+      "id": "ded93b81-f396-434e-8b9f-05faa26406ad",
+      "progress": 0,
+      "word": "music",
+      "partOfSpeech": "noun",
+      "meaning": "Sounds arranged in a pleasant way, often with instruments or singing.",
+      "synonyms": "melody, tune, song",
+      "antonyms": "silence, noise",
+      "sentence": "She plays beautiful music on the piano."
+    },
+    {
+      "id": "dca78a7d-999d-4ecc-8523-0fc26a07626e",
+      "progress": 0,
+      "word": "neck",
+      "partOfSpeech": "noun",
+      "meaning": "The part of your body that connects your head to your shoulders.",
+      "synonyms": "N/A",
+      "antonyms": "N/A",
+      "sentence": "She wore a necklace around her neck."
+    },
+    {
+      "id": "1acd14a7-30b2-4b1e-b3e2-e880ab7fb5e8",
+      "progress": 0,
+      "word": "night",
+      "partOfSpeech": "noun",
+      "meaning": "The time when it is dark outside, between sunset and sunrise.",
+      "synonyms": "evening, darkness, nighttime",
+      "antonyms": "day, daytime",
+      "sentence": "The stars come out at night."
+    },
+    {
+      "id": "21346dc5-83b6-44ac-8080-b2b25c5d5317",
+      "progress": 0,
+      "word": "nose",
+      "partOfSpeech": "noun",
+      "meaning": "The part of your face that you use to smell and breathe.",
+      "synonyms": "N/A",
+      "antonyms": "N/A",
+      "sentence": "The dog has a wet nose."
+    },
+    {
+      "id": "71a7b5dc-dd24-4389-8c92-16f526566858",
+      "progress": 0,
+      "word": "park",
+      "partOfSpeech": "noun",
+      "meaning": "A public area with grass, trees, and paths where people go to relax.",
+      "synonyms": "garden, playground, greenspace",
+      "antonyms": "N/A",
+      "sentence": "The children are playing in the park."
+    },
+    {
+      "id": "be3fb34b-0918-4c63-9dd1-5f69e0e44b63",
+      "progress": 0,
+      "word": "party",
+      "partOfSpeech": "noun",
+      "meaning": "A social event where people come together to have fun.",
+      "synonyms": "celebration, gathering, event",
+      "antonyms": "N/A",
+      "sentence": "We had a birthday party for my sister."
+    },
+    {
+      "id": "24f12901-6474-4696-bba5-851886e5266a",
+      "progress": 0,
+      "word": "pen",
+      "partOfSpeech": "noun",
+      "meaning": "A tool used for writing with ink.",
+      "synonyms": "ballpoint, marker",
+      "antonyms": "N/A",
+      "sentence": "Please sign your name with this pen."
+    },
+    {
+      "id": "231ce8cd-a430-49dd-9e90-e584a9043a91",
+      "progress": 0,
+      "word": "phone",
+      "partOfSpeech": "noun",
+      "meaning": "A device used to talk to people who are far away.",
+      "synonyms": "telephone, mobile, cellphone",
+      "antonyms": "N/A",
+      "sentence": "She called me on her phone."
+    },
+    {
+      "id": "7308dada-a4bc-4a0a-b23d-a9d7cb4ba13d",
+      "progress": 0,
+      "word": "pig",
+      "partOfSpeech": "noun",
+      "meaning": "A farm animal with a round body, short legs, and a curly tail.",
+      "synonyms": "hog, swine, piglet",
+      "antonyms": "N/A",
+      "sentence": "The pig lives on the farm."
+    },
+    {
+      "id": "a7bef756-2701-440c-b248-116aa4ada4fa",
+      "progress": 0,
+      "word": "plate",
+      "partOfSpeech": "noun",
+      "meaning": "A flat dish used for serving or eating food.",
+      "synonyms": "dish, platter, saucer",
+      "antonyms": "N/A",
+      "sentence": "Put the food on the plate."
+    },
+    {
+      "id": "4fd6ddf0-0dec-4887-a3f1-67e9b73817f4",
+      "progress": 0,
+      "word": "rain",
+      "partOfSpeech": "noun",
+      "meaning": "Water that falls from clouds in drops.",
+      "synonyms": "rainfall, shower, downpour",
+      "antonyms": "sunshine, drought",
+      "sentence": "We stayed inside because of the rain."
+    },
+    {
+      "id": "c536a1f6-3f8d-4024-a30d-5fd2a3da8233",
+      "progress": 0,
+      "word": "river",
+      "partOfSpeech": "noun",
+      "meaning": "A large natural stream of water that flows into the sea or a lake.",
+      "synonyms": "stream, creek, waterway",
+      "antonyms": "N/A",
+      "sentence": "The river flows through the middle of the city."
+    },
+    {
+      "id": "d53376ca-dd48-4f76-bc6e-b024a55af0e5",
+      "progress": 0,
+      "word": "road",
+      "partOfSpeech": "noun",
+      "meaning": "A long hard surface built for cars and vehicles to travel on.",
+      "synonyms": "street, path, highway",
+      "antonyms": "N/A",
+      "sentence": "The road to the village is very narrow."
+    },
+    {
+      "id": "1dddadd8-5e26-4e88-8691-30bc3be3f4c9",
+      "progress": 0,
+      "word": "room",
+      "partOfSpeech": "noun",
+      "meaning": "A separate area inside a building, with walls, a floor, and a ceiling.",
+      "synonyms": "chamber, space",
+      "antonyms": "N/A",
+      "sentence": "My bedroom is the biggest room in the house."
+    },
+    {
+      "id": "2cc42991-5417-4d7b-be42-9031d79bbf10",
+      "progress": 0,
+      "word": "school",
+      "partOfSpeech": "noun",
+      "meaning": "A place where children go to learn.",
+      "synonyms": "academy, college, institution",
+      "antonyms": "N/A",
+      "sentence": "I go to school five days a week."
+    },
+    {
+      "id": "2b89833c-bdaa-4fe7-9c79-bd5f83104b22",
+      "progress": 0,
+      "word": "sea",
+      "partOfSpeech": "noun",
+      "meaning": "A large body of salt water, smaller than an ocean.",
+      "synonyms": "ocean, waters",
+      "antonyms": "land",
+      "sentence": "We went swimming in the sea."
+    },
+    {
+      "id": "7164725d-67c3-4757-acf5-46bb1ce12b6f",
+      "progress": 0,
+      "word": "shoulder",
+      "partOfSpeech": "noun",
+      "meaning": "The part of your body between your neck and your arm.",
+      "synonyms": "N/A",
+      "antonyms": "N/A",
+      "sentence": "She carried the bag on her shoulder."
+    },
+    {
+      "id": "1f8d9b44-e6a4-4f28-aba6-6aa51ba3e615",
+      "progress": 0,
+      "word": "shop",
+      "partOfSpeech": "noun",
+      "meaning": "A building where you can buy things.",
+      "synonyms": "store, market, outlet",
+      "antonyms": "N/A",
+      "sentence": "I went to the shop to buy some bread."
+    },
+    {
+      "id": "4e565749-deaa-4998-a931-d4be19500ebf",
+      "progress": 0,
+      "word": "shoe",
+      "partOfSpeech": "noun",
+      "meaning": "A covering for your foot, usually made of leather or fabric.",
+      "synonyms": "footwear, boot, sneaker",
+      "antonyms": "N/A",
+      "sentence": "She bought a new pair of shoes."
+    },
+    {
+      "id": "a982c8c2-b8e2-42d8-bb2b-6c9782754297",
+      "progress": 0,
+      "word": "sky",
+      "partOfSpeech": "noun",
+      "meaning": "The space above the earth where you can see the sun, moon, and stars.",
+      "synonyms": "heavens, atmosphere",
+      "antonyms": "ground, earth",
+      "sentence": "The sky is blue and clear today."
+    },
+    {
+      "id": "0a7e6161-eb7a-4cbb-a1f6-d5e623ce0034",
+      "progress": 0,
+      "word": "sleep",
+      "partOfSpeech": "noun",
+      "meaning": "The natural state of rest when your eyes are closed and your body is not active.",
+      "synonyms": "rest, nap, slumber",
+      "antonyms": "wakefulness",
+      "sentence": "I need eight hours of sleep every night."
+    },
+    {
+      "id": "71393fe2-e140-4d24-baa5-d2a741f3447c",
+      "progress": 0,
+      "word": "street",
+      "partOfSpeech": "noun",
+      "meaning": "A road in a town or city with buildings on one or both sides.",
+      "synonyms": "road, avenue, lane",
+      "antonyms": "N/A",
+      "sentence": "There are many shops on this street."
+    },
+    {
+      "id": "1155c440-8fa8-459a-be0b-143e22151d21",
+      "progress": 0,
+      "word": "student",
+      "partOfSpeech": "noun",
+      "meaning": "A person who is learning at a school or university.",
+      "synonyms": "pupil, learner, scholar",
+      "antonyms": "teacher",
+      "sentence": "She is a student at the university."
+    },
+    {
+      "id": "9f226a94-89c4-4a60-98da-a0077affd2a3",
+      "progress": 0,
+      "word": "sun",
+      "partOfSpeech": "noun",
+      "meaning": "The star that gives light and heat to the earth.",
+      "synonyms": "sunlight, sunshine",
+      "antonyms": "moon",
+      "sentence": "The sun rises in the east."
+    },
+    {
+      "id": "a64eaf7c-ec4d-4640-b6c4-a0f2333d8de7",
+      "progress": 0,
+      "word": "table",
+      "partOfSpeech": "noun",
+      "meaning": "A flat piece of furniture with legs, used for eating, writing, or working.",
+      "synonyms": "desk, counter",
+      "antonyms": "N/A",
+      "sentence": "Please put the books on the table."
+    },
+    {
+      "id": "315843ab-8645-4718-b0a9-563112735082",
+      "progress": 0,
+      "word": "tea",
+      "partOfSpeech": "noun",
+      "meaning": "A hot drink made by adding water to dried leaves.",
+      "synonyms": "brew, infusion",
+      "antonyms": "N/A",
+      "sentence": "Would you like a cup of tea?"
+    },
+    {
+      "id": "c658da3a-cd56-4651-ba20-57d6a6424d54",
+      "progress": 0,
+      "word": "television",
+      "partOfSpeech": "noun",
+      "meaning": "A device with a screen used for watching shows, movies, and news.",
+      "synonyms": "TV, screen, telly",
+      "antonyms": "N/A",
+      "sentence": "We watch television after dinner."
+    },
+    {
+      "id": "dba21b25-dc31-4df1-8851-303d4f2ddbf2",
+      "progress": 0,
+      "word": "time",
+      "partOfSpeech": "noun",
+      "meaning": "The ongoing progression of events, measured in hours, minutes, and seconds.",
+      "synonyms": "moment, period, duration",
+      "antonyms": "N/A",
+      "sentence": "What time is it now?"
+    },
+    {
+      "id": "db862d33-7803-4866-8eb0-ef831e39ce93",
+      "progress": 0,
+      "word": "town",
+      "partOfSpeech": "noun",
+      "meaning": "A settlement; an area with residential districts, shops and amenities, and its own local government; especially one larger than a village and smaller than a city.",
+      "synonyms": "city, village, borough",
+      "antonyms": "countryside",
+      "sentence": "This is a small and quiet town."
+    },
+    {
+      "id": "60cd02ea-5682-40f8-b319-96f51fcc08ad",
+      "progress": 0,
+      "word": "train",
+      "partOfSpeech": "noun",
+      "meaning": "A vehicle that runs on tracks and carries people or goods.",
+      "synonyms": "railway, locomotive, rail",
+      "antonyms": "N/A",
+      "sentence": "We took the train to the city."
+    },
+    {
+      "id": "6d14046b-da89-4cd7-8b34-2bca22dea071",
+      "progress": 0,
+      "word": "tree",
+      "partOfSpeech": "noun",
+      "meaning": "A tall plant with a thick stem called a trunk, branches, and leaves.",
+      "synonyms": "N/A",
+      "antonyms": "N/A",
+      "sentence": "There is a big tree in our garden."
+    },
+    {
+      "id": "cb99ebcf-b63c-486a-8027-cd7ea7bb5990",
+      "progress": 0,
+      "word": "village",
+      "partOfSpeech": "noun",
+      "meaning": "A very small town in the countryside.",
+      "synonyms": "hamlet, settlement",
+      "antonyms": "city",
+      "sentence": "My grandmother lives in a small village."
+    },
+    {
+      "id": "492377df-2a3d-48b2-9ff7-ca18d33582f1",
+      "progress": 0,
+      "word": "water",
+      "partOfSpeech": "noun",
+      "meaning": "A clear liquid with no color or taste that falls as rain and is used for drinking.",
+      "synonyms": "H2O, liquid",
+      "antonyms": "N/A",
+      "sentence": "Please drink more water."
+    },
+    {
+      "id": "8be52f8e-40b5-4ff2-8fcc-4f4734cd7681",
+      "progress": 0,
+      "word": "week",
+      "partOfSpeech": "noun",
+      "meaning": "Any period of seven consecutive days.",
+      "synonyms": "N/A",
+      "antonyms": "N/A",
+      "sentence": "I have English class three times a week."
+    },
+    {
+      "id": "eb91d6aa-ecd1-4259-b77c-0cd0c57a141a",
+      "progress": 0,
+      "word": "window",
+      "partOfSpeech": "noun",
+      "meaning": "An opening in a wall, usually with glass, that lets in light and air.",
+      "synonyms": "pane, glass",
+      "antonyms": "wall",
+      "sentence": "She opened the window to let in some fresh air."
+    },
+    {
+      "id": "91eb456e-038b-45fc-9764-ad9be06f10f8",
+      "progress": 0,
+      "word": "woman",
+      "partOfSpeech": "noun",
+      "meaning": "An adult female human.",
+      "synonyms": "female, lady",
+      "antonyms": "man",
+      "sentence": "I saw a woman today."
+    },
+    {
+      "id": "cc6961f4-2f80-4819-8a22-fb61a89c4d8d",
+      "progress": 0,
+      "word": "work",
+      "partOfSpeech": "noun",
+      "meaning": "An activity you do to earn money, or any effort you put into a task.",
+      "synonyms": "job, labor, employment",
+      "antonyms": "rest, play",
+      "sentence": "She goes to work every morning."
+    },
+    {
+      "id": "add687fe-15c2-444f-93f1-985f4a73819c",
+      "progress": 0,
+      "word": "year",
+      "partOfSpeech": "noun",
+      "meaning": "A period of twelve months, or 365 days.",
+      "synonyms": "N/A",
+      "antonyms": "N/A",
+      "sentence": "we moved to this town a year ago;  I quit smoking exactly one year ago"
+    },
+    {
+      "id": "48a65e08-b702-4336-9c20-37a9dacbae3a",
+      "progress": 0,
+      "word": "zoo",
+      "partOfSpeech": "noun",
+      "meaning": "A park where live animals are exhibited.",
+      "synonyms": "N/A",
+      "antonyms": "N/A",
+      "sentence": "The children love visiting the zoo."
+    },
+    {
+      "id": "dc8bb4b9-0727-4056-bef4-792fba3aa972",
+      "progress": 0,
+      "word": "bed",
+      "partOfSpeech": "noun",
+      "meaning": "A piece of furniture, usually flat and soft, on which to rest or sleep.",
+      "synonyms": "cot, bunk",
+      "antonyms": "N/A",
+      "sentence": "My cat often sleeps on my bed."
+    },
+    {
+      "id": "8f57b155-35d1-4c96-9dab-11952c5a07bf",
+      "progress": 0,
+      "word": "birdhouse",
+      "partOfSpeech": "noun",
+      "meaning": "A small house for birds.",
+      "synonyms": "nest box, nesting box",
+      "antonyms": "N/A",
+      "sentence": "I saw a birdhouse today."
+    },
+    {
+      "id": "de88a694-84fa-4cca-a50a-474e6cff2659",
+      "progress": 0,
+      "word": "birthday",
+      "partOfSpeech": "noun",
+      "meaning": "The anniversary of the day on which someone is born.",
+      "synonyms": "N/A",
+      "antonyms": "N/A",
+      "sentence": "Today is my birthday!"
+    },
+    {
+      "id": "677d6844-e020-4458-804a-2796ff2e89f2",
+      "progress": 0,
+      "word": "breakfast",
+      "partOfSpeech": "noun",
+      "meaning": "The first meal of the day, usually eaten in the morning.",
+      "synonyms": "N/A",
+      "antonyms": "N/A",
+      "sentence": "You should put more protein in her breakfast so she will grow."
+    },
+    {
+      "id": "996a70cc-a6df-4979-a168-949d84a2af9e",
+      "progress": 0,
+      "word": "brother",
+      "partOfSpeech": "noun",
+      "meaning": "Son of the same parents as another person.",
+      "synonyms": "sibling",
+      "antonyms": "sister",
+      "sentence": "My brother is older than me."
+    },
+    {
+      "id": "1aef02a1-ebf9-4401-a9ba-c5b57058aba0",
+      "progress": 0,
+      "word": "bus stop",
+      "partOfSpeech": "noun",
+      "meaning": "A place where public transport buses stop to allow passengers to board or leave.",
+      "synonyms": "stop, station",
+      "antonyms": "N/A",
+      "sentence": "I saw a bus stop today."
+    },
+    {
+      "id": "b157d412-2667-4f47-a8c3-602a1376228d",
+      "progress": 0,
+      "word": "calendar",
+      "partOfSpeech": "noun",
+      "meaning": "Any system by which time is divided into days, weeks, months, and years.",
+      "synonyms": "schedule, planner, diary",
+      "antonyms": "N/A",
+      "sentence": "The three principal calendars are the Gregorian, Jewish, and Islamic calendars."
+    },
+    {
+      "id": "3b5fac80-b1b0-4e8b-b543-0692afcfcfcc",
+      "progress": 0,
+      "word": "camera",
+      "partOfSpeech": "noun",
+      "meaning": "A device for taking still or moving pictures or photographs.",
+      "synonyms": "N/A",
+      "antonyms": "N/A",
+      "sentence": "I saw a camera today."
+    },
+    {
+      "id": "41fb9c43-c03f-41ec-80c1-d31b8bb075f1",
+      "progress": 0,
+      "word": "carpet",
+      "partOfSpeech": "noun",
+      "meaning": "A fabric used as a complete floor covering.",
+      "synonyms": "N/A",
+      "antonyms": "N/A",
+      "sentence": "I saw a carpet today."
+    },
+    {
+      "id": "07035ec3-3fc8-4b1d-ac1f-38d60d5f443e",
+      "progress": 0,
+      "word": "check",
+      "partOfSpeech": "verb",
+      "meaning": "To look at something carefully to make sure it is correct.",
+      "synonyms": "examine, inspect, verify",
+      "antonyms": "N/A",
+      "sentence": "Please check your answers before you hand in the test."
+    },
+    {
+      "id": "5de3f859-6094-4c36-9273-07471f1854c4",
+      "progress": 0,
+      "word": "cleaner",
+      "partOfSpeech": "noun",
+      "meaning": "A person whose occupation is to clean floors, windows and other things.",
+      "synonyms": "N/A",
+      "antonyms": "N/A",
+      "sentence": "I saw a cleaner today."
+    },
+    {
+      "id": "c155c668-d27d-4dc8-a3a4-b97d17e23824",
+      "progress": 0,
+      "word": "clothes",
+      "partOfSpeech": "noun",
+      "meaning": "Things you wear on your body, like shirts, pants, and dresses.",
+      "synonyms": "clothing, garments, outfits",
+      "antonyms": "N/A",
+      "sentence": "She washed all her clothes yesterday."
+    },
+    {
+      "id": "a53f5839-e4bf-4929-8010-a369f74c5964",
+      "progress": 0,
+      "word": "cold",
+      "partOfSpeech": "adjective",
+      "meaning": "(of a thing) Having a low temperature.",
+      "synonyms": "chilled, chilly, cool",
+      "antonyms": "baking, boiling, heated",
+      "sentence": "A cold wind whistled through the trees."
+    },
+    {
+      "id": "3c477b93-b2c5-4870-b524-3bd2741106a6",
+      "progress": 0,
+      "word": "color",
+      "partOfSpeech": "noun",
+      "meaning": "The spectral composition of visible light",
+      "synonyms": "shade, hue, tint",
+      "antonyms": "N/A",
+      "sentence": "Red is my favorite color."
+    },
+    {
+      "id": "81ef8dd1-e516-4399-849a-6d38c20da2fc",
+      "progress": 0,
+      "word": "comic",
+      "partOfSpeech": "noun",
+      "meaning": "A book or magazine with stories told in pictures and speech bubbles.",
+      "synonyms": "comic book, cartoon",
+      "antonyms": "N/A",
+      "sentence": "He reads a comic book every night before bed."
+    },
+    {
+      "id": "c6940aed-0f34-4641-a8be-9f4df92f2c06",
+      "progress": 0,
+      "word": "cook",
+      "partOfSpeech": "noun",
+      "meaning": "A person who prepares food.",
+      "synonyms": "N/A",
+      "antonyms": "N/A",
+      "sentence": "I'm a terrible cook, so I eat a lot of frozen dinners."
+    },
+    {
+      "id": "2e81e7f4-6057-4b97-bd44-35acdf3444b5",
+      "progress": 0,
+      "word": "corn",
+      "partOfSpeech": "noun",
+      "meaning": "A tall plant with large yellow seeds that can be eaten.",
+      "synonyms": "maize",
+      "antonyms": "N/A",
+      "sentence": "We had corn on the cob for dinner."
+    },
+    {
+      "id": "3321257e-8a28-4934-a677-eb56aafc860c",
+      "progress": 0,
+      "word": "country",
+      "partOfSpeech": "noun",
+      "meaning": "A nation with its own government and borders, like France or Japan.",
+      "synonyms": "nation, state, land",
+      "antonyms": "city",
+      "sentence": "What country are you from?"
+    },
+    {
+      "id": "de3c07c6-51e3-4605-8141-67c23518f96c",
+      "progress": 0,
+      "word": "dance",
+      "partOfSpeech": "noun",
+      "meaning": "A sequence of rhythmic steps or movements usually performed to music, for pleasure or as a form of social interaction.",
+      "synonyms": "ballet, waltz",
+      "antonyms": "N/A",
+      "sentence": "She loves to dance at parties."
+    },
+    {
+      "id": "d64b55b0-b6e3-4433-843d-83d1934f5bec",
+      "progress": 0,
+      "word": "date",
+      "partOfSpeech": "noun",
+      "meaning": "A particular day of the month or year.",
+      "synonyms": "day, appointment",
+      "antonyms": "N/A",
+      "sentence": "What is today's date?"
+    },
+    {
+      "id": "ac144b65-1abb-4578-afa0-9bd8fc23c264",
+      "progress": 0,
+      "word": "developer",
+      "partOfSpeech": "noun",
+      "meaning": "A person or entity engaged in the creation or improvement of certain classes of products.",
+      "synonyms": "programmer, builder, creator",
+      "antonyms": "N/A",
+      "sentence": "The developer built a new app."
+    },
+    {
+      "id": "51081e20-8e23-47c1-9fae-5b2e0e999ef8",
+      "progress": 0,
+      "word": "dial",
+      "partOfSpeech": "noun",
+      "meaning": "A graduated, circular scale over which a needle moves to show a measurement (such as speed).",
+      "synonyms": "N/A",
+      "antonyms": "N/A",
+      "sentence": "I saw a dial today."
+    },
+    {
+      "id": "01c4092e-6786-4bc6-a1e8-7e4c64f2ee6a",
+      "progress": 0,
+      "word": "dinner",
+      "partOfSpeech": "noun",
+      "meaning": "The main meal of the day, usually eaten in the evening.",
+      "synonyms": "supper, evening meal",
+      "antonyms": "breakfast",
+      "sentence": "We eat dinner at seven o'clock."
+    },
+    {
+      "id": "a78166f6-67e2-4620-90cb-4e2122be3ab0",
+      "progress": 0,
+      "word": "doctor",
+      "partOfSpeech": "noun",
+      "meaning": "A person whose job is to treat people who are sick or injured.",
+      "synonyms": "physician, GP, doc",
+      "antonyms": "N/A",
+      "sentence": "If you feel sick, you should see a doctor."
+    },
+    {
+      "id": "ad36bd9b-50e4-4da7-944f-19d265affb6f",
+      "progress": 0,
+      "word": "doorbell",
+      "partOfSpeech": "noun",
+      "meaning": "A button outside a door that makes a sound when pushed.",
+      "synonyms": "bell, buzzer, chime",
+      "antonyms": "N/A",
+      "sentence": "Someone is ringing the doorbell."
+    },
+    {
+      "id": "576a0580-b684-4843-baa8-c538579eafbe",
+      "progress": 0,
+      "word": "dress",
+      "partOfSpeech": "noun",
+      "meaning": "An item of clothing (usually worn by a woman or young girl) which both covers the upper part of the body and includes skirts below the waist.",
+      "synonyms": "N/A",
+      "antonyms": "N/A",
+      "sentence": "Amy and Mary looked very pretty in their dresses."
+    },
+    {
+      "id": "58a7c05a-2ca0-4133-a24e-08f3f63af904",
+      "progress": 0,
+      "word": "drum",
+      "partOfSpeech": "noun",
+      "meaning": "A musical instrument that you hit with sticks or your hands to make sound.",
+      "synonyms": "percussion, bongo",
+      "antonyms": "N/A",
+      "sentence": "He plays the drum in the school band."
+    },
+    {
+      "id": "974062b0-aae7-4b9a-8ab0-7a63eb29159e",
+      "progress": 0,
+      "word": "face",
+      "partOfSpeech": "noun",
+      "meaning": "The front part of the head of a human or other animal, featuring the eyes, nose and mouth, and the surrounding area.",
+      "synonyms": "countenance, expression, facial expression",
+      "antonyms": "heel",
+      "sentence": "That girl has a pretty face."
+    },
+    {
+      "id": "528df5e9-70e5-4859-8b81-6cacb8c4b0a7",
+      "progress": 0,
+      "word": "fall",
+      "partOfSpeech": "noun",
+      "meaning": "The season between summer and winter when leaves change color; also called autumn.",
+      "synonyms": "autumn",
+      "antonyms": "spring",
+      "sentence": "The leaves turn red and orange in the fall."
+    },
+    {
+      "id": "68eb3e25-aab3-4897-8582-b3adf21eeeb4",
+      "progress": 0,
+      "word": "fan",
+      "partOfSpeech": "noun",
+      "meaning": "A hand-held device consisting of concertinaed material, or slats of material, gathered together at one end, that may be opened out into the shape of a sector of a circle and waved back and forth in order to move air towards oneself and cool oneself.",
+      "synonyms": "N/A",
+      "antonyms": "N/A",
+      "sentence": "I saw a fan today."
+    },
+    {
+      "id": "c6c5103a-fc4f-41da-a178-6a9794d0bf97",
+      "progress": 0,
+      "word": "farmer",
+      "partOfSpeech": "noun",
+      "meaning": "A person who owns or works on a farm.",
+      "synonyms": "grower, rancher",
+      "antonyms": "N/A",
+      "sentence": "The farmer grows wheat and raises cows."
+    },
+    {
+      "id": "a74af900-e478-4548-977e-e5207e5ad48c",
+      "progress": 0,
+      "word": "fashion",
+      "partOfSpeech": "noun",
+      "meaning": "A current (constantly changing) trend, favored for frivolous rather than practical, logical, or intellectual reasons.",
+      "synonyms": "N/A",
+      "antonyms": "N/A",
+      "sentence": "I saw a fashion today."
+    },
+    {
+      "id": "c9844d41-2c90-4bcb-af39-580d345aeb45",
+      "progress": 0,
+      "word": "female",
+      "partOfSpeech": "noun",
+      "meaning": "A person or animal that is a girl or woman.",
+      "synonyms": "woman, girl, lady",
+      "antonyms": "male",
+      "sentence": "The female lion is called a lioness."
+    },
+    {
+      "id": "a83c658b-8e23-43c5-ba63-9cf47ce3c5d3",
+      "progress": 0,
+      "word": "field",
+      "partOfSpeech": "noun",
+      "meaning": "A land area free of woodland, cities, and towns; open country.",
+      "synonyms": "course, court, ground",
+      "antonyms": "N/A",
+      "sentence": "There are several species of wild flowers growing in this field."
+    },
+    {
+      "id": "a444ebba-4e21-47f8-a235-32e739614566",
+      "progress": 0,
+      "word": "fire",
+      "partOfSpeech": "noun",
+      "meaning": "The hot bright light and heat produced when something burns.",
+      "synonyms": "flame, blaze, inferno",
+      "antonyms": "N/A",
+      "sentence": "We sat by the fire to keep warm."
+    },
+    {
+      "id": "d255fa3f-e137-40c5-9809-6f470a61db1c",
+      "progress": 0,
+      "word": "fireman",
+      "partOfSpeech": "noun",
+      "meaning": "Someone (especially one who is male) who is skilled in the work of fighting fire.",
+      "synonyms": "firefighter, smoke eater",
+      "antonyms": "N/A",
+      "sentence": "I saw a fireman today."
+    },
+    {
+      "id": "c22d5cda-ec83-402a-8412-6864f18218ea",
+      "progress": 0,
+      "word": "flag",
+      "partOfSpeech": "noun",
+      "meaning": "A piece of cloth with a special design that represents a country or group.",
+      "synonyms": "banner, pennant",
+      "antonyms": "N/A",
+      "sentence": "The flag was flying on top of the building."
+    },
+    {
+      "id": "cbb6f4e1-46b2-48e5-b28d-d300a6cf4d7d",
+      "progress": 0,
+      "word": "floor",
+      "partOfSpeech": "noun",
+      "meaning": "The interior bottom or surface of a house or building; the supporting surface of a room.",
+      "synonyms": "ground, surface",
+      "antonyms": "ceiling",
+      "sentence": "The room has a wooden floor."
+    },
+    {
+      "id": "8510837c-6fc3-465f-88e7-8644fc58b6d9",
+      "progress": 0,
+      "word": "football",
+      "partOfSpeech": "noun",
+      "meaning": "A game played by two teams who try to kick a ball into a goal.",
+      "synonyms": "soccer",
+      "antonyms": "N/A",
+      "sentence": "He plays football with his friends after school."
+    },
+    {
+      "id": "e4aebbb3-d5aa-4c8b-b5a3-2932fe91814c",
+      "progress": 0,
+      "word": "fork",
+      "partOfSpeech": "noun",
+      "meaning": "A tool with three or four sharp points used for eating food.",
+      "synonyms": "N/A",
+      "antonyms": "N/A",
+      "sentence": "She picked up the fork and started eating."
+    },
+    {
+      "id": "6294452d-4910-4653-93ea-243b9c757dd6",
+      "progress": 0,
+      "word": "fruit",
+      "partOfSpeech": "noun",
+      "meaning": "The sweet or juicy part of a plant that contains seeds, often eaten as food.",
+      "synonyms": "produce",
+      "antonyms": "vegetable",
+      "sentence": "Apples and bananas are types of fruit."
+    },
+    {
+      "id": "74ff787f-3a05-4bc1-8c98-2ed1098c3781",
+      "progress": 0,
+      "word": "gate",
+      "partOfSpeech": "noun",
+      "meaning": "A doorlike structure outside a house.",
+      "synonyms": "entrance, doorway, barrier",
+      "antonyms": "N/A",
+      "sentence": "I saw a gate today."
+    },
+    {
+      "id": "82d16403-2c6f-4e47-9167-71b25eb4d365",
+      "progress": 0,
+      "word": "glue",
+      "partOfSpeech": "noun",
+      "meaning": "A sticky substance used to join things together.",
+      "synonyms": "adhesive, paste",
+      "antonyms": "N/A",
+      "sentence": "Use glue to stick the picture on the paper."
+    },
+    {
+      "id": "e1d58448-efde-4bf3-a66f-d9f71ee61872",
+      "progress": 0,
+      "word": "god",
+      "partOfSpeech": "noun",
+      "meaning": "A being such as a monotheistic God: a single divine creator and ruler of the universe.",
+      "synonyms": "N/A",
+      "antonyms": "N/A",
+      "sentence": "I saw a god today."
+    },
+    {
+      "id": "c7ac933d-c5f2-4f75-b257-9bb2a17d1d18",
+      "progress": 0,
+      "word": "gold",
+      "partOfSpeech": "noun",
+      "meaning": "A valuable yellow metal used to make jewelry and coins.",
+      "synonyms": "N/A",
+      "antonyms": "N/A",
+      "sentence": "She wears a gold ring on her finger."
+    },
+    {
+      "id": "02b2366a-fef5-45e6-8415-e7b9be789670",
+      "progress": 0,
+      "word": "golf",
+      "partOfSpeech": "noun",
+      "meaning": "A ball game played by individuals competing against one another in which the object is to hit a ball into each of a series of (usually 18 or nine) holes in the minimum number of strokes.",
+      "synonyms": "N/A",
+      "antonyms": "N/A",
+      "sentence": "I saw a golf today."
+    },
+    {
+      "id": "47a63512-8b98-4978-985c-9bc54992742b",
+      "progress": 0,
+      "word": "grass",
+      "partOfSpeech": "noun",
+      "meaning": "The green plants that cover the ground in gardens and parks.",
+      "synonyms": "lawn, turf",
+      "antonyms": "N/A",
+      "sentence": "The children are playing on the grass."
+    },
+    {
+      "id": "5742f1ac-aa00-4824-85ab-7f3a13534017",
+      "progress": 0,
+      "word": "guitar",
+      "partOfSpeech": "noun",
+      "meaning": "A stringed musical instrument, of European origin, usually with a fretted fingerboard and six strings, played with the fingers or a plectrum (guitar pick).",
+      "synonyms": "instrument, six-string",
+      "antonyms": "N/A",
+      "sentence": "I saw a guitar today."
+    },
+    {
+      "id": "25a677c4-cdce-4f43-bb9f-f1e30be81715",
+      "progress": 0,
+      "word": "handwriting",
+      "partOfSpeech": "noun",
+      "meaning": "Writing done by hand with a pen or pencil.",
+      "synonyms": "penmanship, script",
+      "antonyms": "N/A",
+      "sentence": "She has very neat handwriting."
+    },
+    {
+      "id": "b2d59eec-bd1b-4a8a-9341-9f27ba5a10c4",
+      "progress": 0,
+      "word": "harp",
+      "partOfSpeech": "noun",
+      "meaning": "A musical instrument consisting of a body and a curved neck, strung with strings of varying length that are stroked or plucked with the fingers and are vertical to the soundboard when viewed from the end of the body",
+      "synonyms": "N/A",
+      "antonyms": "N/A",
+      "sentence": "I saw a harp today."
+    },
+    {
+      "id": "7c7ced67-9b55-4a24-91f1-96378d94f0ba",
+      "progress": 0,
+      "word": "health",
+      "partOfSpeech": "noun",
+      "meaning": "The condition of your body and mind, especially being free from illness.",
+      "synonyms": "wellness, fitness, well-being",
+      "antonyms": "illness, sickness",
+      "sentence": "Good food and exercise are important for your health."
+    },
+    {
+      "id": "666ac7ad-00be-4d39-a1b4-e749c6b64a82",
+      "progress": 0,
+      "word": "heart",
+      "partOfSpeech": "noun",
+      "meaning": "A muscular organ that pumps blood through the body, traditionally thought to be the seat of emotion.",
+      "synonyms": "core, center",
+      "antonyms": "N/A",
+      "sentence": "The heart pumps blood through the body."
+    },
+    {
+      "id": "dd56474e-106a-4d86-a39a-48aa7320b7ec",
+      "progress": 0,
+      "word": "heat",
+      "partOfSpeech": "noun",
+      "meaning": "The quality of being hot, or warmth from the sun or fire.",
+      "synonyms": "warmth, hotness",
+      "antonyms": "cold, coolness",
+      "sentence": "The heat from the sun was very strong today."
+    },
+    {
+      "id": "38e21fab-66e5-4856-ae30-2c6bfd82f176",
+      "progress": 0,
+      "word": "hedge",
+      "partOfSpeech": "noun",
+      "meaning": "A thicket of bushes or other shrubbery, especially one planted as a fence between two portions of land, or to separate the parts of a garden.",
+      "synonyms": "N/A",
+      "antonyms": "N/A",
+      "sentence": "He trims the hedge once a week."
+    },
+    {
+      "id": "7da3e478-6504-412b-9977-dbbf997ded5c",
+      "progress": 0,
+      "word": "height",
+      "partOfSpeech": "noun",
+      "meaning": "How tall or high something is.",
+      "synonyms": "tallness, stature, altitude",
+      "antonyms": "depth",
+      "sentence": "What is the height of that building?"
+    },
+    {
+      "id": "0602a49b-5aee-4fbd-925d-99f1a52fe781",
+      "progress": 0,
+      "word": "hill",
+      "partOfSpeech": "noun",
+      "meaning": "An elevated location smaller than a mountain.",
+      "synonyms": "N/A",
+      "antonyms": "N/A",
+      "sentence": "The park is sheltered from the wind by a hill to the east."
+    },
+    {
+      "id": "d86a5bc6-7937-4002-b6e8-bdc42a9c623b",
+      "progress": 0,
+      "word": "holiday",
+      "partOfSpeech": "noun",
+      "meaning": "A day or period of time when you do not work or go to school.",
+      "synonyms": "vacation, break, day off",
+      "antonyms": "workday",
+      "sentence": "We are going on holiday next week."
+    },
+    {
+      "id": "1e6f614d-4245-4ea2-bb78-d9c5ea0a1b22",
+      "progress": 0,
+      "word": "hotel",
+      "partOfSpeech": "noun",
+      "meaning": "A building where you pay to stay and sleep when you are away from home.",
+      "synonyms": "inn, motel, lodge",
+      "antonyms": "N/A",
+      "sentence": "We stayed at a hotel near the beach."
+    },
+    {
+      "id": "5f3e7584-388d-4780-ae23-e7e86ed7f61f",
+      "progress": 0,
+      "word": "ice cream",
+      "partOfSpeech": "noun",
+      "meaning": "A sweet frozen food made from milk and sugar.",
+      "synonyms": "gelato, frozen dessert",
+      "antonyms": "N/A",
+      "sentence": "I love chocolate ice cream."
+    },
+    {
+      "id": "d94d2f80-ac2d-4544-9201-b1279d76e0d9",
+      "progress": 0,
+      "word": "interest",
+      "partOfSpeech": "noun",
+      "meaning": "A feeling of wanting to know or learn more about something.",
+      "synonyms": "curiosity, enthusiasm",
+      "antonyms": "boredom",
+      "sentence": "She has a great interest in music."
+    },
+    {
+      "id": "afd006c5-9d07-4f71-9839-386c70f995fd",
+      "progress": 0,
+      "word": "item",
+      "partOfSpeech": "noun",
+      "meaning": "A single thing, especially one thing in a list or group.",
+      "synonyms": "object, thing, article",
+      "antonyms": "N/A",
+      "sentence": "There are ten items on the shopping list."
+    },
+    {
+      "id": "cef787cb-e9c2-4c47-9b32-c6c8a006ccfc",
+      "progress": 0,
+      "word": "jacket",
+      "partOfSpeech": "noun",
+      "meaning": "A piece of clothing worn on the upper body outside a shirt or blouse, often waist length to thigh length.",
+      "synonyms": "coat, sleeve",
+      "antonyms": "N/A",
+      "sentence": "I saw a jacket today."
+    },
+    {
+      "id": "63cd6e76-38b6-4abb-8063-38c6ca5f0b87",
+      "progress": 0,
+      "word": "job",
+      "partOfSpeech": "noun",
+      "meaning": "Work that you do regularly to earn money.",
+      "synonyms": "work, occupation, career",
+      "antonyms": "N/A",
+      "sentence": "She has a job at the hospital."
+    },
+    {
+      "id": "8815c67b-eaf8-4811-ae0d-5083c3d51e1c",
+      "progress": 0,
+      "word": "juice",
+      "partOfSpeech": "noun",
+      "meaning": "A liquid from a plant, especially fruit.",
+      "synonyms": "N/A",
+      "antonyms": "N/A",
+      "sentence": "Squeeze the orange and some juice will come out."
+    },
+    {
+      "id": "b1b64abb-3909-430b-9b8e-1d4f292636ea",
+      "progress": 0,
+      "word": "knight",
+      "partOfSpeech": "noun",
+      "meaning": "A soldier in the past who wore armor and rode a horse.",
+      "synonyms": "warrior, champion",
+      "antonyms": "N/A",
+      "sentence": "The knight rode his horse into battle."
+    },
+    {
+      "id": "72a62a35-f318-415a-aee7-2525c446c633",
+      "progress": 0,
+      "word": "language",
+      "partOfSpeech": "noun",
+      "meaning": "A system of words used by people to communicate with each other.",
+      "synonyms": "tongue, speech",
+      "antonyms": "N/A",
+      "sentence": "She can speak three languages."
+    },
+    {
+      "id": "7d688441-ec24-46c8-b2e9-91ce74e520bf",
+      "progress": 0,
+      "word": "laptop",
+      "partOfSpeech": "noun",
+      "meaning": "A small computer that you can carry and use anywhere.",
+      "synonyms": "notebook, portable computer",
+      "antonyms": "desktop",
+      "sentence": "She brings her laptop to class."
+    },
+    {
+      "id": "197f49c4-1a84-47a9-8366-814bf54bb155",
+      "progress": 0,
+      "word": "last",
+      "partOfSpeech": "adjective",
+      "meaning": "Final, ultimate, coming after all others of its kind.",
+      "synonyms": "final, ultimate, latest",
+      "antonyms": "first",
+      "sentence": "“Eyes Wide Shut” was the last film to be directed by Stanley Kubrick."
+    },
+    {
+      "id": "af6d80c2-2236-4afc-b892-f937a333065a",
+      "progress": 0,
+      "word": "late",
+      "partOfSpeech": "adjective",
+      "meaning": "After the expected or usual time.",
+      "synonyms": "delayed, overdue, tardy",
+      "antonyms": "early, on time",
+      "sentence": "I was late for school this morning."
+    },
+    {
+      "id": "200c9100-8aa5-40fa-8c7f-b05d6c1d4d10",
+      "progress": 0,
+      "word": "laugh",
+      "partOfSpeech": "noun",
+      "meaning": "An expression of mirth particular to the human species; the sound heard in laughing; laughter.",
+      "synonyms": "cachinnation, cackle, chortle",
+      "antonyms": "N/A",
+      "sentence": "His deep laughs boomed through the room."
+    },
+    {
+      "id": "16a8ec03-c61b-4e11-84c1-b32f6a7ad264",
+      "progress": 0,
+      "word": "lawyer",
+      "partOfSpeech": "noun",
+      "meaning": "A person whose job is to advise people about the law.",
+      "synonyms": "attorney, solicitor, advocate",
+      "antonyms": "N/A",
+      "sentence": "She wants to become a lawyer when she grows up."
+    },
+    {
+      "id": "9665e0ad-7f88-4a44-a6b9-589a5f7e2aed",
+      "progress": 0,
+      "word": "lead",
+      "partOfSpeech": "noun",
+      "meaning": "To go in front of or guide others; also a heavy grey metal.",
+      "synonyms": "guide, direct",
+      "antonyms": "N/A",
+      "sentence": "She will lead the group to the museum."
+    },
+    {
+      "id": "d486a3c5-0e3b-4c0b-bc5e-9b9f86196305",
+      "progress": 0,
+      "word": "leaf",
+      "partOfSpeech": "noun",
+      "meaning": "A flat green part of a plant or tree that grows from a branch.",
+      "synonyms": "blade, frond",
+      "antonyms": "N/A",
+      "sentence": "The leaf fell from the tree."
+    },
+    {
+      "id": "e8b98cd7-8d9b-40e3-9f9d-4f4eb20293cc",
+      "progress": 0,
+      "word": "leather",
+      "partOfSpeech": "noun",
+      "meaning": "A tough material produced from the skin of animals, by tanning or similar process, used e.g. for clothing.",
+      "synonyms": "N/A",
+      "antonyms": "N/A",
+      "sentence": "I saw a leather today."
+    },
+    {
+      "id": "be77e173-d6e7-427a-8a56-0a37a3e4e378",
+      "progress": 0,
+      "word": "leg",
+      "partOfSpeech": "noun",
+      "meaning": "One of the parts of your body used for walking, between your hip and foot.",
+      "synonyms": "limb",
+      "antonyms": "arm",
+      "sentence": "He broke his leg while skiing."
+    },
+    {
+      "id": "bfad4a03-a5d2-4e3b-a424-702c37308ae7",
+      "progress": 0,
+      "word": "letter",
+      "partOfSpeech": "noun",
+      "meaning": "A written message you send to someone, or a symbol in the alphabet.",
+      "synonyms": "message, note, mail",
+      "antonyms": "N/A",
+      "sentence": "There are twenty-six letters in the English alphabet."
+    },
+    {
+      "id": "5e58ca29-09ca-4958-a8ed-77614497c440",
+      "progress": 0,
+      "word": "licence",
+      "partOfSpeech": "noun",
+      "meaning": "An official document that gives you permission to do or have something.",
+      "synonyms": "permit, pass, authorization",
+      "antonyms": "N/A",
+      "sentence": "You need a licence to drive a car."
+    },
+    {
+      "id": "5d1c8d65-d1e6-40fa-a07f-c7e7497dc55b",
+      "progress": 0,
+      "word": "light",
+      "partOfSpeech": "noun",
+      "meaning": "The brightness from the sun, a lamp, or fire that lets you see things.",
+      "synonyms": "brightness, glow, shine",
+      "antonyms": "darkness, dark",
+      "sentence": "Turn on the light so I can see."
+    },
+    {
+      "id": "3fbf3dc0-63ec-4e5c-bca2-1c7e028ce8e0",
+      "progress": 0,
+      "word": "line",
+      "partOfSpeech": "noun",
+      "meaning": "A long thin mark on a surface, or a row of people or things.",
+      "synonyms": "row, queue, stripe",
+      "antonyms": "N/A",
+      "sentence": "Draw a straight line on the paper."
+    },
+    {
+      "id": "8d132558-f7c8-43be-b5db-cde6f3886d28",
+      "progress": 0,
+      "word": "lion",
+      "partOfSpeech": "noun",
+      "meaning": "A large wild cat with golden fur; the male has a big mane around its head.",
+      "synonyms": "big cat, feline",
+      "antonyms": "N/A",
+      "sentence": "The lion is called the king of the jungle."
+    },
+    {
+      "id": "2bf9271f-7a2b-4b59-b95d-3c92613cdf2c",
+      "progress": 0,
+      "word": "list",
+      "partOfSpeech": "noun",
+      "meaning": "A series of names, items, or things written one below the other.",
+      "synonyms": "catalog, register, inventory",
+      "antonyms": "N/A",
+      "sentence": "I made a shopping list before going to the store."
+    },
+    {
+      "id": "63ccc4bf-5abf-422c-99ae-2ff24d4308c1",
+      "progress": 0,
+      "word": "litter",
+      "partOfSpeech": "noun",
+      "meaning": "Trash or waste that is left on the ground in a public place.",
+      "synonyms": "rubbish, trash, garbage",
+      "antonyms": "N/A",
+      "sentence": "Please do not drop litter on the street."
+    },
+    {
+      "id": "6f809020-6dff-4c1c-9a47-4d38d9ba5766",
+      "progress": 0,
+      "word": "living room",
+      "partOfSpeech": "noun",
+      "meaning": "The main room in a house where people sit, relax, and watch TV.",
+      "synonyms": "lounge, sitting room, family room",
+      "antonyms": "N/A",
+      "sentence": "We watch TV together in the living room."
+    },
+    {
+      "id": "7e159c16-c08e-4ce0-a848-cbb401521436",
+      "progress": 0,
+      "word": "lock",
+      "partOfSpeech": "noun",
+      "meaning": "A device that keeps a door or box closed, opened only with a key.",
+      "synonyms": "bolt, latch, padlock",
+      "antonyms": "N/A",
+      "sentence": "Remember to lock the door when you leave."
+    },
+    {
+      "id": "75238106-d390-4e2f-a1b6-aaf3b1daeea5",
+      "progress": 0,
+      "word": "lunch",
+      "partOfSpeech": "noun",
+      "meaning": "A meal eaten in the middle of the day.",
+      "synonyms": "midday meal",
+      "antonyms": "N/A",
+      "sentence": "We have lunch at twelve o'clock."
+    },
+    {
+      "id": "a03d4562-d51d-4789-b02b-cf763e51c3e2",
+      "progress": 0,
+      "word": "machine",
+      "partOfSpeech": "noun",
+      "meaning": "A piece of equipment with moving parts that does a particular job.",
+      "synonyms": "device, apparatus, equipment",
+      "antonyms": "N/A",
+      "sentence": "The washing machine is very useful."
+    },
+    {
+      "id": "9fd2dfc3-1c76-40db-86e1-a555ef3bbd6d",
+      "progress": 0,
+      "word": "magazine",
+      "partOfSpeech": "noun",
+      "meaning": "A type of thin book with pictures and stories that comes out every week or month.",
+      "synonyms": "journal, periodical, publication",
+      "antonyms": "N/A",
+      "sentence": "She reads a fashion magazine every month."
+    },
+    {
+      "id": "e1e6dcec-0daf-4955-a4e7-f4cf9538e9a8",
+      "progress": 0,
+      "word": "mail",
+      "partOfSpeech": "noun",
+      "meaning": "Letters and packages sent and received through a postal service.",
+      "synonyms": "post, letters, correspondence",
+      "antonyms": "N/A",
+      "sentence": "I got a letter in the mail today."
+    },
+    {
+      "id": "3a7019db-9249-4fc8-b02c-fee3820ebce7",
+      "progress": 0,
+      "word": "make",
+      "partOfSpeech": "verb",
+      "meaning": "To create or produce something.",
+      "synonyms": "create, build, produce",
+      "antonyms": "destroy, break",
+      "sentence": "She can make a cake from scratch."
+    },
+    {
+      "id": "5e961056-ba70-4b9a-850d-ad4d263a9fe6",
+      "progress": 0,
+      "word": "mark",
+      "partOfSpeech": "noun",
+      "meaning": "A spot, line, or sign on a surface; also a score in an exam.",
+      "synonyms": "spot, stain, grade",
+      "antonyms": "N/A",
+      "sentence": "He got a good mark on his test."
+    },
+    {
+      "id": "7c3b2a83-d8f6-4ea7-b49a-02e498c752ba",
+      "progress": 0,
+      "word": "match",
+      "partOfSpeech": "noun",
+      "meaning": "A small stick that produces fire when rubbed; also a sports contest.",
+      "synonyms": "game, contest, competition",
+      "antonyms": "N/A",
+      "sentence": "We watched a football match on TV."
+    },
+    {
+      "id": "3cc94b81-ffcb-4c57-865b-6847bb4067cf",
+      "progress": 0,
+      "word": "meat",
+      "partOfSpeech": "noun",
+      "meaning": "The flesh of an animal eaten as food.",
+      "synonyms": "beef, poultry, pork",
+      "antonyms": "vegetable",
+      "sentence": "We buy meat from the butcher."
+    },
+    {
+      "id": "35b4dda2-ad99-40f9-8c77-9cc8739549e8",
+      "progress": 0,
+      "word": "member",
+      "partOfSpeech": "noun",
+      "meaning": "A person who belongs to a group or organization.",
+      "synonyms": "participant, associate",
+      "antonyms": "outsider",
+      "sentence": "She is a member of the English club."
+    },
+    {
+      "id": "95e8b48f-493a-40e0-af6a-fd5ef4d84e98",
+      "progress": 0,
+      "word": "menu",
+      "partOfSpeech": "noun",
+      "meaning": "A list of food and drinks you can order at a restaurant.",
+      "synonyms": "N/A",
+      "antonyms": "N/A",
+      "sentence": "Let me look at the menu before I order."
+    },
+    {
+      "id": "a2aa35b7-30c6-4338-b59c-7156c162648a",
+      "progress": 0,
+      "word": "message",
+      "partOfSpeech": "noun",
+      "meaning": "A piece of information that one person sends to another.",
+      "synonyms": "note, text, letter",
+      "antonyms": "N/A",
+      "sentence": "She left a message on my phone."
+    },
+    {
+      "id": "9a64d378-153d-41f8-9896-7ff0f6071eb0",
+      "progress": 0,
+      "word": "metal",
+      "partOfSpeech": "noun",
+      "meaning": "A hard, shiny material like iron, gold, or steel.",
+      "synonyms": "iron, steel, alloy",
+      "antonyms": "wood, plastic",
+      "sentence": "The gate is made of metal."
+    },
+    {
+      "id": "a9f545ad-5224-4579-908f-1b4bcd16bc0a",
+      "progress": 0,
+      "word": "middle",
+      "partOfSpeech": "noun",
+      "meaning": "The center point or part of something, equally far from both sides.",
+      "synonyms": "center, midpoint, core",
+      "antonyms": "edge, side, end",
+      "sentence": "There is a table in the middle of the room."
+    },
+    {
+      "id": "e306fa10-57fd-4e28-b13c-c16ad0146361",
+      "progress": 0,
+      "word": "mind",
+      "partOfSpeech": "noun",
+      "meaning": "The part of you that thinks, feels, and remembers.",
+      "synonyms": "brain, thoughts, intellect",
+      "antonyms": "body",
+      "sentence": "She has a brilliant mind."
+    },
+    {
+      "id": "7a1b0e31-7da9-478f-914c-72c25cd5c9b7",
+      "progress": 0,
+      "word": "mine",
+      "partOfSpeech": "pronoun",
+      "meaning": "My; belonging to me; that which belongs to me.",
+      "synonyms": "N/A",
+      "antonyms": "N/A",
+      "sentence": "I saw a mine today."
+    },
+    {
+      "id": "47352c6b-f695-4942-87cf-fa5c1ebfb988",
+      "progress": 0,
+      "word": "minute",
+      "partOfSpeech": "noun",
+      "meaning": "A unit of time equal to sixty seconds (one-sixtieth of an hour).",
+      "synonyms": "moment, second, instant",
+      "antonyms": "N/A",
+      "sentence": "You have twenty minutes to complete the test."
+    },
+    {
+      "id": "dbf8d78d-fc88-44d5-b65d-852e9cd6118b",
+      "progress": 0,
+      "word": "mistake",
+      "partOfSpeech": "noun",
+      "meaning": "An error; a blunder.",
+      "synonyms": "N/A",
+      "antonyms": "N/A",
+      "sentence": "I saw a mistake today."
+    },
+    {
+      "id": "ec8dbf18-4297-427a-82e4-c3522f01bda4",
+      "progress": 0,
+      "word": "monkey",
+      "partOfSpeech": "noun",
+      "meaning": "A small, active animal with a long tail that lives in trees in warm countries.",
+      "synonyms": "ape, primate",
+      "antonyms": "N/A",
+      "sentence": "The monkey climbed the tree very quickly."
+    },
+    {
+      "id": "10203281-a6c0-4a2a-a767-08ced6b5327e",
+      "progress": 0,
+      "word": "month",
+      "partOfSpeech": "noun",
+      "meaning": "A period into which a year is divided, historically based on the phases of the moon.",
+      "synonyms": "N/A",
+      "antonyms": "N/A",
+      "sentence": "July is my favourite month."
+    },
+    {
+      "id": "8c780e06-65d8-43d0-a64c-78062a7ed290",
+      "progress": 0,
+      "word": "moon",
+      "partOfSpeech": "proper noun",
+      "meaning": "The Earth's moon Luna; the sole natural satellite of the Earth, represented in astronomy and astrology by ☾.",
+      "synonyms": "Luna",
+      "antonyms": "N/A",
+      "sentence": "I saw a moon today."
+    },
+    {
+      "id": "5379e636-2f21-4498-a3d1-8f0a11077f84",
+      "progress": 0,
+      "word": "motor",
+      "partOfSpeech": "noun",
+      "meaning": "A machine or device that converts other energy forms into mechanical energy, or imparts motion.",
+      "synonyms": "engine, kicker",
+      "antonyms": "N/A",
+      "sentence": "I saw a motor today."
+    },
+    {
+      "id": "09c8bba7-dbf2-4162-a537-2c087c77a4fc",
+      "progress": 0,
+      "word": "mouth",
+      "partOfSpeech": "noun",
+      "meaning": "The opening of a creature through which food is ingested.",
+      "synonyms": "N/A",
+      "antonyms": "N/A",
+      "sentence": "\"Open your mouth and say 'aah',\" directed the doctor."
+    },
+    {
+      "id": "8c21c56d-e349-4ef6-aef7-428e40d28ffe",
+      "progress": 0,
+      "word": "movie",
+      "partOfSpeech": "noun",
+      "meaning": "A recorded sequence of images displayed on a screen at a rate sufficiently fast to create the appearance of motion.",
+      "synonyms": "film, flick, motion picture",
+      "antonyms": "N/A",
+      "sentence": "I saw a movie today."
+    },
+    {
+      "id": "99ba7779-1706-49f4-be0a-5f54a73120bb",
+      "progress": 0,
+      "word": "name",
+      "partOfSpeech": "noun",
+      "meaning": "Any nounal word or phrase which indicates a particular person, place, class, or thing.",
+      "synonyms": "proper name",
+      "antonyms": "N/A",
+      "sentence": "I've never liked the name my parents gave me so I changed it at the age of twenty."
+    },
+    {
+      "id": "e34afcbf-22c3-483d-a4ad-94cc2b6cfd45",
+      "progress": 0,
+      "word": "nasty",
+      "partOfSpeech": "adjective",
+      "meaning": "Very bad or unpleasant.",
+      "synonyms": "unpleasant, horrible, awful",
+      "antonyms": "nice, pleasant, lovely",
+      "sentence": "There was a nasty smell coming from the bin."
+    },
+    {
+      "id": "9dbd6c07-e57e-4fb2-908f-4fff80e4d730",
+      "progress": 0,
+      "word": "nephew",
+      "partOfSpeech": "noun",
+      "meaning": "A son of one's sibling, brother-in-law, or sister-in-law; either a son of one's brother (fraternal nephew) or a son of one's sister (sororal nephew).",
+      "synonyms": "N/A",
+      "antonyms": "niece",
+      "sentence": "My nephew is five years old."
+    },
+    {
+      "id": "ffb4ad4d-c59d-49c0-8259-f04c1396e7f7",
+      "progress": 0,
+      "word": "net",
+      "partOfSpeech": "noun",
+      "meaning": "Material made of threads tied together with spaces between, used for catching things.",
+      "synonyms": "mesh, web, netting",
+      "antonyms": "N/A",
+      "sentence": "The fisherman caught fish with his net."
+    },
+    {
+      "id": "5801c9fc-d0fe-41c0-acf5-dbe93b098282",
+      "progress": 0,
+      "word": "network",
+      "partOfSpeech": "noun",
+      "meaning": "A group of connected things, like computers or people.",
+      "synonyms": "system, web, grid",
+      "antonyms": "N/A",
+      "sentence": "Our school has a computer network."
+    },
+    {
+      "id": "eb8c5235-86d1-40c1-9b68-98d2fc89d2ef",
+      "progress": 0,
+      "word": "news",
+      "partOfSpeech": "noun",
+      "meaning": "New information of interest.",
+      "synonyms": "N/A",
+      "antonyms": "N/A",
+      "sentence": "Is there any news about the storm?"
+    },
+    {
+      "id": "6e0fd4b1-ce25-4fe4-acbb-480f4f561a12",
+      "progress": 0,
+      "word": "noise",
+      "partOfSpeech": "noun",
+      "meaning": "Various sounds, usually unwanted or unpleasant.",
+      "synonyms": "sound",
+      "antonyms": "N/A",
+      "sentence": "He knew that it was trash day, when the garbage collectors made all the noise."
+    },
+    {
+      "id": "008a7bc3-0ba9-4a63-b1bf-c135e415fa3a",
+      "progress": 0,
+      "word": "notebook",
+      "partOfSpeech": "noun",
+      "meaning": "A book in which notes or memoranda are written.",
+      "synonyms": "by-book, note pad, notepad",
+      "antonyms": "N/A",
+      "sentence": "I saw a notebook today."
+    },
+    {
+      "id": "ba949991-79a1-45bf-8f36-7611d1b99e10",
+      "progress": 0,
+      "word": "nothing",
+      "partOfSpeech": "noun",
+      "meaning": "Not anything; zero things.",
+      "synonyms": "zero, nil, none",
+      "antonyms": "something, everything",
+      "sentence": "There is nothing in the box."
+    },
+    {
+      "id": "de2ef178-df75-4dd8-bc7a-e93db6a6b6d5",
+      "progress": 0,
+      "word": "number",
+      "partOfSpeech": "noun",
+      "meaning": "An abstract entity used to describe quantity.",
+      "synonyms": "numeral, rime, scalar",
+      "antonyms": "N/A",
+      "sentence": "Zero, one, −1, 2.5, and pi are all numbers."
+    },
+    {
+      "id": "a4890324-4bd2-4179-b587-f5014df6cfbd",
+      "progress": 0,
+      "word": "office",
+      "partOfSpeech": "noun",
+      "meaning": "A room or building where people work, usually sitting at desks.",
+      "synonyms": "workplace, workspace",
+      "antonyms": "N/A",
+      "sentence": "My dad works in an office in the city."
+    },
+    {
+      "id": "b868f6fd-ca9d-44ae-bd0e-cf4fae8c1046",
+      "progress": 0,
+      "word": "oil",
+      "partOfSpeech": "noun",
+      "meaning": "Liquid fat.",
+      "synonyms": "N/A",
+      "antonyms": "N/A",
+      "sentence": "I saw a oil today."
+    },
+    {
+      "id": "58bd727d-7dc2-4f5f-9def-8df50331822c",
+      "progress": 0,
+      "word": "orange",
+      "partOfSpeech": "noun",
+      "meaning": "A round citrus fruit with a thick skin and sweet juice; also a color between red and yellow.",
+      "synonyms": "N/A",
+      "antonyms": "N/A",
+      "sentence": "I drink orange juice every morning."
+    },
+    {
+      "id": "5a69c756-4a09-4bfe-b814-a6ebbfd326c4",
+      "progress": 0,
+      "word": "order",
+      "partOfSpeech": "noun",
+      "meaning": "A request for food, goods, or services; also the arrangement of things.",
+      "synonyms": "request, arrangement, sequence",
+      "antonyms": "disorder, chaos",
+      "sentence": "Can I take your order, please?"
+    },
+    {
+      "id": "fb57b6a5-c6cd-4aee-ab62-ebb276f38c61",
+      "progress": 0,
+      "word": "paper",
+      "partOfSpeech": "noun",
+      "meaning": "A thin flat material used for writing, printing, or wrapping.",
+      "synonyms": "sheet, page, document",
+      "antonyms": "N/A",
+      "sentence": "Write your name on the paper."
+    },
+    {
+      "id": "9cfc0e7c-e3ff-4e0c-ae78-501c22d50f90",
+      "progress": 0,
+      "word": "passenger",
+      "partOfSpeech": "noun",
+      "meaning": "A person who travels in a vehicle but does not drive it.",
+      "synonyms": "traveler, rider, commuter",
+      "antonyms": "driver",
+      "sentence": "The bus had thirty passengers."
+    },
+    {
+      "id": "31170156-aa6a-46ff-8366-e7fc175a7d58",
+      "progress": 0,
+      "word": "pasta",
+      "partOfSpeech": "noun",
+      "meaning": "An Italian food made from flour and water, shaped into many forms like spaghetti.",
+      "synonyms": "noodles, spaghetti, macaroni",
+      "antonyms": "N/A",
+      "sentence": "We had pasta with tomato sauce for dinner."
+    },
+    {
+      "id": "359db76a-7c55-4fc6-a075-0fe28487f66c",
+      "progress": 0,
+      "word": "patient",
+      "partOfSpeech": "noun",
+      "meaning": "A person who is receiving medical treatment from a doctor.",
+      "synonyms": "sick person, case",
+      "antonyms": "N/A",
+      "sentence": "The doctor is seeing a patient now."
+    },
+    {
+      "id": "91c75453-eaa6-48b1-a79a-d24b86f8c333",
+      "progress": 0,
+      "word": "payment",
+      "partOfSpeech": "noun",
+      "meaning": "Money given to someone for something you buy or owe.",
+      "synonyms": "fee, charge, cost",
+      "antonyms": "N/A",
+      "sentence": "She made the payment with her credit card."
+    },
+    {
+      "id": "14886780-d4b9-408e-b569-33a327205c99",
+      "progress": 0,
+      "word": "peach",
+      "partOfSpeech": "noun",
+      "meaning": "A soft, round fruit with sweet yellow flesh and a fuzzy skin.",
+      "synonyms": "N/A",
+      "antonyms": "N/A",
+      "sentence": "This peach is very sweet and juicy."
+    },
+    {
+      "id": "865a1887-4c4c-4007-bf4b-a42f2be333c3",
+      "progress": 0,
+      "word": "pencil",
+      "partOfSpeech": "noun",
+      "meaning": "A thin tool made of wood with a dark center used for writing or drawing.",
+      "synonyms": "N/A",
+      "antonyms": "pen",
+      "sentence": "She used a pencil to draw a picture."
+    },
+    {
+      "id": "86564144-b5f9-42ff-acff-9c3705acb967",
+      "progress": 0,
+      "word": "pepper",
+      "partOfSpeech": "noun",
+      "meaning": "A vegetable that can be green, red, or yellow; also a spice used to add flavor.",
+      "synonyms": "capsicum, chili",
+      "antonyms": "N/A",
+      "sentence": "Add some pepper to the soup."
+    },
+    {
+      "id": "e02fd1f4-31f5-42ea-941c-d8f835748ca3",
+      "progress": 0,
+      "word": "person",
+      "partOfSpeech": "noun",
+      "meaning": "A human being; a man, woman, or child.",
+      "synonyms": "individual, human, somebody",
+      "antonyms": "N/A",
+      "sentence": "She is a very kind person."
+    },
+    {
+      "id": "7951dfce-d4d8-490d-9264-7c9ead58caaf",
+      "progress": 0,
+      "word": "pet",
+      "partOfSpeech": "noun",
+      "meaning": "An animal that you keep in your home for company and enjoyment.",
+      "synonyms": "companion animal",
+      "antonyms": "N/A",
+      "sentence": "My pet dog is called Max."
+    },
+    {
+      "id": "3fd121fe-864e-4831-9586-674178111b98",
+      "progress": 0,
+      "word": "photo",
+      "partOfSpeech": "noun",
+      "meaning": "A picture taken with a camera.",
+      "synonyms": "picture, photograph, snapshot",
+      "antonyms": "N/A",
+      "sentence": "She took a photo of the sunset."
+    },
+    {
+      "id": "2fb3ac79-ee57-4797-9cf3-ddbb9a39b253",
+      "progress": 0,
+      "word": "piano",
+      "partOfSpeech": "noun",
+      "meaning": "A large musical instrument with black and white keys that you press to make music.",
+      "synonyms": "keyboard",
+      "antonyms": "N/A",
+      "sentence": "She plays the piano beautifully."
+    },
+    {
+      "id": "18301efb-82fa-4a9f-add6-2e2e7fd563c7",
+      "progress": 0,
+      "word": "picture",
+      "partOfSpeech": "noun",
+      "meaning": "A drawing, painting, or photograph.",
+      "synonyms": "image, photo, illustration",
+      "antonyms": "N/A",
+      "sentence": "She drew a picture of her cat."
+    },
+    {
+      "id": "94c1200c-65c6-4b82-b421-75f4287582bd",
+      "progress": 0,
+      "word": "piece",
+      "partOfSpeech": "noun",
+      "meaning": "A part or portion of something.",
+      "synonyms": "part, bit, portion",
+      "antonyms": "whole",
+      "sentence": "Can I have a piece of cake?"
+    },
+    {
+      "id": "0c3bdf91-23dc-4c64-b45e-d0e8710f661b",
+      "progress": 0,
+      "word": "pilot",
+      "partOfSpeech": "noun",
+      "meaning": "A person who flies an airplane.",
+      "synonyms": "aviator, flyer, captain",
+      "antonyms": "N/A",
+      "sentence": "The pilot flew the plane safely."
+    },
+    {
+      "id": "c4c4f17f-ba12-4654-b51b-815dba034bcb",
+      "progress": 0,
+      "word": "pin",
+      "partOfSpeech": "noun",
+      "meaning": "A thin, sharp piece of metal used to hold things together.",
+      "synonyms": "needle, tack, clip",
+      "antonyms": "N/A",
+      "sentence": "She used a pin to hold the paper on the board."
+    },
+    {
+      "id": "0d2f2c99-a033-4a1e-bb77-4f0701b7cb7c",
+      "progress": 0,
+      "word": "pizza",
+      "partOfSpeech": "noun",
+      "meaning": "A round, flat food made of dough covered with tomato sauce, cheese, and toppings.",
+      "synonyms": "pie",
+      "antonyms": "N/A",
+      "sentence": "We ordered a large pizza for dinner."
+    },
+    {
+      "id": "849c931d-b346-40c8-8a81-9f1e8482a151",
+      "progress": 0,
+      "word": "place",
+      "partOfSpeech": "noun",
+      "meaning": "A particular area or location.",
+      "synonyms": "location, spot, area",
+      "antonyms": "N/A",
+      "sentence": "This is a nice place to sit."
+    },
+    {
+      "id": "040ec9e9-d65e-4dc1-baa4-c0f6f619f170",
+      "progress": 0,
+      "word": "plane",
+      "partOfSpeech": "noun",
+      "meaning": "A vehicle with wings and engines that flies in the sky.",
+      "synonyms": "airplane, aircraft, jet",
+      "antonyms": "N/A",
+      "sentence": "We took a plane to London."
+    },
+    {
+      "id": "5a7d313c-167e-49dd-bd79-6cb481a79f92",
+      "progress": 0,
+      "word": "plant",
+      "partOfSpeech": "noun",
+      "meaning": "A living thing that grows in the ground with leaves, roots, and stems.",
+      "synonyms": "vegetation, herb, shrub",
+      "antonyms": "animal",
+      "sentence": "She waters the plant every morning."
+    },
+    {
+      "id": "c9ccacf1-4aa5-45dc-b8d8-f32c33bbb32f",
+      "progress": 0,
+      "word": "play",
+      "partOfSpeech": "verb",
+      "meaning": "To do something fun or enjoyable, especially a game or sport.",
+      "synonyms": "have fun, enjoy, amuse",
+      "antonyms": "work",
+      "sentence": "The children like to play in the garden."
+    },
+    {
+      "id": "beb84b1e-a453-41b5-bee7-44cf98fba86a",
+      "progress": 0,
+      "word": "playground",
+      "partOfSpeech": "noun",
+      "meaning": "An outdoor area with swings, slides, and other equipment where children play.",
+      "synonyms": "play area, park",
+      "antonyms": "N/A",
+      "sentence": "The children are having fun at the playground."
+    },
+    {
+      "id": "b189471d-a95d-45c5-8a0c-c40b743b50e3",
+      "progress": 0,
+      "word": "pocket",
+      "partOfSpeech": "noun",
+      "meaning": "A small bag sewn into clothing where you can put small things.",
+      "synonyms": "pouch",
+      "antonyms": "N/A",
+      "sentence": "He put the keys in his pocket."
+    },
+    {
+      "id": "09a524e4-6849-4a3b-9edc-16af9d9328d4",
+      "progress": 0,
+      "word": "poison",
+      "partOfSpeech": "noun",
+      "meaning": "A substance that can make you very sick or kill you if swallowed.",
+      "synonyms": "toxin, venom",
+      "antonyms": "cure, remedy, antidote",
+      "sentence": "Some wild mushrooms are poison."
+    },
+    {
+      "id": "df186f5e-7a2c-4640-b2c2-448473b0b606",
+      "progress": 0,
+      "word": "police",
+      "partOfSpeech": "noun",
+      "meaning": "People whose job is to keep order and make sure laws are followed.",
+      "synonyms": "officers, cops, law enforcement",
+      "antonyms": "criminal",
+      "sentence": "The police helped find the lost child."
+    },
+    {
+      "id": "3cf31111-6d8f-45f9-9d59-2dc96659200d",
+      "progress": 0,
+      "word": "pond",
+      "partOfSpeech": "noun",
+      "meaning": "A small area of still water, smaller than a lake.",
+      "synonyms": "pool, lagoon",
+      "antonyms": "N/A",
+      "sentence": "There are ducks swimming in the pond."
+    },
+    {
+      "id": "d289e972-04a7-48d6-8d45-41b1ae711387",
+      "progress": 0,
+      "word": "post",
+      "partOfSpeech": "noun",
+      "meaning": "Letters and packages sent through the postal service; also a tall pole.",
+      "synonyms": "mail, column, pole",
+      "antonyms": "N/A",
+      "sentence": "I need to send this letter by post."
+    },
+    {
+      "id": "6040fcdf-9c74-4662-8c3a-6eb780b70dcb",
+      "progress": 0,
+      "word": "postcard",
+      "partOfSpeech": "noun",
+      "meaning": "A card with a picture on one side that you write and send without an envelope.",
+      "synonyms": "card",
+      "antonyms": "N/A",
+      "sentence": "She sent us a postcard from Paris."
+    },
+    {
+      "id": "5f9972d5-ef88-4fca-a5cd-e79bde16ffdc",
+      "progress": 0,
+      "word": "poster",
+      "partOfSpeech": "noun",
+      "meaning": "A large printed picture or notice put on a wall or board.",
+      "synonyms": "sign, notice, banner",
+      "antonyms": "N/A",
+      "sentence": "There is a poster of a famous singer on her wall."
+    }
+  ],
+  "contextPassage": {
+    "title": "The Dream Journey",
+    "text": "One sunny morning, a young student named Leo left his house with a book and a pen in his pocket. He walked down the street past the bus stop, dreaming of becoming a developer who could build intelligent machines.\nAt the park, he sat under a tree and watched a bird fly across the sky. \"Like that bird,\" he thought, \"I want my work to reach high places.\" He opened his laptop and started writing code—simple programs that felt like games at first, but would one day become something meaningful.\nA friend passed by with a cup of coffee. \"What are you building?\" she asked.\n\"An AI helper,\" Leo smiled. \"Something to assist students like us, maybe even doctors and farmers one day.\"\nThat night, back in his room, Leo looked out the window at the moon and stars. He knew the road ahead would be long, but every year of learning brought him closer. With his computer glowing in the dark and his head full of ideas, he felt ready.\nEvery great city starts with one small garden. Every amazing journey starts with one simple step."
+  }
+}

@@ -1,0 +1,1008 @@
+{
+  "entries": [
+    {
+      "id": "2ec7fe29-15a7-4005-977b-26c7de5cb352",
+      "progress": 0,
+      "word": "swath",
+      "partOfSpeech": "noun",
+      "meaning": "A broad strip or area of something; a row of cut grass or grain.",
+      "synonyms": "strip, stretch, expanse",
+      "antonyms": "point, spot, dot",
+      "sentence": "The hurricane carved a wide swath of destruction through communities that had little time to prepare."
+    },
+    {
+      "id": "19d3eb63-a4ef-4991-87da-161c110557d5",
+      "progress": 0,
+      "word": "dabble",
+      "partOfSpeech": "verb",
+      "meaning": "To take part in an activity in a casual or superficial way.",
+      "synonyms": "tinker, toy with, experiment",
+      "antonyms": "commit, dedicate, specialise",
+      "sentence": "She had dabbled in several disciplines before finding the field that would define her career."
+    },
+    {
+      "id": "c0b4d513-0a27-4ae4-b002-2bb3ba9d90d5",
+      "progress": 0,
+      "word": "earnest",
+      "partOfSpeech": "adjective",
+      "meaning": "Resulting from or showing sincere and intense conviction; serious in intention.",
+      "synonyms": "sincere, serious, genuine",
+      "antonyms": "insincere, flippant, frivolous",
+      "sentence": "His earnest desire to improve the system was evident, even to those who doubted his methods."
+    },
+    {
+      "id": "18c164f3-4cdc-484c-bd65-abb40f981f26",
+      "progress": 0,
+      "word": "vitality",
+      "partOfSpeech": "noun",
+      "meaning": "The state of being strong, active, and resilient; the power giving continuance of life.",
+      "synonyms": "energy, vigour, liveliness",
+      "antonyms": "lethargy, weakness, stagnation",
+      "sentence": "The vitality of the movement depended on its ability to attract younger participants who felt genuinely invested."
+    },
+    {
+      "id": "3fd8928e-f7a0-4259-977e-d88fd8cd59ff",
+      "progress": 0,
+      "word": "mimic",
+      "partOfSpeech": "verb",
+      "meaning": "To imitate someone or something, especially in order to mock or to replicate a pattern.",
+      "synonyms": "imitate, copy, replicate",
+      "antonyms": "originate, create, invent",
+      "sentence": "Certain species mimic the appearance of more dangerous animals as a survival strategy."
+    },
+    {
+      "id": "86aaf349-7875-4d1a-81f6-2d3fd7d86744",
+      "progress": 0,
+      "word": "agitate",
+      "partOfSpeech": "verb",
+      "meaning": "To make someone troubled or nervous; to campaign vigorously for a cause.",
+      "synonyms": "disturb, unsettle, campaign",
+      "antonyms": "calm, soothe, pacify",
+      "sentence": "Labour organisers agitated for safer working conditions throughout the latter half of the nineteenth century."
+    },
+    {
+      "id": "c6882a85-e297-4ede-ac46-96a1a188f8e2",
+      "progress": 0,
+      "word": "practical",
+      "partOfSpeech": "adjective",
+      "meaning": "Of or concerned with actual use rather than theory; sensible and realistic.",
+      "synonyms": "realistic, pragmatic, functional",
+      "antonyms": "theoretical, idealistic, impractical",
+      "sentence": "The most practical solution was not the most elegant, but it was the one the team could actually implement."
+    },
+    {
+      "id": "85eeaf9b-3b08-4eef-b24e-d04efa8b4ef5",
+      "progress": 0,
+      "word": "ominous",
+      "partOfSpeech": "adjective",
+      "meaning": "Giving the worrying impression that something bad is going to happen.",
+      "synonyms": "threatening, foreboding, sinister",
+      "antonyms": "reassuring, promising, favourable",
+      "sentence": "The ominous silence from the committee was interpreted, correctly, as a sign that the report had been shelved."
+    },
+    {
+      "id": "8f588ac6-a9a0-4cda-bd20-a268fad3fbc5",
+      "progress": 0,
+      "word": "dominion",
+      "partOfSpeech": "noun",
+      "meaning": "Sovereignty or control over a territory or people; a territory under control.",
+      "synonyms": "authority, control, sovereignty",
+      "antonyms": "submission, subjugation, powerlessness",
+      "sentence": "The novel examines what happens when dominion over nature is pursued without any sense of moral obligation."
+    },
+    {
+      "id": "529574dc-a0ab-41b0-adbb-e410153fafdf",
+      "progress": 0,
+      "word": "pretense",
+      "partOfSpeech": "noun",
+      "meaning": "An attempt to make something appear true when it is not; a false display.",
+      "synonyms": "deception, facade, affectation",
+      "antonyms": "honesty, sincerity, authenticity",
+      "sentence": "The negotiation continued under the pretense of goodwill long after both parties had abandoned any hope of agreement."
+    },
+    {
+      "id": "f22341e8-0099-4175-82b5-65851ff73f43",
+      "progress": 0,
+      "word": "egocentric",
+      "partOfSpeech": "adjective",
+      "meaning": "Thinking only of oneself without regard for the feelings of others; self-centred.",
+      "synonyms": "self-centred, selfish, narcissistic",
+      "antonyms": "altruistic, empathetic, selfless",
+      "sentence": "The egocentric framing of the argument made it impossible to consider the impact on those outside the author's immediate community."
+    },
+    {
+      "id": "0f232a22-8f9c-4d3d-9f7d-096df3b38c27",
+      "progress": 0,
+      "word": "exploit",
+      "partOfSpeech": "verb",
+      "meaning": "To make full use of a resource; to treat someone unfairly for personal gain.",
+      "synonyms": "utilise, take advantage of, manipulate",
+      "antonyms": "protect, neglect, respect",
+      "sentence": "Critics argued that the policy allowed large corporations to exploit the regulatory gap at the expense of smaller competitors."
+    },
+    {
+      "id": "5f1c8865-398c-4441-9799-4a08097347a6",
+      "progress": 0,
+      "word": "comprise",
+      "partOfSpeech": "verb",
+      "meaning": "To consist of; to make up or constitute a whole.",
+      "synonyms": "consist of, include, contain",
+      "antonyms": "exclude, omit, lack",
+      "sentence": "The anthology comprises works from writers across five continents, though the selection remains uneven."
+    },
+    {
+      "id": "0f2c74c1-c5a2-45af-98b1-f525bcd6d59c",
+      "progress": 0,
+      "word": "plight",
+      "partOfSpeech": "noun",
+      "meaning": "A dangerous, difficult, or otherwise unfortunate situation.",
+      "synonyms": "predicament, difficulty, hardship",
+      "antonyms": "advantage, comfort, ease",
+      "sentence": "The documentary brought national attention to the plight of communities whose water supply had been contaminated."
+    },
+    {
+      "id": "60faa34c-9d43-40d6-962f-67edbc79d1db",
+      "progress": 0,
+      "word": "exemplify",
+      "partOfSpeech": "verb",
+      "meaning": "To be a typical or ideal example of; to illustrate by giving an example.",
+      "synonyms": "illustrate, demonstrate, embody",
+      "antonyms": "contradict, undermine, misrepresent",
+      "sentence": "This case exemplifies the broader pattern the study was designed to investigate."
+    },
+    {
+      "id": "2ee61edf-653f-4cdf-b31a-da935e995993",
+      "progress": 0,
+      "word": "momentous",
+      "partOfSpeech": "adjective",
+      "meaning": "Of great importance or significance, especially in its bearing on future events.",
+      "synonyms": "significant, historic, consequential",
+      "antonyms": "trivial, minor, insignificant",
+      "sentence": "The signing of the agreement was described as momentous, though its practical effects took years to materialise."
+    },
+    {
+      "id": "69a98651-a290-40d0-8ee5-189640da0106",
+      "progress": 0,
+      "word": "reverberate",
+      "partOfSpeech": "verb",
+      "meaning": "To be repeated several times as an echo; to have continuing effects.",
+      "synonyms": "echo, resonate, ripple",
+      "antonyms": "fade, disappear, silence",
+      "sentence": "The consequences of that decision continued to reverberate through the institution for more than a decade."
+    },
+    {
+      "id": "452c4dd7-2927-4ddd-a303-7c5f8af31f94",
+      "progress": 0,
+      "word": "paternal",
+      "partOfSpeech": "adjective",
+      "meaning": "Of or appropriate to a father; showing a fatherly concern for others.",
+      "synonyms": "fatherly, protective, paternalistic",
+      "antonyms": "maternal, hostile, indifferent",
+      "sentence": "The paternal tone of the administration's communications was widely resented by those it claimed to be helping."
+    },
+    {
+      "id": "3f019e92-dd09-4b1f-9d01-4dd925a08caf",
+      "progress": 0,
+      "word": "lament",
+      "partOfSpeech": "verb",
+      "meaning": "To express passionate grief or sorrow about something; to mourn.",
+      "synonyms": "mourn, grieve, bewail",
+      "antonyms": "celebrate, rejoice, welcome",
+      "sentence": "She lamented the loss of the kind of long-form journalism that had once held institutions accountable."
+    },
+    {
+      "id": "bdcfa18f-3681-4740-9e69-d071bbad74e8",
+      "progress": 0,
+      "word": "mediation",
+      "partOfSpeech": "noun",
+      "meaning": "Intervention in a dispute to resolve it; the action of mediating between parties.",
+      "synonyms": "arbitration, negotiation, intervention",
+      "antonyms": "confrontation, escalation, dispute",
+      "sentence": "The dispute was eventually resolved through mediation, though neither side felt entirely satisfied with the outcome."
+    },
+    {
+      "id": "fed32563-1580-4ef4-8be9-3e252a8854ff",
+      "progress": 0,
+      "word": "miser",
+      "partOfSpeech": "noun",
+      "meaning": "A person who hoards wealth and spends as little money as possible.",
+      "synonyms": "hoarder, skinflint, penny-pincher",
+      "antonyms": "spendthrift, philanthropist, giver",
+      "sentence": "The character of the miser in the novel functions less as a study in greed than as a meditation on fear."
+    },
+    {
+      "id": "e0f77d09-0b8a-4289-b16b-4e3a880af99e",
+      "progress": 0,
+      "word": "supple",
+      "partOfSpeech": "adjective",
+      "meaning": "Bending and moving easily and gracefully; not stiff; willing to adapt.",
+      "synonyms": "flexible, nimble, pliant",
+      "antonyms": "rigid, stiff, inflexible",
+      "sentence": "The supple logic of her argument allowed it to accommodate objections without losing its essential shape."
+    },
+    {
+      "id": "0491be05-7055-4057-990c-c4a32e8b533b",
+      "progress": 0,
+      "word": "oblivious",
+      "partOfSpeech": "adjective",
+      "meaning": "Not aware of or not concerned about what is happening around one.",
+      "synonyms": "unaware, unmindful, heedless",
+      "antonyms": "aware, conscious, attentive",
+      "sentence": "He seemed entirely oblivious to the effect his words were having on those seated nearest to him."
+    },
+    {
+      "id": "756178d1-2436-40ee-aaad-5ab64d25763a",
+      "progress": 0,
+      "word": "sullen",
+      "partOfSpeech": "adjective",
+      "meaning": "Bad-tempered and sulky; gloomy; dull and dismal.",
+      "synonyms": "morose, resentful, gloomy",
+      "antonyms": "cheerful, bright, pleasant",
+      "sentence": "The sullen atmosphere in the office made it clear that the announcement had not been well received."
+    },
+    {
+      "id": "9df16b7e-2a9d-40c6-8d3b-85e38d75d22d",
+      "progress": 0,
+      "word": "imperative",
+      "partOfSpeech": "adjective",
+      "meaning": "Of vital importance; urgently necessary; giving an authoritative command.",
+      "synonyms": "essential, urgent, critical",
+      "antonyms": "optional, unnecessary, trivial",
+      "sentence": "It is imperative that the findings be communicated to policymakers before the window for action closes."
+    },
+    {
+      "id": "28b15b47-7e77-4aad-ac3c-dfb710860f61",
+      "progress": 0,
+      "word": "reminisce",
+      "partOfSpeech": "verb",
+      "meaning": "To indulge in enjoyable recollection of past events.",
+      "synonyms": "recall, remember, reflect",
+      "antonyms": "forget, ignore, overlook",
+      "sentence": "The two scholars reminisced about the early days of the field, when the questions had seemed simpler."
+    },
+    {
+      "id": "a85f6c50-d639-4366-8427-cdf79843e85c",
+      "progress": 0,
+      "word": "tranquil",
+      "partOfSpeech": "adjective",
+      "meaning": "Free from disturbance; calm and peaceful.",
+      "synonyms": "calm, peaceful, serene",
+      "antonyms": "turbulent, agitated, chaotic",
+      "sentence": "The tranquil surface of the data concealed a pattern of variability that only became visible on closer inspection."
+    },
+    {
+      "id": "f1c5376b-67c9-45fa-83d5-d92e0095f3e4",
+      "progress": 0,
+      "word": "cleave",
+      "partOfSpeech": "verb",
+      "meaning": "To split something along a natural line; to adhere strongly to something.",
+      "synonyms": "split, divide, cling",
+      "antonyms": "join, combine, detach",
+      "sentence": "The discovery cleaved the scientific community into two camps whose disagreements have not yet been resolved."
+    },
+    {
+      "id": "67dd1b29-5f6d-4ed8-8f5c-105b0cebe5b4",
+      "progress": 0,
+      "word": "reluctance",
+      "partOfSpeech": "noun",
+      "meaning": "Unwillingness or disinclination to do something.",
+      "synonyms": "unwillingness, hesitation, resistance",
+      "antonyms": "eagerness, willingness, enthusiasm",
+      "sentence": "Her reluctance to publish prematurely was interpreted by some as excessive caution and by others as admirable restraint."
+    },
+    {
+      "id": "2c497c05-97ba-47a2-8932-95b6fba08c15",
+      "progress": 0,
+      "word": "misgiving",
+      "partOfSpeech": "noun",
+      "meaning": "A feeling of doubt or apprehension about the outcome of something.",
+      "synonyms": "doubt, apprehension, unease",
+      "antonyms": "confidence, certainty, assurance",
+      "sentence": "She expressed her misgivings about the proposal clearly, but they were overruled by those with less familiarity with the data."
+    },
+    {
+      "id": "4645e0d3-c802-4b7c-a2d0-123394effdb1",
+      "progress": 0,
+      "word": "sparse",
+      "partOfSpeech": "adjective",
+      "meaning": "Thinly dispersed or scattered; not dense; scanty.",
+      "synonyms": "meagre, scarce, thin",
+      "antonyms": "abundant, dense, plentiful",
+      "sentence": "The sparse evidence available from the period makes it difficult to reconstruct events with any confidence."
+    },
+    {
+      "id": "fb9d718e-c0e1-409a-8dd8-e1559b3127bf",
+      "progress": 0,
+      "word": "progenitor",
+      "partOfSpeech": "noun",
+      "meaning": "A person or thing from which a person, animal, or plant is descended; an originator.",
+      "synonyms": "ancestor, forefather, originator",
+      "antonyms": "descendant, successor, heir",
+      "sentence": "Darwin is often cited as the progenitor of modern evolutionary biology, though his ideas had many intellectual predecessors."
+    },
+    {
+      "id": "d7030946-acb7-4b32-95f2-857d4f976996",
+      "progress": 0,
+      "word": "absurd",
+      "partOfSpeech": "adjective",
+      "meaning": "Wildly unreasonable or illogical; so unreasonable as to be laughable.",
+      "synonyms": "ridiculous, ludicrous, irrational",
+      "antonyms": "reasonable, logical, sensible",
+      "sentence": "The gap between the policy's stated aims and its likely effects was so wide as to seem almost absurd."
+    },
+    {
+      "id": "81b4495f-0df0-4b7c-bf9d-222b897e718d",
+      "progress": 0,
+      "word": "premise",
+      "partOfSpeech": "noun",
+      "meaning": "A previous statement or proposition from which another is inferred; an underlying assumption.",
+      "synonyms": "assumption, proposition, basis",
+      "antonyms": "conclusion, result, outcome",
+      "sentence": "The entire argument collapses once the central premise is subjected to even modest scrutiny."
+    },
+    {
+      "id": "7cb122d9-dca4-4616-9f28-c8c59861fc47",
+      "progress": 0,
+      "word": "scrutinize",
+      "partOfSpeech": "verb",
+      "meaning": "To examine or inspect closely and thoroughly.",
+      "synonyms": "examine, inspect, analyse",
+      "antonyms": "overlook, ignore, skim",
+      "sentence": "The methodology was rigorously scrutinized before the paper was accepted for publication."
+    },
+    {
+      "id": "eaa28ec3-51cd-4071-bd25-cbed388a6f85",
+      "progress": 0,
+      "word": "supplemental",
+      "partOfSpeech": "adjective",
+      "meaning": "Completing or enhancing something; additional.",
+      "synonyms": "additional, complementary, extra",
+      "antonyms": "primary, essential, main",
+      "sentence": "The supplemental data provided in the appendix proved more illuminating than the main body of the report."
+    },
+    {
+      "id": "8ec6cb00-9570-445a-93d3-72a12e7db6b7",
+      "progress": 0,
+      "word": "poignant",
+      "partOfSpeech": "adjective",
+      "meaning": "Evoking a keen sense of sadness or regret; deeply moving.",
+      "synonyms": "moving, touching, affecting",
+      "antonyms": "trivial, unaffecting, cold",
+      "sentence": "The most poignant passages in the memoir are those in which the author describes what was lost without any attempt at consolation."
+    },
+    {
+      "id": "a04df52f-77dc-4872-b41e-99ddd7d9372f",
+      "progress": 0,
+      "word": "obscure",
+      "partOfSpeech": "adjective",
+      "meaning": "Not discovered or known about; not clearly expressed; not famous.",
+      "synonyms": "unknown, unclear, hidden",
+      "antonyms": "famous, clear, well-known",
+      "sentence": "The obscure clause buried in the original legislation had never been tested until this moment."
+    },
+    {
+      "id": "476910a4-872c-4396-99a4-919fcdc8d176",
+      "progress": 0,
+      "word": "ancestral",
+      "partOfSpeech": "adjective",
+      "meaning": "Of, belonging to, or inherited from one's ancestors.",
+      "synonyms": "inherited, hereditary, traditional",
+      "antonyms": "contemporary, modern, personal",
+      "sentence": "The ancestral lands had been seized without compensation and without any formal acknowledgement of what had been taken."
+    },
+    {
+      "id": "2e24ca65-10b2-4135-9331-5fcdf9bfad5a",
+      "progress": 0,
+      "word": "gregarious",
+      "partOfSpeech": "adjective",
+      "meaning": "Fond of company; sociable; living in flocks or communities.",
+      "synonyms": "sociable, outgoing, convivial",
+      "antonyms": "solitary, reserved, introverted",
+      "sentence": "Despite her gregarious reputation at conferences, she preferred to work entirely alone."
+    },
+    {
+      "id": "8f770480-8ab1-42b5-a8f1-cf5fd63e4a83",
+      "progress": 0,
+      "word": "exert",
+      "partOfSpeech": "verb",
+      "meaning": "To apply a force, influence, or quality; to make an effort.",
+      "synonyms": "apply, exercise, wield",
+      "antonyms": "relinquish, yield, withhold",
+      "sentence": "The institution exerted considerable pressure on researchers to reach conclusions that aligned with its interests."
+    },
+    {
+      "id": "896ca820-29d7-4dbd-9c45-b84f261f0674",
+      "progress": 0,
+      "word": "vigorous",
+      "partOfSpeech": "adjective",
+      "meaning": "Strong, healthy, and full of energy; carried out forcefully and energetically.",
+      "synonyms": "energetic, forceful, robust",
+      "antonyms": "weak, lethargic, feeble",
+      "sentence": "A vigorous defence of the methodology was mounted by the original authors in a published response."
+    },
+    {
+      "id": "f62a86c4-3028-465f-af95-7205d08bee7f",
+      "progress": 0,
+      "word": "entreat",
+      "partOfSpeech": "verb",
+      "meaning": "To ask someone earnestly and anxiously to do something; to beg.",
+      "synonyms": "beg, implore, beseech",
+      "antonyms": "demand, command, order",
+      "sentence": "The letter entreated the committee to reconsider the decision before it became irreversible."
+    },
+    {
+      "id": "e7c4c865-5b33-41af-a4e2-326214785a2a",
+      "progress": 0,
+      "word": "desolation",
+      "partOfSpeech": "noun",
+      "meaning": "A state of complete emptiness or destruction; great unhappiness and loneliness.",
+      "synonyms": "devastation, bleakness, emptiness",
+      "antonyms": "abundance, vitality, joy",
+      "sentence": "The poem renders the desolation of the abandoned town with an economy of language that makes it all the more devastating."
+    },
+    {
+      "id": "13e7dd1c-5535-4729-9a29-410548cfddaa",
+      "progress": 0,
+      "word": "notorious",
+      "partOfSpeech": "adjective",
+      "meaning": "Famous or well-known, typically for some bad quality or deed.",
+      "synonyms": "infamous, disreputable, scandalous",
+      "antonyms": "reputable, unknown, admirable",
+      "sentence": "The institution had become notorious for a culture of secrecy that made external scrutiny almost impossible."
+    },
+    {
+      "id": "6b168883-3327-4ee0-a6b8-7e1c750b2df1",
+      "progress": 0,
+      "word": "induce",
+      "partOfSpeech": "verb",
+      "meaning": "To succeed in persuading or influencing someone to do something; to cause.",
+      "synonyms": "cause, provoke, persuade",
+      "antonyms": "prevent, discourage, inhibit",
+      "sentence": "The pattern of incentives in place appeared to induce precisely the behaviour the policy had been designed to prevent."
+    },
+    {
+      "id": "aea1328e-0ee1-48c6-bca4-97b11e179464",
+      "progress": 0,
+      "word": "pompous",
+      "partOfSpeech": "adjective",
+      "meaning": "Affectedly grand, solemn, or self-important; arrogantly assuming superiority.",
+      "synonyms": "arrogant, self-important, pretentious",
+      "antonyms": "modest, humble, unassuming",
+      "sentence": "The pompous tone of the official response undermined whatever legitimate points it might otherwise have made."
+    },
+    {
+      "id": "da4ee72e-13ba-4a84-ab22-de0e4b96c163",
+      "progress": 0,
+      "word": "disparage",
+      "partOfSpeech": "verb",
+      "meaning": "To regard or represent as being of little worth; to belittle.",
+      "synonyms": "belittle, denigrate, dismiss",
+      "antonyms": "praise, commend, celebrate",
+      "sentence": "The review disparaged the work without engaging seriously with its central argument."
+    },
+    {
+      "id": "3a922509-5532-465c-b39c-c71d9d006a16",
+      "progress": 0,
+      "word": "intact",
+      "partOfSpeech": "adjective",
+      "meaning": "Not damaged or impaired; complete and undamaged.",
+      "synonyms": "undamaged, whole, preserved",
+      "antonyms": "damaged, broken, diminished",
+      "sentence": "The original documents had survived intact, which was remarkable given the conditions in which they had been stored."
+    },
+    {
+      "id": "e22f71ed-4d42-47da-93a1-55d2e8108bd0",
+      "progress": 0,
+      "word": "verdict",
+      "partOfSpeech": "noun",
+      "meaning": "A decision on an issue of fact in a civil or criminal case; a judgement or conclusion.",
+      "synonyms": "judgement, decision, conclusion",
+      "antonyms": "indecision, uncertainty, question",
+      "sentence": "The historical verdict on the policy has been far harsher than contemporary observers predicted it would be."
+    },
+    {
+      "id": "c3ce319b-6634-48e4-b018-d851481d9cd4",
+      "progress": 0,
+      "word": "mundane",
+      "partOfSpeech": "adjective",
+      "meaning": "Lacking interest or excitement; dull; of this earthly world rather than a spiritual one.",
+      "synonyms": "ordinary, routine, tedious",
+      "antonyms": "extraordinary, exciting, spiritual",
+      "sentence": "The mundane details of daily life that fill the novel's early chapters slowly accumulate into something quietly devastating."
+    },
+    {
+      "id": "62a89fe7-7836-4b81-a65e-f1abf75692b5",
+      "progress": 0,
+      "word": "spur",
+      "partOfSpeech": "verb",
+      "meaning": "To give an incentive or encouragement to someone; to urge a horse forward.",
+      "synonyms": "motivate, prompt, stimulate",
+      "antonyms": "discourage, deter, suppress",
+      "sentence": "Competition between the two laboratories spurred a series of breakthroughs that neither would have achieved alone."
+    },
+    {
+      "id": "0bb56179-8f7a-4796-8d1b-a98e896ce684",
+      "progress": 0,
+      "word": "sentinel",
+      "partOfSpeech": "noun",
+      "meaning": "A soldier or guard whose job is to stand and keep watch; something that stands guard.",
+      "synonyms": "guard, watchman, lookout",
+      "antonyms": "N/A",
+      "sentence": "The archivist described herself as a sentinel of the historical record — her duty was to preserve, not to interpret."
+    },
+    {
+      "id": "fc07128d-f4b3-41a4-aef2-fce627fdcd82",
+      "progress": 0,
+      "word": "convey",
+      "partOfSpeech": "verb",
+      "meaning": "To transport or carry to a place; to communicate a meaning or feeling.",
+      "synonyms": "communicate, express, transmit",
+      "antonyms": "conceal, suppress, withhold",
+      "sentence": "The spare, precise language of the report conveys a severity that a more elaborate style would only have diluted."
+    },
+    {
+      "id": "7e7bd652-6a95-4827-8b7c-31116673e114",
+      "progress": 0,
+      "word": "render",
+      "partOfSpeech": "verb",
+      "meaning": "To provide a service or cause something to be in a particular state; to represent.",
+      "synonyms": "cause, make, depict",
+      "antonyms": "prevent, misrepresent, undo",
+      "sentence": "The discovery rendered the existing model not merely incomplete but fundamentally incorrect."
+    },
+    {
+      "id": "2a9d3ea1-b7ec-4ebe-9af8-4b4d5279c583",
+      "progress": 0,
+      "word": "manifest",
+      "partOfSpeech": "adjective",
+      "meaning": "Clear or obvious to the eye or mind; easily perceived.",
+      "synonyms": "obvious, evident, apparent",
+      "antonyms": "hidden, obscure, concealed",
+      "sentence": "The tension between the two approaches was manifest in every discussion the committee attempted to hold."
+    },
+    {
+      "id": "560a1f84-edba-40f8-a2dc-335e4dc330fe",
+      "progress": 0,
+      "word": "continuum",
+      "partOfSpeech": "noun",
+      "meaning": "A continuous sequence in which adjacent elements are not noticeably different but the extremes are very different.",
+      "synonyms": "spectrum, range, progression",
+      "antonyms": "break, gap, discontinuity",
+      "sentence": "The debate is better understood as a continuum of positions than as a simple binary of opposing camps."
+    },
+    {
+      "id": "1d6cf17f-dc2b-4e2c-bce5-bae0b2cfad90",
+      "progress": 0,
+      "word": "redress",
+      "partOfSpeech": "verb",
+      "meaning": "To remedy or set right an unfair situation; to compensate for a wrong done.",
+      "synonyms": "remedy, correct, compensate",
+      "antonyms": "ignore, perpetuate, worsen",
+      "sentence": "The commission was established specifically to identify and redress historical injustices that had never been formally acknowledged."
+    },
+    {
+      "id": "a3823ed0-0c50-47b8-b5af-2713e22396b6",
+      "progress": 0,
+      "word": "underscore",
+      "partOfSpeech": "verb",
+      "meaning": "To emphasise or highlight the importance of something; to underline.",
+      "synonyms": "emphasise, highlight, stress",
+      "antonyms": "downplay, minimise, ignore",
+      "sentence": "The results underscore the need for a much larger follow-up study before any policy conclusions are drawn."
+    },
+    {
+      "id": "21749fb2-0447-46ca-9647-026c60401bb4",
+      "progress": 0,
+      "word": "enfeeble",
+      "partOfSpeech": "verb",
+      "meaning": "To make someone or something weak; to deprive of strength or vitality.",
+      "synonyms": "weaken, debilitate, undermine",
+      "antonyms": "strengthen, invigorate, fortify",
+      "sentence": "Decades of underfunding had enfeebled the institution to the point where meaningful reform was almost impossible."
+    },
+    {
+      "id": "33b35f1a-e705-4d71-b481-7e89552039a3",
+      "progress": 0,
+      "word": "disdain",
+      "partOfSpeech": "noun",
+      "meaning": "The feeling that something is beneath one's dignity or unworthy of one's consideration.",
+      "synonyms": "contempt, scorn, derision",
+      "antonyms": "admiration, respect, esteem",
+      "sentence": "She viewed the committee's procedural objections with barely concealed disdain."
+    },
+    {
+      "id": "baccec4a-edc0-4be4-8961-044f1da680fc",
+      "progress": 0,
+      "word": "flatter",
+      "partOfSpeech": "verb",
+      "meaning": "To lavish insincere praise on someone; to represent something more favourably than it is.",
+      "synonyms": "compliment, praise, overstate",
+      "antonyms": "criticise, understate, insult",
+      "sentence": "The graph was scaled in a way that flattered the results without technically misrepresenting them."
+    },
+    {
+      "id": "0711aef4-0c40-431b-a72e-4124c961e12b",
+      "progress": 0,
+      "word": "posterity",
+      "partOfSpeech": "noun",
+      "meaning": "All future generations of people; descendants.",
+      "synonyms": "future generations, descendants, heirs",
+      "antonyms": "ancestors, predecessors, the past",
+      "sentence": "The decision was made with little apparent thought for posterity and a great deal of thought for the immediate political moment."
+    },
+    {
+      "id": "48873207-bd19-4c14-b408-583a7cb03564",
+      "progress": 0,
+      "word": "sustain",
+      "partOfSpeech": "verb",
+      "meaning": "To strengthen or support; to maintain over a period of time; to suffer.",
+      "synonyms": "maintain, support, uphold",
+      "antonyms": "abandon, undermine, weaken",
+      "sentence": "It proved difficult to sustain the level of public interest required to generate meaningful political pressure."
+    },
+    {
+      "id": "f848149b-2064-421e-97c7-448f4a4719ff",
+      "progress": 0,
+      "word": "sheer",
+      "partOfSpeech": "adjective",
+      "meaning": "Nothing other than; unmitigated; very steep; thin and translucent.",
+      "synonyms": "utter, pure, absolute",
+      "antonyms": "partial, moderate, gradual",
+      "sentence": "The sheer volume of data generated by the study made initial analysis extremely time-consuming."
+    },
+    {
+      "id": "de4b3569-d981-4ca0-9f03-79aeac7f0f59",
+      "progress": 0,
+      "word": "assess",
+      "partOfSpeech": "verb",
+      "meaning": "To evaluate or estimate the nature, value, or quality of something.",
+      "synonyms": "evaluate, judge, appraise",
+      "antonyms": "ignore, overlook, assume",
+      "sentence": "Students were asked to critically assess three competing accounts of the same historical event."
+    },
+    {
+      "id": "2417fbdd-3bed-4c3d-a74a-4e839467ab1f",
+      "progress": 0,
+      "word": "artisan",
+      "partOfSpeech": "noun",
+      "meaning": "A worker in a skilled trade, especially one involving traditional craftsmanship.",
+      "synonyms": "craftsperson, maker, skilled worker",
+      "antonyms": "amateur, machine, factory worker",
+      "sentence": "The novel valorises the artisan not as a nostalgic figure but as a model of purposeful, careful work."
+    },
+    {
+      "id": "33aad508-819b-489d-9775-26357d2d6a96",
+      "progress": 0,
+      "word": "subtle",
+      "partOfSpeech": "adjective",
+      "meaning": "So delicate or precise as to be difficult to analyse; not immediately obvious.",
+      "synonyms": "nuanced, understated, delicate",
+      "antonyms": "obvious, blatant, blunt",
+      "sentence": "The most subtle aspect of the argument is the one most readers will miss on a first reading."
+    },
+    {
+      "id": "260310a9-3749-4a4a-89d6-a6eb440f6698",
+      "progress": 0,
+      "word": "repudiate",
+      "partOfSpeech": "verb",
+      "meaning": "To refuse to accept or be associated with; to deny the truth or validity of something.",
+      "synonyms": "reject, disown, deny",
+      "antonyms": "accept, acknowledge, embrace",
+      "sentence": "The institution felt compelled to publicly repudiate findings that had originally appeared under its name."
+    },
+    {
+      "id": "283fae20-25a8-4652-81ba-6794494fe017",
+      "progress": 0,
+      "word": "meander",
+      "partOfSpeech": "verb",
+      "meaning": "To follow a winding course; to proceed without a fixed plan; to ramble.",
+      "synonyms": "wander, wind, drift",
+      "antonyms": "proceed directly, focus, advance",
+      "sentence": "The essay meanders pleasantly through several related topics before arriving, somewhat unexpectedly, at its central claim."
+    },
+    {
+      "id": "21e6aa34-1d25-4910-bfb8-f904a55c2e2b",
+      "progress": 0,
+      "word": "effectual",
+      "partOfSpeech": "adjective",
+      "meaning": "Producing the intended result; successful; valid or binding.",
+      "synonyms": "effective, successful, efficacious",
+      "antonyms": "ineffectual, futile, useless",
+      "sentence": "The measures introduced were not merely symbolic — they proved genuinely effectual in reducing the rate of error."
+    },
+    {
+      "id": "c05bafa4-2a35-483c-8e52-6831a59add82",
+      "progress": 0,
+      "word": "meager",
+      "partOfSpeech": "adjective",
+      "meaning": "Lacking in quantity or quality; scanty; deficient.",
+      "synonyms": "sparse, insufficient, scant",
+      "antonyms": "abundant, generous, plentiful",
+      "sentence": "The meager evidence available from the earliest period of the settlement makes any firm conclusion hazardous."
+    },
+    {
+      "id": "9fbf4fa6-459d-4777-973f-7db575a555fd",
+      "progress": 0,
+      "word": "tedious",
+      "partOfSpeech": "adjective",
+      "meaning": "Too long, slow, or dull; tiresome or monotonous.",
+      "synonyms": "boring, monotonous, tiresome",
+      "antonyms": "interesting, engaging, stimulating",
+      "sentence": "The tedious nature of the data verification process was frequently cited as the primary obstacle to timely publication."
+    },
+    {
+      "id": "f30b6fb3-e717-4aac-95ab-07cde9c088a4",
+      "progress": 0,
+      "word": "calibrate",
+      "partOfSpeech": "verb",
+      "meaning": "To measure precisely; to adjust or standardise a measuring instrument; to assess carefully.",
+      "synonyms": "adjust, measure, standardise",
+      "antonyms": "guess, estimate roughly, ignore",
+      "sentence": "Researchers must calibrate their instruments carefully before collecting data that will be used to draw significant conclusions."
+    },
+    {
+      "id": "865c916d-1182-41e8-b689-bd6b21a361b3",
+      "progress": 0,
+      "word": "potent",
+      "partOfSpeech": "adjective",
+      "meaning": "Having great power, influence, or effect; strongly affecting the mind or body.",
+      "synonyms": "powerful, strong, compelling",
+      "antonyms": "weak, ineffective, mild",
+      "sentence": "The most potent argument against the proposal was the one that received the least attention in the public debate."
+    },
+    {
+      "id": "5ce0a61e-6dd3-4572-b0dd-85614d105798",
+      "progress": 0,
+      "word": "conducive",
+      "partOfSpeech": "adjective",
+      "meaning": "Making a certain situation or outcome likely or possible; contributing to.",
+      "synonyms": "favourable, helpful, beneficial",
+      "antonyms": "unfavourable, harmful, obstructive",
+      "sentence": "The competitive atmosphere within the department was not conducive to the kind of open collaboration the project required."
+    },
+    {
+      "id": "a812fa31-b2b0-4f7e-ab66-1c9f2acb8440",
+      "progress": 0,
+      "word": "reserved",
+      "partOfSpeech": "adjective",
+      "meaning": "Slow to reveal emotion or opinions; restrained; kept for a particular purpose.",
+      "synonyms": "restrained, reticent, private",
+      "antonyms": "forthcoming, open, expressive",
+      "sentence": "His reserved manner in interviews concealed a passionate commitment to the causes he had spent his career advancing."
+    },
+    {
+      "id": "8837c70c-7262-48e7-88de-98b98f6ec079",
+      "progress": 0,
+      "word": "medley",
+      "partOfSpeech": "noun",
+      "meaning": "A varied mixture of things; a collection of songs or tunes performed as one piece.",
+      "synonyms": "mixture, assortment, variety",
+      "antonyms": "uniformity, sameness, single item",
+      "sentence": "The anthology offers a medley of perspectives that resists any single overarching interpretation."
+    },
+    {
+      "id": "f8a422bd-8421-4144-90b5-093175991f10",
+      "progress": 0,
+      "word": "advocate",
+      "partOfSpeech": "noun",
+      "meaning": "A person who publicly supports a cause; a lawyer who pleads on behalf of a client.",
+      "synonyms": "supporter, champion, proponent",
+      "antonyms": "opponent, critic, detractor",
+      "sentence": "She became the most prominent advocate for open-access publishing in her field."
+    },
+    {
+      "id": "9e20fb2d-73db-4c25-93ee-02d603c56730",
+      "progress": 0,
+      "word": "undulate",
+      "partOfSpeech": "verb",
+      "meaning": "To move with a smooth, wave-like motion; to have a wavy form or appearance.",
+      "synonyms": "wave, ripple, fluctuate",
+      "antonyms": "remain still, stabilise, flatten",
+      "sentence": "Public opinion on the issue continued to undulate in response to each new development, never fully settling."
+    },
+    {
+      "id": "fcd0dbc5-0a02-4472-8f27-19db2dbd0219",
+      "progress": 0,
+      "word": "magnitude",
+      "partOfSpeech": "noun",
+      "meaning": "The great size or extent of something; the importance of something.",
+      "synonyms": "scale, extent, significance",
+      "antonyms": "triviality, smallness, insignificance",
+      "sentence": "The full magnitude of the problem only became apparent when the data from all sites was compiled and analysed."
+    },
+    {
+      "id": "d5bf1372-92af-481c-a6ca-3735c2ba7ec9",
+      "progress": 0,
+      "word": "aggrandize",
+      "partOfSpeech": "verb",
+      "meaning": "To increase the power, status, or wealth of someone, often at others' expense; to exaggerate.",
+      "synonyms": "exaggerate, inflate, elevate",
+      "antonyms": "diminish, humble, understate",
+      "sentence": "The memoir was accused of seeking to aggrandize its subject at the expense of those who had made his success possible."
+    },
+    {
+      "id": "8a1db259-8f4c-4685-8198-1c0c84fd6d86",
+      "progress": 0,
+      "word": "pummel",
+      "partOfSpeech": "verb",
+      "meaning": "To strike repeatedly with the fists or with something heavy; to assail forcefully.",
+      "synonyms": "batter, beat, assail",
+      "antonyms": "protect, shield, defend",
+      "sentence": "The administration was pummelled by critics from every direction following the release of the damaging report."
+    },
+    {
+      "id": "7b3258ee-a8ff-47e4-b690-82753d01441a",
+      "progress": 0,
+      "word": "timid",
+      "partOfSpeech": "adjective",
+      "meaning": "Showing a lack of courage or confidence; easily frightened.",
+      "synonyms": "fearful, shy, hesitant",
+      "antonyms": "bold, courageous, confident",
+      "sentence": "A timid response to the crisis would only have deepened the public's sense that the institution could not be trusted."
+    },
+    {
+      "id": "6b7754ec-2539-4fe7-ba0b-1ee2bb3752d0",
+      "progress": 0,
+      "word": "bias",
+      "partOfSpeech": "noun",
+      "meaning": "Prejudice in favour of or against a person or group; a systematic error in a result.",
+      "synonyms": "prejudice, partiality, distortion",
+      "antonyms": "fairness, objectivity, impartiality",
+      "sentence": "Every researcher carries some degree of bias; the discipline lies in recognising and accounting for it."
+    },
+    {
+      "id": "4b676a96-9ef8-41bf-a129-86d9ea4db22b",
+      "progress": 0,
+      "word": "refine",
+      "partOfSpeech": "verb",
+      "meaning": "To improve something by making small changes; to make a substance purer.",
+      "synonyms": "improve, perfect, polish",
+      "antonyms": "coarsen, worsen, neglect",
+      "sentence": "The model was continually refined as new data challenged assumptions that had previously been taken as fixed."
+    },
+    {
+      "id": "e7ff1ff5-fae4-4f17-9205-baa898f7b43f",
+      "progress": 0,
+      "word": "oscillate",
+      "partOfSpeech": "verb",
+      "meaning": "To move or swing back and forth at a regular speed; to vary between opposing states.",
+      "synonyms": "fluctuate, alternate, waver",
+      "antonyms": "stabilise, remain fixed, settle",
+      "sentence": "Critical opinion on the work has oscillated dramatically between dismissal and celebration since its first publication."
+    },
+    {
+      "id": "638146e6-58a8-4758-a797-c0eb2c9f01bf",
+      "progress": 0,
+      "word": "esteem",
+      "partOfSpeech": "noun",
+      "meaning": "Respect and admiration; a favourable opinion of someone.",
+      "synonyms": "respect, admiration, regard",
+      "antonyms": "contempt, disrespect, disdain",
+      "sentence": "She was held in high esteem by her colleagues, who credited her with transforming the direction of the field."
+    },
+    {
+      "id": "c1572770-7e0e-47c5-88ab-288484a061b6",
+      "progress": 0,
+      "word": "displace",
+      "partOfSpeech": "verb",
+      "meaning": "To take the place of something or someone; to force someone to leave their home.",
+      "synonyms": "replace, relocate, supplant",
+      "antonyms": "restore, return, maintain",
+      "sentence": "The rapid growth of digital media displaced many of the traditional institutions through which expert opinion had been filtered."
+    },
+    {
+      "id": "8e9de501-17a2-4fde-91de-a6d31466e6c6",
+      "progress": 0,
+      "word": "pulpit",
+      "partOfSpeech": "noun",
+      "meaning": "A raised platform from which a preacher delivers a sermon; a position of authority.",
+      "synonyms": "platform, lectern, position of influence",
+      "antonyms": "N/A",
+      "sentence": "The scientist was accused of using the public pulpit afforded by her position to advocate rather than inform."
+    },
+    {
+      "id": "838c9452-62b7-490c-854d-981156371847",
+      "progress": 0,
+      "word": "ingenious",
+      "partOfSpeech": "adjective",
+      "meaning": "Clever, original, and inventive; showing great skill in design or execution.",
+      "synonyms": "clever, inventive, creative",
+      "antonyms": "uninventive, dull, unimaginative",
+      "sentence": "The ingenious solution she proposed required almost no additional resources and could be implemented immediately."
+    },
+    {
+      "id": "63ea5a94-1e81-47de-8a92-522b67100f5e",
+      "progress": 0,
+      "word": "constitute",
+      "partOfSpeech": "verb",
+      "meaning": "To be the components or elements of; to establish by law; to amount to.",
+      "synonyms": "make up, form, establish",
+      "antonyms": "dismantle, dissolve, exclude",
+      "sentence": "The five studies, taken together, constitute the most comprehensive treatment of the subject to date."
+    },
+    {
+      "id": "f6b0ad49-1658-48d5-8f92-42929196966a",
+      "progress": 0,
+      "word": "insatiable",
+      "partOfSpeech": "adjective",
+      "meaning": "Impossible to satisfy; having a desire that cannot be fully met.",
+      "synonyms": "unquenchable, voracious, relentless",
+      "antonyms": "satisfied, content, moderate",
+      "sentence": "Her insatiable curiosity about the natural world led her to conduct research across four different continents."
+    },
+    {
+      "id": "69a3caef-93a1-4c2f-afe5-463c36131da3",
+      "progress": 0,
+      "word": "volition",
+      "partOfSpeech": "noun",
+      "meaning": "The faculty or power of using one's will; a choice or decision made by the will.",
+      "synonyms": "will, choice, determination",
+      "antonyms": "compulsion, coercion, force",
+      "sentence": "He acted entirely of his own volition; no external pressure had been applied."
+    },
+    {
+      "id": "fde3df79-f069-47de-8b58-108a188f3e14",
+      "progress": 0,
+      "word": "relish",
+      "partOfSpeech": "verb",
+      "meaning": "To enjoy greatly; to savour; to take pleasure in anticipating something.",
+      "synonyms": "enjoy, savour, delight in",
+      "antonyms": "dislike, dread, resent",
+      "sentence": "She relished the challenge of communicating complex findings to audiences with no scientific background."
+    },
+    {
+      "id": "3a59adbc-78e5-480b-a02e-3b11dd20f743",
+      "progress": 0,
+      "word": "facilitate",
+      "partOfSpeech": "verb",
+      "meaning": "To make an action or process easier; to help bring something about.",
+      "synonyms": "enable, assist, support",
+      "antonyms": "hinder, obstruct, prevent",
+      "sentence": "The new infrastructure was specifically designed to facilitate collaboration between research groups that had previously worked in isolation."
+    },
+    {
+      "id": "fff5f020-fa67-4dc0-a738-44e9e1c16dc7",
+      "progress": 0,
+      "word": "threshold",
+      "partOfSpeech": "noun",
+      "meaning": "The point or level at which something begins or changes; the floor of a doorway.",
+      "synonyms": "limit, boundary, starting point",
+      "antonyms": "interior, middle, peak",
+      "sentence": "The data crossed the threshold of statistical significance, though only barely."
+    },
+    {
+      "id": "08cf6a1b-2a5a-4f2c-83d3-da5843e9bd47",
+      "progress": 0,
+      "word": "reform",
+      "partOfSpeech": "noun",
+      "meaning": "A change made to improve a system or institution; an improvement.",
+      "synonyms": "improvement, change, overhaul",
+      "antonyms": "stagnation, preservation, decline",
+      "sentence": "The reform was welcomed in principle but contested in almost every detail of its implementation."
+    },
+    {
+      "id": "74867fae-a0b8-4a83-bf23-cbb13cc28c41",
+      "progress": 0,
+      "word": "sneer",
+      "partOfSpeech": "verb",
+      "meaning": "To smile or speak in a contemptuous or mocking manner.",
+      "synonyms": "scoff, mock, scorn",
+      "antonyms": "respect, admire, praise",
+      "sentence": "It is easy to sneer at the ambitions of those who fail, and considerably harder to account for the structural conditions of failure."
+    },
+    {
+      "id": "85461d71-2718-40e9-a7d2-7a70d1bfd1ef",
+      "progress": 0,
+      "word": "profound",
+      "partOfSpeech": "adjective",
+      "meaning": "Having or showing great knowledge and insight; very intense; situated at great depth.",
+      "synonyms": "deep, significant, insightful",
+      "antonyms": "shallow, superficial, trivial",
+      "sentence": "The most profound effect of the discovery was not on the science but on the assumptions that had made the science possible."
+    }
+  ],
+  "contextPassage": {
+    "title": "The Discipline of Honest Uncertainty",
+    "text": "To study the history of any discipline with genuine seriousness is to confront a profound and often uncomfortable truth: that the magnitude of what we do not know is, at any given moment, far greater than what we do. This is not a counsel of despair. It is, or ought to be, a spur to the kind of restless, insatiable curiosity that characterises the best scientific and humanistic inquiry alike. The problem arises when institutions — animated by the need to sustain funding, reputation, or consensus — begin to obscure this truth rather than underscore it.\n\nThe history of medicine provides a particularly potent illustration. For much of the nineteenth century, the prevailing framework for understanding disease was one that constituted, in retrospect, an elaborate pretense of knowledge. Physicians could convey their diagnoses with an air of authority that bore little relation to the efficacy of what they were actually able to do. The gap between the confidence of the pulpit and the meager results at the bedside was enormous — yet it was rarely acknowledged, and those who attempted to render it visible were routinely subjected to the kind of disdain that institutions reserve for those who threaten their credibility.\n\nThe plight of the medical reformer in this period was genuinely difficult. To advocate for change was to invite the sneers of those who had built careers on the existing order. The most earnest and rigorous dissenters found themselves disparaged not on the merits of their arguments but on the grounds that their arguments were themselves a form of impertinence. The pompous authority of the established consensus proved impervious to evidence that would, in any more epistemically honest environment, have been regarded as decisive.\n\nWhat is perhaps most striking, viewed from the present, is how conducive this environment was to the perpetuation of harmful practices. A culture of reserved deference — in which junior practitioners were expected to relish the guidance of their superiors and suppress their misgivings — effectively enfeebled the capacity for independent judgement that progress requires. The timid were rewarded and the vigorous were marginalised. And the patients, whose plight was the ostensible concern of the entire enterprise, bore the consequences.\n\nThis pattern is not unique to medicine, nor is it confined to the past. In any field where the threshold of acceptable disagreement is set too high, where the subtle pressure to conform is pervasive and the cost of dissent is borne entirely by the individual, the capacity for genuine reform is systematically depleted. The discourse that results is not merely tedious but actively misleading — a medley of authoritative-sounding claims calibrated to sustain the esteem of the institution rather than to advance understanding.\n\nTo oscillate between cynicism and idealism on this point is understandable but ultimately unhelpful. The more productive response is to scrutinize the mechanisms by which such cultures reproduce themselves, and to ask, with the kind of earnest seriousness that the question deserves, what conditions are genuinely conducive to the kind of intellectual vitality that allows a field to correct its errors rather than entrench them.\n\nSeveral answers suggest themselves. Fields that endure — that demonstrate a genuine continuum of development rather than the periodic convulsions of paradigm collapse — tend to cultivate a culture in which misgivings are treated as data rather than as disloyalty, in which the most ingenious contributions are those that cleave closest to the evidence rather than those that aggrandize existing reputations, and in which the purpose of mediation between competing views is to refine understanding rather than to displace one faction with another.\n\nThe artisan model of knowledge production — slow, careful, responsive to the material at hand — is less glamorous than the rhetoric of breakthrough and discovery. It does not lend itself to the kind of momentous announcements that reverberate through the popular press. But it is, in the long run, the approach most likely to produce findings that posterity will find both intact and worth building upon.\n\nWhat we owe to those who come after us is not the pretense of certainty but the manifest discipline of honest uncertainty — the willingness to sustain inquiry even when the results are sparse, to acknowledge the continuum between what we know and what we merely conjecture, and to resist the temptation to render the world more legible than it actually is. That is not a modest ambition. It is, in its own quiet way, a profound one."
+  }
+}

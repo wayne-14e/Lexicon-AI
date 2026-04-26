@@ -7,7 +7,14 @@ CREATE TABLE IF NOT EXISTS users (
   picture TEXT,
   tokens INTEGER DEFAULT 0,
   "lastDailyAwardDate" TEXT,
-  streak INTEGER DEFAULT 1
+  streak INTEGER DEFAULT 1,
+  words_generated INTEGER DEFAULT 0,
+  narratives_used INTEGER DEFAULT 0,
+  document_uploads_used INTEGER DEFAULT 0,
+  lexy_prompts_used INTEGER DEFAULT 0,
+  ai_refills_used INTEGER DEFAULT 0,
+  tts_used INTEGER DEFAULT 0,
+  limits_last_reset_date TEXT
 );
 
 -- Sync tokens with actual token count from token_transactions

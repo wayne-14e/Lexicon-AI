@@ -162,6 +162,36 @@ export const geminiService = {
     }
   },
 
+  extractWordsFromFile: async (base64Data: string, mimeType: string): Promise<string[]> => {
+    const response = await withKeyRotation((ai, modelName) =>
+      ai.models.generateContent({
+        model: modelName,
+        contents: [
+          {
+            parts: [
+              { inlineData: { data: base64Data, mimeType } },
+              { text: "Extract ONLY the words or vocabulary terms from this document that are meant to be learned or reviewed. Ignore standard boilerplate text, instructions, and numbers. Return them as a JSON array of strings." }
+            ]
+          }
+        ],
+        config: {
+          responseMimeType: "application/json",
+          responseSchema: {
+            type: Type.ARRAY,
+            items: { type: Type.STRING }
+          }
+        }
+      })
+    );
+
+    try {
+      return JSON.parse(response.text || '[]');
+    } catch (e) {
+      console.error("Failed to parse AI response for document extraction", e);
+      return [];
+    }
+  },
+
   generateVocabEntries: async (wordList: string[]): Promise<Partial<VocabEntry>[]> => {
     const response = await withKeyRotation((ai, modelName) =>
       ai.models.generateContent({

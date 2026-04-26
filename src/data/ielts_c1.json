@@ -1,0 +1,2008 @@
+{
+  "entries": [
+    {
+      "id": "226a2de0-c214-4be1-9839-3b0cc7089ec1",
+      "progress": 0,
+      "word": "abolish",
+      "partOfSpeech": "verb",
+      "meaning": "To formally put an end to a law, system, or institution.",
+      "synonyms": "eliminate, eradicate, repeal",
+      "antonyms": "establish, create, introduce",
+      "sentence": "Several members of the committee argued that the outdated regulation should be abolished entirely."
+    },
+    {
+      "id": "5eacc376-f576-47b4-b205-361883126aca",
+      "progress": 0,
+      "word": "abstain",
+      "partOfSpeech": "verb",
+      "meaning": "To restrain oneself from doing or indulging in something; to formally decline to vote.",
+      "synonyms": "refrain, withhold, desist",
+      "antonyms": "participate, indulge, engage",
+      "sentence": "Three members of the panel chose to abstain from the vote on ethical grounds."
+    },
+    {
+      "id": "99fd2d81-05d4-438e-be57-bbdfa0ec13ea",
+      "progress": 0,
+      "word": "accountability",
+      "partOfSpeech": "noun",
+      "meaning": "The fact or condition of being responsible to others for one's actions.",
+      "synonyms": "responsibility, answerability, transparency",
+      "antonyms": "irresponsibility, impunity, opacity",
+      "sentence": "A lack of accountability within the institution allowed the misconduct to continue undetected for years."
+    },
+    {
+      "id": "1fb1c2ac-cec6-4c5b-a13d-3685913579a0",
+      "progress": 0,
+      "word": "accumulate",
+      "partOfSpeech": "verb",
+      "meaning": "To gradually gather or acquire an increasing number or quantity of something.",
+      "synonyms": "amass, gather, build up",
+      "antonyms": "disperse, distribute, deplete",
+      "sentence": "The organisation has accumulated a vast archive of data over the past three decades."
+    },
+    {
+      "id": "8c6ea185-220a-4ebb-b202-12021bb74781",
+      "progress": 0,
+      "word": "acute",
+      "partOfSpeech": "adjective",
+      "meaning": "Present to a severe or intense degree; having a perceptive understanding.",
+      "synonyms": "severe, intense, perceptive",
+      "antonyms": "mild, dull, superficial",
+      "sentence": "The acute shortage of skilled researchers has become one of the field's most pressing concerns."
+    },
+    {
+      "id": "ef8cda41-6a13-4598-8082-a85f2f92b313",
+      "progress": 0,
+      "word": "advocate",
+      "partOfSpeech": "verb",
+      "meaning": "To publicly recommend or support a cause, policy, or way of life.",
+      "synonyms": "support, champion, promote",
+      "antonyms": "oppose, condemn, discourage",
+      "sentence": "She has long advocated for greater transparency in the funding of academic research."
+    },
+    {
+      "id": "a1c59d08-39ec-442d-a6ac-f9ce969c04fc",
+      "progress": 0,
+      "word": "ambiguous",
+      "partOfSpeech": "adjective",
+      "meaning": "Open to more than one interpretation; not clearly defined.",
+      "synonyms": "unclear, vague, equivocal",
+      "antonyms": "clear, explicit, unambiguous",
+      "sentence": "The wording of the clause was deliberately ambiguous, allowing for multiple interpretations."
+    },
+    {
+      "id": "b827cff7-2454-4f75-9a65-6f63cd0466a1",
+      "progress": 0,
+      "word": "ambivalent",
+      "partOfSpeech": "adjective",
+      "meaning": "Having mixed or contradictory feelings about something.",
+      "synonyms": "uncertain, conflicted, undecided",
+      "antonyms": "certain, decisive, committed",
+      "sentence": "He remained ambivalent about the proposed reform, seeing merit in both sides of the argument."
+    },
+    {
+      "id": "f045ad88-43e0-464c-8c9a-4669715fb9c1",
+      "progress": 0,
+      "word": "anticipate",
+      "partOfSpeech": "verb",
+      "meaning": "To expect or predict something; to act in advance of a future event.",
+      "synonyms": "expect, foresee, predict",
+      "antonyms": "react, respond, follow",
+      "sentence": "The committee failed to anticipate the social consequences of the policy change."
+    },
+    {
+      "id": "459d4ffb-fc60-45e7-824b-2c96e9382cca",
+      "progress": 0,
+      "word": "articulate",
+      "partOfSpeech": "verb",
+      "meaning": "To express an idea or feeling clearly and effectively in words.",
+      "synonyms": "express, convey, communicate",
+      "antonyms": "mumble, obscure, suppress",
+      "sentence": "She was able to articulate the complexity of the issue in terms that a general audience could follow."
+    },
+    {
+      "id": "b063c03a-c5fe-4420-a18f-be92df7894bb",
+      "progress": 0,
+      "word": "assert",
+      "partOfSpeech": "verb",
+      "meaning": "To state a fact or belief confidently and forcefully.",
+      "synonyms": "declare, maintain, claim",
+      "antonyms": "deny, retract, concede",
+      "sentence": "The researcher asserted that the existing models were insufficient to explain the observed data."
+    },
+    {
+      "id": "fca2b6b8-a9a6-4a10-874b-c04a601a8228",
+      "progress": 0,
+      "word": "assumption",
+      "partOfSpeech": "noun",
+      "meaning": "A thing that is accepted as true without proof; a presupposition.",
+      "synonyms": "presupposition, premise, belief",
+      "antonyms": "certainty, fact, proof",
+      "sentence": "The entire argument rests on an assumption that has never been empirically tested."
+    },
+    {
+      "id": "847291fd-f365-4acc-993c-0c786ea0d646",
+      "progress": 0,
+      "word": "attribute",
+      "partOfSpeech": "verb",
+      "meaning": "To regard something as being caused by or belonging to something else.",
+      "synonyms": "ascribe, assign, credit",
+      "antonyms": "deny, dissociate, separate",
+      "sentence": "The decline in participation was attributed to a combination of structural and cultural factors."
+    },
+    {
+      "id": "5c220efc-e8aa-4c92-9e9f-1843b93c8d43",
+      "progress": 0,
+      "word": "authoritative",
+      "partOfSpeech": "adjective",
+      "meaning": "Reliable and accurate because produced by someone with expertise; commanding.",
+      "synonyms": "reliable, definitive, credible",
+      "antonyms": "unreliable, questionable, weak",
+      "sentence": "The most authoritative study on the subject was published by a team at Oxford in 2019."
+    },
+    {
+      "id": "03cf7d73-2f8b-498b-8b07-c7ad33339630",
+      "progress": 0,
+      "word": "autonomous",
+      "partOfSpeech": "adjective",
+      "meaning": "Having the freedom to act independently without external control.",
+      "synonyms": "independent, self-governing, sovereign",
+      "antonyms": "dependent, controlled, subordinate",
+      "sentence": "The newly autonomous region was granted the right to manage its own economic policy."
+    },
+    {
+      "id": "4a6ce71c-0e50-45af-8226-b678ac6b7eb3",
+      "progress": 0,
+      "word": "bias",
+      "partOfSpeech": "noun",
+      "meaning": "An unfair prejudice in favour of or against a person or group; a systematic error.",
+      "synonyms": "prejudice, partiality, distortion",
+      "antonyms": "fairness, objectivity, impartiality",
+      "sentence": "Cognitive bias can affect even the most carefully designed research methodology."
+    },
+    {
+      "id": "d44e16a1-d8e3-4366-8db7-85b205924a9c",
+      "progress": 0,
+      "word": "bleak",
+      "partOfSpeech": "adjective",
+      "meaning": "Offering little hope; exposed, barren, and inhospitable.",
+      "synonyms": "grim, desolate, hopeless",
+      "antonyms": "hopeful, promising, vibrant",
+      "sentence": "The economic outlook for the region appeared increasingly bleak following the closure of the facility."
+    },
+    {
+      "id": "15c1d36a-cdad-4c5a-8cdd-983ba2b03ddc",
+      "progress": 0,
+      "word": "catalyst",
+      "partOfSpeech": "noun",
+      "meaning": "A person or thing that precipitates an event or change.",
+      "synonyms": "trigger, stimulus, spark",
+      "antonyms": "deterrent, obstacle, hindrance",
+      "sentence": "The publication of the report acted as a catalyst for a wide-ranging policy review."
+    },
+    {
+      "id": "74471ee2-4f2e-4805-aea8-bd91fb2342cb",
+      "progress": 0,
+      "word": "circumvent",
+      "partOfSpeech": "verb",
+      "meaning": "To find a way around an obstacle or problem; to evade a law or restriction.",
+      "synonyms": "bypass, evade, sidestep",
+      "antonyms": "comply, follow, confront",
+      "sentence": "Some firms have attempted to circumvent the regulation through complex financial arrangements."
+    },
+    {
+      "id": "5ff75f8c-deb6-4a48-8053-66a57512142d",
+      "progress": 0,
+      "word": "coherent",
+      "partOfSpeech": "adjective",
+      "meaning": "Logical and consistent; forming a unified whole.",
+      "synonyms": "logical, consistent, unified",
+      "antonyms": "incoherent, inconsistent, contradictory",
+      "sentence": "The proposal lacked a coherent strategy for implementation."
+    },
+    {
+      "id": "5a6bce3f-02d5-4ea6-b863-adc48acb7a1f",
+      "progress": 0,
+      "word": "compelling",
+      "partOfSpeech": "adjective",
+      "meaning": "Evoking strong interest or admiration; impossible to resist.",
+      "synonyms": "persuasive, convincing, powerful",
+      "antonyms": "weak, unconvincing, uninspiring",
+      "sentence": "She presented a compelling case for restructuring the entire funding model."
+    },
+    {
+      "id": "b5b5dc5c-17de-4076-917d-e84b587501fe",
+      "progress": 0,
+      "word": "compliance",
+      "partOfSpeech": "noun",
+      "meaning": "The action of conforming to a rule, standard, or request.",
+      "synonyms": "conformity, adherence, observance",
+      "antonyms": "non-compliance, defiance, violation",
+      "sentence": "The new regulations require full compliance within six months of publication."
+    },
+    {
+      "id": "35c80321-1e93-4267-a5a2-f63507760ac3",
+      "progress": 0,
+      "word": "compromise",
+      "partOfSpeech": "verb",
+      "meaning": "To settle a dispute by mutual concession; to expose to risk.",
+      "synonyms": "negotiate, concede, settle",
+      "antonyms": "stand firm, refuse, protect",
+      "sentence": "Both parties were willing to compromise on secondary issues in order to reach a broader agreement."
+    },
+    {
+      "id": "9adf7842-02a5-48b0-bfa9-aef853ae399a",
+      "progress": 0,
+      "word": "conceive",
+      "partOfSpeech": "verb",
+      "meaning": "To form a plan or idea in the mind; to imagine.",
+      "synonyms": "devise, imagine, formulate",
+      "antonyms": "abandon, dismiss, forget",
+      "sentence": "The project was originally conceived as a short-term response to an immediate crisis."
+    },
+    {
+      "id": "32643f10-d687-4f3a-b054-ce2622ff6c39",
+      "progress": 0,
+      "word": "confront",
+      "partOfSpeech": "verb",
+      "meaning": "To face up to and deal with a difficult situation; to meet someone face to face.",
+      "synonyms": "face, address, tackle",
+      "antonyms": "avoid, evade, ignore",
+      "sentence": "The organisation finally had to confront the structural inequalities embedded in its processes."
+    },
+    {
+      "id": "a62552e4-e33c-4e5a-9307-70b7e6d272ce",
+      "progress": 0,
+      "word": "consensus",
+      "partOfSpeech": "noun",
+      "meaning": "General agreement among a group of people.",
+      "synonyms": "agreement, accord, unanimity",
+      "antonyms": "disagreement, division, conflict",
+      "sentence": "There is a growing scientific consensus that the current rate of change is unsustainable."
+    },
+    {
+      "id": "1c6d1d44-2d8c-4f6a-bbd1-bb16d82afc71",
+      "progress": 0,
+      "word": "constraint",
+      "partOfSpeech": "noun",
+      "meaning": "A limitation or restriction that prevents free action.",
+      "synonyms": "limitation, restriction, barrier",
+      "antonyms": "freedom, flexibility, option",
+      "sentence": "The researchers had to work within significant financial and methodological constraints."
+    },
+    {
+      "id": "ef3d7e86-4b09-4c90-9ac5-7a8d183a9d53",
+      "progress": 0,
+      "word": "contemplate",
+      "partOfSpeech": "verb",
+      "meaning": "To think deeply about something; to look steadily at.",
+      "synonyms": "reflect on, consider, ponder",
+      "antonyms": "ignore, dismiss, avoid",
+      "sentence": "She took time to contemplate the ethical implications before committing to the research direction."
+    },
+    {
+      "id": "177e7ed2-c967-4f91-8d64-4c48ef47dd7b",
+      "progress": 0,
+      "word": "contentious",
+      "partOfSpeech": "adjective",
+      "meaning": "Likely to cause argument or controversy.",
+      "synonyms": "controversial, disputed, divisive",
+      "antonyms": "uncontroversial, agreed, accepted",
+      "sentence": "The most contentious aspect of the proposal was the proposed redistribution of resources."
+    },
+    {
+      "id": "4383815d-7b05-4d87-a420-9600f86c8a0d",
+      "progress": 0,
+      "word": "contradict",
+      "partOfSpeech": "verb",
+      "meaning": "To assert the opposite of a statement made by someone; to be incompatible with.",
+      "synonyms": "deny, dispute, oppose",
+      "antonyms": "confirm, support, reinforce",
+      "sentence": "The new data directly contradicts the conclusions reached in the original study."
+    },
+    {
+      "id": "c78f5828-2e29-4f47-a931-87941d94d644",
+      "progress": 0,
+      "word": "conviction",
+      "partOfSpeech": "noun",
+      "meaning": "A firmly held belief or opinion; the act of finding someone guilty of a crime.",
+      "synonyms": "belief, certainty, principle",
+      "antonyms": "doubt, uncertainty, acquittal",
+      "sentence": "She spoke with absolute conviction, and the audience found it impossible not to be persuaded."
+    },
+    {
+      "id": "b9340b94-ad12-4911-bc9f-769f37aa568c",
+      "progress": 0,
+      "word": "correlate",
+      "partOfSpeech": "verb",
+      "meaning": "To have a mutual relationship or connection with something else.",
+      "synonyms": "relate, connect, correspond",
+      "antonyms": "diverge, conflict, separate",
+      "sentence": "Higher levels of education correlate with greater civic participation, though the relationship is complex."
+    },
+    {
+      "id": "65bab5b0-7290-4f4f-a8ad-19baab8415f0",
+      "progress": 0,
+      "word": "credibility",
+      "partOfSpeech": "noun",
+      "meaning": "The quality of being trusted and believed in.",
+      "synonyms": "trustworthiness, reliability, authority",
+      "antonyms": "dishonesty, doubt, questionability",
+      "sentence": "A series of errors in the published data seriously damaged the organisation's credibility."
+    },
+    {
+      "id": "30231ea2-ba00-463c-902d-d39d6864a426",
+      "progress": 0,
+      "word": "criteria",
+      "partOfSpeech": "noun",
+      "meaning": "Principles or standards by which something is judged.",
+      "synonyms": "standards, measures, benchmarks",
+      "antonyms": "N/A",
+      "sentence": "The criteria for eligibility were revised following a review of the original guidelines."
+    },
+    {
+      "id": "c5f67d30-fe6b-4ff7-b7fc-2c08aff71041",
+      "progress": 0,
+      "word": "critique",
+      "partOfSpeech": "noun",
+      "meaning": "A detailed analysis and assessment of something.",
+      "synonyms": "analysis, evaluation, assessment",
+      "antonyms": "praise, endorsement, acceptance",
+      "sentence": "The paper received a thorough critique from the editorial board before publication."
+    },
+    {
+      "id": "3c5b7a4b-381d-4405-8f09-b8a9dc5f7806",
+      "progress": 0,
+      "word": "crucial",
+      "partOfSpeech": "adjective",
+      "meaning": "Of decisive importance, especially in terms of success or failure.",
+      "synonyms": "vital, essential, pivotal",
+      "antonyms": "unimportant, trivial, marginal",
+      "sentence": "The ability to retain skilled staff is crucial to the long-term success of the programme."
+    },
+    {
+      "id": "57a49205-9e6f-4879-b88e-dc759df26e96",
+      "progress": 0,
+      "word": "deduce",
+      "partOfSpeech": "verb",
+      "meaning": "To arrive at a conclusion by reasoning from evidence.",
+      "synonyms": "infer, conclude, reason",
+      "antonyms": "assume, guess, speculate",
+      "sentence": "From the available data, it is possible to deduce that the intervention had a measurable effect."
+    },
+    {
+      "id": "e0548cce-af99-4299-bec1-d1557e0b362b",
+      "progress": 0,
+      "word": "deliberate",
+      "partOfSpeech": "adjective",
+      "meaning": "Done consciously and intentionally; careful and unhurried.",
+      "synonyms": "intentional, calculated, considered",
+      "antonyms": "accidental, impulsive, careless",
+      "sentence": "The omission of the key finding from the summary appeared to be entirely deliberate."
+    },
+    {
+      "id": "4c44af3a-8cfc-45f9-85e7-014888dbd4f9",
+      "progress": 0,
+      "word": "derive",
+      "partOfSpeech": "verb",
+      "meaning": "To obtain something from a specified source; to reach a conclusion by reasoning.",
+      "synonyms": "obtain, draw, extract",
+      "antonyms": "give, contribute, provide",
+      "sentence": "Much of the framework was derived from research conducted in the 1990s."
+    },
+    {
+      "id": "6de967a0-1753-4440-88a7-b0f9550bb77b",
+      "progress": 0,
+      "word": "deteriorate",
+      "partOfSpeech": "verb",
+      "meaning": "To become progressively worse.",
+      "synonyms": "worsen, decline, degrade",
+      "antonyms": "improve, recover, strengthen",
+      "sentence": "The situation deteriorated rapidly after the initial breakdown in negotiations."
+    },
+    {
+      "id": "d679b55a-dfc0-4cc2-83eb-995e0d502534",
+      "progress": 0,
+      "word": "dichotomy",
+      "partOfSpeech": "noun",
+      "meaning": "A division or contrast between two things that are opposite or completely different.",
+      "synonyms": "division, contrast, divide",
+      "antonyms": "unity, agreement, continuity",
+      "sentence": "There is a false dichotomy at the heart of the debate between economic growth and environmental protection."
+    },
+    {
+      "id": "27447fe0-cb55-4850-ba64-c1d62687b15e",
+      "progress": 0,
+      "word": "dilemma",
+      "partOfSpeech": "noun",
+      "meaning": "A situation in which a choice must be made between two equally undesirable alternatives.",
+      "synonyms": "quandary, predicament, difficulty",
+      "antonyms": "certainty, solution, clarity",
+      "sentence": "The ethical dilemma at the centre of the study was never fully resolved."
+    },
+    {
+      "id": "cf764cfe-052d-49ca-9270-8d0897c764c9",
+      "progress": 0,
+      "word": "discrepancy",
+      "partOfSpeech": "noun",
+      "meaning": "A lack of compatibility or similarity between two or more facts.",
+      "synonyms": "inconsistency, difference, variation",
+      "antonyms": "consistency, agreement, correspondence",
+      "sentence": "There was a notable discrepancy between the reported figures and those recorded independently."
+    },
+    {
+      "id": "c17493c3-6597-4909-a3f0-ea70de592d60",
+      "progress": 0,
+      "word": "disrupt",
+      "partOfSpeech": "verb",
+      "meaning": "To interrupt and prevent something from continuing in the usual way.",
+      "synonyms": "disturb, interrupt, unsettle",
+      "antonyms": "maintain, continue, stabilise",
+      "sentence": "New technology has the potential to fundamentally disrupt established industries."
+    },
+    {
+      "id": "4c446a14-4a97-4be3-8a7a-a75688db9bcf",
+      "progress": 0,
+      "word": "distinctive",
+      "partOfSpeech": "adjective",
+      "meaning": "Characteristic of one person or thing and so serving to distinguish them.",
+      "synonyms": "characteristic, unique, recognisable",
+      "antonyms": "ordinary, common, indistinct",
+      "sentence": "The study developed a distinctive methodological approach that has since been widely adopted."
+    },
+    {
+      "id": "d5db19c4-93ea-4bc7-82d0-de9d22cbdba6",
+      "progress": 0,
+      "word": "domain",
+      "partOfSpeech": "noun",
+      "meaning": "An area of territory or knowledge over which someone has control or influence.",
+      "synonyms": "field, sphere, area",
+      "antonyms": "N/A",
+      "sentence": "Her expertise spans several domains, including linguistics, cognitive science, and education."
+    },
+    {
+      "id": "38ffc33e-340b-4be4-b176-b9fdd95e8012",
+      "progress": 0,
+      "word": "dynamic",
+      "partOfSpeech": "noun",
+      "meaning": "A force that stimulates change or progress within a system or process.",
+      "synonyms": "force, process, interaction",
+      "antonyms": "stagnation, inertia",
+      "sentence": "The power dynamics within the organisation shifted significantly following the restructuring."
+    },
+    {
+      "id": "9a9e2d63-e46b-45f2-a2e2-6f8836ce1fec",
+      "progress": 0,
+      "word": "elaborate",
+      "partOfSpeech": "verb",
+      "meaning": "To add more detail or explanation to something.",
+      "synonyms": "expand, detail, develop",
+      "antonyms": "simplify, summarise, condense",
+      "sentence": "The author was invited to elaborate on the theoretical framework in the revised manuscript."
+    },
+    {
+      "id": "0bebc4c6-5a03-479e-b762-49a428a895f3",
+      "progress": 0,
+      "word": "empirical",
+      "partOfSpeech": "adjective",
+      "meaning": "Based on observation or experience rather than theory or pure logic.",
+      "synonyms": "evidence-based, observational, experimental",
+      "antonyms": "theoretical, speculative, abstract",
+      "sentence": "The empirical evidence for the claim remains limited and contested."
+    },
+    {
+      "id": "08ab52bd-6fac-448f-8452-9adb2fc6cc65",
+      "progress": 0,
+      "word": "enforce",
+      "partOfSpeech": "verb",
+      "meaning": "To compel observance of or compliance with a law or rule.",
+      "synonyms": "implement, impose, apply",
+      "antonyms": "ignore, overlook, allow",
+      "sentence": "The authority lacks the resources to effectively enforce the existing regulations."
+    },
+    {
+      "id": "ea328852-badd-4810-aa34-f244fc68ff7f",
+      "progress": 0,
+      "word": "enumerate",
+      "partOfSpeech": "verb",
+      "meaning": "To mention a number of things one by one; to count items.",
+      "synonyms": "list, specify, itemise",
+      "antonyms": "generalise, overlook, summarise",
+      "sentence": "The researcher was asked to enumerate the specific conditions under which the results might not hold."
+    },
+    {
+      "id": "6341cd78-771c-4c60-b90b-2dd04f4cee46",
+      "progress": 0,
+      "word": "equilibrium",
+      "partOfSpeech": "noun",
+      "meaning": "A state of balance between opposing forces or influences.",
+      "synonyms": "balance, stability, poise",
+      "antonyms": "imbalance, instability, disruption",
+      "sentence": "The market eventually reached a new equilibrium following the initial period of volatility."
+    },
+    {
+      "id": "31ae8bcf-4539-449e-bc63-8527eb28612c",
+      "progress": 0,
+      "word": "ethical",
+      "partOfSpeech": "adjective",
+      "meaning": "Relating to moral principles that govern a person's behaviour.",
+      "synonyms": "moral, principled, responsible",
+      "antonyms": "unethical, immoral, irresponsible",
+      "sentence": "Several ethical questions were raised by the study's methodology that could not be easily resolved."
+    },
+    {
+      "id": "ce615f82-f28b-4047-845f-3e9a83631609",
+      "progress": 0,
+      "word": "evolve",
+      "partOfSpeech": "verb",
+      "meaning": "To develop gradually over time, especially into a more complex form.",
+      "synonyms": "develop, progress, transform",
+      "antonyms": "stagnate, regress, remain",
+      "sentence": "The regulatory framework has evolved significantly in response to technological change."
+    },
+    {
+      "id": "637a4437-f34b-4089-bb12-3c4667b734ea",
+      "progress": 0,
+      "word": "exacerbate",
+      "partOfSpeech": "verb",
+      "meaning": "To make a problem, bad situation, or negative feeling worse.",
+      "synonyms": "worsen, intensify, aggravate",
+      "antonyms": "alleviate, reduce, improve",
+      "sentence": "The funding cuts exacerbated an already serious shortage of trained personnel."
+    },
+    {
+      "id": "c2117b52-be50-47f7-b351-31eaceb7e969",
+      "progress": 0,
+      "word": "exploit",
+      "partOfSpeech": "verb",
+      "meaning": "To make full use of a resource; to use someone unfairly for personal gain.",
+      "synonyms": "utilise, take advantage of, harness",
+      "antonyms": "protect, neglect, ignore",
+      "sentence": "Critics argued that the policy allowed corporations to exploit regulatory gaps."
+    },
+    {
+      "id": "cc777208-6b77-47fc-af9e-4eeefc051601",
+      "progress": 0,
+      "word": "explicit",
+      "partOfSpeech": "adjective",
+      "meaning": "Stated clearly and in detail, leaving no room for confusion.",
+      "synonyms": "clear, direct, unambiguous",
+      "antonyms": "implicit, vague, ambiguous",
+      "sentence": "The report should include an explicit statement of the assumptions underlying the model."
+    },
+    {
+      "id": "2a3daa10-e613-4469-b014-43414801403d",
+      "progress": 0,
+      "word": "facilitate",
+      "partOfSpeech": "verb",
+      "meaning": "To make a process or action easier; to help bring about.",
+      "synonyms": "enable, assist, support",
+      "antonyms": "hinder, obstruct, prevent",
+      "sentence": "The new framework was designed to facilitate greater cooperation between departments."
+    },
+    {
+      "id": "79c320a5-7cbd-4e3c-af2b-b56b15c8b5d7",
+      "progress": 0,
+      "word": "fluctuate",
+      "partOfSpeech": "verb",
+      "meaning": "To rise and fall irregularly in number or amount.",
+      "synonyms": "vary, oscillate, shift",
+      "antonyms": "stabilise, remain constant",
+      "sentence": "Levels of public trust tend to fluctuate in response to major political events."
+    },
+    {
+      "id": "45d3ce79-ba4d-46f3-a88a-d088a85faec3",
+      "progress": 0,
+      "word": "foster",
+      "partOfSpeech": "verb",
+      "meaning": "To encourage the development of something; to bring up and care for a child.",
+      "synonyms": "promote, nurture, cultivate",
+      "antonyms": "suppress, hinder, neglect",
+      "sentence": "The programme was designed to foster a culture of innovation within the organisation."
+    },
+    {
+      "id": "9be4ee2a-de18-40e6-a465-f3c817c3bf13",
+      "progress": 0,
+      "word": "framework",
+      "partOfSpeech": "noun",
+      "meaning": "A basic structure or system underlying a concept or organisation.",
+      "synonyms": "structure, system, model",
+      "antonyms": "N/A",
+      "sentence": "The theoretical framework underpinning the study was drawn from three different disciplines."
+    },
+    {
+      "id": "4bcc0c87-f5d7-4aa9-baf8-75a876ced42e",
+      "progress": 0,
+      "word": "fundamental",
+      "partOfSpeech": "adjective",
+      "meaning": "Forming a necessary base or core; of central importance.",
+      "synonyms": "essential, basic, core",
+      "antonyms": "secondary, peripheral, trivial",
+      "sentence": "The reform addressed a fundamental flaw in the way the system had been designed."
+    },
+    {
+      "id": "625ecd69-8b03-40fe-a0e6-e1c355dc26ea",
+      "progress": 0,
+      "word": "generate",
+      "partOfSpeech": "verb",
+      "meaning": "To cause something to arise or come about; to produce.",
+      "synonyms": "produce, create, yield",
+      "antonyms": "consume, absorb, destroy",
+      "sentence": "The pilot programme generated a significant body of qualitative data."
+    },
+    {
+      "id": "aee787b5-8a24-4793-898d-3204686d2eb8",
+      "progress": 0,
+      "word": "hierarchy",
+      "partOfSpeech": "noun",
+      "meaning": "A system in which members are ranked according to status or authority.",
+      "synonyms": "ranking, structure, order",
+      "antonyms": "equality, flatness, anarchy",
+      "sentence": "The rigid hierarchy within the institution made it difficult to implement rapid change."
+    },
+    {
+      "id": "9a9b0dc4-774f-4430-b1a7-50905684c9bf",
+      "progress": 0,
+      "word": "hypothesis",
+      "partOfSpeech": "noun",
+      "meaning": "A proposed explanation for a phenomenon, made as a basis for further investigation.",
+      "synonyms": "theory, proposition, assumption",
+      "antonyms": "fact, proof, certainty",
+      "sentence": "The study was designed to test the hypothesis that early intervention produces better long-term outcomes."
+    },
+    {
+      "id": "b9e6e65e-caf2-44f2-a38b-b8f176a97366",
+      "progress": 0,
+      "word": "ideology",
+      "partOfSpeech": "noun",
+      "meaning": "A system of ideas and ideals forming the basis of a political or economic theory.",
+      "synonyms": "belief system, doctrine, worldview",
+      "antonyms": "pragmatism, agnosticism, openness",
+      "sentence": "The conflict between the two factions was rooted in deep ideological differences."
+    },
+    {
+      "id": "6d698e69-439d-457d-8b05-a363462de9db",
+      "progress": 0,
+      "word": "implicit",
+      "partOfSpeech": "adjective",
+      "meaning": "Suggested though not directly expressed; absolute and unquestioning.",
+      "synonyms": "implied, indirect, unstated",
+      "antonyms": "explicit, direct, stated",
+      "sentence": "There is an implicit assumption in the argument that all participants have equal access to resources."
+    },
+    {
+      "id": "59b04cf4-5561-4d52-b652-b7c537685c44",
+      "progress": 0,
+      "word": "incompatible",
+      "partOfSpeech": "adjective",
+      "meaning": "So different in nature as to be incapable of coexisting or being used together.",
+      "synonyms": "conflicting, irreconcilable, inconsistent",
+      "antonyms": "compatible, harmonious, consistent",
+      "sentence": "The two systems proved to be fundamentally incompatible at the technical level."
+    },
+    {
+      "id": "246c5c0f-4efe-4850-9720-9b73fe96905e",
+      "progress": 0,
+      "word": "indispensable",
+      "partOfSpeech": "adjective",
+      "meaning": "Absolutely necessary and impossible to be without.",
+      "synonyms": "essential, vital, necessary",
+      "antonyms": "unnecessary, dispensable, optional",
+      "sentence": "Peer review remains an indispensable part of the process of maintaining academic standards."
+    },
+    {
+      "id": "eebb652f-3233-49f5-b963-6c65be324a50",
+      "progress": 0,
+      "word": "inevitable",
+      "partOfSpeech": "adjective",
+      "meaning": "Certain to happen; unable to be avoided or prevented.",
+      "synonyms": "unavoidable, inescapable, certain",
+      "antonyms": "avoidable, preventable, uncertain",
+      "sentence": "Some degree of disruption appeared to be inevitable given the scale of the proposed changes."
+    },
+    {
+      "id": "a4a28799-f854-4be1-8f2b-0601fc93fb84",
+      "progress": 0,
+      "word": "infer",
+      "partOfSpeech": "verb",
+      "meaning": "To deduce or conclude from evidence rather than from explicit statements.",
+      "synonyms": "deduce, conclude, reason",
+      "antonyms": "assume, guess, state directly",
+      "sentence": "From the pattern of results, one can reasonably infer a causal relationship between the two variables."
+    },
+    {
+      "id": "f64d62c5-5152-4d80-95bd-65bfa8ca069b",
+      "progress": 0,
+      "word": "infrastructure",
+      "partOfSpeech": "noun",
+      "meaning": "The basic physical and organisational structures needed for a society to function.",
+      "synonyms": "system, framework, facilities",
+      "antonyms": "N/A",
+      "sentence": "Investment in digital infrastructure has become a priority for governments across the region."
+    },
+    {
+      "id": "7fab58c4-ec4d-4738-a194-556db4dc4296",
+      "progress": 0,
+      "word": "inherent",
+      "partOfSpeech": "adjective",
+      "meaning": "Existing as a permanent and inseparable element of something.",
+      "synonyms": "intrinsic, built-in, fundamental",
+      "antonyms": "extrinsic, external, added",
+      "sentence": "There are inherent limitations in any study that relies exclusively on self-reported data."
+    },
+    {
+      "id": "277d1dab-1f32-4615-a36c-4e9f3bb8daff",
+      "progress": 0,
+      "word": "innovation",
+      "partOfSpeech": "noun",
+      "meaning": "The introduction of new methods, ideas, or products.",
+      "synonyms": "invention, advancement, novelty",
+      "antonyms": "stagnation, tradition, conservation",
+      "sentence": "The pace of innovation in the sector has outstripped the capacity of regulators to respond."
+    },
+    {
+      "id": "18a192ab-abd6-4efa-b518-33de1f3b6a19",
+      "progress": 0,
+      "word": "integrity",
+      "partOfSpeech": "noun",
+      "meaning": "The quality of being honest and having strong moral principles; the state of being whole.",
+      "synonyms": "honesty, principle, wholeness",
+      "antonyms": "dishonesty, corruption, fragmentation",
+      "sentence": "The integrity of the data was called into question after a technical error was discovered."
+    },
+    {
+      "id": "e9792098-4655-4659-95c7-51d24f9f1d21",
+      "progress": 0,
+      "word": "intervene",
+      "partOfSpeech": "verb",
+      "meaning": "To come between so as to prevent or alter a result; to take part in something.",
+      "synonyms": "intercede, step in, mediate",
+      "antonyms": "withdraw, stay out, ignore",
+      "sentence": "The government chose not to intervene in the dispute, citing concerns about institutional independence."
+    },
+    {
+      "id": "0cae9460-f8bd-4a22-aa15-aac2a6b6f774",
+      "progress": 0,
+      "word": "intrinsic",
+      "partOfSpeech": "adjective",
+      "meaning": "Belonging naturally to something; essential.",
+      "synonyms": "inherent, fundamental, natural",
+      "antonyms": "extrinsic, added, external",
+      "sentence": "The intrinsic value of the research lies not in its immediate applications but in the questions it raises."
+    },
+    {
+      "id": "ab5e44cc-0f21-414b-a646-0a82a9269ab6",
+      "progress": 0,
+      "word": "invoke",
+      "partOfSpeech": "verb",
+      "meaning": "To call on a law or rule to support one's case; to summon a feeling or memory.",
+      "synonyms": "cite, appeal to, call upon",
+      "antonyms": "ignore, dismiss, waive",
+      "sentence": "The committee invoked an emergency clause to accelerate the review process."
+    },
+    {
+      "id": "40f944db-32dc-4fe3-b49a-898fac407a21",
+      "progress": 0,
+      "word": "justify",
+      "partOfSpeech": "verb",
+      "meaning": "To show or prove to be right or reasonable.",
+      "synonyms": "defend, support, vindicate",
+      "antonyms": "condemn, oppose, refute",
+      "sentence": "The research team was asked to justify the choice of methodology before proceeding."
+    },
+    {
+      "id": "c28945d3-b0ce-4079-bf0f-0a64b049b308",
+      "progress": 0,
+      "word": "legitimate",
+      "partOfSpeech": "adjective",
+      "meaning": "Conforming to the law or to rules; able to be defended with logic or justification.",
+      "synonyms": "valid, lawful, justified",
+      "antonyms": "illegitimate, unlawful, unjustified",
+      "sentence": "There are legitimate concerns about the long-term sustainability of the current model."
+    },
+    {
+      "id": "9508f00e-d24c-443c-9569-97d56f820e14",
+      "progress": 0,
+      "word": "leverage",
+      "partOfSpeech": "noun",
+      "meaning": "The power to influence a situation; a mechanical advantage.",
+      "synonyms": "influence, advantage, power",
+      "antonyms": "powerlessness, weakness, disadvantage",
+      "sentence": "The organisation used its position to leverage greater commitment from partner institutions."
+    },
+    {
+      "id": "af78d8f9-fb30-4802-83d0-f743d891d5dd",
+      "progress": 0,
+      "word": "liable",
+      "partOfSpeech": "adjective",
+      "meaning": "Responsible by law; likely to do or likely to experience something.",
+      "synonyms": "responsible, accountable, prone",
+      "antonyms": "exempt, unaccountable, unlikely",
+      "sentence": "The institution may be held liable if it fails to meet the required standard of care."
+    },
+    {
+      "id": "ce3b6005-1e7c-43b2-92fd-02605a938ca0",
+      "progress": 0,
+      "word": "marginalise",
+      "partOfSpeech": "verb",
+      "meaning": "To treat someone as unimportant or powerless; to push to the edge of a group.",
+      "synonyms": "exclude, sideline, isolate",
+      "antonyms": "include, empower, integrate",
+      "sentence": "The policy was criticised for its tendency to marginalise communities that lacked political representation."
+    },
+    {
+      "id": "e52fccc5-ab1b-4d13-825d-0c4b695c2e85",
+      "progress": 0,
+      "word": "mechanism",
+      "partOfSpeech": "noun",
+      "meaning": "A process or system by which something takes place; a part of a machine.",
+      "synonyms": "process, system, means",
+      "antonyms": "N/A",
+      "sentence": "The report recommended introducing a formal mechanism for monitoring compliance."
+    },
+    {
+      "id": "cb9076f7-9001-4b09-a5c8-50026e8536ab",
+      "progress": 0,
+      "word": "merit",
+      "partOfSpeech": "noun",
+      "meaning": "The quality of being particularly good or worthy; a positive feature.",
+      "synonyms": "virtue, value, worth",
+      "antonyms": "flaw, weakness, demerit",
+      "sentence": "The proposal has considerable merit, though several practical concerns remain unresolved."
+    },
+    {
+      "id": "9be8ca06-0932-4917-b63b-219b4009137d",
+      "progress": 0,
+      "word": "methodology",
+      "partOfSpeech": "noun",
+      "meaning": "A system of methods used in a particular area of study or activity.",
+      "synonyms": "approach, procedure, framework",
+      "antonyms": "N/A",
+      "sentence": "The study's methodology has been praised for its rigour and transparency."
+    },
+    {
+      "id": "f606aa04-d0f4-44be-9c65-65e0d0cdc827",
+      "progress": 0,
+      "word": "mitigate",
+      "partOfSpeech": "verb",
+      "meaning": "To lessen the severity, seriousness, or painfulness of something.",
+      "synonyms": "reduce, alleviate, diminish",
+      "antonyms": "worsen, exacerbate, intensify",
+      "sentence": "Measures were introduced to mitigate the environmental impact of the construction project."
+    },
+    {
+      "id": "2f821aec-cc2c-4cc5-bbeb-84dd436edb08",
+      "progress": 0,
+      "word": "nuance",
+      "partOfSpeech": "noun",
+      "meaning": "A subtle difference in meaning, expression, or understanding.",
+      "synonyms": "subtlety, shade, distinction",
+      "antonyms": "obviousness, bluntness, simplicity",
+      "sentence": "The analysis fails to capture the nuances of how different communities experience the policy."
+    },
+    {
+      "id": "01ea04a8-595a-4412-9575-c8abf4193672",
+      "progress": 0,
+      "word": "objective",
+      "partOfSpeech": "adjective",
+      "meaning": "Not influenced by personal feelings or opinions; fair and unbiased.",
+      "synonyms": "impartial, unbiased, neutral",
+      "antonyms": "subjective, biased, partial",
+      "sentence": "The aim of the review was to provide an objective assessment of the available evidence."
+    },
+    {
+      "id": "f99f642d-c91f-4a6b-a937-2e3404e5e517",
+      "progress": 0,
+      "word": "oblige",
+      "partOfSpeech": "verb",
+      "meaning": "To make someone legally or morally bound to do something; to do a favour.",
+      "synonyms": "compel, require, bind",
+      "antonyms": "free, release, excuse",
+      "sentence": "The new regulation obliges all institutions to publish an annual transparency report."
+    },
+    {
+      "id": "2910b4b9-8aaa-4f16-9447-aa6ef7a75200",
+      "progress": 0,
+      "word": "obsolete",
+      "partOfSpeech": "adjective",
+      "meaning": "No longer produced or used; out of date.",
+      "synonyms": "outdated, redundant, archaic",
+      "antonyms": "current, modern, relevant",
+      "sentence": "The existing classification system has become obsolete in light of recent discoveries."
+    },
+    {
+      "id": "ce0149dd-3f28-44a1-b3b0-e02b872152bd",
+      "progress": 0,
+      "word": "overlook",
+      "partOfSpeech": "verb",
+      "meaning": "To fail to notice something; to ignore a fault or bad behaviour.",
+      "synonyms": "miss, disregard, ignore",
+      "antonyms": "notice, address, confront",
+      "sentence": "The committee appeared to overlook a critical flaw in the methodology of the supporting study."
+    },
+    {
+      "id": "04a04066-6c83-40a6-a3f2-673e492357b4",
+      "progress": 0,
+      "word": "paradigm",
+      "partOfSpeech": "noun",
+      "meaning": "A typical example or pattern; a set of assumptions that define a field.",
+      "synonyms": "model, framework, pattern",
+      "antonyms": "anomaly, exception, deviation",
+      "sentence": "The research represents a genuine paradigm shift in how the field approaches the problem."
+    },
+    {
+      "id": "9a9e1d3a-19cf-4640-926c-7debf4b6360a",
+      "progress": 0,
+      "word": "perception",
+      "partOfSpeech": "noun",
+      "meaning": "The way in which something is understood or interpreted; the ability to sense.",
+      "synonyms": "understanding, impression, view",
+      "antonyms": "reality, fact, misunderstanding",
+      "sentence": "Public perception of the organisation changed dramatically following the publication of the report."
+    },
+    {
+      "id": "ef8676ea-7dbe-406c-9809-955ce02bd0ce",
+      "progress": 0,
+      "word": "persist",
+      "partOfSpeech": "verb",
+      "meaning": "To continue firmly in a course of action despite difficulty.",
+      "synonyms": "continue, endure, persevere",
+      "antonyms": "give up, cease, abandon",
+      "sentence": "The team persisted with the original approach despite significant external pressure to change it."
+    },
+    {
+      "id": "184bdc90-66b1-4d61-9044-eaac842fe819",
+      "progress": 0,
+      "word": "perspective",
+      "partOfSpeech": "noun",
+      "meaning": "A particular way of viewing things, depending on one's experience or values.",
+      "synonyms": "viewpoint, standpoint, outlook",
+      "antonyms": "N/A",
+      "sentence": "The findings look quite different depending on the theoretical perspective you bring to the analysis."
+    },
+    {
+      "id": "804eac08-b4ec-499f-ab2d-352926d56e2a",
+      "progress": 0,
+      "word": "pertinent",
+      "partOfSpeech": "adjective",
+      "meaning": "Relevant or applicable to a particular matter.",
+      "synonyms": "relevant, applicable, appropriate",
+      "antonyms": "irrelevant, tangential, unrelated",
+      "sentence": "The reviewer asked whether all the cited studies were pertinent to the specific question being examined."
+    },
+    {
+      "id": "ef6deaf2-c306-4ea0-944f-8a010691cac9",
+      "progress": 0,
+      "word": "phenomenon",
+      "partOfSpeech": "noun",
+      "meaning": "A fact or situation that is observed to exist or happen.",
+      "synonyms": "occurrence, event, development",
+      "antonyms": "N/A",
+      "sentence": "The rapid growth of social media is arguably the defining cultural phenomenon of the current era."
+    },
+    {
+      "id": "76fe78be-0494-498a-a80c-523a19717cec",
+      "progress": 0,
+      "word": "pivotal",
+      "partOfSpeech": "adjective",
+      "meaning": "Of crucial importance in relation to the development of something.",
+      "synonyms": "crucial, decisive, critical",
+      "antonyms": "unimportant, minor, marginal",
+      "sentence": "This was a pivotal moment in the history of the organisation."
+    },
+    {
+      "id": "775d06ea-b32a-422f-b081-b3098629aee4",
+      "progress": 0,
+      "word": "plausible",
+      "partOfSpeech": "adjective",
+      "meaning": "Seeming reasonable or probable; apparently valid or acceptable.",
+      "synonyms": "credible, believable, reasonable",
+      "antonyms": "implausible, unlikely, unconvincing",
+      "sentence": "The most plausible explanation for the discrepancy is a systematic error in the original data collection."
+    },
+    {
+      "id": "786d2bb8-6df7-4a0c-9d58-eef25b0707bf",
+      "progress": 0,
+      "word": "precedent",
+      "partOfSpeech": "noun",
+      "meaning": "An earlier event that serves as an example or guide for future cases.",
+      "synonyms": "example, model, prior case",
+      "antonyms": "anomaly, exception, first occurrence",
+      "sentence": "The ruling set a legal precedent that will affect how similar cases are handled in future."
+    },
+    {
+      "id": "082d8ff9-e1ab-4775-9648-26075cef6441",
+      "progress": 0,
+      "word": "predominantly",
+      "partOfSpeech": "adverb",
+      "meaning": "Mainly or mostly; present as the strongest element.",
+      "synonyms": "mainly, largely, primarily",
+      "antonyms": "partially, slightly, rarely",
+      "sentence": "The research has been conducted predominantly in high-income countries, limiting its global applicability."
+    },
+    {
+      "id": "0603aa4c-fb38-42ca-b9b1-04c4aedd3506",
+      "progress": 0,
+      "word": "preliminary",
+      "partOfSpeech": "adjective",
+      "meaning": "Preceding or preparing for the main part or matter; introductory.",
+      "synonyms": "initial, introductory, preparatory",
+      "antonyms": "final, conclusive, definitive",
+      "sentence": "The preliminary findings were encouraging, but further research is required before any conclusions can be drawn."
+    },
+    {
+      "id": "5083941d-67c5-41b6-80ae-6b619cdd1f21",
+      "progress": 0,
+      "word": "profound",
+      "partOfSpeech": "adjective",
+      "meaning": "Having or showing great knowledge and insight; very great or intense.",
+      "synonyms": "deep, significant, far-reaching",
+      "antonyms": "shallow, superficial, minor",
+      "sentence": "The research has had a profound effect on how the condition is understood and treated."
+    },
+    {
+      "id": "51a9b222-a4ad-4bd7-af68-07c3c93889fe",
+      "progress": 0,
+      "word": "prohibit",
+      "partOfSpeech": "verb",
+      "meaning": "To formally forbid something by law or by an authority.",
+      "synonyms": "ban, forbid, prevent",
+      "antonyms": "allow, permit, authorise",
+      "sentence": "The regulation prohibits the release of certain categories of personal data without consent."
+    },
+    {
+      "id": "619d01ce-08cb-4d69-8543-05bd7cdefa86",
+      "progress": 0,
+      "word": "promote",
+      "partOfSpeech": "verb",
+      "meaning": "To further the progress of something; to raise someone to a higher position.",
+      "synonyms": "advance, support, advocate",
+      "antonyms": "hinder, demote, oppose",
+      "sentence": "The initiative was designed to promote greater equity in access to research funding."
+    },
+    {
+      "id": "54bb7192-f00f-42a8-af8a-f6cfc85441cd",
+      "progress": 0,
+      "word": "pursue",
+      "partOfSpeech": "verb",
+      "meaning": "To follow or chase someone or something; to continue a course of action.",
+      "synonyms": "follow, seek, continue",
+      "antonyms": "abandon, avoid, drop",
+      "sentence": "The institution has continued to pursue a policy of open access despite considerable opposition."
+    },
+    {
+      "id": "c6b47246-bdf3-4ace-baf7-e2ee18dd5f50",
+      "progress": 0,
+      "word": "rationale",
+      "partOfSpeech": "noun",
+      "meaning": "A set of reasons or a logical basis for a course of action.",
+      "synonyms": "reasoning, justification, basis",
+      "antonyms": "impulse, irrationality, whim",
+      "sentence": "The rationale for the decision was never clearly communicated to those affected by it."
+    },
+    {
+      "id": "0a78c9ef-8eeb-4c8d-93a6-cdca31694ccb",
+      "progress": 0,
+      "word": "refine",
+      "partOfSpeech": "verb",
+      "meaning": "To improve something by making small changes; to purify a substance.",
+      "synonyms": "improve, develop, polish",
+      "antonyms": "worsen, coarsen, neglect",
+      "sentence": "The model was continually refined as new data became available."
+    },
+    {
+      "id": "ad84c136-21e6-4249-997c-42460a13a77c",
+      "progress": 0,
+      "word": "reinforce",
+      "partOfSpeech": "verb",
+      "meaning": "To strengthen or support, especially by adding further evidence or material.",
+      "synonyms": "strengthen, support, consolidate",
+      "antonyms": "weaken, undermine, contradict",
+      "sentence": "The findings of the study reinforce the conclusions of the earlier meta-analysis."
+    },
+    {
+      "id": "92ee4eef-2a90-4a88-9194-7dcd120ff307",
+      "progress": 0,
+      "word": "reluctant",
+      "partOfSpeech": "adjective",
+      "meaning": "Unwilling and hesitant; disinclined.",
+      "synonyms": "hesitant, unwilling, resistant",
+      "antonyms": "willing, eager, enthusiastic",
+      "sentence": "The committee was reluctant to commit to a timeline without seeing the full data set."
+    },
+    {
+      "id": "defe764a-a722-4b94-a4c8-edcee207d8d9",
+      "progress": 0,
+      "word": "remedy",
+      "partOfSpeech": "noun",
+      "meaning": "A solution to a problem; a medicine or treatment.",
+      "synonyms": "solution, cure, fix",
+      "antonyms": "problem, ailment, cause",
+      "sentence": "The report identified several possible remedies but stopped short of recommending a specific course of action."
+    },
+    {
+      "id": "f04c07ad-5f44-4141-95ee-0745917a6302",
+      "progress": 0,
+      "word": "rigorous",
+      "partOfSpeech": "adjective",
+      "meaning": "Extremely thorough and careful; not allowing deviation.",
+      "synonyms": "thorough, precise, meticulous",
+      "antonyms": "lax, careless, superficial",
+      "sentence": "The study was praised for its rigorous approach to data collection and analysis."
+    },
+    {
+      "id": "d83d2f7f-1a7a-4a03-a88c-d7afbb39134a",
+      "progress": 0,
+      "word": "scrutinise",
+      "partOfSpeech": "verb",
+      "meaning": "To examine or inspect something closely and thoroughly.",
+      "synonyms": "examine, inspect, analyse",
+      "antonyms": "overlook, ignore, skim",
+      "sentence": "The methodology was rigorously scrutinised before the paper was accepted for publication."
+    },
+    {
+      "id": "528678c2-9381-4f96-bad6-bfb81cd41f34",
+      "progress": 0,
+      "word": "sophisticated",
+      "partOfSpeech": "adjective",
+      "meaning": "Having a refined understanding of something; highly developed.",
+      "synonyms": "complex, advanced, nuanced",
+      "antonyms": "simple, basic, unsophisticated",
+      "sentence": "The analysis requires a sophisticated understanding of both the economic and social dimensions."
+    },
+    {
+      "id": "57232a0a-bb01-4b52-a77b-3692e881ce6e",
+      "progress": 0,
+      "word": "speculate",
+      "partOfSpeech": "verb",
+      "meaning": "To form a theory without firm evidence; to invest in risky financial activities.",
+      "synonyms": "theorise, conjecture, hypothesise",
+      "antonyms": "know, confirm, prove",
+      "sentence": "It would be unwise to speculate about the cause without reviewing the full data set."
+    },
+    {
+      "id": "527f4b12-4267-4e7b-b56f-deca7f904340",
+      "progress": 0,
+      "word": "subvert",
+      "partOfSpeech": "verb",
+      "meaning": "To undermine the power and authority of an established system or institution.",
+      "synonyms": "undermine, destabilise, sabotage",
+      "antonyms": "support, reinforce, uphold",
+      "sentence": "The strategy appeared designed to subvert the existing mechanisms for public accountability."
+    },
+    {
+      "id": "594310db-a612-4149-810b-6f53185b97b5",
+      "progress": 0,
+      "word": "susceptible",
+      "partOfSpeech": "adjective",
+      "meaning": "Likely to be influenced by or to suffer from something.",
+      "synonyms": "vulnerable, prone, sensitive",
+      "antonyms": "resistant, immune, protected",
+      "sentence": "Younger institutions are often more susceptible to reputational damage from high-profile failures."
+    },
+    {
+      "id": "1cb6fee4-6938-4c77-97c0-1a3f3a5d45dd",
+      "progress": 0,
+      "word": "sustainable",
+      "partOfSpeech": "adjective",
+      "meaning": "Able to be maintained at a certain rate or level without depleting resources.",
+      "synonyms": "viable, enduring, renewable",
+      "antonyms": "unsustainable, destructive, finite",
+      "sentence": "The model is only sustainable in the long term if it attracts consistent external funding."
+    },
+    {
+      "id": "36e1aeee-ea62-4930-bb80-fce86d6aab75",
+      "progress": 0,
+      "word": "synthesise",
+      "partOfSpeech": "verb",
+      "meaning": "To combine elements to form a connected whole; to produce by chemical synthesis.",
+      "synonyms": "combine, integrate, merge",
+      "antonyms": "separate, divide, analyse",
+      "sentence": "The review attempts to synthesise findings from over two hundred studies published in the last decade."
+    },
+    {
+      "id": "11bcf6fa-1d58-43b9-a383-8788409b0c51",
+      "progress": 0,
+      "word": "tension",
+      "partOfSpeech": "noun",
+      "meaning": "A state of mental or emotional strain; a strained relationship between groups.",
+      "synonyms": "conflict, strain, friction",
+      "antonyms": "harmony, agreement, ease",
+      "sentence": "There is a persistent tension between the need for transparency and the protection of personal data."
+    },
+    {
+      "id": "f2aa8536-0016-45bf-8e25-a7f414ebb435",
+      "progress": 0,
+      "word": "theoretical",
+      "partOfSpeech": "adjective",
+      "meaning": "Concerned with or involving theory rather than practical application.",
+      "synonyms": "abstract, conceptual, academic",
+      "antonyms": "practical, applied, empirical",
+      "sentence": "The paper has considerable theoretical value but its practical implications are less clear."
+    },
+    {
+      "id": "8316691b-ed7f-467b-b2e0-b56a79977b8e",
+      "progress": 0,
+      "word": "transparent",
+      "partOfSpeech": "adjective",
+      "meaning": "Open and honest; easily seen through.",
+      "synonyms": "open, clear, honest",
+      "antonyms": "opaque, secretive, hidden",
+      "sentence": "The organisation committed to being more transparent in how it allocates its research budget."
+    },
+    {
+      "id": "3dfdcd4d-0c73-47e8-b8bd-be2bf3b86a24",
+      "progress": 0,
+      "word": "undermine",
+      "partOfSpeech": "verb",
+      "meaning": "To lessen the effectiveness, power, or ability of something gradually.",
+      "synonyms": "weaken, erode, subvert",
+      "antonyms": "strengthen, support, reinforce",
+      "sentence": "The series of contradictions in the report served to undermine its overall credibility."
+    },
+    {
+      "id": "067a17f0-d16f-4bf4-b229-0a6ce0feb1bd",
+      "progress": 0,
+      "word": "unprecedented",
+      "partOfSpeech": "adjective",
+      "meaning": "Never done or known before.",
+      "synonyms": "unparalleled, exceptional, novel",
+      "antonyms": "ordinary, common, familiar",
+      "sentence": "The scale of the crisis was unprecedented and required an entirely new response framework."
+    },
+    {
+      "id": "b68328f7-37ee-49d0-842e-0b3ae37a71ec",
+      "progress": 0,
+      "word": "validate",
+      "partOfSpeech": "verb",
+      "meaning": "To check or prove the validity or accuracy of something.",
+      "synonyms": "confirm, verify, support",
+      "antonyms": "invalidate, disprove, refute",
+      "sentence": "The model must be validated against real-world data before it can be used for predictive purposes."
+    },
+    {
+      "id": "c2d8adbb-7636-491b-8f0a-ab951f1dd45f",
+      "progress": 0,
+      "word": "viable",
+      "partOfSpeech": "adjective",
+      "meaning": "Capable of working successfully; feasible.",
+      "synonyms": "feasible, practical, workable",
+      "antonyms": "unviable, impractical, impossible",
+      "sentence": "The committee concluded that only one of the three proposed solutions was financially viable."
+    },
+    {
+      "id": "7ab9c733-1c85-457f-b2e2-6ba4d139de8c",
+      "progress": 0,
+      "word": "volatile",
+      "partOfSpeech": "adjective",
+      "meaning": "Liable to change rapidly and unpredictably, especially for the worse.",
+      "synonyms": "unstable, unpredictable, erratic",
+      "antonyms": "stable, steady, predictable",
+      "sentence": "The political situation remained volatile throughout the period under review."
+    },
+    {
+      "id": "d505f39e-4ddc-4481-bed2-d738aa1fb864",
+      "progress": 0,
+      "word": "vulnerable",
+      "partOfSpeech": "adjective",
+      "meaning": "Susceptible to physical or emotional harm; open to attack or damage.",
+      "synonyms": "at risk, exposed, susceptible",
+      "antonyms": "protected, resilient, secure",
+      "sentence": "The communities most vulnerable to climate change are often those least responsible for causing it."
+    },
+    {
+      "id": "c65d009c-3fa6-4acd-be44-431d65bee245",
+      "progress": 0,
+      "word": "wield",
+      "partOfSpeech": "verb",
+      "meaning": "To hold and use a weapon or tool; to have and exert power or influence.",
+      "synonyms": "exercise, exert, use",
+      "antonyms": "surrender, relinquish, yield",
+      "sentence": "She wielded considerable influence within the institution without ever holding a formal leadership role."
+    },
+    {
+      "id": "a697ad20-286c-478a-87fa-ab0587d60c5b",
+      "progress": 0,
+      "word": "abandon",
+      "partOfSpeech": "verb",
+      "meaning": "To cease supporting or looking after someone or something; to give up completely.",
+      "synonyms": "desert, relinquish, forsake",
+      "antonyms": "maintain, continue, support",
+      "sentence": "The project was abandoned after it became clear that the original methodology was fundamentally flawed."
+    },
+    {
+      "id": "d4b97443-bd1f-465b-9c88-040d9eef9f54",
+      "progress": 0,
+      "word": "albeit",
+      "partOfSpeech": "conjunction",
+      "meaning": "Although; even though — used to introduce a concession.",
+      "synonyms": "although, though, even if",
+      "antonyms": "N/A",
+      "sentence": "The results were promising, albeit based on a relatively small and unrepresentative sample."
+    },
+    {
+      "id": "3d5ff123-8805-4a80-94b1-03b4a2b73aca",
+      "progress": 0,
+      "word": "alleviate",
+      "partOfSpeech": "verb",
+      "meaning": "To make suffering or a problem less severe.",
+      "synonyms": "reduce, ease, relieve",
+      "antonyms": "worsen, intensify, exacerbate",
+      "sentence": "The introduction of the scheme did little to alleviate the structural inequalities it was designed to address."
+    },
+    {
+      "id": "a170709c-3ae7-4b15-b0df-281441536469",
+      "progress": 0,
+      "word": "ambition",
+      "partOfSpeech": "noun",
+      "meaning": "A strong desire to achieve something; the desire and determination to succeed.",
+      "synonyms": "aspiration, drive, determination",
+      "antonyms": "apathy, passivity, contentment",
+      "sentence": "The scale of the ambition behind the project far exceeded the resources available to deliver it."
+    },
+    {
+      "id": "d02fc39e-c9a0-44f9-90bd-9602199bf2ea",
+      "progress": 0,
+      "word": "analogous",
+      "partOfSpeech": "adjective",
+      "meaning": "Comparable in certain respects, typically in a way that makes clearer the nature of the things compared.",
+      "synonyms": "comparable, similar, parallel",
+      "antonyms": "different, contrasting, unrelated",
+      "sentence": "The process is broadly analogous to the peer review system used in academic publishing."
+    },
+    {
+      "id": "a8a2dc87-13af-4acb-94a8-2c55d59cc079",
+      "progress": 0,
+      "word": "arbitrary",
+      "partOfSpeech": "adjective",
+      "meaning": "Based on random choice rather than any reason or system; unrestrained.",
+      "synonyms": "random, capricious, subjective",
+      "antonyms": "logical, systematic, reasoned",
+      "sentence": "The criteria for selection appeared arbitrary and were never formally justified to applicants."
+    },
+    {
+      "id": "fc72cfc2-edb4-4ec5-a95b-71b563630d49",
+      "progress": 0,
+      "word": "assertion",
+      "partOfSpeech": "noun",
+      "meaning": "A confident and forceful statement of fact or belief.",
+      "synonyms": "claim, declaration, statement",
+      "antonyms": "denial, retraction, question",
+      "sentence": "The assertion that no evidence of harm exists is directly contradicted by three independent studies."
+    },
+    {
+      "id": "95babc7c-5051-45b9-aa38-c6f97edd6fd3",
+      "progress": 0,
+      "word": "coherence",
+      "partOfSpeech": "noun",
+      "meaning": "The quality of being logical and consistent; the way parts of something fit together.",
+      "synonyms": "consistency, logic, unity",
+      "antonyms": "incoherence, contradiction, fragmentation",
+      "sentence": "The report was praised for its overall coherence, despite drawing on a wide range of sources."
+    },
+    {
+      "id": "fd4f9e7d-c210-4818-961a-6cbcef6862b2",
+      "progress": 0,
+      "word": "cognitive",
+      "partOfSpeech": "adjective",
+      "meaning": "Relating to the mental processes of perception, memory, judgement, and reasoning.",
+      "synonyms": "mental, intellectual, psychological",
+      "antonyms": "emotional, physical, instinctive",
+      "sentence": "Cognitive biases can significantly distort decision-making even among experienced professionals."
+    },
+    {
+      "id": "a5175ccc-a15e-484b-a81d-c21b0f083bbd",
+      "progress": 0,
+      "word": "contradiction",
+      "partOfSpeech": "noun",
+      "meaning": "A combination of statements that are opposed to one another.",
+      "synonyms": "inconsistency, conflict, paradox",
+      "antonyms": "agreement, consistency, harmony",
+      "sentence": "The contradiction between the stated objectives and the actual outcomes was difficult to ignore."
+    },
+    {
+      "id": "8f7704c6-6581-4213-a810-5d056cd12244",
+      "progress": 0,
+      "word": "conversion",
+      "partOfSpeech": "noun",
+      "meaning": "The process of changing from one form or use to another; a change in belief.",
+      "synonyms": "transformation, change, shift",
+      "antonyms": "preservation, continuation, maintenance",
+      "sentence": "The conversion of the industrial space into a research facility took over three years."
+    },
+    {
+      "id": "6451b752-73e7-48c8-8fc9-47a814011f13",
+      "progress": 0,
+      "word": "correlation",
+      "partOfSpeech": "noun",
+      "meaning": "A mutual relationship between two or more things; the degree to which two variables are related.",
+      "synonyms": "connection, relationship, association",
+      "antonyms": "independence, divergence, separation",
+      "sentence": "A strong correlation between the two variables does not establish a causal relationship."
+    },
+    {
+      "id": "c9e0cdeb-44a7-4854-9b2b-d3edc483e637",
+      "progress": 0,
+      "word": "cumulative",
+      "partOfSpeech": "adjective",
+      "meaning": "Increasing or increased by successive additions.",
+      "synonyms": "progressive, accumulative, growing",
+      "antonyms": "decreasing, individual, isolated",
+      "sentence": "The cumulative effect of small changes over time can be more significant than a single large intervention."
+    },
+    {
+      "id": "13c3fc35-a3cd-4701-bf3b-7d23fb469281",
+      "progress": 0,
+      "word": "demonstrate",
+      "partOfSpeech": "verb",
+      "meaning": "To clearly show or prove something through evidence or argument.",
+      "synonyms": "show, prove, illustrate",
+      "antonyms": "hide, disprove, conceal",
+      "sentence": "The study demonstrates that the intervention has a statistically significant effect on outcomes."
+    },
+    {
+      "id": "078134ad-f242-43c4-9b46-867aff9665a4",
+      "progress": 0,
+      "word": "discourse",
+      "partOfSpeech": "noun",
+      "meaning": "Written or spoken communication or debate on a subject.",
+      "synonyms": "discussion, dialogue, debate",
+      "antonyms": "silence, monologue, isolation",
+      "sentence": "The framing of the public discourse around immigration has shifted markedly in recent years."
+    },
+    {
+      "id": "1f41c4cc-bacb-48bd-ae2b-aa151cc2d793",
+      "progress": 0,
+      "word": "disparity",
+      "partOfSpeech": "noun",
+      "meaning": "A great difference between things.",
+      "synonyms": "inequality, gap, imbalance",
+      "antonyms": "equality, similarity, balance",
+      "sentence": "The disparity in outcomes between different socioeconomic groups cannot be attributed to academic ability alone."
+    },
+    {
+      "id": "2b95b897-dbe3-4816-b001-741e40fb244a",
+      "progress": 0,
+      "word": "distinguish",
+      "partOfSpeech": "verb",
+      "meaning": "To recognise or point out a difference; to be a characteristic of something.",
+      "synonyms": "differentiate, discriminate, identify",
+      "antonyms": "confuse, merge, ignore",
+      "sentence": "It is important to distinguish between correlation and causation when interpreting statistical data."
+    },
+    {
+      "id": "13b2517d-4001-43fd-a5fa-64f8aeaaa648",
+      "progress": 0,
+      "word": "dominant",
+      "partOfSpeech": "adjective",
+      "meaning": "Most important, influential, or authoritative.",
+      "synonyms": "leading, prevailing, primary",
+      "antonyms": "minor, secondary, subordinate",
+      "sentence": "The dominant narrative within the field has only recently begun to be questioned."
+    },
+    {
+      "id": "f6dff25c-f76b-42e3-b448-b02cab4a024d",
+      "progress": 0,
+      "word": "erosion",
+      "partOfSpeech": "noun",
+      "meaning": "The gradual destruction or diminution of something.",
+      "synonyms": "deterioration, decline, weakening",
+      "antonyms": "strengthening, growth, reinforcement",
+      "sentence": "The erosion of public trust in the institution has been slow but consistent over the past decade."
+    },
+    {
+      "id": "bd4aea16-a101-4fd0-b733-f608beeb6194",
+      "progress": 0,
+      "word": "evaluate",
+      "partOfSpeech": "verb",
+      "meaning": "To form an assessment of the quality or importance of something.",
+      "synonyms": "assess, judge, appraise",
+      "antonyms": "ignore, overlook, assume",
+      "sentence": "Students are required to critically evaluate the sources they use in their academic work."
+    },
+    {
+      "id": "ab49cdb7-cafc-433f-910d-23edccbc7b52",
+      "progress": 0,
+      "word": "exclusive",
+      "partOfSpeech": "adjective",
+      "meaning": "Excluding or not admitting other things; restricted to a particular group.",
+      "synonyms": "restricted, selective, limited",
+      "antonyms": "inclusive, shared, open",
+      "sentence": "Access to the data set was exclusive to researchers who had signed a formal confidentiality agreement."
+    },
+    {
+      "id": "c339153b-87a7-462e-8119-c51583947613",
+      "progress": 0,
+      "word": "exposure",
+      "partOfSpeech": "noun",
+      "meaning": "The state of being subject to something; the revelation of something secret.",
+      "synonyms": "contact, vulnerability, disclosure",
+      "antonyms": "protection, concealment, immunity",
+      "sentence": "Prolonged exposure to misinformation can gradually shift a person's understanding of a topic."
+    },
+    {
+      "id": "d8968eaf-9a11-4278-946f-5e92fca6767f",
+      "progress": 0,
+      "word": "fluctuation",
+      "partOfSpeech": "noun",
+      "meaning": "An irregular rise and fall in number or amount.",
+      "synonyms": "variation, oscillation, change",
+      "antonyms": "stability, constancy, uniformity",
+      "sentence": "The fluctuation in results across different sites suggested that local factors were playing a role."
+    },
+    {
+      "id": "9fd18f22-fac3-44a6-814e-6181d96036a4",
+      "progress": 0,
+      "word": "generalize",
+      "partOfSpeech": "verb",
+      "meaning": "To make a general or broad statement by inferring from specific cases.",
+      "synonyms": "overgeneralise, extrapolate, infer",
+      "antonyms": "specify, qualify, differentiate",
+      "sentence": "It is tempting but dangerous to generalise from a small sample to the wider population."
+    },
+    {
+      "id": "693be3db-afc4-4ce9-8f3e-5146f1d0e9cf",
+      "progress": 0,
+      "word": "ideology",
+      "partOfSpeech": "noun",
+      "meaning": "A system of ideas and ideals that form the basis of political or economic theory.",
+      "synonyms": "belief system, doctrine, worldview",
+      "antonyms": "pragmatism, flexibility, openness",
+      "sentence": "Policy decisions are often shaped by ideology as much as by evidence."
+    },
+    {
+      "id": "2837d3c7-ab9a-46ee-b570-68b1713bc694",
+      "progress": 0,
+      "word": "implication",
+      "partOfSpeech": "noun",
+      "meaning": "The conclusion that can be drawn from something, even though not stated.",
+      "synonyms": "consequence, suggestion, inference",
+      "antonyms": "statement, fact, explicit conclusion",
+      "sentence": "The full implications of the policy change were not made clear at the time of announcement."
+    },
+    {
+      "id": "b6e75cc6-d5d7-4bb6-b91e-e353ecc214b6",
+      "progress": 0,
+      "word": "inconclusive",
+      "partOfSpeech": "adjective",
+      "meaning": "Not leading to a definite result or conclusion.",
+      "synonyms": "uncertain, ambiguous, indeterminate",
+      "antonyms": "conclusive, definitive, clear",
+      "sentence": "The evidence from the first phase of the study was largely inconclusive."
+    },
+    {
+      "id": "5f61a7f7-b3ea-4569-a61c-b17bcb00ad22",
+      "progress": 0,
+      "word": "induce",
+      "partOfSpeech": "verb",
+      "meaning": "To bring about or give rise to something; to persuade someone to do something.",
+      "synonyms": "cause, provoke, encourage",
+      "antonyms": "prevent, discourage, inhibit",
+      "sentence": "The stress of the situation appeared to induce a form of collective decision paralysis."
+    },
+    {
+      "id": "f2ca03ef-e2d3-4e33-bfcc-5ac145914c25",
+      "progress": 0,
+      "word": "norm",
+      "partOfSpeech": "noun",
+      "meaning": "Something that is usual, typical, or standard; a standard or rule.",
+      "synonyms": "standard, convention, expectation",
+      "antonyms": "exception, deviation, anomaly",
+      "sentence": "Remote working has become the norm rather than the exception in many professional sectors."
+    },
+    {
+      "id": "e04f5c1b-6047-4526-9d54-6d69bffd8630",
+      "progress": 0,
+      "word": "omit",
+      "partOfSpeech": "verb",
+      "meaning": "To leave something out; to fail to include or mention.",
+      "synonyms": "exclude, overlook, leave out",
+      "antonyms": "include, add, mention",
+      "sentence": "The authors omitted several relevant studies from their review, which weakened the conclusion."
+    },
+    {
+      "id": "8566bb45-8212-4533-ac0f-7d867bf6c02e",
+      "progress": 0,
+      "word": "parameter",
+      "partOfSpeech": "noun",
+      "meaning": "A characteristic or boundary that defines or limits a system or topic.",
+      "synonyms": "boundary, limit, criterion",
+      "antonyms": "N/A",
+      "sentence": "The study was conducted within strictly defined parameters to ensure comparability of results."
+    },
+    {
+      "id": "73ac99ee-9648-49d3-9077-75aab4e4caad",
+      "progress": 0,
+      "word": "pragmatic",
+      "partOfSpeech": "adjective",
+      "meaning": "Dealing with things sensibly and realistically based on practical considerations.",
+      "synonyms": "practical, realistic, sensible",
+      "antonyms": "idealistic, impractical, theoretical",
+      "sentence": "A pragmatic approach to the problem may require setting aside some of the original objectives."
+    },
+    {
+      "id": "9fb16628-e477-4cde-b4ae-f1f91f6c323b",
+      "progress": 0,
+      "word": "proliferate",
+      "partOfSpeech": "verb",
+      "meaning": "To increase rapidly in number; to grow or reproduce at a rapid rate.",
+      "synonyms": "multiply, spread, expand",
+      "antonyms": "decline, reduce, diminish",
+      "sentence": "The number of unregulated online platforms has proliferated faster than the capacity to oversee them."
+    },
+    {
+      "id": "e7ba2d13-ac55-41c8-ad4e-7ba330f0db8d",
+      "progress": 0,
+      "word": "propagate",
+      "partOfSpeech": "verb",
+      "meaning": "To spread and promote an idea or belief widely; to breed or reproduce.",
+      "synonyms": "spread, disseminate, circulate",
+      "antonyms": "suppress, contain, restrict",
+      "sentence": "Social media allows misinformation to propagate at a speed that makes correction extremely difficult."
+    },
+    {
+      "id": "150de882-3359-4957-aadc-f79ce72ebdd7",
+      "progress": 0,
+      "word": "qualitative",
+      "partOfSpeech": "adjective",
+      "meaning": "Relating to the quality or character of something rather than its quantity.",
+      "synonyms": "descriptive, non-numerical, interpretive",
+      "antonyms": "quantitative, numerical, measurable",
+      "sentence": "The qualitative data provided a much richer picture than the statistics alone could offer."
+    },
+    {
+      "id": "8956c106-70e1-49a7-a31c-eb0924aecae1",
+      "progress": 0,
+      "word": "quantitative",
+      "partOfSpeech": "adjective",
+      "meaning": "Relating to or measured by quantity rather than quality.",
+      "synonyms": "numerical, measurable, statistical",
+      "antonyms": "qualitative, descriptive, subjective",
+      "sentence": "A quantitative analysis of the results revealed a statistically significant pattern."
+    },
+    {
+      "id": "479a4b83-446e-4f8d-b2ef-09843e732bbc",
+      "progress": 0,
+      "word": "reciprocal",
+      "partOfSpeech": "adjective",
+      "meaning": "Given or experienced by each towards the other; mutually beneficial.",
+      "synonyms": "mutual, shared, bilateral",
+      "antonyms": "one-sided, unilateral, unequal",
+      "sentence": "The success of the partnership depended on a reciprocal commitment from both institutions."
+    },
+    {
+      "id": "50fc6e2c-fbf7-46a3-a27a-e9e19c2f7e11",
+      "progress": 0,
+      "word": "refined",
+      "partOfSpeech": "adjective",
+      "meaning": "Having or showing careful attention to detail; improved by making small changes.",
+      "synonyms": "sophisticated, polished, developed",
+      "antonyms": "crude, rough, unrefined",
+      "sentence": "The final version of the model was considerably more refined than the initial prototype."
+    },
+    {
+      "id": "d7181bd5-53af-4b2c-9d31-f249dba538b3",
+      "progress": 0,
+      "word": "relevance",
+      "partOfSpeech": "noun",
+      "meaning": "The quality of being connected to and appropriate for the matter in hand.",
+      "synonyms": "pertinence, applicability, significance",
+      "antonyms": "irrelevance, inapplicability, triviality",
+      "sentence": "The relevance of the earlier findings to the current context was a matter of considerable debate."
+    },
+    {
+      "id": "33669831-c870-4a4b-a3de-0c8d0ba48e14",
+      "progress": 0,
+      "word": "scope",
+      "partOfSpeech": "noun",
+      "meaning": "The extent of the area or subject matter that something deals with or to which it is relevant.",
+      "synonyms": "range, extent, breadth",
+      "antonyms": "limitation, narrowness, restriction",
+      "sentence": "The scope of the review was deliberately broad in order to capture a wide range of perspectives."
+    },
+    {
+      "id": "552f90da-3074-4498-b0b2-29eb30f1d883",
+      "progress": 0,
+      "word": "scrutiny",
+      "partOfSpeech": "noun",
+      "meaning": "Critical observation or examination.",
+      "synonyms": "examination, inspection, analysis",
+      "antonyms": "neglect, ignorance, acceptance",
+      "sentence": "The methodology was subjected to intense scrutiny before the paper was accepted for publication."
+    },
+    {
+      "id": "5574766a-42af-45dd-b008-b0c280482673",
+      "progress": 0,
+      "word": "sequential",
+      "partOfSpeech": "adjective",
+      "meaning": "Following in a logical order or sequence.",
+      "synonyms": "successive, ordered, consecutive",
+      "antonyms": "random, disordered, simultaneous",
+      "sentence": "The analysis follows a sequential process, with each stage dependent on the findings of the previous one."
+    },
+    {
+      "id": "6b436701-3902-43bf-b67c-6d3655b7194c",
+      "progress": 0,
+      "word": "underpin",
+      "partOfSpeech": "verb",
+      "meaning": "To support or form the basis of a theory or argument.",
+      "synonyms": "support, form the basis of, sustain",
+      "antonyms": "undermine, weaken, contradict",
+      "sentence": "The concept of informed consent underpins all ethical frameworks in medical research."
+    },
+    {
+      "id": "c749b771-01fa-4b5c-b408-06b2f8d2477f",
+      "progress": 0,
+      "word": "abdicate",
+      "partOfSpeech": "verb",
+      "meaning": "To fail to fulfil a responsibility or duty; to renounce a throne.",
+      "synonyms": "renounce, give up, relinquish",
+      "antonyms": "accept, assume, claim",
+      "sentence": "The leadership was accused of abdicating its responsibility to protect the most vulnerable members of the community."
+    },
+    {
+      "id": "13d8efff-9a49-4618-a7fd-7bb2b3857d48",
+      "progress": 0,
+      "word": "adherence",
+      "partOfSpeech": "noun",
+      "meaning": "The quality of continuing to follow a belief, principle, or rule.",
+      "synonyms": "compliance, commitment, observance",
+      "antonyms": "non-compliance, deviation, defiance",
+      "sentence": "Strict adherence to the methodology was essential for ensuring the comparability of results across sites."
+    },
+    {
+      "id": "78b21cb3-5e5a-4aa9-b2e9-53a0be321550",
+      "progress": 0,
+      "word": "adverse",
+      "partOfSpeech": "adjective",
+      "meaning": "Preventing success or development; harmful or unfavourable.",
+      "synonyms": "negative, detrimental, unfavourable",
+      "antonyms": "favourable, positive, beneficial",
+      "sentence": "The study documented a range of adverse effects that had not been anticipated during the design phase."
+    },
+    {
+      "id": "0d5ccf03-3b73-42a0-ac4f-17e84f2adf02",
+      "progress": 0,
+      "word": "aggregate",
+      "partOfSpeech": "adjective",
+      "meaning": "Formed or calculated by the combination of many separate elements.",
+      "synonyms": "combined, collective, cumulative",
+      "antonyms": "individual, isolated, separate",
+      "sentence": "The aggregate data masked significant variation in outcomes between different subgroups."
+    },
+    {
+      "id": "5f1da750-01c7-4f41-9d7f-b5edb37062ba",
+      "progress": 0,
+      "word": "complement",
+      "partOfSpeech": "verb",
+      "meaning": "To add to something in a way that improves or emphasises its qualities.",
+      "synonyms": "enhance, supplement, complete",
+      "antonyms": "contradict, conflict, oppose",
+      "sentence": "The qualitative findings complement the quantitative data by providing depth and context."
+    },
+    {
+      "id": "e8fab4e7-03ad-44a5-a3e1-ef1c05f57dfc",
+      "progress": 0,
+      "word": "conceptual",
+      "partOfSpeech": "adjective",
+      "meaning": "Relating to or based on mental concepts rather than concrete realities.",
+      "synonyms": "theoretical, abstract, intellectual",
+      "antonyms": "concrete, practical, tangible",
+      "sentence": "The paper makes a valuable conceptual contribution, even if its empirical basis remains limited."
+    },
+    {
+      "id": "d8cc66b0-b97e-40f3-b2e1-76ec45af4b90",
+      "progress": 0,
+      "word": "contend",
+      "partOfSpeech": "verb",
+      "meaning": "To assert something as a position in an argument; to compete.",
+      "synonyms": "assert, argue, claim",
+      "antonyms": "concede, deny, withdraw",
+      "sentence": "She contends that the current regulatory framework is no longer fit for purpose."
+    },
+    {
+      "id": "36973c36-825b-4cb6-a8ca-b53dee49e82a",
+      "progress": 0,
+      "word": "deter",
+      "partOfSpeech": "verb",
+      "meaning": "To discourage someone from doing something through doubt or fear.",
+      "synonyms": "discourage, dissuade, prevent",
+      "antonyms": "encourage, motivate, inspire",
+      "sentence": "The complexity of the application process may deter the very candidates the programme is designed to attract."
+    },
+    {
+      "id": "02df76dc-555d-46e0-a536-4518f98cb7d9",
+      "progress": 0,
+      "word": "discern",
+      "partOfSpeech": "verb",
+      "meaning": "To perceive or recognise something that is not obvious.",
+      "synonyms": "detect, identify, perceive",
+      "antonyms": "overlook, miss, ignore",
+      "sentence": "It is difficult to discern a coherent rationale behind the sequence of decisions that were made."
+    },
+    {
+      "id": "41be3209-959a-4e0e-8b50-1e1e24e346a7",
+      "progress": 0,
+      "word": "disposition",
+      "partOfSpeech": "noun",
+      "meaning": "A person's inherent qualities of mind and character; a tendency.",
+      "synonyms": "tendency, inclination, temperament",
+      "antonyms": "aversion, resistance, opposition",
+      "sentence": "There is a general disposition within the institution to favour caution over innovation."
+    },
+    {
+      "id": "6c09aa29-7889-403d-8bfe-bc417da87b86",
+      "progress": 0,
+      "word": "encompass",
+      "partOfSpeech": "verb",
+      "meaning": "To surround and include something; to deal with a wide range of subjects.",
+      "synonyms": "include, cover, embrace",
+      "antonyms": "exclude, omit, neglect",
+      "sentence": "The review aims to encompass the full range of approaches that have been adopted across the sector."
+    },
+    {
+      "id": "fd28b3cb-9309-4381-95f4-5b9ae43fe13e",
+      "progress": 0,
+      "word": "erode",
+      "partOfSpeech": "verb",
+      "meaning": "To gradually destroy or weaken something.",
+      "synonyms": "wear away, undermine, diminish",
+      "antonyms": "strengthen, build, reinforce",
+      "sentence": "The credibility of the institution has been slowly eroded by a series of avoidable missteps."
+    },
+    {
+      "id": "6a218b21-c160-4236-a09b-dfcd9b640909",
+      "progress": 0,
+      "word": "formulate",
+      "partOfSpeech": "verb",
+      "meaning": "To create or prepare something carefully and systematically.",
+      "synonyms": "devise, develop, construct",
+      "antonyms": "abandon, dismiss, ignore",
+      "sentence": "The committee was tasked with formulating a response that balanced transparency with legal caution."
+    },
+    {
+      "id": "7797ac6e-e326-4221-8140-9a886633375f",
+      "progress": 0,
+      "word": "illuminate",
+      "partOfSpeech": "verb",
+      "meaning": "To help to clarify or explain something; to light up.",
+      "synonyms": "clarify, reveal, explain",
+      "antonyms": "obscure, confuse, darken",
+      "sentence": "The case study illuminates a dynamic that is difficult to capture through statistical methods alone."
+    },
+    {
+      "id": "c5d2cf2b-bc50-4511-a1f1-8321c10c7e61",
+      "progress": 0,
+      "word": "imperative",
+      "partOfSpeech": "adjective",
+      "meaning": "Of vital importance; urgent and necessary.",
+      "synonyms": "essential, urgent, critical",
+      "antonyms": "optional, unnecessary, trivial",
+      "sentence": "It is imperative that the findings are communicated to policymakers before the consultation period ends."
+    },
+    {
+      "id": "618a703d-fe5e-49b6-b6ff-f151f6b06f07",
+      "progress": 0,
+      "word": "incompatibility",
+      "partOfSpeech": "noun",
+      "meaning": "The state of being unable to exist or work together without conflict.",
+      "synonyms": "conflict, inconsistency, clash",
+      "antonyms": "compatibility, harmony, alignment",
+      "sentence": "The incompatibility between the two systems became apparent only after deployment had begun."
+    },
+    {
+      "id": "007a3686-5d7b-4999-b412-17f1db865ecc",
+      "progress": 0,
+      "word": "manifest",
+      "partOfSpeech": "verb",
+      "meaning": "To show or demonstrate something clearly; to become apparent.",
+      "synonyms": "show, reveal, demonstrate",
+      "antonyms": "conceal, hide, suppress",
+      "sentence": "The effects of the policy began to manifest in ways that had not been predicted by the original model."
+    },
+    {
+      "id": "3a66b7ae-1850-4c61-86f1-0fdb17304d7c",
+      "progress": 0,
+      "word": "nuanced",
+      "partOfSpeech": "adjective",
+      "meaning": "Characterised by subtle distinctions and fine detail.",
+      "synonyms": "subtle, detailed, refined",
+      "antonyms": "simplistic, blunt, crude",
+      "sentence": "A nuanced reading of the data reveals patterns that a surface-level analysis would entirely miss."
+    },
+    {
+      "id": "081741d8-299f-4d0b-8c1d-13f9514452dc",
+      "progress": 0,
+      "word": "perpetuate",
+      "partOfSpeech": "verb",
+      "meaning": "To cause something to continue indefinitely; to preserve or maintain something.",
+      "synonyms": "maintain, sustain, preserve",
+      "antonyms": "end, interrupt, challenge",
+      "sentence": "Structural inequality tends to perpetuate itself unless actively addressed through deliberate policy."
+    },
+    {
+      "id": "a90cfd52-95ad-422c-8c61-fa8725082904",
+      "progress": 0,
+      "word": "prevailing",
+      "partOfSpeech": "adjective",
+      "meaning": "Existing at a particular time; most frequent or common.",
+      "synonyms": "dominant, current, widespread",
+      "antonyms": "rare, unusual, exceptional",
+      "sentence": "The prevailing view within the field is that the existing models require fundamental revision."
+    },
+    {
+      "id": "7087147b-5e43-405a-b5c5-239ab5c86d41",
+      "progress": 0,
+      "word": "probe",
+      "partOfSpeech": "verb",
+      "meaning": "To enquire into something closely; to explore or investigate.",
+      "synonyms": "investigate, examine, question",
+      "antonyms": "accept, overlook, ignore",
+      "sentence": "The committee was instructed to probe the circumstances that led to the decision being made without consultation."
+    },
+    {
+      "id": "55881ea4-b184-4a4f-b237-83069445bfa1",
+      "progress": 0,
+      "word": "speculation",
+      "partOfSpeech": "noun",
+      "meaning": "The forming of a theory without firm evidence; investment in risky ventures.",
+      "synonyms": "conjecture, hypothesis, assumption",
+      "antonyms": "certainty, knowledge, proof",
+      "sentence": "Any speculation about the cause of the anomaly must be grounded in a thorough review of the raw data."
+    },
+    {
+      "id": "2bfbc51e-b8b7-4b0b-968f-ab852b09a9e8",
+      "progress": 0,
+      "word": "subordinate",
+      "partOfSpeech": "adjective",
+      "meaning": "Lower in rank or position; less important than something else.",
+      "synonyms": "secondary, junior, lower",
+      "antonyms": "superior, primary, dominant",
+      "sentence": "The subordinate clauses in the regulation have been interpreted inconsistently across different jurisdictions."
+    },
+    {
+      "id": "46e3a9d1-7b9b-42a2-a8e4-47d8dc2c477c",
+      "progress": 0,
+      "word": "sustain",
+      "partOfSpeech": "verb",
+      "meaning": "To strengthen or support; to maintain over a period of time.",
+      "synonyms": "maintain, support, uphold",
+      "antonyms": "abandon, undermine, erode",
+      "sentence": "The level of political will required to sustain the reform programme over several years proved difficult to maintain."
+    },
+    {
+      "id": "289b9a9e-891a-44b2-99b2-67e91a2cd241",
+      "progress": 0,
+      "word": "tangible",
+      "partOfSpeech": "adjective",
+      "meaning": "Perceptible by touch; clear and definite; real.",
+      "synonyms": "concrete, real, measurable",
+      "antonyms": "abstract, intangible, theoretical",
+      "sentence": "The most tangible outcome of the conference was the formal agreement to establish a joint working group."
+    },
+    {
+      "id": "5f6a2a30-0bfb-4c8d-8490-eeac6607b215",
+      "progress": 0,
+      "word": "converge",
+      "partOfSpeech": "verb",
+      "meaning": "To come together from different directions so as to meet; to tend towards a common result.",
+      "synonyms": "meet, merge, unite",
+      "antonyms": "diverge, separate, split",
+      "sentence": "The findings of three independent studies converge on the same central conclusion."
+    },
+    {
+      "id": "d36d1f87-8674-4950-b09a-c88373d9ca77",
+      "progress": 0,
+      "word": "abstraction",
+      "partOfSpeech": "noun",
+      "meaning": "The quality of dealing with ideas rather than events; something that exists only as an idea.",
+      "synonyms": "concept, generalisation, notion",
+      "antonyms": "concrete reality, specificity, detail",
+      "sentence": "The level of abstraction in the theoretical framework made it difficult to apply to real-world cases."
+    }
+  ],
+  "contextPassage": {
+    "title": "The Integrity Paradox",
+    "text": "The discourse surrounding institutional reform has rarely been more consequential — or more contested. At a time when public trust in established systems is eroding with unprecedented speed, the question of how organisations can maintain their credibility while navigating fundamental structural change has become one of the defining challenges of the era.\n\nThis was the central tension explored at the annual symposium on governance and accountability, where scholars, policy advisers, and institutional leaders gathered to examine what it means, in a volatile and deeply polarised world, to lead with integrity.\n\nThe keynote address was delivered by Professor Lena Holst, whose work on the cognitive dimensions of institutional trust has generated considerable debate over the past decade. Her argument was, at its core, both rigorous and uncomfortable: the mechanisms by which institutions sustain legitimacy have not merely weakened — they have, in many cases, been fundamentally subverted. And the causes, she asserted, are not purely external.\n\n\"We are too quick,\" she said, \"to attribute the erosion of trust to misinformation, to political volatility, to social media and its capacity to propagate falsehood at remarkable speed. These are real forces, and we should not undermine their significance. But there is an implicit assumption in that narrative — that institutions themselves are essentially sound, and merely vulnerable to attack from without. I want to challenge that assumption.\"\n\nShe presented empirical data from a longitudinal study spanning twenty years and covering thirty-two institutions across eight countries. The findings were, by any measure, compelling. Institutions that demonstrated transparent decision-making processes, that were willing to scrutinise their own methodology rather than merely defending it, and that acknowledged rather than omitted contradictory evidence, consistently outperformed their peers on measures of sustained public confidence.\n\n\"The correlation is not merely statistical,\" she argued. \"It reflects something deeper — a reciprocal dynamic between the institution and those it serves. When an organisation is genuinely accountable, not performatively so, it creates the conditions under which trust can accumulate rather than merely fluctuate.\"\n\nThe distinction, she was careful to elaborate, was crucial. Performative accountability — the publication of reports, the assertion of transparency without its substance — can, in the short term, mitigate reputational risk. But it is not sustainable. Over time, the disparity between stated values and actual behaviour becomes apparent. And when it does, the cumulative damage is far more severe than any single incident would produce in isolation.\n\nSeveral panellists were eager to challenge the premise. One argued that the framework was overly idealistic — that in a highly competitive environment, institutions face pragmatic constraints that make the kind of coherent, values-driven behaviour Holst described difficult to sustain. Another suggested that the scope of the analysis was too broad, and that the findings might not generalise to smaller or more specialised organisations.\n\nHolst acknowledged these objections as pertinent, but was reluctant to retreat from the core argument. \"I am not suggesting that institutions operate in a vacuum,\" she said. \"The parameters within which any organisation functions are real and often severe. But the evidence suggests that those constraints do not, in themselves, determine whether an institution chooses to be honest about its limitations. That choice is both deliberate and consequential.\"\n\nThe most contentious moment came when a participant asked whether the very concept of institutional integrity was viable in a context where the dominant incentive structures reward short-term performance over long-term coherence. The question prompted a response that was, by any measure, sophisticated in its nuance.\n\n\"That,\" said Holst, \"is precisely the dilemma we must not overlook. If we accept that integrity is indispensable, we must also accept that the systems we have constructed may be fundamentally incompatible with it. And that is not a peripheral observation. That is the paradigm shift the field has been reluctant to confront.\"\n\nThe silence that followed was not inconclusive. It had the quality of a room full of people recognising, simultaneously, that the most plausible answers to the questions they carried had not yet been articulated — and that the work ahead would require something more than refined models and quantitative metrics.\n\nIt would require, as one participant put it in the closing discussion, the willingness to underpin everything with a single, albeit uncomfortable, commitment: to pursue truth even when it subverts the very structures we have built to find it.\n\nThe symposium concluded without a definitive resolution. But that, perhaps, was its most honest and its most profound achievement."
+  }
+}

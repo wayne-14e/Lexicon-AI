@@ -59,7 +59,21 @@ const ContextLearningView: React.FC<ContextLearningViewProps> = ({ table, onBack
       parts.push(text.slice(lastIndex));
     }
 
-    return <div>{parts}</div>;
+    // Convert \n in plain text segments into <br/> elements
+    const withBreaks: React.ReactNode[] = [];
+    parts.forEach((part, i) => {
+      if (typeof part === 'string') {
+        const lines = part.split('\n');
+        lines.forEach((line, j) => {
+          if (j > 0) withBreaks.push(<div key={`br-${i}-${j}`} className="h-6" />);
+          if (line) withBreaks.push(line);
+        });
+      } else {
+        withBreaks.push(part);
+      }
+    });
+
+    return <div>{withBreaks}</div>;
   };
 
   return (

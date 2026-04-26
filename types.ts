@@ -8,6 +8,14 @@ export interface User {
   tokens?: number;
   lastDailyAwardDate?: string; // ISO string (YYYY-MM-DD)
   streak?: number;
+  words_generated?: number;
+  narratives_used?: number;
+  document_uploads_used?: number;
+  lexy_prompts_used?: number;
+  ai_refills_used?: number;
+  tts_used?: number;
+  limits_last_reset_date?: string; // ISO string (YYYY-MM-DD)
+  unlocked_system_collections?: string[];
 }
 
 export interface TokenTransaction {
