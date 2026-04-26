@@ -68,7 +68,7 @@ const LexyAssistant: React.FC<LexyAssistantProps> = ({ user, onSpendTokens, onUs
       const errorMessage: Message = {
         id: Date.now().toString(),
         role: 'assistant',
-        content: "I'm exhausted for the day! You have reached your daily limit of 15 consultations."
+        content: "I'm exhausted for the day! You have reached your daily limit of 10 consultations."
       };
       setMessages(prev => [...prev, errorMessage]);
       return;
