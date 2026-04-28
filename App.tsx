@@ -604,7 +604,7 @@ const App: React.FC = () => {
             <TableView 
               user={user}
               table={activeTable}
-              onBack={activeTable.userId === 'system' ? handleNavigateToArchives : handleNavigateToDashboard}
+              onBack={activeTable.userId === 'system' || activeTable.id.startsWith('system-') ? handleNavigateToArchives : handleNavigateToDashboard}
               onDelete={handleDeleteTable}
               onStudy={(excludeMastered) => {
                 setStudyExcludeMastered(excludeMastered);

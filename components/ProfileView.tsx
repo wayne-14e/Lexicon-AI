@@ -239,7 +239,7 @@ const ProfileView: React.FC<ProfileViewProps> = ({ user, tables, onBack, onUserU
                   <h1 className="text-2xl sm:text-5xl font-bold font-display text-text">{user.username}</h1>
                   <button 
                     onClick={() => setIsEditingUsername(true)}
-                    className="p-2 text-muted hover:text-primary transition-all opacity-0 group-hover:opacity-100 focus:opacity-100 bg-surfaceHighlight rounded-full hover:bg-primary/10"
+                    className="p-2 text-muted hover:text-primary transition-all opacity-100 sm:opacity-0 sm:group-hover:opacity-100 focus:opacity-100 bg-surfaceHighlight rounded-full hover:bg-primary/10"
                     title="Edit Username"
                   >
                     <svg className="w-4 h-4 sm:w-5 sm:h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">

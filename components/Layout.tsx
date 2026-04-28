@@ -315,7 +315,7 @@ const Layout: React.FC<LayoutProps> = ({
           >
             <div className="p-6 flex items-center justify-between border-b border-white/5">
               <div className="flex items-center">
-                <div className="w-8 h-8 flex items-center justify-center shrink-0">
+                <div className="w-9 h-9 flex items-center justify-center shrink-0">
                   <img src="/logo.svg" className="object-contain" alt="Logo" />
                 </div>
                 <div className="flex flex-col ml-3">
@@ -331,17 +331,18 @@ const Layout: React.FC<LayoutProps> = ({
               </button>
             </div>
 
-            <div className="flex-1 overflow-y-auto py-6 px-4 space-y-2">
+            <div className="flex-1 overflow-y-auto py-6 px-3 space-y-2">
               <div className="px-2 mb-4">
-                <div className="flex items-center space-x-3 p-3 bg-white/5 rounded-2xl border border-white/5">
-                  <div className="w-12 h-12 rounded-full bg-surfaceHighlight flex items-center justify-center text-primary text-xl font-bold border border-white/10">
+                <div className="flex items-center space-x-3 p-2 bg-white/5 rounded-2xl border border-white/5">
+                  <div className="w-12 h-12 rounded-full bg-surfaceHighlight flex items-center justify-center text-primary text-xl font-bold border border-white/10 shrink-0">
                     {user.username.charAt(0).toUpperCase()}
                   </div>
                   <div className="flex flex-col">
                     <span className="text-sm font-bold text-text">{user.username}</span>
                     <div className="flex items-center space-x-2">
-                      <span className="text-[10px] text-orange-500 font-bold uppercase tracking-wider">{user.streak || 1}d Streak</span>
-                      <span className="text-[10px] text-purple-500 font-bold">• {user.tokens || 0} T</span>
+                      <span className="text-[10px] text-orange-500 font-bold uppercase tracking-wider">{user.streak || 1}D STREAK</span>
+                      <span className="text-[10px] text-blue-500 font-bold">{user.words_generated || 0}/40 WORDS</span>
+                      <span className="text-[10px] text-purple-500 font-bold">{user.tokens || 0} TOKENS</span>
                     </div>
                   </div>
                 </div>
@@ -404,7 +405,7 @@ const Layout: React.FC<LayoutProps> = ({
 
             <div className="p-6 border-t border-white/5">
               <div className="text-[10px] text-muted font-bold uppercase tracking-widest text-center">
-                Lexicon AI v2.0
+                Lexicon AI v3.0
               </div>
             </div>
           </div>

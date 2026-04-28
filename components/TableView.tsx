@@ -69,7 +69,7 @@ const TableView: React.FC<TableViewProps> = ({
   onUserUpdate,
   isFetching 
 }) => {
-  const isSystemTable = table.userId === 'system';
+  const isSystemTable = table.userId === 'system' || table.id.startsWith('system-');
   const [isDeletingTable, setIsDeletingTable] = useState(false);
   const [isEditingMetadata, setIsEditingMetadata] = useState(false);
   const [metaTitle, setMetaTitle] = useState(table.title);
@@ -818,7 +818,7 @@ const TableView: React.FC<TableViewProps> = ({
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" />
                               </svg>
                             </button>
-                            <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-1 z-50 bg-blue-500/10 border border-blue-500/20 px-2 pt-1 pb-0.5 rounded shadow-xl whitespace-nowrap opacity-0 group-hover/refill:opacity-100 transition-opacity pointer-events-none">
+                            <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-1 z-50 bg-[#1e232b] border border-blue-500/20 px-2 pt-1 pb-0.5 rounded shadow-xl whitespace-nowrap opacity-0 group-hover/refill:opacity-100 transition-opacity pointer-events-none">
                               <span className="text-[9px] text-blue-500 font-bold uppercase tracking-widest leading-none block">{user?.ai_refills_used || 0}/4 Refills</span>
                             </div>
                           </div>

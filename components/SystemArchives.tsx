@@ -274,10 +274,11 @@ const SystemArchives: React.FC<SystemArchivesProps> = ({ user, tables, onNavigat
 
   return (
     <div className="w-full max-w-5xl mx-auto flex flex-col h-full animate-in fade-in duration-300">
-      <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-8">
-        <div>
-          <h2 className="text-3xl md:text-4xl font-bold font-display tracking-tight text-text">System Archives</h2>
-          <p className="text-sm md:text-base text-muted max-w-2xl mt-2">
+      <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 md:gap-8 text-center md:text-left mb-12">
+        <div className="flex flex-col items-center md:items-start text-center md:text-left">
+          <span className="text-[10px] sm:text-sm font-bold uppercase tracking-[0.4em] text-primary mb-2 md:mb-3 block">Standardized Archives</span>
+          <h2 className="text-3xl md:text-[42px] lg:text-5xl font-bold font-display text-text leading-tight">System Archives</h2>
+          <p className="text-muted mt-2 md:mt-3 max-w-lg leading-relaxed font-sans italic text-xs sm:text-sm">
             Access curated vocabulary banks for standardized tests.
           </p>
         </div>
