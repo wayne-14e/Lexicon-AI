@@ -60,9 +60,9 @@ The **Unified Repository Search** indexes every word across every journal you ha
 ---
 
 ## 🏛️ Technology Stack
-- **AI Models**: 
-  - `gemini-3-flash`: For assembly, extraction, and narrative creation.
-  - `gemini-3-flash-tts`: For scholarly audio generation.
+- **AI Models** 
+  - `gemini-2.5-flash`: For assembly, extraction, and narrative creation.
+  - `gemini-2.5-flash-tts`: For scholarly audio generation.
 - **Backend**: Supabase (PostgreSQL) for cross-device synchronization.
 - **Frontend**: React 19 + Vite.
 - **Styling**: Vanilla CSS for a premium, custom academic feel.
