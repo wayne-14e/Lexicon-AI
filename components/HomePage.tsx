@@ -89,7 +89,7 @@ const HomePage: React.FC<HomePageProps> = ({
           </button>
         </div>
       ) : (
-        <div className="max-w-2xl mx-auto text-center p-12 sm:p-16 bg-surface rounded-3xl border border-white/5 border-dashed space-y-8">
+        <div className="max-w-md mx-auto text-center p-6 sm:p-12 bg-surface rounded-3xl border border-white/5 border-dashed space-y-6">
           <div className="space-y-4">
             <p className="text-muted italic text-lg">
               Your archives are currently empty.
@@ -102,7 +102,7 @@ const HomePage: React.FC<HomePageProps> = ({
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-lg mx-auto">
             <button 
               onClick={onNavigateToCreate}
-              className="p-6 bg-surfaceHighlight border border-white/5 rounded-2xl hover:border-primary/50 transition-all text-left group"
+              className="p-4 sm:p-6 bg-surfaceHighlight border border-white/5 rounded-2xl hover:border-primary/50 transition-all text-left group"
             >
               <span className="text-[10px] font-bold uppercase tracking-widest text-primary block mb-2">Academic Path</span>
               <h3 className="font-bold text-text mb-1">Start First Journal</h3>
@@ -110,7 +110,7 @@ const HomePage: React.FC<HomePageProps> = ({
             </button>
             <button 
               onClick={onNavigateToArchives}
-              className="p-6 bg-surfaceHighlight border border-white/5 rounded-2xl hover:border-secondary/50 transition-all text-left group"
+              className="p-4 sm:p-6 bg-surfaceHighlight border border-white/5 rounded-2xl hover:border-secondary/50 transition-all text-left group"
             >
               <span className="text-[10px] font-bold uppercase tracking-widest text-secondary block mb-2">System Archives</span>
               <h3 className="font-bold text-text mb-1">IELTS & SAT Vocab</h3>

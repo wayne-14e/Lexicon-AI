@@ -1,3 +1,7 @@
+/* 
+MIGRATION:
+ALTER TABLE public.profiles ADD COLUMN IF NOT EXISTS username TEXT;
+*/
 
 import { User, VocabTable, TokenTransaction, MasteryEvent } from '../types';
 import { supabase } from './supabaseClient';
@@ -21,34 +25,85 @@ export const storageService = {
 
   upsertProfile: async (user: User) => {
     console.log('storageService.upsertProfile: Starting for', user.id);
+    
+    // Option A: Select first to check if profile exists
     const { data: existing, error: fetchError } = await supabase
       .from('profiles')
       .select('*')
       .eq('id', user.id)
-      .single();
+      .maybeSingle();
 
-    if (fetchError && fetchError.code !== 'PGRST116') {
-      console.warn('storageService.upsertProfile: Fetch error (ignored if not found):', fetchError);
+    if (fetchError) {
+      console.warn('storageService.upsertProfile: Fetch error:', fetchError);
     }
 
-    const profileToSave = existing 
-      ? { ...existing, ...user, tokens: existing.tokens, streak: existing.streak }
-      : { ...user, tokens: 0, streak: 1 };
+    let profileToSave;
+    if (!existing) {
+      // First time creation: use the determined username
+      profileToSave = {
+        ...user,
+        tokens: 0,
+        streak: 1,
+        // username is already in user object from initApp/useEnsureProfile
+      };
+      console.log('storageService.upsertProfile: Creating new profile:', profileToSave);
+      
+      const { data, error } = await supabase
+        .from('profiles')
+        .insert([profileToSave])
+        .select()
+        .maybeSingle();
 
-    console.log('storageService.upsertProfile: Upserting data:', profileToSave);
+      if (error) {
+        if (error.code === '23505') {
+          console.log('storageService.upsertProfile: Race condition detected (409), falling back to update');
+          // Fetch existing again to be safe
+          const { data: latestExisting } = await supabase
+            .from('profiles')
+            .select('*')
+            .eq('id', user.id)
+            .maybeSingle();
+          
+          if (latestExisting) {
+            return await storageService.updateExistingProfile(latestExisting, user);
+          }
+        }
+        console.error('storageService.upsertProfile: INSERT ERROR:', error);
+        throw error;
+      }
+      return data;
+    } else {
+      return await storageService.updateExistingProfile(existing, user);
+    }
+  },
+
+  updateExistingProfile: async (existing: User, newUser: User) => {
+    // Update existing profile: do NOT overwrite username if it already exists
+    const updateData: Partial<User> = {
+      email: newUser.email,
+      full_name: newUser.full_name,
+      avatar_url: newUser.avatar_url,
+    };
+
+    // Only set username if it's currently null/empty in DB
+    if (!existing.username) {
+      updateData.username = newUser.username;
+    }
+
+    console.log('storageService.upsertProfile: Updating existing profile:', updateData);
 
     const { data, error } = await supabase
       .from('profiles')
-      .upsert([profileToSave])
-      .select();
+      .update(updateData)
+      .eq('id', existing.id)
+      .select()
+      .maybeSingle();
 
     if (error) {
-      console.error('storageService.upsertProfile: DATABASE ERROR:', error);
+      console.error('storageService.upsertProfile: UPDATE ERROR:', error);
       throw error;
-    } else {
-      console.log('storageService.upsertProfile: DATABASE SUCCESS:', data);
     }
-    return profileToSave;
+    return data;
   },
 
   updateProfile: async (user: User) => {

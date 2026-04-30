@@ -19,7 +19,6 @@ import {
   Calendar,
   ChevronDown
 } from 'lucide-react';
-import { useUser } from '@clerk/clerk-react';
 
 interface ProfileViewProps {
   user: User;
@@ -41,7 +40,6 @@ const getStartOfWeekMonday = (date: Date) => {
 };
 
 const ProfileView: React.FC<ProfileViewProps> = ({ user, tables, onBack, onUserUpdate }) => {
-  const { user: clerkUser } = useUser();
   const [tokenTransactions, setTokenTransactions] = useState<TokenTransaction[]>([]);
   const [masteryEvents, setMasteryEvents] = useState<MasteryEvent[]>([]);
   const [tokenRange, setTokenRange] = useState<TokenRange>('this-week');
@@ -62,17 +60,13 @@ const ProfileView: React.FC<ProfileViewProps> = ({ user, tables, onBack, onUserU
       return;
     }
 
-    if (!clerkUser) return;
-
     try {
-      await clerkUser.update({ username: trimmedUsername });
-      // The useEnsureProfile hook or App.tsx init logic will sync this to Supabase.
-      // We also update the local state to show the change immediately if possible.
+      await storageService.updateProfileField(user.id, 'username', trimmedUsername);
       onUserUpdate?.({ ...user, username: trimmedUsername });
       setIsEditingUsername(false);
     } catch (error: any) {
-      console.error('Error updating username in Clerk:', error);
-      alert(error.errors?.[0]?.message || 'Failed to update username. It may be already taken.');
+      console.error('Error updating username in Supabase:', error);
+      alert('Failed to update username. Please try again.');
       setEditUsername(user.username);
       setIsEditingUsername(false);
     }
@@ -210,7 +204,7 @@ const ProfileView: React.FC<ProfileViewProps> = ({ user, tables, onBack, onUserU
             )}
           </div>
           
-          <div className="flex-1 text-center sm:text-left space-y-2">
+          <div className="flex-1 text-center sm:text-left space-y-4">
             <div className="flex items-center justify-center sm:justify-start gap-3 group">
               {isEditingUsername ? (
                 <input 
@@ -244,11 +238,8 @@ const ProfileView: React.FC<ProfileViewProps> = ({ user, tables, onBack, onUserU
               )}
             </div>
             
-            {user.full_name && (
-              <p className="text-muted font-medium">{user.full_name}</p>
-            )}
             
-            <div className="flex flex-wrap justify-center sm:justify-start gap-3 mt-4">
+            <div className="flex flex-wrap justify-center sm:justify-start gap-4 mt-6">
               <div className="flex items-center space-x-1.5 bg-orange-500/10 text-orange-500 px-3 py-1 rounded-full border border-orange-500/20">
                 <Flame className="w-4 h-4" />
                 <span className="text-xs font-bold uppercase tracking-wider">{currentStreak} Day Streak</span>

@@ -146,7 +146,7 @@ const LexyAssistant: React.FC<LexyAssistantProps> = ({ user, onSpendTokens, onUs
 
       {/* Assistant Panel */}
       <div 
-        className={`fixed bottom-4 right-4 w-[calc(100%-3rem)] md:w-[400px] h-[90vh] md:h-[600px] bg-surface border border-white/10 rounded-2xl shadow-2xl shadow-black/50 flex flex-col z-50 transition-all duration-300 transform origin-bottom-right ${isOpen ? 'scale-100 opacity-100' : 'scale-95 opacity-0 pointer-events-none'}`}
+        className={`fixed bottom-4 right-4 w-[calc(100%-3rem)] md:w-[400px] h-[75vh] md:h-[600px] bg-surface border border-white/10 rounded-2xl shadow-2xl shadow-black/50 flex flex-col z-50 transition-all duration-300 transform origin-bottom-right ${isOpen ? 'scale-100 opacity-100' : 'scale-95 opacity-0 pointer-events-none'}`}
       >
         {/* Header */}
         <div className="flex items-center justify-between p-4 border-b border-white/5 bg-surfaceHighlight rounded-t-2xl">

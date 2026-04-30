@@ -180,7 +180,7 @@ const App: React.FC = () => {
       // Upsert profile data from Clerk immediately on init if signed in
       const initialProfileData: User = {
         id: clerkUser.id,
-        username: clerkUser.username || clerkUser.fullName || 'Scholar',
+        username: clerkUser.fullName || 'Scholar',
         email: clerkUser.primaryEmailAddress?.emailAddress,
         full_name: clerkUser.fullName || undefined,
         avatar_url: clerkUser.imageUrl,
