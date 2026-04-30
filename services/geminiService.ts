@@ -78,42 +78,56 @@ function isUnavailableError(error: unknown): boolean {
   );
 }
 
+/** Priority fallback list for general generation tasks. */
+const DEFAULT_MODEL_LIST = ["gemini-2.5-flash", "gemini-2.5-flash-lite", "gemini-2.0-flash"];
+
 /**
  * Wraps an API call with automatic key rotation and model fallback.
- * On a 503 Unavailable error, it falls back to gemini-2.5-flash.
- * On a quota/rate-limit error it cycles to the next available key and retries,
- * continuing until all keys have been tried once.
+ * On a 503 Unavailable error (high demand), it falls back to the next model in the provided list.
+ * On a quota/rate-limit error (429), it cycles to the next available API key and restarts from the first model.
  */
-async function withKeyRotation<T>(fn: (ai: GoogleGenAI, modelName: string) => Promise<T>, defaultModel = "gemini-3-flash-preview"): Promise<T> {
+async function withKeyRotation<T>(
+  fn: (ai: GoogleGenAI, modelName: string) => Promise<T>, 
+  models: string | string[] = DEFAULT_MODEL_LIST
+): Promise<T> {
+  const modelList = Array.isArray(models) ? models : [models];
   const totalKeys = API_KEYS.length;
-  let attempts = 0;
-  let currentModel = defaultModel;
+  let keyAttempts = 0;
+  let modelIndex = 0;
 
-  while (attempts < totalKeys) {
+  while (keyAttempts < totalKeys) {
     try {
+      const currentModel = modelList[modelIndex];
       return await fn(getAI(), currentModel);
-    } catch (error) {
-      if (isUnavailableError(error) && currentModel === "gemini-3-flash-preview") {
-        console.warn(`Gemini 3 Flash is unavailable (503). Falling back to gemini-2.5-flash...`);
-        currentModel = "gemini-2.5-flash";
-        // Do not increment key attempts since this is a model availability issue.
+    } catch (error: any) {
+      // 1. Handle Model Availability (503 Unavailable / High Demand)
+      if (isUnavailableError(error) && modelIndex < modelList.length - 1) {
+        modelIndex++;
+        console.warn(
+          `Gemini model "${modelList[modelIndex-1]}" hit 503 (High Demand). Falling back to "${modelList[modelIndex]}"…`
+        );
         continue;
       }
 
+      // 2. Handle Quota/Rate Limits (429) via Key Rotation
       if (isQuotaError(error) && totalKeys > 1) {
         const failedKeyIndex = currentKeyIndex;
         currentKeyIndex = (currentKeyIndex + 1) % totalKeys;
+        keyAttempts++;
+        modelIndex = 0; // Reset to the primary model for the new API key
+        
         console.warn(
-          `Gemini key #${failedKeyIndex + 1} hit a usage/quota limit. Switching to key #${currentKeyIndex + 1}…`
+          `Gemini key #${failedKeyIndex + 1} hit a quota limit. Rotating to key #${currentKeyIndex + 1}…`
         );
-        attempts++;
-      } else {
-        throw error; // non-quota errors bubble up immediately
+        continue;
       }
+
+      // If we've exhausted models/keys or encountered a different error, bubble it up.
+      throw error;
     }
   }
 
-  throw new Error("All Gemini API keys have exceeded their usage limits. Please try again later.");
+  throw new Error("All Gemini API keys and fallback models have been exhausted.");
 }
 
 // PCM Decoding Helpers as per API requirements
@@ -303,9 +317,9 @@ export const geminiService = {
 
   textToSpeech: async (text: string): Promise<void> => {
     try {
-      const response = await withKeyRotation((ai) =>
+      const response = await withKeyRotation((ai, modelName) =>
         ai.models.generateContent({
-          model: "gemini-2.5-flash-preview-tts",
+          model: modelName,
           contents: [{ parts: [{ text: `Pronounce clearly: ${text}` }] }],
           config: {
             responseModalities: [Modality.AUDIO],
@@ -315,7 +329,8 @@ export const geminiService = {
               },
             },
           },
-        })
+        }),
+        "gemini-2.5-flash-preview-tts"
       );
 
       const base64Audio = response.candidates?.[0]?.content?.parts?.[0]?.inlineData?.data;
