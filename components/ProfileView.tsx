@@ -19,6 +19,7 @@ import {
   Calendar,
   ChevronDown
 } from 'lucide-react';
+import { useUser } from '@clerk/clerk-react';
 
 interface ProfileViewProps {
   user: User;
@@ -40,6 +41,7 @@ const getStartOfWeekMonday = (date: Date) => {
 };
 
 const ProfileView: React.FC<ProfileViewProps> = ({ user, tables, onBack, onUserUpdate }) => {
+  const { user: clerkUser } = useUser();
   const [tokenTransactions, setTokenTransactions] = useState<TokenTransaction[]>([]);
   const [masteryEvents, setMasteryEvents] = useState<MasteryEvent[]>([]);
   const [tokenRange, setTokenRange] = useState<TokenRange>('this-week');
@@ -51,6 +53,30 @@ const ProfileView: React.FC<ProfileViewProps> = ({ user, tables, onBack, onUserU
   useEffect(() => {
     setEditUsername(user.username);
   }, [user.username]);
+
+  const saveUsername = async () => {
+    const trimmedUsername = editUsername.trim();
+    if (!trimmedUsername || trimmedUsername === user.username) {
+      setIsEditingUsername(false);
+      setEditUsername(user.username);
+      return;
+    }
+
+    if (!clerkUser) return;
+
+    try {
+      await clerkUser.update({ username: trimmedUsername });
+      // The useEnsureProfile hook or App.tsx init logic will sync this to Supabase.
+      // We also update the local state to show the change immediately if possible.
+      onUserUpdate?.({ ...user, username: trimmedUsername });
+      setIsEditingUsername(false);
+    } catch (error: any) {
+      console.error('Error updating username in Clerk:', error);
+      alert(error.errors?.[0]?.message || 'Failed to update username. It may be already taken.');
+      setEditUsername(user.username);
+      setIsEditingUsername(false);
+    }
+  };
 
   useEffect(() => {
     const fetchData = async () => {
@@ -104,41 +130,6 @@ const ProfileView: React.FC<ProfileViewProps> = ({ user, tables, onBack, onUserU
   );
   
   const currentStreak = user.streak || 1;
-
-  const saveUsername = async () => {
-    const trimmedUsername = editUsername.trim();
-    if (!trimmedUsername || trimmedUsername === user.username) {
-      setIsEditingUsername(false);
-      setEditUsername(user.username);
-      return;
-    }
-
-    if (trimmedUsername.length < 2 || !/[a-zA-Z]/.test(trimmedUsername)) {
-      alert("Name must be at least 2 characters and contain letters.");
-      setEditUsername(user.username);
-      setIsEditingUsername(false);
-      return;
-    }
-
-    try {
-      const existingUser = await storageService.findUserByName(trimmedUsername);
-      if (existingUser && existingUser.id !== user.id) {
-        alert("This name is already taken. Please choose another.");
-        setEditUsername(user.username);
-        setIsEditingUsername(false);
-        return;
-      }
-
-      const updatedUser = { ...user, username: trimmedUsername };
-      await storageService.updateUser(updatedUser);
-      onUserUpdate?.(updatedUser);
-      setIsEditingUsername(false);
-    } catch (error) {
-      console.error('Error updating username:', error);
-      setEditUsername(user.username);
-      setIsEditingUsername(false);
-    }
-  };
 
   // Process Weekly Tokens Data
   const weeklyTokensData = useMemo(() => {
@@ -210,14 +201,17 @@ const ProfileView: React.FC<ProfileViewProps> = ({ user, tables, onBack, onUserU
       <div className="bg-surface rounded-2xl border border-white/5 shadow-lg shadow-black/20 p-6 sm:p-8 relative overflow-hidden">
         <div className="absolute top-0 right-0 w-32 h-32 bg-primary/20 rounded-full -mr-16 -mt-16 blur-2xl"></div>
         <div className="absolute bottom-0 left-0 w-24 h-24 bg-secondary/20 rounded-full -ml-12 -mb-12 blur-2xl"></div>
-        
-        <div className="relative flex flex-col sm:flex-row items-center sm:items-start gap-6">
-          <div className="w-24 h-24 rounded-full bg-surfaceHighlight text-primary flex items-center justify-center text-3xl font-bold border-4 border-surface shadow-lg">
-            {(isEditingUsername ? editUsername : user.username).charAt(0).toUpperCase()}
+               <div className="relative flex flex-col sm:flex-row items-center sm:items-start gap-6">
+          <div className="w-24 h-24 rounded-full bg-surfaceHighlight text-primary flex items-center justify-center text-3xl font-bold border-4 border-surface shadow-lg overflow-hidden">
+            {user.avatar_url ? (
+              <img src={user.avatar_url} alt={user.username} className="w-full h-full object-cover" />
+            ) : (
+              user.username.charAt(0).toUpperCase()
+            )}
           </div>
           
           <div className="flex-1 text-center sm:text-left space-y-2">
-            <div className="flex items-center justify-center sm:justify-start gap-2 group">
+            <div className="flex items-center justify-center sm:justify-start gap-3 group">
               {isEditingUsername ? (
                 <input 
                   type="text"
@@ -232,14 +226,14 @@ const ProfileView: React.FC<ProfileViewProps> = ({ user, tables, onBack, onUserU
                       setEditUsername(user.username);
                     }
                   }}
-                  className="text-2xl sm:text-5xl font-bold font-display text-text border-b-2 border-primary outline-none bg-transparent py-1"
+                  className="text-2xl sm:text-5xl font-bold font-display text-text border-b-2 border-primary outline-none bg-transparent py-1 w-full max-w-md"
                 />
               ) : (
                 <>
                   <h1 className="text-2xl sm:text-5xl font-bold font-display text-text">{user.username}</h1>
                   <button 
                     onClick={() => setIsEditingUsername(true)}
-                    className="p-2 text-muted hover:text-primary transition-all opacity-100 sm:opacity-0 sm:group-hover:opacity-100 focus:opacity-100 bg-surfaceHighlight rounded-full hover:bg-primary/10"
+                    className="p-2 text-muted hover:text-primary transition-all bg-surfaceHighlight rounded-full hover:bg-primary/10 flex items-center justify-center border border-white/5"
                     title="Edit Username"
                   >
                     <svg className="w-4 h-4 sm:w-5 sm:h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -249,6 +243,10 @@ const ProfileView: React.FC<ProfileViewProps> = ({ user, tables, onBack, onUserU
                 </>
               )}
             </div>
+            
+            {user.full_name && (
+              <p className="text-muted font-medium">{user.full_name}</p>
+            )}
             
             <div className="flex flex-wrap justify-center sm:justify-start gap-3 mt-4">
               <div className="flex items-center space-x-1.5 bg-orange-500/10 text-orange-500 px-3 py-1 rounded-full border border-orange-500/20">

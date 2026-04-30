@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { Eye, EyeOff } from 'lucide-react';
+import { useUser, useAuth, SignedIn, SignedOut, SignIn, SignUp } from '@clerk/clerk-react';
 import { User, VocabTable, GameMode } from './types';
 import { storageService } from './services/storageService';
 import Layout from './components/Layout';
-import Auth from './components/Auth';
 import Dashboard from './components/Dashboard';
 import TableCreator from './components/TableCreator';
 import TableView from './components/TableView';
@@ -19,10 +19,15 @@ import DailyStreakPopup from './components/DailyStreakPopup';
 import SystemArchives from './components/SystemArchives';
 import { geminiService } from './services/geminiService';
 import { Analytics } from '@vercel/analytics/react';
+import { useEnsureProfile } from './hooks/useEnsureProfile';
+
 type ViewState = 'home' | 'collections' | 'scratchpad' | 'create' | 'view' | 'public_shared' | 'study' | 'context-learning' | 'matching' | 'profile' | 'system-archives';
 
 const App: React.FC = () => {
-  const [user, setUser] = useState<User | null>(null);
+  const { user: clerkUser, isLoaded: isClerkLoaded } = useUser();
+  const { isLoaded: isAuthLoaded, isSignedIn, signOut } = useAuth();
+  
+  const [dbUser, setDbUser] = useState<User | null>(null);
   const [tables, setTables] = useState<VocabTable[]>([]);
   const [view, setView] = useState<ViewState>('home');
   const [activeTable, setActiveTable] = useState<VocabTable | null>(null);
@@ -32,35 +37,19 @@ const App: React.FC = () => {
   const [matchingGameMode, setMatchingGameMode] = useState<GameMode>('synonyms');
   const [toast, setToast] = useState<{ message: string; type: 'success' | 'info' } | null>(null);
   const [streakPopup, setStreakPopup] = useState<{ streak: number; tokens: number } | null>(null);
-  const [showPasswordUpdate, setShowPasswordUpdate] = useState(false);
-  const [newPassword, setNewPassword] = useState('');
-  const [isUpdatingPassword, setIsUpdatingPassword] = useState(false);
-  const [showNewPassword, setShowNewPassword] = useState(false);
+
+  // Sync Clerk user with Supabase profiles table
+  useEnsureProfile();
 
   useEffect(() => {
-    const unsubscribe = storageService.onPasswordRecovery(() => {
-      setShowPasswordUpdate(true);
-    });
-    return () => unsubscribe();
-  }, []);
-
-  const handleUpdatePassword = async () => {
-    if (newPassword.length < 4) {
-       showToast("Password must be at least 4 characters.", 'info');
-       return;
+    if (isSignedIn && clerkUser) {
+      initApp();
+    } else if (isAuthLoaded && !isSignedIn) {
+      setDbUser(null);
+      setTables([]);
+      setIsInitializing(false);
     }
-    setIsUpdatingPassword(true);
-    const { error } = await storageService.updateAuthPassword(newPassword);
-    setIsUpdatingPassword(false);
-    
-    if (error) {
-       showToast("Failed to update password: " + error.message, 'info');
-    } else {
-       showToast("Password set successfully!");
-       setShowPasswordUpdate(false);
-       setNewPassword('');
-    }
-  };
+  }, [isSignedIn, clerkUser, isAuthLoaded]);
 
   const showToast = (message: string, type: 'success' | 'info' = 'success') => {
     setToast({ message, type });
@@ -68,18 +57,14 @@ const App: React.FC = () => {
   };
 
   const recordTokenChange = async (amount: number, reason: string, targetUserId?: string): Promise<number | null> => {
-    const uid = targetUserId || user?.id;
+    const uid = targetUserId || dbUser?.id;
     if (!uid) return null;
 
     try {
-      // 1. Get latest snapshot to ensure we don't use stale tokens
       const latestUser = await storageService.getUserById(uid);
       const currentTokens = latestUser?.tokens ?? 0;
       const newTokens = currentTokens + amount;
       
-      console.log(`Recording token change: ${amount} for ${uid}. Previous: ${currentTokens}, New: ${newTokens}. Reason: ${reason}`);
-
-      // 2. Add the transaction log (audit trail)
       await storageService.addTokenTransaction({
         id: crypto.randomUUID(),
         userId: uid,
@@ -88,15 +73,10 @@ const App: React.FC = () => {
         createdAt: Date.now()
       });
 
-      // 3. Update the users table DIRECTLY with the new absolute value
       const success = await storageService.updateUserTokens(uid, newTokens);
-      if (!success) {
-        console.error("Failed to update tokens in users table.");
-        return null;
-      }
+      if (!success) return null;
 
-      console.log(`Token update successful in Supabase. New balance: ${newTokens}`);
-      setUser(prev => (prev ? { ...prev, tokens: newTokens } : prev));
+      setDbUser(prev => (prev ? { ...prev, tokens: newTokens } : prev));
       return newTokens;
     } catch (err) {
       console.error("CRITICAL: Failed to record token change:", err);
@@ -106,21 +86,17 @@ const App: React.FC = () => {
   };
 
   const addTokens = async (amount: number, reason?: string) => {
-    if (!user) return;
+    if (!dbUser) return;
     await recordTokenChange(amount, reason || 'Earned tokens');
-
-    if (reason) {
-      showToast(`+${amount} Tokens: ${reason}`);
-    }
+    if (reason) showToast(`+${amount} Tokens: ${reason}`);
   };
 
   const spendTokens = async (amount: number, reason?: string): Promise<boolean> => {
-    if (!user) return false;
+    if (!dbUser) return false;
 
-    // We still fetch latest user here to be sure the check is accurate
-    const latestUser = await storageService.getUserById(user.id);
-    const availableTokens = latestUser?.tokens ?? user.tokens ?? 0;
-    setUser(prev => (prev ? { ...prev, tokens: availableTokens } : prev));
+    const latestUser = await storageService.getUserById(dbUser.id);
+    const availableTokens = latestUser?.tokens ?? dbUser.tokens ?? 0;
+    setDbUser(prev => (prev ? { ...prev, tokens: availableTokens } : prev));
 
     if (availableTokens < amount) {
       showToast(`Not enough tokens! You need ${amount} tokens.`, 'info');
@@ -134,34 +110,21 @@ const App: React.FC = () => {
     return result !== null;
   };
 
-  /**
-   * Safely merges a partial user update into the current state using a functional
-   * update, so it NEVER overwrites fields (like `tokens`) that may have been
-   * updated by concurrent async operations.
-   */
   const mergeUser = (partial: Partial<User>) => {
-    setUser(prev => (prev ? { ...prev, ...partial } : prev));
+    setDbUser(prev => (prev ? { ...prev, ...partial } : prev));
   };
 
-
   const checkDailyAward = async (currentUser: User) => {
-    // Always use the latest user snapshot from Supabase for cross-device/tab consistency.
     const latestUser = await storageService.getUserById(currentUser.id);
     const baseUser = latestUser || currentUser;
 
     const today = new Date();
     const todayStr = today.toISOString().split('T')[0];
 
-    // Already awarded today — do nothing
     if (baseUser.lastDailyAwardDate === todayStr) {
-      if (latestUser) setUser(latestUser);
+      if (latestUser) setDbUser(latestUser);
       return;
     }
-
-    // Prepare update data first to prevent race conditions from other tabs
-    // We'll update the lastDailyAwardDate immediately in Supabase before awarding tokens
-    // if we want to be truly atomic, but for this app, we'll just be more careful
-    // with the order and state.
 
     let newStreak: number;
     if (baseUser.lastDailyAwardDate) {
@@ -174,7 +137,6 @@ const App: React.FC = () => {
       } else if (diffDays > 1) {
         newStreak = 1;
       } else {
-        // diffDays <= 0 means already awarded or some clock issue
         return;
       }
     } else {
@@ -182,20 +144,13 @@ const App: React.FC = () => {
     }
 
     const tokensAwarded = 10;
-    
-    // 1. Update the user record with the new date and streak FIRST
-    // This marks them as "awarded for today" in the DB.
     const awardFlagUser: User = {
       ...baseUser,
       lastDailyAwardDate: todayStr,
       streak: newStreak
     };
     
-    // We use a temporary state update to show progress if needed, 
-    // but the DB is the source of truth.
-    await storageService.updateUser(awardFlagUser);
-
-    // 2. NOW record the token transaction
+    await storageService.updateProfile(awardFlagUser);
     const syncedTokens = await recordTokenChange(tokensAwarded, 'Daily Scholar Award', awardFlagUser.id);
     
     const finalUser: User = {
@@ -203,9 +158,7 @@ const App: React.FC = () => {
       tokens: syncedTokens ?? (awardFlagUser.tokens || 0)
     };
     
-    setUser(finalUser);
-    
-    // Show the streak popup
+    setDbUser(finalUser);
     setStreakPopup({ streak: newStreak, tokens: tokensAwarded });
   };
 
@@ -222,22 +175,27 @@ const App: React.FC = () => {
   };
 
   const initApp = async () => {
+    if (!clerkUser) return;
     try {
-      const currentUser = await storageService.getCurrentUser();
-      if (currentUser) {
-        setUser(currentUser);
-        await fetchUserTables(currentUser.id);
-        
-        // Sync tokens on init to ensure consistency from previous sessions/tabs
-        console.log("Syncing tokens on initialization...");
-        const syncedTokens = await storageService.syncUserTokenBalanceFromTransactions(currentUser.id);
-        if (syncedTokens !== null) {
-          setUser(prev => (prev ? { ...prev, tokens: syncedTokens } : prev));
-        }
-
-        // Check for daily award/streak immediately after loading user
-        await checkDailyAward(currentUser);
+      // Upsert profile data from Clerk immediately on init if signed in
+      const initialProfileData: User = {
+        id: clerkUser.id,
+        username: clerkUser.username || clerkUser.fullName || 'Scholar',
+        email: clerkUser.primaryEmailAddress?.emailAddress,
+        full_name: clerkUser.fullName || undefined,
+        avatar_url: clerkUser.imageUrl,
+      };
+      
+      const syncedUser = await storageService.upsertProfile(initialProfileData);
+      setDbUser(syncedUser);
+      await fetchUserTables(clerkUser.id);
+      
+      const syncedTokens = await storageService.syncUserTokenBalanceFromTransactions(clerkUser.id);
+      if (syncedTokens !== null) {
+        setDbUser(prev => (prev ? { ...prev, tokens: syncedTokens } : prev));
       }
+
+      await checkDailyAward(syncedUser);
     } catch (e) {
       console.error('Lexicon Initialization Failed:', e);
     } finally {
@@ -245,7 +203,7 @@ const App: React.FC = () => {
     }
   };
 
-  // Restore view from URL parameters on app load
+  // Restoration logic remains similar
   const restoreViewFromURL = () => {
     const params = new URLSearchParams(window.location.search);
     const viewParam = params.get('view');
@@ -266,10 +224,8 @@ const App: React.FC = () => {
     }
   };
 
-  // Update URL when view changes
   const updateURL = (newView: ViewState, table?: VocabTable | null) => {
     const url = new URL(window.location.href);
-    
     if (newView === 'home') {
       url.searchParams.delete('view');
       url.searchParams.delete('table');
@@ -281,101 +237,47 @@ const App: React.FC = () => {
         url.searchParams.delete('table');
       }
     }
-    
     window.history.replaceState({}, '', url.toString());
   };
 
   useEffect(() => {
-    initApp();
-  }, []);
-
-  // Separate effect to handle URL restoration after user and tables are loaded
-  useEffect(() => {
-    if (!isInitializing && (user || tables.length > 0)) {
+    if (!isInitializing && (dbUser || tables.length > 0)) {
       restoreViewFromURL();
     }
-  }, [isInitializing, user?.id, tables.length]);
+  }, [isInitializing, dbUser?.id, tables.length]);
 
-  // Handle shared collections separately
-  useEffect(() => {
-    const params = new URLSearchParams(window.location.search);
-    const sharedData = params.get('share');
-    if (sharedData) {
-      try {
-        const decodedStr = decodeURIComponent(atob(sharedData).split('').map((c) => {
-          return '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2);
-        }).join(''));
-        const raw = JSON.parse(decodedStr);
-        const table: VocabTable = {
-          id: 'shared-' + Date.now(),
-          userId: 'public',
-          title: raw.t || 'Shared Collection',
-          description: raw.d || '',
-          links: raw.l || [],
-          createdAt: raw.c || Date.now(),
-          entries: (raw.e || []).map((e: any) => ({
-            id: crypto.randomUUID(),
-            word: e.w,
-            partOfSpeech: e.p,
-            meaning: e.m,
-            synonyms: e.s,
-            sentence: e.sen || e.ex || '',
-            progress: e.pr || 0
-          }))
-        };
-        setActiveTable(table);
-        setView('public_shared');
-      } catch (e) {
-        console.error('Failed to decode shared collection:', e);
-      }
-    }
-  }, []);
-
-  // Update URL when view changes
   useEffect(() => {
     if (!isInitializing && view !== 'public_shared') {
       updateURL(view, activeTable);
     }
   }, [view, activeTable, isInitializing]);
 
-  // Listen for visibility changes to check for daily awards (e.g., coming back the next day)
   useEffect(() => {
     const handleVisibilityChange = () => {
-      if (document.visibilityState === 'visible' && user) {
-        checkDailyAward(user);
+      if (document.visibilityState === 'visible' && dbUser) {
+        checkDailyAward(dbUser);
       }
     };
-
-    // Periodic check every 30 minutes in case the tab is left open
     const checkInterval = setInterval(() => {
-      if (user) checkDailyAward(user);
+      if (dbUser) checkDailyAward(dbUser);
     }, 1000 * 60 * 30);
-
     document.addEventListener('visibilitychange', handleVisibilityChange);
-
     return () => {
       document.removeEventListener('visibilitychange', handleVisibilityChange);
       clearInterval(checkInterval);
     };
-  }, [user?.id]);
+  }, [dbUser?.id]);
 
-  const handleLogin = async (newUser: User) => {
-    setUser(newUser);
-    await fetchUserTables(newUser.id);
-    await checkDailyAward(newUser);
-    // Don't reset to home, let the URL restoration handle it
-    const params = new URLSearchParams(window.location.search);
-    const viewParam = params.get('view');
-    if (!viewParam) {
-      setView('home');
-    }
+  const handleNavigateToTable = (table: VocabTable) => {
+    setActiveTable(table);
+    setView('view');
   };
 
   const handleSaveTable = async (table: VocabTable) => {
     setIsFetching(true);
     try {
       await storageService.saveTable(table);
-      await fetchUserTables(user!.id);
+      await fetchUserTables(dbUser!.id);
       setActiveTable(table);
       setView('view');
     } catch (err) {
@@ -389,9 +291,9 @@ const App: React.FC = () => {
     setIsFetching(true);
     try {
       await storageService.deleteTable(id);
-      await fetchUserTables(user!.id);
+      await fetchUserTables(dbUser!.id);
       setActiveTable(null);
-      handleNavigateToDashboard();
+      setView('collections');
     } catch (err) {
       console.error("Delete failed:", err);
     } finally {
@@ -413,29 +315,22 @@ const App: React.FC = () => {
 
   const handleUpdateEntryProgress = async (entryId: string, isKnown: boolean) => {
     if (!activeTable) return;
-
     let masteredWord: string | null = null;
-
     const updatedEntries = activeTable.entries.map(entry => {
       if (entry.id === entryId) {
         const currentProgress = entry.progress || 0;
         let newProgress = isKnown ? currentProgress + 20 : currentProgress - 35;
         newProgress = Math.max(0, Math.min(100, newProgress));
-        
-        // Check if just mastered
-        if (currentProgress < 80 && newProgress >= 80) {
-          masteredWord = entry.word;
-        }
-        
+        if (currentProgress < 80 && newProgress >= 80) masteredWord = entry.word;
         return { ...entry, progress: newProgress };
       }
       return entry;
     });
 
-    if (masteredWord && user) {
+    if (masteredWord && dbUser) {
       await storageService.addMasteryEvent({
         id: crypto.randomUUID(),
-        userId: user.id,
+        userId: dbUser.id,
         word: masteredWord,
         createdAt: Date.now()
       });
@@ -447,23 +342,18 @@ const App: React.FC = () => {
 
   const handleEnterContextLearning = async () => {
     if (!activeTable) return;
-    
     if (activeTable.contextPassage) {
       setView('context-learning');
       return;
     }
-
-    if (user) {
-      const newUsage = await storageService.incrementLimitUsage(user, 'narratives_used');
+    if (dbUser) {
+      const newUsage = await storageService.incrementLimitUsage(dbUser, 'narratives_used');
       if (newUsage === null) {
         showToast("Daily limit reached! You can only generate 2 narratives per day.", 'info');
         return;
       }
-      
-      // Update state selectively using a functional update to avoid overwriting tokens
-      setUser(prev => prev ? { ...prev, narratives_used: newUsage } : prev);
+      setDbUser(prev => prev ? { ...prev, narratives_used: newUsage } : prev);
     }
-
     setIsFetching(true);
     try {
       const words = activeTable.entries.map(e => e.word);
@@ -480,41 +370,7 @@ const App: React.FC = () => {
     }
   };
 
-  const handleLogout = async () => {
-    await storageService.logout();
-    setUser(null);
-    setTables([]);
-    setView('home');
-    // Clear URL parameters on logout
-    window.history.replaceState({}, '', window.location.pathname);
-  };
-
-  const handleNavigateToTable = (table: VocabTable) => {
-    setActiveTable(table);
-    setView('view');
-  };
-
-  const handleNavigateToProfile = () => {
-    setView('profile');
-  };
-
-  const handleNavigateToDashboard = () => {
-    setView('collections');
-  };
-
-  const handleNavigateToCreate = () => {
-    setView('scratchpad');
-  };
-
-  const handleNavigateToHome = () => {
-    setView('home');
-  };
-
-  const handleNavigateToArchives = () => {
-    setView('system-archives');
-  };
-
-  if (isInitializing) {
+  if (!isClerkLoaded || isInitializing) {
     return (
       <div className="min-h-screen flex items-center justify-center bg-background p-6">
         <div className="flex flex-col items-center space-y-6 text-center">
@@ -525,6 +381,7 @@ const App: React.FC = () => {
     );
   }
 
+  // Handle Shared View for non-authenticated or authenticated
   if (view === 'public_shared' && activeTable) {
     return (
       <div className="bg-gray-50 min-h-screen">
@@ -542,186 +399,194 @@ const App: React.FC = () => {
   }
 
   return (
-    <Layout 
-      user={user} 
-      tables={tables}
-      onLogout={handleLogout} 
-      onNavigateToTable={handleNavigateToTable}
-      onNavigateToProfile={handleNavigateToProfile}
-      onNavigateToDashboard={handleNavigateToDashboard}
-      onNavigateToCreate={handleNavigateToCreate}
-      onNavigateToHome={handleNavigateToHome}
-      onNavigateToArchives={handleNavigateToArchives}
-      onSpendTokens={spendTokens}
-      onUserUpdate={mergeUser}
-    >
-      {!user ? (
-        <Auth onLogin={handleLogin} />
-      ) : (
-        <>
-          {view === 'home' && (
-            <HomePage 
-              user={user}
-              tables={tables}
-              onNavigateToTable={handleNavigateToTable}
-              onNavigateToCreate={handleNavigateToDashboard}
-              onNavigateToArchives={handleNavigateToArchives}
-            />
-          )}
+    <>
+      <SignedIn>
+        {dbUser && (
+          <Layout 
+            user={dbUser} 
+            tables={tables}
+            onLogout={() => {
+              signOut();
+            }} 
+            onNavigateToTable={handleNavigateToTable}
+            onNavigateToProfile={() => setView('profile')}
+            onNavigateToDashboard={() => setView('collections')}
+            onNavigateToCreate={() => setView('scratchpad')}
+            onNavigateToHome={() => setView('home')}
+            onNavigateToArchives={() => setView('system-archives')}
+            onSpendTokens={spendTokens}
+            onUserUpdate={mergeUser}
+          >
+            {view === 'home' && (
+              <HomePage 
+                user={dbUser}
+                tables={tables}
+                onNavigateToTable={handleNavigateToTable}
+                onNavigateToCreate={() => setView('collections')}
+                onNavigateToArchives={() => setView('system-archives')}
+              />
+            )}
 
-          {view === 'collections' && (
-            <CollectionsPage 
-              user={user}
-              tables={tables} 
-              onSelectTable={handleNavigateToTable}
-              onCreateNew={() => setView('create')}
-            />
-          )}
+            {view === 'collections' && (
+              <CollectionsPage 
+                user={dbUser}
+                tables={tables} 
+                onSelectTable={handleNavigateToTable}
+                onCreateNew={() => setView('create')}
+              />
+            )}
 
-          {view === 'profile' && (
-            <ProfileView 
-              user={user}
-              tables={tables}
-              onBack={handleNavigateToHome}
-              onUserUpdate={mergeUser}
-            />
-          )}
+            {view === 'profile' && (
+              <ProfileView 
+                user={dbUser}
+                tables={tables}
+                onBack={() => setView('home')}
+                onUserUpdate={mergeUser}
+              />
+            )}
 
-          {view === 'scratchpad' && (
-            <ScratchpadPage user={user} />
-          )}
+            {view === 'scratchpad' && <ScratchpadPage user={dbUser} />}
 
-          {view === 'create' && (
-            <TableCreator 
-              user={user} 
-              onSave={handleSaveTable}
-              onCancel={handleNavigateToDashboard}
-              isSaving={isFetching}
-            />
-          )}
+            {view === 'create' && (
+              <TableCreator 
+                user={dbUser} 
+                onSave={handleSaveTable}
+                onCancel={() => setView('collections')}
+                isSaving={isFetching}
+              />
+            )}
 
-          {view === 'view' && activeTable && (
-            <TableView 
-              user={user}
-              table={activeTable}
-              onBack={activeTable.userId === 'system' || activeTable.id.startsWith('system-') ? handleNavigateToArchives : handleNavigateToDashboard}
-              onDelete={handleDeleteTable}
-              onStudy={(excludeMastered) => {
-                setStudyExcludeMastered(excludeMastered);
-                setView('study');
-              }}
-              onLearnContext={handleEnterContextLearning}
-              onMatchingGame={(mode) => {
-                setMatchingGameMode(mode);
-                setView('matching');
-              }}
-              onUpdateTable={handleUpdateTable}
-              onUserUpdate={mergeUser}
-              isFetching={isFetching}
-            />
-          )}
+            {view === 'view' && activeTable && (
+              <TableView 
+                user={dbUser}
+                table={activeTable}
+                onBack={activeTable.userId === 'system' || activeTable.id.startsWith('system-') ? () => setView('system-archives') : () => setView('collections')}
+                onDelete={handleDeleteTable}
+                onStudy={(excludeMastered) => {
+                  setStudyExcludeMastered(excludeMastered);
+                  setView('study');
+                }}
+                onLearnContext={handleEnterContextLearning}
+                onMatchingGame={(mode) => {
+                  setMatchingGameMode(mode);
+                  setView('matching');
+                }}
+                onUpdateTable={handleUpdateTable}
+                onUserUpdate={mergeUser}
+                isFetching={isFetching}
+              />
+            )}
 
-          {view === 'study' && activeTable && (
-            <FlashcardView 
-              user={user}
-              table={activeTable}
-              excludeMastered={studyExcludeMastered}
-              onBack={() => setView('view')}
-              onUpdateProgress={handleUpdateEntryProgress}
-              onAwardTokens={(amount, reason) => addTokens(amount, reason)}
-            />
-          )}
+            {view === 'study' && activeTable && (
+              <FlashcardView 
+                user={dbUser}
+                table={activeTable}
+                excludeMastered={studyExcludeMastered}
+                onBack={() => setView('view')}
+                onUpdateProgress={handleUpdateEntryProgress}
+                onAwardTokens={(amount, reason) => addTokens(amount, reason)}
+              />
+            )}
 
-          {view === 'context-learning' && activeTable && activeTable.contextPassage && (
-            <ContextLearningView
-              table={activeTable}
-              onBack={() => setView('view')}
-            />
-          )}
+            {view === 'context-learning' && activeTable && activeTable.contextPassage && (
+              <ContextLearningView
+                table={activeTable}
+                onBack={() => setView('view')}
+              />
+            )}
 
-          {view === 'matching' && activeTable && (
-            <MatchingGameView
-              table={activeTable}
-              initialMode={matchingGameMode}
-              onBack={() => setView('view')}
-              onUpdateTable={handleUpdateTable}
-              onAwardTokens={(amount, reason) => addTokens(amount, reason)}
-            />
-          )}
-          
-          {view === 'system-archives' && (
-            <SystemArchives 
-              user={user} 
-              tables={tables}
-              onNavigateToSystemTable={handleNavigateToTable} 
-              onSpendTokens={spendTokens}
-              onUserUpdate={mergeUser}
-            />
-          )}
+            {view === 'matching' && activeTable && (
+              <MatchingGameView
+                table={activeTable}
+                initialMode={matchingGameMode}
+                onBack={() => setView('view')}
+                onUpdateTable={handleUpdateTable}
+                onAwardTokens={(amount, reason) => addTokens(amount, reason)}
+              />
+            )}
+            
+            {view === 'system-archives' && (
+              <SystemArchives 
+                user={dbUser} 
+                tables={tables}
+                onNavigateToSystemTable={handleNavigateToTable} 
+                onSpendTokens={spendTokens}
+                onUserUpdate={mergeUser}
+              />
+            )}
 
-          {streakPopup && (
-            <DailyStreakPopup
-              streak={streakPopup.streak}
-              tokensAwarded={streakPopup.tokens}
-              onClose={() => setStreakPopup(null)}
-            />
-          )}
+            {streakPopup && (
+              <DailyStreakPopup
+                streak={streakPopup.streak}
+                tokensAwarded={streakPopup.tokens}
+                onClose={() => setStreakPopup(null)}
+              />
+            )}
 
-          {toast && (
-            <div className="fixed top-24 left-1/2 -translate-x-1/2 z-[200] animate-in slide-in-from-top-4 duration-300">
-              <div className={`px-6 py-3 rounded-full shadow-2xl border flex items-center space-x-3 ${
-                toast.type === 'success' ? 'bg-purple-500 text-white border-purple-500/20' : 'bg-surfaceHighlight text-purple-500 border-purple-500/30'
-              }`}>
-                <div className="w-2 h-2 rounded-full bg-current animate-pulse"></div>
-                <span className="text-xs font-bold uppercase tracking-widest">{toast.message}</span>
-              </div>
-            </div>
-          )}
-
-          {isFetching && (
-             <div className="fixed bottom-8 right-8 bg-black text-white px-4 py-2 rounded-full text-[10px] font-bold tracking-widest animate-pulse z-50 shadow-2xl">
-               SYNCING...
-             </div>
-          )}
-
-          {showPasswordUpdate && (
-            <div className="fixed inset-0 bg-black/80 backdrop-blur-sm z-[300] flex items-center justify-center p-6 animate-in fade-in duration-300">
-              <div className="bg-surface border border-white/10 rounded-3xl p-8 w-full max-w-sm shadow-2xl relative text-center">
-                <h3 className="text-2xl font-bold text-text font-display mb-2">New Access Code</h3>
-                <p className="text-xs text-muted mb-6">Please enter your new secure password below to finalize the recovery process.</p>
-                
-                <div className="relative mb-6">
-                  <input 
-                    type={showNewPassword ? "text" : "password"}
-                    value={newPassword}
-                    onChange={(e) => setNewPassword(e.target.value)}
-                    placeholder="New Access Code"
-                    className="w-full p-4 bg-surfaceHighlight border border-white/5 rounded-xl focus:bg-surfaceHighlight focus:border-primary text-text placeholder-muted transition-all text-base font-sans pr-14"
-                  />
-                  <button
-                    type="button"
-                    onClick={() => setShowNewPassword(!showNewPassword)}
-                    className="absolute right-4 top-1/2 -translate-y-1/2 text-muted hover:text-text transition-colors p-2"
-                    tabIndex={-1}
-                  >
-                    {showNewPassword ? <EyeOff className="w-5 h-5" /> : <Eye className="w-5 h-5" />}
-                  </button>
+            {toast && (
+              <div className="fixed top-24 left-1/2 -translate-x-1/2 z-[200] animate-in slide-in-from-top-4 duration-300">
+                <div className={`px-6 py-3 rounded-full shadow-2xl border flex items-center space-x-3 ${
+                  toast.type === 'success' ? 'bg-purple-500 text-white border-purple-500/20' : 'bg-surfaceHighlight text-purple-500 border-purple-500/30'
+                }`}>
+                  <div className="w-2 h-2 rounded-full bg-current animate-pulse"></div>
+                  <span className="text-xs font-bold uppercase tracking-widest">{toast.message}</span>
                 </div>
-                
-                <button
-                  onClick={handleUpdatePassword}
-                  disabled={isUpdatingPassword || newPassword.length < 4}
-                  className="w-full bg-primary text-white py-4 rounded-full font-bold uppercase tracking-[0.2em] text-xs hover:bg-secondary transition-all disabled:opacity-50"
-                >
-                  {isUpdatingPassword ? 'Saving...' : 'Set Password'}
-                </button>
               </div>
+            )}
+
+            {isFetching && (
+               <div className="fixed bottom-8 right-8 bg-black text-white px-4 py-2 rounded-full text-[10px] font-bold tracking-widest animate-pulse z-50 shadow-2xl">
+                 SYNCING...
+               </div>
+            )}
+            <Analytics />
+          </Layout>
+        )}
+      </SignedIn>
+      <SignedOut>
+        <div className="min-h-screen flex flex-col items-center justify-center bg-background p-6">
+          <div className="flex flex-col items-center mb-8 animate-in fade-in slide-in-from-top-4 duration-1000">
+            <div className="w-14 h-14 sm:w-14 sm:h-14 flex items-center justify-center mb-5 drop-shadow-[0_0_20px_rgba(66,154,218,0.4)]">
+              <img src="/logo.svg" className="object-contain w-full h-full" alt="Logo" />
             </div>
-          )}
-        </>
-      )}
-    <Analytics />
-    </Layout>
+            <div className="flex flex-col items-center text-center">
+              <h1 className="text-3xl sm:text-4xl font-bold tracking-tight text-text leading-none font-display">Lexicon</h1>
+              <span className="text-muted font-bold text-[8px] sm:text-[10px] uppercase tracking-[0.5em] mt-1 -mr-[0.5em]">AI Journal</span>
+            </div>
+          </div>
+          
+          <div className="w-full max-w-[400px] mx-auto animate-in fade-in zoom-in-95 duration-700 delay-300">
+            <SignIn 
+              routing="hash" 
+              appearance={{
+                elements: {
+                  rootBox: 'mx-auto w-full flex justify-center',
+                  card: 'bg-surface border border-white/5 shadow-2xl rounded-3xl overflow-hidden mx-auto w-full',
+                  formButtonPrimary: 'bg-primary hover:bg-primary/90 text-sm font-bold uppercase tracking-widest py-3 rounded-xl transition-all shadow-lg shadow-primary/20',
+                  headerTitle: 'font-display text-text text-2xl font-bold text-center w-full',
+                  headerSubtitle: 'text-muted text-sm text-center w-full',
+                  socialButtonsBlockButton: 'bg-surfaceHighlight border border-white/5 text-text hover:bg-white/5 transition-all rounded-xl',
+                  socialButtonsBlockButtonText: 'text-text font-medium',
+                  formFieldLabel: 'text-muted text-[10px] uppercase tracking-widest font-bold mb-2',
+                  formFieldInput: 'bg-surfaceHighlight border border-white/5 text-text rounded-xl p-3 focus:border-primary/50 transition-all',
+                  footerActionLink: 'text-primary hover:text-primary/80 font-bold',
+                  identityPreviewText: 'text-text',
+                  identityPreviewEditButtonIcon: 'text-primary'
+                },
+                variables: {
+                  colorPrimary: '#429ada',
+                  colorBackground: '#13161c',
+                  colorText: '#e3e3e3',
+                  colorTextSecondary: '#9ca3af',
+                  colorInputBackground: '#1e232b',
+                  colorInputText: '#e3e3e3',
+                }
+              }}
+            />
+          </div>
+        </div>
+      </SignedOut>
+    </>
   );
 };
 

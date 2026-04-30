@@ -2,149 +2,73 @@
 import { User, VocabTable, TokenTransaction, MasteryEvent } from '../types';
 import { supabase } from './supabaseClient';
 
-const KEYS = {
-  USER: 'lexicon_user', // Current logged in session
-};
-
 export const storageService = {
   getUserById: async (userId: string): Promise<User | null> => {
     const { data, error } = await supabase
-      .from('users')
+      .from('profiles')
       .select('*')
       .eq('id', userId)
       .single();
 
     if (error) {
-      console.error('Error fetching user by id:', error);
+      console.error('Error fetching profile by id:', error);
       return null;
     }
 
     return data || null;
   },
 
-  getCurrentUser: async (): Promise<User | null> => {
-    // Check Supabase Auth
-    const { data: { user: authUser } } = await supabase.auth.getUser();
-    
-    if (authUser) {
-      // Sync local DB user
-      const { data } = await supabase
-        .from('users')
-        .select('*')
-        .eq('id', authUser.id)
-        .single();
-        
-      if (data) {
-        const finalUser = { ...data, email: authUser.email };
-        localStorage.setItem(KEYS.USER, JSON.stringify(finalUser));
-        return finalUser;
-      }
-    }
 
-    const userStr = localStorage.getItem(KEYS.USER);
-    if (!userStr) return null;
-    
-    const localUser: User = JSON.parse(userStr);
-    
-    // Fetch latest user data from Supabase to ensure tokens and streak are synced
-    const { data, error } = await supabase
-      .from('users')
+  upsertProfile: async (user: User) => {
+    console.log('storageService.upsertProfile: Starting for', user.id);
+    const { data: existing, error: fetchError } = await supabase
+      .from('profiles')
       .select('*')
-      .eq('id', localUser.id)
+      .eq('id', user.id)
       .single();
-      
-    if (!data) {
-      // If user doesn't exist in Supabase, insert them
-      const { error: insertError } = await supabase.from('users').insert([localUser]);
-      if (insertError) {
-        console.error('Error syncing user to Supabase:', insertError);
-      }
-      return localUser;
+
+    if (fetchError && fetchError.code !== 'PGRST116') {
+      console.warn('storageService.upsertProfile: Fetch error (ignored if not found):', fetchError);
     }
-    
-    // Update local storage with latest data from Supabase
-    const syncedUser = { ...localUser, ...data };
-    localStorage.setItem(KEYS.USER, JSON.stringify(syncedUser));
-    
-    return syncedUser;
-  },
 
-  signInWithEmail: async (email: string, password: string) => {
-    return await supabase.auth.signInWithPassword({ email, password });
-  },
+    const profileToSave = existing 
+      ? { ...existing, ...user, tokens: existing.tokens, streak: existing.streak }
+      : { ...user, tokens: 0, streak: 1 };
 
-  signUpWithEmail: async (email: string, password: string, username: string) => {
-    const { data, error } = await supabase.auth.signUp({ 
-      email, 
-      password 
-    });
-    
-    if (data.user && !error) {
-      // Insert custom user record without plain text password
-      const newUser: User = {
-        id: data.user.id,
-        username,
-        email,
-        streak: 1,
-        tokens: 0,
-      };
-      await supabase.from('users').upsert([newUser]);
-      localStorage.setItem(KEYS.USER, JSON.stringify(newUser));
-    }
-    return { data, error };
-  },
+    console.log('storageService.upsertProfile: Upserting data:', profileToSave);
 
-  sendPasswordReset: async (email: string) => {
-    return await supabase.auth.resetPasswordForEmail(email, {
-      redirectTo: window.location.origin
-    });
-  },
-
-  onPasswordRecovery: (callback: () => void) => {
-    const { data } = supabase.auth.onAuthStateChange((event, session) => {
-      if (event === 'PASSWORD_RECOVERY') {
-        callback();
-      }
-    });
-    return data.subscription.unsubscribe;
-  },
-
-  updateAuthPassword: async (password: string) => {
-    return await supabase.auth.updateUser({ password });
-  },
-
-  setCurrentUser: async (user: User) => {
-    localStorage.setItem(KEYS.USER, JSON.stringify(user));
-    
-    // Also ensure they are in the registry
-    const { error } = await supabase
-      .from('users')
-      .upsert([user]);
+    const { data, error } = await supabase
+      .from('profiles')
+      .upsert([profileToSave])
+      .select();
 
     if (error) {
-      console.error('Error syncing user to Supabase:', error);
+      console.error('storageService.upsertProfile: DATABASE ERROR:', error);
+      throw error;
+    } else {
+      console.log('storageService.upsertProfile: DATABASE SUCCESS:', data);
     }
+    return profileToSave;
   },
 
-  updateUser: async (user: User) => {
-    localStorage.setItem(KEYS.USER, JSON.stringify(user));
+  updateProfile: async (user: User) => {
     const { error } = await supabase
-      .from('users')
+      .from('profiles')
       .upsert([user]);
-    if (error) console.error('Error updating user:', error);
+    if (error) console.error('Error updating profile:', error);
   },
 
-  updateUserField: async (userId: string, field: keyof User, value: any) => {
+  updateProfileField: async (userId: string, field: keyof User, value: any) => {
     const { error } = await supabase
-      .from('users')
+      .from('profiles')
       .update({ [field]: value })
       .eq('id', userId);
-    if (error) console.error(`Error updating user field ${field}:`, error);
+    if (error) console.error(`Error updating profile field ${field}:`, error);
   },
 
-  findUserByName: async (username: string): Promise<User | null> => {
+  findProfileByName: async (username: string): Promise<User | null> => {
     const { data } = await supabase
-      .from('users')
+      .from('profiles')
       .select('*')
       .ilike('username', username)
       .single();
@@ -152,9 +76,9 @@ export const storageService = {
     return data || null;
   },
 
-  findUserByEmail: async (email: string): Promise<User | null> => {
+  findProfileByEmail: async (email: string): Promise<User | null> => {
     const { data } = await supabase
-      .from('users')
+      .from('profiles')
       .select('*')
       .eq('email', email)
       .single();
@@ -219,15 +143,13 @@ export const storageService = {
       .insert([transaction]);
     if (error) {
       console.error('CRITICAL: Error saving token transaction:', error);
-      // We'll throw so the caller knows it failed
       throw new Error(`Token Transaction Failed: ${error.message}`);
     }
   },
 
   updateUserTokens: async (userId: string, newTokens: number): Promise<boolean> => {
-    console.log(`Directly updating tokens to ${newTokens} for user ${userId}`);
     const { error } = await supabase
-      .from('users')
+      .from('profiles')
       .update({ tokens: newTokens })
       .eq('id', userId);
     
@@ -239,7 +161,6 @@ export const storageService = {
   },
 
   syncUserTokenBalanceFromTransactions: async (userId: string): Promise<number | null> => {
-    // Keep this as a recovery utility, but don't rely on it for every transaction
     const { data, error } = await supabase
       .from('token_transactions')
       .select('amount')
@@ -306,10 +227,9 @@ export const storageService = {
     };
 
     const updatedUser = { ...user, ...resetLimits };
-    localStorage.setItem(KEYS.USER, JSON.stringify(updatedUser));
     
     const { error } = await supabase
-      .from('users')
+      .from('profiles')
       .update(resetLimits)
       .eq('id', user.id);
       
@@ -355,7 +275,7 @@ export const storageService = {
 
     const newUsage = status.used + amount;
     const { error } = await supabase
-      .from('users')
+      .from('profiles')
       .update({ [limitType]: newUsage })
       .eq('id', user.id);
       
@@ -367,8 +287,4 @@ export const storageService = {
     return newUsage;
   },
 
-  logout: async () => {
-    await supabase.auth.signOut();
-    localStorage.removeItem(KEYS.USER);
-  }
 };

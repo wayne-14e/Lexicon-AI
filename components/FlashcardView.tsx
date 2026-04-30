@@ -86,9 +86,8 @@ const FlashcardView: React.FC<FlashcardViewProps> = ({ user, table, excludeMaste
     e.stopPropagation();
     if (isSpeaking) return;
     
-    const currentUser = await storageService.getCurrentUser();
-    if (currentUser) {
-      const updatedUser = await storageService.incrementLimitUsage(currentUser, 'tts_used');
+    if (user) {
+      const updatedUser = await storageService.incrementLimitUsage(user, 'tts_used');
       if (!updatedUser) {
         alert("Daily Text-to-Speech limit reached! You can only use TTS 30 times a day.");
         return;

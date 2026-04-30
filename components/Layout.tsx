@@ -156,8 +156,12 @@ const Layout: React.FC<LayoutProps> = ({
               onClick={() => setShowProfileMenu(!showProfileMenu)}
               className={`flex items-center p-2 rounded-xl hover:bg-white/5 transition-all group ${isSidebarExpanded ? 'flex-1 min-w-0 space-x-3 mr-2' : 'justify-center w-full'}`}
             >
-              <div className="w-10 h-10 rounded-full bg-surfaceHighlight flex items-center justify-center text-primary text-lg font-bold border border-white/10 group-hover:border-primary/50 shrink-0">
-                {user.username.charAt(0).toUpperCase()}
+              <div className="w-10 h-10 rounded-full bg-surfaceHighlight flex items-center justify-center text-primary text-lg font-bold border border-white/10 group-hover:border-primary/50 shrink-0 overflow-hidden">
+                {user.avatar_url ? (
+                  <img src={user.avatar_url} alt={user.username} className="w-full h-full object-cover" />
+                ) : (
+                  user.username.charAt(0).toUpperCase()
+                )}
               </div>
               <div className={`flex flex-col text-left transition-all duration-300 ${!isSidebarExpanded ? 'hidden w-0 opacity-0' : 'opacity-100'}`}>
                 <span className="text-sm font-bold text-text truncate max-w-[100px]">{user.username}</span>
@@ -334,8 +338,12 @@ const Layout: React.FC<LayoutProps> = ({
             <div className="flex-1 overflow-y-auto py-6 px-3 space-y-2">
               <div className="px-2 mb-4">
                 <div className="flex items-center space-x-3 p-2 bg-white/5 rounded-2xl border border-white/5">
-                  <div className="w-12 h-12 rounded-full bg-surfaceHighlight flex items-center justify-center text-primary text-xl font-bold border border-white/10 shrink-0">
-                    {user.username.charAt(0).toUpperCase()}
+                  <div className="w-12 h-12 rounded-full bg-surfaceHighlight flex items-center justify-center text-primary text-xl font-bold border border-white/10 shrink-0 overflow-hidden">
+                    {user.avatar_url ? (
+                      <img src={user.avatar_url} alt={user.username} className="w-full h-full object-cover" />
+                    ) : (
+                      user.username.charAt(0).toUpperCase()
+                    )}
                   </div>
                   <div className="flex flex-col">
                     <span className="text-sm font-bold text-text">{user.username}</span>

@@ -62,7 +62,7 @@ const SystemArchives: React.FC<SystemArchivesProps> = ({ user, tables, onNavigat
     
     if (success) {
       const newUnlocked = [...(user.unlocked_system_collections || []), id];
-      await storageService.updateUserField(user.id, 'unlocked_system_collections', newUnlocked);
+      await storageService.updateProfileField(user.id, 'unlocked_system_collections', newUnlocked);
       
       // Only pass the changed field so mergeUser in App.tsx preserves the token balance
       onUserUpdate({ unlocked_system_collections: newUnlocked });

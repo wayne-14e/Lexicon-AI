@@ -3,8 +3,8 @@ export interface User {
   id: string;
   username: string;
   email?: string;
-  password?: string;
-  picture?: string;
+  full_name?: string;
+  avatar_url?: string;
   tokens?: number;
   lastDailyAwardDate?: string; // ISO string (YYYY-MM-DD)
   streak?: number;
@@ -60,4 +60,3 @@ export interface VocabTable {
   };
 }
 
-export type AuthMode = 'login' | 'register' | 'reset';

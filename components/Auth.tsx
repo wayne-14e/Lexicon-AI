@@ -69,8 +69,8 @@ const Auth: React.FC<AuthProps> = ({ onLogin }) => {
       } else {
         // Register Mode
         const [existingName, existingEmail] = await Promise.all([
-          storageService.findUserByName(name.trim()),
-          storageService.findUserByEmail(email.trim())
+          storageService.findProfileByName(name.trim()),
+          storageService.findProfileByEmail(email.trim())
         ]);
 
         if (existingName) {
@@ -120,12 +120,14 @@ const Auth: React.FC<AuthProps> = ({ onLogin }) => {
   return (
     <div className="flex-1 w-full max-w-7xl mx-auto flex flex-col items-center justify-center py-12 animate-in fade-in zoom-in-95 duration-700">
       {/* Top Header Logo */}
-      <div className="flex flex-col items-center mb-10 text-center">
-        <div className="w-16 h-16 flex items-center justify-center mb-4 drop-shadow-[0_0_15px_rgba(255,255,255,0.15)]">
+      <div className="flex flex-col items-center mb-8 text-center">
+        <div className="w-14 h-14 sm:w-14 sm:h-14 flex items-center justify-center mb-5 drop-shadow-[0_0_20px_rgba(66,154,218,0.4)]">
           <img src="/logo.svg" className="object-contain w-full h-full" alt="Lexicon Logo" />
         </div>
-        <h1 className="text-4xl font-bold tracking-tight text-text leading-none font-display">Lexicon</h1>
-        <span className="text-muted font-bold text-xs uppercase tracking-[0.4em] mt-3 leading-none">AI Journal</span>
+        <div className="flex flex-col items-center text-center">
+          <h1 className="text-3xl sm:text-4xl font-bold tracking-tight text-text leading-none font-display">Lexicon</h1>
+          <span className="text-muted font-bold text-[8px] sm:text-[10px] uppercase tracking-[0.5em] mt-1 -mr-[0.5em]">AI Journal</span>
+        </div>
       </div>
 
       <div className="w-full max-w-md bg-surface p-6 sm:p-12 rounded-3xl border border-white/5 shadow-2xl shadow-black/50 relative overflow-hidden text-center">
