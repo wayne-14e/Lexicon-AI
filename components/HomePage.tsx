@@ -89,17 +89,17 @@ const HomePage: React.FC<HomePageProps> = ({
           </button>
         </div>
       ) : (
-        <div className="max-w-md mx-auto text-center p-6 sm:p-12 bg-surface rounded-3xl border border-white/5 border-dashed space-y-6">
+        <div className="w-fit sm:max-w-[540px] mx-auto text-center p-6 sm:p-12 bg-surface rounded-3xl border border-white/5 border-dashed space-y-6">
           <div className="space-y-4">
             <p className="text-muted italic text-lg">
               Your archives are currently empty.
             </p>
-            <p className="text-text/70 max-w-md mx-auto leading-relaxed">
+            <p className="text-text/70 leading-relaxed">
               Start your first journal to begin tracking your vocabulary, or explore our pre-installed academic collections.
             </p>
           </div>
           
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-lg mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mx-auto">
             <button 
               onClick={onNavigateToCreate}
               className="p-4 sm:p-6 bg-surfaceHighlight border border-white/5 rounded-2xl hover:border-primary/50 transition-all text-left group"
