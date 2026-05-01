@@ -313,13 +313,13 @@ const App: React.FC = () => {
     await storageService.saveTable(updatedTable);
   };
 
-  const handleUpdateEntryProgress = async (entryId: string, isKnown: boolean) => {
+  const handleUpdateEntryProgress = async (entryId: string, delta: number) => {
     if (!activeTable) return;
     let masteredWord: string | null = null;
     const updatedEntries = activeTable.entries.map(entry => {
       if (entry.id === entryId) {
         const currentProgress = entry.progress || 0;
-        let newProgress = isKnown ? currentProgress + 20 : currentProgress - 35;
+        let newProgress = currentProgress + delta;
         newProgress = Math.max(0, Math.min(100, newProgress));
         if (currentProgress < 80 && newProgress >= 80) masteredWord = entry.word;
         return { ...entry, progress: newProgress };
@@ -453,6 +453,7 @@ const App: React.FC = () => {
                 onSave={handleSaveTable}
                 onCancel={() => setView('collections')}
                 isSaving={isFetching}
+                onUserUpdate={mergeUser}
               />
             )}
 
@@ -483,7 +484,13 @@ const App: React.FC = () => {
                 table={activeTable}
                 excludeMastered={studyExcludeMastered}
                 onBack={() => setView('view')}
-                onUpdateProgress={handleUpdateEntryProgress}
+                onUpdateProgress={(entryId, deltaOrIsKnown) => {
+                  // Legacy support for boolean if needed, but we'll use delta now
+                  const delta = typeof deltaOrIsKnown === 'boolean' 
+                    ? (deltaOrIsKnown ? 20 : -35) 
+                    : deltaOrIsKnown;
+                  handleUpdateEntryProgress(entryId, delta);
+                }}
                 onAwardTokens={(amount, reason) => addTokens(amount, reason)}
               />
             )}
@@ -501,6 +508,7 @@ const App: React.FC = () => {
                 initialMode={matchingGameMode}
                 onBack={() => setView('view')}
                 onUpdateTable={handleUpdateTable}
+                onUpdateProgress={handleUpdateEntryProgress}
                 onAwardTokens={(amount, reason) => addTokens(amount, reason)}
               />
             )}

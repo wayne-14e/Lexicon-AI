@@ -9,7 +9,7 @@ interface FlashcardViewProps {
   table: VocabTable;
   excludeMastered: boolean;
   onBack: () => void;
-  onUpdateProgress: (entryId: string, isKnown: boolean) => void;
+  onUpdateProgress: (entryId: string, delta: number) => void;
   onAwardTokens: (amount: number, reason?: string) => void;
 }
 
@@ -52,7 +52,7 @@ const FlashcardView: React.FC<FlashcardViewProps> = ({ user, table, excludeMaste
   const currentEntry = shuffledEntries[currentIndex];
 
   const handleAssessment = async (known: boolean) => {
-    onUpdateProgress(currentEntry.id, known);
+    onUpdateProgress(currentEntry.id, known ? 20 : -35);
     
     if (known) {
       setKnownCount(prev => prev + 1);

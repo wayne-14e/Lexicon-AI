@@ -8,6 +8,7 @@ interface MatchingGameViewProps {
   initialMode?: GameMode;
   onBack: () => void;
   onUpdateTable: (updatedTable: VocabTable) => void;
+  onUpdateProgress: (entryId: string, delta: number) => void;
   onAwardTokens: (amount: number, reason?: string) => void;
 }
 
@@ -17,7 +18,7 @@ interface GamePair {
   match: string;
 }
 
-const MatchingGameView: React.FC<MatchingGameViewProps> = ({ table, initialMode = 'synonyms', onBack, onUpdateTable, onAwardTokens }) => {
+const MatchingGameView: React.FC<MatchingGameViewProps> = ({ table, initialMode = 'synonyms', onBack, onUpdateTable, onUpdateProgress, onAwardTokens }) => {
   const [gameMode, setGameMode] = useState<GameMode>(initialMode);
   const [pairs, setPairs] = useState<GamePair[]>([]);
   const [leftColumn, setLeftColumn] = useState<GamePair[]>([]);
@@ -165,6 +166,9 @@ const MatchingGameView: React.FC<MatchingGameViewProps> = ({ table, initialMode 
       // Award tokens for correct match
       setSessionTokens(prev => prev + 2);
       onAwardTokens(2);
+      
+      // Award mastery (+2%) for correct match
+      onUpdateProgress(leftId, 2);
       
       if (newMatched.size === pairs.length) {
         setTimeout(() => {

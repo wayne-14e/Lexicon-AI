@@ -210,7 +210,7 @@ export const geminiService = {
     const response = await withKeyRotation((ai, modelName) =>
       ai.models.generateContent({
         model: modelName,
-        contents: `For the following list of words: ${wordList.join(', ')}, provide:
+        contents: `For the following list of words: [${wordList.join(', ')}] provide:
       1. A simple, easy-to-understand definition.
       2. Common, everyday synonyms.
       3. Common, everyday antonyms (if a word has no clear antonym, provide a near-antonym or a contrasting concept).

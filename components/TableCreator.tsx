@@ -10,9 +10,10 @@ interface TableCreatorProps {
   onSave: (table: VocabTable) => void;
   onCancel: () => void;
   isSaving?: boolean;
+  onUserUpdate?: (partial: Partial<User>) => void;
 }
 
-const TableCreator: React.FC<TableCreatorProps> = ({ user, existingTable, onSave, onCancel, isSaving = false }) => {
+const TableCreator: React.FC<TableCreatorProps> = ({ user, existingTable, onSave, onCancel, onUserUpdate, isSaving = false }) => {
   const [title, setTitle] = useState(existingTable?.title || '');
   const [description, setDescription] = useState(existingTable?.description || '');
   const [wordsInput, setWordsInput] = useState('');
@@ -25,9 +26,16 @@ const TableCreator: React.FC<TableCreatorProps> = ({ user, existingTable, onSave
     const files = event.target.files;
     if (!files || files.length === 0) return;
 
-    const updatedUser = await storageService.incrementLimitUsage(user, 'document_uploads_used');
-    if (!updatedUser) {
-      setStatus('Daily limit reached! You can only upload 3 documents per day.');
+    try {
+      const newUsage = await storageService.incrementLimitUsage(user, 'document_uploads_used');
+      if (newUsage === null) {
+        setStatus('Error: Daily limit reached! You can only upload 3 documents per day.');
+        return;
+      }
+      if (onUserUpdate) onUserUpdate({ document_uploads_used: newUsage });
+    } catch (err) {
+      console.error("Limit check error:", err);
+      setStatus('Error: Failed to verify upload limits.');
       return;
     }
 
@@ -109,9 +117,16 @@ const TableCreator: React.FC<TableCreatorProps> = ({ user, existingTable, onSave
       return;
     }
 
-    const updatedUser = await storageService.incrementLimitUsage(user, 'words_generated', wordList.length);
-    if (!updatedUser) {
-      setStatus(`Daily limit reached! You can only generate up to 40 words per day. You tried to add ${wordList.length} words.`);
+    try {
+      const newUsage = await storageService.incrementLimitUsage(user, 'words_generated', wordList.length);
+      if (newUsage === null) {
+        setStatus(`Error: Daily limit reached! You can only generate up to 40 words per day. You tried to add ${wordList.length} words.`);
+        return;
+      }
+      if (onUserUpdate) onUserUpdate({ words_generated: newUsage });
+    } catch (err) {
+      console.error("Limit check error:", err);
+      setStatus('Error: Failed to verify generation limits.');
       return;
     }
 
@@ -251,10 +266,10 @@ const TableCreator: React.FC<TableCreatorProps> = ({ user, existingTable, onSave
                 disabled={isGenerating || isSaving || isExtracting}
                 className="w-full md:w-auto px-20 py-5 bg-primary text-white font-bold rounded-full shadow-lg shadow-primary/20 hover:bg-secondary transition-all disabled:opacity-20 disabled:cursor-not-allowed uppercase tracking-[0.2em] text-[11px] hover:-translate-y-0.5"
               >
-                Assemble with Lexicon AI
+                Assemble with AI
               </button>
-              {status && status.startsWith('Error') && (
-                <p className="text-red-400 text-xs font-bold uppercase tracking-widest">{status}</p>
+              {status && (
+                <p className={`text-xs font-bold uppercase tracking-widest ${status.startsWith('Error') ? 'text-red-400' : 'text-primary'}`}>{status}</p>
               )}
             </>
           )}

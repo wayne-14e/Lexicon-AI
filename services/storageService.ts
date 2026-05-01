@@ -307,7 +307,19 @@ export const storageService = {
       tts_used: 30
     };
     
-    const activeUser = await storageService.checkAndResetDailyLimits(user);
+    // Fetch latest user data to ensure we have current usage counts
+    const { data: latestUser, error } = await supabase
+      .from('profiles')
+      .select('*')
+      .eq('id', user.id)
+      .single();
+
+    if (error || !latestUser) {
+       console.error("Error fetching latest profile for limit status:", error);
+       return { used: 0, max: LIMITS[limitType], allowed: false };
+    }
+
+    const activeUser = await storageService.checkAndResetDailyLimits(latestUser);
     const currentUsage = activeUser[limitType] || 0;
     
     return {
