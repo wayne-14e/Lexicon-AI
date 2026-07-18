@@ -17,7 +17,7 @@ export function useEnsureProfile() {
         email: user.primaryEmailAddress?.emailAddress,
         full_name: user.fullName || undefined,
         avatar_url: user.imageUrl,
-        username: user.fullName || 'Scholar',
+        username: user.fullName || (user.primaryEmailAddress?.emailAddress?.split('@')[0]) || 'Scholar',
       };
 
       try {

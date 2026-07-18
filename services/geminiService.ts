@@ -79,7 +79,7 @@ function isUnavailableError(error: unknown): boolean {
 }
 
 /** Priority fallback list for general generation tasks. */
-const DEFAULT_MODEL_LIST = ["gemini-2.5-flash", "gemini-2.5-flash-lite", "gemini-2.0-flash"];
+const DEFAULT_MODEL_LIST = ["gemini-2.5-flash", "gemini-3.5-flash", "gemini-3.1-flash-lite-preview"];
 
 /**
  * Wraps an API call with automatic key rotation and model fallback.

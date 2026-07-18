@@ -37,6 +37,7 @@ const App: React.FC = () => {
   const [matchingGameMode, setMatchingGameMode] = useState<GameMode>('synonyms');
   const [toast, setToast] = useState<{ message: string; type: 'success' | 'info' } | null>(null);
   const [streakPopup, setStreakPopup] = useState<{ streak: number; tokens: number } | null>(null);
+  const [authMode, setAuthMode] = useState<'sign-in' | 'sign-up'>('sign-in');
 
   // Sync Clerk user with Supabase profiles table
   useEnsureProfile();
@@ -180,7 +181,7 @@ const App: React.FC = () => {
       // Upsert profile data from Clerk immediately on init if signed in
       const initialProfileData: User = {
         id: clerkUser.id,
-        username: clerkUser.fullName || 'Scholar',
+        username: clerkUser.fullName || (clerkUser.primaryEmailAddress?.emailAddress?.split('@')[0]) || 'Scholar',
         email: clerkUser.primaryEmailAddress?.emailAddress,
         full_name: clerkUser.fullName || undefined,
         avatar_url: clerkUser.imageUrl,
@@ -562,35 +563,80 @@ const App: React.FC = () => {
               <span className="text-muted font-bold text-[8px] sm:text-[10px] uppercase tracking-[0.5em] mt-1 -mr-[0.5em]">AI Journal</span>
             </div>
           </div>
-          
+
           <div className="w-full max-w-[400px] mx-auto animate-in fade-in zoom-in-95 duration-700 delay-300">
-            <SignIn 
-              routing="hash" 
-              appearance={{
-                elements: {
-                  rootBox: 'mx-auto w-full flex justify-center',
-                  card: 'bg-surface border border-white/5 shadow-2xl rounded-3xl overflow-hidden mx-auto w-full',
-                  formButtonPrimary: 'bg-primary hover:bg-primary/90 text-sm font-bold uppercase tracking-widest py-3 rounded-xl transition-all shadow-lg shadow-primary/20',
-                  headerTitle: 'font-display text-text text-2xl font-bold text-center w-full',
-                  headerSubtitle: 'text-muted text-sm text-center w-full',
-                  socialButtonsBlockButton: 'bg-surfaceHighlight border border-white/5 text-text hover:bg-white/5 transition-all rounded-xl',
-                  socialButtonsBlockButtonText: 'text-text font-medium',
-                  formFieldLabel: 'text-muted text-[10px] uppercase tracking-widest font-bold mb-2',
-                  formFieldInput: 'bg-surfaceHighlight border border-white/5 text-text rounded-xl p-3 focus:border-primary/50 transition-all',
-                  footerActionLink: 'text-primary hover:text-primary/80 font-bold',
-                  identityPreviewText: 'text-text',
-                  identityPreviewEditButtonIcon: 'text-primary'
-                },
-                variables: {
-                  colorPrimary: '#429ada',
-                  colorBackground: '#13161c',
-                  colorText: '#e3e3e3',
-                  colorTextSecondary: '#9ca3af',
-                  colorInputBackground: '#1e232b',
-                  colorInputText: '#e3e3e3',
-                }
-              }}
-            />
+            {authMode === 'sign-in' ? (
+              <SignIn
+                routing="hash"
+                signUpUrl="#sign-up"
+                appearance={{
+                  elements: {
+                    rootBox: 'mx-auto w-full flex justify-center',
+                    card: 'bg-surface border border-white/5 shadow-2xl rounded-3xl overflow-hidden mx-auto w-full',
+                    formButtonPrimary: 'bg-primary hover:bg-primary/90 text-sm font-bold uppercase tracking-widest py-3 rounded-xl transition-all shadow-lg shadow-primary/20',
+                    headerTitle: 'font-display text-text text-2xl font-bold text-center w-full',
+                    headerSubtitle: 'text-muted text-sm text-center w-full',
+                    socialButtonsBlockButton: 'bg-surfaceHighlight border border-white/5 text-text hover:bg-white/5 transition-all rounded-xl',
+                    socialButtonsBlockButtonText: 'text-text font-medium',
+                    formFieldLabel: 'text-muted text-[10px] uppercase tracking-widest font-bold mb-2',
+                    formFieldInput: 'bg-surfaceHighlight border border-white/5 text-text rounded-xl p-3 focus:border-primary/50 transition-all',
+                    footerActionLink: 'text-primary hover:text-primary/80 font-bold',
+                    identityPreviewText: 'text-text',
+                    identityPreviewEditButtonIcon: 'text-primary',
+                    footerAction: 'hidden',
+                  },
+                  variables: {
+                    colorPrimary: '#429ada',
+                    colorBackground: '#13161c',
+                    colorText: '#e3e3e3',
+                    colorTextSecondary: '#9ca3af',
+                    colorInputBackground: '#1e232b',
+                    colorInputText: '#e3e3e3',
+                  }
+                }}
+              />
+            ) : (
+              <SignUp
+                routing="hash"
+                signInUrl="#sign-in"
+                appearance={{
+                  elements: {
+                    rootBox: 'mx-auto w-full flex justify-center',
+                    card: 'bg-surface border border-white/5 shadow-2xl rounded-3xl overflow-hidden mx-auto w-full',
+                    formButtonPrimary: 'bg-primary hover:bg-primary/90 text-sm font-bold uppercase tracking-widest py-3 rounded-xl transition-all shadow-lg shadow-primary/20',
+                    headerTitle: 'font-display text-text text-2xl font-bold text-center w-full',
+                    headerSubtitle: 'text-muted text-sm text-center w-full',
+                    socialButtonsBlockButton: 'bg-surfaceHighlight border border-white/5 text-text hover:bg-white/5 transition-all rounded-xl',
+                    socialButtonsBlockButtonText: 'text-text font-medium',
+                    formFieldLabel: 'text-muted text-[10px] uppercase tracking-widest font-bold mb-2',
+                    formFieldInput: 'bg-surfaceHighlight border border-white/5 text-text rounded-xl p-3 focus:border-primary/50 transition-all',
+                    footerActionLink: 'text-primary hover:text-primary/80 font-bold',
+                    identityPreviewText: 'text-text',
+                    identityPreviewEditButtonIcon: 'text-primary',
+                    footerAction: 'hidden',
+                  },
+                  variables: {
+                    colorPrimary: '#429ada',
+                    colorBackground: '#13161c',
+                    colorText: '#e3e3e3',
+                    colorTextSecondary: '#9ca3af',
+                    colorInputBackground: '#1e232b',
+                    colorInputText: '#e3e3e3',
+                  }
+                }}
+              />
+            )}
+            <p className="text-center text-muted text-xs mt-4">
+              {authMode === 'sign-in' ? (
+                <>Don't have an account?{' '}
+                  <button onClick={() => setAuthMode('sign-up')} className="text-primary font-bold hover:underline">Sign up</button>
+                </>
+              ) : (
+                <>Already have an account?{' '}
+                  <button onClick={() => setAuthMode('sign-in')} className="text-primary font-bold hover:underline">Sign in</button>
+                </>
+              )}
+            </p>
           </div>
         </div>
       </SignedOut>
