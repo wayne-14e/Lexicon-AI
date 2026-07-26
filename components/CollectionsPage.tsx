@@ -1,17 +1,18 @@
 import React, { useState } from 'react';
 import { VocabTable, User } from '../types';
-import { ListFilter, ChevronDown } from 'lucide-react';
+import { ListFilter, ChevronDown, ChevronLeft } from 'lucide-react';
 
 interface CollectionsPageProps {
   user: User;
   tables: VocabTable[];
   onSelectTable: (table: VocabTable) => void;
   onCreateNew: () => void;
+  onBack?: () => void;
 }
 
 type FilterType = 'date-desc' | 'date-asc' | 'mastery-desc';
 
-const CollectionsPage: React.FC<CollectionsPageProps> = ({ user, tables, onSelectTable, onCreateNew }) => {
+const CollectionsPage: React.FC<CollectionsPageProps> = ({ user, tables, onSelectTable, onCreateNew, onBack }) => {
   const [filterType, setFilterType] = useState<FilterType>('date-desc');
 
   const calculateMastery = (table: VocabTable) => {
@@ -36,6 +37,15 @@ const CollectionsPage: React.FC<CollectionsPageProps> = ({ user, tables, onSelec
 
   return (
     <div className="max-w-7xl mx-auto w-full space-y-8 md:space-y-12 pb-10 md:pb-20 animate-in fade-in duration-1000">
+      {onBack && (
+        <button
+          onClick={onBack}
+          className="group flex items-center space-x-2 text-muted hover:text-text transition-colors"
+        >
+          <ChevronLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" />
+          <span className="text-[10px] font-bold uppercase tracking-[0.3em]">Back to Journals</span>
+        </button>
+      )}
       <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 md:gap-8 text-center md:text-left">
         <div className="flex flex-col items-center md:items-start">
           <span className="text-[10px] sm:text-sm font-bold uppercase tracking-[0.4em] text-primary mb-2 md:mb-3 block">Scholar Repository</span>

@@ -961,10 +961,10 @@ const TableView: React.FC<TableViewProps> = ({
       {showScrollTop && (
         <button
           onClick={() => document.getElementById('main-scroll-container')?.scrollTo({ top: 0, behavior: 'smooth' })}
-          className="fixed bottom-24 md:bottom-28 right-6 md:right-8 z-50 w-14 h-14 rounded-full bg-primary text-white flex items-center justify-center shadow-xl shadow-primary/30 hover:bg-secondary transition-colors duration-200 print:hidden animate-in fade-in slide-in-from-bottom-4 duration-300"
+          className="fixed bottom-36 md:bottom-24 right-4 md:right-8 z-[70] w-12 h-12 md:w-14 md:h-14 rounded-full bg-primary text-white flex items-center justify-center shadow-xl shadow-primary/30 hover:bg-secondary transition-colors duration-200 print:hidden animate-in fade-in slide-in-from-bottom-4 duration-300"
           aria-label="Scroll to top"
         >
-          <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+          <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5 md:w-6 md:h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
             <path strokeLinecap="round" strokeLinejoin="round" d="M5 15l7-7 7 7" />
           </svg>
         </button>

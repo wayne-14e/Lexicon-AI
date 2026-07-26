@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Eye, EyeOff } from 'lucide-react';
-import { useUser, useAuth, SignedIn, SignedOut, SignIn, SignUp } from '@clerk/clerk-react';
+import { useUser, useAuth, SignedIn, SignedOut, SignIn, SignUp, AuthenticateWithRedirectCallback } from '@clerk/clerk-react';
 import { User, VocabTable, GameMode } from './types';
 import { storageService } from './services/storageService';
 import Layout from './components/Layout';
@@ -17,11 +17,14 @@ import CollectionsPage from './components/CollectionsPage';
 import ScratchpadPage from './components/ScratchpadPage';
 import DailyStreakPopup from './components/DailyStreakPopup';
 import SystemArchives from './components/SystemArchives';
+import JournalsPage from './components/JournalsPage';
+import CustomSignUp from './components/CustomSignUp';
+import CustomSignIn from './components/CustomSignIn';
 import { geminiService } from './services/geminiService';
 import { Analytics } from '@vercel/analytics/react';
 import { useEnsureProfile } from './hooks/useEnsureProfile';
 
-type ViewState = 'home' | 'collections' | 'scratchpad' | 'create' | 'view' | 'public_shared' | 'study' | 'context-learning' | 'matching' | 'profile' | 'system-archives';
+type ViewState = 'home' | 'collections' | 'scratchpad' | 'create' | 'view' | 'public_shared' | 'study' | 'context-learning' | 'matching' | 'profile' | 'system-archives' | 'journals';
 
 const App: React.FC = () => {
   const { user: clerkUser, isLoaded: isClerkLoaded } = useUser();
@@ -181,9 +184,9 @@ const App: React.FC = () => {
       // Upsert profile data from Clerk immediately on init if signed in
       const initialProfileData: User = {
         id: clerkUser.id,
-        username: clerkUser.fullName || (clerkUser.primaryEmailAddress?.emailAddress?.split('@')[0]) || 'Scholar',
+        username: clerkUser.username || clerkUser.fullName || (clerkUser.primaryEmailAddress?.emailAddress?.split('@')[0]) || `Scholar${Math.floor(100 + Math.random() * 900)}`,
         email: clerkUser.primaryEmailAddress?.emailAddress,
-        full_name: clerkUser.fullName || undefined,
+        full_name: clerkUser.fullName || clerkUser.username || undefined,
         avatar_url: clerkUser.imageUrl,
       };
       
@@ -210,7 +213,7 @@ const App: React.FC = () => {
     const viewParam = params.get('view');
     const tableIdParam = params.get('table');
     
-    if (viewParam && ['home', 'collections', 'scratchpad', 'profile', 'system-archives'].includes(viewParam)) {
+    if (viewParam && ['home', 'collections', 'scratchpad', 'profile', 'system-archives', 'journals'].includes(viewParam)) {
       setView(viewParam as ViewState);
     }
     
@@ -382,6 +385,11 @@ const App: React.FC = () => {
     );
   }
 
+  // Handle OAuth callback for social sign-in
+  if (window.location.pathname === '/sso-callback') {
+    return <AuthenticateWithRedirectCallback />;
+  }
+
   // Handle Shared View for non-authenticated or authenticated
   if (view === 'public_shared' && activeTable) {
     return (
@@ -406,6 +414,7 @@ const App: React.FC = () => {
           <Layout 
             user={dbUser} 
             tables={tables}
+            currentView={view}
             onLogout={() => {
               signOut();
             }} 
@@ -415,6 +424,7 @@ const App: React.FC = () => {
             onNavigateToCreate={() => setView('scratchpad')}
             onNavigateToHome={() => setView('home')}
             onNavigateToArchives={() => setView('system-archives')}
+            onNavigateToJournals={() => setView('journals')}
             onSpendTokens={spendTokens}
             onUserUpdate={mergeUser}
           >
@@ -428,12 +438,20 @@ const App: React.FC = () => {
               />
             )}
 
+            {view === 'journals' && (
+              <JournalsPage
+                onNavigateToCollections={() => setView('collections')}
+                onNavigateToArchives={() => setView('system-archives')}
+              />
+            )}
+
             {view === 'collections' && (
               <CollectionsPage 
                 user={dbUser}
                 tables={tables} 
                 onSelectTable={handleNavigateToTable}
                 onCreateNew={() => setView('create')}
+                onBack={() => setView('journals')}
               />
             )}
 
@@ -521,6 +539,7 @@ const App: React.FC = () => {
                 onNavigateToSystemTable={handleNavigateToTable} 
                 onSpendTokens={spendTokens}
                 onUserUpdate={mergeUser}
+                onBack={() => setView('journals')}
               />
             )}
 
@@ -566,65 +585,9 @@ const App: React.FC = () => {
 
           <div className="w-full max-w-[400px] mx-auto animate-in fade-in zoom-in-95 duration-700 delay-300">
             {authMode === 'sign-in' ? (
-              <SignIn
-                routing="hash"
-                signUpUrl="#sign-up"
-                appearance={{
-                  elements: {
-                    rootBox: 'mx-auto w-full flex justify-center',
-                    card: 'bg-surface border border-white/5 shadow-2xl rounded-3xl overflow-hidden mx-auto w-full',
-                    formButtonPrimary: 'bg-primary hover:bg-primary/90 text-sm font-bold uppercase tracking-widest py-3 rounded-xl transition-all shadow-lg shadow-primary/20',
-                    headerTitle: 'font-display text-text text-2xl font-bold text-center w-full',
-                    headerSubtitle: 'text-muted text-sm text-center w-full',
-                    socialButtonsBlockButton: 'bg-surfaceHighlight border border-white/5 text-text hover:bg-white/5 transition-all rounded-xl',
-                    socialButtonsBlockButtonText: 'text-text font-medium',
-                    formFieldLabel: 'text-muted text-[10px] uppercase tracking-widest font-bold mb-2',
-                    formFieldInput: 'bg-surfaceHighlight border border-white/5 text-text rounded-xl p-3 focus:border-primary/50 transition-all',
-                    footerActionLink: 'text-primary hover:text-primary/80 font-bold',
-                    identityPreviewText: 'text-text',
-                    identityPreviewEditButtonIcon: 'text-primary',
-                    footerAction: 'hidden',
-                  },
-                  variables: {
-                    colorPrimary: '#429ada',
-                    colorBackground: '#13161c',
-                    colorText: '#e3e3e3',
-                    colorTextSecondary: '#9ca3af',
-                    colorInputBackground: '#1e232b',
-                    colorInputText: '#e3e3e3',
-                  }
-                }}
-              />
+              <CustomSignIn onSwitchToSignUp={() => setAuthMode('sign-up')} />
             ) : (
-              <SignUp
-                routing="hash"
-                signInUrl="#sign-in"
-                appearance={{
-                  elements: {
-                    rootBox: 'mx-auto w-full flex justify-center',
-                    card: 'bg-surface border border-white/5 shadow-2xl rounded-3xl overflow-hidden mx-auto w-full',
-                    formButtonPrimary: 'bg-primary hover:bg-primary/90 text-sm font-bold uppercase tracking-widest py-3 rounded-xl transition-all shadow-lg shadow-primary/20',
-                    headerTitle: 'font-display text-text text-2xl font-bold text-center w-full',
-                    headerSubtitle: 'text-muted text-sm text-center w-full',
-                    socialButtonsBlockButton: 'bg-surfaceHighlight border border-white/5 text-text hover:bg-white/5 transition-all rounded-xl',
-                    socialButtonsBlockButtonText: 'text-text font-medium',
-                    formFieldLabel: 'text-muted text-[10px] uppercase tracking-widest font-bold mb-2',
-                    formFieldInput: 'bg-surfaceHighlight border border-white/5 text-text rounded-xl p-3 focus:border-primary/50 transition-all',
-                    footerActionLink: 'text-primary hover:text-primary/80 font-bold',
-                    identityPreviewText: 'text-text',
-                    identityPreviewEditButtonIcon: 'text-primary',
-                    footerAction: 'hidden',
-                  },
-                  variables: {
-                    colorPrimary: '#429ada',
-                    colorBackground: '#13161c',
-                    colorText: '#e3e3e3',
-                    colorTextSecondary: '#9ca3af',
-                    colorInputBackground: '#1e232b',
-                    colorInputText: '#e3e3e3',
-                  }
-                }}
-              />
+              <CustomSignUp onSwitchToSignIn={() => setAuthMode('sign-in')} />
             )}
             <p className="text-center text-muted text-xs mt-4">
               {authMode === 'sign-in' ? (

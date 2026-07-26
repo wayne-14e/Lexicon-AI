@@ -137,11 +137,11 @@ const LexyAssistant: React.FC<LexyAssistantProps> = ({ user, onSpendTokens, onUs
       {/* Floating Action Button */}
       <button
         onClick={() => setIsOpen(true)}
-        className={`fixed bottom-6 md:bottom-8 right-6 md:right-8 w-14 h-14 bg-purple-500 text-white rounded-full shadow-2xl shadow-purple-500/40 flex items-center justify-center hover:scale-110 transition-transform z-40 group ${isOpen ? 'scale-0 opacity-0' : 'scale-100 opacity-100'}`}
+        className={`fixed bottom-20 md:bottom-8 right-4 md:right-8 w-12 h-12 md:w-14 md:h-14 bg-purple-500 text-white rounded-full shadow-2xl shadow-purple-500/40 flex items-center justify-center hover:scale-110 transition-transform z-[60] group aspect-square shrink-0 ${isOpen ? 'scale-0 opacity-0' : 'scale-100 opacity-100'}`}
         aria-label="Open Lexy Assistant"
       >
-        <Bot className="w-6 h-6 group-hover:scale-110 transition-transform" />
-        <div className="absolute -top-1 -right-1 w-3 h-3 bg-orange-500 rounded-full border-2 border-background animate-pulse"></div>
+        <Bot className="w-5 h-5 md:w-6 md:h-6 group-hover:scale-110 transition-transform" />
+        <div className="absolute -top-1 -right-1 w-3 h-3 bg-orange-500 rounded-full border-2 border-background animate-pulse aspect-square"></div>
       </button>
 
       {/* Assistant Panel */}
@@ -151,7 +151,7 @@ const LexyAssistant: React.FC<LexyAssistantProps> = ({ user, onSpendTokens, onUs
         {/* Header */}
         <div className="flex items-center justify-between p-4 border-b border-white/5 bg-surfaceHighlight rounded-t-2xl">
           <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-full bg-purple-500/20 flex items-center justify-center text-purple-500 border border-purple-500/30">
+            <div className="w-10 h-10 rounded-full bg-purple-500/20 flex items-center justify-center text-purple-500 border border-purple-500/30 aspect-square shrink-0">
               <Bot className="w-5 h-5" />
             </div>
             <div>

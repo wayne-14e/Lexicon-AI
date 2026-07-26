@@ -15,9 +15,9 @@ export function useEnsureProfile() {
       const profileData: Partial<User> = {
         id: user.id,
         email: user.primaryEmailAddress?.emailAddress,
-        full_name: user.fullName || undefined,
+        full_name: user.fullName || user.username || undefined,
         avatar_url: user.imageUrl,
-        username: user.fullName || (user.primaryEmailAddress?.emailAddress?.split('@')[0]) || 'Scholar',
+        username: user.username || user.fullName || (user.primaryEmailAddress?.emailAddress?.split('@')[0]) || `Scholar${Math.floor(100 + Math.random() * 900)}`,
       };
 
       try {

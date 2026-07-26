@@ -12,9 +12,10 @@ interface SystemArchivesProps {
   onNavigateToSystemTable: (table: VocabTable) => void;
   onSpendTokens?: (amount: number, reason: string) => Promise<boolean>;
   onUserUpdate?: (partial: Partial<User>) => void;
+  onBack?: () => void;
 }
 
-const SystemArchives: React.FC<SystemArchivesProps> = ({ user, tables, onNavigateToSystemTable, onSpendTokens, onUserUpdate }) => {
+const SystemArchives: React.FC<SystemArchivesProps> = ({ user, tables, onNavigateToSystemTable, onSpendTokens, onUserUpdate, onBack }) => {
   const [activeTab, setActiveTab] = useState<'IELTS' | 'SAT'>(savedActiveTab);
   const [selectedSatCategory, setSelectedSatCategory] = useState<string | null>(savedSatCategory);
 
@@ -274,6 +275,15 @@ const SystemArchives: React.FC<SystemArchivesProps> = ({ user, tables, onNavigat
 
   return (
     <div className="w-full max-w-5xl mx-auto flex flex-col h-full animate-in fade-in duration-300">
+      {onBack && (
+        <button
+          onClick={onBack}
+          className="group flex items-center space-x-2 text-muted hover:text-text transition-colors mb-6"
+        >
+          <ChevronLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" />
+          <span className="text-[10px] font-bold uppercase tracking-[0.3em]">Back to Journals</span>
+        </button>
+      )}
       <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 md:gap-8 text-center md:text-left mb-12">
         <div className="flex flex-col items-center md:items-start text-center md:text-left">
           <span className="text-[10px] sm:text-sm font-bold uppercase tracking-[0.4em] text-primary mb-2 md:mb-3 block">Standardized Archives</span>
