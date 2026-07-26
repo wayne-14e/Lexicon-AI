@@ -205,7 +205,7 @@ const Layout: React.FC<LayoutProps> = ({
           {/* Version */}
           <div className="px-3 py-3 border-t border-white/5">
             <div className={`text-[8px] text-muted/50 font-bold uppercase tracking-widest text-center transition-all ${!isSidebarExpanded ? 'opacity-0' : 'opacity-100'}`}>
-              Lexicon AI v3.0
+              Lexicon AI v4.0
             </div>
           </div>
         </aside>
@@ -345,7 +345,7 @@ const Layout: React.FC<LayoutProps> = ({
                       </button>
 
                       <div className="pt-5 text-center">
-                        <span className="text-[8px] text-muted/50 font-bold uppercase tracking-widest">Lexicon AI v4</span>
+                        <span className="text-[8px] text-muted/50 font-bold uppercase tracking-widest">Lexicon AI v4.0</span>
                       </div>
                     </div>
                   </div>
