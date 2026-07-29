@@ -1,5 +1,5 @@
-import React, { useState, useRef, useEffect } from 'react';
-import { User, VocabTable } from '../types';
+import React, { useState, useRef, useEffect, useMemo } from 'react';
+import { User, VocabTable, VocabEntry } from '../types';
 import {
   ChevronLeft,
   ChevronRight,
@@ -12,9 +12,14 @@ import {
   MessageSquare,
   X,
   EllipsisVertical,
-  Menu
+  Menu,
+  Share2,
+  Gift,
+  Copy,
+  Check
 } from 'lucide-react';
 import LexyAssistant from './LexyAssistant';
+import { loadUnlockedArchiveEntries } from '../services/systemArchiveData';
 
 interface LayoutProps {
   user: User | null;
@@ -54,10 +59,24 @@ const Layout: React.FC<LayoutProps> = ({
   const [showProfileMenu, setShowProfileMenu] = useState(false);
   const [showMobileMenu, setShowMobileMenu] = useState(false);
   const [isSidebarExpanded, setIsSidebarExpanded] = useState(true);
+  const [showReferralModal, setShowReferralModal] = useState(false);
+  const [copiedLink, setCopiedLink] = useState<string | null>(null);
+  const [archiveEntries, setArchiveEntries] = useState<{ tableId: string; title: string; entries: VocabEntry[] }[]>([]);
   const searchRef = useRef<HTMLDivElement>(null);
   const profileMenuRef = useRef<HTMLDivElement>(null);
   const mobileMenuRef = useRef<HTMLDivElement>(null);
   const mobilePanelRef = useRef<HTMLDivElement>(null);
+
+  const referralLink = user?.referral_code 
+    ? `${window.location.origin}/?ref=${user.referral_code}`
+    : '';
+
+  const copyReferralLink = async () => {
+    if (!referralLink) return;
+    await navigator.clipboard.writeText(referralLink);
+    setCopiedLink(referralLink);
+    setTimeout(() => setCopiedLink(null), 2000);
+  };
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
@@ -75,13 +94,42 @@ const Layout: React.FC<LayoutProps> = ({
     return () => document.removeEventListener('mousedown', handleClickOutside);
   }, []);
 
-  const results = searchQuery.trim().length > 1
-    ? tables.flatMap(table =>
-        table.entries
-          .filter(entry => entry.word.toLowerCase().includes(searchQuery.toLowerCase()))
-          .map(entry => ({ table, entry }))
-      ).slice(0, 5)
-    : [];
+  useEffect(() => {
+    const loadArchives = async () => {
+      if (user?.unlocked_system_collections && user.unlocked_system_collections.length > 0) {
+        const entries = await loadUnlockedArchiveEntries(user.unlocked_system_collections);
+        setArchiveEntries(entries);
+      } else {
+        setArchiveEntries([]);
+      }
+    };
+    loadArchives();
+  }, [user?.unlocked_system_collections]);
+
+  const results = useMemo(() => {
+    if (searchQuery.trim().length <= 1) return [];
+
+    const query = searchQuery.toLowerCase();
+    const userResults = tables.flatMap(table =>
+      table.entries
+        .filter(entry => entry.word.toLowerCase().includes(query))
+        .map(entry => ({ table, entry }))
+    );
+
+    const existingTableIds = new Set(tables.map(t => t.id));
+    const archiveResults = archiveEntries
+      .filter(archive => !existingTableIds.has(archive.tableId))
+      .flatMap(archive =>
+        archive.entries
+          .filter(entry => entry.word.toLowerCase().includes(query))
+          .map(entry => ({
+            table: { id: archive.tableId, title: archive.title, description: '', userId: 'system', entries: archive.entries, createdAt: 0, links: [] } as VocabTable,
+            entry
+          }))
+      );
+
+    return [...userResults, ...archiveResults].slice(0, 5);
+  }, [searchQuery, tables, archiveEntries]);
 
   const handleSelectResult = (table: VocabTable) => {
     onNavigateToTable(table);
@@ -116,6 +164,23 @@ const Layout: React.FC<LayoutProps> = ({
 
           {/* Spacer */}
           <div className="flex-1" />
+
+          {/* Referral Button */}
+          <div className="px-2 mb-1">
+            <button
+              onClick={() => setShowReferralModal(true)}
+              className={`w-full flex items-center space-x-3 px-3 py-3 rounded-xl transition-all group bg-purple-500/10 text-purple-400 border border-purple-500/20 hover:bg-purple-500/20 hover:text-purple-300 ${!isSidebarExpanded && 'justify-center px-0'}`}
+              title={!isSidebarExpanded ? "Invite & Earn" : ""}
+            >
+              <div className="shrink-0"><Gift className="w-5 h-5" /></div>
+              <span className={`text-sm font-medium transition-all ${!isSidebarExpanded ? 'hidden w-0 opacity-0' : 'opacity-100'}`}>
+                Bonus
+              </span>
+              <span className={`text-[9px] font-bold uppercase tracking-wider bg-purple-500/20 text-purple-400 px-2 py-0.5 rounded-full ${!isSidebarExpanded ? 'hidden' : ''}`}>
+                +500 Tokens
+              </span>
+            </button>
+          </div>
 
           {/* Feedback Button */}
           <div className="px-2 mb-1">
@@ -248,7 +313,9 @@ const Layout: React.FC<LayoutProps> = ({
                             className="w-full text-left px-4 py-3 hover:bg-white/5 flex flex-col transition-colors group border-l-2 border-transparent hover:border-primary"
                           >
                             <span className="text-sm font-bold text-text group-hover:text-primary transition-colors">{res.entry.word}</span>
-                            <span className="text-[10px] text-muted italic">In: {res.table.title}</span>
+                            <span className="text-[10px] text-muted italic">
+                              {res.table.userId === 'system' ? `In: ${res.table.title} (Archive)` : `In: ${res.table.title}`}
+                            </span>
                           </button>
                         ))}
                       </div>
@@ -328,6 +395,16 @@ const Layout: React.FC<LayoutProps> = ({
                     <span className="text-[10px] text-purple-500 font-bold">{user?.tokens || 0} T</span>
                   </div>
                 </div>
+              </button>
+
+              {/* Referral Button - Mobile */}
+              <button
+                onClick={() => { setShowMobileMenu(false); setShowReferralModal(true); }}
+                className="w-full flex items-center space-x-3 px-3 py-3 rounded-xl transition-all group bg-purple-500/10 text-purple-400 border border-purple-500/20 hover:bg-purple-500/20 hover:text-purple-300"
+              >
+                <div className="shrink-0"><Gift className="w-5 h-5" /></div>
+                <span className="text-sm font-medium">Bonus</span>
+                <span className="ml-auto text-[9px] font-bold uppercase tracking-wider bg-purple-500/20 text-purple-400 px-2 py-0.5 rounded-full">+500 Tokens</span>
               </button>
 
               <a
@@ -415,6 +492,78 @@ const Layout: React.FC<LayoutProps> = ({
       {/* Lexy Assistant Panel */}
       {user && !['study', 'context-learning', 'matching'].includes(currentPath || '') && (
         <LexyAssistant user={user} onSpendTokens={onSpendTokens} onUserUpdate={onUserUpdate} />
+      )}
+
+      {/* Referral Modal */}
+      {showReferralModal && (
+        <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm animate-in fade-in duration-200">
+          <div className="bg-surface rounded-2xl border border-white/10 shadow-2xl shadow-black/50 w-full max-w-md animate-in zoom-in-95 duration-200 overflow-hidden">
+            <div className="p-6">
+              <div className="flex items-center justify-between mb-6">
+                <div>
+                  <h2 className="text-xl font-bold font-display text-text">Invite Friends & Earn Tokens</h2>
+                  <p className="text-sm text-muted mt-1">Give 700 Scholar Tokens to your friend, get 500 Scholar Tokens when they join!</p>
+                </div>
+                <button
+                  onClick={() => setShowReferralModal(false)}
+                  className="p-1 rounded-lg text-muted hover:text-text hover:bg-white/5 transition-colors"
+                >
+                  <X className="w-5 h-5" />
+                </button>
+              </div>
+
+              <div className="bg-surfaceHighlight/50 border border-white/5 rounded-xl p-4 mb-4">
+                <div className="flex items-center justify-between mb-2">
+                  <span className="text-[10px] font-bold uppercase tracking-widest text-muted">Your Referral Link</span>
+                  <button
+                    onClick={copyReferralLink}
+                    disabled={copiedLink === referralLink}
+                    className="flex items-center gap-1.5 px-3 py-1.5 text-[10px] font-bold uppercase tracking-wider rounded-lg transition-all
+                      ${copiedLink === referralLink 
+                        ? 'bg-primary/20 text-primary cursor-default' 
+                        : 'bg-primary/20 text-primary hover:bg-primary/30'}">
+                    {copiedLink === referralLink ? (
+                      <>
+                        <Check className="w-3 h-3" />
+                        Copied!
+                      </>
+                    ) : (
+                      <>
+                        <Copy className="w-3 h-3" />
+                        Copy Link
+                      </>
+                    )}
+                  </button>
+                </div>
+                <div className="flex gap-2">
+                  <input
+                    type="text"
+                    readOnly
+                    value={referralLink || 'Generating...'}
+                    className="flex-1 bg-background border border-white/5 rounded-lg px-3 py-2 text-sm text-text font-mono text-[11px] focus:outline-none focus:border-primary/50"
+                  />
+                </div>
+              </div>
+
+              <div className="grid grid-cols-2 gap-3 mb-6">
+                <div className="bg-primary/10 border border-primary/20 rounded-xl p-4 text-center">
+                  <div className="text-2xl font-bold font-display text-primary">+700</div>
+                  <div className="text-[10px] font-bold uppercase tracking-wider text-primary">For Your Friend</div>
+                  <div className="text-xs text-muted mt-1">Scholar Tokens on join</div>
+                </div>
+                <div className="bg-purple-500/10 border border-purple-500/20 rounded-xl p-4 text-center">
+                  <div className="text-2xl font-bold font-display text-purple-400">+500</div>
+                  <div className="text-[10px] font-bold uppercase tracking-wider text-purple-400">For You</div>
+                  <div className="text-xs text-muted mt-1">Scholar Tokens when they join</div>
+                </div>
+              </div>
+
+              <p className="text-center text-xs text-muted">
+                Share your link via any app. Rewards are granted automatically when your friend creates an account.
+              </p>
+            </div>
+          </div>
+        </div>
       )}
     </div>
   );

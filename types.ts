@@ -16,6 +16,8 @@ export interface User {
   tts_used?: number;
   limits_last_reset_date?: string; // ISO string (YYYY-MM-DD)
   unlocked_system_collections?: string[];
+  referral_code?: string;
+  referred_by?: string;
 }
 
 export interface TokenTransaction {

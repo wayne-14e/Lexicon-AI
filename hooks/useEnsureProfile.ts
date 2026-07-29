@@ -1,11 +1,12 @@
 import { useUser, useAuth } from '@clerk/clerk-react';
-import { useEffect } from 'react';
+import { useEffect, useRef } from 'react';
 import { storageService } from '../services/storageService';
 import { User } from '../types';
 
 export function useEnsureProfile() {
   const { user, isLoaded } = useUser();
   const { isSignedIn } = useAuth();
+  const hasSyncedRef = useRef(false);
 
   useEffect(() => {
     if (!isSignedIn || !isLoaded || !user) return;
@@ -23,6 +24,24 @@ export function useEnsureProfile() {
       try {
         const result = await storageService.upsertProfile(profileData as User);
         console.log('useEnsureProfile: Profile sync successful', result);
+
+        // Apply referral bonus if there's a stored referral code and this is a new user
+        if (!hasSyncedRef.current) {
+          hasSyncedRef.current = true;
+          const storedRefCode = localStorage.getItem('lexicon_ref_code');
+          if (storedRefCode && result) {
+            console.log('useEnsureProfile: Applying referral bonus with code:', storedRefCode);
+            try {
+              await storageService.applyReferralBonus(user.id, storedRefCode);
+              localStorage.removeItem('lexicon_ref_code');
+              console.log('useEnsureProfile: Referral bonus applied successfully');
+              // Dispatch a custom event to notify the app to refresh user data
+              window.dispatchEvent(new CustomEvent('lexicon:referral-applied'));
+            } catch (refError) {
+              console.error('useEnsureProfile: Referral bonus application failed:', refError);
+            }
+          }
+        }
       } catch (error) {
         console.error('useEnsureProfile: Profile sync failed', error);
       }

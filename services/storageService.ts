@@ -6,6 +6,19 @@ ALTER TABLE public.profiles ADD COLUMN IF NOT EXISTS username TEXT;
 import { User, VocabTable, TokenTransaction, MasteryEvent } from '../types';
 import { supabase } from './supabaseClient';
 
+const REFERRAL_INVITER_BONUS = 500;
+const REFERRAL_INVITEE_BONUS = 700;
+
+const generateReferralCode = (username: string): string => {
+  const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
+  const prefix = username.toUpperCase().replace(/[^A-Z0-9]/g, '').slice(0, 3);
+  let code = prefix;
+  while (code.length < 6) {
+    code += chars.charAt(Math.floor(Math.random() * chars.length));
+  }
+  return code.slice(0, 6);
+};
+
 export const storageService = {
   getUserById: async (userId: string): Promise<User | null> => {
     const { data, error } = await supabase
@@ -40,10 +53,12 @@ export const storageService = {
     let profileToSave;
     if (!existing) {
       // First time creation: use the determined username
+      const referralCode = user.referral_code || generateReferralCode(user.username);
       profileToSave = {
         ...user,
         tokens: 0,
         streak: 1,
+        referral_code: referralCode,
         // username is already in user object from initApp/useEnsureProfile
       };
       console.log('storageService.upsertProfile: Creating new profile:', profileToSave);
@@ -88,6 +103,11 @@ export const storageService = {
     // Only set username if it's currently null/empty in DB
     if (!existing.username) {
       updateData.username = newUser.username;
+    }
+
+    // Backfill referral_code if missing
+    if (!existing.referral_code) {
+      updateData.referral_code = generateReferralCode(newUser.username || newUser.email?.split('@')[0] || 'SCHOLAR');
     }
 
     console.log('storageService.upsertProfile: Updating existing profile:', updateData);
@@ -354,4 +374,25 @@ export const storageService = {
     return newUsage;
   },
 
+  applyReferralBonus: async (userId: string, refCode: string): Promise<{ success: boolean; error?: string }> => {
+    const { data, error } = await supabase.rpc('process_referral_bonus', {
+      p_new_user_id: userId,
+      p_referral_code: refCode.toUpperCase(),
+      p_inviter_bonus: REFERRAL_INVITER_BONUS,
+      p_invitee_bonus: REFERRAL_INVITEE_BONUS
+    });
+
+    if (error) {
+      console.error('storageService.applyReferralBonus: RPC error:', error);
+      return { success: false, error: error.message };
+    }
+
+    if (!data || data.success === false) {
+      const errorMsg = data?.error || 'Referral code invalid or already used';
+      console.warn('storageService.applyReferralBonus: RPC returned failure:', errorMsg);
+      return { success: false, error: errorMsg };
+    }
+
+    return { success: true };
+  }
 };

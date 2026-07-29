@@ -3,6 +3,7 @@ import { Eye, EyeOff } from 'lucide-react';
 import { useUser, useAuth, SignedIn, SignedOut, SignIn, SignUp, AuthenticateWithRedirectCallback } from '@clerk/clerk-react';
 import { User, VocabTable, GameMode } from './types';
 import { storageService } from './services/storageService';
+import { validSystemTableIds } from './services/systemArchiveData';
 import Layout from './components/Layout';
 import Dashboard from './components/Dashboard';
 import TableCreator from './components/TableCreator';
@@ -41,6 +42,19 @@ const App: React.FC = () => {
   const [toast, setToast] = useState<{ message: string; type: 'success' | 'info' } | null>(null);
   const [streakPopup, setStreakPopup] = useState<{ streak: number; tokens: number } | null>(null);
   const [authMode, setAuthMode] = useState<'sign-in' | 'sign-up'>('sign-in');
+
+  // Capture referral code from URL on initial mount
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    const refCode = params.get('ref');
+    if (refCode) {
+      const sanitized = refCode.trim().toUpperCase().replace(/[^A-Z0-9]/g, '').slice(0, 6);
+      if (sanitized.length >= 4) {
+        localStorage.setItem('lexicon_ref_code', sanitized);
+        console.log('Captured referral code:', sanitized);
+      }
+    }
+  }, []);
 
   // Sync Clerk user with Supabase profiles table
   useEnsureProfile();
@@ -170,7 +184,15 @@ const App: React.FC = () => {
     setIsFetching(true);
     try {
       const data = await storageService.getTables(userId);
-      setTables(data);
+      // Filter out stale combined system tables that don't correspond to real individual sets
+      const cleaned = data.filter(t => {
+        if (t.id.startsWith('system-') && !validSystemTableIds.has(t.id)) {
+          storageService.deleteTable(t.id);
+          return false;
+        }
+        return true;
+      });
+      setTables(cleaned);
     } catch (err) {
       console.error("Error fetching tables:", err);
     } finally {
@@ -273,7 +295,20 @@ const App: React.FC = () => {
   }, [dbUser?.id]);
 
   const handleNavigateToTable = (table: VocabTable) => {
-    setActiveTable(table);
+    if (table.id.startsWith('system-') && !validSystemTableIds.has(table.id)) {
+      return;
+    }
+    if (table.id.startsWith('system-')) {
+      const existing = tables.find(t => t.id === table.id);
+      if (existing) {
+        setActiveTable(existing);
+      } else {
+        setTables(prev => [...prev, table]);
+        setActiveTable(table);
+      }
+    } else {
+      setActiveTable(table);
+    }
     setView('view');
   };
 
