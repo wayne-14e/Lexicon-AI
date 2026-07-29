@@ -46,6 +46,7 @@ const FlashcardView: React.FC<FlashcardViewProps> = ({ user, table, excludeMaste
 
   const [improvement, setImprovement] = useState<number>(0);
   const [motivationalQuote, setMotivationalQuote] = useState<string>("");
+  const [showHint, setShowHint] = useState(false);
 
   const [initialAvgProgress] = useState<number>(() => {
     if (shuffledEntries.length === 0) return 0;
@@ -54,6 +55,10 @@ const FlashcardView: React.FC<FlashcardViewProps> = ({ user, table, excludeMaste
   });
 
   const currentEntry = shuffledEntries[currentIndex];
+
+  React.useEffect(() => {
+    setShowHint(false);
+  }, [cardKey]);
 
   const getCardWrapperStyle = (): React.CSSProperties => {
     if (transitionState === 'exiting') {
@@ -275,7 +280,7 @@ const FlashcardView: React.FC<FlashcardViewProps> = ({ user, table, excludeMaste
   const slideInClass = transitionDir === 'left' ? 'animate-slide-in-right' : 'animate-slide-in-left';
 
   return (
-    <div className="fixed top-0 left-0 right-0 bottom-0 bg-background z-50 flex flex-col overflow-hidden">
+    <div className="fixed top-0 left-0 right-0 bottom-0 bg-background z-50 flex flex-col overflow-y-auto">
       {/* Header */}
       <div className="px-4 sm:px-6 py-3 flex items-center justify-between bg-surface/80 backdrop-blur-md border-b border-white/5 shadow-sm">
         <div className="flex items-center space-x-6 sm:space-x-10">
@@ -303,11 +308,23 @@ const FlashcardView: React.FC<FlashcardViewProps> = ({ user, table, excludeMaste
         </div>
       </div>
 
-      <div className="flex-1 flex flex-col items-center justify-start pt-8 sm:pt-16 p-2 sm:p-4 lg:p-6 overflow-hidden">
+      <div className="flex-1 flex flex-col items-center justify-start pt-8 sm:pt-16 p-2 sm:p-4 lg:p-6">
+        {/* Progress Bar Above Card */}
+        <div className="w-full max-w-xl mb-3 sm:mb-4">
+          <div className="w-full flex items-center gap-3">
+            <div className="flex-1 h-1 bg-white/5 rounded-full overflow-hidden">
+              <div className="h-full bg-primary transition-all duration-700 ease-in-out" style={{ width: `${((currentIndex + 1) / shuffledEntries.length) * 100}%` }}></div>
+            </div>
+            <span className="text-[10px] font-bold font-mono text-muted uppercase tracking-[0.3em] whitespace-nowrap min-w-[4.5rem] text-right tabular-nums">
+              {currentIndex + 1}/{shuffledEntries.length}
+            </span>
+          </div>
+        </div>
+
         <div
           key={cardKey}
           style={getCardWrapperStyle()}
-          className={`w-full max-w-xl relative perspective mb-6 lg:mb-10 ${transitionState === 'entering' ? slideInClass : ''}`}
+          className={`w-full max-w-xl relative perspective mb-4 lg:mb-6 ${transitionState === 'entering' ? slideInClass : ''}`}
         >
           <div
             onClick={() => setIsFlipped(!isFlipped)}
@@ -385,55 +402,74 @@ const FlashcardView: React.FC<FlashcardViewProps> = ({ user, table, excludeMaste
         </div>
 
         {/* Assessment Buttons and Progress */}
-        <div className="w-full max-w-lg flex flex-col items-center space-y-6 lg:space-y-8">
-          <div className="flex items-center justify-center space-x-10 sm:space-x-12 lg:space-x-16">
-            <button
-              onClick={() => handleAssessment(false)}
-              className="group flex flex-col items-center space-y-2"
-            >
-              <div className="w-10 h-10 sm:w-12 sm:h-12 lg:w-14 lg:h-14 rounded-full border border-white/10 bg-surface flex items-center justify-center text-muted group-hover:bg-red-500/10 group-hover:text-red-400 group-hover:border-red-400/30 transition-all shadow-sm">
-                <svg className="w-4 h-4 sm:w-5 sm:h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M6 18L18 6M6 6l12 12" />
+        <div className="w-full max-w-xl flex flex-col items-center space-y-6 lg:space-y-8">
+          <div className="grid grid-cols-3 w-full items-center">
+            {/* Go Back Button (Left) */}
+            <div className="justify-self-start">
+              <button
+                onClick={handleGoBack}
+                disabled={actionHistory.length === 0}
+                className={`w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 rounded-full border border-white/10 bg-surface flex items-center justify-center transition-all shadow-sm ${actionHistory.length > 0 ? 'text-muted hover:bg-white/5 hover:text-text hover:border-white/20' : 'opacity-20 pointer-events-none'}`}
+                title="Go back"
+              >
+                <svg className="w-3.5 h-3.5 sm:w-4 sm:h-4 lg:w-5 lg:h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
                 </svg>
-              </div>
-              <span className="text-[8px] font-bold uppercase tracking-[0.3em] text-muted group-hover:text-red-400 transition-colors">Learning</span>
-            </button>
+              </button>
+            </div>
 
-            <button
-              onClick={() => handleAssessment(true)}
-              className="group flex flex-col items-center space-y-2"
-            >
-              <div className="w-10 h-10 sm:w-12 sm:h-12 lg:w-14 lg:h-14 rounded-full border border-white/10 bg-surface flex items-center justify-center text-muted group-hover:bg-primary/10 group-hover:text-primary group-hover:border-primary/30 transition-all shadow-sm">
-                <svg className="w-4 h-4 sm:w-5 sm:h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
+            {/* Center: Learning / Mastered */}
+            <div className="justify-self-center flex items-center space-x-4 sm:space-x-5 lg:space-x-6">
+              <button
+                onClick={() => handleAssessment(false)}
+                className="group flex flex-col items-center space-y-2"
+              >
+                <div className="w-10 h-10 sm:w-12 sm:h-12 lg:w-14 lg:h-14 rounded-full border border-white/10 bg-surface flex items-center justify-center text-muted group-hover:bg-red-500/10 group-hover:text-red-400 group-hover:border-red-400/30 transition-all shadow-sm">
+                  <svg className="w-4 h-4 sm:w-5 sm:h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M6 18L18 6M6 6l12 12" />
+                  </svg>
+                </div>
+                <span className="text-[8px] font-bold uppercase tracking-[0.3em] text-muted group-hover:text-red-400 transition-colors">Learning</span>
+              </button>
+
+              <button
+                onClick={() => handleAssessment(true)}
+                className="group flex flex-col items-center space-y-2"
+              >
+                <div className="w-10 h-10 sm:w-12 sm:h-12 lg:w-14 lg:h-14 rounded-full border border-white/10 bg-surface flex items-center justify-center text-muted group-hover:bg-primary/10 group-hover:text-primary group-hover:border-primary/30 transition-all shadow-sm">
+                  <svg className="w-4 h-4 sm:w-5 sm:h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
+                  </svg>
+                </div>
+                <span className="text-[8px] font-bold uppercase tracking-[0.3em] text-muted group-hover:text-primary transition-colors">Mastered</span>
+              </button>
+            </div>
+
+            {/* Get a Hint Button (Right) */}
+            <div className="justify-self-end">
+              <button
+                onClick={() => setShowHint(prev => !prev)}
+                className={`px-3 sm:px-4 py-2 sm:py-2.5 text-[8px] sm:text-[9px] font-bold uppercase tracking-widest rounded-full transition-all flex items-center border group/hint ${showHint ? 'bg-orange-500/10 text-orange-500 border-orange-500/30' : 'bg-surfaceHighlight text-muted border-white/10 hover:border-orange-500/50 hover:text-orange-500'}`}
+              >
+                <svg className="w-3 h-3 mr-2 group-hover/hint:scale-110 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M15 14c.2-1 .7-1.7 1.5-2.5a5 5 0 0 0-7.9-6c-2 1.4-3 3.8-2.2 6.2.5 1.4 1.9 2.5 2.5 3.3" />
+                  <path d="M9 18h6" />
+                  <path d="M10 22h4" />
                 </svg>
-              </div>
-              <span className="text-[8px] font-bold uppercase tracking-[0.3em] text-muted group-hover:text-primary transition-colors">Mastered</span>
-            </button>
+                Get a Hint
+              </button>
+            </div>
           </div>
 
-          {actionHistory.length > 0 && transitionState === 'idle' && (
-            <button
-              onClick={handleGoBack}
-              className="group flex items-center space-x-2 text-muted hover:text-text transition-colors"
-            >
-              <svg className="w-4 h-4 group-hover:translate-x-[-2px] transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
-              </svg>
-              <span className="text-[10px] font-bold uppercase tracking-[0.3em]">Go Back</span>
-            </button>
+          {showHint && currentEntry.sentence && (
+            <div className="w-full bg-surface rounded-xl border border-white/5 relative overflow-hidden animate-in fade-in slide-in-from-top-2 duration-300">
+              <div className="absolute top-0 left-0 w-1 h-full bg-orange-500"></div>
+              <div className="p-4 sm:p-5 pl-5 sm:pl-6">
+                <span className="text-[8px] font-bold uppercase tracking-[0.3em] text-orange-500 block mb-1.5">Contextual Hint</span>
+                <p className="text-sm sm:text-base text-text/80 italic leading-relaxed">"{currentEntry.sentence}"</p>
+              </div>
+            </div>
           )}
-
-          <div className="w-full flex flex-col items-center">
-             <div className="w-full max-w-[240px] h-1 bg-white/5 rounded-full overflow-hidden mb-3">
-                <div className="h-full bg-primary transition-all duration-700 ease-in-out" style={{ width: `${((currentIndex + 1) / shuffledEntries.length) * 100}%` }}></div>
-             </div>
-             <div className="flex items-center space-x-2">
-               <span className="text-[10px] font-bold font-mono text-muted uppercase tracking-[0.3em]">
-                 Artifact {currentIndex + 1} of {shuffledEntries.length}
-               </span>
-             </div>
-          </div>
         </div>
       </div>
 

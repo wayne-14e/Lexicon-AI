@@ -272,87 +272,88 @@ const Layout: React.FC<LayoutProps> = ({
                 </button>
               </div>
 
-              {/* Mobile side menu overlay */}
-              {showMobileMenu && (
-                <div ref={mobilePanelRef} className="fixed top-0 right-0 z-[60] h-[calc(100vh-64px)] w-64 bg-surface/90 backdrop-blur-2xl border-l border-white/5 border-t flex flex-col animate-in slide-in-from-right duration-300">
-                    {/* Cross icon at top right */}
-                    <div className="flex justify-end p-3">
-                      <button
-                        onClick={() => setShowMobileMenu(false)}
-                        className="p-2 rounded-lg bg-surfaceHighlight border border-white/5 text-muted hover:text-text hover:bg-white/5 transition-colors"
-                        aria-label="Close menu"
-                      >
-                        <X className="w-5 h-5" />
-                      </button>
-                    </div>
-
-                    {/* Logo - left aligned, slightly bigger */}
-                    <div className="px-4 pb-4 flex items-center justify-start">
-                      <div className="flex items-center cursor-pointer group" onClick={() => { setShowMobileMenu(false); onNavigateToHome(); }}>
-                        <div className="w-11 h-11 flex items-center justify-center shrink-0 drop-shadow-[0_0_12px_rgba(255,255,255,0.25)]">
-                          <img src="/logo.svg" className="object-contain w-full h-full" alt="Logo" />
-                        </div>
-                        <div className="flex flex-col justify-center ml-3">
-                          <h1 className="text-2xl font-bold tracking-tight text-text leading-none font-display">Lexicon</h1>
-                          <span className="text-muted font-medium text-xs uppercase tracking-[0.2em] leading-none">AI Journal</span>
-                        </div>
-                      </div>
-                    </div>
-
-                    {/* Spacer */}
-                    <div className="flex-1" />
-
-                    {/* Bottom: Profile stats, Feedback, Version */}
-                    <div className="p-4 border-t border-white/5 space-y-3">
-                      {/* Profile stats panel - navigates to profile */}
-                      <button
-                        onClick={() => { setShowMobileMenu(false); onNavigateToProfile(); }}
-                        className="w-full flex items-center p-2 rounded-xl bg-surfaceHighlight/50 border border-white/5 hover:bg-white/5 transition-colors text-left"
-                      >
-                        <div className="w-10 h-10 rounded-full bg-surfaceHighlight flex items-center justify-center text-primary text-lg font-bold border border-white/10 shrink-0 overflow-hidden">
-                          {user?.avatar_url ? (
-                            <img src={user.avatar_url} alt={user?.username} className="w-full h-full object-cover" />
-                          ) : (
-                            user?.username?.charAt(0).toUpperCase()
-                          )}
-                        </div>
-                        <div className="flex flex-col text-left ml-3">
-                          <span className="text-sm font-bold text-text truncate max-w-[120px]">{user?.username}</span>
-                          <div className="flex items-center gap-1.5">
-                            <span className="text-[10px] text-orange-500 font-bold uppercase tracking-wider">{user?.streak || 1}d</span>
-                            <span className="text-[10px] text-blue-500 font-bold">{user?.words_generated || 0}/40 W</span>
-                            <span className="text-[10px] text-purple-500 font-bold">{user?.tokens || 0} T</span>
-                          </div>
-                        </div>
-                      </button>
-
-                      <a
-                        href="https://airtable.com/appeRliTRVwrZCBtz/pagkCEum9R8RCY3ey/form"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="w-full flex items-center space-x-3 px-3 py-3 rounded-xl transition-all group bg-orange-500/10 text-orange-400 border border-orange-500/20 hover:bg-orange-500/20 hover:text-orange-300"
-                      >
-                        <div className="shrink-0"><MessageSquare className="w-5 h-5" /></div>
-                        <span className="text-sm font-medium">Feedback</span>
-                      </a>
-
-                      <button
-                        onClick={() => { setShowMobileMenu(false); onLogout(); }}
-                        className="w-full flex items-center space-x-3 px-3 py-3 rounded-xl transition-all group bg-red-500/10 text-red-400 border border-red-500/20 hover:bg-red-500/20 hover:text-red-300"
-                      >
-                        <LogOut className="w-5 h-5 shrink-0" />
-                        <span className="text-sm font-medium">Sign Out</span>
-                      </button>
-
-                      <div className="pt-5 text-center">
-                        <span className="text-[8px] text-muted/50 font-bold uppercase tracking-widest">Lexicon AI v4.0</span>
-                      </div>
-                    </div>
-                  </div>
-              )}
             </div>
           </header>
         )}
+
+      {/* Mobile side menu overlay */}
+      {user && showMobileMenu && (
+        <div ref={mobilePanelRef} className="fixed top-0 right-0 z-[70] h-screen w-64 bg-background/90 backdrop-blur-3xl border-l border-white/5 flex flex-col animate-in slide-in-from-right duration-300 shadow-2xl shadow-black/50">
+            {/* Cross icon at top right */}
+            <div className="flex justify-end p-3">
+              <button
+                onClick={() => setShowMobileMenu(false)}
+                className="p-2 rounded-lg bg-surfaceHighlight border border-white/5 text-muted hover:text-text hover:bg-white/5 transition-colors"
+                aria-label="Close menu"
+              >
+                <X className="w-5 h-5" />
+              </button>
+            </div>
+
+            {/* Logo - left aligned, slightly bigger */}
+            <div className="px-4 pb-4 flex items-center justify-start">
+              <div className="flex items-center cursor-pointer group" onClick={() => { setShowMobileMenu(false); onNavigateToHome(); }}>
+                <div className="w-11 h-11 flex items-center justify-center shrink-0 drop-shadow-[0_0_12px_rgba(255,255,255,0.25)]">
+                  <img src="/logo.svg" className="object-contain w-full h-full" alt="Logo" />
+                </div>
+                <div className="flex flex-col justify-center ml-3">
+                  <h1 className="text-2xl font-bold tracking-tight text-text leading-none font-display">Lexicon</h1>
+                  <span className="text-muted font-medium text-xs uppercase tracking-[0.2em] leading-none">AI Journal</span>
+                </div>
+              </div>
+            </div>
+
+            {/* Spacer */}
+            <div className="flex-1" />
+
+            {/* Bottom: Profile stats, Feedback, Version */}
+            <div className="p-4 border-t border-white/5 space-y-3">
+              {/* Profile stats panel - navigates to profile */}
+              <button
+                onClick={() => { setShowMobileMenu(false); onNavigateToProfile(); }}
+                className="w-full flex items-center p-2 rounded-xl bg-surfaceHighlight/50 border border-white/5 hover:bg-white/5 transition-colors text-left"
+              >
+                <div className="w-10 h-10 rounded-full bg-surfaceHighlight flex items-center justify-center text-primary text-lg font-bold border border-white/10 shrink-0 overflow-hidden">
+                  {user?.avatar_url ? (
+                    <img src={user.avatar_url} alt={user?.username} className="w-full h-full object-cover" />
+                  ) : (
+                    user?.username?.charAt(0).toUpperCase()
+                  )}
+                </div>
+                <div className="flex flex-col text-left ml-3">
+                  <span className="text-sm font-bold text-text truncate max-w-[120px]">{user?.username}</span>
+                  <div className="flex items-center gap-1.5">
+                    <span className="text-[10px] text-orange-500 font-bold uppercase tracking-wider">{user?.streak || 1}d</span>
+                    <span className="text-[10px] text-blue-500 font-bold">{user?.words_generated || 0}/40 W</span>
+                    <span className="text-[10px] text-purple-500 font-bold">{user?.tokens || 0} T</span>
+                  </div>
+                </div>
+              </button>
+
+              <a
+                href="https://airtable.com/appeRliTRVwrZCBtz/pagkCEum9R8RCY3ey/form"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full flex items-center space-x-3 px-3 py-3 rounded-xl transition-all group bg-orange-500/10 text-orange-400 border border-orange-500/20 hover:bg-orange-500/20 hover:text-orange-300"
+              >
+                <div className="shrink-0"><MessageSquare className="w-5 h-5" /></div>
+                <span className="text-sm font-medium">Feedback</span>
+              </a>
+
+              <button
+                onClick={() => { setShowMobileMenu(false); onLogout(); }}
+                className="w-full flex items-center space-x-3 px-3 py-3 rounded-xl transition-all group bg-red-500/10 text-red-400 border border-red-500/20 hover:bg-red-500/20 hover:text-red-300"
+              >
+                <LogOut className="w-5 h-5 shrink-0" />
+                <span className="text-sm font-medium">Sign Out</span>
+              </button>
+
+              <div className="pt-5 text-center">
+                <span className="text-[8px] text-muted/50 font-bold uppercase tracking-widest">Lexicon AI v4.0</span>
+              </div>
+            </div>
+          </div>
+      )}
 
         <main className={`flex-1 w-full px-2 sm:px-4 py-8 sm:py-12 flex flex-col pb-24 md:pb-12`}>
           <div className="w-full h-full">
@@ -412,7 +413,9 @@ const Layout: React.FC<LayoutProps> = ({
       )}
 
       {/* Lexy Assistant Panel */}
-      {user && <LexyAssistant user={user} onSpendTokens={onSpendTokens} onUserUpdate={onUserUpdate} />}
+      {user && !['study', 'context-learning', 'matching'].includes(currentPath || '') && (
+        <LexyAssistant user={user} onSpendTokens={onSpendTokens} onUserUpdate={onUserUpdate} />
+      )}
     </div>
   );
 };
