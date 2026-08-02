@@ -3,13 +3,13 @@ import { useEffect, useRef } from 'react';
 import { storageService } from '../services/storageService';
 import { User } from '../types';
 
-export function useEnsureProfile() {
+export function useEnsureProfile(isDbReady: boolean) {
   const { user, isLoaded } = useUser();
   const { isSignedIn } = useAuth();
   const hasSyncedRef = useRef(false);
 
   useEffect(() => {
-    if (!isSignedIn || !isLoaded || !user) return;
+    if (!isSignedIn || !isLoaded || !user || !isDbReady) return;
 
     const syncProfile = async () => {
       console.log('useEnsureProfile: Attempting to sync profile for', user.id);

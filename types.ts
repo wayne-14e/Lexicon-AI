@@ -28,13 +28,6 @@ export interface TokenTransaction {
   createdAt: number;
 }
 
-export interface MasteryEvent {
-  id: string;
-  userId: string;
-  word: string;
-  createdAt: number;
-}
-
 export type GameMode = 'synonyms' | 'antonyms';
 
 export interface VocabEntry {
@@ -46,6 +39,7 @@ export interface VocabEntry {
   antonyms?: string;
   sentence: string;
   progress?: number; // 0 to 100
+  masteredAt?: number; // Unix epoch timestamp (ms) when progress first crossed >= 80
 }
 
 export interface VocabTable {

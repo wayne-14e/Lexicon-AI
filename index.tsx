@@ -23,8 +23,8 @@ root.render(
       publishableKey={PUBLISHABLE_KEY}
       signInUrl={CLERK_SIGN_IN_URL}
       signUpUrl={CLERK_SIGN_UP_URL}
-      afterSignInUrl="/"
-      afterSignUpUrl="/"
+      signInFallbackRedirectUrl="/"
+      signUpFallbackRedirectUrl="/"
     >
       <App />
     </ClerkProvider>

@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useMemo } from 'react';
-import { User, VocabTable, TokenTransaction, MasteryEvent } from '../types';
+import { User, VocabTable, TokenTransaction } from '../types';
 import { storageService } from '../services/storageService';
 import { 
   LineChart, 
@@ -30,6 +30,7 @@ interface ProfileViewProps {
 type TokenRange = 'this-week' | 'last-week';
 type MasteryRange = 'this-week' | 'last-week';
 
+
 const getStartOfWeekMonday = (date: Date) => {
   const start = new Date(date);
   const day = start.getDay();
@@ -41,7 +42,6 @@ const getStartOfWeekMonday = (date: Date) => {
 
 const ProfileView: React.FC<ProfileViewProps> = ({ user, tables, onBack, onUserUpdate }) => {
   const [tokenTransactions, setTokenTransactions] = useState<TokenTransaction[]>([]);
-  const [masteryEvents, setMasteryEvents] = useState<MasteryEvent[]>([]);
   const [tokenRange, setTokenRange] = useState<TokenRange>('this-week');
   const [masteryRange, setMasteryRange] = useState<MasteryRange>('this-week');
   const [isLoading, setIsLoading] = useState(true);
@@ -76,38 +76,8 @@ const ProfileView: React.FC<ProfileViewProps> = ({ user, tables, onBack, onUserU
     const fetchData = async () => {
       setIsLoading(true);
       try {
-        const [transactions, events] = await Promise.all([
-          storageService.getTokenTransactions(user.id),
-          storageService.getMasteryEvents(user.id)
-        ]);
-        
-        // Sync missing mastery events (for words mastered before the tracker was added)
-        const existingMasteredWords = new Set(events.map(e => e.word));
-        const masteredWordsInTables = tables.flatMap(t => 
-          t.entries.filter(e => (e.progress || 0) >= 80).map(e => e.word)
-        );
-        
-        const missingWords = masteredWordsInTables.filter(w => !existingMasteredWords.has(w));
-        let finalEvents = [...events];
-        
-        if (missingWords.length > 0) {
-          const newEvents = missingWords.map(word => ({
-            id: crypto.randomUUID(),
-            userId: user.id,
-            word,
-            createdAt: Date.now()
-          }));
-          
-          // Save to database
-          for (const event of newEvents) {
-            await storageService.addMasteryEvent(event);
-          }
-          
-          finalEvents = [...finalEvents, ...newEvents];
-        }
-
+        const transactions = await storageService.getTokenTransactions(user.id);
         setTokenTransactions(transactions);
-        setMasteryEvents(finalEvents);
       } catch (error) {
         console.error("Error fetching profile data:", error);
       } finally {
@@ -115,7 +85,7 @@ const ProfileView: React.FC<ProfileViewProps> = ({ user, tables, onBack, onUserU
       }
     };
     fetchData();
-  }, [user.id, tables]);
+  }, [user.id]);
 
   // Calculate stats from real data where possible
   const totalWords = tables.reduce((acc, table) => acc + table.entries.length, 0);
@@ -152,7 +122,7 @@ const ProfileView: React.FC<ProfileViewProps> = ({ user, tables, onBack, onUserU
     return data;
   }, [tokenTransactions, tokenRange]);
 
-  // Process Weekly Mastery Data
+  // Process Weekly Mastery Data (derived from vocab_tables entries' progress)
   const weeklyMasteryData = useMemo(() => {
     const now = new Date();
     const startOfThisWeek = getStartOfWeekMonday(now);
@@ -162,6 +132,14 @@ const ProfileView: React.FC<ProfileViewProps> = ({ user, tables, onBack, onUserU
       startOfRange.setDate(startOfRange.getDate() - 7);
     }
 
+    // Collect mastered entries (progress >= 80). Use each entry's masteredAt
+    // timestamp, falling back to the collection's createdAt for backfill.
+    const masteredEntries = tables.flatMap(table =>
+      table.entries
+        .filter(e => (e.progress || 0) >= 80)
+        .map(e => ({ masteredAt: e.masteredAt ?? table.createdAt }))
+    );
+
     const days = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
     const data = days.map((name, index) => {
       const dayDate = new Date(startOfRange);
@@ -169,15 +147,15 @@ const ProfileView: React.FC<ProfileViewProps> = ({ user, tables, onBack, onUserU
       const nextDayDate = new Date(dayDate);
       nextDayDate.setDate(nextDayDate.getDate() + 1);
 
-      const dailyTotal = masteryEvents
-        .filter(e => e.createdAt >= dayDate.getTime() && e.createdAt < nextDayDate.getTime())
+      const dailyTotal = masteredEntries
+        .filter(e => e.masteredAt >= dayDate.getTime() && e.masteredAt < nextDayDate.getTime())
         .length;
 
       return { name, words: dailyTotal };
     });
 
     return data;
-  }, [masteryEvents, masteryRange]);
+  }, [tables, masteryRange]);
 
   return (
     <div className="max-w-7xl mx-auto w-full space-y-8 animate-in fade-in duration-500">
@@ -322,7 +300,9 @@ const ProfileView: React.FC<ProfileViewProps> = ({ user, tables, onBack, onUserU
           </div>
         </div>
 
-        {/* Weekly Mastery Progress */}
+
+      </div>
+       {/* Weekly Mastery Progress */}
         <div className="bg-surface rounded-2xl border border-white/5 shadow-lg shadow-black/20 p-6">
           <div className="flex items-center justify-between mb-6">
             <h3 className="text-lg font-bold font-display text-text flex items-center gap-2">
@@ -382,7 +362,6 @@ const ProfileView: React.FC<ProfileViewProps> = ({ user, tables, onBack, onUserU
             )}
           </div>
         </div>
-      </div>
     </div>
   );
 };

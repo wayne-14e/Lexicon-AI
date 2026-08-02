@@ -2,7 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { Eye, EyeOff } from 'lucide-react';
 import { useUser, useAuth, SignedIn, SignedOut, SignIn, SignUp, AuthenticateWithRedirectCallback } from '@clerk/clerk-react';
 import { User, VocabTable, GameMode } from './types';
-import { storageService } from './services/storageService';
+import { storageService, setAuthenticatedClient } from './services/storageService';
+import { createClerkSupabaseClient, supabase } from './services/supabaseClient';
 import { validSystemTableIds } from './services/systemArchiveData';
 import Layout from './components/Layout';
 import Dashboard from './components/Dashboard';
@@ -29,9 +30,10 @@ type ViewState = 'home' | 'collections' | 'scratchpad' | 'create' | 'view' | 'pu
 
 const App: React.FC = () => {
   const { user: clerkUser, isLoaded: isClerkLoaded } = useUser();
-  const { isLoaded: isAuthLoaded, isSignedIn, signOut } = useAuth();
+  const { isLoaded: isAuthLoaded, isSignedIn, signOut, getToken } = useAuth();
   
   const [dbUser, setDbUser] = useState<User | null>(null);
+  const [isDbReady, setIsDbReady] = useState(false);
   const [tables, setTables] = useState<VocabTable[]>([]);
   const [view, setView] = useState<ViewState>('home');
   const [activeTable, setActiveTable] = useState<VocabTable | null>(null);
@@ -57,17 +59,28 @@ const App: React.FC = () => {
   }, []);
 
   // Sync Clerk user with Supabase profiles table
-  useEnsureProfile();
+  useEnsureProfile(isDbReady);
 
   useEffect(() => {
-    if (isSignedIn && clerkUser) {
+    if (isDbReady && clerkUser && isClerkLoaded) {
       initApp();
     } else if (isAuthLoaded && !isSignedIn) {
       setDbUser(null);
       setTables([]);
       setIsInitializing(false);
     }
-  }, [isSignedIn, clerkUser, isAuthLoaded]);
+  }, [isDbReady, clerkUser, isClerkLoaded, isAuthLoaded, isSignedIn]);
+
+  useEffect(() => {
+    if (isSignedIn && getToken) {
+      const authClient = createClerkSupabaseClient(getToken);
+      setAuthenticatedClient(authClient);
+      setIsDbReady(true);
+    } else if (!isSignedIn && isAuthLoaded) {
+      setAuthenticatedClient(supabase);
+      setIsDbReady(false);
+    }
+  }, [isSignedIn, getToken, isAuthLoaded]);
 
   const showToast = (message: string, type: 'success' | 'info' = 'success') => {
     setToast({ message, type });
@@ -79,20 +92,8 @@ const App: React.FC = () => {
     if (!uid) return null;
 
     try {
-      const latestUser = await storageService.getUserById(uid);
-      const currentTokens = latestUser?.tokens ?? 0;
-      const newTokens = currentTokens + amount;
-      
-      await storageService.addTokenTransaction({
-        id: crypto.randomUUID(),
-        userId: uid,
-        amount,
-        reason,
-        createdAt: Date.now()
-      });
-
-      const success = await storageService.updateUserTokens(uid, newTokens);
-      if (!success) return null;
+      const newTokens = await storageService.adjustUserTokens(uid, amount, reason);
+      if (newTokens === null) return null;
 
       setDbUser(prev => (prev ? { ...prev, tokens: newTokens } : prev));
       return newTokens;
@@ -354,26 +355,19 @@ const App: React.FC = () => {
 
   const handleUpdateEntryProgress = async (entryId: string, delta: number) => {
     if (!activeTable) return;
-    let masteredWord: string | null = null;
     const updatedEntries = activeTable.entries.map(entry => {
       if (entry.id === entryId) {
         const currentProgress = entry.progress || 0;
         let newProgress = currentProgress + delta;
         newProgress = Math.max(0, Math.min(100, newProgress));
-        if (currentProgress < 80 && newProgress >= 80) masteredWord = entry.word;
-        return { ...entry, progress: newProgress };
+        // Record the first time a word crosses the 80% mastery threshold
+        const masteredAt = currentProgress < 80 && newProgress >= 80
+          ? Date.now()
+          : entry.masteredAt;
+        return { ...entry, progress: newProgress, masteredAt };
       }
       return entry;
     });
-
-    if (masteredWord && dbUser) {
-      await storageService.addMasteryEvent({
-        id: crypto.randomUUID(),
-        userId: dbUser.id,
-        word: masteredWord,
-        createdAt: Date.now()
-      });
-    }
 
     const updatedTable = { ...activeTable, entries: updatedEntries };
     handleUpdateTable(updatedTable);

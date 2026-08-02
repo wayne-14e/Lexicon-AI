@@ -3,8 +3,17 @@ MIGRATION:
 ALTER TABLE public.profiles ADD COLUMN IF NOT EXISTS username TEXT;
 */
 
-import { User, VocabTable, TokenTransaction, MasteryEvent } from '../types';
+import { User, VocabTable, TokenTransaction } from '../types';
+import { SupabaseClient } from '@supabase/supabase-js';
 import { supabase } from './supabaseClient';
+
+let activeClient: SupabaseClient = supabase;
+
+export const setAuthenticatedClient = (client: SupabaseClient) => {
+  activeClient = client;
+};
+
+const getDb = () => activeClient;
 
 const REFERRAL_INVITER_BONUS = 500;
 const REFERRAL_INVITEE_BONUS = 700;
@@ -21,7 +30,7 @@ const generateReferralCode = (username: string): string => {
 
 export const storageService = {
   getUserById: async (userId: string): Promise<User | null> => {
-    const { data, error } = await supabase
+    const { data, error } = await getDb()
       .from('profiles')
       .select('*')
       .eq('id', userId)
@@ -40,7 +49,7 @@ export const storageService = {
     console.log('storageService.upsertProfile: Starting for', user.id);
     
     // Option A: Select first to check if profile exists
-    const { data: existing, error: fetchError } = await supabase
+    const { data: existing, error: fetchError } = await getDb()
       .from('profiles')
       .select('*')
       .eq('id', user.id)
@@ -63,7 +72,7 @@ export const storageService = {
       };
       console.log('storageService.upsertProfile: Creating new profile:', profileToSave);
       
-      const { data, error } = await supabase
+      const { data, error } = await getDb()
         .from('profiles')
         .insert([profileToSave])
         .select()
@@ -73,7 +82,7 @@ export const storageService = {
         if (error.code === '23505') {
           console.log('storageService.upsertProfile: Race condition detected (409), falling back to update');
           // Fetch existing again to be safe
-          const { data: latestExisting } = await supabase
+          const { data: latestExisting } = await getDb()
             .from('profiles')
             .select('*')
             .eq('id', user.id)
@@ -112,7 +121,7 @@ export const storageService = {
 
     console.log('storageService.upsertProfile: Updating existing profile:', updateData);
 
-    const { data, error } = await supabase
+    const { data, error } = await getDb()
       .from('profiles')
       .update(updateData)
       .eq('id', existing.id)
@@ -127,14 +136,14 @@ export const storageService = {
   },
 
   updateProfile: async (user: User) => {
-    const { error } = await supabase
+    const { error } = await getDb()
       .from('profiles')
       .upsert([user]);
     if (error) console.error('Error updating profile:', error);
   },
 
   updateProfileField: async (userId: string, field: keyof User, value: any) => {
-    const { error } = await supabase
+    const { error } = await getDb()
       .from('profiles')
       .update({ [field]: value })
       .eq('id', userId);
@@ -142,7 +151,7 @@ export const storageService = {
   },
 
   findProfileByName: async (username: string): Promise<User | null> => {
-    const { data } = await supabase
+    const { data } = await getDb()
       .from('profiles')
       .select('*')
       .ilike('username', username)
@@ -152,7 +161,7 @@ export const storageService = {
   },
 
   findProfileByEmail: async (email: string): Promise<User | null> => {
-    const { data } = await supabase
+    const { data } = await getDb()
       .from('profiles')
       .select('*')
       .eq('email', email)
@@ -162,7 +171,7 @@ export const storageService = {
   },
 
   getTables: async (userId: string): Promise<VocabTable[]> => {
-    const { data, error } = await supabase
+    const { data, error } = await getDb()
       .from('vocab_tables')
       .select('*')
       .eq('userId', userId);
@@ -175,7 +184,7 @@ export const storageService = {
   },
 
   saveTable: async (table: VocabTable) => {
-    const { error } = await supabase
+    const { error } = await getDb()
       .from('vocab_tables')
       .upsert([table]);
       
@@ -183,7 +192,7 @@ export const storageService = {
   },
 
   deleteTable: async (id: string) => {
-    const { error } = await supabase
+    const { error } = await getDb()
       .from('vocab_tables')
       .delete()
       .eq('id', id);
@@ -192,7 +201,7 @@ export const storageService = {
   },
 
   getNotes: async (userId: string): Promise<string> => {
-    const { data, error } = await supabase
+    const { data, error } = await getDb()
       .from('notes')
       .select('content')
       .eq('userId', userId)
@@ -205,25 +214,30 @@ export const storageService = {
   },
 
   saveNotes: async (userId: string, notes: string) => {
-    const { error } = await supabase
+    const { error } = await getDb()
       .from('notes')
       .upsert([{ userId, content: notes }]);
       
     if (error) console.error('Error saving notes:', error);
   },
 
-  addTokenTransaction: async (transaction: TokenTransaction) => {
-    const { error } = await supabase
-      .from('token_transactions')
-      .insert([transaction]);
+  adjustUserTokens: async (userId: string, amount: number, reason: string): Promise<number | null> => {
+    const { data, error } = await getDb().rpc('adjust_user_tokens', {
+      p_user_id: userId,
+      p_amount: amount,
+      p_reason: reason
+    });
+
     if (error) {
-      console.error('CRITICAL: Error saving token transaction:', error);
-      throw new Error(`Token Transaction Failed: ${error.message}`);
+      console.error('CRITICAL: Error adjusting user tokens via RPC:', error);
+      return null;
     }
+
+    return data as number;
   },
 
   updateUserTokens: async (userId: string, newTokens: number): Promise<boolean> => {
-    const { error } = await supabase
+    const { error } = await getDb()
       .from('profiles')
       .update({ tokens: newTokens })
       .eq('id', userId);
@@ -236,7 +250,7 @@ export const storageService = {
   },
 
   syncUserTokenBalanceFromTransactions: async (userId: string): Promise<number | null> => {
-    const { data, error } = await supabase
+    const { data, error } = await getDb()
       .from('token_transactions')
       .select('amount')
       .eq('userId', userId);
@@ -252,33 +266,13 @@ export const storageService = {
   },
 
   getTokenTransactions: async (userId: string): Promise<TokenTransaction[]> => {
-    const { data, error } = await supabase
+    const { data, error } = await getDb()
       .from('token_transactions')
       .select('*')
       .eq('userId', userId)
       .order('createdAt', { ascending: true });
     if (error) {
       console.error('Error fetching token transactions:', error);
-      return [];
-    }
-    return data || [];
-  },
-
-  addMasteryEvent: async (event: MasteryEvent) => {
-    const { error } = await supabase
-      .from('mastery_events')
-      .insert([event]);
-    if (error) console.error('Error saving mastery event:', error);
-  },
-
-  getMasteryEvents: async (userId: string): Promise<MasteryEvent[]> => {
-    const { data, error } = await supabase
-      .from('mastery_events')
-      .select('*')
-      .eq('userId', userId)
-      .order('createdAt', { ascending: true });
-    if (error) {
-      console.error('Error fetching mastery events:', error);
       return [];
     }
     return data || [];
@@ -303,7 +297,7 @@ export const storageService = {
 
     const updatedUser = { ...user, ...resetLimits };
     
-    const { error } = await supabase
+    const { error } = await getDb()
       .from('profiles')
       .update(resetLimits)
       .eq('id', user.id);
@@ -328,7 +322,7 @@ export const storageService = {
     };
     
     // Fetch latest user data to ensure we have current usage counts
-    const { data: latestUser, error } = await supabase
+    const { data: latestUser, error } = await getDb()
       .from('profiles')
       .select('*')
       .eq('id', user.id)
@@ -361,7 +355,7 @@ export const storageService = {
     }
 
     const newUsage = status.used + amount;
-    const { error } = await supabase
+    const { error } = await getDb()
       .from('profiles')
       .update({ [limitType]: newUsage })
       .eq('id', user.id);
@@ -375,7 +369,7 @@ export const storageService = {
   },
 
   applyReferralBonus: async (userId: string, refCode: string): Promise<{ success: boolean; error?: string }> => {
-    const { data, error } = await supabase.rpc('process_referral_bonus', {
+    const { data, error } = await getDb().rpc('process_referral_bonus', {
       p_new_user_id: userId,
       p_referral_code: refCode.toUpperCase(),
       p_inviter_bonus: REFERRAL_INVITER_BONUS,
