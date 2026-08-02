@@ -1,20 +1,20 @@
 import React, { useState, useEffect, useMemo } from 'react';
 import { User, VocabTable, TokenTransaction } from '../types';
 import { storageService } from '../services/storageService';
-import { 
-  LineChart, 
-  Line, 
-  XAxis, 
-  YAxis, 
-  CartesianGrid, 
-  Tooltip, 
+import {
+  LineChart,
+  Line,
+  XAxis,
+  YAxis,
+  CartesianGrid,
+  Tooltip,
   ResponsiveContainer,
   BarChart,
   Bar
 } from 'recharts';
-import { 
-  Flame, 
-  Target, 
+import {
+  Flame,
+  Target,
   TrendingUp,
   Calendar,
   ChevronDown
@@ -89,10 +89,10 @@ const ProfileView: React.FC<ProfileViewProps> = ({ user, tables, onBack, onUserU
 
   // Calculate stats from real data where possible
   const totalWords = tables.reduce((acc, table) => acc + table.entries.length, 0);
-  const masteredWords = tables.reduce((acc, table) => 
+  const masteredWords = tables.reduce((acc, table) =>
     acc + table.entries.filter(e => (e.progress || 0) >= 80).length, 0
   );
-  
+
   const currentStreak = user.streak || 1;
 
   // Process Weekly Tokens Data
@@ -161,7 +161,7 @@ const ProfileView: React.FC<ProfileViewProps> = ({ user, tables, onBack, onUserU
     <div className="max-w-7xl mx-auto w-full space-y-8 animate-in fade-in duration-500">
       {/* Header */}
       <div className="flex items-center justify-between">
-        <button 
+        <button
           onClick={onBack}
           className="text-[9px] sm:text-[10px] font-bold uppercase tracking-[0.3em] text-muted hover:text-text mb-1 flex items-center transition-colors group"
         >
@@ -173,7 +173,7 @@ const ProfileView: React.FC<ProfileViewProps> = ({ user, tables, onBack, onUserU
       <div className="bg-surface rounded-2xl border border-white/5 shadow-lg shadow-black/20 p-6 sm:p-8 relative overflow-hidden">
         <div className="absolute top-0 right-0 w-32 h-32 bg-primary/20 rounded-full -mr-16 -mt-16 blur-2xl"></div>
         <div className="absolute bottom-0 left-0 w-24 h-24 bg-secondary/20 rounded-full -ml-12 -mb-12 blur-2xl"></div>
-               <div className="relative flex flex-col sm:flex-row items-center sm:items-start gap-6">
+        <div className="relative flex flex-col sm:flex-row items-center sm:items-start gap-6">
           <div className="w-24 h-24 rounded-full bg-surfaceHighlight text-primary flex items-center justify-center text-3xl font-bold border-4 border-surface shadow-lg overflow-hidden">
             {user.avatar_url ? (
               <img src={user.avatar_url} alt={user.username} className="w-full h-full object-cover" />
@@ -181,11 +181,11 @@ const ProfileView: React.FC<ProfileViewProps> = ({ user, tables, onBack, onUserU
               user.username.charAt(0).toUpperCase()
             )}
           </div>
-          
+
           <div className="flex-1 text-center sm:text-left space-y-4">
             <div className="flex items-center justify-center sm:justify-start gap-3 group">
               {isEditingUsername ? (
-                <input 
+                <input
                   type="text"
                   autoFocus
                   value={editUsername}
@@ -203,7 +203,7 @@ const ProfileView: React.FC<ProfileViewProps> = ({ user, tables, onBack, onUserU
               ) : (
                 <>
                   <h1 className="text-2xl sm:text-5xl font-bold font-display text-text">{user.username}</h1>
-                  <button 
+                  <button
                     onClick={() => setIsEditingUsername(true)}
                     className="p-2 text-muted hover:text-primary transition-all bg-surfaceHighlight rounded-full hover:bg-primary/10 flex items-center justify-center border border-white/5"
                     title="Edit Username"
@@ -215,8 +215,8 @@ const ProfileView: React.FC<ProfileViewProps> = ({ user, tables, onBack, onUserU
                 </>
               )}
             </div>
-            
-            
+
+
             <div className="flex flex-wrap justify-center sm:justify-start gap-4 mt-6">
               <div className="flex items-center space-x-1.5 bg-orange-500/10 text-orange-500 px-3 py-1 rounded-full border border-orange-500/20">
                 <Flame className="w-4 h-4" />
@@ -244,9 +244,9 @@ const ProfileView: React.FC<ProfileViewProps> = ({ user, tables, onBack, onUserU
               <TrendingUp className="w-5 h-5 text-purple-500" />
               Weekly Tokens Earned
             </h3>
-            
+
             <div className="relative group">
-              <select 
+              <select
                 value={tokenRange}
                 onChange={(e) => setTokenRange(e.target.value as TokenRange)}
                 className="appearance-none bg-surfaceHighlight border border-white/5 rounded-lg px-4 py-1.5 pr-10 text-[10px] font-bold uppercase tracking-widest text-muted hover:text-text focus:outline-none focus:border-primary/50 transition-all cursor-pointer"
@@ -257,7 +257,7 @@ const ProfileView: React.FC<ProfileViewProps> = ({ user, tables, onBack, onUserU
               <ChevronDown className="w-3 h-3 absolute right-3 top-1/2 -translate-y-1/2 text-muted pointer-events-none" />
             </div>
           </div>
-          
+
           <div className="h-64 w-full">
             {isLoading ? (
               <div className="h-full flex items-center justify-center">
@@ -267,29 +267,29 @@ const ProfileView: React.FC<ProfileViewProps> = ({ user, tables, onBack, onUserU
               <ResponsiveContainer width="100%" height="100%">
                 <LineChart data={weeklyTokensData}>
                   <CartesianGrid strokeDasharray="3 3" vertical={false} stroke="#1e232b" />
-                  <XAxis 
-                    dataKey="name" 
-                    axisLine={false} 
-                    tickLine={false} 
-                    tick={{ fill: '#9ca3af', fontSize: 10 }} 
+                  <XAxis
+                    dataKey="name"
+                    axisLine={false}
+                    tickLine={false}
+                    tick={{ fill: '#9ca3af', fontSize: 10 }}
                     dy={10}
                   />
-                  <YAxis 
-                    axisLine={false} 
-                    tickLine={false} 
-                    tick={{ fill: '#9ca3af', fontSize: 10 }} 
+                  <YAxis
+                    axisLine={false}
+                    tickLine={false}
+                    tick={{ fill: '#9ca3af', fontSize: 10 }}
                   />
-                  <Tooltip 
+                  <Tooltip
                     contentStyle={{ borderRadius: '12px', border: '1px solid rgba(255,255,255,0.1)', backgroundColor: '#13161c', boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.5)' }}
                     itemStyle={{ color: '#e3e3e3', fontSize: '12px', fontWeight: 'bold' }}
                     labelStyle={{ color: '#9ca3af', fontSize: '10px', marginBottom: '4px', textTransform: 'uppercase', letterSpacing: '0.1em' }}
                     cursor={{ stroke: '#1e232b', strokeWidth: 2 }}
                   />
-                  <Line 
-                    type="monotone" 
-                    dataKey="tokens" 
-                    stroke="#a855f7" 
-                    strokeWidth={3} 
+                  <Line
+                    type="monotone"
+                    dataKey="tokens"
+                    stroke="#a855f7"
+                    strokeWidth={3}
                     dot={{ fill: '#a855f7', strokeWidth: 2, r: 4, stroke: '#13161c' }}
                     activeDot={{ r: 6, strokeWidth: 0 }}
                     animationDuration={1500}
@@ -299,10 +299,7 @@ const ProfileView: React.FC<ProfileViewProps> = ({ user, tables, onBack, onUserU
             )}
           </div>
         </div>
-
-
-      </div>
-       {/* Weekly Mastery Progress */}
+        {/* Weekly Mastery Progress */}
         <div className="bg-surface rounded-2xl border border-white/5 shadow-lg shadow-black/20 p-6">
           <div className="flex items-center justify-between mb-6">
             <h3 className="text-lg font-bold font-display text-text flex items-center gap-2">
@@ -311,7 +308,7 @@ const ProfileView: React.FC<ProfileViewProps> = ({ user, tables, onBack, onUserU
             </h3>
 
             <div className="relative group">
-              <select 
+              <select
                 value={masteryRange}
                 onChange={(e) => setMasteryRange(e.target.value as MasteryRange)}
                 className="appearance-none bg-surfaceHighlight border border-white/5 rounded-lg px-4 py-1.5 pr-10 text-[10px] font-bold uppercase tracking-widest text-muted hover:text-text focus:outline-none focus:border-primary/50 transition-all cursor-pointer"
@@ -322,7 +319,7 @@ const ProfileView: React.FC<ProfileViewProps> = ({ user, tables, onBack, onUserU
               <ChevronDown className="w-3 h-3 absolute right-3 top-1/2 -translate-y-1/2 text-muted pointer-events-none" />
             </div>
           </div>
-          
+
           <div className="h-64 w-full">
             {isLoading ? (
               <div className="h-full flex items-center justify-center">
@@ -332,27 +329,27 @@ const ProfileView: React.FC<ProfileViewProps> = ({ user, tables, onBack, onUserU
               <ResponsiveContainer width="100%" height="100%">
                 <BarChart data={weeklyMasteryData}>
                   <CartesianGrid strokeDasharray="3 3" vertical={false} stroke="#1e232b" />
-                  <XAxis 
-                    dataKey="name" 
-                    axisLine={false} 
-                    tickLine={false} 
-                    tick={{ fill: '#9ca3af', fontSize: 10 }} 
+                  <XAxis
+                    dataKey="name"
+                    axisLine={false}
+                    tickLine={false}
+                    tick={{ fill: '#9ca3af', fontSize: 10 }}
                     dy={10}
                   />
-                  <YAxis 
-                    axisLine={false} 
-                    tickLine={false} 
-                    tick={{ fill: '#9ca3af', fontSize: 10 }} 
+                  <YAxis
+                    axisLine={false}
+                    tickLine={false}
+                    tick={{ fill: '#9ca3af', fontSize: 10 }}
                   />
-                  <Tooltip 
+                  <Tooltip
                     contentStyle={{ borderRadius: '12px', border: '1px solid rgba(255,255,255,0.1)', backgroundColor: '#13161c', boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.5)' }}
                     itemStyle={{ color: '#e3e3e3', fontSize: '12px', fontWeight: 'bold' }}
                     labelStyle={{ color: '#9ca3af', fontSize: '10px', marginBottom: '4px', textTransform: 'uppercase', letterSpacing: '0.1em' }}
                     cursor={{ fill: '#1e232b' }}
                   />
-                  <Bar 
-                    dataKey="words" 
-                    fill="#8b5cf6" 
+                  <Bar
+                    dataKey="words"
+                    fill="#8b5cf6"
                     radius={[4, 4, 0, 0]}
                     barSize={40}
                     animationDuration={1500}
@@ -362,6 +359,7 @@ const ProfileView: React.FC<ProfileViewProps> = ({ user, tables, onBack, onUserU
             )}
           </div>
         </div>
+      </div>
     </div>
   );
 };
