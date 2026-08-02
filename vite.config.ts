@@ -9,6 +9,7 @@ export default defineConfig(({ mode }) => {
   const geminiApiKey = env.GEMINI_API_KEY ?? process.env.GEMINI_API_KEY ?? '';
 
   return {
+    base: '/',
     plugins: [react()],
     server: {
       host: '0.0.0.0',

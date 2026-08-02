@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { ClerkProvider } from '@clerk/clerk-react';
 import App from './App';
+import ErrorBoundary from './components/ErrorBoundary';
 
 const PUBLISHABLE_KEY = import.meta.env.VITE_CLERK_PUBLISHABLE_KEY;
 const CLERK_SIGN_IN_URL = import.meta.env.VITE_CLERK_SIGN_IN_URL || '/sign-in';
@@ -19,14 +20,16 @@ if (!rootElement) {
 const root = ReactDOM.createRoot(rootElement);
 root.render(
   <React.StrictMode>
-    <ClerkProvider
-      publishableKey={PUBLISHABLE_KEY}
-      signInUrl={CLERK_SIGN_IN_URL}
-      signUpUrl={CLERK_SIGN_UP_URL}
-      signInFallbackRedirectUrl="/"
-      signUpFallbackRedirectUrl="/"
-    >
-      <App />
-    </ClerkProvider>
+    <ErrorBoundary>
+      <ClerkProvider
+        publishableKey={PUBLISHABLE_KEY}
+        signInUrl={CLERK_SIGN_IN_URL}
+        signUpUrl={CLERK_SIGN_UP_URL}
+        signInFallbackRedirectUrl="/"
+        signUpFallbackRedirectUrl="/"
+      >
+        <App />
+      </ClerkProvider>
+    </ErrorBoundary>
   </React.StrictMode>
 );

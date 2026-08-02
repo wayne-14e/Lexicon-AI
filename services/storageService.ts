@@ -22,10 +22,10 @@ const generateReferralCode = (username: string): string => {
   const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
   const prefix = username.toUpperCase().replace(/[^A-Z0-9]/g, '').slice(0, 3);
   let code = prefix;
-  while (code.length < 6) {
+  while (code.length < 8) {
     code += chars.charAt(Math.floor(Math.random() * chars.length));
   }
-  return code.slice(0, 6);
+  return code.slice(0, 8);
 };
 
 export const storageService = {
@@ -95,9 +95,36 @@ export const storageService = {
         console.error('storageService.upsertProfile: INSERT ERROR:', error);
         throw error;
       }
+
+      // New profile created successfully — apply the referral bonus if a
+      // referral code was captured (from ?ref= on the landing URL).
+      if (data) {
+        await storageService.processStoredReferral(data);
+      }
       return data;
     } else {
       return await storageService.updateExistingProfile(existing, user);
+    }
+  },
+
+  // Applies a stored referral code (localStorage 'lexicon_ref_code') to a newly
+  // created profile via the process_referral_bonus RPC. On success it clears the
+  // stored code and notifies the UI so it can show the welcome bonus toast.
+  processStoredReferral: async (user: User) => {
+    try {
+      const storedRefCode = localStorage.getItem('lexicon_ref_code');
+      if (!storedRefCode || !user?.id) return;
+
+      const result = await storageService.applyReferralBonus(user.id, storedRefCode);
+      if (result.success) {
+        localStorage.removeItem('lexicon_ref_code');
+        console.log('storageService: Referral bonus applied for', user.id);
+        window.dispatchEvent(new CustomEvent('lexicon:referral-applied'));
+      } else {
+        console.warn('storageService: Referral bonus not applied:', result.error);
+      }
+    } catch (err) {
+      console.error('storageService: Failed to apply referral bonus:', err);
     }
   },
 

@@ -47,16 +47,43 @@ const App: React.FC = () => {
 
   // Capture referral code from URL on initial mount
   useEffect(() => {
-    const params = new URLSearchParams(window.location.search);
-    const refCode = params.get('ref');
-    if (refCode) {
-      const sanitized = refCode.trim().toUpperCase().replace(/[^A-Z0-9]/g, '').slice(0, 6);
-      if (sanitized.length >= 4) {
-        localStorage.setItem('lexicon_ref_code', sanitized);
-        console.log('Captured referral code:', sanitized);
+    try {
+      const params = new URLSearchParams(window.location.search);
+      const refCode = params.get('ref');
+      if (refCode) {
+        const sanitized = refCode.trim().toUpperCase().replace(/[^A-Z0-9]/g, '').slice(0, 8);
+        if (sanitized.length >= 4) {
+          localStorage.setItem('lexicon_ref_code', sanitized);
+          console.log('Captured referral code:', sanitized);
+        }
+        // Clean up the ?ref= query param so it doesn't clutter the address bar
+        // or interfere with auth redirects (e.g., Clerk SSO callback).
+        const url = new URL(window.location.href);
+        url.searchParams.delete('ref');
+        window.history.replaceState({}, '', url.toString());
       }
+    } catch (err) {
+      console.error('Failed to process referral query param:', err);
     }
   }, []);
+
+  // Listen for a successfully applied referral bonus (dispatched by storageService)
+  // and surface the welcome toast + refresh the user's token balance.
+  useEffect(() => {
+    const handleReferralApplied = async () => {
+      if (dbUser?.id) {
+        try {
+          const latest = await storageService.getUserById(dbUser.id);
+          if (latest) setDbUser(latest);
+        } catch (err) {
+          console.error('Failed to refresh user after referral bonus:', err);
+        }
+      }
+      showToast('🎉 Welcome bonus! You received 700 Scholar Tokens for signing up via referral!', 'success');
+    };
+    window.addEventListener('lexicon:referral-applied', handleReferralApplied);
+    return () => window.removeEventListener('lexicon:referral-applied', handleReferralApplied);
+  }, [dbUser?.id]);
 
   // Sync Clerk user with Supabase profiles table
   useEnsureProfile(isDbReady);

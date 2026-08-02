@@ -518,10 +518,11 @@ const Layout: React.FC<LayoutProps> = ({
                   <button
                     onClick={copyReferralLink}
                     disabled={copiedLink === referralLink}
-                    className="flex items-center gap-1.5 px-3 py-1.5 text-[10px] font-bold uppercase tracking-wider rounded-lg transition-all
-                      ${copiedLink === referralLink 
+                    className={`flex items-center gap-1.5 px-3 py-1.5 text-[10px] font-bold uppercase tracking-wider rounded-lg transition-all ${
+                      copiedLink === referralLink 
                         ? 'bg-primary/20 text-primary cursor-default' 
-                        : 'bg-primary/20 text-primary hover:bg-primary/30'}">
+                        : 'bg-primary/20 text-primary hover:bg-primary/30'
+                    }`}>
                     {copiedLink === referralLink ? (
                       <>
                         <Check className="w-3 h-3" />
