@@ -70,13 +70,13 @@ Instantly search across all of your collections and unlocked archives.
 
 ### 🔗 Share collections
 
-Every vocabulary journal can be shared with a public link.
+Every vocabulary journal can be downloaded for sharing and offline use.
 
 No screenshots required.
 
 ---
 
-### 🪙 Gamified learning
+### 🕹 Gamified learning
 
 Earn Scholar Tokens by:
 - maintaining streaks
