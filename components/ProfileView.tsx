@@ -270,7 +270,7 @@ const ProfileView: React.FC<ProfileViewProps> = ({ user, tables, onBack, onUserU
 
 
             <div className="flex flex-wrap justify-center sm:justify-start gap-4 mt-6">
-              <div className="flex items-center space-x-1.5 bg-orange-500/10 text-orange-500 px-3 py-1 rounded-full border border-orange-500/20">
+              <div className="flex items-center space-x-1.5 bg-amber-500/10 text-amber-500 px-3 py-1 rounded-full border border-amber-500/20">
                 <Flame className="w-4 h-4" />
                 <span className="text-xs font-bold uppercase tracking-wider">{currentStreak} Day Streak</span>
               </div>

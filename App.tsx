@@ -22,6 +22,7 @@ import SystemArchives from './components/SystemArchives';
 import JournalsPage from './components/JournalsPage';
 import CustomSignUp from './components/CustomSignUp';
 import CustomSignIn from './components/CustomSignIn';
+import LandingPage from './components/LandingPage';
 import { geminiService } from './services/geminiService';
 import { Analytics } from '@vercel/analytics/react';
 import { useEnsureProfile } from './hooks/useEnsureProfile';
@@ -43,7 +44,7 @@ const App: React.FC = () => {
   const [matchingGameMode, setMatchingGameMode] = useState<GameMode>('synonyms');
   const [toast, setToast] = useState<{ message: string; type: 'success' | 'info' } | null>(null);
   const [streakPopup, setStreakPopup] = useState<{ streak: number; tokens: number } | null>(null);
-  const [authMode, setAuthMode] = useState<'sign-in' | 'sign-up'>('sign-in');
+  const [authMode, setAuthMode] = useState<'sign-in' | 'sign-up' | null>(null);
 
   // Capture referral code from URL on initial mount
   useEffect(() => {
@@ -628,36 +629,48 @@ const App: React.FC = () => {
         )}
       </SignedIn>
       <SignedOut>
-        <div className="min-h-screen flex flex-col items-center justify-center bg-background p-6">
-          <div className="flex flex-col items-center mb-8 animate-in fade-in slide-in-from-top-4 duration-1000">
-            <div className="w-14 h-14 sm:w-14 sm:h-14 flex items-center justify-center mb-5 drop-shadow-[0_0_20px_rgba(66,154,218,0.4)]">
-              <img src="/logo.svg" className="object-contain w-full h-full" alt="Logo" />
+        {authMode === null ? (
+          <LandingPage
+            onSignIn={() => setAuthMode('sign-in')}
+            onSignUp={() => setAuthMode('sign-up')}
+          />
+        ) : (
+          <div className="min-h-screen flex flex-col items-center justify-center bg-background p-6">
+            <div className="flex flex-col items-center mb-8 animate-in fade-in slide-in-from-top-4 duration-1000">
+              <div className="w-14 h-14 sm:w-14 sm:h-14 flex items-center justify-center mb-5 drop-shadow-[0_0_20px_rgba(66,154,218,0.4)]">
+                <img src="/logo.svg" className="object-contain w-full h-full" alt="Logo" />
+              </div>
+              <div className="flex flex-col items-center text-center">
+                <h1 className="text-3xl sm:text-4xl font-bold tracking-tight text-text leading-none font-display">Lexicon</h1>
+                <span className="text-muted font-bold text-[8px] sm:text-[10px] uppercase tracking-[0.5em] mt-1 -mr-[0.5em]">AI Journal</span>
+              </div>
             </div>
-            <div className="flex flex-col items-center text-center">
-              <h1 className="text-3xl sm:text-4xl font-bold tracking-tight text-text leading-none font-display">Lexicon</h1>
-              <span className="text-muted font-bold text-[8px] sm:text-[10px] uppercase tracking-[0.5em] mt-1 -mr-[0.5em]">AI Journal</span>
-            </div>
-          </div>
 
-          <div className="w-full max-w-[400px] mx-auto animate-in fade-in zoom-in-95 duration-700 delay-300">
-            {authMode === 'sign-in' ? (
-              <CustomSignIn onSwitchToSignUp={() => setAuthMode('sign-up')} />
-            ) : (
-              <CustomSignUp onSwitchToSignIn={() => setAuthMode('sign-in')} />
-            )}
-            <p className="text-center text-muted text-xs mt-4">
+            <div className="w-full max-w-[400px] mx-auto animate-in fade-in zoom-in-95 duration-700 delay-300">
               {authMode === 'sign-in' ? (
-                <>Don't have an account?{' '}
-                  <button onClick={() => setAuthMode('sign-up')} className="text-primary font-bold hover:underline">Sign up</button>
-                </>
+                <CustomSignIn onSwitchToSignUp={() => setAuthMode('sign-up')} />
               ) : (
-                <>Already have an account?{' '}
-                  <button onClick={() => setAuthMode('sign-in')} className="text-primary font-bold hover:underline">Sign in</button>
-                </>
+                <CustomSignUp onSwitchToSignIn={() => setAuthMode('sign-in')} />
               )}
-            </p>
+              <p className="text-center text-muted text-xs mt-4">
+                {authMode === 'sign-in' ? (
+                  <>Don't have an account?{' '}
+                    <button onClick={() => setAuthMode('sign-up')} className="text-primary font-bold hover:underline">Sign up</button>
+                  </>
+                ) : (
+                  <>Already have an account?{' '}
+                    <button onClick={() => setAuthMode('sign-in')} className="text-primary font-bold hover:underline">Sign in</button>
+                  </>
+                )}
+              </p>
+              <p className="text-center mt-3">
+                <button onClick={() => setAuthMode(null)} className="text-[10px] font-bold uppercase tracking-widest text-muted hover:text-white transition-colors">
+                  ← Back to Home
+                </button>
+              </p>
+            </div>
           </div>
-        </div>
+        )}
       </SignedOut>
     </>
   );

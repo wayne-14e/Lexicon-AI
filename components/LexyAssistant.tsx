@@ -141,7 +141,7 @@ const LexyAssistant: React.FC<LexyAssistantProps> = ({ user, onSpendTokens, onUs
         aria-label="Open Lexy Assistant"
       >
         <Bot className="w-5 h-5 md:w-6 md:h-6 group-hover:scale-110 transition-transform" />
-        <div className="absolute -top-1 -right-1 w-3 h-3 bg-orange-500 rounded-full border-2 border-background animate-pulse aspect-square"></div>
+        <div className="absolute -top-1 -right-1 w-3 h-3 bg-red-500 rounded-full border-2 border-background animate-pulse aspect-square"></div>
       </button>
 
       {/* Assistant Panel */}

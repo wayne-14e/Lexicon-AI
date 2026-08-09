@@ -188,7 +188,7 @@ const Layout: React.FC<LayoutProps> = ({
               href="https://airtable.com/appeRliTRVwrZCBtz/pagkCEum9R8RCY3ey/form"
               target="_blank"
               rel="noopener noreferrer"
-              className={`w-full flex items-center space-x-3 px-3 py-3 rounded-xl transition-all group bg-orange-500/10 text-orange-400 border border-orange-500/20 hover:bg-orange-500/20 hover:text-orange-300 ${!isSidebarExpanded && 'justify-center px-0'}`}
+              className={`w-full flex items-center space-x-3 px-3 py-3 rounded-xl transition-all group bg-amber-500/10 text-amber-400 border border-amber-500/20 hover:bg-amber-500/20 hover:text-amber-300 ${!isSidebarExpanded && 'justify-center px-0'}`}
               title={!isSidebarExpanded ? "Provide Feedback" : ""}
             >
               <div className="shrink-0"><MessageSquare className="w-5 h-5" /></div>
@@ -215,7 +215,7 @@ const Layout: React.FC<LayoutProps> = ({
               <div className={`flex flex-col text-left transition-all duration-300 ${!isSidebarExpanded ? 'hidden w-0 opacity-0' : 'opacity-100'}`}>
                 <span className="text-sm font-bold text-text truncate max-w-[100px]">{user.username}</span>
                 <div className="flex items-center space-x-1.5">
-                  <span className="text-[10px] text-orange-500 font-bold uppercase tracking-wider">{user.streak || 1}d</span>
+                  <span className="text-[10px] text-amber-500 font-bold uppercase tracking-wider">{user.streak || 1}d</span>
                   <span className="text-[10px] text-purple-500 font-bold">• {user.tokens || 0} T</span>
                 </div>
               </div>
@@ -235,7 +235,7 @@ const Layout: React.FC<LayoutProps> = ({
                 <div className="px-4 py-3 border-b border-white/5 mb-1">
                   <p className="text-sm font-bold text-text">{user.username}</p>
                   <div className="flex items-center justify-between mt-1.5">
-                    <span className="text-[10px] text-orange-500 font-bold uppercase tracking-wider">{user.streak || 1} Day Streak</span>
+                    <span className="text-[10px] text-amber-500 font-bold uppercase tracking-wider">{user.streak || 1} Day Streak</span>
                     <span className="text-[10px] text-blue-500 font-bold uppercase tracking-wider">{user.words_generated || 0}/40 Words</span>
                     <span className="text-[10px] font-bold text-purple-500 uppercase tracking-wider">{user.tokens || 0} Tokens</span>
                   </div>

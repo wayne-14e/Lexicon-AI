@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { VocabTable } from '../types';
-import { geminiService } from '../services/geminiService';
+import { playWordPronunciation } from '../services/audioService';
 
 interface PublicViewProps {
   table: VocabTable;
@@ -12,7 +12,9 @@ const PublicView: React.FC<PublicViewProps> = ({ table }) => {
   const handleSpeak = async (id: string, word: string) => {
     if (speakingId) return;
     setSpeakingId(id);
-    await geminiService.textToSpeech(word);
+    // Public view has no authenticated user — no quota tracking needed.
+    // Gemini fallback is allowed without limit checks.
+    await playWordPronunciation(word, () => Promise.resolve(true));
     setSpeakingId(null);
   };
 

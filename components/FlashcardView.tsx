@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { VocabTable, VocabEntry, User } from '../types';
-import { geminiService } from '../services/geminiService';
+import { playWordPronunciation } from '../services/audioService';
 import { MOTIVATIONAL_QUOTES } from '../constants';
 import { storageService } from '../services/storageService';
 
@@ -143,16 +143,21 @@ const FlashcardView: React.FC<FlashcardViewProps> = ({ user, table, excludeMaste
     e.stopPropagation();
     if (isSpeaking) return;
 
-    if (user) {
-      const updatedUser = await storageService.incrementLimitUsage(user, 'tts_used');
-      if (!updatedUser) {
-        alert("Daily Text-to-Speech limit reached! You can only use TTS 30 times a day.");
-        return;
-      }
-    }
-
     setIsSpeaking(true);
-    await geminiService.textToSpeech(currentEntry.word);
+    await playWordPronunciation(
+      currentEntry.word,
+      // onFallbackUsage — only runs when Gemini TTS is needed
+      user
+        ? async () => {
+            const updatedUser = await storageService.incrementLimitUsage(user, 'tts_used');
+            if (!updatedUser) {
+              alert('Daily Text-to-Speech limit reached! You can only use TTS 30 times a day.');
+              return false; // abort fallback
+            }
+            return true;
+          }
+        : undefined,
+    );
     setIsSpeaking(false);
   };
 
@@ -449,7 +454,7 @@ const FlashcardView: React.FC<FlashcardViewProps> = ({ user, table, excludeMaste
             <div className="justify-self-end">
               <button
                 onClick={() => setShowHint(prev => !prev)}
-                className={`px-3 sm:px-4 py-2 sm:py-2.5 text-[8px] sm:text-[9px] font-bold uppercase tracking-widest rounded-full transition-all flex items-center border group/hint ${showHint ? 'bg-orange-500/10 text-orange-500 border-orange-500/30' : 'bg-surfaceHighlight text-muted border-white/10 hover:border-orange-500/50 hover:text-orange-500'}`}
+                className={`px-3 sm:px-4 py-2 sm:py-2.5 text-[8px] sm:text-[9px] font-bold uppercase tracking-widest rounded-full transition-all flex items-center border group/hint ${showHint ? 'bg-amber-500/10 text-amber-500 border-amber-500/30' : 'bg-surfaceHighlight text-muted border-white/10 hover:border-amber-500/50 hover:text-amber-500'}`}
               >
                 <svg className="w-3 h-3 mr-2 group-hover/hint:scale-110 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round">
                   <path d="M15 14c.2-1 .7-1.7 1.5-2.5a5 5 0 0 0-7.9-6c-2 1.4-3 3.8-2.2 6.2.5 1.4 1.9 2.5 2.5 3.3" />
@@ -463,9 +468,9 @@ const FlashcardView: React.FC<FlashcardViewProps> = ({ user, table, excludeMaste
 
           {showHint && currentEntry.sentence && (
             <div className="w-full bg-surface rounded-xl border border-white/5 relative overflow-hidden animate-in fade-in slide-in-from-top-2 duration-300">
-              <div className="absolute top-0 left-0 w-1 h-full bg-orange-500"></div>
+              <div className="absolute top-0 left-0 w-1 h-full bg-amber-500"></div>
               <div className="p-4 sm:p-5 pl-5 sm:pl-6">
-                <span className="text-[8px] font-bold uppercase tracking-[0.3em] text-orange-500 block mb-1.5">Contextual Hint</span>
+                <span className="text-[8px] font-bold uppercase tracking-[0.3em] text-amber-500 block mb-1.5">Contextual Hint</span>
                 <p className="text-sm sm:text-base text-text/80 italic leading-relaxed">"{currentEntry.sentence}"</p>
               </div>
             </div>

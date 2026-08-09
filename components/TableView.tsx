@@ -3,6 +3,7 @@ import { ChevronDown, ChevronUp, Trash2 } from 'lucide-react';
 import { VocabTable, VocabEntry, GameMode, User } from '../types';
 import { geminiService } from '../services/geminiService';
 import { storageService } from '../services/storageService';
+import { playWordPronunciation } from '../services/audioService';
 
 interface TableViewProps {
   user?: User;
@@ -150,16 +151,22 @@ const TableView: React.FC<TableViewProps> = ({
 
   const handleSpeak = async (id: string, word: string) => {
     if (speakingId) return;
-    if (user) {
-      const newUsage = await storageService.incrementLimitUsage(user, 'tts_used');
-      if (newUsage === null) {
-        alert("Daily Text-to-Speech limit reached! You can only use TTS 30 times a day.");
-        return;
-      }
-      onUserUpdate({ tts_used: newUsage });
-    }
     setSpeakingId(id);
-    await geminiService.textToSpeech(word);
+    await playWordPronunciation(
+      word,
+      // onFallbackUsage — only runs when Gemini TTS is needed
+      user
+        ? async () => {
+            const newUsage = await storageService.incrementLimitUsage(user, 'tts_used');
+            if (newUsage === null) {
+              alert('Daily Text-to-Speech limit reached! You can only use TTS 30 times a day.');
+              return false; // abort fallback
+            }
+            onUserUpdate({ tts_used: newUsage });
+            return true;
+          }
+        : undefined,
+    );
     setSpeakingId(null);
   };
 
