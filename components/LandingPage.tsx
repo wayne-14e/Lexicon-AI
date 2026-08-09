@@ -22,18 +22,18 @@ const HeroMockUI: React.FC = () => {
   return (
     <div className="relative w-full rounded-2xl overflow-hidden border border-white/10 shadow-2xl shadow-black/60 bg-[#191d24]">
       {/* Fake topbar */}
-      <div className="flex items-center justify-between px-4 py-3 bg-[#13161c] border-b border-white/5">
+      <div className="flex items-center justify-between px-4 py-3 bg-[#13161c] border-b border-white/5 max-sm:px-3.5">
         <div className="flex items-center space-x-2">
           <div className="w-2.5 h-2.5 rounded-full bg-red-500/60"></div>
           <div className="w-2.5 h-2.5 rounded-full bg-yellow-500/60"></div>
           <div className="w-2.5 h-2.5 rounded-full bg-green-500/60"></div>
         </div>
-        <span className="text-[10px] font-bold text-muted uppercase tracking-widest">Lexicon AI — Vocabulary Journal</span>
+        <span className="text-[10px] font-bold text-muted uppercase tracking-widest">my lexicon journal</span>
         <div className="w-12"></div>
       </div>
 
       {/* Table header */}
-      <div className="grid grid-cols-4 px-4 py-2 bg-white/[0.02] border-b border-white/5">
+      <div className="grid grid-cols-4 px-4 py-2 bg-white/[0.02] border-b border-white/5 max-sm:grid-cols-[auto_1fr_auto_1fr] max-sm:gap-x-[6px] max-sm:px-2">
         {['Mastery', 'Lexeme', 'Class', 'Definition'].map(h => (
           <span key={h} className="text-[9px] font-bold uppercase tracking-widest text-muted">{h}</span>
         ))}
@@ -43,7 +43,7 @@ const HeroMockUI: React.FC = () => {
       {words.map((w, i) => (
         <div
           key={w.word}
-          className="grid grid-cols-4 px-4 py-3 border-b border-white/[0.04] hover:bg-white/[0.03] transition-colors"
+          className="grid grid-cols-4 px-4 py-3 border-b border-white/[0.04] hover:bg-white/[0.03] transition-colors max-sm:grid-cols-[auto_1fr_auto_1fr] max-sm:gap-x-[16px] max-sm:px-2"
           style={{ animationDelay: `${i * 150}ms` }}
         >
           <div className="flex items-center">
@@ -69,7 +69,7 @@ const HeroMockUI: React.FC = () => {
       ))}
 
       {/* Gemini badge */}
-      <div className="px-4 py-3 flex items-center space-x-2">
+      <div className="px-4 py-3 flex items-center space-x-2 max-sm:px-2">
         <div className="flex items-center space-x-1.5 bg-violet-400/10 border border-violet-400/20 px-3 py-1.5 rounded-full">
           <Sparkles className="w-3 h-3 text-violet-400" />
           <span className="text-[10px] font-bold text-violet-400 uppercase tracking-widest">Gemini AI enriched</span>
@@ -305,9 +305,9 @@ const LandingPage: React.FC<LandingPageProps> = ({ onSignIn, onSignUp }) => {
             {/* Left: copy */}
             <div className="text-center lg:text-left space-y-8 animate-in fade-in slide-in-from-left-6 duration-700">
               {/* Badge */}
-              <div className="inline-flex items-center space-x-2 bg-primary/10 border border-primary/20 px-4 py-2 rounded-full">
-                <Sparkles className="w-3.5 h-3.5 text-primary" />
-                <span className="text-[11px] font-bold uppercase tracking-widest text-primary">Powered by Google Gemini AI</span>
+              <div className="inline-flex items-center space-x-2 bg-violet-400/10 border border-violet-400/20 px-4 py-2 rounded-full">
+                <Sparkles className="w-3.5 h-3.5 text-violet-400" />
+                <span className="text-[11px] font-bold uppercase tracking-widest text-violet-400">Powered by Google Gemini AI</span>
               </div>
 
               <div className="space-y-4">
@@ -490,7 +490,7 @@ const LandingPage: React.FC<LandingPageProps> = ({ onSignIn, onSignUp }) => {
                   <Icon className="w-7 h-7 text-primary" />
                 </div>
                 <div className="space-y-2">
-                  <div className="text-[10px] font-bold text-primary uppercase tracking-widest">{num}</div>
+                  <div className="text-[10px] font-bold text-violet-400 uppercase tracking-widest">{num}</div>
                   <h3 className="text-lg font-bold font-display text-white">{title}</h3>
                   <p className="text-sm text-muted leading-relaxed">{desc}</p>
                 </div>
@@ -555,7 +555,7 @@ const LandingPage: React.FC<LandingPageProps> = ({ onSignIn, onSignUp }) => {
       {/* ── BOTTOM CTA ──────────────────────────────────────────────────────── */}
       <section className="py-8 md:py-32 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto">
-          <div className="relative rounded-3xl overflow-hidden border border-primary/20 bg-gradient-to-br from-primary/10 via-[#191d24] to-violet-500/10 p-5 md:p-16 text-center shadow-2xl shadow-primary/10">
+          <div className="relative rounded-3xl overflow-hidden border border-primary/20 bg-gradient-to-br from-primary/10 via-[#191d24] to-violet-500/10 px-3 py-6 md:p-16 text-center shadow-2xl shadow-primary/10">
             {/* Glow */}
             <div className="absolute inset-0 pointer-events-none">
               <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-primary/50 to-transparent" />
@@ -575,7 +575,6 @@ const LandingPage: React.FC<LandingPageProps> = ({ onSignIn, onSignUp }) => {
                 onClick={onSignUp}
                 className="group w-full sm:w-auto flex items-center justify-center space-x-2 px-8 py-4 bg-primary rounded-full text-white font-bold text-sm uppercase tracking-widest hover:bg-[#5aaee8] transition-all shadow-xl shadow-primary/30"
               >
-                <Sparkles className="w-4 h-4" />
                 <span>Create Free Account</span>
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </button>

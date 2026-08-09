@@ -390,7 +390,7 @@ const Layout: React.FC<LayoutProps> = ({
                 <div className="flex flex-col text-left ml-3">
                   <span className="text-sm font-bold text-text truncate max-w-[120px]">{user?.username}</span>
                   <div className="flex items-center gap-1.5">
-                    <span className="text-[10px] text-orange-500 font-bold uppercase tracking-wider">{user?.streak || 1}d</span>
+                    <span className="text-[10px] text-amber-500 font-bold uppercase tracking-wider">{user?.streak || 1}d</span>
                     <span className="text-[10px] text-blue-500 font-bold">{user?.words_generated || 0}/40 W</span>
                     <span className="text-[10px] text-purple-500 font-bold">{user?.tokens || 0} T</span>
                   </div>
@@ -411,7 +411,7 @@ const Layout: React.FC<LayoutProps> = ({
                 href="https://airtable.com/appeRliTRVwrZCBtz/pagkCEum9R8RCY3ey/form"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full flex items-center space-x-3 px-3 py-3 rounded-xl transition-all group bg-orange-500/10 text-orange-400 border border-orange-500/20 hover:bg-orange-500/20 hover:text-orange-300"
+                className="w-full flex items-center space-x-3 px-3 py-3 rounded-xl transition-all group bg-amber-500/10 text-amber-400 border border-amber-500/20 hover:bg-amber-500/20 hover:text-amber-300"
               >
                 <div className="shrink-0"><MessageSquare className="w-5 h-5" /></div>
                 <span className="text-sm font-medium">Feedback</span>
