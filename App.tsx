@@ -22,6 +22,7 @@ import SystemArchives from './components/SystemArchives';
 import JournalsPage from './components/JournalsPage';
 import CustomSignUp from './components/CustomSignUp';
 import CustomSignIn from './components/CustomSignIn';
+import CompleteUsername from './components/CompleteUsername';
 import LandingPage from './components/LandingPage';
 import { geminiService } from './services/geminiService';
 import { Analytics } from '@vercel/analytics/react';
@@ -437,9 +438,37 @@ const App: React.FC = () => {
     return (
       <div className="min-h-screen flex items-center justify-center bg-background p-6">
         <AuthenticateWithRedirectCallback
+          continueSignUpUrl="/complete-username"
           signInFallbackRedirectUrl="/"
           signUpFallbackRedirectUrl="/"
         />
+      </div>
+    );
+  }
+
+  // Username completion for OAuth sign-ups with missing requirements
+  // (e.g. username required on the Clerk instance but not supplied by Google).
+  if (typeof window !== 'undefined' && window.location.pathname === '/complete-username') {
+    return (
+      <div className="min-h-screen flex flex-col items-center justify-center bg-background p-6">
+        <div className="flex flex-col items-center mb-8 animate-in fade-in slide-in-from-top-4 duration-1000">
+          <div className="w-14 h-14 sm:w-14 sm:h-14 flex items-center justify-center mb-5 drop-shadow-[0_0_20px_rgba(66,154,218,0.4)]">
+            <img src="/logo.svg" className="object-contain w-full h-full" alt="Logo" />
+          </div>
+          <div className="flex flex-col items-center text-center">
+            <h1 className="text-3xl sm:text-4xl font-bold tracking-tight text-text leading-none font-display">Lexicon</h1>
+            <span className="text-muted font-bold text-[8px] sm:text-[10px] uppercase tracking-[0.5em] mt-1 -mr-[0.5em]">AI Journal</span>
+          </div>
+        </div>
+
+        <div className="w-full max-w-[400px] mx-auto animate-in fade-in zoom-in-95 duration-700 delay-300">
+          <CompleteUsername />
+          <p className="text-center mt-3">
+            <button onClick={() => { window.location.href = '/'; }} className="text-[10px] font-bold uppercase tracking-widest text-muted hover:text-white transition-colors">
+              ← Back to Home
+            </button>
+          </p>
+        </div>
       </div>
     );
   }
