@@ -431,6 +431,19 @@ const App: React.FC = () => {
     }
   };
 
+  // Handle OAuth callback for social sign-in BEFORE any loading gate,
+  // otherwise /sso-callback can hang on the spinner and Clerk times out.
+  if (typeof window !== 'undefined' && window.location.pathname === '/sso-callback') {
+    return (
+      <div className="min-h-screen flex items-center justify-center bg-background p-6">
+        <AuthenticateWithRedirectCallback
+          signInFallbackRedirectUrl="/"
+          signUpFallbackRedirectUrl="/"
+        />
+      </div>
+    );
+  }
+
   if (!isClerkLoaded || isInitializing) {
     return (
       <div className="min-h-screen flex items-center justify-center bg-background p-6">
@@ -440,11 +453,6 @@ const App: React.FC = () => {
         </div>
       </div>
     );
-  }
-
-  // Handle OAuth callback for social sign-in
-  if (window.location.pathname === '/sso-callback') {
-    return <AuthenticateWithRedirectCallback />;
   }
 
   // Handle Shared View for non-authenticated or authenticated
