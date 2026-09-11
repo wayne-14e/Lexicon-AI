@@ -5,8 +5,8 @@ import App from './App';
 import ErrorBoundary from './components/ErrorBoundary';
 
 const PUBLISHABLE_KEY = import.meta.env.VITE_CLERK_PUBLISHABLE_KEY;
-const CLERK_SIGN_IN_URL = import.meta.env.VITE_CLERK_SIGN_IN_URL || '/sign-in';
-const CLERK_SIGN_UP_URL = import.meta.env.VITE_CLERK_SIGN_UP_URL || '/sign-up';
+const CLERK_SIGN_IN_URL = import.meta.env.VITE_CLERK_SIGN_IN_URL || '/';
+const CLERK_SIGN_UP_URL = import.meta.env.VITE_CLERK_SIGN_UP_URL || '/';
 
 if (!PUBLISHABLE_KEY) {
   throw new Error("Missing Publishable Key");
@@ -27,6 +27,7 @@ root.render(
         signUpUrl={CLERK_SIGN_UP_URL}
         signInFallbackRedirectUrl="/"
         signUpFallbackRedirectUrl="/"
+        afterSignOutUrl="/"
       >
         <App />
       </ClerkProvider>
