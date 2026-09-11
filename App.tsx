@@ -26,6 +26,7 @@ import CompleteUsername from './components/CompleteUsername';
 import LandingPage from './components/LandingPage';
 import { geminiService } from './services/geminiService';
 import { Analytics } from '@vercel/analytics/react';
+import { SpeedInsights } from '@vercel/speed-insights/react';
 import { useEnsureProfile } from './hooks/useEnsureProfile';
 
 type ViewState = 'home' | 'collections' | 'scratchpad' | 'create' | 'view' | 'public_shared' | 'study' | 'context-learning' | 'matching' | 'profile' | 'system-archives' | 'journals';
@@ -709,6 +710,7 @@ const App: React.FC = () => {
           </div>
         )}
       </SignedOut>
+      <SpeedInsights />
     </>
   );
 };
