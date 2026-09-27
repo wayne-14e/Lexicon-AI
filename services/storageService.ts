@@ -68,7 +68,7 @@ export const storageService = {
         tokens: 0,
         streak: 1,
         referral_code: referralCode,
-        // username is already in user object from initApp/useEnsureProfile
+        // username is already in user object from initApp
       };
       console.log('storageService.upsertProfile: Creating new profile:', profileToSave);
       

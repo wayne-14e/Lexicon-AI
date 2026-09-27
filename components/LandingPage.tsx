@@ -20,9 +20,9 @@ const HeroMockUI: React.FC = () => {
   ];
 
   return (
-    <div className="relative w-full rounded-2xl overflow-hidden border border-white/10 shadow-2xl shadow-black/60 bg-[#191d24]">
+    <div className="relative w-full rounded-2xl overflow-hidden border border-white/10 shadow-2xl shadow-black/60 bg-surface">
       {/* Fake topbar */}
-      <div className="flex items-center justify-between px-4 py-3 bg-[#13161c] border-b border-white/5 max-sm:px-3.5">
+      <div className="flex items-center justify-between px-4 py-3 bg-background border-b border-white/5 max-sm:px-3.5">
         <div className="flex items-center space-x-2">
           <div className="w-2.5 h-2.5 rounded-full bg-red-500/60"></div>
           <div className="w-2.5 h-2.5 rounded-full bg-yellow-500/60"></div>
@@ -50,7 +50,7 @@ const HeroMockUI: React.FC = () => {
             <span className={`text-sm font-bold ${w.color}`}>{w.progress}%</span>
           </div>
           <div>
-            <span className="text-sm font-bold font-display text-white">{w.word}</span>
+            <span className="text-sm font-bold font-display text-text">{w.word}</span>
           </div>
           <div>
             <span className="text-[9px] border border-white/10 px-1.5 py-0.5 rounded text-muted italic uppercase tracking-wider">
@@ -189,12 +189,12 @@ const LandingPage: React.FC<LandingPageProps> = ({ onSignIn, onSignUp }) => {
   };
 
   return (
-    <div className="min-h-screen bg-[#13161c] text-white font-sans overflow-x-hidden">
+    <div className="min-h-screen bg-background text-text font-sans overflow-x-hidden">
 
       {/* ── NAVBAR ──────────────────────────────────────────────────────────── */}
       <header
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-          scrolled ? 'bg-[#13161c]/95 backdrop-blur-xl border-b border-white/5 shadow-lg shadow-black/30' : 'bg-transparent'
+          scrolled ? 'bg-surface/95 backdrop-blur-xl border-b border-white/5 shadow-lg shadow-black/30' : 'bg-transparent'
         }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -206,7 +206,7 @@ const LandingPage: React.FC<LandingPageProps> = ({ onSignIn, onSignUp }) => {
                 <img src="/logo.svg" alt="Lexicon AI" className="w-full h-full object-contain" />
               </div>
               <div className="leading-none">
-                <span className="text-xl font-bold font-display tracking-tight text-white">Lexicon</span>
+                <span className="text-xl font-bold font-display tracking-tight text-text">Lexicon</span>
                 <span className="block text-[9px] font-bold uppercase tracking-[0.35em] text-primary mt-0.5">AI Journal</span>
               </div>
             </div>
@@ -222,7 +222,7 @@ const LandingPage: React.FC<LandingPageProps> = ({ onSignIn, onSignUp }) => {
                 <button
                   key={id}
                   onClick={() => scrollTo(id)}
-                  className="text-[11px] font-bold uppercase tracking-widest text-muted hover:text-white transition-colors"
+                  className="text-[11px] font-bold uppercase tracking-widest text-muted hover:text-text transition-colors"
                 >
                   {label}
                 </button>
@@ -233,13 +233,13 @@ const LandingPage: React.FC<LandingPageProps> = ({ onSignIn, onSignUp }) => {
             <div className="hidden md:flex items-center space-x-3">
               <button
                 onClick={onSignIn}
-                className="px-5 py-2.5 text-[11px] font-bold uppercase tracking-widest border border-white/20 rounded-full text-muted hover:text-white hover:border-white/40 transition-all"
+                className="px-5 py-2.5 text-[11px] font-bold uppercase tracking-widest border border-white/20 rounded-full text-muted hover:text-text hover:border-white/40 transition-all"
               >
                 Sign In
               </button>
               <button
                 onClick={onSignUp}
-                className="px-5 py-2.5 text-[11px] font-bold uppercase tracking-widest bg-primary rounded-full text-white hover:bg-[#5aaee8] transition-all shadow-lg shadow-primary/30"
+                className="px-5 py-2.5 text-[11px] font-bold uppercase tracking-widest bg-primary rounded-full text-white hover:bg-secondary transition-all shadow-lg shadow-primary/30"
               >
                 Get Started Free
               </button>
@@ -247,7 +247,7 @@ const LandingPage: React.FC<LandingPageProps> = ({ onSignIn, onSignUp }) => {
 
             {/* Mobile hamburger */}
             <button
-              className="md:hidden p-2 rounded-lg text-muted hover:text-white transition-colors"
+              className="md:hidden p-2 rounded-lg text-muted hover:text-text transition-colors"
               onClick={() => setMobileMenuOpen(v => !v)}
               aria-label="Toggle menu"
             >
@@ -258,7 +258,7 @@ const LandingPage: React.FC<LandingPageProps> = ({ onSignIn, onSignUp }) => {
 
         {/* Mobile menu */}
         {mobileMenuOpen && (
-          <div className="md:hidden bg-[#191d24] border-t border-white/5 px-4 py-5 space-y-4 animate-in slide-in-from-top-2 duration-200">
+          <div className="md:hidden bg-surface border-t border-white/5 px-4 py-5 space-y-4 animate-in slide-in-from-top-2 duration-200">
             {[
               { label: 'Features', id: 'features' },
               { label: 'Archives', id: 'archives' },
@@ -268,7 +268,7 @@ const LandingPage: React.FC<LandingPageProps> = ({ onSignIn, onSignUp }) => {
               <button
                 key={id}
                 onClick={() => scrollTo(id)}
-                className="block w-full text-left text-sm font-bold uppercase tracking-widest text-muted hover:text-white py-2 transition-colors"
+                className="block w-full text-left text-sm font-bold uppercase tracking-widest text-muted hover:text-text py-2 transition-colors"
               >
                 {label}
               </button>
@@ -276,13 +276,13 @@ const LandingPage: React.FC<LandingPageProps> = ({ onSignIn, onSignUp }) => {
             <div className="pt-2 flex flex-col space-y-2 border-t border-white/5">
               <button
                 onClick={onSignIn}
-                className="w-full py-3 text-[11px] font-bold uppercase tracking-widest border border-white/20 rounded-full text-muted hover:text-white transition-all"
+                className="w-full py-3 text-[11px] font-bold uppercase tracking-widest border border-white/20 rounded-full text-muted hover:text-text transition-all"
               >
                 Sign In
               </button>
               <button
                 onClick={onSignUp}
-                className="w-full py-3 text-[11px] font-bold uppercase tracking-widest bg-primary rounded-full text-white hover:bg-[#5aaee8] transition-all"
+                className="w-full py-3 text-[11px] font-bold uppercase tracking-widest bg-primary rounded-full text-white hover:bg-secondary transition-all"
               >
                 Get Started Free
               </button>
@@ -314,7 +314,7 @@ const LandingPage: React.FC<LandingPageProps> = ({ onSignIn, onSignUp }) => {
                 <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold font-display leading-[1.08] tracking-tight">
                   Master Vocabulary
                   <br />
-                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-[#5aaee8] to-violet-400">
+                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-primary to-violet-600">
                     Effortlessly
                   </span>
                   <br />
@@ -329,7 +329,7 @@ const LandingPage: React.FC<LandingPageProps> = ({ onSignIn, onSignUp }) => {
               <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3">
                 <button
                   onClick={onSignUp}
-                  className="group w-full sm:w-auto flex items-center justify-center space-x-2 px-7 py-4 bg-primary rounded-full text-white font-bold text-sm uppercase tracking-widest hover:bg-[#5aaee8] transition-all shadow-xl shadow-primary/30"
+                  className="group w-full sm:w-auto flex items-center justify-center space-x-2 px-7 py-4 bg-primary rounded-full text-white font-bold text-sm uppercase tracking-widest hover:bg-secondary transition-all shadow-xl shadow-primary/30"
                 >
                   <Gift className="w-4 h-4" />
                   <span>Get Started Free</span>
@@ -337,7 +337,7 @@ const LandingPage: React.FC<LandingPageProps> = ({ onSignIn, onSignUp }) => {
                 </button>
                 <button
                   onClick={() => scrollTo('archives')}
-                  className="w-full sm:w-auto px-7 py-4 border border-white/15 rounded-full text-muted font-bold text-sm uppercase tracking-widest hover:text-white hover:border-white/30 transition-all"
+                  className="w-full sm:w-auto px-7 py-4 border border-white/15 rounded-full text-muted font-bold text-sm uppercase tracking-widest hover:text-text hover:border-white/30 transition-all"
                 >
                   Explore Archives
                 </button>
@@ -347,12 +347,12 @@ const LandingPage: React.FC<LandingPageProps> = ({ onSignIn, onSignUp }) => {
               <div className="flex items-center justify-center lg:justify-start space-x-4 pt-2">
                 <div className="flex -space-x-2">
                   {['bg-primary', 'bg-violet-500', 'bg-amber-500'].map((c, i) => (
-                    <div key={i} className={`w-7 h-7 rounded-full ${c} border-2 border-[#13161c] flex items-center justify-center`}>
+                    <div key={i} className={`w-7 h-7 rounded-full ${c} border-2 border-surface flex items-center justify-center`}>
                       <Star className="w-3 h-3 text-white fill-white" />
                     </div>
                   ))}
                 </div>
-                <span className="text-xs text-muted font-medium">Join scholars mastering <span className="text-white font-bold">4,000+</span> words</span>
+                <span className="text-xs text-muted font-medium">Join scholars mastering <span className="text-text font-bold">4,000+</span> words</span>
               </div>
             </div>
 
@@ -365,12 +365,12 @@ const LandingPage: React.FC<LandingPageProps> = ({ onSignIn, onSignUp }) => {
       </section>
 
       {/* ── STATS BAR ──────────────────────────────────────────────────────────── */}
-      <section className="py-10 border-y border-white/5 bg-[#191d24]/60">
+      <section className="py-10 border-y border-white/5 bg-surface/60">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {stats.map(({ value, label }) => (
               <div key={label} className="text-center space-y-1">
-                <div className="text-2xl sm:text-3xl font-bold font-display text-white">{value}</div>
+                <div className="text-2xl sm:text-3xl font-bold font-display text-text">{value}</div>
                 <div className="text-[10px] font-bold uppercase tracking-widest text-muted">{label}</div>
               </div>
             ))}
@@ -384,10 +384,10 @@ const LandingPage: React.FC<LandingPageProps> = ({ onSignIn, onSignUp }) => {
           {/* Section header */}
           <div className="text-center mb-16 space-y-4">
             <span className="text-[11px] font-bold uppercase tracking-[0.4em] text-primary">What You Get</span>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold font-display text-white">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold font-display text-text">
               Everything you need to
               <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-violet-400">own any vocabulary list</span>
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-violet-600">own any vocabulary list</span>
             </h2>
             <p className="text-muted max-w-xl mx-auto text-base leading-relaxed">
               From raw word to mastered lexeme — Lexicon AI handles every step of the vocabulary learning journey.
@@ -404,7 +404,7 @@ const LandingPage: React.FC<LandingPageProps> = ({ onSignIn, onSignUp }) => {
                 <div className={`w-14 h-14 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center mb-5 group-hover:scale-110 transition-transform ${iconColor}`}>
                   <Icon className="w-6 h-6" />
                 </div>
-                <h3 className="text-base font-bold text-white mb-2 font-display">{title}</h3>
+                <h3 className="text-base font-bold text-text mb-2 font-display">{title}</h3>
                 <p className="text-sm text-muted leading-relaxed">{desc}</p>
               </div>
             ))}
@@ -413,12 +413,12 @@ const LandingPage: React.FC<LandingPageProps> = ({ onSignIn, onSignUp }) => {
       </section>
 
       {/* ── TEST ARCHIVES ─────────────────────────────────────────────────────── */}
-      <section id="archives" className="py-24 md:py-32 px-4 sm:px-6 lg:px-8 bg-[#191d24]/50">
+      <section id="archives" className="py-24 md:py-32 px-4 sm:px-6 lg:px-8 bg-surface/50">
         <div className="max-w-7xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
             <div className="space-y-6">
               <span className="text-[11px] font-bold uppercase tracking-[0.4em] text-amber-400">System Archives</span>
-              <h2 className="text-3xl sm:text-4xl font-bold font-display text-white leading-tight">
+              <h2 className="text-3xl sm:text-4xl font-bold font-display text-text leading-tight">
                 IELTS & SAT prep,
                 <br />built right in.
               </h2>
@@ -458,7 +458,7 @@ const LandingPage: React.FC<LandingPageProps> = ({ onSignIn, onSignUp }) => {
                 { tier: 'SAT Erica', label: 'Advanced', cost: '300 tokens', color: 'border-violet-500/30 bg-violet-500/5', text_color: "text-violet-400" },
               ].map(({ tier, label, cost, color, text_color }) => (
                 <div key={tier} className={`p-4 rounded-xl border ${color} flex flex-col space-y-1`}>
-                  <span className="text-sm font-bold text-white font-display">{tier}</span>
+                  <span className="text-sm font-bold text-text font-display">{tier}</span>
                   <span className="text-[10px] text-muted uppercase tracking-wider">{label}</span>
                   <span className={`text-[10px] font-bold ${text_color} mt-1`}>{cost}</span>
                 </div>
@@ -473,10 +473,10 @@ const LandingPage: React.FC<LandingPageProps> = ({ onSignIn, onSignUp }) => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16 space-y-4">
             <span className="text-[11px] font-bold uppercase tracking-[0.4em] text-primary">Simple workflow</span>
-            <h2 className="text-3xl sm:text-4xl font-bold font-display text-white">
+            <h2 className="text-3xl sm:text-4xl font-bold font-display text-text">
               From list to mastery
               <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-violet-400">in 3 steps</span>
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-violet-600">in 3 steps</span>
             </h2>
           </div>
 
@@ -486,12 +486,12 @@ const LandingPage: React.FC<LandingPageProps> = ({ onSignIn, onSignUp }) => {
 
             {steps.map(({ num, icon: Icon, title, desc }) => (
               <div key={num} className="relative flex flex-col items-center text-center space-y-5 group">
-                <div className="relative z-10 w-20 h-20 rounded-full bg-[#191d24] border-2 border-primary/30 flex items-center justify-center shadow-xl shadow-primary/10 group-hover:border-primary/70 group-hover:shadow-primary/25 transition-all duration-300">
+                <div className="relative z-10 w-20 h-20 rounded-full bg-surface border-2 border-primary/30 flex items-center justify-center shadow-xl shadow-primary/10 group-hover:border-primary/70 group-hover:shadow-primary/25 transition-all duration-300">
                   <Icon className="w-7 h-7 text-primary" />
                 </div>
                 <div className="space-y-2">
                   <div className="text-[10px] font-bold text-violet-400 uppercase tracking-widest">{num}</div>
-                  <h3 className="text-lg font-bold font-display text-white">{title}</h3>
+                  <h3 className="text-lg font-bold font-display text-text">{title}</h3>
                   <p className="text-sm text-muted leading-relaxed">{desc}</p>
                 </div>
               </div>
@@ -501,7 +501,7 @@ const LandingPage: React.FC<LandingPageProps> = ({ onSignIn, onSignUp }) => {
       </section>
 
       {/* ── SCHOLAR ECONOMY ──────────────────────────────────────────────────── */}
-      <section id="scholar-tokens" className="py-24 md:py-32 px-4 sm:px-6 lg:px-8 bg-[#191d24]/50">
+      <section id="scholar-tokens" className="py-24 md:py-32 px-4 sm:px-6 lg:px-8 bg-surface/50">
         <div className="max-w-7xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
 
@@ -525,7 +525,7 @@ const LandingPage: React.FC<LandingPageProps> = ({ onSignIn, onSignUp }) => {
 
             <div className="space-y-6">
               <span className="text-[11px] font-bold uppercase tracking-[0.4em] text-violet-400">Scholar Token Economy</span>
-              <h2 className="text-3xl sm:text-4xl font-bold font-display text-white leading-tight">
+              <h2 className="text-3xl sm:text-4xl font-bold font-display text-text leading-tight">
                 Learning pays.
                 <br />
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-violet-400 to-primary">Literally.</span>
@@ -555,14 +555,14 @@ const LandingPage: React.FC<LandingPageProps> = ({ onSignIn, onSignUp }) => {
       {/* ── BOTTOM CTA ──────────────────────────────────────────────────────── */}
       <section className="py-8 md:py-32 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto">
-          <div className="relative rounded-3xl overflow-hidden border border-primary/20 bg-gradient-to-br from-primary/10 via-[#191d24] to-violet-500/10 px-3 py-6 md:p-16 text-center shadow-2xl shadow-primary/10">
+            <div className="relative rounded-3xl overflow-hidden border border-primary/20 bg-gradient-to-br from-primary/10 via-surface to-violet-500/10 px-3 py-6 md:p-16 text-center shadow-2xl shadow-primary/10">
             {/* Glow */}
             <div className="absolute inset-0 pointer-events-none">
               <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-primary/50 to-transparent" />
             </div>
 
             <span className="text-[11px] font-bold uppercase tracking-[0.4em] text-primary mb-4 block">Ready to begin?</span>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold font-display text-white mb-4 leading-tight">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold font-display text-text mb-4 leading-tight">
               Your vocabulary
               <br />
               journal awaits.
@@ -573,14 +573,14 @@ const LandingPage: React.FC<LandingPageProps> = ({ onSignIn, onSignUp }) => {
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <button
                 onClick={onSignUp}
-                className="group w-full sm:w-auto flex items-center justify-center space-x-2 px-8 py-4 bg-primary rounded-full text-white font-bold text-sm uppercase tracking-widest hover:bg-[#5aaee8] transition-all shadow-xl shadow-primary/30"
+                className="group w-full sm:w-auto flex items-center justify-center space-x-2 px-8 py-4 bg-primary rounded-full text-white font-bold text-sm uppercase tracking-widest hover:bg-secondary transition-all shadow-xl shadow-primary/30"
               >
                 <span>Create Free Account</span>
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </button>
               <button
                 onClick={onSignIn}
-                className="w-full sm:w-auto px-8 py-4 border border-white/15 rounded-full text-muted font-bold text-sm uppercase tracking-widest hover:text-white hover:border-white/30 transition-all"
+                className="w-full sm:w-auto px-8 py-4 border border-white/15 rounded-full text-muted font-bold text-sm uppercase tracking-widest hover:text-text hover:border-white/30 transition-all"
               >
                 Sign In
               </button>
@@ -597,7 +597,7 @@ const LandingPage: React.FC<LandingPageProps> = ({ onSignIn, onSignUp }) => {
             <div className="flex items-center space-x-3">
               <img src="/logo.svg" alt="Lexicon AI" className="w-9 h-9 object-contain" />
               <div className="leading-none">
-                <span className="text-base font-bold font-display text-white">Lexicon</span>
+                <span className="text-base font-bold font-display text-text">Lexicon</span>
                 <span className="block text-[9px] font-bold uppercase tracking-[0.3em] text-primary mt-0.5">AI Journal</span>
               </div>
             </div>
@@ -613,7 +613,7 @@ const LandingPage: React.FC<LandingPageProps> = ({ onSignIn, onSignUp }) => {
                 <button
                   key={id}
                   onClick={() => scrollTo(id)}
-                  className="text-[10px] font-bold uppercase tracking-widest text-muted hover:text-white transition-colors"
+                  className="text-[10px] font-bold uppercase tracking-widest text-muted hover:text-text transition-colors"
                 >
                   {label}
                 </button>

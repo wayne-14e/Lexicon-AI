@@ -1,0 +1,1 @@
+Read PROJECT_CONTEXT.md file first to understand the codebase. If this file doesn't not exist - create it to reflect the latest state of the platform. Always update PROJECT_CONTEXT.md after every new change.

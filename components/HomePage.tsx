@@ -102,18 +102,18 @@ const HomePage: React.FC<HomePageProps> = ({
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mx-auto">
             <button 
               onClick={onNavigateToCreate}
-              className="p-4 sm:p-6 bg-surfaceHighlight border border-white/5 rounded-2xl hover:border-primary/50 transition-all text-left group"
+              className="p-4 sm:p-6 bg-surface border border-white/5 rounded-2xl hover:border-primary/50 transition-all text-left group"
             >
               <span className="text-[10px] font-bold uppercase tracking-widest text-primary block mb-2">Academic Path</span>
-              <h3 className="font-bold text-text mb-1">Start First Journal</h3>
+              <h2 className="font-bold text-text mb-1 text-base">Start First Journal</h2>
               <p className="text-xs text-muted">Begin your personal vocabulary record.</p>
             </button>
             <button 
               onClick={onNavigateToArchives}
-              className="p-4 sm:p-6 bg-surfaceHighlight border border-white/5 rounded-2xl hover:border-secondary/50 transition-all text-left group"
+              className="p-4 sm:p-6 bg-surface border border-white/5 rounded-2xl hover:border-secondary/50 transition-all text-left group"
             >
-              <span className="text-[10px] font-bold uppercase tracking-widest text-secondary block mb-2">System Archives</span>
-              <h3 className="font-bold text-text mb-1">IELTS & SAT Vocab</h3>
+              <span className="text-[10px] font-bold uppercase tracking-widest text-primary block mb-2">System Archives</span>
+              <h2 className="font-bold text-text mb-1 text-base">IELTS & SAT Vocab</h2>
               <p className="text-xs text-muted">Master essential academic terminology.</p>
             </button>
           </div>

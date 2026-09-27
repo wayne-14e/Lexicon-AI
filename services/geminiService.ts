@@ -1,19 +1,104 @@
 import { VocabEntry } from "../types";
 
-/** Priority fallback list for general generation tasks. */
-const DEFAULT_MODEL_LIST = ["gemini-3.1-flash-lite-preview", "gemini-3.5-flash", "gemini-2.5-flash"];
+/** Priority fallback list for general generation tasks (most stable first). */
+const DEFAULT_MODEL_LIST = ["gemini-2.5-flash", "gemini-3.1-flash-lite-preview", "gemini-3.5-flash"];
+
+function getBrowserApiKeys(): string[] {
+  try {
+    // Injected at build time by vite.config.ts `define`. Vite reads env files
+    // only when the dev server / build starts — a stale (empty) value here
+    // means `npm run dev` wasn't restarted after editing `.env.local`.
+    const env = typeof process !== 'undefined' ? (process as any)?.env : undefined;
+    return [env?.GEMINI_API_KEY, env?.GEMINI_API_KEY_2, env?.GEMINI_API_KEY_3]
+      .filter((k: unknown): k is string => typeof k === 'string' && k.length > 0);
+  } catch {
+    return [];
+  }
+}
+
+/**
+ * Direct browser call to Gemini, used when the `/api/gemini` proxy is
+ * unreachable (e.g. `npm run dev` / Vite has no API routes, or the Vercel
+ * rewrite served index.html instead of the Edge Function). Tries each model
+ * in order and throws the last error.
+ */
+async function callGeminiDirect(models: string[], params: any): Promise<any> {
+  const keys = getBrowserApiKeys();
+  if (keys.length === 0) {
+    throw new Error(
+      'BROWSER_KEY_MISSING: AI proxy unreachable and no API key was bundled into this build. ' +
+      'Set GEMINI_API_KEY in .env.local and fully restart `npm run dev` (Vite reads env files only at startup).'
+    );
+  }
+  // Lazy import keeps the ~270KB @google/genai SDK out of the initial
+  // bundle — it only loads when the proxy is unreachable.
+  const { GoogleGenAI } = await import("@google/genai");
+  let lastError: unknown = null;
+  for (const apiKey of keys) {
+    const ai = new GoogleGenAI({ apiKey });
+    for (const model of models) {
+      try {
+        const response = await ai.models.generateContent({ model, ...params });
+        return { text: response.text, candidates: response.candidates };
+      } catch (e) {
+        lastError = e;
+      }
+    }
+  }
+  const msg = lastError instanceof Error ? lastError.message : String(lastError ?? 'Unknown AI error');
+  throw new Error(`AI request failed: ${msg}`);
+}
+
+function isProxyInfrastructureError(status: number, raw: string): boolean {
+  // Empty body ("Unexpected end of JSON input"), HTML fallback page
+  // ("Unexpected token '<'"), or an explicit 404 from a dev server without
+  // API routes — all mean the proxy itself never ran.
+  if (!raw || raw.trim().length === 0) return true;
+  const trimmed = raw.trimStart();
+  if (trimmed.startsWith('<')) return true;
+  if (status === 404) return true;
+  return false;
+}
 
 async function callGeminiApi(models: string | string[], params: any): Promise<any> {
-  const response = await fetch('/api/gemini', {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({
-      models: Array.isArray(models) ? models : [models],
-      params
-    })
-  });
+  const modelList = Array.isArray(models) ? models : [models];
 
-  const data = await response.json();
+  let response: Response;
+  try {
+    response = await fetch('/api/gemini', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ models: modelList, params })
+    });
+  } catch (e) {
+    // Network-level failure (offline, DNS, CORS) — try direct SDK call.
+    console.warn('Gemini proxy fetch failed, falling back to direct browser call:', e);
+    return callGeminiDirect(modelList, params);
+  }
+
+  // Read as text first so empty/HTML bodies produce a clear error instead
+  // of the cryptic "Unexpected end of JSON input".
+  let raw = '';
+  try {
+    raw = await response.text();
+  } catch (e) {
+    console.warn('Failed to read Gemini proxy response, falling back to direct call:', e);
+    return callGeminiDirect(modelList, params);
+  }
+
+  if (isProxyInfrastructureError(response.status, raw)) {
+    console.warn(`Gemini proxy unreachable (status ${response.status}), falling back to direct browser call.`);
+    return callGeminiDirect(modelList, params);
+  }
+
+  let data: any;
+  try {
+    data = JSON.parse(raw);
+  } catch {
+    throw new Error(
+      'AI service returned an unreadable response. Please try again in a moment.'
+    );
+  }
   if (!response.ok) {
     throw new Error(data.error || 'Gemini API Error');
   }
@@ -90,38 +175,46 @@ export const geminiService = {
   },
 
   generateVocabEntries: async (wordList: string[]): Promise<Partial<VocabEntry>[]> => {
-    try {
-      const result = await callGeminiApi(DEFAULT_MODEL_LIST, {
-        contents: `For the following list of words: [${wordList.join(', ')}] provide:
+    const result = await callGeminiApi(DEFAULT_MODEL_LIST, {
+      contents: `For the following list of words: [${wordList.join(', ')}] provide:
       1. A simple, easy-to-understand definition.
       2. Common, everyday synonyms.
       3. Common, everyday antonyms (if a word has no clear antonym, provide a near-antonym or a contrasting concept).
       4. A highly memorable, perhaps slightly quirky or funny example sentence that makes the meaning stick. 
       Avoid overly academic or stuffy language. Keep it clear and engaging.`,
-        config: {
-          responseMimeType: "application/json",
-          responseSchema: {
-            type: "ARRAY",
-            items: {
-              type: "OBJECT",
-              properties: {
-                word: { type: "STRING" },
-                partOfSpeech: { type: "STRING" },
-                meaning: { type: "STRING" },
-                synonyms: { type: "STRING" },
-                antonyms: { type: "STRING" },
-                sentence: { type: "STRING" }
-              },
-              required: ["word", "partOfSpeech", "meaning", "synonyms", "antonyms", "sentence"]
-            }
+      config: {
+        responseMimeType: "application/json",
+        responseSchema: {
+          type: "ARRAY",
+          items: {
+            type: "OBJECT",
+            properties: {
+              word: { type: "STRING" },
+              partOfSpeech: { type: "STRING" },
+              meaning: { type: "STRING" },
+              synonyms: { type: "STRING" },
+              antonyms: { type: "STRING" },
+              sentence: { type: "STRING" }
+            },
+            required: ["word", "partOfSpeech", "meaning", "synonyms", "antonyms", "sentence"]
           }
         }
-      });
-      return JSON.parse(result.text || '[]');
+      }
+    });
+    // NOTE: intentionally no try/catch here — callers must see failures.
+    // Returning [] on error used to make TableCreator save empty collections.
+    let parsed: unknown;
+    try {
+      parsed = JSON.parse(result.text || '[]');
     } catch (e) {
-      console.error("Failed to parse AI response", e);
-      return [];
+      console.error("Failed to parse AI response", e, result?.text);
+      throw new Error('AI returned an unreadable response. Please try again.');
     }
+    if (!Array.isArray(parsed) || parsed.length === 0) {
+      console.error("AI returned empty/invalid vocab entries", result?.text);
+      throw new Error('AI returned no entries. Please try again.');
+    }
+    return parsed as Partial<VocabEntry>[];
   },
 
   generateContextPassage: async (words: string[], collectionTitle: string): Promise<{ title: string, text: string }> => {

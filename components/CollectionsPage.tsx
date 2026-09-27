@@ -62,9 +62,9 @@ const CollectionsPage: React.FC<CollectionsPageProps> = ({ user, tables, onSelec
               onChange={(e) => setFilterType(e.target.value as FilterType)}
               className="appearance-none bg-surfaceHighlight/30 text-text border border-white/10 outline-none focus:border-primary pl-9 pr-10 py-2.5 md:py-3 rounded-xl text-[10px] sm:text-xs font-bold uppercase tracking-wider transition-all shadow-lg hover:border-white/20 hover:bg-surfaceHighlight cursor-pointer w-full sm:w-auto text-left"
             >
-              <option value="date-desc" className="bg-[#1a1a1a] normal-case text-sm font-normal">Date (New - Old)</option>
-              <option value="date-asc" className="bg-[#1a1a1a] normal-case text-sm font-normal">Date (Old - New)</option>
-              <option value="mastery-desc" className="bg-[#1a1a1a] normal-case text-sm font-normal">Mastery (High - Low)</option>
+              <option value="date-desc" className="bg-surface normal-case text-sm font-normal">Date (New - Old)</option>
+              <option value="date-asc" className="bg-surface normal-case text-sm font-normal">Date (Old - New)</option>
+              <option value="mastery-desc" className="bg-surface normal-case text-sm font-normal">Mastery (High - Low)</option>
             </select>
             <div className="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none">
               <ChevronDown className="h-4 w-4 text-muted group-hover/filter:text-primary transition-colors" />

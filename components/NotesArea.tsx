@@ -142,7 +142,7 @@ const NotesArea: React.FC<NotesAreaProps> = ({ userId }) => {
         <textarea
           value={notes}
           onChange={handleChange}
-          className="w-full min-h-[300px] lg:min-h-[600px] p-6 bg-surfaceHighlight border border-white/5 rounded-xl focus:ring-2 focus:ring-primary/20 focus:border-primary/50 outline-none font-sans text-lg leading-relaxed text-text placeholder:text-muted/50 resize-y transition-all"
+          className="w-full min-h-[300px] lg:min-h-[600px] p-6 bg-background border border-white/5 rounded-xl focus:ring-2 focus:ring-primary/20 focus:border-primary/50 outline-none font-sans text-lg leading-relaxed text-text placeholder:text-muted/50 resize-y transition-all"
           placeholder="Jot down new words, phonetic notes, or context clues here..."
         />
         <div className="absolute bottom-4 right-4 text-[9px] font-mono text-muted uppercase select-none flex items-center space-x-2 bg-surface/80 px-2 py-1 rounded-sm backdrop-blur-sm border border-white/5">

@@ -149,7 +149,7 @@ const LexyAssistant: React.FC<LexyAssistantProps> = ({ user, onSpendTokens, onUs
         className={`fixed bottom-4 right-4 w-[calc(100%-3rem)] md:w-[400px] h-[75vh] md:h-[600px] bg-surface border border-white/10 rounded-2xl shadow-2xl shadow-black/50 flex flex-col z-50 transition-all duration-300 transform origin-bottom-right ${isOpen ? 'scale-100 opacity-100' : 'scale-95 opacity-0 pointer-events-none'}`}
       >
         {/* Header */}
-        <div className="flex items-center justify-between p-4 border-b border-white/5 bg-surfaceHighlight rounded-t-2xl">
+        <div className="flex items-center justify-between p-4 border-b border-white/5 bg-background rounded-t-2xl">
           <div className="flex items-center gap-3">
             <div className="w-10 h-10 rounded-full bg-purple-500/20 flex items-center justify-center text-purple-500 border border-purple-500/30 aspect-square shrink-0">
               <Bot className="w-5 h-5" />
@@ -183,7 +183,7 @@ const LexyAssistant: React.FC<LexyAssistantProps> = ({ user, onSpendTokens, onUs
                 className={`max-w-[85%] p-3 rounded-2xl text-sm ${
                   msg.role === 'user' 
                     ? 'bg-purple-500 text-white rounded-br-sm' 
-                    : 'bg-surfaceHighlight text-text border border-white/5 rounded-bl-sm'
+                    : 'bg-background text-text border border-white/5 rounded-bl-sm'
                 }`}
               >
                 <div className="markdown-body text-sm leading-relaxed">
@@ -194,7 +194,7 @@ const LexyAssistant: React.FC<LexyAssistantProps> = ({ user, onSpendTokens, onUs
           ))}
           {isLoading && (
             <div className="flex justify-start">
-              <div className="max-w-[85%] p-4 rounded-2xl bg-surfaceHighlight border border-white/5 rounded-bl-sm flex items-center gap-2">
+              <div className="max-w-[85%] p-4 rounded-2xl bg-background border border-white/5 rounded-bl-sm flex items-center gap-2">
                 <Loader2 className="w-4 h-4 text-purple-500 animate-spin" />
                 <span className="text-xs text-muted italic">Consulting the archives...</span>
               </div>
@@ -210,7 +210,7 @@ const LexyAssistant: React.FC<LexyAssistantProps> = ({ user, onSpendTokens, onUs
               <button
                 key={idx}
                 onClick={() => handlePromptClick(prompt)}
-                className="whitespace-nowrap px-3 py-1.5 bg-surfaceHighlight border border-white/5 rounded-full text-[10px] font-medium text-muted hover:text-purple-500 hover:border-purple-500/30 transition-colors shrink-0"
+                className="whitespace-nowrap px-3 py-1.5 bg-background border border-white/5 rounded-full text-[10px] font-medium text-muted hover:text-purple-500 hover:border-purple-500/30 transition-colors shrink-0"
               >
                 {prompt}
               </button>
@@ -222,17 +222,17 @@ const LexyAssistant: React.FC<LexyAssistantProps> = ({ user, onSpendTokens, onUs
         <div className="p-4 border-t border-white/5 bg-surface rounded-b-2xl relative">
           {/* Token Warning Popup */}
           {showTokenWarning && (
-            <div className="absolute bottom-full left-4 right-4 mb-2 p-3 bg-orange-500/10 border border-orange-500/30 text-orange-500 shadow-[0_0_15px_rgba(249,115,22,0.1)] text-xs rounded-xl backdrop-blur-md transition-all">
+            <div className="absolute bottom-full left-4 right-4 mb-2 p-3 bg-amber-500/10 border border-amber-500/30 text-amber-500 shadow-[0_0_15px_rgba(245,158,11,0.1)] text-xs rounded-xl backdrop-blur-md transition-all">
               <div className="flex items-start gap-2">
                 <span className="mt-0.5 text-base leading-none">⚠️</span>
-                <p className="flex-1 mt-0.5 text-orange-500">
+                <p className="flex-1 mt-0.5 text-amber-500">
                   You need <strong>40 Scholar Tokens</strong> to consult Lexy. 
                   Earn tokens by practicing flashcards, playing the matching game, or keeping up your daily streak!
                 </p>
                 <button 
                   type="button"
                   onClick={() => setShowTokenWarning(false)} 
-                  className="p-1 -mr-1 -mt-1 text-orange-500/70 hover:text-orange-500 hover:bg-orange-500/10 rounded-full transition-colors shrink-0"
+                  className="p-1 -mr-1 -mt-1 text-amber-500/70 hover:text-amber-500 hover:bg-amber-500/10 rounded-full transition-colors shrink-0"
                 >
                   <X className="w-3 h-3" />
                 </button>
@@ -257,7 +257,7 @@ const LexyAssistant: React.FC<LexyAssistantProps> = ({ user, onSpendTokens, onUs
               value={input}
               onChange={(e) => setInput(e.target.value)}
               placeholder="Ask Lexy about a word... (40 Tokens)"
-              className="w-full bg-surfaceHighlight border border-white/10 rounded-xl pl-4 pr-12 py-3 text-sm text-white placeholder-muted focus:border-purple-500 focus:outline-none focus:ring-1 focus:ring-purple-500 transition-all"
+              className="w-full bg-background border border-white/10 rounded-xl pl-4 pr-12 py-3 text-sm text-text placeholder-muted focus:border-purple-500 focus:outline-none focus:ring-1 focus:ring-purple-500 transition-all"
             />
             <button
               type="submit"

@@ -99,6 +99,41 @@ const TableCreator: React.FC<TableCreatorProps> = ({ user, existingTable, onSave
     return words.every(word => englishWordRegex.test(word));
   };
 
+  const friendlyAiError = (error: unknown): string => {
+    const raw = error instanceof Error ? error.message : String(error ?? '');
+    const lower = raw.toLowerCase();
+    if (
+      lower.includes('unexpected end of json input') ||
+      lower.includes('unexpected token') ||
+      lower.includes('unreadable response') ||
+      lower.includes('empty response')
+    ) {
+      return 'AI service returned a broken response. Check your connection and try again.';
+    }
+    if (lower.includes('failed to fetch') || lower.includes('networkerror') || lower.includes('load failed')) {
+      return 'Could not reach the AI service. Check your connection and try again.';
+    }
+    if (lower.includes('quota') || lower.includes('429') || lower.includes('rate limit') || lower.includes('resource_exhausted')) {
+      return 'AI quota is exhausted right now. Wait a minute and try again.';
+    }
+    if (lower.includes('browser_key_missing')) {
+      return 'AI fallback has no API key in this build. Set GEMINI_API_KEY in .env.local, then fully stop and restart `npm run dev` (Vite reads env files only at startup).';
+    }
+    if (lower.includes('environment variables') && lower.includes('gemini')) {
+      return 'AI is not configured on the server (GEMINI_API_KEY missing in Vercel env vars).';
+    }
+    if (lower.includes('api key') || lower.includes('api_key') || lower.includes('401') || lower.includes('403')) {
+      // Google rejected the key — surface its reason (trimmed, no secrets in
+      // it) so invalid keys can be told apart from referrer restrictions.
+      const detail = raw.length > 220 ? raw.slice(0, 220) + '…' : raw;
+      return `AI rejected the API key (${detail}). Verify the key in Google AI Studio, incl. HTTP-referrer restrictions for localhost.`;
+    }
+    if (lower.includes('no entries') || lower.includes('no usable entries')) {
+      return raw;
+    }
+    return raw || 'Failed to connect to AI engine.';
+  };
+
   const handleGenerate = async () => {
     if (!title.trim()) {
       setStatus('Error: Collection title is required.');
@@ -112,18 +147,24 @@ const TableCreator: React.FC<TableCreatorProps> = ({ user, existingTable, onSave
 
     const wordList = wordsInput.split(/[\n,]+/).map(w => w.trim().toLowerCase()).filter(w => w.length > 0);
     
+    if (wordList.length === 0) {
+      setStatus('Error: Please enter at least one word.');
+      return;
+    }
+
     if (!validateEnglishWords(wordList)) {
       setStatus('Error: All words must be in English. Please remove non-English characters.');
       return;
     }
 
+    // Check the daily quota BEFORE calling AI so a failed generation
+    // doesn't burn quota — usage is only recorded after success.
     try {
-      const newUsage = await storageService.incrementLimitUsage(user, 'words_generated', wordList.length);
-      if (newUsage === null) {
-        setStatus(`Error: Daily limit reached! You can only generate up to 40 words per day. You tried to add ${wordList.length} words.`);
+      const limitStatus = await storageService.getLimitStatus(user, 'words_generated', wordList.length);
+      if (!limitStatus.allowed) {
+        setStatus(`Error: Daily limit reached! You can only generate up to 40 words per day (${limitStatus.used}/${limitStatus.max} used). You tried to add ${wordList.length} words.`);
         return;
       }
-      if (onUserUpdate) onUserUpdate({ words_generated: newUsage });
     } catch (err) {
       console.error("Limit check error:", err);
       setStatus('Error: Failed to verify generation limits.');
@@ -135,6 +176,33 @@ const TableCreator: React.FC<TableCreatorProps> = ({ user, existingTable, onSave
     
     try {
       const generatedEntries = await geminiService.generateVocabEntries(wordList);
+
+      // Never save an empty collection: Gemini failures now throw, but
+      // guard anyway in case the model returns an empty/malformed payload.
+      if (!Array.isArray(generatedEntries) || generatedEntries.length === 0) {
+        setStatus('Error: AI returned no entries. Please try again — nothing was saved.');
+        return;
+      }
+
+      const validEntries = generatedEntries.filter(e => e && (e.word || '').trim().length > 0);
+      if (validEntries.length === 0) {
+        setStatus('Error: AI returned no usable entries. Please try again — nothing was saved.');
+        return;
+      }
+
+      // Record quota usage only after a successful generation.
+      try {
+        const newUsage = await storageService.incrementLimitUsage(user, 'words_generated', validEntries.length);
+        if (newUsage === null) {
+          setStatus(`Error: Daily limit reached during generation. Nothing was saved.`);
+          return;
+        }
+        if (onUserUpdate) onUserUpdate({ words_generated: newUsage });
+      } catch (err) {
+        console.error("Limit increment error:", err);
+        // Generation succeeded but quota bookkeeping failed — still save,
+        // the limit will be re-checked on the next attempt.
+      }
       
       const table: VocabTable = {
         id: existingTable?.id || crypto.randomUUID(),
@@ -142,7 +210,7 @@ const TableCreator: React.FC<TableCreatorProps> = ({ user, existingTable, onSave
         title: title || 'Untitled Vocabulary Collection',
         description,
         links: links.split('\n').filter(l => l.trim().length > 0),
-        entries: generatedEntries.map((e) => ({
+        entries: validEntries.map((e) => ({
           id: crypto.randomUUID(),
           word: e.word || '',
           partOfSpeech: e.partOfSpeech || 'N/A',
@@ -158,7 +226,7 @@ const TableCreator: React.FC<TableCreatorProps> = ({ user, existingTable, onSave
       onSave(table);
     } catch (error) {
       console.error(error);
-      setStatus('System Error: Failed to connect to AI engine.');
+      setStatus(`Error: ${friendlyAiError(error)} Nothing was saved.`);
     } finally {
       setIsGenerating(false);
     }
@@ -180,7 +248,7 @@ const TableCreator: React.FC<TableCreatorProps> = ({ user, existingTable, onSave
                 type="text"
                 value={title}
                 onChange={(e) => setTitle(e.target.value)}
-                className="w-full p-4 bg-surfaceHighlight border border-white/10 rounded-xl focus:border-primary focus:bg-surfaceHighlight outline-none transition-all text-base font-display text-text placeholder-muted/50"
+                className="w-full p-4 bg-background border border-white/10 rounded-xl focus:border-primary focus:bg-background outline-none transition-all text-base font-display text-text placeholder-muted/50"
                 placeholder="e.g., SAT Reading Unit 4"
                 required
               />
@@ -190,7 +258,7 @@ const TableCreator: React.FC<TableCreatorProps> = ({ user, existingTable, onSave
               <textarea
                 value={description}
                 onChange={(e) => setDescription(e.target.value)}
-                className="w-full flex-1 p-4 bg-surfaceHighlight border border-white/10 rounded-xl focus:border-primary focus:bg-surfaceHighlight outline-none transition-all resize-none italic leading-relaxed text-sm text-text/80 min-h-[160px] placeholder-muted/50"
+                className="w-full flex-1 p-4 bg-background border border-white/10 rounded-xl focus:border-primary focus:bg-background outline-none transition-all resize-none italic leading-relaxed text-sm text-text/80 min-h-[160px] placeholder-muted/50"
                 placeholder="Context or notes about this list..."
               />
             </div>
@@ -233,7 +301,7 @@ const TableCreator: React.FC<TableCreatorProps> = ({ user, existingTable, onSave
               <textarea
                 value={wordsInput}
                 onChange={(e) => setWordsInput(e.target.value)}
-                className="w-full flex-1 p-4 bg-surfaceHighlight border border-white/10 rounded-xl min-h-[312px] focus:border-primary focus:bg-surfaceHighlight outline-none transition-all resize-none font-mono text-sm leading-relaxed text-text placeholder-muted/50"
+                className="w-full flex-1 p-4 bg-background border border-white/10 rounded-xl min-h-[312px] focus:border-primary focus:bg-background outline-none transition-all resize-none font-mono text-sm leading-relaxed text-text placeholder-muted/50"
                 placeholder="ubiquitous&#10;ephemeral&#10;sanguine"
                 required
               />
@@ -246,7 +314,7 @@ const TableCreator: React.FC<TableCreatorProps> = ({ user, existingTable, onSave
           <textarea
             value={links}
             onChange={(e) => setLinks(e.target.value)}
-            className="w-full p-4 bg-surfaceHighlight border border-white/10 rounded-xl h-24 focus:border-primary focus:bg-surfaceHighlight outline-none transition-all resize-none text-sm text-primary font-mono placeholder-muted/50"
+            className="w-full p-4 bg-background border border-white/10 rounded-xl h-24 focus:border-primary focus:bg-background outline-none transition-all resize-none text-sm text-primary font-mono placeholder-muted/50"
             placeholder="https://merriam-webster.com/..."
           />
         </div>

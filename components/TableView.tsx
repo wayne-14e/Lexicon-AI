@@ -897,7 +897,7 @@ const TableView: React.FC<TableViewProps> = ({
         </div>
       </div>
       {isEditingMetadata && (
-        <div className="fixed !top-0 !left-0 !w-full !h-full !mt-0 !pt-0 bg-[#0b0d11]/95 backdrop-blur-xl z-[10000] flex items-center justify-center overflow-y-auto">
+        <div className="fixed !top-0 !left-0 !w-full !h-full !mt-0 !pt-0 bg-background/95 backdrop-blur-xl z-[10000] flex items-center justify-center overflow-y-auto">
           <div className="bg-surface border border-white/10 rounded-3xl w-full max-w-xl p-6 md:p-8 shadow-2xl space-y-6 md:space-y-8 animate-in zoom-in-95 duration-300 m-4 !mt-0">
             <div className="space-y-2">
               <span className="text-[10px] font-bold uppercase tracking-[0.4em] text-primary">Metadata Revision</span>

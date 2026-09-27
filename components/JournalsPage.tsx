@@ -18,7 +18,7 @@ const JournalsPage: React.FC<JournalsPageProps> = ({ onNavigateToCollections, on
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 sm:gap-6 max-w-2xl mx-auto w-full">
         <button
           onClick={onNavigateToCollections}
-          className="group relative bg-surface border border-white/5 rounded-2xl p-8 sm:p-10 text-center hover:border-primary/30 hover:bg-surfaceHighlight/50 transition-all shadow-lg shadow-black/20 overflow-hidden"
+          className="group relative bg-surface border border-white/5 rounded-2xl p-8 sm:p-10 text-center hover:border-primary/30 hover:shadow-xl hover:shadow-primary/10 hover:-translate-y-0.5 transition-all shadow-lg shadow-black/20 overflow-hidden"
         >
           <div className="absolute top-0 left-0 right-0 h-1 bg-primary/50 group-hover:bg-primary transition-colors" />
           <div className="w-16 h-16 mx-auto mb-5 rounded-2xl bg-primary/10 border border-primary/20 flex items-center justify-center text-primary group-hover:bg-primary/20 group-hover:scale-110 transition-all">
@@ -32,7 +32,7 @@ const JournalsPage: React.FC<JournalsPageProps> = ({ onNavigateToCollections, on
 
         <button
           onClick={onNavigateToArchives}
-          className="group relative bg-surface border border-white/5 rounded-2xl p-8 sm:p-10 text-center hover:border-purple-500/30 hover:bg-surfaceHighlight/50 transition-all shadow-lg shadow-black/20 overflow-hidden"
+          className="group relative bg-surface border border-white/5 rounded-2xl p-8 sm:p-10 text-center hover:border-purple-500/30 hover:shadow-xl hover:shadow-purple-500/10 hover:-translate-y-0.5 transition-all shadow-lg shadow-black/20 overflow-hidden"
         >
           <div className="absolute top-0 left-0 right-0 h-1 bg-purple-500/50 group-hover:bg-purple-500 transition-colors" />
           <div className="w-16 h-16 mx-auto mb-5 rounded-2xl bg-purple-500/10 border border-purple-500/20 flex items-center justify-center text-purple-500 group-hover:bg-purple-500/20 group-hover:scale-110 transition-all">

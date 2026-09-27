@@ -85,7 +85,7 @@ const MonthlyTooltip = ({ active, payload }: any) => {
   if (!active || !payload || !payload.length) return null;
   const data = payload[0].payload as MonthBucket;
   return (
-    <div className="rounded-xl border border-white/10 bg-[#13161c] shadow-lg px-4 py-3">
+    <div className="rounded-xl border border-white/10 bg-surface shadow-lg px-4 py-3">
       <p className="text-[10px] font-bold uppercase tracking-widest text-slate-400 mb-1">{data.week}</p>
       <p className="text-xs font-semibold text-text">
         {data.range}: {data.count} words mastered

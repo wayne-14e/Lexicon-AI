@@ -1,0 +1,166 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ─── Theme tokens ────────────────────────────────────────────────────
+   Dark is the default (:root). Adding `.light` to <html> switches the
+   whole token-driven UI to the light palette. Landing/auth/public trees
+   are pinned with a `.dark` wrapper so their hardcoded dark artwork is
+   untouched. */
+:root,
+.dark {
+  --c-background: 11 13 17;
+  --c-surface: 19 22 28;
+  --c-surfaceHighlight: 30 35 43;
+  --c-primary: 66 154 218;
+  --c-secondary: 25 67 148;
+  --c-text: 227 227 227;
+  --c-muted: 156 163 175;
+  color-scheme: dark;
+}
+
+.light {
+  --c-background: 248 250 252;
+  --c-surface: 255 255 255;
+  --c-surfaceHighlight: 226 232 240;
+  --c-primary: 26 109 170;
+  --c-secondary: 25 67 148;
+  --c-text: 15 23 42;
+  --c-muted: 71 85 105;
+  color-scheme: light;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: rgb(var(--c-background));
+  color: rgb(var(--c-text));
+  -webkit-font-smoothing: antialiased;
+}
+.font-display {
+  font-family: 'Outfit', sans-serif;
+}
+.glass-panel {
+  background: rgba(19, 22, 28, 0.7);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+.light .glass-panel {
+  background: rgba(255, 255, 255, 0.75);
+  border: 1px solid rgba(15, 23, 42, 0.08);
+}
+
+/* ─── Light-theme remaps for hardcoded dark utilities ─────────────────
+   Components were written dark-first (`white/5` hairlines, `white/5`
+   hover fills). Exact-token attribute selectors (no escaping pitfalls)
+   remap them to ink hairlines under `.light`. They sit after the
+   utilities layer, so ties in specificity resolve in our favor. */
+.light [class~='border-white/5'] { border-color: rgb(15 23 42 / .08); }
+.light [class~='border-white/10'] { border-color: rgb(15 23 42 / .12); }
+.light [class~='border-white/15'] { border-color: rgb(15 23 42 / .14); }
+.light [class~='border-white/20'] { border-color: rgb(15 23 42 / .18); }
+.light [class~='border-white/30'] { border-color: rgb(15 23 42 / .28); }
+.light [class~='border-white/40'] { border-color: rgb(15 23 42 / .36); }
+.light [class~='border-white/[0.04]'] { border-color: rgb(15 23 42 / .07); }
+.light [class~='hover:border-white/10']:hover { border-color: rgb(15 23 42 / .16); }
+.light [class~='hover:border-white/15']:hover { border-color: rgb(15 23 42 / .2); }
+.light [class~='hover:border-white/20']:hover { border-color: rgb(15 23 42 / .24); }
+.light [class~='hover:border-white/30']:hover { border-color: rgb(15 23 42 / .32); }
+.light [class~='hover:border-white/40']:hover { border-color: rgb(15 23 42 / .4); }
+.light [class~='bg-white/5'] { background-color: rgb(15 23 42 / .05); }
+.light [class~='bg-white/10'] { background-color: rgb(15 23 42 / .07); }
+.light [class~='bg-white/[0.02]'] { background-color: rgb(15 23 42 / .03); }
+.light [class~='bg-white/[0.015]'] { background-color: rgb(15 23 42 / .02); }
+/* Hovers lighten: white washes lift the surface toward white. */
+.light [class~='hover:bg-white/5']:hover { background-color: rgb(255 255 255 / .6); }
+.light [class~='hover:bg-white/10']:hover { background-color: rgb(255 255 255 / .75); }
+.light [class~='hover:bg-white/[0.03]']:hover { background-color: rgb(255 255 255 / .45); }
+.light [class~='hover:bg-surfaceHighlight']:hover { background-color: rgb(var(--c-surfaceHighlight) / .45); }
+.light [class~='divide-white/5'] > :not([hidden]) ~ :not([hidden]) { border-color: rgb(15 23 42 / .08); }
+.light [class~='text-white/5'] { color: rgb(15 23 42 / .08); }
+/* Accent text: 400/500 shades fail on white — remap to 700s (all ≥5:1). */
+.light [class~='text-violet-400'] { color: #6d28d9; }
+.light [class~='text-amber-400'] { color: #b45309; }
+.light [class~='text-amber-500'] { color: #b45309; }
+.light [class~='text-purple-400'] { color: #7e22ce; }
+.light [class~='text-purple-500'] { color: #7e22ce; }
+.light [class~='hover:text-amber-500']:hover { color: #92400e; }
+.light [class~='hover:text-amber-300']:hover { color: #b45309; }
+.light [class~='hover:text-purple-500']:hover { color: #6d28d9; }
+.light [class~='hover:text-purple-300']:hover { color: #7e22ce; }
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Custom focus states for sleek feel */
+input:focus, textarea:focus {
+  outline: none;
+  border-color: #429ada !important;
+  box-shadow: 0 0 0 2px rgba(66, 154, 218, 0.2);
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #0b0d11;
+}
+::-webkit-scrollbar-thumb {
+  background: #1e232b;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #429ada;
+}
+
+@media print {
+  body {
+    background-color: white !important;
+    color: black !important;
+    font-family: 'Inter', sans-serif !important;
+  }
+  .print\:hidden {
+    display: none !important;
+  }
+  header, footer, button, .no-print {
+    display: none !important;
+  }
+  main {
+    padding: 0 !important;
+    margin: 0 !important;
+    max-width: 100% !important;
+  }
+}
+
+/* Markdown Styles */
+.markdown-body {
+  color: inherit;
+  font-family: inherit;
+}
+.markdown-body p {
+  margin-bottom: 0.5rem;
+}
+.markdown-body p:last-child {
+  margin-bottom: 0;
+}
+.markdown-body strong {
+  font-weight: 700;
+  color: #fff;
+}
+.markdown-body em {
+  font-style: italic;
+  color: #a855f7;
+}
+.markdown-body ul {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+.markdown-body li {
+  margin-bottom: 0.25rem;
+}

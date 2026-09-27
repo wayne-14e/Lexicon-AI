@@ -36,6 +36,24 @@ function isQuotaError(error: unknown): boolean {
   );
 }
 
+function isModelError(error: unknown): boolean {
+  if (!error) return false;
+  const msg = String((error as any)?.message ?? error).toLowerCase();
+  const status = (error as any)?.status ?? (error as any)?.statusCode ?? (error as any)?.error?.status;
+  const code = (error as any)?.code ?? (error as any)?.error?.code;
+
+  return (
+    status === 404 ||
+    code === 404 ||
+    msg.includes("model not found") ||
+    msg.includes("not_found") ||
+    msg.includes("notfound") ||
+    msg.includes("unknown model") ||
+    msg.includes("unsupported model") ||
+    msg.includes("does not exist")
+  );
+}
+
 function isUnavailableError(error: unknown): boolean {
   if (!error) return false;
   const msg = String((error as any)?.message ?? error).toLowerCase();
@@ -97,10 +115,11 @@ export default async function handler(req: Request) {
       } catch (error: any) {
         finalError = error;
 
-        // 1. Handle Model Availability (503)
-        if (isUnavailableError(error) && modelIndex < models.length - 1) {
+        // 1. Handle bad/retired model names (404) + overloaded models (503)
+        // by falling through to the next model in the list.
+        if ((isUnavailableError(error) || isModelError(error)) && modelIndex < models.length - 1) {
           modelIndex++;
-          console.warn(`Gemini model hit 503. Falling back to "${models[modelIndex]}"...`);
+          console.warn(`Gemini model "${models[modelIndex - 1]}" failed (${error?.message || error}). Falling back to "${models[modelIndex]}"...`);
           continue;
         }
 

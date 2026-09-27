@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect, useMemo } from 'react';
+import React, { useState, useRef, useEffect, useMemo, lazy, Suspense } from 'react';
 import { User, VocabTable, VocabEntry } from '../types';
 import {
   ChevronLeft,
@@ -18,8 +18,11 @@ import {
   Copy,
   Check
 } from 'lucide-react';
-import LexyAssistant from './LexyAssistant';
 import { loadUnlockedArchiveEntries } from '../services/systemArchiveData';
+
+// LexyAssistant pulls in react-markdown (~100KB) — load it only when needed
+// so the initial bundle stays lean.
+const LexyAssistant = lazy(() => import('./LexyAssistant'));
 
 interface LayoutProps {
   user: User | null;
@@ -231,7 +234,7 @@ const Layout: React.FC<LayoutProps> = ({
             </button>
 
             {showProfileMenu && (
-              <div className={`absolute bottom-full left-4 mb-2 w-56 bg-surfaceHighlight rounded-xl shadow-2xl shadow-black/50 border border-white/10 py-1.5 z-50 animate-in fade-in slide-in-from-bottom-2 duration-200 ${!isSidebarExpanded && 'left-16'}`}>
+              <div className={`absolute bottom-full left-4 mb-2 w-56 bg-surface rounded-xl shadow-2xl shadow-black/50 border border-white/10 py-1.5 z-50 animate-in fade-in slide-in-from-bottom-2 duration-200 ${!isSidebarExpanded && 'left-16'}`}>
                 <div className="px-4 py-3 border-b border-white/5 mb-1">
                   <p className="text-sm font-bold text-text">{user.username}</p>
                   <div className="flex items-center justify-between mt-1.5">
@@ -291,7 +294,7 @@ const Layout: React.FC<LayoutProps> = ({
                     id="global-search"
                     type="text"
                     placeholder="Search knowledge..."
-                    className="block w-full pl-10 pr-4 py-2 rounded-xl text-xs sm:text-sm bg-surfaceHighlight border border-white/5 text-text placeholder-muted focus:bg-surfaceHighlight focus:border-primary/50 focus:ring-0 transition-all font-medium"
+                    className="block w-full pl-10 pr-4 py-2 rounded-xl text-xs sm:text-sm bg-surface border border-white/5 text-text placeholder-muted focus:bg-surface focus:border-primary/50 focus:ring-0 transition-all font-medium"
                     value={searchQuery}
                     onChange={(e) => {
                       setSearchQuery(e.target.value);
@@ -302,7 +305,7 @@ const Layout: React.FC<LayoutProps> = ({
                 </div>
 
                 {showResults && searchQuery.trim().length > 1 && (
-                  <div className="absolute top-full left-0 right-0 mt-2 bg-surfaceHighlight border border-white/10 rounded-xl shadow-2xl shadow-black/50 z-50 max-h-80 overflow-y-auto animate-in fade-in slide-in-from-top-2 duration-200">
+                  <div className="absolute top-full left-0 right-0 mt-2 bg-surface border border-white/10 rounded-xl shadow-2xl shadow-black/50 z-50 max-h-80 overflow-y-auto animate-in fade-in slide-in-from-top-2 duration-200">
                     {results.length > 0 ? (
                       <div className="py-2">
                         <div className="px-4 py-2 text-[10px] font-bold text-muted uppercase tracking-widest border-b border-white/5 mb-1">Matches</div>
@@ -332,7 +335,7 @@ const Layout: React.FC<LayoutProps> = ({
               <div className="relative md:hidden" ref={mobileMenuRef}>
                 <button
                   onClick={() => setShowMobileMenu(true)}
-                  className="p-2 rounded-xl bg-surfaceHighlight border border-white/5 text-muted hover:text-text hover:bg-white/5 transition-colors"
+                  className="p-2 rounded-xl bg-surface border border-white/5 text-muted hover:text-text hover:bg-white/5 transition-colors"
                   aria-label="Open menu"
                 >
                   <Menu className="w-5 h-5" />
@@ -446,6 +449,8 @@ const Layout: React.FC<LayoutProps> = ({
             <div className="flex p-1 bg-surfaceHighlight rounded-2xl border border-white/5 w-full md:shadow-lg md:shadow-black/30">
               <button
                 onClick={onNavigateToHome}
+                aria-label="Home"
+                title="Home"
                 className={`flex items-center justify-center flex-1 py-2.5 rounded-xl transition-all ${
                   currentPath === null || currentPath === 'home'
                     ? 'bg-primary text-white shadow-lg'
@@ -456,6 +461,8 @@ const Layout: React.FC<LayoutProps> = ({
               </button>
               <button
                 onClick={onNavigateToCreate}
+                aria-label="Scratchpad"
+                title="Scratchpad"
                 className={`flex items-center justify-center flex-1 py-2.5 rounded-xl transition-all ${
                   currentPath === 'scratchpad'
                     ? 'bg-primary text-white shadow-lg'
@@ -466,6 +473,8 @@ const Layout: React.FC<LayoutProps> = ({
               </button>
               <button
                 onClick={onNavigateToJournals}
+                aria-label="Journals"
+                title="Journals"
                 className={`flex items-center justify-center flex-1 py-2.5 rounded-xl transition-all ${
                   currentPath === 'journals' || currentPath === 'collections' || currentPath === 'system-archives' || currentPath === 'view'
                     ? 'bg-primary text-white shadow-lg'
@@ -476,6 +485,8 @@ const Layout: React.FC<LayoutProps> = ({
               </button>
               <button
                 onClick={onNavigateToProfile}
+                aria-label="Profile"
+                title="Profile"
                 className={`flex items-center justify-center flex-1 py-2.5 rounded-xl transition-all ${
                   currentPath === 'profile'
                     ? 'bg-primary text-white shadow-lg'
@@ -489,9 +500,11 @@ const Layout: React.FC<LayoutProps> = ({
         </nav>
       )}
 
-      {/* Lexy Assistant Panel */}
+      {/* Lexy Assistant Panel (lazy — keeps react-markdown out of the initial bundle) */}
       {user && !['study', 'context-learning', 'matching'].includes(currentPath || '') && (
-        <LexyAssistant user={user} onSpendTokens={onSpendTokens} onUserUpdate={onUserUpdate} />
+        <Suspense fallback={null}>
+          <LexyAssistant user={user} onSpendTokens={onSpendTokens} onUserUpdate={onUserUpdate} />
+        </Suspense>
       )}
 
       {/* Referral Modal */}

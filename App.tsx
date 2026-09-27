@@ -1,33 +1,52 @@
-import React, { useState, useEffect } from 'react';
-import { Eye, EyeOff } from 'lucide-react';
-import { useUser, useAuth, SignedIn, SignedOut, SignIn, SignUp, AuthenticateWithRedirectCallback } from '@clerk/clerk-react';
+import React, { useState, useEffect, lazy, Suspense } from 'react';
+import { useUser, useAuth, SignedIn, SignedOut, AuthenticateWithRedirectCallback } from '@clerk/clerk-react';
 import { User, VocabTable, GameMode } from './types';
 import { storageService, setAuthenticatedClient } from './services/storageService';
 import { createClerkSupabaseClient, supabase } from './services/supabaseClient';
 import { validSystemTableIds } from './services/systemArchiveData';
 import Layout from './components/Layout';
-import Dashboard from './components/Dashboard';
-import TableCreator from './components/TableCreator';
-import TableView from './components/TableView';
-import PublicView from './components/PublicView';
-import FlashcardView from './components/FlashcardView';
-import ContextLearningView from './components/ContextLearningView';
-import MatchingGameView from './components/MatchingGameView';
-import ProfileView from './components/ProfileView';
 import HomePage from './components/HomePage';
-import CollectionsPage from './components/CollectionsPage';
-import ScratchpadPage from './components/ScratchpadPage';
-import DailyStreakPopup from './components/DailyStreakPopup';
-import SystemArchives from './components/SystemArchives';
-import JournalsPage from './components/JournalsPage';
-import CustomSignUp from './components/CustomSignUp';
-import CustomSignIn from './components/CustomSignIn';
-import CompleteUsername from './components/CompleteUsername';
 import LandingPage from './components/LandingPage';
+import ThemeToggle, { Theme } from './components/ThemeToggle';
 import { geminiService } from './services/geminiService';
-import { Analytics } from '@vercel/analytics/react';
-import { SpeedInsights } from '@vercel/speed-insights/react';
-import { useEnsureProfile } from './hooks/useEnsureProfile';
+
+// Heavy views are code-split so the initial bundle only contains the
+// landing + home shell. Each lazy chunk loads on demand when navigated to.
+// (ProfileView pulls in recharts; LexyAssistant via Layout pulls in
+// react-markdown — both stay out of the first paint this way.)
+const TableCreator = lazy(() => import('./components/TableCreator'));
+const TableView = lazy(() => import('./components/TableView'));
+const PublicView = lazy(() => import('./components/PublicView'));
+const FlashcardView = lazy(() => import('./components/FlashcardView'));
+const ContextLearningView = lazy(() => import('./components/ContextLearningView'));
+const MatchingGameView = lazy(() => import('./components/MatchingGameView'));
+const ProfileView = lazy(() => import('./components/ProfileView'));
+const CollectionsPage = lazy(() => import('./components/CollectionsPage'));
+const ScratchpadPage = lazy(() => import('./components/ScratchpadPage'));
+const DailyStreakPopup = lazy(() => import('./components/DailyStreakPopup'));
+const SystemArchives = lazy(() => import('./components/SystemArchives'));
+const JournalsPage = lazy(() => import('./components/JournalsPage'));
+const CustomSignUp = lazy(() => import('./components/CustomSignUp'));
+const CustomSignIn = lazy(() => import('./components/CustomSignIn'));
+const CompleteUsername = lazy(() => import('./components/CompleteUsername'));
+
+// Vercel telemetry is deferred so it never blocks first paint.
+const Analytics = lazy(() =>
+  import('@vercel/analytics/react').then(m => ({ default: m.Analytics }))
+);
+const SpeedInsights = lazy(() =>
+  import('@vercel/speed-insights/react').then(m => ({ default: m.SpeedInsights }))
+);
+
+/** Lightweight placeholder while a lazy view chunk loads. */
+const ViewFallback: React.FC = () => (
+  <div className="flex items-center justify-center py-20">
+    <div className="flex flex-col items-center space-y-4 text-center">
+      <div className="w-8 h-8 border-2 border-primary border-t-transparent rounded-full animate-spin"></div>
+      <p className="text-[10px] text-muted font-medium tracking-[0.2em] uppercase">Loading</p>
+    </div>
+  </div>
+);
 
 type ViewState = 'home' | 'collections' | 'scratchpad' | 'create' | 'view' | 'public_shared' | 'study' | 'context-learning' | 'matching' | 'profile' | 'system-archives' | 'journals';
 
@@ -47,6 +66,26 @@ const App: React.FC = () => {
   const [toast, setToast] = useState<{ message: string; type: 'success' | 'info' } | null>(null);
   const [streakPopup, setStreakPopup] = useState<{ streak: number; tokens: number } | null>(null);
   const [authMode, setAuthMode] = useState<'sign-in' | 'sign-up' | null>(null);
+
+  // Theme: dark by default (the app's original look), persisted across visits.
+  // Applied to <html> so body + all token-driven UI follows, including the
+  // landing page.
+  const [theme, setTheme] = useState<Theme>(() => {
+    try {
+      return localStorage.getItem('lexicon-theme') === 'light' ? 'light' : 'dark';
+    } catch {
+      return 'dark';
+    }
+  });
+
+  useEffect(() => {
+    document.documentElement.classList.toggle('light', theme === 'light');
+    try {
+      localStorage.setItem('lexicon-theme', theme);
+    } catch {
+      // private-mode storage may throw — theme simply won't persist
+    }
+  }, [theme]);
 
   // Capture referral code from URL on initial mount
   useEffect(() => {
@@ -88,8 +127,10 @@ const App: React.FC = () => {
     return () => window.removeEventListener('lexicon:referral-applied', handleReferralApplied);
   }, [dbUser?.id]);
 
-  // Sync Clerk user with Supabase profiles table
-  useEnsureProfile(isDbReady);
+  // Sync Clerk user with Supabase profiles table.
+  // NOTE: initApp() below already upserts the profile on sign-in, so the
+  // separate useEnsureProfile hook was removed — it duplicated the same
+  // SELECT+INSERT/UPDATE round trips on every load (~600ms wasted).
 
   useEffect(() => {
     if (isDbReady && clerkUser && isClerkLoaded) {
@@ -163,8 +204,10 @@ const App: React.FC = () => {
     setDbUser(prev => (prev ? { ...prev, ...partial } : prev));
   };
 
-  const checkDailyAward = async (currentUser: User) => {
-    const latestUser = await storageService.getUserById(currentUser.id);
+  const checkDailyAward = async (currentUser: User, prefetched: User | null = null) => {
+    // On the init path we already hold a freshly-upserted profile, so skip
+    // the extra round trip. On the visibility-change path fall back to a fetch.
+    const latestUser = prefetched ?? await storageService.getUserById(currentUser.id);
     const baseUser = latestUser || currentUser;
 
     const today = new Date();
@@ -242,20 +285,39 @@ const App: React.FC = () => {
         full_name: clerkUser.fullName || clerkUser.username || undefined,
         avatar_url: clerkUser.imageUrl,
       };
-      
-      const syncedUser = await storageService.upsertProfile(initialProfileData);
-      setDbUser(syncedUser);
-      await fetchUserTables(clerkUser.id);
-      
-      const syncedTokens = await storageService.syncUserTokenBalanceFromTransactions(clerkUser.id);
-      if (syncedTokens !== null) {
-        setDbUser(prev => (prev ? { ...prev, tokens: syncedTokens } : prev));
-      }
 
-      await checkDailyAward(syncedUser);
+      // Profile upsert and table fetch are independent (both keyed by
+      // clerkUser.id) — run them in parallel instead of serially.
+      const [syncedUser, tablesData] = await Promise.all([
+        storageService.upsertProfile(initialProfileData),
+        storageService.getTables(clerkUser.id),
+      ]);
+      setDbUser(syncedUser);
+      // Filter out stale combined system tables that don't correspond to real individual sets
+      const cleaned = tablesData.filter(t => {
+        if (t.id.startsWith('system-') && !validSystemTableIds.has(t.id)) {
+          storageService.deleteTable(t.id);
+          return false;
+        }
+        return true;
+      });
+      setTables(cleaned);
+      // First paint is unblocked here — token balance + daily award resolve
+      // in the background without holding up interactivity.
+      setIsInitializing(false);
+
+      try {
+        const syncedTokens = await storageService.syncUserTokenBalanceFromTransactions(clerkUser.id);
+        if (syncedTokens !== null) {
+          setDbUser(prev => (prev ? { ...prev, tokens: syncedTokens } : prev));
+        }
+
+        await checkDailyAward(syncedUser, syncedUser);
+      } catch (e) {
+        console.error('Lexicon background sync failed:', e);
+      }
     } catch (e) {
       console.error('Lexicon Initialization Failed:', e);
-    } finally {
       setIsInitializing(false);
     }
   };
@@ -463,9 +525,11 @@ const App: React.FC = () => {
         </div>
 
         <div className="w-full max-w-[400px] mx-auto animate-in fade-in zoom-in-95 duration-700 delay-300">
-          <CompleteUsername />
+          <Suspense fallback={<ViewFallback />}>
+            <CompleteUsername />
+          </Suspense>
           <p className="text-center mt-3">
-            <button onClick={() => { window.location.href = '/'; }} className="text-[10px] font-bold uppercase tracking-widest text-muted hover:text-white transition-colors">
+            <button onClick={() => { window.location.href = '/'; }} className="text-[10px] font-bold uppercase tracking-widest text-muted hover:text-text transition-colors">
               ← Back to Home
             </button>
           </p>
@@ -487,17 +551,20 @@ const App: React.FC = () => {
 
   // Handle Shared View for non-authenticated or authenticated
   if (view === 'public_shared' && activeTable) {
+    const sharedTable = activeTable;
     return (
       <div className="bg-gray-50 min-h-screen">
         <div className="max-w-5xl mx-auto pt-6 px-6 flex justify-between items-center print:hidden">
-           <button 
-             onClick={() => window.location.href = window.location.origin}
-             className="text-xs font-bold uppercase tracking-widest text-gray-400 hover:text-black"
-           >
-             &larr; Create My Own Journal
-           </button>
+            <button 
+              onClick={() => window.location.href = window.location.origin}
+              className="text-xs font-bold uppercase tracking-widest text-gray-400 hover:text-black"
+            >
+              &larr; Create My Own Journal
+            </button>
         </div>
-        <PublicView table={activeTable} />
+        <Suspense fallback={<ViewFallback />}>
+          <PublicView table={sharedTable} />
+        </Suspense>
       </div>
     );
   }
@@ -534,45 +601,58 @@ const App: React.FC = () => {
             )}
 
             {view === 'journals' && (
-              <JournalsPage
-                onNavigateToCollections={() => setView('collections')}
-                onNavigateToArchives={() => setView('system-archives')}
-              />
+              <Suspense fallback={<ViewFallback />}>
+                <JournalsPage
+                  onNavigateToCollections={() => setView('collections')}
+                  onNavigateToArchives={() => setView('system-archives')}
+                />
+              </Suspense>
             )}
 
             {view === 'collections' && (
-              <CollectionsPage 
-                user={dbUser}
-                tables={tables} 
-                onSelectTable={handleNavigateToTable}
-                onCreateNew={() => setView('create')}
-                onBack={() => setView('journals')}
-              />
+              <Suspense fallback={<ViewFallback />}>
+                <CollectionsPage 
+                  user={dbUser}
+                  tables={tables} 
+                  onSelectTable={handleNavigateToTable}
+                  onCreateNew={() => setView('create')}
+                  onBack={() => setView('journals')}
+                />
+              </Suspense>
             )}
 
             {view === 'profile' && (
-              <ProfileView 
-                user={dbUser}
-                tables={tables}
-                onBack={() => setView('home')}
-                onUserUpdate={mergeUser}
-              />
+              <Suspense fallback={<ViewFallback />}>
+                <ProfileView 
+                  user={dbUser}
+                  tables={tables}
+                  onBack={() => setView('home')}
+                  onUserUpdate={mergeUser}
+                />
+              </Suspense>
             )}
 
-            {view === 'scratchpad' && <ScratchpadPage user={dbUser} />}
+            {view === 'scratchpad' && (
+              <Suspense fallback={<ViewFallback />}>
+                <ScratchpadPage user={dbUser} />
+              </Suspense>
+            )}
 
             {view === 'create' && (
-              <TableCreator 
-                user={dbUser} 
-                onSave={handleSaveTable}
-                onCancel={() => setView('collections')}
-                isSaving={isFetching}
-                onUserUpdate={mergeUser}
-              />
+              <Suspense fallback={<ViewFallback />}>
+                <TableCreator 
+                  user={dbUser} 
+                  onSave={handleSaveTable}
+                  onCancel={() => setView('collections')}
+                  isSaving={isFetching}
+                  onUserUpdate={mergeUser}
+                />
+              </Suspense>
             )}
 
             {view === 'view' && activeTable && (
-              <TableView 
+              <Suspense fallback={<ViewFallback />}>
+                <TableView 
                 user={dbUser}
                 table={activeTable}
                 onBack={activeTable.userId === 'system' || activeTable.id.startsWith('system-') ? () => setView('system-archives') : () => setView('collections')}
@@ -589,11 +669,13 @@ const App: React.FC = () => {
                 onUpdateTable={handleUpdateTable}
                 onUserUpdate={mergeUser}
                 isFetching={isFetching}
-              />
+                />
+              </Suspense>
             )}
 
             {view === 'study' && activeTable && (
-              <FlashcardView 
+              <Suspense fallback={<ViewFallback />}>
+                <FlashcardView 
                 user={dbUser}
                 table={activeTable}
                 excludeMastered={studyExcludeMastered}
@@ -606,44 +688,53 @@ const App: React.FC = () => {
                   handleUpdateEntryProgress(entryId, delta);
                 }}
                 onAwardTokens={(amount, reason) => addTokens(amount, reason)}
-              />
+                />
+              </Suspense>
             )}
 
             {view === 'context-learning' && activeTable && activeTable.contextPassage && (
-              <ContextLearningView
-                table={activeTable}
-                onBack={() => setView('view')}
-              />
+              <Suspense fallback={<ViewFallback />}>
+                <ContextLearningView
+                  table={activeTable}
+                  onBack={() => setView('view')}
+                />
+              </Suspense>
             )}
 
             {view === 'matching' && activeTable && (
-              <MatchingGameView
-                table={activeTable}
-                initialMode={matchingGameMode}
-                onBack={() => setView('view')}
-                onUpdateTable={handleUpdateTable}
-                onUpdateProgress={handleUpdateEntryProgress}
-                onAwardTokens={(amount, reason) => addTokens(amount, reason)}
-              />
+              <Suspense fallback={<ViewFallback />}>
+                <MatchingGameView
+                  table={activeTable}
+                  initialMode={matchingGameMode}
+                  onBack={() => setView('view')}
+                  onUpdateTable={handleUpdateTable}
+                  onUpdateProgress={handleUpdateEntryProgress}
+                  onAwardTokens={(amount, reason) => addTokens(amount, reason)}
+                />
+              </Suspense>
             )}
             
             {view === 'system-archives' && (
-              <SystemArchives 
+              <Suspense fallback={<ViewFallback />}>
+                <SystemArchives 
                 user={dbUser} 
                 tables={tables}
                 onNavigateToSystemTable={handleNavigateToTable} 
                 onSpendTokens={spendTokens}
                 onUserUpdate={mergeUser}
                 onBack={() => setView('journals')}
-              />
+                />
+              </Suspense>
             )}
 
             {streakPopup && (
-              <DailyStreakPopup
-                streak={streakPopup.streak}
-                tokensAwarded={streakPopup.tokens}
-                onClose={() => setStreakPopup(null)}
-              />
+              <Suspense fallback={null}>
+                <DailyStreakPopup
+                  streak={streakPopup.streak}
+                  tokensAwarded={streakPopup.tokens}
+                  onClose={() => setStreakPopup(null)}
+                />
+              </Suspense>
             )}
 
             {toast && (
@@ -662,7 +753,14 @@ const App: React.FC = () => {
                  SYNCING...
                </div>
             )}
-            <Analytics />
+            <Suspense fallback={null}>
+              <Analytics />
+            </Suspense>
+            <ThemeToggle
+              theme={theme}
+              onToggle={() => setTheme(t => (t === 'dark' ? 'light' : 'dark'))}
+              position={view === 'study' ? 'bottom-right' : 'top-right'}
+            />
           </Layout>
         )}
       </SignedIn>
@@ -685,11 +783,13 @@ const App: React.FC = () => {
             </div>
 
             <div className="w-full max-w-[400px] mx-auto animate-in fade-in zoom-in-95 duration-700 delay-300">
-              {authMode === 'sign-in' ? (
-                <CustomSignIn onSwitchToSignUp={() => setAuthMode('sign-up')} />
-              ) : (
-                <CustomSignUp onSwitchToSignIn={() => setAuthMode('sign-in')} />
-              )}
+              <Suspense fallback={<ViewFallback />}>
+                {authMode === 'sign-in' ? (
+                  <CustomSignIn onSwitchToSignUp={() => setAuthMode('sign-up')} />
+                ) : (
+                  <CustomSignUp onSwitchToSignIn={() => setAuthMode('sign-in')} />
+                )}
+              </Suspense>
               <p className="text-center text-muted text-xs mt-4">
                 {authMode === 'sign-in' ? (
                   <>Don't have an account?{' '}
@@ -702,15 +802,18 @@ const App: React.FC = () => {
                 )}
               </p>
               <p className="text-center mt-3">
-                <button onClick={() => setAuthMode(null)} className="text-[10px] font-bold uppercase tracking-widest text-muted hover:text-white transition-colors">
+                <button onClick={() => setAuthMode(null)} className="text-[10px] font-bold uppercase tracking-widest text-muted hover:text-text transition-colors">
                   ← Back to Home
                 </button>
               </p>
             </div>
           </div>
         )}
+        <ThemeToggle theme={theme} onToggle={() => setTheme(t => (t === 'dark' ? 'light' : 'dark'))} />
       </SignedOut>
-      <SpeedInsights />
+      <Suspense fallback={null}>
+        <SpeedInsights />
+      </Suspense>
     </>
   );
 };

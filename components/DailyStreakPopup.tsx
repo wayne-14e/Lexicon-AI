@@ -45,11 +45,11 @@ const DailyStreakPopup: React.FC<DailyStreakPopupProps> = ({ streak, tokensAward
         onClick={(e) => e.stopPropagation()}
       >
         {/* Glow effect behind card */}
-        <div className="absolute -inset-4 bg-orange-500/20 rounded-[2rem] blur-2xl animate-pulse" />
+        <div className="absolute -inset-4 bg-amber-500/20 rounded-[2rem] blur-2xl animate-pulse" />
 
         <div className="relative bg-surface rounded-2xl border border-white/10 shadow-2xl shadow-black/50 overflow-hidden">
           {/* Top decorative gradient */}
-          <div className="h-1.5 bg-orange-500" />
+          <div className="h-1.5 bg-amber-500" />
 
           {/* Close button */}
           <button
@@ -63,20 +63,20 @@ const DailyStreakPopup: React.FC<DailyStreakPopupProps> = ({ streak, tokensAward
           <div className="px-8 pt-8 pb-6 flex flex-col items-center text-center">
             {/* Flame icon with ring animation */}
             <div className="relative mb-5">
-              <div className="absolute inset-0 scale-[2] bg-orange-500/10 rounded-full animate-ping" style={{ animationDuration: '2s' }} />
-              <div className="absolute inset-0 scale-150 bg-orange-500/5 rounded-full" />
-              <div className="relative w-20 h-20 rounded-full bg-orange-500/10 border border-orange-500/30 flex items-center justify-center">
-                <Flame className="w-10 h-10 text-orange-500 drop-shadow-[0_0_12px_rgba(249,115,22,0.6)]" />
+              <div className="absolute inset-0 scale-[2] bg-amber-500/10 rounded-full animate-ping" style={{ animationDuration: '2s' }} />
+              <div className="absolute inset-0 scale-150 bg-amber-500/5 rounded-full" />
+              <div className="relative w-20 h-20 rounded-full bg-amber-500/10 border border-amber-500/30 flex items-center justify-center">
+                <Flame className="w-10 h-10 text-amber-500 drop-shadow-[0_0_12px_rgba(245,158,11,0.6)]" />
               </div>
             </div>
 
             {/* Streak count */}
             <div className="mb-1">
-              <span className="text-6xl font-black font-display text-orange-500 leading-none">
+              <span className="text-6xl font-black font-display text-amber-500 leading-none">
                 {streak}
               </span>
             </div>
-            <p className="text-[11px] font-bold uppercase tracking-[0.25em] text-orange-500/80 mb-5">
+            <p className="text-[11px] font-bold uppercase tracking-[0.25em] text-amber-500/80 mb-5">
               {streak === 1 ? 'Day Streak Started' : 'Day Streak'}
             </p>
 
@@ -102,7 +102,7 @@ const DailyStreakPopup: React.FC<DailyStreakPopupProps> = ({ streak, tokensAward
             {/* Continue button */}
             <button
               onClick={handleClose}
-              className="w-full py-3 rounded-xl bg-orange-500 text-white text-xs font-bold uppercase tracking-[0.2em] hover:bg-orange-600 transition-all shadow-lg shadow-orange-500/20 hover:shadow-orange-500/30 active:scale-[0.98]"
+              className="w-full py-3 rounded-xl bg-amber-500 text-amber-950 text-xs font-bold uppercase tracking-[0.2em] hover:bg-amber-400 transition-all shadow-lg shadow-amber-500/20 hover:shadow-amber-500/30 active:scale-[0.98]"
             >
               Continue Learning
             </button>

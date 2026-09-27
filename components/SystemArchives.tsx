@@ -295,7 +295,7 @@ const SystemArchives: React.FC<SystemArchivesProps> = ({ user, tables, onNavigat
       </div>
 
       {/* Toggle */}
-      <div className="flex p-1 bg-surfaceHighlight rounded-2xl mb-8 w-fit border border-white/5 mx-auto md:mx-0">
+      <div className="flex p-1 bg-surface rounded-2xl mb-8 w-fit border border-white/5 mx-auto md:mx-0">
         <button
           onClick={() => { setActiveTab('IELTS'); setSelectedSatCategory(null); }}
           className={`px-8 py-3 rounded-xl text-sm font-bold tracking-widest uppercase transition-all ${
@@ -331,7 +331,7 @@ const SystemArchives: React.FC<SystemArchivesProps> = ({ user, tables, onNavigat
                 <div 
                   key={category} 
                   onClick={unlocked ? () => handleIeltsClick(category) : undefined}
-                  className={`group flex flex-col p-6 rounded-3xl bg-surfaceHighlight border border-white/5 transition-all relative overflow-hidden ${unlocked ? 'hover:border-primary/50 cursor-pointer' : 'opacity-70 hover:opacity-100'}`}
+                  className={`group flex flex-col p-6 rounded-3xl bg-surface border border-white/5 transition-all relative overflow-hidden ${unlocked ? 'hover:border-primary/50 cursor-pointer' : 'opacity-70 hover:opacity-100'}`}
                 >
                   {unlocked && <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>}
                   <h3 className={`text-xl font-bold font-display transition-colors relative z-10 mb-2 ${unlocked ? 'text-text group-hover:text-primary' : 'text-text'}`}>{category}</h3>
@@ -394,7 +394,7 @@ const SystemArchives: React.FC<SystemArchivesProps> = ({ user, tables, onNavigat
                 <div 
                   key={category} 
                   onClick={unlocked ? () => setSelectedSatCategory(category) : undefined}
-                  className={`group flex flex-col p-6 rounded-3xl bg-surfaceHighlight border border-white/5 transition-all relative overflow-hidden ${unlocked ? 'hover:border-primary/50 cursor-pointer' : 'opacity-70 hover:opacity-100'}`}
+                  className={`group flex flex-col p-6 rounded-3xl bg-surface border border-white/5 transition-all relative overflow-hidden ${unlocked ? 'hover:border-primary/50 cursor-pointer' : 'opacity-70 hover:opacity-100'}`}
                 >
                   {unlocked && <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>}
                   <h3 className={`text-xl font-bold font-display transition-colors relative z-10 mb-2 ${unlocked ? 'text-text group-hover:text-primary' : 'text-text'}`}>{category}</h3>
@@ -480,7 +480,7 @@ const SystemArchives: React.FC<SystemArchivesProps> = ({ user, tables, onNavigat
                 <div 
                   key={set.id} 
                   onClick={() => handleSatSetClick(selectedSatCategory, set.id, set.title)}
-                  className="group flex flex-col justify-center items-start p-5 rounded-2xl bg-surfaceHighlight border border-white/5 hover:border-primary/50 transition-all cursor-pointer relative overflow-hidden"
+                  className="group flex flex-col justify-center items-start p-5 rounded-2xl bg-surface border border-white/5 hover:border-primary/50 transition-all cursor-pointer relative overflow-hidden"
                 >
                   <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
                   <h4 className="text-lg font-bold font-display text-text group-hover:text-primary transition-colors z-10">{set.title}</h4>
