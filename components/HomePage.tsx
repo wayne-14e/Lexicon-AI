@@ -62,7 +62,7 @@ const HomePage: React.FC<HomePageProps> = ({
           <div className="flex items-center justify-center space-x-2 sm:space-x-3 mb-6 sm:mb-8">
             <span className="text-xs sm:text-sm font-sans font-bold italic text-muted">{wordOfTheDay.partOfSpeech}</span>
             <span className="w-1 h-1 bg-muted rounded-full"></span>
-            <span className="text-[10px] sm:text-sm text-muted uppercase tracking-widest font-bold opacity-60">{wordOfTheDay.tableName}</span>
+            <span className="text-[10px] sm:text-sm text-muted uppercase tracking-widest font-bold">{wordOfTheDay.tableName}</span>
           </div>
 
           <div className="max-w-xl mx-auto space-y-4 sm:space-y-6">

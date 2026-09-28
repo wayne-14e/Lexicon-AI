@@ -39,12 +39,22 @@ export default defineConfig(({ mode }) => {
       cssCodeSplit: true,
       chunkSizeWarningLimit: 600,
       assetsInlineLimit: 4096,
-      // react-markdown (~120KB) is only needed by the lazily-mounted
-      // LexyAssistant panel — never let it compete with LCP on first paint.
+      // Only the entry + React runtime are needed for first paint.
+      // Clerk (~330KB remote + 80KB vendor), Supabase (~190KB), genai
+      // (~260KB), charts (~350KB) and markdown (~115KB) all load on demand
+      // instead of competing with LCP on the critical path. (Lighthouse
+      // flagged ~215KiB unused JS / 450ms from exactly these chunks.)
       modulePreload: {
-        polyfill: true,
+        polyfill: false,
         resolveDependencies: (filename, deps) =>
-          deps.filter(dep => !dep.includes('vendor-markdown')),
+          deps.filter(
+            (dep) =>
+              !dep.includes('vendor-markdown') &&
+              !dep.includes('vendor-clerk') &&
+              !dep.includes('vendor-supabase') &&
+              !dep.includes('vendor-genai') &&
+              !dep.includes('vendor-charts'),
+          ),
       },
       rollupOptions: {
         output: {

@@ -11,7 +11,11 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preconnect" href="https://fleet-lizard-96.clerk.accounts.dev">
   <link rel="preconnect" href="https://uthwpmxgwjcsoeabugbi.supabase.co" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <!-- Google Fonts loads async (media=print swap) so the css2 request never
+       blocks first paint; body falls back to system-ui until Outfit/Inter arrive. -->
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&family=Inter:wght@400;500;600&display=swap">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"></noscript>
   <script>
     // Apply the saved theme before first paint to avoid a dark flash.
     try { if (localStorage.getItem('lexicon-theme') === 'light') { document.documentElement.classList.add('light'); } } catch (e) {}

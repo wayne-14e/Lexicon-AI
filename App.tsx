@@ -30,13 +30,53 @@ const CustomSignUp = lazy(() => import('./components/CustomSignUp'));
 const CustomSignIn = lazy(() => import('./components/CustomSignIn'));
 const CompleteUsername = lazy(() => import('./components/CompleteUsername'));
 
-// Vercel telemetry is deferred so it never blocks first paint.
+// Vercel telemetry is deferred until the browser is idle (well after LCP)
+// so its scripts never compete with first paint or inflate TBT.
 const Analytics = lazy(() =>
   import('@vercel/analytics/react').then(m => ({ default: m.Analytics }))
 );
 const SpeedInsights = lazy(() =>
   import('@vercel/speed-insights/react').then(m => ({ default: m.SpeedInsights }))
 );
+
+/** Mounts Vercel telemetry only once the page is idle. */
+const DeferredTelemetry: React.FC = () => {
+  const [ready, setReady] = useState(false);
+  useEffect(() => {
+    let idleId: number | undefined;
+    let timer: number | undefined;
+    const markReady = () => setReady(true);
+    const schedule = () => {
+      const ric = (window as unknown as { requestIdleCallback?: (cb: () => void, opts?: { timeout: number }) => number }).requestIdleCallback;
+      if (typeof ric === 'function') {
+        idleId = ric.call(window, markReady, { timeout: 4000 });
+      } else {
+        timer = window.setTimeout(markReady, 3000);
+      }
+    };
+    if (document.readyState === 'complete') {
+      schedule();
+    } else {
+      window.addEventListener('load', schedule, { once: true });
+      // Fallback in case `load` already fired between check and listen.
+      timer = window.setTimeout(markReady, 5000);
+    }
+    return () => {
+      window.removeEventListener('load', schedule);
+      if (idleId !== undefined && 'cancelIdleCallback' in window) {
+        window.cancelIdleCallback(idleId);
+      }
+      if (timer !== undefined) window.clearTimeout(timer);
+    };
+  }, []);
+  if (!ready) return null;
+  return (
+    <Suspense fallback={null}>
+      <Analytics />
+      <SpeedInsights />
+    </Suspense>
+  );
+};
 
 /** Lightweight placeholder while a lazy view chunk loads. */
 const ViewFallback: React.FC = () => (
@@ -754,7 +794,7 @@ const App: React.FC = () => {
                </div>
             )}
             <Suspense fallback={null}>
-              <Analytics />
+              <DeferredTelemetry />
             </Suspense>
             <ThemeToggle
               theme={theme}
@@ -811,9 +851,7 @@ const App: React.FC = () => {
         )}
         <ThemeToggle theme={theme} onToggle={() => setTheme(t => (t === 'dark' ? 'light' : 'dark'))} />
       </SignedOut>
-      <Suspense fallback={null}>
-        <SpeedInsights />
-      </Suspense>
+      <DeferredTelemetry />
     </>
   );
 };

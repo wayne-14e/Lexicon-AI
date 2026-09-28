@@ -166,6 +166,8 @@ const LexyAssistant: React.FC<LexyAssistantProps> = ({ user, onSpendTokens, onUs
           </div>
           <button 
             onClick={() => setIsOpen(false)}
+            aria-label="Close Lexy assistant"
+            title="Close"
             className="p-2 text-muted hover:text-text hover:bg-white/5 rounded-full transition-colors"
           >
             <X className="w-5 h-5" />
@@ -232,6 +234,8 @@ const LexyAssistant: React.FC<LexyAssistantProps> = ({ user, onSpendTokens, onUs
                 <button 
                   type="button"
                   onClick={() => setShowTokenWarning(false)} 
+                  aria-label="Dismiss token warning"
+                  title="Dismiss"
                   className="p-1 -mr-1 -mt-1 text-amber-500/70 hover:text-amber-500 hover:bg-amber-500/10 rounded-full transition-colors shrink-0"
                 >
                   <X className="w-3 h-3" />
@@ -262,6 +266,8 @@ const LexyAssistant: React.FC<LexyAssistantProps> = ({ user, onSpendTokens, onUs
             <button
               type="submit"
               disabled={!input.trim() || isLoading}
+              aria-label="Send message"
+              title="Send"
               className="absolute right-2 top-1/2 -translate-y-1/2 p-2 text-purple-500 hover:text-purple-500/80 disabled:opacity-50 disabled:hover:text-purple-500 transition-colors"
             >
               <Send className="w-4 h-4" />
