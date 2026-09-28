@@ -1,14 +1,19 @@
 import React, { useState, useEffect, lazy, Suspense } from 'react';
 import { useUser, useAuth, SignedIn, SignedOut, AuthenticateWithRedirectCallback } from '@clerk/clerk-react';
 import { User, VocabTable, GameMode } from './types';
-import { storageService, setAuthenticatedClient } from './services/storageService';
-import { createClerkSupabaseClient, supabase } from './services/supabaseClient';
 import { validSystemTableIds } from './services/systemArchiveData';
-import Layout from './components/Layout';
-import HomePage from './components/HomePage';
-import LandingPage from './components/LandingPage';
 import ThemeToggle, { Theme } from './components/ThemeToggle';
-import { geminiService } from './services/geminiService';
+
+// NOTE: storageService / supabaseClient / geminiService are intentionally NOT
+// statically imported here. They pull in @supabase/supabase-js (~187KB) which
+// Lighthouse flagged as ~42KB unused JS on first paint and which sat in the
+// critical request chain (entry -> vendor-supabase). Every use below goes
+// through `await import(...)` so those bytes load on demand after first paint.
+// Layout / HomePage / LandingPage are lazy for the same reason: the entry was
+// ~98KB including the full landing + sidebar shell + all lucide icons.
+const Layout = lazy(() => import('./components/Layout'));
+const HomePage = lazy(() => import('./components/HomePage'));
+const LandingPage = lazy(() => import('./components/LandingPage'));
 
 // Heavy views are code-split so the initial bundle only contains the
 // landing + home shell. Each lazy chunk loads on demand when navigated to.
@@ -155,6 +160,7 @@ const App: React.FC = () => {
     const handleReferralApplied = async () => {
       if (dbUser?.id) {
         try {
+          const { storageService } = await import('./services/storageService');
           const latest = await storageService.getUserById(dbUser.id);
           if (latest) setDbUser(latest);
         } catch (err) {
@@ -183,14 +189,42 @@ const App: React.FC = () => {
   }, [isDbReady, clerkUser, isClerkLoaded, isAuthLoaded, isSignedIn]);
 
   useEffect(() => {
+    let cancelled = false;
     if (isSignedIn && getToken) {
-      const authClient = createClerkSupabaseClient(getToken);
-      setAuthenticatedClient(authClient);
-      setIsDbReady(true);
+      // Dynamic imports keep vendor-supabase out of the entry chunk's
+      // critical request chain (Lighthouse longest-chain offender).
+      import('./services/storageService')
+        .then(({ setAuthenticatedClient }) =>
+          import('./services/supabaseClient').then(({ createClerkSupabaseClient }) => ({
+            setAuthenticatedClient,
+            createClerkSupabaseClient,
+          })),
+        )
+        .then(({ setAuthenticatedClient, createClerkSupabaseClient }) => {
+          if (cancelled) return;
+          const authClient = createClerkSupabaseClient(getToken);
+          setAuthenticatedClient(authClient);
+          setIsDbReady(true);
+        })
+        .catch((e) => console.error('Failed to init authenticated client:', e));
     } else if (!isSignedIn && isAuthLoaded) {
-      setAuthenticatedClient(supabase);
-      setIsDbReady(false);
+      import('./services/storageService')
+        .then(({ setAuthenticatedClient }) =>
+          import('./services/supabaseClient').then(({ supabase }) => ({
+            setAuthenticatedClient,
+            supabase,
+          })),
+        )
+        .then(({ setAuthenticatedClient, supabase }) => {
+          if (cancelled) return;
+          setAuthenticatedClient(supabase);
+          setIsDbReady(false);
+        })
+        .catch((e) => console.error('Failed to reset supabase client:', e));
     }
+    return () => {
+      cancelled = true;
+    };
   }, [isSignedIn, getToken, isAuthLoaded]);
 
   const showToast = (message: string, type: 'success' | 'info' = 'success') => {
@@ -203,6 +237,7 @@ const App: React.FC = () => {
     if (!uid) return null;
 
     try {
+      const { storageService } = await import('./services/storageService');
       const newTokens = await storageService.adjustUserTokens(uid, amount, reason);
       if (newTokens === null) return null;
 
@@ -224,6 +259,7 @@ const App: React.FC = () => {
   const spendTokens = async (amount: number, reason?: string): Promise<boolean> => {
     if (!dbUser) return false;
 
+    const { storageService } = await import('./services/storageService');
     const latestUser = await storageService.getUserById(dbUser.id);
     const availableTokens = latestUser?.tokens ?? dbUser.tokens ?? 0;
     setDbUser(prev => (prev ? { ...prev, tokens: availableTokens } : prev));
@@ -247,6 +283,7 @@ const App: React.FC = () => {
   const checkDailyAward = async (currentUser: User, prefetched: User | null = null) => {
     // On the init path we already hold a freshly-upserted profile, so skip
     // the extra round trip. On the visibility-change path fall back to a fetch.
+    const { storageService } = await import('./services/storageService');
     const latestUser = prefetched ?? await storageService.getUserById(currentUser.id);
     const baseUser = latestUser || currentUser;
 
@@ -297,6 +334,7 @@ const App: React.FC = () => {
   const fetchUserTables = async (userId: string) => {
     setIsFetching(true);
     try {
+      const { storageService } = await import('./services/storageService');
       const data = await storageService.getTables(userId);
       // Filter out stale combined system tables that don't correspond to real individual sets
       const cleaned = data.filter(t => {
@@ -328,6 +366,9 @@ const App: React.FC = () => {
 
       // Profile upsert and table fetch are independent (both keyed by
       // clerkUser.id) — run them in parallel instead of serially.
+      // storageService is dynamically imported so vendor-supabase never
+      // blocks first paint.
+      const { storageService } = await import('./services/storageService');
       const [syncedUser, tablesData] = await Promise.all([
         storageService.upsertProfile(initialProfileData),
         storageService.getTables(clerkUser.id),
@@ -448,6 +489,7 @@ const App: React.FC = () => {
   const handleSaveTable = async (table: VocabTable) => {
     setIsFetching(true);
     try {
+      const { storageService } = await import('./services/storageService');
       await storageService.saveTable(table);
       await fetchUserTables(dbUser!.id);
       setActiveTable(table);
@@ -462,6 +504,7 @@ const App: React.FC = () => {
   const handleDeleteTable = async (id: string) => {
     setIsFetching(true);
     try {
+      const { storageService } = await import('./services/storageService');
       await storageService.deleteTable(id);
       await fetchUserTables(dbUser!.id);
       setActiveTable(null);
@@ -482,6 +525,7 @@ const App: React.FC = () => {
       }
       return [...prev, updatedTable];
     });
+    const { storageService } = await import('./services/storageService');
     await storageService.saveTable(updatedTable);
   };
 
@@ -512,6 +556,7 @@ const App: React.FC = () => {
       return;
     }
     if (dbUser) {
+      const { storageService } = await import('./services/storageService');
       const newUsage = await storageService.incrementLimitUsage(dbUser, 'narratives_used');
       if (newUsage === null) {
         showToast("Daily limit reached! You can only generate 2 narratives per day.", 'info');
@@ -521,6 +566,10 @@ const App: React.FC = () => {
     }
     setIsFetching(true);
     try {
+      const [{ storageService }, { geminiService }] = await Promise.all([
+        import('./services/storageService'),
+        import('./services/geminiService'),
+      ]);
       const words = activeTable.entries.map(e => e.word);
       const passage = await geminiService.generateContextPassage(words, activeTable.title);
       const updatedTable = { ...activeTable, contextPassage: passage };
@@ -578,7 +627,36 @@ const App: React.FC = () => {
     );
   }
 
-  if (!isClerkLoaded || isInitializing) {
+  // While Clerk's remote JS is still loading, paint the public landing
+  // immediately instead of gating LCP on third-party auth JS (~90KB remote
+  // + ~330ms long task). Landing needs no auth state — it only flips
+  // `authMode`, and the sign-in/up forms mount (with their own loading
+  // states) once Clerk is ready. Signed-in users transition to the app
+  // shell as soon as `isClerkLoaded` flips true.
+  if (!isClerkLoaded) {
+    return (
+      <>
+        {authMode === null ? (
+          <Suspense fallback={<ViewFallback />}>
+            <LandingPage
+              onSignIn={() => setAuthMode('sign-in')}
+              onSignUp={() => setAuthMode('sign-up')}
+            />
+          </Suspense>
+        ) : (
+          <div className="min-h-screen flex items-center justify-center bg-background p-6">
+            <div className="flex flex-col items-center space-y-6 text-center">
+              <div className="w-10 h-10 border-2 border-primary border-t-transparent rounded-full animate-spin"></div>
+              <p className="text-[10px] text-muted font-medium tracking-[0.2em] uppercase">Loading Sign In</p>
+            </div>
+          </div>
+        )}
+        <ThemeToggle theme={theme} onToggle={() => setTheme(t => (t === 'dark' ? 'light' : 'dark'))} />
+      </>
+    );
+  }
+
+  if (isInitializing) {
     return (
       <div className="min-h-screen flex items-center justify-center bg-background p-6">
         <div className="flex flex-col items-center space-y-6 text-center">
@@ -613,6 +691,7 @@ const App: React.FC = () => {
     <>
       <SignedIn>
         {dbUser && (
+          <Suspense fallback={<ViewFallback />}>
           <Layout 
             user={dbUser} 
             tables={tables}
@@ -631,6 +710,7 @@ const App: React.FC = () => {
             onUserUpdate={mergeUser}
           >
             {view === 'home' && (
+              <Suspense fallback={<ViewFallback />}>
               <HomePage 
                 user={dbUser}
                 tables={tables}
@@ -638,6 +718,7 @@ const App: React.FC = () => {
                 onNavigateToCreate={() => setView('collections')}
                 onNavigateToArchives={() => setView('system-archives')}
               />
+              </Suspense>
             )}
 
             {view === 'journals' && (
@@ -802,14 +883,17 @@ const App: React.FC = () => {
               position={view === 'study' ? 'bottom-right' : 'top-right'}
             />
           </Layout>
+          </Suspense>
         )}
       </SignedIn>
       <SignedOut>
         {authMode === null ? (
+          <Suspense fallback={<ViewFallback />}>
           <LandingPage
             onSignIn={() => setAuthMode('sign-in')}
             onSignUp={() => setAuthMode('sign-up')}
           />
+          </Suspense>
         ) : (
           <div className="min-h-screen flex flex-col items-center justify-center bg-background p-6">
             <div className="flex flex-col items-center mb-8 animate-in fade-in slide-in-from-top-4 duration-1000">

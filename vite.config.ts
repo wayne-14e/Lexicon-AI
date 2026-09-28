@@ -41,9 +41,11 @@ export default defineConfig(({ mode }) => {
       assetsInlineLimit: 4096,
       // Only the entry + React runtime are needed for first paint.
       // Clerk (~330KB remote + 80KB vendor), Supabase (~190KB), genai
-      // (~260KB), charts (~350KB) and markdown (~115KB) all load on demand
-      // instead of competing with LCP on the critical path. (Lighthouse
-      // flagged ~215KiB unused JS / 450ms from exactly these chunks.)
+      // (~260KB), charts (~350KB), markdown (~115KB) and lucide icons all
+      // load on demand instead of competing with LCP on the critical path.
+      // (Lighthouse flagged ~250KiB unused JS / ~900ms LCP from exactly
+      // these chunks, with the entry -> vendor-supabase edge as the longest
+      // critical chain.)
       modulePreload: {
         polyfill: false,
         resolveDependencies: (filename, deps) =>
@@ -53,7 +55,8 @@ export default defineConfig(({ mode }) => {
               !dep.includes('vendor-clerk') &&
               !dep.includes('vendor-supabase') &&
               !dep.includes('vendor-genai') &&
-              !dep.includes('vendor-charts'),
+              !dep.includes('vendor-charts') &&
+              !dep.includes('vendor-icons'),
           ),
       },
       rollupOptions: {
@@ -77,6 +80,10 @@ export default defineConfig(({ mode }) => {
             }
             // recharts is only imported by the lazy ProfileView.
             if (id.includes('node_modules/recharts/')) return 'vendor-charts';
+            // lucide-react ships hundreds of icons; every view imports a
+            // handful. A shared chunk keeps them out of the entry and lets
+            // lazy views share one cached file instead of duplicating icons.
+            if (id.includes('node_modules/lucide-react/')) return 'vendor-icons';
             // react-markdown family is only imported by lazy LexyAssistant.
             if (
               id.includes('node_modules/react-markdown/') ||

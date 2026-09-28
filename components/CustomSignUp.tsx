@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { Eye, EyeOff } from 'lucide-react';
 import { useSignUp } from '@clerk/clerk-react';
-import { storageService } from '../services/storageService';
 
 interface CustomSignUpProps {
   onSwitchToSignIn: () => void;
@@ -44,7 +43,9 @@ const CustomSignUp: React.FC<CustomSignUpProps> = ({ onSwitchToSignIn }) => {
         return;
       }
       
-      // Query our DB directly
+      // Query our DB directly (dynamic import keeps vendor-supabase out of
+      // the sign-up chunk until this check actually runs).
+      const { storageService } = await import('../services/storageService');
       const existingProfile = await storageService.findProfileByName(trimmedUsername);
       if (existingProfile) {
         setError('That username is already taken. Please choose another.');

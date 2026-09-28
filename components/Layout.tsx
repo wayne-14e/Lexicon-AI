@@ -18,7 +18,9 @@ import {
   Copy,
   Check
 } from 'lucide-react';
-import { loadUnlockedArchiveEntries } from '../services/systemArchiveData';
+
+// systemArchiveData is dynamically imported in the effect below so the
+// archive index stays out of the Layout chunk's static graph.
 
 // LexyAssistant pulls in react-markdown (~100KB) — load it only when needed
 // so the initial bundle stays lean.
@@ -98,15 +100,21 @@ const Layout: React.FC<LayoutProps> = ({
   }, []);
 
   useEffect(() => {
+    let cancelled = false;
     const loadArchives = async () => {
       if (user?.unlocked_system_collections && user.unlocked_system_collections.length > 0) {
+        const { loadUnlockedArchiveEntries } = await import('../services/systemArchiveData');
+        if (cancelled) return;
         const entries = await loadUnlockedArchiveEntries(user.unlocked_system_collections);
-        setArchiveEntries(entries);
+        if (!cancelled) setArchiveEntries(entries);
       } else {
         setArchiveEntries([]);
       }
     };
     loadArchives();
+    return () => {
+      cancelled = true;
+    };
   }, [user?.unlocked_system_collections]);
 
   const results = useMemo(() => {

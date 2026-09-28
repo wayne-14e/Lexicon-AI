@@ -12,8 +12,9 @@
   <link rel="preconnect" href="https://fleet-lizard-96.clerk.accounts.dev">
   <link rel="preconnect" href="https://uthwpmxgwjcsoeabugbi.supabase.co" crossorigin>
   <!-- Google Fonts loads async (media=print swap) so the css2 request never
-       blocks first paint; body falls back to system-ui until Outfit/Inter arrive. -->
-  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&family=Inter:wght@400;500;600&display=swap">
+       blocks first paint; body falls back to system-ui until Outfit/Inter
+       arrive. No <link rel=preload> — preloading the stylesheet re-elevates
+       it to a high-priority critical request competing with JS/CSS for LCP. -->
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
   <noscript><link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"></noscript>
   <script>
