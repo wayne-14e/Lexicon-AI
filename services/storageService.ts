@@ -214,8 +214,110 @@ export const storageService = {
     const { error } = await getDb()
       .from('vocab_tables')
       .upsert([table]);
-      
+
     if (error) console.error('Error saving table:', error);
+  },
+
+  generateShareId: (length: number = 8): string => {
+    // URL-safe, unambiguous alphabet (no 0/O, 1/l).
+    const alphabet = 'ABCDEFGHJKMNPQRSTUVWXYZabcdefghjkmnpqrstuvwxyz23456789';
+    let out = '';
+    try {
+      const bytes = new Uint32Array(length);
+      crypto.getRandomValues(bytes);
+      for (let i = 0; i < length; i++) out += alphabet[bytes[i] % alphabet.length];
+      return out;
+    } catch {
+      for (let i = 0; i < length; i++) {
+        out += alphabet[Math.floor(Math.random() * alphabet.length)];
+      }
+      return out;
+    }
+  },
+
+  getTableByShareId: async (shareId: string): Promise<VocabTable | null> => {
+    const clean = (shareId || '').trim().slice(0, 32);
+    if (!clean) return null;
+    const { data, error } = await getDb()
+      .from('vocab_tables')
+      .select('*')
+      .eq('share_id', clean)
+      .eq('is_public', true)
+      .maybeSingle();
+
+    if (error) {
+      console.error('Error fetching shared table:', error);
+      return null;
+    }
+    return (data as VocabTable) || null;
+  },
+
+  enableSharing: async (table: VocabTable, authorName?: string): Promise<VocabTable | null> => {
+    const shareId = table.share_id || storageService.generateShareId();
+    const updated: VocabTable = {
+      ...table,
+      is_public: true,
+      share_id: shareId,
+      author_name: authorName || table.author_name || null,
+    };
+    const { error } = await getDb()
+      .from('vocab_tables')
+      .upsert([updated]);
+    if (error) {
+      console.error('Error enabling sharing:', error);
+      return null;
+    }
+    return updated;
+  },
+
+  disableSharing: async (table: VocabTable): Promise<VocabTable | null> => {
+    const updated: VocabTable = { ...table, is_public: false };
+    const { error } = await getDb()
+      .from('vocab_tables')
+      .upsert([updated]);
+    if (error) {
+      console.error('Error disabling sharing:', error);
+      return null;
+    }
+    return updated;
+  },
+
+  buildShareUrl: (shareId: string): string => {
+    const origin = typeof window !== 'undefined' ? window.location.origin : '';
+    return `${origin}/c/${shareId}`;
+  },
+
+  cloneSharedTable: async (
+    source: VocabTable,
+    newOwnerId: string,
+  ): Promise<VocabTable> => {
+    const now = Date.now();
+    const clone: VocabTable = {
+      id: `table-${now}-${Math.random().toString(36).slice(2, 9)}`,
+      userId: newOwnerId,
+      title: `${source.title} (copy)`,
+      description: source.description || '',
+      links: [...(source.links || [])],
+      entries: (source.entries || []).map((e, i) => ({
+        ...e,
+        id: `entry-${now}-${i}-${Math.random().toString(36).slice(2, 7)}`,
+        progress: 0,
+        masteredAt: undefined,
+      })),
+      createdAt: now,
+      // Deliberately private: clones never inherit the public link.
+      is_public: false,
+      share_id: null,
+      author_name: null,
+    };
+    const { error } = await getDb()
+      .from('vocab_tables')
+      .insert([clone]);
+    if (error) {
+      console.error('Error cloning shared table:', error);
+      throw error;
+    }
+    return clone;
   },
 
   deleteTable: async (id: string) => {

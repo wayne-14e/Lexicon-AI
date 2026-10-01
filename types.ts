@@ -54,5 +54,10 @@ export interface VocabTable {
     title: string;
     text: string;
   };
+  /** Public sharing (opt-in). When true + share_id set, readable at /c/<share_id>. */
+  is_public?: boolean;
+  share_id?: string | null;
+  /** Snapshot of the owner's username at share time (avoids profiles join for anon reads). */
+  author_name?: string | null;
 }
 

@@ -111,6 +111,20 @@ const App: React.FC = () => {
   const [toast, setToast] = useState<{ message: string; type: 'success' | 'info' } | null>(null);
   const [streakPopup, setStreakPopup] = useState<{ streak: number; tokens: number } | null>(null);
   const [authMode, setAuthMode] = useState<'sign-in' | 'sign-up' | null>(null);
+  // Public share route /c/<shareId> — resolved from the pathname, fetched
+  // with the anon key (RLS allows anon SELECT where is_public = true).
+  const [shareIdFromPath, setShareIdFromPath] = useState<string | null>(() => {
+    try {
+      const m = window.location.pathname.match(/^\/c\/([A-Za-z0-9]{4,32})\/?$/);
+      return m ? m[1] : null;
+    } catch {
+      return null;
+    }
+  });
+  const [sharedTable, setSharedTable] = useState<VocabTable | null>(null);
+  const [sharedLoading, setSharedLoading] = useState(false);
+  const [sharedNotFound, setSharedNotFound] = useState(false);
+  const [isCloning, setIsCloning] = useState(false);
 
   // Theme: dark by default (the app's original look), persisted across visits.
   // Applied to <html> so body + all token-driven UI follows, including the
@@ -131,6 +145,55 @@ const App: React.FC = () => {
       // private-mode storage may throw — theme simply won't persist
     }
   }, [theme]);
+
+  // If a guest hit "Clone collection" on a public page, they arrive back
+  // here with ?signup=1 — open the sign-up form immediately.
+  useEffect(() => {
+    try {
+      const params = new URLSearchParams(window.location.search);
+      if (params.get('signup') === '1' && !isSignedIn) {
+        setAuthMode('sign-up');
+        const url = new URL(window.location.href);
+        url.searchParams.delete('signup');
+        window.history.replaceState({}, '', url.toString());
+      }
+    } catch {
+      // ignore malformed URLs
+    }
+  }, [isSignedIn]);
+
+  // Fetch the public shared table for /c/<shareId> (works signed-out:
+  // anon key + RLS `is_public = true` policy, no Clerk needed).
+  useEffect(() => {
+    if (!shareIdFromPath) return;
+    let cancelled = false;
+    setSharedLoading(true);
+    setSharedNotFound(false);
+    setSharedTable(null);
+    import('./services/storageService')
+      .then(({ storageService }) => storageService.getTableByShareId(shareIdFromPath))
+      .then((table) => {
+        if (cancelled) return;
+        if (table) {
+          setSharedTable(table);
+          try {
+            document.title = `${table.title} — shared Lexicon collection`;
+          } catch {}
+        } else {
+          setSharedNotFound(true);
+        }
+      })
+      .catch((err) => {
+        console.error('Failed to load shared collection:', err);
+        if (!cancelled) setSharedNotFound(true);
+      })
+      .finally(() => {
+        if (!cancelled) setSharedLoading(false);
+      });
+    return () => {
+      cancelled = true;
+    };
+  }, [shareIdFromPath]);
 
   // Capture referral code from URL on initial mount
   useEffect(() => {
@@ -394,6 +457,31 @@ const App: React.FC = () => {
         }
 
         await checkDailyAward(syncedUser, syncedUser);
+
+        // Fulfill a pending "Clone collection" saved by a guest before signup.
+        try {
+          const pendingShareId = localStorage.getItem('lexicon_pending_clone');
+          if (pendingShareId) {
+            localStorage.removeItem('lexicon_pending_clone');
+            const source = await storageService.getTableByShareId(pendingShareId);
+            if (source) {
+              const clone = await storageService.cloneSharedTable(source, clerkUser.id);
+              const refreshed = await storageService.getTables(clerkUser.id);
+              setTables(refreshed);
+              setActiveTable(clone);
+              // Leave the /c/<id> path — land in the app's collections.
+              try {
+                window.history.replaceState({}, '', `${window.location.origin}/?view=collections`);
+              } catch {}
+              setShareIdFromPath(null);
+              setSharedTable(null);
+              setView('collections');
+              showToast(`Cloned "${source.title}" into your collections!`, 'success');
+            }
+          }
+        } catch (e) {
+          console.error('Failed to fulfill pending clone:', e);
+        }
       } catch (e) {
         console.error('Lexicon background sync failed:', e);
       }
@@ -584,6 +672,90 @@ const App: React.FC = () => {
     }
   };
 
+  /** Clone the open shared collection (signed-in) or stash intent + go to signup (guest). */
+  const handleCloneShared = async () => {
+    if (!sharedTable || !shareIdFromPath || isCloning) return;
+    if (!isSignedIn || !dbUser) {
+      try {
+        localStorage.setItem('lexicon_pending_clone', shareIdFromPath);
+      } catch {}
+      window.location.href = `${window.location.origin}/?signup=1`;
+      return;
+    }
+    setIsCloning(true);
+    try {
+      const { storageService } = await import('./services/storageService');
+      const clone = await storageService.cloneSharedTable(sharedTable, dbUser.id);
+      const refreshed = await storageService.getTables(dbUser.id);
+      setTables(refreshed);
+      setActiveTable(clone);
+      try {
+        window.history.replaceState({}, '', `${window.location.origin}/?view=collections`);
+      } catch {}
+      setShareIdFromPath(null);
+      setSharedTable(null);
+      setView('collections');
+      showToast(`Cloned "${sharedTable.title}" into your collections!`, 'success');
+    } catch (err) {
+      console.error('Failed to clone shared collection:', err);
+      showToast('Could not clone this collection. Please try again.', 'info');
+    } finally {
+      setIsCloning(false);
+    }
+  };
+
+  // Public share route /c/<shareId> — renders before any auth gate so guests
+  // (and search/social crawlers) get the page without waiting for Clerk.
+  // Vercel's SPA rewrite serves index.html for /c/*, the app resolves the id.
+  if (shareIdFromPath) {
+    return (
+      <>
+        {sharedLoading || (!sharedTable && !sharedNotFound) ? (
+          <div className="min-h-screen flex items-center justify-center bg-background p-6">
+            <div className="flex flex-col items-center space-y-6 text-center">
+              <div className="w-10 h-10 border-2 border-primary border-t-transparent rounded-full animate-spin"></div>
+              <p className="text-[10px] text-muted font-medium tracking-[0.2em] uppercase">Loading shared collection</p>
+            </div>
+          </div>
+        ) : sharedTable ? (
+          <Suspense fallback={<ViewFallback />}>
+            <PublicView
+              table={sharedTable}
+              onClone={handleCloneShared}
+              isCloning={isCloning}
+              viewerSignedIn={!!isSignedIn && !!dbUser}
+            />
+          </Suspense>
+        ) : (
+          <div className="min-h-screen flex items-center justify-center bg-background p-6">
+            <div className="flex flex-col items-center space-y-4 text-center max-w-md">
+              <img src="/logo.svg" alt="Lexicon AI" className="w-12 h-12 object-contain" />
+              <h1 className="text-2xl font-bold font-display text-text">This link is private or expired</h1>
+              <p className="text-muted text-sm leading-relaxed">
+                The owner may have turned off sharing. Ask them for a fresh link — or start your own collection.
+              </p>
+              <a
+                href={typeof window !== 'undefined' ? window.location.origin : '/'}
+                className="px-7 py-3 bg-primary text-white rounded-full font-bold uppercase tracking-widest text-[10px] shadow-lg shadow-primary/20 hover:bg-secondary transition-all"
+              >
+                Go to Lexicon AI
+              </a>
+            </div>
+          </div>
+        )}
+        <ThemeToggle theme={theme} onToggle={() => setTheme(t => (t === 'dark' ? 'light' : 'dark'))} />
+        {toast && (
+          <div className="fixed top-24 left-1/2 -translate-x-1/2 z-[200] animate-in slide-in-from-top-4 duration-300">
+            <div className="px-6 py-3 rounded-full shadow-2xl border flex items-center space-x-3 bg-surfaceHighlight text-purple-500 border-purple-500/30">
+              <div className="w-2 h-2 rounded-full bg-current animate-pulse"></div>
+              <span className="text-xs font-bold uppercase tracking-widest">{toast.message}</span>
+            </div>
+          </div>
+        )}
+      </>
+    );
+  }
+
   // Handle OAuth callback for social sign-in BEFORE any loading gate,
   // otherwise /sso-callback can hang on the spinner and Clerk times out.
   if (typeof window !== 'undefined' && window.location.pathname === '/sso-callback') {
@@ -667,23 +839,13 @@ const App: React.FC = () => {
     );
   }
 
-  // Handle Shared View for non-authenticated or authenticated
+  // Legacy in-app shared view (kept for backwards compat with ?view=public_shared links).
   if (view === 'public_shared' && activeTable) {
-    const sharedTable = activeTable;
+    const legacyTable = activeTable;
     return (
-      <div className="bg-gray-50 min-h-screen">
-        <div className="max-w-5xl mx-auto pt-6 px-6 flex justify-between items-center print:hidden">
-            <button 
-              onClick={() => window.location.href = window.location.origin}
-              className="text-xs font-bold uppercase tracking-widest text-gray-400 hover:text-black"
-            >
-              &larr; Create My Own Journal
-            </button>
-        </div>
-        <Suspense fallback={<ViewFallback />}>
-          <PublicView table={sharedTable} />
-        </Suspense>
-      </div>
+      <Suspense fallback={<ViewFallback />}>
+        <PublicView table={legacyTable} viewerSignedIn={!!dbUser} />
+      </Suspense>
     );
   }
 

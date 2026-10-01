@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { ChevronDown, ChevronUp, Trash2 } from 'lucide-react';
+import { ChevronDown, ChevronUp, Trash2, Share2 } from 'lucide-react';
 import { VocabTable, VocabEntry, GameMode, User } from '../types';
 import { geminiService } from '../services/geminiService';
 import { storageService } from '../services/storageService';
@@ -90,6 +90,9 @@ const TableView: React.FC<TableViewProps> = ({
   const [isCurating, setIsCurating] = useState(false);
   const [selectedIds, setSelectedIds] = useState<Set<string>>(new Set());
   const [showScrollTop, setShowScrollTop] = useState(false);
+  const [isShareOpen, setIsShareOpen] = useState(false);
+  const [isTogglingShare, setIsTogglingShare] = useState(false);
+  const [shareLinkCopied, setShareLinkCopied] = useState(false);
 
   useEffect(() => {
     const container = document.getElementById('main-scroll-container');
@@ -121,6 +124,52 @@ const TableView: React.FC<TableViewProps> = ({
     } else {
       setSortKey(key);
       setSortDirection('asc');
+    }
+  };
+
+  const shareUrl = table.share_id ? storageService.buildShareUrl(table.share_id) : '';
+
+  const handleEnableShare = async () => {
+    if (isTogglingShare) return;
+    setIsTogglingShare(true);
+    try {
+      const updated = await storageService.enableSharing(table, user?.username);
+      if (updated) onUpdateTable(updated);
+    } catch (err) {
+      console.error('Failed to enable sharing:', err);
+    } finally {
+      setIsTogglingShare(false);
+    }
+  };
+
+  const handleDisableShare = async () => {
+    if (isTogglingShare) return;
+    setIsTogglingShare(true);
+    try {
+      const updated = await storageService.disableSharing(table);
+      if (updated) onUpdateTable(updated);
+    } catch (err) {
+      console.error('Failed to disable sharing:', err);
+    } finally {
+      setIsTogglingShare(false);
+    }
+  };
+
+  const handleCopyShareLink = async () => {
+    if (!shareUrl) return;
+    try {
+      await navigator.clipboard.writeText(shareUrl);
+      setShareLinkCopied(true);
+      setTimeout(() => setShareLinkCopied(false), 2000);
+    } catch {
+      // Fallback for non-secure contexts
+      const ta = document.createElement('textarea');
+      ta.value = shareUrl;
+      document.body.appendChild(ta);
+      ta.select();
+      try { document.execCommand('copy'); setShareLinkCopied(true); } catch {}
+      document.body.removeChild(ta);
+      setTimeout(() => setShareLinkCopied(false), 2000);
     }
   };
 
@@ -518,6 +567,15 @@ const TableView: React.FC<TableViewProps> = ({
                     {selectedIds.size} items selected
                   </div>
                 )}
+
+                <button
+                  onClick={() => { setShareLinkCopied(false); setIsShareOpen(true); }}
+                  className={`px-4 py-2.5 text-[8px] sm:text-[9px] font-bold uppercase tracking-widest rounded-full transition-all flex items-center border group/share ${table.is_public && table.share_id ? 'bg-primary/20 text-primary border-primary/30' : 'bg-surfaceHighlight text-muted border-white/10 hover:border-primary/50 hover:text-primary'}`}
+                  title="Share this collection as a public link"
+                >
+                  <Share2 className="w-3 h-3 mr-2 group-hover/share:scale-110 transition-transform" />
+                  {table.is_public && table.share_id ? 'Shared ✓' : 'Share'}
+                </button>
                   </>
                 )}
               </div>
@@ -896,6 +954,71 @@ const TableView: React.FC<TableViewProps> = ({
           )}
         </div>
       </div>
+      {isShareOpen && (
+        <div className="fixed !top-0 !left-0 !w-full !h-full !mt-0 !pt-0 bg-background/95 backdrop-blur-xl z-[10000] flex items-center justify-center overflow-y-auto">
+          <div className="bg-surface border border-white/10 rounded-3xl w-full max-w-xl p-6 md:p-8 shadow-2xl space-y-6 animate-in zoom-in-95 duration-300 m-4 !mt-0">
+            <div className="space-y-2">
+              <span className="text-[10px] font-bold uppercase tracking-[0.4em] text-primary">Public link</span>
+              <div className="flex justify-between items-center">
+                <h3 className="text-2xl font-bold font-display text-text">Share collection</h3>
+                <button
+                  onClick={() => setIsShareOpen(false)}
+                  className="p-2 hover:bg-white/5 rounded-full transition-colors text-muted hover:text-text"
+                  aria-label="Close share dialog"
+                >
+                  <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                  </svg>
+                </button>
+              </div>
+              <p className="text-muted text-sm leading-relaxed">
+                Anyone with this link can view the word table online — no account needed. They can clone it into their own library to practice with flashcards.
+              </p>
+            </div>
+
+            {table.is_public && table.share_id ? (
+              <div className="space-y-4">
+                <div className="flex items-center gap-2 bg-surfaceHighlight border border-primary/20 rounded-xl px-4 py-3">
+                  <span className="text-primary text-sm font-mono truncate flex-1">{shareUrl}</span>
+                  <button
+                    onClick={handleCopyShareLink}
+                    className="px-4 py-2 bg-primary text-white rounded-full font-bold uppercase tracking-widest text-[10px] hover:bg-secondary transition-all shrink-0"
+                  >
+                    {shareLinkCopied ? 'Copied ✓' : 'Copy link'}
+                  </button>
+                </div>
+                <div className="flex items-center justify-between gap-3 flex-wrap">
+                  <span className="inline-flex items-center gap-2 text-[10px] font-bold uppercase tracking-widest text-emerald-400">
+                    <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                    Live — visible to anyone with the link
+                  </span>
+                  <button
+                    onClick={handleDisableShare}
+                    disabled={isTogglingShare}
+                    className="text-[10px] font-bold uppercase tracking-widest text-muted hover:text-red-400 transition-colors disabled:opacity-50"
+                  >
+                    {isTogglingShare ? 'Working…' : 'Turn off sharing'}
+                  </button>
+                </div>
+              </div>
+            ) : (
+              <div className="space-y-4">
+                <div className="bg-surfaceHighlight/60 border border-white/5 rounded-xl px-4 py-4 text-sm text-muted leading-relaxed">
+                  This collection is currently <span className="text-text font-bold">private</span>. Turn on sharing to create a live page at <span className="text-text font-mono">/c/xxxxxxxx</span> with your word table.
+                </div>
+                <button
+                  onClick={handleEnableShare}
+                  disabled={isTogglingShare}
+                  className="w-full py-3 bg-primary text-white rounded-full font-bold uppercase tracking-widest text-[10px] shadow-lg shadow-primary/20 hover:bg-secondary transition-all disabled:opacity-50 flex items-center justify-center gap-2"
+                >
+                  <Share2 className="w-4 h-4" />
+                  {isTogglingShare ? 'Creating link…' : 'Create public link'}
+                </button>
+              </div>
+            )}
+          </div>
+        </div>
+      )}
       {isEditingMetadata && (
         <div className="fixed !top-0 !left-0 !w-full !h-full !mt-0 !pt-0 bg-background/95 backdrop-blur-xl z-[10000] flex items-center justify-center overflow-y-auto">
           <div className="bg-surface border border-white/10 rounded-3xl w-full max-w-xl p-6 md:p-8 shadow-2xl space-y-6 md:space-y-8 animate-in zoom-in-95 duration-300 m-4 !mt-0">
